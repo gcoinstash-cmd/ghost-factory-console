@@ -3,33 +3,33 @@ export const CATALOG_DATA = {
   "catalog_version": "1.0.0",
   "store": "Aura & Grid",
   "store_url": "https://auraandgrid.gumroad.com",
-  "total_flagships": 55,
+  "total_flagships": 60,
   "standards": "Ghost Factory™ 9.0+ Verified Production Grade",
   "database_engine": "Supabase PostgreSQL (RLS Enabled)",
   "frontend_stack": "React 19 + Tailwind CSS + Lucide Icons + Vite",
   "valuation_framework": {
-    "total_products": 55,
+    "total_products": 60,
     "agency_whitelabel_vault_per_license": 2999,
-    "retail_shelf_msrp_starter_ui": 4345,
-    "retail_shelf_msrp_full_stack": 10945,
+    "retail_shelf_msrp_starter_ui": 4740,
+    "retail_shelf_msrp_full_stack": 11940,
     "pre_revenue_liquidation_protocol": {
       "fire_sale_24_72h": {
         "per_product_min": 250,
         "per_product_max": 368,
-        "fleet_total_min": 13750,
-        "fleet_total_max": 20263
+        "fleet_total_min": 15000,
+        "fleet_total_max": 22080
       },
       "quick_close_7_14d": {
         "per_product_min": 500,
         "per_product_max": 736,
-        "fleet_total_min": 27500,
-        "fleet_total_max": 40480
+        "fleet_total_min": 30000,
+        "fleet_total_max": 44160
       },
       "marketplace_listing_30_45d": {
         "per_product_min": 789,
         "per_product_max": 1157,
-        "fleet_total_min": 43395,
-        "fleet_total_max": 63635
+        "fleet_total_min": 47340,
+        "fleet_total_max": 69420
       }
     },
     "pre_revenue_apa_target_anchor": 50000,
@@ -951,6 +951,91 @@ export const CATALOG_DATA = {
         "fcf_valuation_models",
         "lp_capital_calls"
       ]
+    },
+    {
+      "id": 56,
+      "name": "HVAC DISPATCH OS",
+      "category": "Commercial HVAC, Chiller Plant & Refrigerant Dispatch OS",
+      "vertical": "home_services",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/hvac-dispatch-os",
+      "preview_url": "https://gcoinstash-cmd.github.io/hvac-dispatch-os/",
+      "admin_url": "https://gcoinstash-cmd.github.io/hvac-dispatch-os/admin/",
+      "admin_passcode": "hvac2026",
+      "audit_score": 9.8,
+      "tables": [
+        "hvac_work_orders",
+        "chiller_telemetry",
+        "epa_refrigerant_logs",
+        "service_vans"
+      ]
+    },
+    {
+      "id": 57,
+      "name": "ROOFING ESTIMATOR OS",
+      "category": "Commercial & Residential Drone Precision & Insurance Scope Architecture",
+      "vertical": "home_services",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/roofing-estimator-os",
+      "preview_url": "https://gcoinstash-cmd.github.io/roofing-estimator-os/",
+      "admin_url": "https://gcoinstash-cmd.github.io/roofing-estimator-os/admin/",
+      "admin_passcode": "roofing2026",
+      "audit_score": 9.8,
+      "tables": [
+        "roofing_estimates",
+        "drone_inspections",
+        "insurance_claims",
+        "crew_schedules"
+      ]
+    },
+    {
+      "id": 58,
+      "name": "HYDROFORCE PLUMBING OPS OS",
+      "category": "Commercial Hydraulic Dispatch & Backflow Compliance OS",
+      "vertical": "home_services",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/plumbing-ops-os",
+      "preview_url": "https://gcoinstash-cmd.github.io/plumbing-ops-os/",
+      "admin_url": "https://gcoinstash-cmd.github.io/plumbing-ops-os/admin/",
+      "admin_passcode": "plumbing2026",
+      "audit_score": 9.8,
+      "tables": [
+        "emergency_tickets",
+        "commercial_backflow",
+        "hydro_inspections",
+        "technician_units"
+      ]
+    },
+    {
+      "id": 59,
+      "name": "HELIOS SOLAR INSTALL & PERMIT OS",
+      "category": "Commercial PV Sizing, Stamped AHJ & Interconnect PTO OS",
+      "vertical": "home_services",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/solar-install-os",
+      "preview_url": "https://gcoinstash-cmd.github.io/solar-install-os/",
+      "admin_url": "https://gcoinstash-cmd.github.io/solar-install-os/admin/",
+      "admin_passcode": "solar2026",
+      "audit_score": 9.8,
+      "tables": [
+        "solar_projects",
+        "ahj_permits",
+        "utility_interconnects",
+        "battery_storage_banks"
+      ]
+    },
+    {
+      "id": 60,
+      "name": "VOLTGRID ELECTRICAL DISPATCH OS",
+      "category": "Medium-Voltage Switchgear & EV Fast Charging Dispatch OS",
+      "vertical": "home_services",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/electrical-dispatch-os",
+      "preview_url": "https://gcoinstash-cmd.github.io/electrical-dispatch-os/",
+      "admin_url": "https://gcoinstash-cmd.github.io/electrical-dispatch-os/admin/",
+      "admin_passcode": "electric2026",
+      "audit_score": 9.8,
+      "tables": [
+        "electrical_work_orders",
+        "ev_charging_stations",
+        "thermal_inspections",
+        "master_electrician_vans"
+      ]
     }
   ],
   "vertical_slices": {
@@ -995,6 +1080,13 @@ export const CATALOG_DATA = {
       "apa_valuation_range": "$25,000 – $38,000",
       "target_asset_count": 35,
       "current_asset_count": 3
+    },
+    "home_services": {
+      "name": "Home Services & Commercial Contracting Vault",
+      "description": "Commercial HVAC, drone roofing, hydraulic plumbing, solar EPC permits & switchgear dispatch OS",
+      "apa_valuation_range": "$35,000 – $60,000",
+      "target_asset_count": 50,
+      "current_asset_count": 5
     }
   },
   "roadmap_horizons": {
