@@ -3,37 +3,37 @@ export const CATALOG_DATA = {
   "catalog_version": "1.0.0",
   "store": "Aura & Grid",
   "store_url": "https://auraandgrid.gumroad.com",
-  "total_flagships": 46,
+  "total_flagships": 50,
   "standards": "Ghost Factory™ 9.0+ Verified Production Grade",
   "database_engine": "Supabase PostgreSQL (RLS Enabled)",
   "frontend_stack": "React 19 + Tailwind CSS + Lucide Icons + Vite",
   "valuation_framework": {
-    "total_products": 46,
-    "agency_whitelabel_vault_per_license": 1499,
-    "retail_shelf_msrp_starter_ui": 3634,
-    "retail_shelf_msrp_full_stack": 9154,
+    "total_products": 50,
+    "agency_whitelabel_vault_per_license": 2999,
+    "retail_shelf_msrp_starter_ui": 3950,
+    "retail_shelf_msrp_full_stack": 9950,
     "pre_revenue_liquidation_protocol": {
       "fire_sale_24_72h": {
         "per_product_min": 250,
         "per_product_max": 368,
-        "fleet_total_min": 11500,
-        "fleet_total_max": 16928
+        "fleet_total_min": 12500,
+        "fleet_total_max": 18421
       },
       "quick_close_7_14d": {
         "per_product_min": 500,
         "per_product_max": 736,
-        "fleet_total_min": 23000,
-        "fleet_total_max": 33856
+        "fleet_total_min": 25000,
+        "fleet_total_max": 36800
       },
       "marketplace_listing_30_45d": {
         "per_product_min": 789,
         "per_product_max": 1157,
-        "fleet_total_min": 36294,
-        "fleet_total_max": 53222
+        "fleet_total_min": 39450,
+        "fleet_total_max": 57850
       }
     },
-    "pre_revenue_apa_target_anchor": 35000,
-    "post_traction_apa_cash_floor": 25000
+    "pre_revenue_apa_target_anchor": 50000,
+    "post_traction_apa_cash_floor": 35000
   },
   "products": [
     {
@@ -806,6 +806,70 @@ export const CATALOG_DATA = {
         "menu_items",
         "testimonials"
       ]
+    },
+    {
+      "id": 47,
+      "name": "LUXURY REAL ESTATE PORTAL OS",
+      "category": "Ultra-Luxury Real Estate Portfolio, Broker Board & Escrow Tracking OS",
+      "vertical": "wealth",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/luxury-real-estate-portal-os",
+      "preview_url": "https://luxury-real-estate-portal-os.onrender.com",
+      "admin_url": "https://luxury-real-estate-portal-os.onrender.com/admin",
+      "admin_passcode": "estate2026",
+      "audit_score": 9.8,
+      "tables": [
+        "properties",
+        "inquiries",
+        "appointments",
+        "documents"
+      ]
+    },
+    {
+      "id": 48,
+      "name": "MIDNIGHT EXPRESS OS",
+      "category": "Cyberpunk Supercar Drive-Thru, Wok Gastronomy & RFID Lane Management OS",
+      "vertical": "hospitality",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/midnight-express-os",
+      "preview_url": "https://midnight-express-os.onrender.com",
+      "admin_url": "https://midnight-express-os.onrender.com/admin",
+      "admin_passcode": "midnight2026",
+      "audit_score": 9.8,
+      "tables": [
+        "orders",
+        "menu_items",
+        "lanes"
+      ]
+    },
+    {
+      "id": 49,
+      "name": "REAL ESTATE ANALYTICS HUB OS",
+      "category": "Commercial Debt Underwriting, DSCR Modeling & 10-Yr Cap Rate Analytics OS",
+      "vertical": "wealth",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/real-estate-analytics-hub-os",
+      "preview_url": "https://real-estate-analytics-hub-os.onrender.com",
+      "admin_url": "https://real-estate-analytics-hub-os.onrender.com/admin",
+      "admin_passcode": "analytics2026",
+      "audit_score": 9.8,
+      "tables": [
+        "underwritten_deals",
+        "financial_covenants"
+      ]
+    },
+    {
+      "id": 50,
+      "name": "CULINARY OPERATIONAL WORKSPACE OS",
+      "category": "Haute Cuisine Banquet Operations, BOH Station Velocity & Menu Engineering OS",
+      "vertical": "hospitality",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/culinary-workspace-os",
+      "preview_url": "https://culinary-workspace-os.onrender.com",
+      "admin_url": "https://culinary-workspace-os.onrender.com/admin",
+      "admin_passcode": "culinary2026",
+      "audit_score": 9.9,
+      "tables": [
+        "banquet_bookings",
+        "culinary_menu_items",
+        "dietary_allergen_records"
+      ]
     }
   ],
   "vertical_slices": {
@@ -828,14 +892,14 @@ export const CATALOG_DATA = {
       "description": "Bespoke counters, omakase, jazz bistros, supper clubs, estates & vineyards OS",
       "apa_valuation_range": "$42,000 – $65,000",
       "target_asset_count": 60,
-      "current_asset_count": 17
+      "current_asset_count": 19
     },
     "wealth": {
       "name": "Private Wealth & Real Estate Vault",
       "description": "Private equity LP portals, estate syndication, family office & luxury listings OS",
       "apa_valuation_range": "$30,000 – $48,000",
       "target_asset_count": 35,
-      "current_asset_count": 6
+      "current_asset_count": 8
     },
     "creative": {
       "name": "Creative Agency & Studio Vault",
