@@ -1,10 +1,9 @@
-// Automatically generated from CATALOG_MANIFEST.json — do not edit manually
-export const CATALOG_DATA = {
+export const CATALOG_MANIFEST = {
   "catalog_version": "1.0.0",
   "store": "Aura & Grid",
   "store_url": "https://auraandgrid.gumroad.com",
-  "total_flagships": 60,
-  "standards": "Ghost Factory™ 9.0+ Verified Production Grade",
+  "total_flagships": 65,
+  "standards": "Ghost Factory\u2122 9.0+ Verified Production Grade",
   "database_engine": "Supabase PostgreSQL (RLS Enabled)",
   "frontend_stack": "React 19 + Tailwind CSS + Lucide Icons + Vite",
   "valuation_framework": {
@@ -626,7 +625,7 @@ export const CATALOG_DATA = {
     },
     {
       "id": 36,
-      "name": "STUDIO VÉRONIQUE LA",
+      "name": "STUDIO V\u00c9RONIQUE LA",
       "category": "California Warm Modernism, Residential Interior Design & Material Sourcing OS",
       "vertical": "creative",
       "gumroad_url": "https://auraandgrid.gumroad.com/l/studio-veronique-os",
@@ -890,7 +889,7 @@ export const CATALOG_DATA = {
     },
     {
       "id": 52,
-      "name": "YŪGEN SENSORY OS",
+      "name": "Y\u016aGEN SENSORY OS",
       "category": "Zen Minimalist Sensory Dining Sanctuary & Omakase Booking OS",
       "vertical": "hospitality",
       "gumroad_url": "https://auraandgrid.gumroad.com/l/yugen-sensory-os",
@@ -1036,55 +1035,140 @@ export const CATALOG_DATA = {
         "thermal_inspections",
         "master_electrician_vans"
       ]
+    },
+    {
+      "id": 61,
+      "name": "BOUTIQUE DENTAL OS",
+      "category": "Private Practice Operatory Scheduling & Clinical Charting OS",
+      "vertical": "medical",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/boutique-dental-os",
+      "preview_url": "https://gcoinstash-cmd.github.io/boutique-dental-os/",
+      "admin_url": "https://gcoinstash-cmd.github.io/boutique-dental-os/admin/",
+      "admin_passcode": "dental2026",
+      "audit_score": 9.8,
+      "tables": [
+        "dental_patients",
+        "treatment_plans",
+        "operatories",
+        "appointment_ledger"
+      ]
+    },
+    {
+      "id": 62,
+      "name": "VETERINARY HOSPITAL OS",
+      "category": "Companion Animal Emergency & Surgical Telemetry OS",
+      "vertical": "medical",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/veterinary-hospital-os",
+      "preview_url": "https://gcoinstash-cmd.github.io/veterinary-hospital-os/",
+      "admin_url": "https://gcoinstash-cmd.github.io/veterinary-hospital-os/admin/",
+      "admin_passcode": "vet2026",
+      "audit_score": 9.8,
+      "tables": [
+        "pet_patients",
+        "veterinary_services",
+        "emergency_triage",
+        "patient_vitals"
+      ]
+    },
+    {
+      "id": 63,
+      "name": "AURA PROTOCOL FUNCTIONAL MEDICINE OS",
+      "category": "Cellular Biomarker Mapping & Epigenetic Longevity Clinic OS",
+      "vertical": "medical",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/functional-medicine-os",
+      "preview_url": "https://gcoinstash-cmd.github.io/functional-medicine-os/",
+      "admin_url": "https://gcoinstash-cmd.github.io/functional-medicine-os/admin/",
+      "admin_passcode": "functional2026",
+      "audit_score": 9.8,
+      "tables": [
+        "patients",
+        "protocols",
+        "intake_consultations",
+        "biomarker_telemetry"
+      ]
+    },
+    {
+      "id": 64,
+      "name": "KINETIC SPINE & SPORTS PT OS",
+      "category": "Orthopedic Rehabilitation & Biomechanical Performance OS",
+      "vertical": "fitness",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/physical-therapy-os",
+      "preview_url": "https://gcoinstash-cmd.github.io/physical-therapy-os/",
+      "admin_url": "https://gcoinstash-cmd.github.io/physical-therapy-os/admin/",
+      "admin_passcode": "pt2026",
+      "audit_score": 9.8,
+      "tables": [
+        "pt_patients",
+        "therapy_programs",
+        "clinical_sessions",
+        "biomechanical_telemetry"
+      ]
+    },
+    {
+      "id": 65,
+      "name": "HYPERBARIC & RECOVERY LAB OS",
+      "category": "Thermal Contrast Therapy & Cellular IV Infusion Lounge OS",
+      "vertical": "medical",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/recovery-spa-os",
+      "preview_url": "https://gcoinstash-cmd.github.io/recovery-spa-os/",
+      "admin_url": "https://gcoinstash-cmd.github.io/recovery-spa-os/admin/",
+      "admin_passcode": "recovery2026",
+      "audit_score": 9.8,
+      "tables": [
+        "recovery_members",
+        "recovery_services",
+        "suite_reservations",
+        "chamber_telemetry"
+      ]
     }
   ],
   "vertical_slices": {
     "medical": {
       "name": "Medical & VIP Aesthetics Vault",
       "description": "Clinical booking, patient intake, medspas, salon grooming & olfactory OS",
-      "apa_valuation_range": "$35,000 – $55,000",
+      "apa_valuation_range": "$35,000 \u2013 $55,000",
       "target_asset_count": 50,
-      "current_asset_count": 7
+      "current_asset_count": 11
     },
     "automotive": {
       "name": "Automotive & Mobility Vault",
       "description": "Dyno testing, tuning dispatch, luxury fleet rentals & workshop OS",
-      "apa_valuation_range": "$28,000 – $45,000",
+      "apa_valuation_range": "$28,000 \u2013 $45,000",
       "target_asset_count": 40,
       "current_asset_count": 3
     },
     "hospitality": {
       "name": "Luxury Hospitality & Dining Vault",
       "description": "Bespoke counters, omakase, jazz bistros, supper clubs, estates & vineyards OS",
-      "apa_valuation_range": "$42,000 – $65,000",
+      "apa_valuation_range": "$42,000 \u2013 $65,000",
       "target_asset_count": 60,
       "current_asset_count": 19
     },
     "wealth": {
       "name": "Private Wealth & Real Estate Vault",
       "description": "Private equity LP portals, estate syndication, family office & luxury listings OS",
-      "apa_valuation_range": "$30,000 – $48,000",
+      "apa_valuation_range": "$30,000 \u2013 $48,000",
       "target_asset_count": 35,
       "current_asset_count": 8
     },
     "creative": {
       "name": "Creative Agency & Studio Vault",
       "description": "Motion VFX, architecture atelier, soundstage production & design OS",
-      "apa_valuation_range": "$28,000 – $40,000",
+      "apa_valuation_range": "$28,000 \u2013 $40,000",
       "target_asset_count": 40,
       "current_asset_count": 10
     },
     "fitness": {
       "name": "Performance Fitness & Athletics Vault",
       "description": "Boutique fight clubs, reformer training & athletic performance OS",
-      "apa_valuation_range": "$25,000 – $38,000",
+      "apa_valuation_range": "$25,000 \u2013 $38,000",
       "target_asset_count": 35,
-      "current_asset_count": 3
+      "current_asset_count": 4
     },
     "home_services": {
       "name": "Home Services & Commercial Contracting Vault",
       "description": "Commercial HVAC, drone roofing, hydraulic plumbing, solar EPC permits & switchgear dispatch OS",
-      "apa_valuation_range": "$35,000 – $60,000",
+      "apa_valuation_range": "$35,000 \u2013 $60,000",
       "target_asset_count": 50,
       "current_asset_count": 5
     }
@@ -1092,18 +1176,19 @@ export const CATALOG_DATA = {
   "roadmap_horizons": {
     "immediate_focus": {
       "target": "500 Apps (Phase 1 to 4)",
-      "timeline": "2026 – Late 2027",
+      "timeline": "2026 \u2013 Late 2027",
       "phase_1_archive_clearance": "50 Apps ($2,999 Agency Vault Launch)",
-      "phase_2_century_funnel": "100 Apps ($3,500 VIP Setup + $35k–$50k Micro-APA)",
+      "phase_2_century_funnel": "100 Apps ($3,500 VIP Setup + $35k\u2013$50k Micro-APA)",
       "phase_3_category_dominance": "350 Apps (5-in-1 Niche Bundles + Micro-PE Multiple)",
-      "phase_4_master_buyout": "500 Apps ($125,000–$200,000 Cash Buyout / $1.2M–$2.5M+ Cash Flow)"
+      "phase_4_master_buyout": "500 Apps ($125,000\u2013$200,000 Cash Buyout / $1.2M\u2013$2.5M+ Cash Flow)"
     },
     "long_term_expansion": {
       "target": "3,000 to 5,000 Apps (Phase 5 to 7)",
-      "timeline": "2028 – 2031 (3–5 Year Horizon)",
+      "timeline": "2028 \u2013 2031 (3\u20135 Year Horizon)",
       "phase_5_multi_channel": "1,500 Apps (Custom Storefront, ThemeForest, B2B Outbound)",
-      "phase_6_saas_franchise": "3,000 Apps ($450k–$900k Pre-Revenue Buyout / $4.5M Exit)",
-      "phase_7_holding_conglomerate": "5,000 Apps ($750k–$1.5M Wholesale Buyout / $8.75M+ Exit)"
+      "phase_6_saas_franchise": "3,000 Apps ($450k\u2013$900k Pre-Revenue Buyout / $4.5M Exit)",
+      "phase_7_holding_conglomerate": "5,000 Apps ($750k\u2013$1.5M Wholesale Buyout / $8.75M+ Exit)"
     }
   }
 };
+export const CATALOG_DATA = CATALOG_MANIFEST;
