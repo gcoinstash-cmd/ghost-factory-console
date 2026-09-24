@@ -207,14 +207,14 @@ export default function App() {
           
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 mb-8 relative z-10">
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-500/10 border border-emerald-500/30 rounded text-[10px] font-mono text-emerald-400 uppercase tracking-widest mb-3">
-                <Sparkles size={12} /> Milestone Tracker // Phase 1 Active
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-cyan-500/10 border border-cyan-500/30 rounded text-[10px] font-mono text-cyan-400 uppercase tracking-widest mb-3">
+                <Sparkles size={12} /> Milestone Tracker // Phase 2 Active (Road to 100)
               </div>
               <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white flex items-center gap-3">
-                ARSENAL LEVEL: <span className="text-emerald-400 font-mono">{totalAssets} / 500 ASSETS</span>
+                ARSENAL LEVEL: <span className="text-cyan-400 font-mono">{totalAssets} / 500 ASSETS</span>
               </h1>
               <p className="text-slate-400 text-sm mt-1 max-w-xl">
-                Real-time operational dashboard for Aura & Grid's Ghost Factory™. Tracking automated 5-stage deployments, liquidation bands, and institutional buyouts.
+                Real-time operational dashboard for Aura & Grid's Ghost Factory™. Phase 1 Mastered (50/50). Currently scaling Phase 2: The Century Funnel (Targets #51–#100).
               </p>
             </div>
 
@@ -234,32 +234,32 @@ export default function App() {
           {/* 4-PHASE PROGRESSION BARS */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 relative z-10">
             {/* Phase 1 */}
-            <div className="bg-black/50 border border-emerald-500/40 p-4 rounded-lg">
+            <div className="bg-black/50 border border-emerald-500/60 p-4 rounded-lg shadow-[0_0_15px_rgba(16,185,129,0.15)]">
               <div className="flex justify-between items-center text-xs font-mono mb-2">
                 <span className="font-bold text-emerald-400">PHASE 1: 50 APPS</span>
-                <span className="text-white font-bold">{phase1Percent}%</span>
+                <span className="text-emerald-400 font-bold">100% COMPLETE ✅</span>
               </div>
               <div className="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden mb-2">
-                <div className="bg-gradient-to-r from-emerald-500 to-cyan-400 h-full rounded-full transition-all duration-500" style={{ width: `${phase1Percent}%` }} />
+                <div className="bg-gradient-to-r from-emerald-500 to-cyan-400 h-full rounded-full transition-all duration-500" style={{ width: `100%` }} />
               </div>
               <p className="text-[11px] text-slate-400 flex justify-between">
-                <span>Archive Clearance</span>
-                <strong className="text-slate-200">{totalAssets} / {phase1Target}</strong>
+                <span>Agency Vault Locked</span>
+                <strong className="text-emerald-300">50 / 50 MASTERED</strong>
               </p>
             </div>
 
             {/* Phase 2 */}
-            <div className="bg-black/30 border border-white/10 p-4 rounded-lg">
+            <div className="bg-gradient-to-b from-cyan-950/20 to-black/60 border border-cyan-500/50 p-4 rounded-lg shadow-[0_0_20px_rgba(6,182,212,0.15)]">
               <div className="flex justify-between items-center text-xs font-mono mb-2">
-                <span className="text-slate-400">PHASE 2: 100 APPS</span>
-                <span className="text-slate-500">{phase2Percent}%</span>
+                <span className="font-bold text-cyan-400">PHASE 2: 100 APPS</span>
+                <span className="text-cyan-300 font-bold">{phase2Percent}% ACTIVE</span>
               </div>
               <div className="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden mb-2">
-                <div className="bg-cyan-500 h-full rounded-full transition-all duration-500" style={{ width: `${phase2Percent}%` }} />
+                <div className="bg-cyan-500 h-full rounded-full transition-all duration-500 shadow-[0_0_10px_rgba(6,182,212,0.5)]" style={{ width: `${phase2Percent}%` }} />
               </div>
               <p className="text-[11px] text-slate-400 flex justify-between">
                 <span>$3.5k VIP Funnel</span>
-                <strong className="text-slate-300">{totalAssets} / {phase2Target}</strong>
+                <strong className="text-cyan-200">{totalAssets} / {phase2Target}</strong>
               </p>
             </div>
 
