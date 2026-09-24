@@ -1,67 +1,35 @@
-// Auto-generated from CATALOG_MANIFEST.json by Ghost Factory™ Engine
-export interface ProductItem {
-  id: number;
-  name: string;
-  category: string;
-  vertical: string;
-  gumroad_url: string;
-  preview_url: string;
-  admin_url: string;
-  admin_passcode: string;
-  audit_score: number;
-  tables: string[];
-}
-
-export interface CatalogData {
-  catalog_version: string;
-  store: string;
-  store_url: string;
-  total_flagships: number;
-  standards: string;
-  database_engine: string;
-  frontend_stack: string;
-  valuation_framework: any;
-  products: ProductItem[];
-  vertical_slices: Record<string, {
-    name: string;
-    description: string;
-    apa_valuation_range: string;
-    target_asset_count: number;
-    current_asset_count: number;
-  }>;
-}
-
-export const CATALOG_DATA: CatalogData = {
+// Automatically generated from CATALOG_MANIFEST.json — do not edit manually
+export const CATALOG_DATA = {
   "catalog_version": "1.0.0",
   "store": "Aura & Grid",
   "store_url": "https://auraandgrid.gumroad.com",
-  "total_flagships": 41,
+  "total_flagships": 46,
   "standards": "Ghost Factory™ 9.0+ Verified Production Grade",
   "database_engine": "Supabase PostgreSQL (RLS Enabled)",
   "frontend_stack": "React 19 + Tailwind CSS + Lucide Icons + Vite",
   "valuation_framework": {
-    "total_products": 41,
+    "total_products": 46,
     "agency_whitelabel_vault_per_license": 1499,
-    "retail_shelf_msrp_starter_ui": 3239,
-    "retail_shelf_msrp_full_stack": 8159,
+    "retail_shelf_msrp_starter_ui": 3634,
+    "retail_shelf_msrp_full_stack": 9154,
     "pre_revenue_liquidation_protocol": {
       "fire_sale_24_72h": {
         "per_product_min": 250,
         "per_product_max": 368,
-        "fleet_total_min": 10250,
-        "fleet_total_max": 15088
+        "fleet_total_min": 11500,
+        "fleet_total_max": 16928
       },
       "quick_close_7_14d": {
         "per_product_min": 500,
         "per_product_max": 736,
-        "fleet_total_min": 20500,
-        "fleet_total_max": 30176
+        "fleet_total_min": 23000,
+        "fleet_total_max": 33856
       },
       "marketplace_listing_30_45d": {
         "per_product_min": 789,
         "per_product_max": 1157,
-        "fleet_total_min": 32349,
-        "fleet_total_max": 47437
+        "fleet_total_min": 36294,
+        "fleet_total_max": 53222
       }
     },
     "pre_revenue_apa_target_anchor": 35000,
@@ -756,6 +724,88 @@ export const CATALOG_DATA: CatalogData = {
         "portfolios",
         "ledger_entries"
       ]
+    },
+    {
+      "id": 42,
+      "name": "AUTO REPAIR SHOP OS",
+      "category": "Premium Performance Automotive Repair, ECU Tuning & Detailing Studio OS",
+      "vertical": "automotive",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/auto-repair-shop-os",
+      "preview_url": "https://auto-repair-shop-os.onrender.com",
+      "admin_url": "https://auto-repair-shop-os.onrender.com/admin",
+      "admin_passcode": "autorepair2026",
+      "audit_score": 9.8,
+      "tables": [
+        "service_bookings",
+        "bay_status",
+        "services_catalog",
+        "customer_reviews"
+      ]
+    },
+    {
+      "id": 43,
+      "name": "SPA TREATMENT OS",
+      "category": "Ultra-Luxury Spa Treatment, Ritual Booking & Wellness Sanctuary OS",
+      "vertical": "medical",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/spa-treatment-os",
+      "preview_url": "https://spa-treatment-os.onrender.com",
+      "admin_url": "https://spa-treatment-os.onrender.com/admin",
+      "admin_passcode": "spatreatment2026",
+      "audit_score": 9.8,
+      "tables": [
+        "reservations",
+        "therapists",
+        "treatments_menu",
+        "client_testimonials"
+      ]
+    },
+    {
+      "id": 44,
+      "name": "SOUL & SPICE OS",
+      "category": "Heritage Soul Food, Private Chef Catering & Restaurant Reservation OS",
+      "vertical": "hospitality",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/soul-and-spice-os",
+      "preview_url": "https://soul-and-spice-os.onrender.com",
+      "admin_url": "https://soul-and-spice-os.onrender.com/admin",
+      "admin_passcode": "soulspice2026",
+      "audit_score": 9.8,
+      "tables": [
+        "catering_orders",
+        "menu_items",
+        "reservations"
+      ]
+    },
+    {
+      "id": 45,
+      "name": "BBQ PIT OS",
+      "category": "Competition Smokehouse, Pit Master KDS & Catering Order Management OS",
+      "vertical": "hospitality",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/bbq-pit-os",
+      "preview_url": "https://bbq-pit-os.onrender.com",
+      "admin_url": "https://bbq-pit-os.onrender.com/admin",
+      "admin_passcode": "bbq2026",
+      "audit_score": 9.8,
+      "tables": [
+        "orders",
+        "menu_items",
+        "pit_schedule"
+      ]
+    },
+    {
+      "id": 46,
+      "name": "HERITAGE & HONEY OS",
+      "category": "Farm-to-Table Heritage Restaurant, Reservation Management & Journal OS",
+      "vertical": "hospitality",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/heritage-and-honey-os",
+      "preview_url": "https://heritage-and-honey-os.onrender.com",
+      "admin_url": "https://heritage-and-honey-os.onrender.com/admin",
+      "admin_passcode": "heritage2026",
+      "audit_score": 9.8,
+      "tables": [
+        "reservations",
+        "menu_items",
+        "testimonials"
+      ]
     }
   ],
   "vertical_slices": {
@@ -764,21 +814,21 @@ export const CATALOG_DATA: CatalogData = {
       "description": "Clinical booking, patient intake, medspas, salon grooming & olfactory OS",
       "apa_valuation_range": "$35,000 – $55,000",
       "target_asset_count": 50,
-      "current_asset_count": 6
+      "current_asset_count": 7
     },
     "automotive": {
       "name": "Automotive & Mobility Vault",
       "description": "Dyno testing, tuning dispatch, luxury fleet rentals & workshop OS",
       "apa_valuation_range": "$28,000 – $45,000",
       "target_asset_count": 40,
-      "current_asset_count": 2
+      "current_asset_count": 3
     },
     "hospitality": {
       "name": "Luxury Hospitality & Dining Vault",
       "description": "Bespoke counters, omakase, jazz bistros, supper clubs, estates & vineyards OS",
       "apa_valuation_range": "$42,000 – $65,000",
       "target_asset_count": 60,
-      "current_asset_count": 14
+      "current_asset_count": 17
     },
     "wealth": {
       "name": "Private Wealth & Real Estate Vault",
