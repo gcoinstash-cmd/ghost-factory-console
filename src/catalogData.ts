@@ -35,33 +35,33 @@ export const CATALOG_DATA: CatalogData = {
   "catalog_version": "1.0.0",
   "store": "Aura & Grid",
   "store_url": "https://auraandgrid.gumroad.com",
-  "total_flagships": 31,
+  "total_flagships": 36,
   "standards": "Ghost Factory™ 9.0+ Verified Production Grade",
   "database_engine": "Supabase PostgreSQL (RLS Enabled)",
   "frontend_stack": "React 19 + Tailwind CSS + Lucide Icons + Vite",
   "valuation_framework": {
-    "total_products": 31,
+    "total_products": 36,
     "agency_whitelabel_vault_per_license": 1499,
-    "retail_shelf_msrp_starter_ui": 2449,
-    "retail_shelf_msrp_full_stack": 6169,
+    "retail_shelf_msrp_starter_ui": 2844,
+    "retail_shelf_msrp_full_stack": 7164,
     "pre_revenue_liquidation_protocol": {
       "fire_sale_24_72h": {
         "per_product_min": 250,
         "per_product_max": 368,
-        "fleet_total_min": 7750,
-        "fleet_total_max": 11421
+        "fleet_total_min": 9000,
+        "fleet_total_max": 13248
       },
       "quick_close_7_14d": {
         "per_product_min": 500,
         "per_product_max": 736,
-        "fleet_total_min": 15500,
-        "fleet_total_max": 22842
+        "fleet_total_min": 18000,
+        "fleet_total_max": 26496
       },
       "marketplace_listing_30_45d": {
         "per_product_min": 789,
         "per_product_max": 1157,
-        "fleet_total_min": 24474,
-        "fleet_total_max": 35895
+        "fleet_total_min": 28404,
+        "fleet_total_max": 41652
       }
     },
     "pre_revenue_apa_target_anchor": 35000,
@@ -590,6 +590,87 @@ export const CATALOG_DATA: CatalogData = {
         "salon_specialists",
         "salon_daily_metrics"
       ]
+    },
+    {
+      "id": 32,
+      "name": "CROWN & COLLECTIVE",
+      "category": "Boutique Barber Atelier, VIP Chair Booking & Haircare Goods OS",
+      "vertical": "medical",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/crown-collective-os",
+      "preview_url": "https://crown-collective-os.onrender.com",
+      "admin_url": "https://crown-collective-os.onrender.com/admin",
+      "admin_passcode": "crown2026",
+      "audit_score": 9.8,
+      "tables": [
+        "appointments",
+        "barbers",
+        "services",
+        "products"
+      ]
+    },
+    {
+      "id": 33,
+      "name": "COMMERCIAL FINANCE ENGINE",
+      "category": "Real Estate Analytics, Commercial Debt Underwriting & Property Valuation OS",
+      "vertical": "wealth",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/commercial-finance-os",
+      "preview_url": "https://commercial-finance-os.onrender.com",
+      "admin_url": "https://commercial-finance-os.onrender.com/admin",
+      "admin_passcode": "finance2026",
+      "audit_score": 9.8,
+      "tables": [
+        "underwriting_deals",
+        "financial_metrics",
+        "client_portals"
+      ]
+    },
+    {
+      "id": 34,
+      "name": "HIGH-TICKET OFFER ARCHITECT",
+      "category": "High-Ticket Offer Studio, B2B Advisory Blueprints & Client Roster OS",
+      "vertical": "creative",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/high-ticket-studio-os",
+      "preview_url": "https://high-ticket-studio-os.onrender.com",
+      "admin_url": "https://high-ticket-studio-os.onrender.com/admin",
+      "admin_passcode": "architect2026",
+      "audit_score": 9.8,
+      "tables": [
+        "offer_blueprints",
+        "client_roster",
+        "strategy_intakes"
+      ]
+    },
+    {
+      "id": 35,
+      "name": "BBQ PIT",
+      "category": "Oak Smokehouse, Real-Time Smoker Pit Telemetry & Kitchen Dispatch OS",
+      "vertical": "hospitality",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/bbq-pit-os",
+      "preview_url": "https://bbq-pit-os.onrender.com",
+      "admin_url": "https://bbq-pit-os.onrender.com/admin",
+      "admin_passcode": "bbq2026",
+      "audit_score": 9.8,
+      "tables": [
+        "smoker_pits",
+        "reservations",
+        "kitchen_dispatch_queue"
+      ]
+    },
+    {
+      "id": 36,
+      "name": "STUDIO VÉRONIQUE LA",
+      "category": "California Warm Modernism, Residential Interior Design & Material Sourcing OS",
+      "vertical": "creative",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/studio-veronique-os",
+      "preview_url": "https://studio-veronique-os.onrender.com",
+      "admin_url": "https://studio-veronique-os.onrender.com/admin",
+      "admin_passcode": "veronique2026",
+      "audit_score": 9.8,
+      "tables": [
+        "design_projects",
+        "client_consultations",
+        "material_procurement"
+      ]
     }
   ],
   "vertical_slices": {
@@ -598,7 +679,7 @@ export const CATALOG_DATA: CatalogData = {
       "description": "Clinical booking, patient intake, medspas, salon grooming & olfactory OS",
       "apa_valuation_range": "$35,000 – $55,000",
       "target_asset_count": 50,
-      "current_asset_count": 5
+      "current_asset_count": 6
     },
     "automotive": {
       "name": "Automotive & Mobility Vault",
@@ -612,21 +693,21 @@ export const CATALOG_DATA: CatalogData = {
       "description": "Bespoke counters, omakase, jazz bistros, supper clubs, estates & vineyards OS",
       "apa_valuation_range": "$42,000 – $65,000",
       "target_asset_count": 60,
-      "current_asset_count": 10
+      "current_asset_count": 11
     },
     "wealth": {
       "name": "Private Wealth & Real Estate Vault",
       "description": "Private equity LP portals, estate syndication, family office & luxury listings OS",
       "apa_valuation_range": "$30,000 – $48,000",
       "target_asset_count": 35,
-      "current_asset_count": 4
+      "current_asset_count": 5
     },
     "creative": {
       "name": "Creative Agency & Studio Vault",
       "description": "Motion VFX, architecture atelier, soundstage production & design OS",
       "apa_valuation_range": "$28,000 – $40,000",
       "target_asset_count": 40,
-      "current_asset_count": 7
+      "current_asset_count": 9
     },
     "fitness": {
       "name": "Performance Fitness & Athletics Vault",
