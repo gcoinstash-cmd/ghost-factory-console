@@ -3,33 +3,33 @@ export const CATALOG_DATA = {
   "catalog_version": "1.0.0",
   "store": "Aura & Grid",
   "store_url": "https://auraandgrid.gumroad.com",
-  "total_flagships": 50,
+  "total_flagships": 55,
   "standards": "Ghost Factory™ 9.0+ Verified Production Grade",
   "database_engine": "Supabase PostgreSQL (RLS Enabled)",
   "frontend_stack": "React 19 + Tailwind CSS + Lucide Icons + Vite",
   "valuation_framework": {
-    "total_products": 50,
+    "total_products": 55,
     "agency_whitelabel_vault_per_license": 2999,
-    "retail_shelf_msrp_starter_ui": 3950,
-    "retail_shelf_msrp_full_stack": 9950,
+    "retail_shelf_msrp_starter_ui": 4345,
+    "retail_shelf_msrp_full_stack": 10945,
     "pre_revenue_liquidation_protocol": {
       "fire_sale_24_72h": {
         "per_product_min": 250,
         "per_product_max": 368,
-        "fleet_total_min": 12500,
-        "fleet_total_max": 18421
+        "fleet_total_min": 13750,
+        "fleet_total_max": 20263
       },
       "quick_close_7_14d": {
         "per_product_min": 500,
         "per_product_max": 736,
-        "fleet_total_min": 25000,
-        "fleet_total_max": 36800
+        "fleet_total_min": 27500,
+        "fleet_total_max": 40480
       },
       "marketplace_listing_30_45d": {
         "per_product_min": 789,
         "per_product_max": 1157,
-        "fleet_total_min": 39450,
-        "fleet_total_max": 57850
+        "fleet_total_min": 43395,
+        "fleet_total_max": 63635
       }
     },
     "pre_revenue_apa_target_anchor": 50000,
@@ -869,6 +869,87 @@ export const CATALOG_DATA = {
         "banquet_bookings",
         "culinary_menu_items",
         "dietary_allergen_records"
+      ]
+    },
+    {
+      "id": 51,
+      "name": "TRENDY TACO TRUCK OS",
+      "category": "Street Gastronomy Truck, Fleet Tracking & Private Event Commission KDS OS",
+      "vertical": "hospitality",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/trendy-taco-truck-os",
+      "preview_url": "https://gcoinstash-cmd.github.io/trendy-taco-truck-os/",
+      "admin_url": "https://gcoinstash-cmd.github.io/trendy-taco-truck-os/admin/",
+      "admin_passcode": "tacotruck2026",
+      "audit_score": 9.9,
+      "tables": [
+        "truck_location",
+        "menu_items",
+        "catering_leads",
+        "vip_subscribers"
+      ]
+    },
+    {
+      "id": 52,
+      "name": "YŪGEN SENSORY OS",
+      "category": "Zen Minimalist Sensory Dining Sanctuary & Omakase Booking OS",
+      "vertical": "hospitality",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/yugen-sensory-os",
+      "preview_url": "https://gcoinstash-cmd.github.io/yugen-sensory-os/",
+      "admin_url": "https://gcoinstash-cmd.github.io/yugen-sensory-os/admin/",
+      "admin_passcode": "yugen2026",
+      "audit_score": 9.9,
+      "tables": [
+        "reservations",
+        "sensory_courses",
+        "buyout_inquiries"
+      ]
+    },
+    {
+      "id": 53,
+      "name": "LITTLE ROOTS WELLNESS OS",
+      "category": "Pediatric Developmental Clinic, Sensory Milestones & Early Academy OS",
+      "vertical": "medical",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/little-roots-wellness-os",
+      "preview_url": "https://gcoinstash-cmd.github.io/little-roots-wellness-os/",
+      "admin_url": "https://gcoinstash-cmd.github.io/little-roots-wellness-os/admin/",
+      "admin_passcode": "roots2026",
+      "audit_score": 9.9,
+      "tables": [
+        "admissions_waitlist",
+        "development_milestones",
+        "parent_consultations"
+      ]
+    },
+    {
+      "id": 54,
+      "name": "HOSPITALITY ROI ENGINE OS",
+      "category": "Boutique Hospitality RevPASH, CapEx Yield & Pro-Forma Allocator OS",
+      "vertical": "wealth",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/hospitality-roi-engine-os",
+      "preview_url": "https://gcoinstash-cmd.github.io/hospitality-roi-engine-os/",
+      "admin_url": "https://gcoinstash-cmd.github.io/hospitality-roi-engine-os/admin/",
+      "admin_passcode": "roi2026",
+      "audit_score": 9.9,
+      "tables": [
+        "proforma_projects",
+        "underwriting_scenarios",
+        "lp_inquiries"
+      ]
+    },
+    {
+      "id": 55,
+      "name": "ZEN CAPITAL OS",
+      "category": "Institutional FCF, ROIC Compounding & Private Equity Portfolio Terminal OS",
+      "vertical": "wealth",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/zen-capital-os",
+      "preview_url": "https://gcoinstash-cmd.github.io/zen-capital-os/",
+      "admin_url": "https://gcoinstash-cmd.github.io/zen-capital-os/admin/",
+      "admin_passcode": "zencapital2026",
+      "audit_score": 9.9,
+      "tables": [
+        "portfolio_holdings",
+        "fcf_valuation_models",
+        "lp_capital_calls"
       ]
     }
   ],
