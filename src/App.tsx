@@ -26,7 +26,10 @@ import {
   ArrowRight,
   Briefcase,
   Compass,
-  RotateCw
+  RotateCw,
+  Calculator,
+  PieChart,
+  Coins
 } from 'lucide-react';
 
 export default function App() {
@@ -82,6 +85,59 @@ export default function App() {
     monthlyAgencyVaultRevenue;
   const annualizedCashFlow = totalMonthlyGross * 12;
   const projectedAcquireMultiple = Math.round(annualizedCashFlow * 2.8);
+
+  // Sweet Spot Vertical Carve-Out Vaults Real-Time & Predictable Valuation Engine
+  // Unit valuation bands per app: Min $700, Mid $850, Max $1,100
+  const [sliceDealType, setSliceDealType] = useState<'mini' | 'vertical' | 'license'>('vertical');
+  const [futureTargetApps, setFutureTargetApps] = useState<number>(50); // Slider for future projection
+
+  const currentVaultMetrics = useMemo(() => {
+    const slices = CATALOG_DATA.vertical_slices || {};
+    let totalBuilt = 0;
+    let totalTarget = 0;
+    const details = Object.entries(slices).map(([key, s]) => {
+      totalBuilt += s.current_asset_count;
+      totalTarget += s.target_asset_count;
+      // Per app unit value in each vault
+      const unitMin = key === 'wealth' ? 850 : 700;
+      const unitMax = key === 'wealth' ? 1370 : 1100;
+      const currentMinVal = s.current_asset_count * unitMin;
+      const currentMaxVal = s.current_asset_count * unitMax;
+      const fullTargetMinVal = s.target_asset_count * unitMin;
+      const fullTargetMaxVal = s.target_asset_count * unitMax;
+
+      return {
+        key,
+        name: s.name,
+        currentCount: s.current_asset_count,
+        targetCount: s.target_asset_count,
+        pctComplete: Math.round((s.current_asset_count / s.target_asset_count) * 100),
+        unitMin,
+        unitMax,
+        currentMinVal,
+        currentMaxVal,
+        fullTargetMinVal,
+        fullTargetMaxVal,
+        statedRange: s.apa_valuation_range,
+        description: s.description
+      };
+    });
+
+    const currentAggregateMin = details.reduce((acc, d) => acc + d.currentMinVal, 0);
+    const currentAggregateMax = details.reduce((acc, d) => acc + d.currentMaxVal, 0);
+    const fullTargetAggregateMin = details.reduce((acc, d) => acc + d.fullTargetMinVal, 0);
+    const fullTargetAggregateMax = details.reduce((acc, d) => acc + d.fullTargetMaxVal, 0);
+
+    return {
+      details,
+      totalBuilt,
+      totalTarget,
+      currentAggregateMin,
+      currentAggregateMax,
+      fullTargetAggregateMin,
+      fullTargetAggregateMax
+    };
+  }, []);
 
   const handleCopyPasscode = (code: string) => {
     navigator.clipboard.writeText(code);
@@ -280,41 +336,208 @@ export default function App() {
           </div>
         </section>
 
-        {/* VERTICAL SLICE CARVE-OUT VAULTS (MICRO-APA M&A ENGINE) */}
-        <section className="bg-[#121215] border border-cyan-500/30 rounded-xl p-6 relative overflow-hidden">
-          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
+        {/* SWEET SPOT VERTICAL CARVE-OUT VAULTS (REAL-TIME & PREDICTIVE VALUATION ENGINE) */}
+        <section className="bg-[#121215] border border-cyan-500/40 rounded-xl p-6 relative overflow-hidden shadow-2xl">
+          {/* Header & Badges */}
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6 pb-6 border-b border-white/10">
             <div>
               <div className="flex items-center gap-2">
-                <Briefcase className="text-cyan-400" size={18} />
-                <h2 className="font-bold text-lg text-white">Vertical Slice Carve-Out Vaults (Micro-APA Strategy)</h2>
+                <Briefcase className="text-cyan-400" size={20} />
+                <h2 className="font-bold text-lg text-white">Sweet Spot Vertical Carve-Out Vaults (Real-Time & Predictive Engine)</h2>
+                <span className="text-[10px] font-mono text-cyan-300 bg-cyan-950/60 border border-cyan-500/30 px-2.5 py-0.5 rounded-full font-bold">
+                  HIGH-LEVERAGE SWEET SPOT
+                </span>
               </div>
               <p className="text-xs text-slate-400 mt-1 font-sans">
-                Sell specialized operational slices directly to niche marketing agencies, private equity rollups, and industry holding companies.
+                Real-time valuation of current live assets + predictable forecast of future vault buyouts ($15k–$65k slices bypassing retail drag).
               </p>
             </div>
-            <div className="bg-black/60 border border-cyan-500/30 px-3 py-1.5 rounded-lg text-xs font-mono text-cyan-300">
-              ⚡ 6 SPECIALIZED SECTOR VAULTS
+            
+            {/* Real-Time Total Vault APA Telemetry Badge */}
+            <div className="flex flex-col sm:items-end">
+              <span className="text-[10px] font-mono text-slate-400 uppercase tracking-widest">Current Live Vault Valuation</span>
+              <span className="text-lg sm:text-xl font-mono font-black text-emerald-400 tracking-tight">
+                ${currentVaultMetrics.currentAggregateMin.toLocaleString()} – ${currentVaultMetrics.currentAggregateMax.toLocaleString()}
+              </span>
+              <span className="text-[10px] font-mono text-cyan-400">
+                {currentVaultMetrics.totalBuilt} Live Assets Active across 6 Vaults
+              </span>
             </div>
           </div>
 
+          {/* REAL-TIME PREDICTIVE FORECAST INTERACTIVE HUD */}
+          <div className="bg-black/60 border border-cyan-500/30 rounded-xl p-5 mb-6">
+            <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-4 pb-4 border-b border-white/10">
+              <div className="flex items-center gap-2.5">
+                <Calculator className="text-cyan-400" size={18} />
+                <div>
+                  <h3 className="text-sm font-bold text-white font-mono uppercase tracking-wider">
+                    Predictable Vault Valuation Forecaster
+                  </h3>
+                  <p className="text-[11px] text-slate-400 font-sans">
+                    Adjust target slice parameters to forecast institutional acquisition value based on verified market multiples ($700–$1,100+/app).
+                  </p>
+                </div>
+              </div>
+
+              {/* Deal Structure Quick Buttons */}
+              <div className="flex items-center gap-2 font-mono text-xs">
+                <button
+                  onClick={() => {
+                    setSliceDealType('mini');
+                    setFutureTargetApps(20);
+                  }}
+                  className={`px-3 py-1.5 rounded-lg border transition-all cursor-pointer ${
+                    sliceDealType === 'mini'
+                      ? 'bg-cyan-500/20 border-cyan-400 text-cyan-300 font-bold'
+                      : 'bg-black/40 border-white/10 text-slate-400 hover:text-white'
+                  }`}
+                >
+                  Mini-Vault (15–20 Apps)
+                </button>
+                <button
+                  onClick={() => {
+                    setSliceDealType('vertical');
+                    setFutureTargetApps(50);
+                  }}
+                  className={`px-3 py-1.5 rounded-lg border transition-all cursor-pointer ${
+                    sliceDealType === 'vertical'
+                      ? 'bg-cyan-500/20 border-cyan-400 text-cyan-300 font-bold'
+                      : 'bg-black/40 border-white/10 text-slate-400 hover:text-white'
+                  }`}
+                >
+                  Full Vertical (35–60 Apps)
+                </button>
+                <button
+                  onClick={() => {
+                    setSliceDealType('license');
+                    setFutureTargetApps(50);
+                  }}
+                  className={`px-3 py-1.5 rounded-lg border transition-all cursor-pointer ${
+                    sliceDealType === 'license'
+                      ? 'bg-cyan-500/20 border-cyan-400 text-cyan-300 font-bold'
+                      : 'bg-black/40 border-white/10 text-slate-400 hover:text-white'
+                  }`}
+                >
+                  Agency Whitelabel
+                </button>
+              </div>
+            </div>
+
+            {/* Interactive Slider & Forecast Metric Cards */}
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+              {/* Slider Column */}
+              <div className="lg:col-span-6 space-y-3 font-mono">
+                <div className="flex justify-between items-center text-xs">
+                  <span className="text-slate-300 font-bold">Predictive Slice Size:</span>
+                  <span className="text-cyan-400 font-bold text-sm bg-cyan-950/60 px-3 py-1 rounded border border-cyan-500/30">
+                    {futureTargetApps} Templates
+                  </span>
+                </div>
+                <input
+                  type="range"
+                  min="10"
+                  max="100"
+                  step="5"
+                  value={futureTargetApps}
+                  onChange={(e) => setFutureTargetApps(Number(e.target.value))}
+                  className="w-full accent-cyan-400 bg-slate-800 h-2 rounded-lg cursor-pointer"
+                />
+                <div className="flex justify-between text-[10px] text-slate-500">
+                  <span>10 Apps (Niche Slice)</span>
+                  <span>50 Apps (Full Vault)</span>
+                  <span>100 Apps (Mega Cluster)</span>
+                </div>
+              </div>
+
+              {/* Dynamic Predictable Value Cards */}
+              <div className="lg:col-span-6 grid grid-cols-2 gap-3 font-mono text-xs">
+                {/* Micro-APA Asking Multiple */}
+                <div className="bg-[#18181b] border border-cyan-500/30 p-3.5 rounded-lg">
+                  <div className="flex items-center gap-1.5 text-slate-400 mb-1">
+                    <PieChart size={14} className="text-cyan-400" />
+                    <span className="text-[10px] uppercase font-bold">Predictable APA Buyout</span>
+                  </div>
+                  <div className="text-base sm:text-lg font-bold text-emerald-400">
+                    ${(futureTargetApps * 700).toLocaleString()} – ${(futureTargetApps * 1100).toLocaleString()}
+                  </div>
+                  <p className="text-[10px] text-slate-400 mt-1 font-sans">
+                    30-Day Cash Acquisition Multiple ($700–$1,100 / app)
+                  </p>
+                </div>
+
+                {/* Labor Replacement Value */}
+                <div className="bg-[#18181b] border border-white/10 p-3.5 rounded-lg">
+                  <div className="flex items-center gap-1.5 text-slate-400 mb-1">
+                    <Coins size={14} className="text-amber-400" />
+                    <span className="text-[10px] uppercase font-bold">Client Dev Savings</span>
+                  </div>
+                  <div className="text-base sm:text-lg font-bold text-amber-400">
+                    ${(futureTargetApps * 4500).toLocaleString()}
+                  </div>
+                  <p className="text-[10px] text-slate-400 mt-1 font-sans">
+                    Equivalent agency labor build cost ($4,500 / app)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* THE 6 SWEET SPOT VERTICAL VAULTS: REAL-TIME AUDIT GRID */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 font-mono text-xs">
-            {Object.entries(CATALOG_DATA.vertical_slices || {}).map(([key, slice]) => (
-              <div key={key} className="bg-black/50 border border-white/10 hover:border-cyan-500/40 transition-colors p-4 rounded-lg flex flex-col justify-between">
+            {currentVaultMetrics.details.map((v) => (
+              <div
+                key={v.key}
+                className="bg-black/50 border border-white/10 hover:border-cyan-500/40 transition-all p-4 rounded-lg flex flex-col justify-between"
+              >
                 <div>
                   <div className="flex justify-between items-start mb-1.5">
-                    <span className="font-bold text-white text-sm">{slice.name}</span>
+                    <span className="font-bold text-white text-sm">{v.name}</span>
                     <span className="bg-cyan-500/10 text-cyan-400 text-[10px] px-2 py-0.5 rounded border border-cyan-500/20 font-bold">
-                      {slice.current_asset_count} / {slice.target_asset_count}
+                      {v.currentCount} / {v.targetCount} ({v.pctComplete}%)
                     </span>
                   </div>
-                  <p className="text-[11px] text-slate-400 font-sans mb-3">{slice.description}</p>
+                  <p className="text-[11px] text-slate-400 font-sans mb-3">{v.description}</p>
+
+                  {/* Progress Bar */}
+                  <div className="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden mb-3">
+                    <div
+                      className="bg-cyan-400 h-full rounded-full transition-all duration-500"
+                      style={{ width: `${v.pctComplete}%` }}
+                    />
+                  </div>
                 </div>
-                <div className="pt-3 border-t border-white/10 flex justify-between items-center">
-                  <span className="text-[10px] text-slate-500 uppercase">APA Target Buyout</span>
-                  <span className="text-emerald-400 font-bold text-xs">{slice.apa_valuation_range}</span>
+
+                <div className="pt-3 border-t border-white/10 space-y-1.5">
+                  <div className="flex justify-between items-center">
+                    <span className="text-[10px] text-slate-500 uppercase">Live Vault Value:</span>
+                    <span className="text-emerald-400 font-bold">
+                      ${v.currentMinVal.toLocaleString()} – ${v.currentMaxVal.toLocaleString()}
+                    </span>
+                  </div>
+                  <div className="flex justify-between items-center text-[10px]">
+                    <span className="text-slate-500 uppercase">Full Vault Target:</span>
+                    <span className="text-slate-300 font-bold">
+                      {v.statedRange}
+                    </span>
+                  </div>
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Vault Footer Summary Banner */}
+          <div className="mt-4 pt-4 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs font-mono text-slate-400">
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+              <span>Full 6-Vault Portfolio Capacity: <strong>{currentVaultMetrics.totalTarget} Apps</strong></span>
+            </div>
+            <div>
+              <span>Full Portfolio Carve-Out Ceiling: </span>
+              <strong className="text-emerald-400">
+                ${currentVaultMetrics.fullTargetAggregateMin.toLocaleString()} – ${currentVaultMetrics.fullTargetAggregateMax.toLocaleString()}
+              </strong>
+            </div>
           </div>
         </section>
 
