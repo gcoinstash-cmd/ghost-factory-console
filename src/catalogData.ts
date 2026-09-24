@@ -2,7 +2,7 @@ export const CATALOG_MANIFEST = {
   "catalog_version": "1.0.0",
   "store": "Aura & Grid",
   "store_url": "https://auraandgrid.gumroad.com",
-  "total_flagships": 65,
+  "total_flagships": 70,
   "standards": "Ghost Factory\u2122 9.0+ Verified Production Grade",
   "database_engine": "Supabase PostgreSQL (RLS Enabled)",
   "frontend_stack": "React 19 + Tailwind CSS + Lucide Icons + Vite",
@@ -1120,6 +1120,87 @@ export const CATALOG_MANIFEST = {
         "suite_reservations",
         "chamber_telemetry"
       ]
+    },
+    {
+      "id": 66,
+      "name": "BOUTIQUE LAW OS",
+      "category": "High-Ticket Commercial Law Firm & Client Retainer OS",
+      "vertical": "wealth",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/boutique-law-os",
+      "preview_url": "https://gcoinstash-cmd.github.io/boutique-law-os/",
+      "admin_url": "https://gcoinstash-cmd.github.io/boutique-law-os/admin/",
+      "admin_passcode": "law2026",
+      "audit_score": 9.8,
+      "tables": [
+        "legal_matters",
+        "trust_ledgers",
+        "conflict_intake",
+        "matter_documents"
+      ]
+    },
+    {
+      "id": 67,
+      "name": "M&A ADVISORY OS",
+      "category": "Lower Middle-Market M&A Deal Room & VDR Engine",
+      "vertical": "wealth",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/ma-advisory-os",
+      "preview_url": "https://gcoinstash-cmd.github.io/ma-advisory-os/",
+      "admin_url": "https://gcoinstash-cmd.github.io/ma-advisory-os/admin/",
+      "admin_passcode": "ma2026",
+      "audit_score": 9.8,
+      "tables": [
+        "deal_mandates",
+        "vdr_access_requests",
+        "client_advisory_inquiries"
+      ]
+    },
+    {
+      "id": 68,
+      "name": "EXECUTIVE SEARCH OS",
+      "category": "Retained C-Suite & Board Placement Engine",
+      "vertical": "wealth",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/executive-search-os",
+      "preview_url": "https://gcoinstash-cmd.github.io/executive-search-os/",
+      "admin_url": "https://gcoinstash-cmd.github.io/executive-search-os/admin/",
+      "admin_passcode": "search2026",
+      "audit_score": 9.8,
+      "tables": [
+        "retained_mandates",
+        "candidate_dossiers",
+        "client_mandate_inquiries"
+      ]
+    },
+    {
+      "id": 69,
+      "name": "WEALTH FAMILY OFFICE OS",
+      "category": "Sovereign Multi-Family Office & Direct LP Engine",
+      "vertical": "wealth",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/wealth-family-office-os",
+      "preview_url": "https://gcoinstash-cmd.github.io/wealth-family-office-os/",
+      "admin_url": "https://gcoinstash-cmd.github.io/wealth-family-office-os/admin/",
+      "admin_passcode": "familyoffice2026",
+      "audit_score": 9.8,
+      "tables": [
+        "direct_syndicates",
+        "family_allocations",
+        "principal_onboarding_inquiries"
+      ]
+    },
+    {
+      "id": 70,
+      "name": "LITIGATION OPS OS",
+      "category": "Commercial Trial War Room & E-Discovery Command Center",
+      "vertical": "wealth",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/litigation-ops-os",
+      "preview_url": "https://gcoinstash-cmd.github.io/litigation-ops-os/",
+      "admin_url": "https://gcoinstash-cmd.github.io/litigation-ops-os/admin/",
+      "admin_passcode": "litigation2026",
+      "audit_score": 9.8,
+      "tables": [
+        "litigation_dockets",
+        "ediscovery_documents",
+        "case_assessment_inquiries"
+      ]
     }
   ],
   "vertical_slices": {
@@ -1149,7 +1230,7 @@ export const CATALOG_MANIFEST = {
       "description": "Private equity LP portals, estate syndication, family office & luxury listings OS",
       "apa_valuation_range": "$30,000 \u2013 $48,000",
       "target_asset_count": 35,
-      "current_asset_count": 8
+      "current_asset_count": 15
     },
     "creative": {
       "name": "Creative Agency & Studio Vault",
