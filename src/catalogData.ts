@@ -35,33 +35,33 @@ export const CATALOG_DATA: CatalogData = {
   "catalog_version": "1.0.0",
   "store": "Aura & Grid",
   "store_url": "https://auraandgrid.gumroad.com",
-  "total_flagships": 36,
+  "total_flagships": 41,
   "standards": "Ghost Factory™ 9.0+ Verified Production Grade",
   "database_engine": "Supabase PostgreSQL (RLS Enabled)",
   "frontend_stack": "React 19 + Tailwind CSS + Lucide Icons + Vite",
   "valuation_framework": {
-    "total_products": 36,
+    "total_products": 41,
     "agency_whitelabel_vault_per_license": 1499,
-    "retail_shelf_msrp_starter_ui": 2844,
-    "retail_shelf_msrp_full_stack": 7164,
+    "retail_shelf_msrp_starter_ui": 3239,
+    "retail_shelf_msrp_full_stack": 8159,
     "pre_revenue_liquidation_protocol": {
       "fire_sale_24_72h": {
         "per_product_min": 250,
         "per_product_max": 368,
-        "fleet_total_min": 9000,
-        "fleet_total_max": 13248
+        "fleet_total_min": 10250,
+        "fleet_total_max": 15088
       },
       "quick_close_7_14d": {
         "per_product_min": 500,
         "per_product_max": 736,
-        "fleet_total_min": 18000,
-        "fleet_total_max": 26496
+        "fleet_total_min": 20500,
+        "fleet_total_max": 30176
       },
       "marketplace_listing_30_45d": {
         "per_product_min": 789,
         "per_product_max": 1157,
-        "fleet_total_min": 28404,
-        "fleet_total_max": 41652
+        "fleet_total_min": 32349,
+        "fleet_total_max": 47437
       }
     },
     "pre_revenue_apa_target_anchor": 35000,
@@ -671,6 +671,91 @@ export const CATALOG_DATA: CatalogData = {
         "client_consultations",
         "material_procurement"
       ]
+    },
+    {
+      "id": 37,
+      "name": "PIZZA PARLOR OS",
+      "category": "Wood-Fired Neapolitan Pizzeria, Dough Fermentation & Reservation OS",
+      "vertical": "hospitality",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/pizza-parlor-os",
+      "preview_url": "https://pizza-parlor-os.onrender.com",
+      "admin_url": "https://pizza-parlor-os.onrender.com/admin",
+      "admin_passcode": "pizza2026",
+      "audit_score": 9.8,
+      "tables": [
+        "dough_fermentation_logs",
+        "forno_reservations",
+        "service_tickets",
+        "catering_inquiries"
+      ]
+    },
+    {
+      "id": 38,
+      "name": "NOCTURNE NIGHTLIFE OS",
+      "category": "VIP Nightclub Table Bookings, Bottle Service Dispatch & Guestlist OS",
+      "vertical": "hospitality",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/premium-nightlife-os",
+      "preview_url": "https://premium-nightlife-os.onrender.com",
+      "admin_url": "https://premium-nightlife-os.onrender.com/admin",
+      "admin_passcode": "nightlife2026",
+      "audit_score": 9.8,
+      "tables": [
+        "vip_tables",
+        "guestlist_submissions",
+        "bottle_inventory",
+        "table_reservations"
+      ]
+    },
+    {
+      "id": 39,
+      "name": "ZENITH ELITE AGENCY OS",
+      "category": "Luxury Digital Atelier, Kinetic Motion & High-Ticket Client Intake OS",
+      "vertical": "creative",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/zenith-agency-os",
+      "preview_url": "https://zenith-agency-os.onrender.com",
+      "admin_url": "https://zenith-agency-os.onrender.com/admin",
+      "admin_passcode": "zenith2026",
+      "audit_score": 9.8,
+      "tables": [
+        "client_intake",
+        "case_studies",
+        "active_sprints",
+        "proposal_pipeline"
+      ]
+    },
+    {
+      "id": 40,
+      "name": "STREET CULTURE KITCHEN OS",
+      "category": "Dark-Mode Street Food Truck, Live GPS Dispatch & Limited Merch Drops OS",
+      "vertical": "hospitality",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/street-culture-kitchen-os",
+      "preview_url": "https://street-culture-kitchen-os.onrender.com",
+      "admin_url": "https://street-culture-kitchen-os.onrender.com/admin",
+      "admin_passcode": "street2026",
+      "audit_score": 9.8,
+      "tables": [
+        "truck_status",
+        "orders",
+        "catering_inquiries",
+        "merch_drops"
+      ]
+    },
+    {
+      "id": 41,
+      "name": "SATSTACKER ASSET VAULT OS",
+      "category": "High-Precision Bitcoin Portfolio, Streak Freeze & Cryptographic Ledger OS",
+      "vertical": "wealth",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/satstacker-os",
+      "preview_url": "https://satstacker-os.onrender.com",
+      "admin_url": "https://satstacker-os.onrender.com/admin",
+      "admin_passcode": "satstacker2026",
+      "audit_score": 9.8,
+      "tables": [
+        "users",
+        "user_streaks",
+        "portfolios",
+        "ledger_entries"
+      ]
     }
   ],
   "vertical_slices": {
@@ -693,21 +778,21 @@ export const CATALOG_DATA: CatalogData = {
       "description": "Bespoke counters, omakase, jazz bistros, supper clubs, estates & vineyards OS",
       "apa_valuation_range": "$42,000 – $65,000",
       "target_asset_count": 60,
-      "current_asset_count": 11
+      "current_asset_count": 14
     },
     "wealth": {
       "name": "Private Wealth & Real Estate Vault",
       "description": "Private equity LP portals, estate syndication, family office & luxury listings OS",
       "apa_valuation_range": "$30,000 – $48,000",
       "target_asset_count": 35,
-      "current_asset_count": 5
+      "current_asset_count": 6
     },
     "creative": {
       "name": "Creative Agency & Studio Vault",
       "description": "Motion VFX, architecture atelier, soundstage production & design OS",
       "apa_valuation_range": "$28,000 – $40,000",
       "target_asset_count": 40,
-      "current_asset_count": 9
+      "current_asset_count": 10
     },
     "fitness": {
       "name": "Performance Fitness & Athletics Vault",
