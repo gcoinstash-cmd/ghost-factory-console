@@ -20,7 +20,8 @@ import {
   Compass,
   PieChart,
   Coins,
-  Briefcase
+  Briefcase,
+  Calculator
 } from 'lucide-react';
 import { CATALOG_DATA } from './catalogData';
 
@@ -108,6 +109,14 @@ export const App: React.FC = () => {
       const fullTargetMinVal = s.target_asset_count * unitMin;
       const fullTargetMaxVal = s.target_asset_count * unitMax;
 
+      // Pre-Revenue Liquidation Protocol Valuations per vault
+      const liqMarketplaceMin = s.current_asset_count * 789;
+      const liqMarketplaceMax = Math.round(s.current_asset_count * 1157.17);
+      const liqQuickCloseMin = s.current_asset_count * 500;
+      const liqQuickCloseMax = Math.round(s.current_asset_count * 736.84);
+      const liqFireSaleMin = s.current_asset_count * 250;
+      const liqFireSaleMax = Math.round(s.current_asset_count * 368.42);
+
       return {
         key,
         name: s.name,
@@ -120,6 +129,12 @@ export const App: React.FC = () => {
         currentMaxVal,
         fullTargetMinVal,
         fullTargetMaxVal,
+        liqMarketplaceMin,
+        liqMarketplaceMax,
+        liqQuickCloseMin,
+        liqQuickCloseMax,
+        liqFireSaleMin,
+        liqFireSaleMax,
         statedRange: s.apa_valuation_range,
         description: s.description
       };
@@ -130,6 +145,13 @@ export const App: React.FC = () => {
     const fullTargetAggregateMin = details.reduce((acc, d) => acc + d.fullTargetMinVal, 0);
     const fullTargetAggregateMax = details.reduce((acc, d) => acc + d.fullTargetMaxVal, 0);
 
+    const totalLiqMarketplaceMin = details.reduce((acc, d) => acc + d.liqMarketplaceMin, 0);
+    const totalLiqMarketplaceMax = details.reduce((acc, d) => acc + d.liqMarketplaceMax, 0);
+    const totalLiqQuickCloseMin = details.reduce((acc, d) => acc + d.liqQuickCloseMin, 0);
+    const totalLiqQuickCloseMax = details.reduce((acc, d) => acc + d.liqQuickCloseMax, 0);
+    const totalLiqFireSaleMin = details.reduce((acc, d) => acc + d.liqFireSaleMin, 0);
+    const totalLiqFireSaleMax = details.reduce((acc, d) => acc + d.liqFireSaleMax, 0);
+
     return {
       details,
       totalBuilt,
@@ -137,7 +159,13 @@ export const App: React.FC = () => {
       currentAggregateMin,
       currentAggregateMax,
       fullTargetAggregateMin,
-      fullTargetAggregateMax
+      fullTargetAggregateMax,
+      totalLiqMarketplaceMin,
+      totalLiqMarketplaceMax,
+      totalLiqQuickCloseMin,
+      totalLiqQuickCloseMax,
+      totalLiqFireSaleMin,
+      totalLiqFireSaleMax
     };
   }, []);
 
@@ -363,11 +391,22 @@ export const App: React.FC = () => {
             
             {/* Real-Time Total Vault APA Telemetry Badge */}
             <div className="flex flex-col sm:items-end">
-              <span className="text-xs font-mono text-slate-400 uppercase tracking-widest font-semibold">Current Live Vault Valuation</span>
+              <span className="text-xs font-mono text-slate-400 uppercase tracking-widest font-semibold">Live Vault APA Multiple</span>
               <span className="text-xl sm:text-2xl font-mono font-black text-emerald-400 tracking-tight">
                 ${currentVaultMetrics.currentAggregateMin.toLocaleString()} – ${currentVaultMetrics.currentAggregateMax.toLocaleString()}
               </span>
-              <span className="text-xs font-mono font-bold text-cyan-400 mt-0.5">
+              <div className="flex flex-wrap items-center gap-1.5 mt-1 font-mono text-[11px] font-bold">
+                <span className="text-emerald-400 bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-500/30">
+                  🟢 Mkt: ${currentVaultMetrics.totalLiqMarketplaceMin.toLocaleString()} – ${currentVaultMetrics.totalLiqMarketplaceMax.toLocaleString()}
+                </span>
+                <span className="text-amber-400 bg-amber-950/60 px-2 py-0.5 rounded border border-amber-500/30">
+                  🟡 Quick: ${currentVaultMetrics.totalLiqQuickCloseMin.toLocaleString()} – ${currentVaultMetrics.totalLiqQuickCloseMax.toLocaleString()}
+                </span>
+                <span className="text-rose-400 bg-rose-950/60 px-2 py-0.5 rounded border border-rose-500/30">
+                  🔴 Fire: ${currentVaultMetrics.totalLiqFireSaleMin.toLocaleString()} – ${currentVaultMetrics.totalLiqFireSaleMax.toLocaleString()}
+                </span>
+              </div>
+              <span className="text-xs font-mono font-bold text-cyan-400 mt-1">
                 {currentVaultMetrics.totalBuilt} Live Assets Active across {currentVaultMetrics.details.length} Vaults
               </span>
             </div>
@@ -464,13 +503,13 @@ export const App: React.FC = () => {
                 <div className="bg-[#18181b] border border-cyan-500/30 p-4 rounded-xl">
                   <div className="flex items-center gap-2 text-slate-300 mb-1.5">
                     <PieChart size={16} className="text-cyan-400" />
-                    <span className="text-xs uppercase font-bold tracking-wider">Predictable APA Buyout</span>
+                    <span className="text-xs uppercase font-bold tracking-wider">Sweet Spot APA Buyout</span>
                   </div>
                   <div className="text-lg sm:text-xl font-bold text-emerald-400">
                     ${(futureTargetApps * 700).toLocaleString()} – ${(futureTargetApps * 1100).toLocaleString()}
                   </div>
                   <p className="text-xs text-slate-300 mt-1.5 font-sans leading-relaxed">
-                    30-Day Cash Acquisition Multiple ($700–$1,100 / app)
+                    30-Day Niche Acquisition ($700–$1,100 / app)
                   </p>
                 </div>
 
@@ -487,6 +526,24 @@ export const App: React.FC = () => {
                     Equivalent agency labor build cost ($4,500 / app)
                   </p>
                 </div>
+              </div>
+            </div>
+
+            {/* Pre-Revenue Liquidation Protocol Forecast Strip */}
+            <div className="mt-4 pt-4 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs sm:text-sm font-mono">
+              <span className="text-slate-400 font-bold uppercase tracking-wider text-xs">
+                Pre-Revenue Liquidation Protocol ({futureTargetApps} Templates):
+              </span>
+              <div className="flex flex-wrap items-center gap-2 font-bold text-xs sm:text-sm">
+                <span className="bg-emerald-950/60 border border-emerald-500/30 text-emerald-400 px-2.5 py-1 rounded-lg">
+                  🟢 30-45d Mkt: ${(futureTargetApps * 789).toLocaleString()} – ${(Math.round(futureTargetApps * 1157.17)).toLocaleString()}
+                </span>
+                <span className="bg-amber-950/60 border border-amber-500/30 text-amber-400 px-2.5 py-1 rounded-lg">
+                  🟡 7-14d Quick: ${(futureTargetApps * 500).toLocaleString()} – ${(Math.round(futureTargetApps * 736.84)).toLocaleString()}
+                </span>
+                <span className="bg-rose-950/60 border border-rose-500/30 text-rose-400 px-2.5 py-1 rounded-lg">
+                  🔴 24-72h Fire: ${(futureTargetApps * 250).toLocaleString()} – ${(Math.round(futureTargetApps * 368.42)).toLocaleString()}
+                </span>
               </div>
             </div>
           </div>
@@ -518,12 +575,33 @@ export const App: React.FC = () => {
 
                 <div className="pt-3.5 border-t border-white/10 space-y-2">
                   <div className="flex justify-between items-center text-xs sm:text-sm">
-                    <span className="text-slate-400 uppercase font-semibold text-xs">Live Vault Value:</span>
+                    <span className="text-slate-400 uppercase font-semibold text-xs">Live Vault APA Value:</span>
                     <span className="text-emerald-400 font-bold">
                       ${v.currentMinVal.toLocaleString()} – ${v.currentMaxVal.toLocaleString()}
                     </span>
                   </div>
-                  <div className="flex justify-between items-center text-xs sm:text-sm">
+
+                  {/* Pre-Revenue Liquidation Breakdown per Vault */}
+                  <div className="bg-black/60 p-2.5 rounded-lg border border-white/5 space-y-1 font-mono text-[11px] sm:text-xs">
+                    <div className="text-slate-400 font-semibold mb-1 uppercase tracking-wider text-[10px] flex items-center justify-between">
+                      <span>Pre-Revenue Liquidation:</span>
+                      <span className="text-cyan-400">{v.currentCount} Live Assets</span>
+                    </div>
+                    <div className="flex justify-between items-center text-slate-300">
+                      <span className="text-emerald-400">🟢 30-45d Mkt:</span>
+                      <span className="text-white font-semibold">${v.liqMarketplaceMin.toLocaleString()} – ${v.liqMarketplaceMax.toLocaleString()}</span>
+                    </div>
+                    <div className="flex justify-between items-center text-slate-300">
+                      <span className="text-amber-400">🟡 7-14d Quick:</span>
+                      <span className="text-white font-semibold">${v.liqQuickCloseMin.toLocaleString()} – ${v.liqQuickCloseMax.toLocaleString()}</span>
+                    </div>
+                    <div className="flex justify-between items-center text-slate-300">
+                      <span className="text-rose-400">🔴 24-72h Fire:</span>
+                      <span className="text-white font-semibold">${v.liqFireSaleMin.toLocaleString()} – ${v.liqFireSaleMax.toLocaleString()}</span>
+                    </div>
+                  </div>
+
+                  <div className="flex justify-between items-center text-xs sm:text-sm pt-1">
                     <span className="text-slate-400 uppercase font-semibold text-xs">Full Vault Target:</span>
                     <span className="text-slate-200 font-bold">
                       {v.statedRange}
@@ -535,16 +613,29 @@ export const App: React.FC = () => {
           </div>
 
           {/* Vault Footer Summary Banner */}
-          <div className="mt-6 pt-5 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs sm:text-sm font-mono text-slate-300">
-            <div className="flex items-center gap-2.5">
-              <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
-              <span>Full {currentVaultMetrics.details.length}-Vault Portfolio Capacity: <strong className="text-white">{currentVaultMetrics.totalTarget} Apps</strong></span>
+          <div className="mt-6 pt-5 border-t border-white/10 space-y-3 font-mono text-xs sm:text-sm text-slate-300">
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+              <div className="flex items-center gap-2.5">
+                <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
+                <span>Full {currentVaultMetrics.details.length}-Vault Portfolio Capacity: <strong className="text-white">{currentVaultMetrics.totalTarget} Apps</strong></span>
+              </div>
+              <div>
+                <span>Full Portfolio Carve-Out Ceiling: </span>
+                <strong className="text-emerald-400 font-bold">
+                  ${currentVaultMetrics.fullTargetAggregateMin.toLocaleString()} – ${currentVaultMetrics.fullTargetAggregateMax.toLocaleString()}
+                </strong>
+              </div>
             </div>
-            <div>
-              <span>Full Portfolio Carve-Out Ceiling: </span>
-              <strong className="text-emerald-400 font-bold">
-                ${currentVaultMetrics.fullTargetAggregateMin.toLocaleString()} – ${currentVaultMetrics.fullTargetAggregateMax.toLocaleString()}
-              </strong>
+
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 pt-2 border-t border-white/5 text-xs">
+              <span className="text-slate-400 uppercase font-semibold">Live Vaults Pre-Revenue Liquidation Floor:</span>
+              <div className="flex flex-wrap items-center gap-2 font-bold">
+                <span className="text-emerald-400">🟢 Mkt: ${currentVaultMetrics.totalLiqMarketplaceMin.toLocaleString()} – ${currentVaultMetrics.totalLiqMarketplaceMax.toLocaleString()}</span>
+                <span className="text-slate-600">|</span>
+                <span className="text-amber-400">🟡 Quick: ${currentVaultMetrics.totalLiqQuickCloseMin.toLocaleString()} – ${currentVaultMetrics.totalLiqQuickCloseMax.toLocaleString()}</span>
+                <span className="text-slate-600">|</span>
+                <span className="text-rose-400">🔴 Fire: ${currentVaultMetrics.totalLiqFireSaleMin.toLocaleString()} – ${currentVaultMetrics.totalLiqFireSaleMax.toLocaleString()}</span>
+              </div>
             </div>
           </div>
         </section>
@@ -566,19 +657,19 @@ export const App: React.FC = () => {
               </div>
 
               <div className="space-y-4 font-mono text-xs sm:text-sm">
-                {/* Fire-Sale */}
-                <div className="bg-black/60 p-4 sm:p-5 rounded-xl border-l-4 border-rose-500 flex justify-between items-center gap-4">
+                {/* 1. Marketplace Listing */}
+                <div className="bg-black/60 p-4 sm:p-5 rounded-xl border-l-4 border-emerald-500 flex justify-between items-center gap-4">
                   <div>
-                    <span className="text-rose-400 font-bold block text-sm">🔴 24-72h FIRE-SALE HORIZON</span>
-                    <span className="text-slate-300 text-xs sm:text-sm">Direct developer arbitrage & cash-out</span>
+                    <span className="text-emerald-400 font-bold block text-sm">🟢 30-45d MARKETPLACE LISTING</span>
+                    <span className="text-slate-300 text-xs sm:text-sm">Acquire.com / Flippa listing band</span>
                   </div>
                   <div className="text-right shrink-0">
-                    <span className="text-base sm:text-lg font-bold text-white block">${fireSaleMin.toLocaleString()} – ${fireSaleMax.toLocaleString()}</span>
-                    <span className="text-xs text-slate-400 block">$250 – $368 / app</span>
+                    <span className="text-base sm:text-lg font-bold text-white block">${mktApaMin.toLocaleString()} – ${mktApaMax.toLocaleString()}</span>
+                    <span className="text-xs text-slate-400 block">$789 – $1,157 / app</span>
                   </div>
                 </div>
 
-                {/* Quick-Close */}
+                {/* 2. Quick-Close */}
                 <div className="bg-black/60 p-4 sm:p-5 rounded-xl border-l-4 border-amber-500 flex justify-between items-center gap-4">
                   <div>
                     <span className="text-amber-400 font-bold block text-sm">🟡 7-14d QUICK-CLOSE HORIZON</span>
@@ -590,15 +681,15 @@ export const App: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Marketplace Listing */}
-                <div className="bg-black/60 p-4 sm:p-5 rounded-xl border-l-4 border-emerald-500 flex justify-between items-center gap-4">
+                {/* 3. Fire-Sale */}
+                <div className="bg-black/60 p-4 sm:p-5 rounded-xl border-l-4 border-rose-500 flex justify-between items-center gap-4">
                   <div>
-                    <span className="text-emerald-400 font-bold block text-sm">🟢 30-45d MARKETPLACE LISTING</span>
-                    <span className="text-slate-300 text-xs sm:text-sm">Acquire.com / Flippa listing band</span>
+                    <span className="text-rose-400 font-bold block text-sm">🔴 24-72h FIRE-SALE HORIZON</span>
+                    <span className="text-slate-300 text-xs sm:text-sm">Direct developer arbitrage & cash-out</span>
                   </div>
                   <div className="text-right shrink-0">
-                    <span className="text-base sm:text-lg font-bold text-white block">${mktApaMin.toLocaleString()} – ${mktApaMax.toLocaleString()}</span>
-                    <span className="text-xs text-slate-400 block">$789 – $1,157 / app</span>
+                    <span className="text-base sm:text-lg font-bold text-white block">${fireSaleMin.toLocaleString()} – ${fireSaleMax.toLocaleString()}</span>
+                    <span className="text-xs text-slate-400 block">$250 – $368 / app</span>
                   </div>
                 </div>
 
