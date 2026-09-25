@@ -7,31 +7,31 @@ export const CATALOG_MANIFEST = {
   "database_engine": "Supabase PostgreSQL (RLS Enabled)",
   "frontend_stack": "React 19 + Tailwind CSS + Lucide Icons + Vite",
   "valuation_framework": {
-    "total_products": 60,
+    "total_products": 70,
     "agency_whitelabel_vault_per_license": 2999,
-    "retail_shelf_msrp_starter_ui": 4740,
-    "retail_shelf_msrp_full_stack": 11940,
+    "retail_shelf_msrp_starter_ui": 5530,
+    "retail_shelf_msrp_full_stack": 13930,
     "pre_revenue_liquidation_protocol": {
       "fire_sale_24_72h": {
         "per_product_min": 250,
         "per_product_max": 368,
-        "fleet_total_min": 15000,
-        "fleet_total_max": 22080
+        "fleet_total_min": 17500,
+        "fleet_total_max": 25789
       },
       "quick_close_7_14d": {
         "per_product_min": 500,
         "per_product_max": 736,
-        "fleet_total_min": 30000,
-        "fleet_total_max": 44160
+        "fleet_total_min": 35000,
+        "fleet_total_max": 51579
       },
       "marketplace_listing_30_45d": {
         "per_product_min": 789,
         "per_product_max": 1157,
-        "fleet_total_min": 47340,
-        "fleet_total_max": 69420
+        "fleet_total_min": 55230,
+        "fleet_total_max": 80990
       }
     },
-    "pre_revenue_apa_target_anchor": 50000,
+    "pre_revenue_apa_target_anchor": 59000,
     "post_traction_apa_cash_floor": 35000
   },
   "products": [
