@@ -776,18 +776,19 @@ export const CATALOG_MANIFEST = {
     },
     {
       "id": 45,
-      "name": "BBQ PIT OS",
-      "category": "Competition Smokehouse, Pit Master KDS & Catering Order Management OS",
+      "name": "RESONANCE CULINARY ARCHIVE OS",
+      "category": "Historic Foodways, Sensory Gastronomy & Curated Private Dining OS",
       "vertical": "hospitality",
-      "gumroad_url": "https://auraandgrid.gumroad.com/l/bbq-pit-os",
-      "preview_url": "https://bbq-pit-os.onrender.com",
-      "admin_url": "https://bbq-pit-os.onrender.com/admin",
-      "admin_passcode": "bbq2026",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/resonance-culinary-os",
+      "preview_url": "https://gcoinstash-cmd.github.io/resonance-culinary-os/",
+      "admin_url": "https://gcoinstash-cmd.github.io/resonance-culinary-os/admin",
+      "admin_passcode": "resonance2026",
       "audit_score": 9.8,
       "tables": [
-        "orders",
-        "menu_items",
-        "pit_schedule"
+        "culinary_chapters",
+        "salon_reservations",
+        "tasting_menus",
+        "lookbooks"
       ]
     },
     {
