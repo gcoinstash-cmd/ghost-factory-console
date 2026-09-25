@@ -66,16 +66,21 @@ export const App: React.FC = () => {
   const phase3Percent = Math.min(100, Math.round((totalAssets / phase3Target) * 100));
   const phase4Percent = Math.min(100, Math.round((totalAssets / phase4Target) * 100));
 
-  // Engine C Pre-Revenue Valuations
-  const fireSaleMin = totalAssets * 250;
-  const fireSaleMax = Math.round(totalAssets * 368.42);
-  const quickCloseMin = totalAssets * 500;
-  const quickCloseMax = Math.round(totalAssets * 736.84);
-  const mktApaMin = totalAssets * 789;
-  const mktApaMax = Math.round(totalAssets * 1157.17);
-
-  // Agency Dev Cost Replacement Value ($4,500 per bespoke agency full-stack build)
-  const replacementAgencyCost = totalAssets * 4500;
+  // Engine C Calibrated Institutional Valuations (70 Flagships)
+  // 1. Emergency Wholesale Cash (72h distress liquidation floor)
+  const fireSaleMin = Math.round(totalAssets * 114.28); // $8,000 at 70 apps
+  const fireSaleMax = Math.round(totalAssets * 285.71); // $20,000 at 70 apps
+  // 2. Realistic Strategic Close (Negotiated LOI Wire — Center of Gravity: $30k–$40k)
+  const strategicCloseMin = Math.round(totalAssets * 357.14); // $25,000 at 70 apps
+  const strategicCloseMax = Math.round(totalAssets * 642.85); // $45,000 at 70 apps
+  // 3. Private Strategic Ask (Confidential Deal Rooms on Acquire.com / Direct B2B)
+  const mktApaMin = Math.round(totalAssets * 557.14); // $39,000 at 70 apps
+  const mktApaMax = Math.round(totalAssets * 842.85); // $59,000 at 70 apps
+  // 4. Internal Walk-Away Reserve (Holding is mathematically superior)
+  const walkAwayReserve = 35000;
+  // 5. Traditional Dev Cost Replacement Value ($4,000 – $10,000 per bespoke agency full-stack build)
+  const replacementAgencyCostMin = totalAssets * 4000; // $280,000 at 70 apps
+  const replacementAgencyCostMax = totalAssets * 10000; // $700,000 at 70 apps
 
   // Simulator calculations
   const monthlyStarterRevenue = starterSales * 79;
@@ -109,13 +114,13 @@ export const App: React.FC = () => {
       const fullTargetMinVal = s.target_asset_count * unitMin;
       const fullTargetMaxVal = s.target_asset_count * unitMax;
 
-      // Pre-Revenue Liquidation Protocol Valuations per vault
-      const liqMarketplaceMin = s.current_asset_count * 789;
-      const liqMarketplaceMax = Math.round(s.current_asset_count * 1157.17);
-      const liqQuickCloseMin = s.current_asset_count * 500;
-      const liqQuickCloseMax = Math.round(s.current_asset_count * 736.84);
-      const liqFireSaleMin = s.current_asset_count * 250;
-      const liqFireSaleMax = Math.round(s.current_asset_count * 368.42);
+      // Pre-Revenue Liquidation Protocol Valuations per vault (calibrated)
+      const liqMarketplaceMin = Math.round(s.current_asset_count * 557.14);
+      const liqMarketplaceMax = Math.round(s.current_asset_count * 842.85);
+      const liqQuickCloseMin = Math.round(s.current_asset_count * 357.14);
+      const liqQuickCloseMax = Math.round(s.current_asset_count * 642.85);
+      const liqFireSaleMin = Math.round(s.current_asset_count * 114.28);
+      const liqFireSaleMax = Math.round(s.current_asset_count * 285.71);
 
       return {
         key,
@@ -250,13 +255,27 @@ export const App: React.FC = () => {
 
             <div className="flex flex-wrap items-center gap-5 bg-black/70 p-5 rounded-xl border border-white/10 font-mono text-xs sm:text-sm">
               <div>
-                <span className="text-slate-400 block text-xs font-semibold uppercase tracking-wider">Marketplace APA Value</span>
+                <span className="text-slate-400 block text-xs font-semibold uppercase tracking-wider">Private Strategic Ask</span>
                 <span className="text-xl sm:text-2xl font-bold text-emerald-400">${mktApaMin.toLocaleString()} – ${mktApaMax.toLocaleString()}</span>
+                <span className="text-[11px] text-slate-400 block">Acquire.com Private Deal Room</span>
               </div>
               <div className="h-10 w-px bg-white/10 hidden sm:block" />
               <div>
+                <span className="text-slate-400 block text-xs font-semibold uppercase tracking-wider">Strategic Close (Center)</span>
+                <span className="text-xl sm:text-2xl font-bold text-cyan-400">${strategicCloseMin.toLocaleString()} – ${strategicCloseMax.toLocaleString()}</span>
+                <span className="text-[11px] text-slate-400 block">Negotiated LOI Wire</span>
+              </div>
+              <div className="h-10 w-px bg-white/10 hidden md:block" />
+              <div className="hidden md:block">
+                <span className="text-slate-400 block text-xs font-semibold uppercase tracking-wider">Walk-Away Reserve</span>
+                <span className="text-xl sm:text-2xl font-bold text-amber-400">${walkAwayReserve.toLocaleString()} MIN</span>
+                <span className="text-[11px] text-slate-400 block">Internal Floor</span>
+              </div>
+              <div className="h-10 w-px bg-white/10 hidden lg:block" />
+              <div className="hidden lg:block">
                 <span className="text-slate-400 block text-xs font-semibold uppercase tracking-wider">Dev Replacement Labor</span>
-                <span className="text-xl sm:text-2xl font-bold text-cyan-400">${replacementAgencyCost.toLocaleString()}</span>
+                <span className="text-xl sm:text-2xl font-bold text-purple-400">${replacementAgencyCostMin.toLocaleString()} – ${(replacementAgencyCostMax / 1000).toFixed(0)}k</span>
+                <span className="text-[11px] text-slate-400 block">Agency Cost to Duplicate</span>
               </div>
             </div>
           </div>
@@ -536,13 +555,13 @@ export const App: React.FC = () => {
               </span>
               <div className="flex flex-wrap items-center gap-2 font-bold text-xs sm:text-sm">
                 <span className="bg-emerald-950/60 border border-emerald-500/30 text-emerald-400 px-2.5 py-1 rounded-lg">
-                  🟢 30-45d Mkt: ${(futureTargetApps * 789).toLocaleString()} – ${(Math.round(futureTargetApps * 1157.17)).toLocaleString()}
+                  🟢 Strategic Ask: ${(Math.round(futureTargetApps * 557.14)).toLocaleString()} – ${(Math.round(futureTargetApps * 842.85)).toLocaleString()}
                 </span>
-                <span className="bg-amber-950/60 border border-amber-500/30 text-amber-400 px-2.5 py-1 rounded-lg">
-                  🟡 7-14d Quick: ${(futureTargetApps * 500).toLocaleString()} – ${(Math.round(futureTargetApps * 736.84)).toLocaleString()}
+                <span className="bg-cyan-950/60 border border-cyan-500/30 text-cyan-400 px-2.5 py-1 rounded-lg">
+                  🟡 Strategic Close: ${(Math.round(futureTargetApps * 357.14)).toLocaleString()} – ${(Math.round(futureTargetApps * 642.85)).toLocaleString()}
                 </span>
                 <span className="bg-rose-950/60 border border-rose-500/30 text-rose-400 px-2.5 py-1 rounded-lg">
-                  🔴 24-72h Fire: ${(futureTargetApps * 250).toLocaleString()} – ${(Math.round(futureTargetApps * 368.42)).toLocaleString()}
+                  🔴 Wholesale Cash: ${(Math.round(futureTargetApps * 114.28)).toLocaleString()} – ${(Math.round(futureTargetApps * 285.71)).toLocaleString()}
                 </span>
               </div>
             </div>
@@ -588,15 +607,15 @@ export const App: React.FC = () => {
                       <span className="text-cyan-400">{v.currentCount} Live Assets</span>
                     </div>
                     <div className="flex justify-between items-center text-slate-300">
-                      <span className="text-emerald-400">🟢 30-45d Mkt:</span>
+                      <span className="text-emerald-400">🟢 Strategic Ask:</span>
                       <span className="text-white font-semibold">${v.liqMarketplaceMin.toLocaleString()} – ${v.liqMarketplaceMax.toLocaleString()}</span>
                     </div>
                     <div className="flex justify-between items-center text-slate-300">
-                      <span className="text-amber-400">🟡 7-14d Quick:</span>
+                      <span className="text-cyan-400">🟡 Strategic Close:</span>
                       <span className="text-white font-semibold">${v.liqQuickCloseMin.toLocaleString()} – ${v.liqQuickCloseMax.toLocaleString()}</span>
                     </div>
                     <div className="flex justify-between items-center text-slate-300">
-                      <span className="text-rose-400">🔴 24-72h Fire:</span>
+                      <span className="text-rose-400">🔴 Wholesale Cash:</span>
                       <span className="text-white font-semibold">${v.liqFireSaleMin.toLocaleString()} – ${v.liqFireSaleMax.toLocaleString()}</span>
                     </div>
                   </div>
@@ -657,40 +676,58 @@ export const App: React.FC = () => {
               </div>
 
               <div className="space-y-4 font-mono text-xs sm:text-sm">
-                {/* 1. Marketplace Listing */}
+                {/* 1. Private Strategic Ask */}
                 <div className="bg-black/60 p-4 sm:p-5 rounded-xl border-l-4 border-emerald-500 flex justify-between items-center gap-4">
                   <div>
-                    <span className="text-emerald-400 font-bold block text-sm">🟢 30-45d MARKETPLACE LISTING</span>
-                    <span className="text-slate-300 text-xs sm:text-sm">Acquire.com / Flippa listing band</span>
+                    <span className="text-emerald-400 font-bold block text-sm">🟢 PRIVATE STRATEGIC ASK</span>
+                    <span className="text-slate-300 text-xs sm:text-sm">Acquire.com Private Deal Room / Direct B2B</span>
                   </div>
                   <div className="text-right shrink-0">
                     <span className="text-base sm:text-lg font-bold text-white block">${mktApaMin.toLocaleString()} – ${mktApaMax.toLocaleString()}</span>
-                    <span className="text-xs text-slate-400 block">$789 – $1,157 / app</span>
+                    <span className="text-xs text-slate-400 block">$557 – $843 / app</span>
                   </div>
                 </div>
 
-                {/* 2. Quick-Close */}
-                <div className="bg-black/60 p-4 sm:p-5 rounded-xl border-l-4 border-amber-500 flex justify-between items-center gap-4">
+                {/* 2. Realistic Strategic Close */}
+                <div className="bg-black/60 p-4 sm:p-5 rounded-xl border-l-4 border-cyan-500 flex justify-between items-center gap-4">
                   <div>
-                    <span className="text-amber-400 font-bold block text-sm">🟡 7-14d QUICK-CLOSE HORIZON</span>
-                    <span className="text-slate-300 text-xs sm:text-sm">Private DM outreach to agency founders</span>
+                    <span className="text-cyan-400 font-bold block text-sm">🟡 REALISTIC STRATEGIC CLOSE</span>
+                    <span className="text-slate-300 text-xs sm:text-sm">Negotiated LOI wire transfer (Center: $30k–$40k)</span>
                   </div>
                   <div className="text-right shrink-0">
-                    <span className="text-base sm:text-lg font-bold text-white block">${quickCloseMin.toLocaleString()} – ${quickCloseMax.toLocaleString()}</span>
-                    <span className="text-xs text-slate-400 block">$500 – $736 / app</span>
+                    <span className="text-base sm:text-lg font-bold text-white block">${strategicCloseMin.toLocaleString()} – ${strategicCloseMax.toLocaleString()}</span>
+                    <span className="text-xs text-slate-400 block">$357 – $643 / app</span>
                   </div>
                 </div>
 
-                {/* 3. Fire-Sale */}
+                {/* 3. Internal Walk-Away Reserve */}
+                <div className="bg-black/60 p-4 sm:p-5 rounded-xl border-l-4 border-amber-500 flex justify-between items-center gap-4">
+                  <div>
+                    <span className="text-amber-400 font-bold block text-sm">🛡️ INTERNAL WALK-AWAY RESERVE</span>
+                    <span className="text-slate-300 text-xs sm:text-sm">Holding & client billing is mathematically superior below $35k</span>
+                  </div>
+                  <div className="text-right shrink-0">
+                    <span className="text-base sm:text-lg font-bold text-white block">${walkAwayReserve.toLocaleString()} CASH</span>
+                    <span className="text-xs text-slate-400 block">Strict Reserve Floor</span>
+                  </div>
+                </div>
+
+                {/* 4. Emergency Wholesale Cash */}
                 <div className="bg-black/60 p-4 sm:p-5 rounded-xl border-l-4 border-rose-500 flex justify-between items-center gap-4">
                   <div>
-                    <span className="text-rose-400 font-bold block text-sm">🔴 24-72h FIRE-SALE HORIZON</span>
-                    <span className="text-slate-300 text-xs sm:text-sm">Direct developer arbitrage & cash-out</span>
+                    <span className="text-rose-400 font-bold block text-sm">🔴 EMERGENCY WHOLESALE CASH (72h)</span>
+                    <span className="text-slate-300 text-xs sm:text-sm">All-cash distressed asset liquidation floor</span>
                   </div>
                   <div className="text-right shrink-0">
                     <span className="text-base sm:text-lg font-bold text-white block">${fireSaleMin.toLocaleString()} – ${fireSaleMax.toLocaleString()}</span>
-                    <span className="text-xs text-slate-400 block">$250 – $368 / app</span>
+                    <span className="text-xs text-slate-400 block">$114 – $286 / app</span>
                   </div>
+                </div>
+
+                {/* Marketplace Listing Rule Compliance Notice */}
+                <div className="bg-amber-950/25 border border-amber-500/30 p-3 sm:p-4 rounded-xl text-xs font-sans text-amber-200/90 leading-relaxed">
+                  <strong className="text-amber-400 font-mono uppercase block mb-1">⚠️ Marketplace Listing Rule Compliance:</strong>
+                  Flippa strictly caps pre-revenue listings at $9,999 USD. High-value collections ($35k–$59k+) are marketed via confidential private deal rooms (Acquire.com), direct B2B holding company outreach, and off-market M&A brokerages.
                 </div>
 
                 {/* Institutional APA Master */}
@@ -708,9 +745,9 @@ export const App: React.FC = () => {
               </div>
             </div>
 
-            <div className="mt-6 pt-4 border-t border-white/10 flex justify-between items-center text-xs sm:text-sm text-slate-300 font-mono">
-              <span>Retail Shelf MSRP: <strong className="text-white">${CATALOG_DATA.valuation_framework.retail_shelf_msrp_full_stack}</strong></span>
-              <span>Agency Vault Tier: <strong className="text-emerald-400">$1,499 / $2,999</strong></span>
+            <div className="mt-6 pt-4 border-t border-white/10 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 text-xs sm:text-sm text-slate-300 font-mono">
+              <span>Retail Shelf MSRP: <strong className="text-white">${CATALOG_DATA.valuation_framework.retail_shelf_msrp_full_stack.toLocaleString()} ($199 × {totalAssets})</strong></span>
+              <span>Agency Tiers: <strong className="text-emerald-400">$1,499 Pilot / $1,999 Std / $2,999 Master</strong></span>
             </div>
           </div>
 
