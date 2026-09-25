@@ -1,4 +1,27 @@
-export const CATALOG_MANIFEST = {
+// AUTO-GENERATED FROM CATALOG_MANIFEST.json
+export interface ProductItem {
+  id: number;
+  name: string;
+  slug: string;
+  category: string;
+  industry: string;
+  archetype_id?: string;
+  archetype_name?: string;
+  design_benchmark?: string;
+  price_retail: number;
+  price_agency_license: number;
+  quality_score: number;
+  live_demo: string;
+  admin_door: string;
+  passkey: string;
+  cover_image: string;
+  thumbnail_image: string;
+  zip_package: string;
+  status: string;
+  features: string[];
+}
+
+export const CATALOG_DATA = {
   "catalog_version": "1.0.0",
   "store": "Aura & Grid",
   "store_url": "https://auraandgrid.gumroad.com",
@@ -1502,7 +1525,7 @@ export const CATALOG_MANIFEST = {
       "archetype_id": "A",
       "archetype_name": "Archetype A: Dense Operational Console",
       "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
-      "design_benchmark": "United Rentals Heavy Earthmoving Fleet Console"
+      "design_benchmark": "United Rentals Heavy Fleet Telematics Console"
     },
     {
       "id": 72,
@@ -1520,10 +1543,10 @@ export const CATALOG_MANIFEST = {
         "rate_confirmations",
         "bol_vault"
       ],
-      "archetype_id": "A",
-      "archetype_name": "Archetype A: Dense Operational Console",
+      "archetype_id": "C",
+      "archetype_name": "Archetype C: Step-by-Step Calculator / Wizard",
       "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
-      "design_benchmark": "C.H. Robinson Intermodal Freight Brokerage Console"
+      "design_benchmark": "C.H. Robinson Intermodal Freight Margin & Route Stepper"
     },
     {
       "id": 73,
@@ -1541,10 +1564,10 @@ export const CATALOG_MANIFEST = {
         "empty_legs",
         "vip_manifests"
       ],
-      "archetype_id": "C",
-      "archetype_name": "Archetype C: Step-by-Step Calculator / Wizard",
+      "archetype_id": "B",
+      "archetype_name": "Archetype B: Asymmetric Editorial Showcase",
       "archetype_description": "Stateful multi-stage progression stepper, interactive pricing/spec tally, and stage-by-stage validation for underwriting, legal retainers, and clinical intake.",
-      "design_benchmark": "NetJets Private Fleet Flight Hours Wizard"
+      "design_benchmark": "NetJets Bespoke Fleet & Charter Flight Showcase"
     },
     {
       "id": 74,
@@ -1562,10 +1585,10 @@ export const CATALOG_MANIFEST = {
         "temperature_logs",
         "pallet_reservations"
       ],
-      "archetype_id": "A",
-      "archetype_name": "Archetype A: Dense Operational Console",
+      "archetype_id": "D",
+      "archetype_name": "Archetype D: Timeline & Station Reservation Grid",
       "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
-      "design_benchmark": "Lineage Logistics Reefer Dock Telemetry Console"
+      "design_benchmark": "Lineage Logistics 24-Hour Reefer Dock Reservation Matrix"
     },
     {
       "id": 75,
@@ -1583,10 +1606,10 @@ export const CATALOG_MANIFEST = {
         "certified_riggers",
         "site_dispatches"
       ],
-      "archetype_id": "A",
-      "archetype_name": "Archetype A: Dense Operational Console",
+      "archetype_id": "E",
+      "archetype_name": "Archetype E: Split-Screen Spec & Proof Panel",
       "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
-      "design_benchmark": "Mammoet Heavy Lift & Rigging Dispatch Console"
+      "design_benchmark": "Mammoet Heavy Lift Load Radius & OSHA Proof Panel"
     },
     {
       "id": 76,
@@ -1607,7 +1630,7 @@ export const CATALOG_MANIFEST = {
       "archetype_id": "C",
       "archetype_name": "Archetype C: Step-by-Step Calculator / Wizard",
       "archetype_description": "Stateful multi-stage progression stepper, interactive pricing/spec tally, and stage-by-stage validation for underwriting, legal retainers, and clinical intake.",
-      "design_benchmark": "XPEL Automotive Paint Protection Film Wizard"
+      "design_benchmark": "XPEL Automotive Multi-Stage Coverage & Cleanroom Stepper"
     },
     {
       "id": 77,
@@ -1628,7 +1651,7 @@ export const CATALOG_MANIFEST = {
       "archetype_id": "A",
       "archetype_name": "Archetype A: Dense Operational Console",
       "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
-      "design_benchmark": "Mobile Detail Rig & Tech Dispatch Console"
+      "design_benchmark": "Samsara Mobile Fleet DI Water & Triage Dispatch Console"
     },
     {
       "id": 78,
@@ -1646,10 +1669,10 @@ export const CATALOG_MANIFEST = {
         "insurance_binders",
         "subrental_logs"
       ],
-      "archetype_id": "B",
-      "archetype_name": "Archetype B: Asymmetric Editorial Showcase",
+      "archetype_id": "E",
+      "archetype_name": "Archetype E: Split-Screen Spec & Proof Panel",
       "archetype_description": "Dynamic masonry grid, visual filtering, editorial typography, and slide-over commission sheet for high-end ateliers, creative studios, and maritime showcases.",
-      "design_benchmark": "ARRI Rental Cinema Grip & Anamorphic Lens Showcase"
+      "design_benchmark": "ARRI Rental Cinema Grip & COI Insurance Proof Panel"
     },
     {
       "id": 79,
@@ -1670,7 +1693,7 @@ export const CATALOG_MANIFEST = {
       "archetype_id": "B",
       "archetype_name": "Archetype B: Asymmetric Editorial Showcase",
       "archetype_description": "Dynamic masonry grid, visual filtering, editorial typography, and slide-over commission sheet for high-end ateliers, creative studios, and maritime showcases.",
-      "design_benchmark": "Bang Bang NYC Resident Tattoo Artist Flash Grid"
+      "design_benchmark": "Bang Bang NYC Resident Tattoo Flash Editorial Grid"
     },
     {
       "id": 80,
@@ -1691,7 +1714,7 @@ export const CATALOG_MANIFEST = {
       "archetype_id": "D",
       "archetype_name": "Archetype D: Timeline & Station Reservation Grid",
       "archetype_description": "Interactive day/hour time-slot matrix, capacity/station status indicators, and instant seat/pod booking for Michelin dining, private clubs, and recovery labs.",
-      "design_benchmark": "UFC Athlete Cryo & Contrast Chamber Matrix"
+      "design_benchmark": "UFC Performance Institute Cryo & Contrast Chamber Matrix"
     },
     {
       "id": 81,
@@ -1933,5 +1956,4 @@ export const CATALOG_MANIFEST = {
     }
   }
 };
-
-export const CATALOG_DATA = CATALOG_MANIFEST;
+export const CATALOG_PRODUCTS: ProductItem[] = CATALOG_DATA.products;
