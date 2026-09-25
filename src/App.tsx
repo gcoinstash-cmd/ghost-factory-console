@@ -210,7 +210,7 @@ export const App: React.FC = () => {
         <div className="flex items-center gap-3 sm:gap-6 text-xs sm:text-sm">
           <div className="flex items-center gap-2 text-slate-300">
             <Server size={14} className="text-emerald-400" />
-            <span>PREVIEWS: <strong className="text-emerald-400">{totalAssets} / {totalAssets} ONLINE (500 OK)</strong></span>
+            <span>PREVIEWS: <strong className="text-emerald-400">{totalAssets} / {totalAssets} ONLINE (200 OK)</strong></span>
           </div>
           <div className="hidden md:flex items-center gap-2 text-slate-300">
             <Database size={14} className="text-cyan-400" />
@@ -877,7 +877,7 @@ export const App: React.FC = () => {
                 <CheckCircle2 size={16} />
               </div>
               <p className="text-xs sm:text-sm text-slate-300 font-sans leading-relaxed">
-                100% automated HTTP 500 OK HEAD scan on hero images & interactive menus.
+                100% automated HTTP 200 OK HEAD scan on hero images & interactive menus.
               </p>
             </div>
 
