@@ -253,29 +253,29 @@ export const App: React.FC = () => {
               </p>
             </div>
 
-            <div className="flex flex-wrap items-center gap-5 bg-black/70 p-5 rounded-xl border border-white/10 font-mono text-xs sm:text-sm">
-              <div>
-                <span className="text-slate-400 block text-xs font-semibold uppercase tracking-wider">Private Strategic Ask</span>
-                <span className="text-xl sm:text-2xl font-bold text-emerald-400">${mktApaMin.toLocaleString()} – ${mktApaMax.toLocaleString()}</span>
-                <span className="text-[11px] text-slate-400 block">Acquire.com Private Deal Room</span>
-              </div>
-              <div className="h-10 w-px bg-white/10 hidden sm:block" />
-              <div>
-                <span className="text-slate-400 block text-xs font-semibold uppercase tracking-wider">Strategic Close (Center)</span>
-                <span className="text-xl sm:text-2xl font-bold text-cyan-400">${strategicCloseMin.toLocaleString()} – ${strategicCloseMax.toLocaleString()}</span>
-                <span className="text-[11px] text-slate-400 block">Negotiated LOI Wire</span>
-              </div>
-              <div className="h-10 w-px bg-white/10 hidden md:block" />
-              <div className="hidden md:block">
-                <span className="text-slate-400 block text-xs font-semibold uppercase tracking-wider">Walk-Away Reserve</span>
-                <span className="text-xl sm:text-2xl font-bold text-amber-400">${walkAwayReserve.toLocaleString()} MIN</span>
-                <span className="text-[11px] text-slate-400 block">Internal Floor</span>
+            <div className="w-full lg:w-auto grid grid-cols-2 sm:grid-cols-2 lg:flex lg:flex-wrap items-center gap-4 sm:gap-5 bg-black/70 p-4 sm:p-5 rounded-xl border border-white/10 font-mono text-xs sm:text-sm">
+              <div className="p-1 sm:p-0">
+                <span className="text-slate-400 block text-[10px] sm:text-xs font-semibold uppercase tracking-wider">Private Strategic Ask</span>
+                <span className="text-base sm:text-xl md:text-2xl font-bold text-emerald-400">${mktApaMin.toLocaleString()} – ${mktApaMax.toLocaleString()}</span>
+                <span className="text-[10px] sm:text-[11px] text-slate-400 block">Acquire.com Private Room</span>
               </div>
               <div className="h-10 w-px bg-white/10 hidden lg:block" />
-              <div className="hidden lg:block">
-                <span className="text-slate-400 block text-xs font-semibold uppercase tracking-wider">Dev Replacement Labor</span>
-                <span className="text-xl sm:text-2xl font-bold text-purple-400">${replacementAgencyCostMin.toLocaleString()} – ${(replacementAgencyCostMax / 1000).toFixed(0)}k</span>
-                <span className="text-[11px] text-slate-400 block">Agency Cost to Duplicate</span>
+              <div className="p-1 sm:p-0">
+                <span className="text-slate-400 block text-[10px] sm:text-xs font-semibold uppercase tracking-wider">Strategic Close (Center)</span>
+                <span className="text-base sm:text-xl md:text-2xl font-bold text-cyan-400">${strategicCloseMin.toLocaleString()} – ${strategicCloseMax.toLocaleString()}</span>
+                <span className="text-[10px] sm:text-[11px] text-slate-400 block">Negotiated LOI Wire</span>
+              </div>
+              <div className="h-10 w-px bg-white/10 hidden lg:block" />
+              <div className="p-1 sm:p-0">
+                <span className="text-slate-400 block text-[10px] sm:text-xs font-semibold uppercase tracking-wider">Walk-Away Reserve</span>
+                <span className="text-base sm:text-xl md:text-2xl font-bold text-amber-400">${walkAwayReserve.toLocaleString()} MIN</span>
+                <span className="text-[10px] sm:text-[11px] text-slate-400 block">Internal Floor</span>
+              </div>
+              <div className="h-10 w-px bg-white/10 hidden lg:block" />
+              <div className="p-1 sm:p-0">
+                <span className="text-slate-400 block text-[10px] sm:text-xs font-semibold uppercase tracking-wider">Dev Replacement Labor</span>
+                <span className="text-base sm:text-xl md:text-2xl font-bold text-purple-400">${replacementAgencyCostMin.toLocaleString()} – ${(replacementAgencyCostMax / 1000).toFixed(0)}k</span>
+                <span className="text-[10px] sm:text-[11px] text-slate-400 block">Cost to Duplicate</span>
               </div>
             </div>
           </div>
