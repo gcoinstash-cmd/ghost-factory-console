@@ -2,12 +2,12 @@ export const CATALOG_MANIFEST = {
   "catalog_version": "1.0.0",
   "store": "Aura & Grid",
   "store_url": "https://auraandgrid.gumroad.com",
-  "total_flagships": 75,
+  "total_flagships": 80,
   "standards": "Ghost Factory™ 9.0+ Verified Production Grade",
   "database_engine": "Supabase PostgreSQL (RLS Enabled)",
   "frontend_stack": "React 19 + Tailwind CSS + Lucide Icons + Vite",
   "valuation_framework": {
-    "total_products": 75,
+    "total_products": 80,
     "agency_whitelabel_vault_per_license": 2999,
     "retail_shelf_msrp_starter_ui": 5530,
     "retail_shelf_msrp_full_stack": 13930,
@@ -1286,6 +1286,91 @@ export const CATALOG_MANIFEST = {
         "certified_riggers",
         "site_dispatches"
       ]
+    },
+    {
+      "id": 76,
+      "name": "CERAMIC SHIELD & PPF OS",
+      "category": "High-End Automotive PPF & Ceramic Coating Studio OS",
+      "vertical": "automotive",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/ceramic-shield-ppf-os",
+      "preview_url": "https://gcoinstash-cmd.github.io/ceramic-shield-ppf-os/",
+      "admin_url": "https://gcoinstash-cmd.github.io/ceramic-shield-ppf-os/admin/",
+      "admin_passcode": "ceramic2026",
+      "audit_score": 9.8,
+      "tables": [
+        "paint_inspections",
+        "coating_packages",
+        "warranty_registry",
+        "cure_telemetry"
+      ]
+    },
+    {
+      "id": 77,
+      "name": "MOBILE DETAIL DISPATCH OS",
+      "category": "Autonomous Mobile Detailing & Fleet Rig Dispatch OS",
+      "vertical": "automotive",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/mobile-detail-dispatch-os",
+      "preview_url": "https://gcoinstash-cmd.github.io/mobile-detail-dispatch-os/",
+      "admin_url": "https://gcoinstash-cmd.github.io/mobile-detail-dispatch-os/admin/",
+      "admin_passcode": "detail2026",
+      "audit_score": 9.8,
+      "tables": [
+        "mobile_vans",
+        "service_dispatches",
+        "route_logs",
+        "client_addons"
+      ]
+    },
+    {
+      "id": 78,
+      "name": "CINEGRIP EQUIPMENT OS",
+      "category": "Cinema Camera, Grip & Lighting Rental House OS",
+      "vertical": "creative",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/cinegrip-equipment-os",
+      "preview_url": "https://gcoinstash-cmd.github.io/cinegrip-equipment-os/",
+      "admin_url": "https://gcoinstash-cmd.github.io/cinegrip-equipment-os/admin/",
+      "admin_passcode": "cinegrip2026",
+      "audit_score": 9.8,
+      "tables": [
+        "gear_inventory",
+        "production_rentals",
+        "insurance_binders",
+        "subrental_logs"
+      ]
+    },
+    {
+      "id": 79,
+      "name": "CUSTOM INK STUDIO OS",
+      "category": "High-Ticket Custom Tattoo & Resident Artist Studio OS",
+      "vertical": "creative",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/custom-ink-studio-os",
+      "preview_url": "https://gcoinstash-cmd.github.io/custom-ink-studio-os/",
+      "admin_url": "https://gcoinstash-cmd.github.io/custom-ink-studio-os/admin/",
+      "admin_passcode": "customink2026",
+      "audit_score": 9.8,
+      "tables": [
+        "artist_roster",
+        "deposit_bookings",
+        "digital_waivers",
+        "flash_drops"
+      ]
+    },
+    {
+      "id": 80,
+      "name": "COMBAT RECOVERY LAB OS",
+      "category": "Elite Fighter & Athlete Contrast Recovery Lab OS",
+      "vertical": "fitness",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/combat-recovery-lab-os",
+      "preview_url": "https://gcoinstash-cmd.github.io/combat-recovery-lab-os/",
+      "admin_url": "https://gcoinstash-cmd.github.io/combat-recovery-lab-os/admin/",
+      "admin_passcode": "recovery2026",
+      "audit_score": 9.8,
+      "tables": [
+        "recovery_modalities",
+        "member_sessions",
+        "medical_intake_forms",
+        "iv_infusion_logs"
+      ]
     }
   ],
   "vertical_slices": {
@@ -1301,7 +1386,7 @@ export const CATALOG_MANIFEST = {
       "description": "Dyno testing, tuning dispatch, luxury fleet rentals & workshop OS",
       "apa_valuation_range": "$28,000 – $45,000",
       "target_asset_count": 40,
-      "current_asset_count": 3
+      "current_asset_count": 5
     },
     "hospitality": {
       "name": "Luxury Hospitality & Dining Vault",
@@ -1322,14 +1407,14 @@ export const CATALOG_MANIFEST = {
       "description": "Motion VFX, architecture atelier, soundstage production & design OS",
       "apa_valuation_range": "$28,000 – $40,000",
       "target_asset_count": 40,
-      "current_asset_count": 10
+      "current_asset_count": 12
     },
     "fitness": {
       "name": "Performance Fitness & Athletics Vault",
       "description": "Boutique fight clubs, reformer training & athletic performance OS",
       "apa_valuation_range": "$25,000 – $38,000",
       "target_asset_count": 35,
-      "current_asset_count": 4
+      "current_asset_count": 5
     },
     "home_services": {
       "name": "Home Services & Commercial Contracting Vault",
