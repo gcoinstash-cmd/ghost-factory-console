@@ -2,12 +2,12 @@ export const CATALOG_MANIFEST = {
   "catalog_version": "1.0.0",
   "store": "Aura & Grid",
   "store_url": "https://auraandgrid.gumroad.com",
-  "total_flagships": 80,
+  "total_flagships": 85,
   "standards": "Ghost Factory™ 9.0+ Verified Production Grade",
   "database_engine": "Supabase PostgreSQL (RLS Enabled)",
   "frontend_stack": "React 19 + Tailwind CSS + Lucide Icons + Vite",
   "valuation_framework": {
-    "total_products": 80,
+    "total_products": 85,
     "agency_whitelabel_vault_per_license": 2999,
     "retail_shelf_msrp_starter_ui": 5530,
     "retail_shelf_msrp_full_stack": 13930,
@@ -1371,6 +1371,91 @@ export const CATALOG_MANIFEST = {
         "member_sessions",
         "medical_intake_forms",
         "iv_infusion_logs"
+      ]
+    },
+    {
+      "id": 81,
+      "name": "FINE DINING OS",
+      "category": "Michelin Seat Matrix, Table Reservation & Sommelier Cellar OS",
+      "vertical": "hospitality",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/fine-dining-matrix-os",
+      "preview_url": "https://gcoinstash-cmd.github.io/fine-dining-matrix-os/",
+      "admin_url": "https://gcoinstash-cmd.github.io/fine-dining-matrix-os/admin",
+      "admin_passcode": "finedining2026",
+      "audit_score": 9.8,
+      "tables": [
+        "dining_tables",
+        "reservations",
+        "tasting_pairings",
+        "sommelier_cellar"
+      ]
+    },
+    {
+      "id": 82,
+      "name": "MEDSPA CLINIC OS",
+      "category": "Beverly Hills Aesthetic Treatment Wizard & Clinical Intake OS",
+      "vertical": "medical",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/medspa-clinic-os",
+      "preview_url": "https://gcoinstash-cmd.github.io/medspa-clinic-os/",
+      "admin_url": "https://gcoinstash-cmd.github.io/medspa-clinic-os/admin",
+      "admin_passcode": "medspaclinic2026",
+      "audit_score": 9.8,
+      "tables": [
+        "patients",
+        "treatments",
+        "intake_questionnaires",
+        "practitioner_schedules"
+      ]
+    },
+    {
+      "id": 83,
+      "name": "SUPERYACHT CHARTER OS",
+      "category": "Monaco Fleet Asymmetric Showcase, Deck Selector & Escrow OS",
+      "vertical": "automotive",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/superyacht-charter-os",
+      "preview_url": "https://gcoinstash-cmd.github.io/superyacht-charter-os/",
+      "admin_url": "https://gcoinstash-cmd.github.io/superyacht-charter-os/admin",
+      "admin_passcode": "yacht2026",
+      "audit_score": 9.8,
+      "tables": [
+        "yachts",
+        "charter_bookings",
+        "itineraries",
+        "crew_manifests"
+      ]
+    },
+    {
+      "id": 84,
+      "name": "LUXURY HOROLOGY VAULT OS",
+      "category": "Chrono Inspection, Caliber Specs & Provenance Certificate OS",
+      "vertical": "wealth",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/luxury-horology-vault-os",
+      "preview_url": "https://gcoinstash-cmd.github.io/luxury-horology-vault-os/",
+      "admin_url": "https://gcoinstash-cmd.github.io/luxury-horology-vault-os/admin",
+      "admin_passcode": "horology2026",
+      "audit_score": 9.8,
+      "tables": [
+        "timepieces",
+        "caliber_specs",
+        "provenance_records",
+        "escrow_inquiries"
+      ]
+    },
+    {
+      "id": 85,
+      "name": "PRIVATE VILLA ESTATE OS",
+      "category": "Ultra-Luxury Estate Concierge Console & Staff Dispatch OS",
+      "vertical": "hospitality",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/private-villa-estate-os",
+      "preview_url": "https://gcoinstash-cmd.github.io/private-villa-estate-os/",
+      "admin_url": "https://gcoinstash-cmd.github.io/private-villa-estate-os/admin",
+      "admin_passcode": "villaestate2026",
+      "audit_score": 9.8,
+      "tables": [
+        "estates",
+        "guest_reservations",
+        "concierge_requests",
+        "staff_roster"
       ]
     }
   ],
