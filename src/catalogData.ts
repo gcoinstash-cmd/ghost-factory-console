@@ -2,12 +2,12 @@ export const CATALOG_MANIFEST = {
   "catalog_version": "1.0.0",
   "store": "Aura & Grid",
   "store_url": "https://auraandgrid.gumroad.com",
-  "total_flagships": 70,
-  "standards": "Ghost Factory\u2122 9.0+ Verified Production Grade",
+  "total_flagships": 75,
+  "standards": "Ghost Factory™ 9.0+ Verified Production Grade",
   "database_engine": "Supabase PostgreSQL (RLS Enabled)",
   "frontend_stack": "React 19 + Tailwind CSS + Lucide Icons + Vite",
   "valuation_framework": {
-    "total_products": 70,
+    "total_products": 75,
     "agency_whitelabel_vault_per_license": 2999,
     "retail_shelf_msrp_starter_ui": 5530,
     "retail_shelf_msrp_full_stack": 13930,
@@ -625,7 +625,7 @@ export const CATALOG_MANIFEST = {
     },
     {
       "id": 36,
-      "name": "STUDIO V\u00c9RONIQUE LA",
+      "name": "STUDIO VÉRONIQUE LA",
       "category": "California Warm Modernism, Residential Interior Design & Material Sourcing OS",
       "vertical": "creative",
       "gumroad_url": "https://auraandgrid.gumroad.com/l/studio-veronique-os",
@@ -889,7 +889,7 @@ export const CATALOG_MANIFEST = {
     },
     {
       "id": 52,
-      "name": "Y\u016aGEN SENSORY OS",
+      "name": "YŪGEN SENSORY OS",
       "category": "Zen Minimalist Sensory Dining Sanctuary & Omakase Booking OS",
       "vertical": "hospitality",
       "gumroad_url": "https://auraandgrid.gumroad.com/l/yugen-sensory-os",
@@ -1201,74 +1201,166 @@ export const CATALOG_MANIFEST = {
         "ediscovery_documents",
         "case_assessment_inquiries"
       ]
+    },
+    {
+      "id": 71,
+      "name": "HEAVY PLANT RENTAL OS",
+      "category": "Heavy Earthmoving & Plant Equipment Fleet OS",
+      "vertical": "heavy_fleet",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/heavy-plant-rental-os",
+      "preview_url": "https://gcoinstash-cmd.github.io/heavy-plant-rental-os/",
+      "admin_url": "https://gcoinstash-cmd.github.io/heavy-plant-rental-os/admin/",
+      "admin_passcode": "plant2026",
+      "audit_score": 9.8,
+      "tables": [
+        "machinery_fleet",
+        "rental_contracts",
+        "damage_inspections",
+        "delivery_dispatches"
+      ]
+    },
+    {
+      "id": 72,
+      "name": "FREIGHT BROKER DISPATCH OS",
+      "category": "Intermodal Freight Brokerage & Carrier Lane OS",
+      "vertical": "heavy_fleet",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/freight-broker-dispatch-os",
+      "preview_url": "https://gcoinstash-cmd.github.io/freight-broker-dispatch-os/",
+      "admin_url": "https://gcoinstash-cmd.github.io/freight-broker-dispatch-os/admin/",
+      "admin_passcode": "freight2026",
+      "audit_score": 9.8,
+      "tables": [
+        "load_board",
+        "carrier_directory",
+        "rate_confirmations",
+        "bol_vault"
+      ]
+    },
+    {
+      "id": 73,
+      "name": "AVIATION CHARTER OS",
+      "category": "Private Jet Charter & Tail-Number Fleet OS",
+      "vertical": "heavy_fleet",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/aviation-charter-os",
+      "preview_url": "https://gcoinstash-cmd.github.io/aviation-charter-os/",
+      "admin_url": "https://gcoinstash-cmd.github.io/aviation-charter-os/admin/",
+      "admin_passcode": "aviation2026",
+      "audit_score": 9.8,
+      "tables": [
+        "aircraft_fleet",
+        "charter_bookings",
+        "empty_legs",
+        "vip_manifests"
+      ]
+    },
+    {
+      "id": 74,
+      "name": "COLD CHAIN STORAGE OS",
+      "category": "Temperature-Controlled Cold Storage & Reefer Dock OS",
+      "vertical": "heavy_fleet",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/cold-chain-storage-os",
+      "preview_url": "https://gcoinstash-cmd.github.io/cold-chain-storage-os/",
+      "admin_url": "https://gcoinstash-cmd.github.io/cold-chain-storage-os/admin/",
+      "admin_passcode": "coldchain2026",
+      "audit_score": 9.8,
+      "tables": [
+        "cold_storage_zones",
+        "dock_appointments",
+        "temperature_logs",
+        "pallet_reservations"
+      ]
+    },
+    {
+      "id": 75,
+      "name": "CRANE & RIGGING OPS OS",
+      "category": "Heavy Lift Engineering & Certified Crane Rigging OS",
+      "vertical": "heavy_fleet",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/crane-rigging-ops-os",
+      "preview_url": "https://gcoinstash-cmd.github.io/crane-rigging-ops-os/",
+      "admin_url": "https://gcoinstash-cmd.github.io/crane-rigging-ops-os/admin/",
+      "admin_passcode": "crane2026",
+      "audit_score": 9.8,
+      "tables": [
+        "crane_inventory",
+        "lift_plans",
+        "certified_riggers",
+        "site_dispatches"
+      ]
     }
   ],
   "vertical_slices": {
     "medical": {
       "name": "Medical & VIP Aesthetics Vault",
       "description": "Clinical booking, patient intake, medspas, salon grooming & olfactory OS",
-      "apa_valuation_range": "$35,000 \u2013 $55,000",
+      "apa_valuation_range": "$35,000 – $55,000",
       "target_asset_count": 50,
       "current_asset_count": 11
     },
     "automotive": {
       "name": "Automotive & Mobility Vault",
       "description": "Dyno testing, tuning dispatch, luxury fleet rentals & workshop OS",
-      "apa_valuation_range": "$28,000 \u2013 $45,000",
+      "apa_valuation_range": "$28,000 – $45,000",
       "target_asset_count": 40,
       "current_asset_count": 3
     },
     "hospitality": {
       "name": "Luxury Hospitality & Dining Vault",
       "description": "Bespoke counters, omakase, jazz bistros, supper clubs, estates & vineyards OS",
-      "apa_valuation_range": "$42,000 \u2013 $65,000",
+      "apa_valuation_range": "$42,000 – $65,000",
       "target_asset_count": 60,
       "current_asset_count": 19
     },
     "wealth": {
       "name": "Private Wealth & Real Estate Vault",
       "description": "Private equity LP portals, estate syndication, family office & luxury listings OS",
-      "apa_valuation_range": "$30,000 \u2013 $48,000",
+      "apa_valuation_range": "$30,000 – $48,000",
       "target_asset_count": 35,
       "current_asset_count": 15
     },
     "creative": {
       "name": "Creative Agency & Studio Vault",
       "description": "Motion VFX, architecture atelier, soundstage production & design OS",
-      "apa_valuation_range": "$28,000 \u2013 $40,000",
+      "apa_valuation_range": "$28,000 – $40,000",
       "target_asset_count": 40,
       "current_asset_count": 10
     },
     "fitness": {
       "name": "Performance Fitness & Athletics Vault",
       "description": "Boutique fight clubs, reformer training & athletic performance OS",
-      "apa_valuation_range": "$25,000 \u2013 $38,000",
+      "apa_valuation_range": "$25,000 – $38,000",
       "target_asset_count": 35,
       "current_asset_count": 4
     },
     "home_services": {
       "name": "Home Services & Commercial Contracting Vault",
       "description": "Commercial HVAC, drone roofing, hydraulic plumbing, solar EPC permits & switchgear dispatch OS",
-      "apa_valuation_range": "$35,000 \u2013 $60,000",
+      "apa_valuation_range": "$35,000 – $60,000",
       "target_asset_count": 50,
+      "current_asset_count": 5
+    },
+    "heavy_fleet": {
+      "name": "Heavy Commercial Fleet & Logistics Vault",
+      "description": "Heavy plant rental, freight brokerage dispatch, private aviation charter, cold storage & crane rigging OS",
+      "apa_valuation_range": "$30,000 – $52,000",
+      "target_asset_count": 40,
       "current_asset_count": 5
     }
   },
   "roadmap_horizons": {
     "immediate_focus": {
       "target": "500 Apps (Phase 1 to 4)",
-      "timeline": "2026 \u2013 Late 2027",
+      "timeline": "2026 – Late 2027",
       "phase_1_archive_clearance": "50 Apps ($2,999 Agency Vault Launch)",
-      "phase_2_century_funnel": "100 Apps ($3,500 VIP Setup + $35k\u2013$50k Micro-APA)",
+      "phase_2_century_funnel": "100 Apps ($3,500 VIP Setup + $35k–$50k Micro-APA)",
       "phase_3_category_dominance": "350 Apps (5-in-1 Niche Bundles + Micro-PE Multiple)",
-      "phase_4_master_buyout": "500 Apps ($125,000\u2013$200,000 Cash Buyout / $1.2M\u2013$2.5M+ Cash Flow)"
+      "phase_4_master_buyout": "500 Apps ($125,000–$200,000 Cash Buyout / $1.2M–$2.5M+ Cash Flow)"
     },
     "long_term_expansion": {
       "target": "3,000 to 5,000 Apps (Phase 5 to 7)",
-      "timeline": "2028 \u2013 2031 (3\u20135 Year Horizon)",
+      "timeline": "2028 – 2031 (3–5 Year Horizon)",
       "phase_5_multi_channel": "1,500 Apps (Custom Storefront, ThemeForest, B2B Outbound)",
-      "phase_6_saas_franchise": "3,000 Apps ($450k\u2013$900k Pre-Revenue Buyout / $4.5M Exit)",
-      "phase_7_holding_conglomerate": "5,000 Apps ($750k\u2013$1.5M Wholesale Buyout / $8.75M+ Exit)"
+      "phase_6_saas_franchise": "3,000 Apps ($450k–$900k Pre-Revenue Buyout / $4.5M Exit)",
+      "phase_7_holding_conglomerate": "5,000 Apps ($750k–$1.5M Wholesale Buyout / $8.75M+ Exit)"
     }
   }
 };
