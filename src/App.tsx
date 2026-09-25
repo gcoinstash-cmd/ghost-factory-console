@@ -28,6 +28,7 @@ import { CATALOG_DATA } from './catalogData';
 export const App: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('ALL');
+  const [selectedArchetype, setSelectedArchetype] = useState<string>('ALL');
   const [copiedCode, setCopiedCode] = useState<string | null>(null);
   const [isRefreshing, setIsRefreshing] = useState(false);
 
@@ -185,11 +186,14 @@ export const App: React.FC = () => {
       const matchesSearch = 
         p.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         p.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        p.admin_passcode.toLowerCase().includes(searchTerm.toLowerCase());
+        p.admin_passcode.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        ((p as any).archetype_name && (p as any).archetype_name.toLowerCase().includes(searchTerm.toLowerCase())) ||
+        ((p as any).design_benchmark && (p as any).design_benchmark.toLowerCase().includes(searchTerm.toLowerCase()));
       const matchesCat = selectedCategory === 'ALL' || p.category.includes(selectedCategory);
-      return matchesSearch && matchesCat;
+      const matchesArch = selectedArchetype === 'ALL' || (p as any).archetype_id === selectedArchetype;
+      return matchesSearch && matchesCat && matchesArch;
     });
-  }, [searchTerm, selectedCategory]);
+  }, [searchTerm, selectedCategory, selectedArchetype]);
 
   return (
     <div className="min-h-screen bg-[#0A0A0B] text-slate-100 hud-grid pb-28 selection:bg-emerald-500 selection:text-black">
@@ -939,6 +943,29 @@ export const App: React.FC = () => {
             </div>
           </div>
 
+          {/* Archetype Filter Tabs */}
+          <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-white/5">
+            <span className="text-xs font-mono font-bold text-slate-400 uppercase tracking-wider mr-1">Archetype Law:</span>
+            {[
+              { id: 'ALL', label: 'All Archetypes', count: CATALOG_DATA.products.length, color: 'border-white/20 text-white' },
+              { id: 'A', label: '[A] Ops Console', count: CATALOG_DATA.products.filter((p: any) => p.archetype_id === 'A').length, color: 'border-cyan-500/40 text-cyan-400 bg-cyan-950/20' },
+              { id: 'B', label: '[B] Editorial Showcase', count: CATALOG_DATA.products.filter((p: any) => p.archetype_id === 'B').length, color: 'border-purple-500/40 text-purple-400 bg-purple-950/20' },
+              { id: 'C', label: '[C] Stepper Wizard', count: CATALOG_DATA.products.filter((p: any) => p.archetype_id === 'C').length, color: 'border-amber-500/40 text-amber-400 bg-amber-950/20' },
+              { id: 'D', label: '[D] Timeline Matrix', count: CATALOG_DATA.products.filter((p: any) => p.archetype_id === 'D').length, color: 'border-blue-500/40 text-blue-400 bg-blue-950/20' },
+              { id: 'E', label: '[E] Split-Screen Proof', count: CATALOG_DATA.products.filter((p: any) => p.archetype_id === 'E').length, color: 'border-rose-500/40 text-rose-400 bg-rose-950/20' },
+            ].map(tab => (
+              <button
+                key={tab.id}
+                onClick={() => setSelectedArchetype(tab.id)}
+                className={`px-3 py-1.5 rounded-lg text-xs font-mono font-bold transition-all border ${tab.color} ${
+                  selectedArchetype === tab.id ? 'ring-2 ring-emerald-400 scale-105 shadow-md shadow-emerald-500/20' : 'opacity-70 hover:opacity-100'
+                }`}
+              >
+                {tab.label} ({tab.count})
+              </button>
+            ))}
+          </div>
+
           {/* Table */}
           <div className="overflow-x-auto border border-white/10 rounded-xl">
             <table className="w-full text-left font-mono">
@@ -946,6 +973,7 @@ export const App: React.FC = () => {
                 <tr>
                   <th className="py-4 px-4">ID</th>
                   <th className="py-4 px-4">Product Name</th>
+                  <th className="py-4 px-4">Archetype & Benchmark</th>
                   <th className="py-4 px-4">Vertical Niche</th>
                   <th className="py-4 px-4">1-Click Passkey</th>
                   <th className="py-4 px-4">Audit Score</th>
@@ -960,6 +988,24 @@ export const App: React.FC = () => {
                       <div className="flex items-center gap-2.5 text-sm sm:text-base">
                         <span className="w-2 h-2 rounded-full bg-emerald-400 shrink-0" />
                         {product.name}
+                      </div>
+                    </td>
+                    <td className="py-4 px-4">
+                      <div className="flex flex-col gap-1 max-w-xs">
+                        <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-mono font-bold border ${
+                          (product as any).archetype_id === 'A' ? 'bg-cyan-950/60 text-cyan-400 border-cyan-500/40' :
+                          (product as any).archetype_id === 'B' ? 'bg-purple-950/60 text-purple-400 border-purple-500/40' :
+                          (product as any).archetype_id === 'C' ? 'bg-amber-950/60 text-amber-400 border-amber-500/40' :
+                          (product as any).archetype_id === 'D' ? 'bg-blue-950/60 text-blue-400 border-blue-500/40' :
+                          'bg-rose-950/60 text-rose-400 border-rose-500/40'
+                        }`}>
+                          [{(product as any).archetype_id || 'A'}] {((product as any).archetype_name || '').split(':')[1] || 'Ops Console'}
+                        </span>
+                        {(product as any).design_benchmark && (
+                          <span className="text-[11px] text-slate-400 font-sans italic truncate" title={(product as any).design_benchmark}>
+                            Ref: {(product as any).design_benchmark}
+                          </span>
+                        )}
                       </div>
                     </td>
                     <td className="py-4 px-4 text-slate-300 max-w-xs font-sans text-xs sm:text-sm leading-relaxed">{product.category}</td>

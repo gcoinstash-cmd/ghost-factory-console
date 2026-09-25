@@ -3,7 +3,7 @@ export const CATALOG_MANIFEST = {
   "store": "Aura & Grid",
   "store_url": "https://auraandgrid.gumroad.com",
   "total_flagships": 85,
-  "standards": "Ghost Factory™ 9.0+ Verified Production Grade",
+  "standards": "Ghost Factory™ 9.0+ Verified Production Grade (Permanent 5-Archetype Rotation & Curated Design Intelligence)",
   "database_engine": "Supabase PostgreSQL (RLS Enabled)",
   "frontend_stack": "React 19 + Tailwind CSS + Lucide Icons + Vite",
   "valuation_framework": {
@@ -50,7 +50,11 @@ export const CATALOG_MANIFEST = {
         "bookings",
         "memberships"
       ],
-      "vertical": "fitness"
+      "vertical": "fitness",
+      "archetype_id": "A",
+      "archetype_name": "Archetype A: Dense Operational Console",
+      "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
+      "design_benchmark": "Sneaker Con & Flight Club Authentication Console"
     },
     {
       "id": 2,
@@ -67,7 +71,11 @@ export const CATALOG_MANIFEST = {
         "bookings",
         "intake"
       ],
-      "vertical": "creative"
+      "vertical": "creative",
+      "archetype_id": "B",
+      "archetype_name": "Archetype B: Asymmetric Editorial Showcase",
+      "archetype_description": "Dynamic masonry grid, visual filtering, editorial typography, and slide-over commission sheet for high-end ateliers, creative studios, and maritime showcases.",
+      "design_benchmark": "Abbey Road & Sunset Sound Editorial Showcase"
     },
     {
       "id": 3,
@@ -84,7 +92,11 @@ export const CATALOG_MANIFEST = {
         "clients",
         "maintenance"
       ],
-      "vertical": "automotive"
+      "vertical": "automotive",
+      "archetype_id": "A",
+      "archetype_name": "Archetype A: Dense Operational Console",
+      "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
+      "design_benchmark": "Exotic Fleet Telematics & GPS Triage"
     },
     {
       "id": 4,
@@ -101,7 +113,11 @@ export const CATALOG_MANIFEST = {
         "memberships",
         "sessions"
       ],
-      "vertical": "fitness"
+      "vertical": "fitness",
+      "archetype_id": "D",
+      "archetype_name": "Archetype D: Timeline & Station Reservation Grid",
+      "archetype_description": "Interactive day/hour time-slot matrix, capacity/station status indicators, and instant seat/pod booking for Michelin dining, private clubs, and recovery labs.",
+      "design_benchmark": "UFC Performance Institute Sparring Matrix"
     },
     {
       "id": 5,
@@ -118,7 +134,11 @@ export const CATALOG_MANIFEST = {
         "capital_calls",
         "allocations"
       ],
-      "vertical": "wealth"
+      "vertical": "wealth",
+      "archetype_id": "C",
+      "archetype_name": "Archetype C: Step-by-Step Calculator / Wizard",
+      "archetype_description": "Stateful multi-stage progression stepper, interactive pricing/spec tally, and stage-by-stage validation for underwriting, legal retainers, and clinical intake.",
+      "design_benchmark": "Carta LP Subscription & Capital Underwriting Wizard"
     },
     {
       "id": 6,
@@ -135,7 +155,11 @@ export const CATALOG_MANIFEST = {
         "orders",
         "roast_batches"
       ],
-      "vertical": "hospitality"
+      "vertical": "hospitality",
+      "archetype_id": "D",
+      "archetype_name": "Archetype D: Timeline & Station Reservation Grid",
+      "archetype_description": "Interactive day/hour time-slot matrix, capacity/station status indicators, and instant seat/pod booking for Michelin dining, private clubs, and recovery labs.",
+      "design_benchmark": "Blue Bottle Slow Bar & Pour-Over Station Grid"
     },
     {
       "id": 7,
@@ -153,7 +177,11 @@ export const CATALOG_MANIFEST = {
         "maintenance_requests",
         "documents"
       ],
-      "vertical": "hospitality"
+      "vertical": "hospitality",
+      "archetype_id": "E",
+      "archetype_name": "Archetype E: Split-Screen Spec & Proof Panel",
+      "archetype_description": "Fixed left media inspection preview, right scrollable technical breakdown, cryptographic proof logs, and provenance vault for horology, wealth, and fine art.",
+      "design_benchmark": "Sotheby's International Realty Deed Provenance Panel"
     },
     {
       "id": 8,
@@ -170,7 +198,11 @@ export const CATALOG_MANIFEST = {
         "appointments",
         "intake_records"
       ],
-      "vertical": "medical"
+      "vertical": "medical",
+      "archetype_id": "C",
+      "archetype_name": "Archetype C: Step-by-Step Calculator / Wizard",
+      "archetype_description": "Stateful multi-stage progression stepper, interactive pricing/spec tally, and stage-by-stage validation for underwriting, legal retainers, and clinical intake.",
+      "design_benchmark": "Beverly Hills Laser & Injectable Protocol Wizard"
     },
     {
       "id": 9,
@@ -187,7 +219,11 @@ export const CATALOG_MANIFEST = {
         "services",
         "appointments"
       ],
-      "vertical": "creative"
+      "vertical": "creative",
+      "archetype_id": "B",
+      "archetype_name": "Archetype B: Asymmetric Editorial Showcase",
+      "archetype_description": "Dynamic masonry grid, visual filtering, editorial typography, and slide-over commission sheet for high-end ateliers, creative studios, and maritime showcases.",
+      "design_benchmark": "Chanel Haute Couture Atelier Showcase"
     },
     {
       "id": 10,
@@ -204,7 +240,11 @@ export const CATALOG_MANIFEST = {
         "vintage_allocations",
         "vault_lockers"
       ],
-      "vertical": "wealth"
+      "vertical": "wealth",
+      "archetype_id": "D",
+      "archetype_name": "Archetype D: Timeline & Station Reservation Grid",
+      "archetype_description": "Interactive day/hour time-slot matrix, capacity/station status indicators, and instant seat/pod booking for Michelin dining, private clubs, and recovery labs.",
+      "design_benchmark": "Napa Valley Allocation & Cellar Tasting Grid"
     },
     {
       "id": 11,
@@ -221,7 +261,11 @@ export const CATALOG_MANIFEST = {
         "bim_revisions",
         "project_milestones"
       ],
-      "vertical": "creative"
+      "vertical": "creative",
+      "archetype_id": "E",
+      "archetype_name": "Archetype E: Split-Screen Spec & Proof Panel",
+      "archetype_description": "Fixed left media inspection preview, right scrollable technical breakdown, cryptographic proof logs, and provenance vault for horology, wealth, and fine art.",
+      "design_benchmark": "Dolby Atmos Master Track Acoustic Spec Panel"
     },
     {
       "id": 12,
@@ -238,7 +282,11 @@ export const CATALOG_MANIFEST = {
         "force_plate_runs",
         "lab_billing_retainers"
       ],
-      "vertical": "fitness"
+      "vertical": "fitness",
+      "archetype_id": "D",
+      "archetype_name": "Archetype D: Timeline & Station Reservation Grid",
+      "archetype_description": "Interactive day/hour time-slot matrix, capacity/station status indicators, and instant seat/pod booking for Michelin dining, private clubs, and recovery labs.",
+      "design_benchmark": "Equinox Biometric Cryo & POD Station Grid"
     },
     {
       "id": 13,
@@ -255,7 +303,11 @@ export const CATALOG_MANIFEST = {
         "bottle_inventory",
         "live_events"
       ],
-      "vertical": "hospitality"
+      "vertical": "hospitality",
+      "archetype_id": "D",
+      "archetype_name": "Archetype D: Timeline & Station Reservation Grid",
+      "archetype_description": "Interactive day/hour time-slot matrix, capacity/station status indicators, and instant seat/pod booking for Michelin dining, private clubs, and recovery labs.",
+      "design_benchmark": "Blue Note NYC Jazz Table Reservation Matrix"
     },
     {
       "id": 14,
@@ -271,7 +323,11 @@ export const CATALOG_MANIFEST = {
         "accommodation_tiers",
         "cohort_applications"
       ],
-      "vertical": "medical"
+      "vertical": "medical",
+      "archetype_id": "D",
+      "archetype_name": "Archetype D: Timeline & Station Reservation Grid",
+      "archetype_description": "Interactive day/hour time-slot matrix, capacity/station status indicators, and instant seat/pod booking for Michelin dining, private clubs, and recovery labs.",
+      "design_benchmark": "Amanjena Thermal Bathhouse Schedule Matrix"
     },
     {
       "id": 15,
@@ -287,7 +343,11 @@ export const CATALOG_MANIFEST = {
         "counter_seat_allocations",
         "sommelier_catalog"
       ],
-      "vertical": "hospitality"
+      "vertical": "hospitality",
+      "archetype_id": "D",
+      "archetype_name": "Archetype D: Timeline & Station Reservation Grid",
+      "archetype_description": "Interactive day/hour time-slot matrix, capacity/station status indicators, and instant seat/pod booking for Michelin dining, private clubs, and recovery labs.",
+      "design_benchmark": "Sukiyabashi Jiro 10-Seat Counter Matrix"
     },
     {
       "id": 16,
@@ -303,7 +363,11 @@ export const CATALOG_MANIFEST = {
         "client_lasts",
         "leather_inventory"
       ],
-      "vertical": "creative"
+      "vertical": "creative",
+      "archetype_id": "B",
+      "archetype_name": "Archetype B: Asymmetric Editorial Showcase",
+      "archetype_description": "Dynamic masonry grid, visual filtering, editorial typography, and slide-over commission sheet for high-end ateliers, creative studios, and maritime showcases.",
+      "design_benchmark": "Savile Row Bespoke Suiting Editorial"
     },
     {
       "id": 17,
@@ -319,7 +383,11 @@ export const CATALOG_MANIFEST = {
         "raw_essence_vault",
         "house_signatures"
       ],
-      "vertical": "medical"
+      "vertical": "medical",
+      "archetype_id": "C",
+      "archetype_name": "Archetype C: Step-by-Step Calculator / Wizard",
+      "archetype_description": "Stateful multi-stage progression stepper, interactive pricing/spec tally, and stage-by-stage validation for underwriting, legal retainers, and clinical intake.",
+      "design_benchmark": "Officina Profumo Botanical Tincture Wizard"
     },
     {
       "id": 18,
@@ -335,7 +403,11 @@ export const CATALOG_MANIFEST = {
         "fireside_table_allocations",
         "cellar_inventory"
       ],
-      "vertical": "hospitality"
+      "vertical": "hospitality",
+      "archetype_id": "B",
+      "archetype_name": "Archetype B: Asymmetric Editorial Showcase",
+      "archetype_description": "Dynamic masonry grid, visual filtering, editorial typography, and slide-over commission sheet for high-end ateliers, creative studios, and maritime showcases.",
+      "design_benchmark": "St. Moritz Alpine Parlor Editorial Showcase"
     },
     {
       "id": 19,
@@ -352,7 +424,11 @@ export const CATALOG_MANIFEST = {
         "client_portals",
         "financial_invoices"
       ],
-      "vertical": "creative"
+      "vertical": "creative",
+      "archetype_id": "B",
+      "archetype_name": "Archetype B: Asymmetric Editorial Showcase",
+      "archetype_description": "Dynamic masonry grid, visual filtering, editorial typography, and slide-over commission sheet for high-end ateliers, creative studios, and maritime showcases.",
+      "design_benchmark": "Framestore VFX Reel & 3D Pipeline Showcase"
     },
     {
       "id": 20,
@@ -369,7 +445,11 @@ export const CATALOG_MANIFEST = {
         "vinyl_records",
         "club_memberships"
       ],
-      "vertical": "hospitality"
+      "vertical": "hospitality",
+      "archetype_id": "D",
+      "archetype_name": "Archetype D: Timeline & Station Reservation Grid",
+      "archetype_description": "Interactive day/hour time-slot matrix, capacity/station status indicators, and instant seat/pod booking for Michelin dining, private clubs, and recovery labs.",
+      "design_benchmark": "Rao's NYC Secret Speakeasy Reservation Matrix"
     },
     {
       "id": 21,
@@ -386,7 +466,11 @@ export const CATALOG_MANIFEST = {
         "cocktail_dispensary",
         "capsule_booths"
       ],
-      "vertical": "hospitality"
+      "vertical": "hospitality",
+      "archetype_id": "D",
+      "archetype_name": "Archetype D: Timeline & Station Reservation Grid",
+      "archetype_description": "Interactive day/hour time-slot matrix, capacity/station status indicators, and instant seat/pod booking for Michelin dining, private clubs, and recovery labs.",
+      "design_benchmark": "Tokyo Shinjuku Golden Gai Izakaya Grid"
     },
     {
       "id": 22,
@@ -403,7 +487,11 @@ export const CATALOG_MANIFEST = {
         "baijiu_cocktails",
         "speakeasy_booths"
       ],
-      "vertical": "hospitality"
+      "vertical": "hospitality",
+      "archetype_id": "D",
+      "archetype_name": "Archetype D: Timeline & Station Reservation Grid",
+      "archetype_description": "Interactive day/hour time-slot matrix, capacity/station status indicators, and instant seat/pod booking for Michelin dining, private clubs, and recovery labs.",
+      "design_benchmark": "Indochine French-Vietnamese Bistro Grid"
     },
     {
       "id": 23,
@@ -420,7 +508,11 @@ export const CATALOG_MANIFEST = {
         "workshop_bays",
         "parts_inventory"
       ],
-      "vertical": "automotive"
+      "vertical": "automotive",
+      "archetype_id": "A",
+      "archetype_name": "Archetype A: Dense Operational Console",
+      "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
+      "design_benchmark": "Hennessey Performance Dyno Dispatch Console"
     },
     {
       "id": 24,
@@ -438,7 +530,11 @@ export const CATALOG_MANIFEST = {
         "appointments",
         "documents",
         "maintenance_requests"
-      ]
+      ],
+      "archetype_id": "E",
+      "archetype_name": "Archetype E: Split-Screen Spec & Proof Panel",
+      "archetype_description": "Fixed left media inspection preview, right scrollable technical breakdown, cryptographic proof logs, and provenance vault for horology, wealth, and fine art.",
+      "design_benchmark": "Architectural Digest Structural Spec Vault"
     },
     {
       "id": 25,
@@ -455,7 +551,11 @@ export const CATALOG_MANIFEST = {
         "client_briefs",
         "render_nodes",
         "asset_deliverables"
-      ]
+      ],
+      "archetype_id": "B",
+      "archetype_name": "Archetype B: Asymmetric Editorial Showcase",
+      "archetype_description": "Dynamic masonry grid, visual filtering, editorial typography, and slide-over commission sheet for high-end ateliers, creative studios, and maritime showcases.",
+      "design_benchmark": "Pixar Renderfarm & 3D Rigging Showcase"
     },
     {
       "id": 26,
@@ -473,7 +573,11 @@ export const CATALOG_MANIFEST = {
         "order_items",
         "grill_stations",
         "event_inquiries"
-      ]
+      ],
+      "archetype_id": "A",
+      "archetype_name": "Archetype A: Dense Operational Console",
+      "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
+      "design_benchmark": "Shake Shack Kitchen Display System Console"
     },
     {
       "id": 27,
@@ -490,7 +594,11 @@ export const CATALOG_MANIFEST = {
         "olfactory_notes",
         "scent_consultations",
         "bespoke_formulas"
-      ]
+      ],
+      "archetype_id": "B",
+      "archetype_name": "Archetype B: Asymmetric Editorial Showcase",
+      "archetype_description": "Dynamic masonry grid, visual filtering, editorial typography, and slide-over commission sheet for high-end ateliers, creative studios, and maritime showcases.",
+      "design_benchmark": "Kilian Paris Olfactory Scent Pyramid Showcase"
     },
     {
       "id": 28,
@@ -507,7 +615,11 @@ export const CATALOG_MANIFEST = {
         "blueprints",
         "project_milestones",
         "client_briefs"
-      ]
+      ],
+      "archetype_id": "C",
+      "archetype_name": "Archetype C: Step-by-Step Calculator / Wizard",
+      "archetype_description": "Stateful multi-stage progression stepper, interactive pricing/spec tally, and stage-by-stage validation for underwriting, legal retainers, and clinical intake.",
+      "design_benchmark": "Foster + Partners Architectural Scope Wizard"
     },
     {
       "id": 29,
@@ -524,7 +636,11 @@ export const CATALOG_MANIFEST = {
         "tasting_reservations",
         "cellar_drops",
         "club_members"
-      ]
+      ],
+      "archetype_id": "D",
+      "archetype_name": "Archetype D: Timeline & Station Reservation Grid",
+      "archetype_description": "Interactive day/hour time-slot matrix, capacity/station status indicators, and instant seat/pod booking for Michelin dining, private clubs, and recovery labs.",
+      "design_benchmark": "Bordeaux Premier Cru Allocation Matrix"
     },
     {
       "id": 30,
@@ -540,7 +656,11 @@ export const CATALOG_MANIFEST = {
         "legacy_goals",
         "allowance_chores",
         "family_trust_ledgers"
-      ]
+      ],
+      "archetype_id": "E",
+      "archetype_name": "Archetype E: Split-Screen Spec & Proof Panel",
+      "archetype_description": "Fixed left media inspection preview, right scrollable technical breakdown, cryptographic proof logs, and provenance vault for horology, wealth, and fine art.",
+      "design_benchmark": "Rockefeller Family Trust Ledger Panel"
     },
     {
       "id": 31,
@@ -556,7 +676,11 @@ export const CATALOG_MANIFEST = {
         "appointments",
         "salon_specialists",
         "salon_daily_metrics"
-      ]
+      ],
+      "archetype_id": "D",
+      "archetype_name": "Archetype D: Timeline & Station Reservation Grid",
+      "archetype_description": "Interactive day/hour time-slot matrix, capacity/station status indicators, and instant seat/pod booking for Michelin dining, private clubs, and recovery labs.",
+      "design_benchmark": "Truefitt & Hill 30-Min Barber Chair Matrix"
     },
     {
       "id": 32,
@@ -573,7 +697,11 @@ export const CATALOG_MANIFEST = {
         "barbers",
         "services",
         "products"
-      ]
+      ],
+      "archetype_id": "B",
+      "archetype_name": "Archetype B: Asymmetric Editorial Showcase",
+      "archetype_description": "Dynamic masonry grid, visual filtering, editorial typography, and slide-over commission sheet for high-end ateliers, creative studios, and maritime showcases.",
+      "design_benchmark": "Blind Barber VIP Grooming Goods Showcase"
     },
     {
       "id": 33,
@@ -589,7 +717,11 @@ export const CATALOG_MANIFEST = {
         "underwriting_deals",
         "financial_metrics",
         "client_portals"
-      ]
+      ],
+      "archetype_id": "C",
+      "archetype_name": "Archetype C: Step-by-Step Calculator / Wizard",
+      "archetype_description": "Stateful multi-stage progression stepper, interactive pricing/spec tally, and stage-by-stage validation for underwriting, legal retainers, and clinical intake.",
+      "design_benchmark": "Walker & Dunlop Commercial DSCR Underwriting Wizard"
     },
     {
       "id": 34,
@@ -605,7 +737,11 @@ export const CATALOG_MANIFEST = {
         "offer_blueprints",
         "client_roster",
         "strategy_intakes"
-      ]
+      ],
+      "archetype_id": "E",
+      "archetype_name": "Archetype E: Split-Screen Spec & Proof Panel",
+      "archetype_description": "Fixed left media inspection preview, right scrollable technical breakdown, cryptographic proof logs, and provenance vault for horology, wealth, and fine art.",
+      "design_benchmark": "McKinsey High-Ticket Advisory Deal Blueprint"
     },
     {
       "id": 35,
@@ -621,7 +757,11 @@ export const CATALOG_MANIFEST = {
         "smoker_pits",
         "reservations",
         "kitchen_dispatch_queue"
-      ]
+      ],
+      "archetype_id": "A",
+      "archetype_name": "Archetype A: Dense Operational Console",
+      "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
+      "design_benchmark": "Franklin Barbecue Pitmaster Probe Telemetry Console"
     },
     {
       "id": 36,
@@ -637,7 +777,11 @@ export const CATALOG_MANIFEST = {
         "design_projects",
         "client_consultations",
         "material_procurement"
-      ]
+      ],
+      "archetype_id": "B",
+      "archetype_name": "Archetype B: Asymmetric Editorial Showcase",
+      "archetype_description": "Dynamic masonry grid, visual filtering, editorial typography, and slide-over commission sheet for high-end ateliers, creative studios, and maritime showcases.",
+      "design_benchmark": "Kelly Wearstler California Modernism Showcase"
     },
     {
       "id": 37,
@@ -654,7 +798,11 @@ export const CATALOG_MANIFEST = {
         "forno_reservations",
         "service_tickets",
         "catering_inquiries"
-      ]
+      ],
+      "archetype_id": "D",
+      "archetype_name": "Archetype D: Timeline & Station Reservation Grid",
+      "archetype_description": "Interactive day/hour time-slot matrix, capacity/station status indicators, and instant seat/pod booking for Michelin dining, private clubs, and recovery labs.",
+      "design_benchmark": "L'Antica Pizzeria da Michele Fermentation Matrix"
     },
     {
       "id": 38,
@@ -671,7 +819,11 @@ export const CATALOG_MANIFEST = {
         "guestlist_submissions",
         "bottle_inventory",
         "table_reservations"
-      ]
+      ],
+      "archetype_id": "C",
+      "archetype_name": "Archetype C: Step-by-Step Calculator / Wizard",
+      "archetype_description": "Stateful multi-stage progression stepper, interactive pricing/spec tally, and stage-by-stage validation for underwriting, legal retainers, and clinical intake.",
+      "design_benchmark": "LIV Miami VIP Bottle Minimum & Table Wizard"
     },
     {
       "id": 39,
@@ -688,7 +840,11 @@ export const CATALOG_MANIFEST = {
         "case_studies",
         "active_sprints",
         "proposal_pipeline"
-      ]
+      ],
+      "archetype_id": "E",
+      "archetype_name": "Archetype E: Split-Screen Spec & Proof Panel",
+      "archetype_description": "Fixed left media inspection preview, right scrollable technical breakdown, cryptographic proof logs, and provenance vault for horology, wealth, and fine art.",
+      "design_benchmark": "Pentagram Brand Identity Asset Spec Panel"
     },
     {
       "id": 40,
@@ -705,7 +861,11 @@ export const CATALOG_MANIFEST = {
         "orders",
         "catering_inquiries",
         "merch_drops"
-      ]
+      ],
+      "archetype_id": "B",
+      "archetype_name": "Archetype B: Asymmetric Editorial Showcase",
+      "archetype_description": "Dynamic masonry grid, visual filtering, editorial typography, and slide-over commission sheet for high-end ateliers, creative studios, and maritime showcases.",
+      "design_benchmark": "Supreme NYC Street Food Drop Editorial"
     },
     {
       "id": 41,
@@ -722,7 +882,11 @@ export const CATALOG_MANIFEST = {
         "user_streaks",
         "portfolios",
         "ledger_entries"
-      ]
+      ],
+      "archetype_id": "E",
+      "archetype_name": "Archetype E: Split-Screen Spec & Proof Panel",
+      "archetype_description": "Fixed left media inspection preview, right scrollable technical breakdown, cryptographic proof logs, and provenance vault for horology, wealth, and fine art.",
+      "design_benchmark": "Trezor & Ledger Cold Storage UTXO Proof Panel"
     },
     {
       "id": 42,
@@ -739,7 +903,11 @@ export const CATALOG_MANIFEST = {
         "bay_status",
         "services_catalog",
         "customer_reviews"
-      ]
+      ],
+      "archetype_id": "A",
+      "archetype_name": "Archetype A: Dense Operational Console",
+      "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
+      "design_benchmark": "RWB Porsche Tuning Bay Dispatch Console"
     },
     {
       "id": 43,
@@ -756,7 +924,11 @@ export const CATALOG_MANIFEST = {
         "therapists",
         "treatments_menu",
         "client_testimonials"
-      ]
+      ],
+      "archetype_id": "D",
+      "archetype_name": "Archetype D: Timeline & Station Reservation Grid",
+      "archetype_description": "Interactive day/hour time-slot matrix, capacity/station status indicators, and instant seat/pod booking for Michelin dining, private clubs, and recovery labs.",
+      "design_benchmark": "Banja Bathhouse Hydrotherapy Grid"
     },
     {
       "id": 44,
@@ -772,7 +944,11 @@ export const CATALOG_MANIFEST = {
         "catering_orders",
         "menu_items",
         "reservations"
-      ]
+      ],
+      "archetype_id": "D",
+      "archetype_name": "Archetype D: Timeline & Station Reservation Grid",
+      "archetype_description": "Interactive day/hour time-slot matrix, capacity/station status indicators, and instant seat/pod booking for Michelin dining, private clubs, and recovery labs.",
+      "design_benchmark": "Marcus Samuelsson Heritage Chef Reservation Matrix"
     },
     {
       "id": 45,
@@ -789,7 +965,11 @@ export const CATALOG_MANIFEST = {
         "salon_reservations",
         "tasting_menus",
         "lookbooks"
-      ]
+      ],
+      "archetype_id": "B",
+      "archetype_name": "Archetype B: Asymmetric Editorial Showcase",
+      "archetype_description": "Dynamic masonry grid, visual filtering, editorial typography, and slide-over commission sheet for high-end ateliers, creative studios, and maritime showcases.",
+      "design_benchmark": "James Beard Foundation Culinary Archive Editorial"
     },
     {
       "id": 46,
@@ -805,7 +985,11 @@ export const CATALOG_MANIFEST = {
         "reservations",
         "menu_items",
         "testimonials"
-      ]
+      ],
+      "archetype_id": "E",
+      "archetype_name": "Archetype E: Split-Screen Spec & Proof Panel",
+      "archetype_description": "Fixed left media inspection preview, right scrollable technical breakdown, cryptographic proof logs, and provenance vault for horology, wealth, and fine art.",
+      "design_benchmark": "Blue Hill at Stone Barns Sourcing Proof Panel"
     },
     {
       "id": 47,
@@ -822,7 +1006,11 @@ export const CATALOG_MANIFEST = {
         "inquiries",
         "appointments",
         "documents"
-      ]
+      ],
+      "archetype_id": "B",
+      "archetype_name": "Archetype B: Asymmetric Editorial Showcase",
+      "archetype_description": "Dynamic masonry grid, visual filtering, editorial typography, and slide-over commission sheet for high-end ateliers, creative studios, and maritime showcases.",
+      "design_benchmark": "Architectural Digest Bel-Air Mega-Estate Showcase"
     },
     {
       "id": 48,
@@ -838,7 +1026,11 @@ export const CATALOG_MANIFEST = {
         "orders",
         "menu_items",
         "lanes"
-      ]
+      ],
+      "archetype_id": "A",
+      "archetype_name": "Archetype A: Dense Operational Console",
+      "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
+      "design_benchmark": "In-N-Out Supercar Drive-Thru RFID Dispatch"
     },
     {
       "id": 49,
@@ -853,7 +1045,11 @@ export const CATALOG_MANIFEST = {
       "tables": [
         "underwritten_deals",
         "financial_covenants"
-      ]
+      ],
+      "archetype_id": "C",
+      "archetype_name": "Archetype C: Step-by-Step Calculator / Wizard",
+      "archetype_description": "Stateful multi-stage progression stepper, interactive pricing/spec tally, and stage-by-stage validation for underwriting, legal retainers, and clinical intake.",
+      "design_benchmark": "CoStar 10-Year Pro-Forma DCF Underwriting Engine"
     },
     {
       "id": 50,
@@ -869,7 +1065,11 @@ export const CATALOG_MANIFEST = {
         "banquet_bookings",
         "culinary_menu_items",
         "dietary_allergen_records"
-      ]
+      ],
+      "archetype_id": "A",
+      "archetype_name": "Archetype A: Dense Operational Console",
+      "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
+      "design_benchmark": "Eleven Madison Park BOH Station Velocity Console"
     },
     {
       "id": 51,
@@ -886,7 +1086,11 @@ export const CATALOG_MANIFEST = {
         "menu_items",
         "catering_leads",
         "vip_subscribers"
-      ]
+      ],
+      "archetype_id": "A",
+      "archetype_name": "Archetype A: Dense Operational Console",
+      "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
+      "design_benchmark": "Kogi BBQ Live GPS Food Truck Dispatch Console"
     },
     {
       "id": 52,
@@ -902,7 +1106,11 @@ export const CATALOG_MANIFEST = {
         "reservations",
         "sensory_courses",
         "buyout_inquiries"
-      ]
+      ],
+      "archetype_id": "B",
+      "archetype_name": "Archetype B: Asymmetric Editorial Showcase",
+      "archetype_description": "Dynamic masonry grid, visual filtering, editorial typography, and slide-over commission sheet for high-end ateliers, creative studios, and maritime showcases.",
+      "design_benchmark": "Ryokan Kyoto Sensory Omakase Editorial Showcase"
     },
     {
       "id": 53,
@@ -918,7 +1126,11 @@ export const CATALOG_MANIFEST = {
         "admissions_waitlist",
         "development_milestones",
         "parent_consultations"
-      ]
+      ],
+      "archetype_id": "C",
+      "archetype_name": "Archetype C: Step-by-Step Calculator / Wizard",
+      "archetype_description": "Stateful multi-stage progression stepper, interactive pricing/spec tally, and stage-by-stage validation for underwriting, legal retainers, and clinical intake.",
+      "design_benchmark": "Montessori Early Developmental Milestone Wizard"
     },
     {
       "id": 54,
@@ -934,7 +1146,11 @@ export const CATALOG_MANIFEST = {
         "proforma_projects",
         "underwriting_scenarios",
         "lp_inquiries"
-      ]
+      ],
+      "archetype_id": "C",
+      "archetype_name": "Archetype C: Step-by-Step Calculator / Wizard",
+      "archetype_description": "Stateful multi-stage progression stepper, interactive pricing/spec tally, and stage-by-stage validation for underwriting, legal retainers, and clinical intake.",
+      "design_benchmark": "Four Seasons RevPASH & CapEx Yield Calculator"
     },
     {
       "id": 55,
@@ -950,7 +1166,11 @@ export const CATALOG_MANIFEST = {
         "portfolio_holdings",
         "fcf_valuation_models",
         "lp_capital_calls"
-      ]
+      ],
+      "archetype_id": "E",
+      "archetype_name": "Archetype E: Split-Screen Spec & Proof Panel",
+      "archetype_description": "Fixed left media inspection preview, right scrollable technical breakdown, cryptographic proof logs, and provenance vault for horology, wealth, and fine art.",
+      "design_benchmark": "Berkshire Hathaway Capital Compounding Terminal Panel"
     },
     {
       "id": 56,
@@ -967,7 +1187,11 @@ export const CATALOG_MANIFEST = {
         "chiller_telemetry",
         "epa_refrigerant_logs",
         "service_vans"
-      ]
+      ],
+      "archetype_id": "A",
+      "archetype_name": "Archetype A: Dense Operational Console",
+      "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
+      "design_benchmark": "Carrier Chiller Plant & Commercial Dispatch Console"
     },
     {
       "id": 57,
@@ -984,7 +1208,11 @@ export const CATALOG_MANIFEST = {
         "drone_inspections",
         "insurance_claims",
         "crew_schedules"
-      ]
+      ],
+      "archetype_id": "C",
+      "archetype_name": "Archetype C: Step-by-Step Calculator / Wizard",
+      "archetype_description": "Stateful multi-stage progression stepper, interactive pricing/spec tally, and stage-by-stage validation for underwriting, legal retainers, and clinical intake.",
+      "design_benchmark": "EagleView Drone Scope & Roofing Estimator Wizard"
     },
     {
       "id": 58,
@@ -1001,7 +1229,11 @@ export const CATALOG_MANIFEST = {
         "commercial_backflow",
         "hydro_inspections",
         "technician_units"
-      ]
+      ],
+      "archetype_id": "A",
+      "archetype_name": "Archetype A: Dense Operational Console",
+      "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
+      "design_benchmark": "Roto-Rooter Commercial Hydraulic Ops Console"
     },
     {
       "id": 59,
@@ -1018,7 +1250,11 @@ export const CATALOG_MANIFEST = {
         "ahj_permits",
         "utility_interconnects",
         "battery_storage_banks"
-      ]
+      ],
+      "archetype_id": "D",
+      "archetype_name": "Archetype D: Timeline & Station Reservation Grid",
+      "archetype_description": "Interactive day/hour time-slot matrix, capacity/station status indicators, and instant seat/pod booking for Michelin dining, private clubs, and recovery labs.",
+      "design_benchmark": "Sunrun Commercial PV Sizing & AHJ Permit Grid"
     },
     {
       "id": 60,
@@ -1035,7 +1271,11 @@ export const CATALOG_MANIFEST = {
         "ev_charging_stations",
         "thermal_inspections",
         "master_electrician_vans"
-      ]
+      ],
+      "archetype_id": "A",
+      "archetype_name": "Archetype A: Dense Operational Console",
+      "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
+      "design_benchmark": "ABB Medium-Voltage Switchgear & EV Crew Console"
     },
     {
       "id": 61,
@@ -1052,7 +1292,11 @@ export const CATALOG_MANIFEST = {
         "treatment_plans",
         "operatories",
         "appointment_ledger"
-      ]
+      ],
+      "archetype_id": "D",
+      "archetype_name": "Archetype D: Timeline & Station Reservation Grid",
+      "archetype_description": "Interactive day/hour time-slot matrix, capacity/station status indicators, and instant seat/pod booking for Michelin dining, private clubs, and recovery labs.",
+      "design_benchmark": "Pacific Dental Operatory Chair Scheduling Matrix"
     },
     {
       "id": 62,
@@ -1069,7 +1313,11 @@ export const CATALOG_MANIFEST = {
         "veterinary_services",
         "emergency_triage",
         "patient_vitals"
-      ]
+      ],
+      "archetype_id": "B",
+      "archetype_name": "Archetype B: Asymmetric Editorial Showcase",
+      "archetype_description": "Dynamic masonry grid, visual filtering, editorial typography, and slide-over commission sheet for high-end ateliers, creative studios, and maritime showcases.",
+      "design_benchmark": "VCA Animal Hospital Emergency Case Showcase"
     },
     {
       "id": 63,
@@ -1086,7 +1334,11 @@ export const CATALOG_MANIFEST = {
         "protocols",
         "intake_consultations",
         "biomarker_telemetry"
-      ]
+      ],
+      "archetype_id": "C",
+      "archetype_name": "Archetype C: Step-by-Step Calculator / Wizard",
+      "archetype_description": "Stateful multi-stage progression stepper, interactive pricing/spec tally, and stage-by-stage validation for underwriting, legal retainers, and clinical intake.",
+      "design_benchmark": "Dr. Mark Hyman Epigenetic Longevity Protocol Wizard"
     },
     {
       "id": 64,
@@ -1103,7 +1355,11 @@ export const CATALOG_MANIFEST = {
         "therapy_programs",
         "clinical_sessions",
         "biomechanical_telemetry"
-      ]
+      ],
+      "archetype_id": "D",
+      "archetype_name": "Archetype D: Timeline & Station Reservation Grid",
+      "archetype_description": "Interactive day/hour time-slot matrix, capacity/station status indicators, and instant seat/pod booking for Michelin dining, private clubs, and recovery labs.",
+      "design_benchmark": "EXOS Athletic Rehabilitation Station Grid"
     },
     {
       "id": 65,
@@ -1120,7 +1376,11 @@ export const CATALOG_MANIFEST = {
         "recovery_services",
         "suite_reservations",
         "chamber_telemetry"
-      ]
+      ],
+      "archetype_id": "D",
+      "archetype_name": "Archetype D: Timeline & Station Reservation Grid",
+      "archetype_description": "Interactive day/hour time-slot matrix, capacity/station status indicators, and instant seat/pod booking for Michelin dining, private clubs, and recovery labs.",
+      "design_benchmark": "Next Health Thermal Contrast & IV Lounge Grid"
     },
     {
       "id": 66,
@@ -1137,7 +1397,11 @@ export const CATALOG_MANIFEST = {
         "trust_ledgers",
         "conflict_intake",
         "matter_documents"
-      ]
+      ],
+      "archetype_id": "C",
+      "archetype_name": "Archetype C: Step-by-Step Calculator / Wizard",
+      "archetype_description": "Stateful multi-stage progression stepper, interactive pricing/spec tally, and stage-by-stage validation for underwriting, legal retainers, and clinical intake.",
+      "design_benchmark": "Skadden Arps Commercial Trial Retainer Wizard"
     },
     {
       "id": 67,
@@ -1153,7 +1417,11 @@ export const CATALOG_MANIFEST = {
         "deal_mandates",
         "vdr_access_requests",
         "client_advisory_inquiries"
-      ]
+      ],
+      "archetype_id": "C",
+      "archetype_name": "Archetype C: Step-by-Step Calculator / Wizard",
+      "archetype_description": "Stateful multi-stage progression stepper, interactive pricing/spec tally, and stage-by-stage validation for underwriting, legal retainers, and clinical intake.",
+      "design_benchmark": "Goldman Sachs Lower Middle-Market M&A VDR Stepper"
     },
     {
       "id": 68,
@@ -1169,7 +1437,11 @@ export const CATALOG_MANIFEST = {
         "retained_mandates",
         "candidate_dossiers",
         "client_mandate_inquiries"
-      ]
+      ],
+      "archetype_id": "C",
+      "archetype_name": "Archetype C: Step-by-Step Calculator / Wizard",
+      "archetype_description": "Stateful multi-stage progression stepper, interactive pricing/spec tally, and stage-by-stage validation for underwriting, legal retainers, and clinical intake.",
+      "design_benchmark": "Korn Ferry Retained C-Suite Placement Stepper"
     },
     {
       "id": 69,
@@ -1185,7 +1457,11 @@ export const CATALOG_MANIFEST = {
         "direct_syndicates",
         "family_allocations",
         "principal_onboarding_inquiries"
-      ]
+      ],
+      "archetype_id": "E",
+      "archetype_name": "Archetype E: Split-Screen Spec & Proof Panel",
+      "archetype_description": "Fixed left media inspection preview, right scrollable technical breakdown, cryptographic proof logs, and provenance vault for horology, wealth, and fine art.",
+      "design_benchmark": "Cambridge Associates Sovereign Wealth Spec Panel"
     },
     {
       "id": 70,
@@ -1201,7 +1477,11 @@ export const CATALOG_MANIFEST = {
         "litigation_dockets",
         "ediscovery_documents",
         "case_assessment_inquiries"
-      ]
+      ],
+      "archetype_id": "E",
+      "archetype_name": "Archetype E: Split-Screen Spec & Proof Panel",
+      "archetype_description": "Fixed left media inspection preview, right scrollable technical breakdown, cryptographic proof logs, and provenance vault for horology, wealth, and fine art.",
+      "design_benchmark": "FTI Consulting Commercial Trial E-Discovery War Room"
     },
     {
       "id": 71,
@@ -1218,7 +1498,11 @@ export const CATALOG_MANIFEST = {
         "rental_contracts",
         "damage_inspections",
         "delivery_dispatches"
-      ]
+      ],
+      "archetype_id": "A",
+      "archetype_name": "Archetype A: Dense Operational Console",
+      "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
+      "design_benchmark": "United Rentals Heavy Earthmoving Fleet Console"
     },
     {
       "id": 72,
@@ -1235,7 +1519,11 @@ export const CATALOG_MANIFEST = {
         "carrier_directory",
         "rate_confirmations",
         "bol_vault"
-      ]
+      ],
+      "archetype_id": "A",
+      "archetype_name": "Archetype A: Dense Operational Console",
+      "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
+      "design_benchmark": "C.H. Robinson Intermodal Freight Brokerage Console"
     },
     {
       "id": 73,
@@ -1252,7 +1540,11 @@ export const CATALOG_MANIFEST = {
         "charter_bookings",
         "empty_legs",
         "vip_manifests"
-      ]
+      ],
+      "archetype_id": "C",
+      "archetype_name": "Archetype C: Step-by-Step Calculator / Wizard",
+      "archetype_description": "Stateful multi-stage progression stepper, interactive pricing/spec tally, and stage-by-stage validation for underwriting, legal retainers, and clinical intake.",
+      "design_benchmark": "NetJets Private Fleet Flight Hours Wizard"
     },
     {
       "id": 74,
@@ -1269,7 +1561,11 @@ export const CATALOG_MANIFEST = {
         "dock_appointments",
         "temperature_logs",
         "pallet_reservations"
-      ]
+      ],
+      "archetype_id": "A",
+      "archetype_name": "Archetype A: Dense Operational Console",
+      "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
+      "design_benchmark": "Lineage Logistics Reefer Dock Telemetry Console"
     },
     {
       "id": 75,
@@ -1286,7 +1582,11 @@ export const CATALOG_MANIFEST = {
         "lift_plans",
         "certified_riggers",
         "site_dispatches"
-      ]
+      ],
+      "archetype_id": "A",
+      "archetype_name": "Archetype A: Dense Operational Console",
+      "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
+      "design_benchmark": "Mammoet Heavy Lift & Rigging Dispatch Console"
     },
     {
       "id": 76,
@@ -1303,7 +1603,11 @@ export const CATALOG_MANIFEST = {
         "coating_packages",
         "warranty_registry",
         "cure_telemetry"
-      ]
+      ],
+      "archetype_id": "C",
+      "archetype_name": "Archetype C: Step-by-Step Calculator / Wizard",
+      "archetype_description": "Stateful multi-stage progression stepper, interactive pricing/spec tally, and stage-by-stage validation for underwriting, legal retainers, and clinical intake.",
+      "design_benchmark": "XPEL Automotive Paint Protection Film Wizard"
     },
     {
       "id": 77,
@@ -1320,7 +1624,11 @@ export const CATALOG_MANIFEST = {
         "service_dispatches",
         "route_logs",
         "client_addons"
-      ]
+      ],
+      "archetype_id": "A",
+      "archetype_name": "Archetype A: Dense Operational Console",
+      "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
+      "design_benchmark": "Mobile Detail Rig & Tech Dispatch Console"
     },
     {
       "id": 78,
@@ -1337,7 +1645,11 @@ export const CATALOG_MANIFEST = {
         "production_rentals",
         "insurance_binders",
         "subrental_logs"
-      ]
+      ],
+      "archetype_id": "B",
+      "archetype_name": "Archetype B: Asymmetric Editorial Showcase",
+      "archetype_description": "Dynamic masonry grid, visual filtering, editorial typography, and slide-over commission sheet for high-end ateliers, creative studios, and maritime showcases.",
+      "design_benchmark": "ARRI Rental Cinema Grip & Anamorphic Lens Showcase"
     },
     {
       "id": 79,
@@ -1354,7 +1666,11 @@ export const CATALOG_MANIFEST = {
         "deposit_bookings",
         "digital_waivers",
         "flash_drops"
-      ]
+      ],
+      "archetype_id": "B",
+      "archetype_name": "Archetype B: Asymmetric Editorial Showcase",
+      "archetype_description": "Dynamic masonry grid, visual filtering, editorial typography, and slide-over commission sheet for high-end ateliers, creative studios, and maritime showcases.",
+      "design_benchmark": "Bang Bang NYC Resident Tattoo Artist Flash Grid"
     },
     {
       "id": 80,
@@ -1371,7 +1687,11 @@ export const CATALOG_MANIFEST = {
         "member_sessions",
         "medical_intake_forms",
         "iv_infusion_logs"
-      ]
+      ],
+      "archetype_id": "D",
+      "archetype_name": "Archetype D: Timeline & Station Reservation Grid",
+      "archetype_description": "Interactive day/hour time-slot matrix, capacity/station status indicators, and instant seat/pod booking for Michelin dining, private clubs, and recovery labs.",
+      "design_benchmark": "UFC Athlete Cryo & Contrast Chamber Matrix"
     },
     {
       "id": 81,
@@ -1388,7 +1708,11 @@ export const CATALOG_MANIFEST = {
         "reservations",
         "tasting_pairings",
         "sommelier_cellar"
-      ]
+      ],
+      "archetype_id": "D",
+      "archetype_name": "Archetype D: Timeline & Station Reservation Grid",
+      "archetype_description": "Interactive day/hour time-slot matrix, capacity/station status indicators, and instant seat/pod booking for Michelin dining, private clubs, and recovery labs.",
+      "design_benchmark": "SevenRooms 24-Seat Michelin Timeline Matrix"
     },
     {
       "id": 82,
@@ -1405,7 +1729,11 @@ export const CATALOG_MANIFEST = {
         "treatments",
         "intake_questionnaires",
         "practitioner_schedules"
-      ]
+      ],
+      "archetype_id": "C",
+      "archetype_name": "Archetype C: Step-by-Step Calculator / Wizard",
+      "archetype_description": "Stateful multi-stage progression stepper, interactive pricing/spec tally, and stage-by-stage validation for underwriting, legal retainers, and clinical intake.",
+      "design_benchmark": "Beverly Hills Plastic Surgery Treatment Intake Wizard"
     },
     {
       "id": 83,
@@ -1422,7 +1750,11 @@ export const CATALOG_MANIFEST = {
         "charter_bookings",
         "itineraries",
         "crew_manifests"
-      ]
+      ],
+      "archetype_id": "B",
+      "archetype_name": "Archetype B: Asymmetric Editorial Showcase",
+      "archetype_description": "Dynamic masonry grid, visual filtering, editorial typography, and slide-over commission sheet for high-end ateliers, creative studios, and maritime showcases.",
+      "design_benchmark": "Fraser Yachts Monaco Asymmetric Editorial Showcase"
     },
     {
       "id": 84,
@@ -1439,7 +1771,11 @@ export const CATALOG_MANIFEST = {
         "caliber_specs",
         "provenance_records",
         "escrow_inquiries"
-      ]
+      ],
+      "archetype_id": "E",
+      "archetype_name": "Archetype E: Split-Screen Spec & Proof Panel",
+      "archetype_description": "Fixed left media inspection preview, right scrollable technical breakdown, cryptographic proof logs, and provenance vault for horology, wealth, and fine art.",
+      "design_benchmark": "Chrono24 Split-Screen Inspection Loupe & Caliber Vault"
     },
     {
       "id": 85,
@@ -1456,7 +1792,11 @@ export const CATALOG_MANIFEST = {
         "guest_reservations",
         "concierge_requests",
         "staff_roster"
-      ]
+      ],
+      "archetype_id": "A",
+      "archetype_name": "Archetype A: Dense Operational Console",
+      "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
+      "design_benchmark": "Aman Resorts Private Villa Concierge & Butler Console"
     }
   ],
   "vertical_slices": {
@@ -1533,6 +1873,65 @@ export const CATALOG_MANIFEST = {
       "phase_6_saas_franchise": "3,000 Apps ($450k–$900k Pre-Revenue Buyout / $4.5M Exit)",
       "phase_7_holding_conglomerate": "5,000 Apps ($750k–$1.5M Wholesale Buyout / $8.75M+ Exit)"
     }
+  },
+  "archetypes": {
+    "A": {
+      "id": "A",
+      "name": "Archetype A: Dense Operational Console",
+      "description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
+      "benchmarks": [
+        "Flexport",
+        "Samsara",
+        "Geotab",
+        "ServiceTitan",
+        "Aman Dispatch"
+      ]
+    },
+    "B": {
+      "id": "B",
+      "name": "Archetype B: Asymmetric Editorial Showcase",
+      "description": "Dynamic masonry grid, visual filtering, editorial typography, and slide-over commission sheet for high-end ateliers, creative studios, and maritime showcases.",
+      "benchmarks": [
+        "Fraser Yachts Monaco",
+        "Awwwards Annuals",
+        "Savoir Beds",
+        "Leica Gallery"
+      ]
+    },
+    "C": {
+      "id": "C",
+      "name": "Archetype C: Step-by-Step Calculator / Wizard",
+      "description": "Stateful multi-stage progression stepper, interactive pricing/spec tally, and stage-by-stage validation for underwriting, legal retainers, and clinical intake.",
+      "benchmarks": [
+        "Carta",
+        "Clio Legal",
+        "Beverly Hills Aesthetic Intake",
+        "Tesla Design Studio"
+      ]
+    },
+    "D": {
+      "id": "D",
+      "name": "Archetype D: Timeline & Station Reservation Grid",
+      "description": "Interactive day/hour time-slot matrix, capacity/station status indicators, and instant seat/pod booking for Michelin dining, private clubs, and recovery labs.",
+      "benchmarks": [
+        "SevenRooms Michelin Matrix",
+        "Mindbody Concierge",
+        "Resy Global",
+        "Healios Labs"
+      ]
+    },
+    "E": {
+      "id": "E",
+      "name": "Archetype E: Split-Screen Spec & Proof Panel",
+      "description": "Fixed left media inspection preview, right scrollable technical breakdown, cryptographic proof logs, and provenance vault for horology, wealth, and fine art.",
+      "benchmarks": [
+        "Chrono24 Collector Loupe",
+        "Sotheby's Sealed",
+        "Bloomberg Terminal",
+        "Christie's Provenance"
+      ]
+    }
   }
 };
+
 export const CATALOG_DATA = CATALOG_MANIFEST;
