@@ -1,24 +1,24 @@
-// AUTO-GENERATED FROM CATALOG_MANIFEST.json
+// Auto-generated from CATALOG_MANIFEST.json — Ghost Factory™ Registry
 export interface ProductItem {
   id: number;
   name: string;
-  slug: string;
   category: string;
-  industry: string;
+  gumroad_url: string;
+  preview_url: string;
+  admin_url: string;
+  admin_passcode: string;
+  audit_score: number;
+  tables: string[];
+  vertical: string;
   archetype_id?: string;
   archetype_name?: string;
+  archetype_description?: string;
   design_benchmark?: string;
-  price_retail: number;
-  price_agency_license: number;
-  quality_score: number;
-  live_demo: string;
-  admin_door: string;
-  passkey: string;
-  cover_image: string;
-  thumbnail_image: string;
-  zip_package: string;
-  status: string;
-  features: string[];
+  checkout_active?: boolean;
+  status_badge?: string;
+  commercial_checkout_url?: string;
+  demo_passcode_type?: string;
+  security_architecture?: string;
 }
 
 export const CATALOG_DATA = {
@@ -32,26 +32,26 @@ export const CATALOG_DATA = {
   "valuation_framework": {
     "total_products": 85,
     "agency_whitelabel_vault_per_license": 2999,
-    "retail_shelf_msrp_starter_ui": 5530,
-    "retail_shelf_msrp_full_stack": 13930,
+    "retail_shelf_msrp_starter_ui": 6715,
+    "retail_shelf_msrp_full_stack": 16915,
     "pre_revenue_liquidation_protocol": {
       "fire_sale_24_72h": {
         "per_product_min": 250,
         "per_product_max": 368,
-        "fleet_total_min": 17500,
-        "fleet_total_max": 25789
+        "fleet_total_min": 21250,
+        "fleet_total_max": 31280
       },
       "quick_close_7_14d": {
         "per_product_min": 500,
         "per_product_max": 736,
-        "fleet_total_min": 35000,
-        "fleet_total_max": 51579
+        "fleet_total_min": 42500,
+        "fleet_total_max": 62560
       },
       "marketplace_listing_30_45d": {
         "per_product_min": 789,
         "per_product_max": 1157,
-        "fleet_total_min": 55230,
-        "fleet_total_max": 80990
+        "fleet_total_min": 67065,
+        "fleet_total_max": 98345
       }
     },
     "pre_revenue_apa_target_anchor": 59000,
@@ -77,7 +77,12 @@ export const CATALOG_DATA = {
       "archetype_id": "A",
       "archetype_name": "Archetype A: Dense Operational Console",
       "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
-      "design_benchmark": "Sneaker Con & Flight Club Authentication Console"
+      "design_benchmark": "Sneaker Con & Flight Club Authentication Console",
+      "checkout_active": true,
+      "status_badge": "Active Checkout",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/stride-mb",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 2,
@@ -98,7 +103,12 @@ export const CATALOG_DATA = {
       "archetype_id": "B",
       "archetype_name": "Archetype B: Asymmetric Editorial Showcase",
       "archetype_description": "Dynamic masonry grid, visual filtering, editorial typography, and slide-over commission sheet for high-end ateliers, creative studios, and maritime showcases.",
-      "design_benchmark": "Abbey Road & Sunset Sound Editorial Showcase"
+      "design_benchmark": "Abbey Road & Sunset Sound Editorial Showcase",
+      "checkout_active": true,
+      "status_badge": "Active Checkout",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/the-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 3,
@@ -119,7 +129,12 @@ export const CATALOG_DATA = {
       "archetype_id": "A",
       "archetype_name": "Archetype A: Dense Operational Console",
       "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
-      "design_benchmark": "Exotic Fleet Telematics & GPS Triage"
+      "design_benchmark": "Exotic Fleet Telematics & GPS Triage",
+      "checkout_active": true,
+      "status_badge": "Active Checkout",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/velocity-os",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 4,
@@ -140,7 +155,12 @@ export const CATALOG_DATA = {
       "archetype_id": "D",
       "archetype_name": "Archetype D: Timeline & Station Reservation Grid",
       "archetype_description": "Interactive day/hour time-slot matrix, capacity/station status indicators, and instant seat/pod booking for Michelin dining, private clubs, and recovery labs.",
-      "design_benchmark": "UFC Performance Institute Sparring Matrix"
+      "design_benchmark": "UFC Performance Institute Sparring Matrix",
+      "checkout_active": true,
+      "status_badge": "Active Checkout",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/apex-club-os",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 5,
@@ -161,7 +181,12 @@ export const CATALOG_DATA = {
       "archetype_id": "C",
       "archetype_name": "Archetype C: Step-by-Step Calculator / Wizard",
       "archetype_description": "Stateful multi-stage progression stepper, interactive pricing/spec tally, and stage-by-stage validation for underwriting, legal retainers, and clinical intake.",
-      "design_benchmark": "Carta LP Subscription & Capital Underwriting Wizard"
+      "design_benchmark": "Carta LP Subscription & Capital Underwriting Wizard",
+      "checkout_active": true,
+      "status_badge": "Active Checkout",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/elevate-capital-os",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 6,
@@ -182,7 +207,12 @@ export const CATALOG_DATA = {
       "archetype_id": "D",
       "archetype_name": "Archetype D: Timeline & Station Reservation Grid",
       "archetype_description": "Interactive day/hour time-slot matrix, capacity/station status indicators, and instant seat/pod booking for Michelin dining, private clubs, and recovery labs.",
-      "design_benchmark": "Blue Bottle Slow Bar & Pour-Over Station Grid"
+      "design_benchmark": "Blue Bottle Slow Bar & Pour-Over Station Grid",
+      "checkout_active": true,
+      "status_badge": "Active Checkout",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/obsidian-lab-os",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 7,
@@ -204,7 +234,12 @@ export const CATALOG_DATA = {
       "archetype_id": "E",
       "archetype_name": "Archetype E: Split-Screen Spec & Proof Panel",
       "archetype_description": "Fixed left media inspection preview, right scrollable technical breakdown, cryptographic proof logs, and provenance vault for horology, wealth, and fine art.",
-      "design_benchmark": "Sotheby's International Realty Deed Provenance Panel"
+      "design_benchmark": "Sotheby's International Realty Deed Provenance Panel",
+      "checkout_active": true,
+      "status_badge": "Active Checkout",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/the-enclave-os",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 8,
@@ -225,7 +260,12 @@ export const CATALOG_DATA = {
       "archetype_id": "C",
       "archetype_name": "Archetype C: Step-by-Step Calculator / Wizard",
       "archetype_description": "Stateful multi-stage progression stepper, interactive pricing/spec tally, and stage-by-stage validation for underwriting, legal retainers, and clinical intake.",
-      "design_benchmark": "Beverly Hills Laser & Injectable Protocol Wizard"
+      "design_benchmark": "Beverly Hills Laser & Injectable Protocol Wizard",
+      "checkout_active": true,
+      "status_badge": "Active Checkout",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/aura-medspa-os",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 9,
@@ -246,7 +286,12 @@ export const CATALOG_DATA = {
       "archetype_id": "B",
       "archetype_name": "Archetype B: Asymmetric Editorial Showcase",
       "archetype_description": "Dynamic masonry grid, visual filtering, editorial typography, and slide-over commission sheet for high-end ateliers, creative studios, and maritime showcases.",
-      "design_benchmark": "Chanel Haute Couture Atelier Showcase"
+      "design_benchmark": "Chanel Haute Couture Atelier Showcase",
+      "checkout_active": true,
+      "status_badge": "Active Checkout",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/royal-apex-os",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 10,
@@ -267,7 +312,12 @@ export const CATALOG_DATA = {
       "archetype_id": "D",
       "archetype_name": "Archetype D: Timeline & Station Reservation Grid",
       "archetype_description": "Interactive day/hour time-slot matrix, capacity/station status indicators, and instant seat/pod booking for Michelin dining, private clubs, and recovery labs.",
-      "design_benchmark": "Napa Valley Allocation & Cellar Tasting Grid"
+      "design_benchmark": "Napa Valley Allocation & Cellar Tasting Grid",
+      "checkout_active": true,
+      "status_badge": "Active Checkout",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/aura-reserve-os",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 11,
@@ -288,7 +338,12 @@ export const CATALOG_DATA = {
       "archetype_id": "E",
       "archetype_name": "Archetype E: Split-Screen Spec & Proof Panel",
       "archetype_description": "Fixed left media inspection preview, right scrollable technical breakdown, cryptographic proof logs, and provenance vault for horology, wealth, and fine art.",
-      "design_benchmark": "Dolby Atmos Master Track Acoustic Spec Panel"
+      "design_benchmark": "Dolby Atmos Master Track Acoustic Spec Panel",
+      "checkout_active": true,
+      "status_badge": "Active Checkout",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/monolith-studio-os",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 12,
@@ -309,7 +364,12 @@ export const CATALOG_DATA = {
       "archetype_id": "D",
       "archetype_name": "Archetype D: Timeline & Station Reservation Grid",
       "archetype_description": "Interactive day/hour time-slot matrix, capacity/station status indicators, and instant seat/pod booking for Michelin dining, private clubs, and recovery labs.",
-      "design_benchmark": "Equinox Biometric Cryo & POD Station Grid"
+      "design_benchmark": "Equinox Biometric Cryo & POD Station Grid",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 13,
@@ -330,7 +390,12 @@ export const CATALOG_DATA = {
       "archetype_id": "D",
       "archetype_name": "Archetype D: Timeline & Station Reservation Grid",
       "archetype_description": "Interactive day/hour time-slot matrix, capacity/station status indicators, and instant seat/pod booking for Michelin dining, private clubs, and recovery labs.",
-      "design_benchmark": "Blue Note NYC Jazz Table Reservation Matrix"
+      "design_benchmark": "Blue Note NYC Jazz Table Reservation Matrix",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 14,
@@ -350,7 +415,12 @@ export const CATALOG_DATA = {
       "archetype_id": "D",
       "archetype_name": "Archetype D: Timeline & Station Reservation Grid",
       "archetype_description": "Interactive day/hour time-slot matrix, capacity/station status indicators, and instant seat/pod booking for Michelin dining, private clubs, and recovery labs.",
-      "design_benchmark": "Amanjena Thermal Bathhouse Schedule Matrix"
+      "design_benchmark": "Amanjena Thermal Bathhouse Schedule Matrix",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 15,
@@ -370,7 +440,12 @@ export const CATALOG_DATA = {
       "archetype_id": "D",
       "archetype_name": "Archetype D: Timeline & Station Reservation Grid",
       "archetype_description": "Interactive day/hour time-slot matrix, capacity/station status indicators, and instant seat/pod booking for Michelin dining, private clubs, and recovery labs.",
-      "design_benchmark": "Sukiyabashi Jiro 10-Seat Counter Matrix"
+      "design_benchmark": "Sukiyabashi Jiro 10-Seat Counter Matrix",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 16,
@@ -390,7 +465,12 @@ export const CATALOG_DATA = {
       "archetype_id": "B",
       "archetype_name": "Archetype B: Asymmetric Editorial Showcase",
       "archetype_description": "Dynamic masonry grid, visual filtering, editorial typography, and slide-over commission sheet for high-end ateliers, creative studios, and maritime showcases.",
-      "design_benchmark": "Savile Row Bespoke Suiting Editorial"
+      "design_benchmark": "Savile Row Bespoke Suiting Editorial",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 17,
@@ -410,7 +490,12 @@ export const CATALOG_DATA = {
       "archetype_id": "C",
       "archetype_name": "Archetype C: Step-by-Step Calculator / Wizard",
       "archetype_description": "Stateful multi-stage progression stepper, interactive pricing/spec tally, and stage-by-stage validation for underwriting, legal retainers, and clinical intake.",
-      "design_benchmark": "Officina Profumo Botanical Tincture Wizard"
+      "design_benchmark": "Officina Profumo Botanical Tincture Wizard",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 18,
@@ -430,7 +515,12 @@ export const CATALOG_DATA = {
       "archetype_id": "B",
       "archetype_name": "Archetype B: Asymmetric Editorial Showcase",
       "archetype_description": "Dynamic masonry grid, visual filtering, editorial typography, and slide-over commission sheet for high-end ateliers, creative studios, and maritime showcases.",
-      "design_benchmark": "St. Moritz Alpine Parlor Editorial Showcase"
+      "design_benchmark": "St. Moritz Alpine Parlor Editorial Showcase",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 19,
@@ -451,7 +541,12 @@ export const CATALOG_DATA = {
       "archetype_id": "B",
       "archetype_name": "Archetype B: Asymmetric Editorial Showcase",
       "archetype_description": "Dynamic masonry grid, visual filtering, editorial typography, and slide-over commission sheet for high-end ateliers, creative studios, and maritime showcases.",
-      "design_benchmark": "Framestore VFX Reel & 3D Pipeline Showcase"
+      "design_benchmark": "Framestore VFX Reel & 3D Pipeline Showcase",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 20,
@@ -472,7 +567,12 @@ export const CATALOG_DATA = {
       "archetype_id": "D",
       "archetype_name": "Archetype D: Timeline & Station Reservation Grid",
       "archetype_description": "Interactive day/hour time-slot matrix, capacity/station status indicators, and instant seat/pod booking for Michelin dining, private clubs, and recovery labs.",
-      "design_benchmark": "Rao's NYC Secret Speakeasy Reservation Matrix"
+      "design_benchmark": "Rao's NYC Secret Speakeasy Reservation Matrix",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 21,
@@ -493,7 +593,12 @@ export const CATALOG_DATA = {
       "archetype_id": "D",
       "archetype_name": "Archetype D: Timeline & Station Reservation Grid",
       "archetype_description": "Interactive day/hour time-slot matrix, capacity/station status indicators, and instant seat/pod booking for Michelin dining, private clubs, and recovery labs.",
-      "design_benchmark": "Tokyo Shinjuku Golden Gai Izakaya Grid"
+      "design_benchmark": "Tokyo Shinjuku Golden Gai Izakaya Grid",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 22,
@@ -514,7 +619,12 @@ export const CATALOG_DATA = {
       "archetype_id": "D",
       "archetype_name": "Archetype D: Timeline & Station Reservation Grid",
       "archetype_description": "Interactive day/hour time-slot matrix, capacity/station status indicators, and instant seat/pod booking for Michelin dining, private clubs, and recovery labs.",
-      "design_benchmark": "Indochine French-Vietnamese Bistro Grid"
+      "design_benchmark": "Indochine French-Vietnamese Bistro Grid",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 23,
@@ -535,7 +645,12 @@ export const CATALOG_DATA = {
       "archetype_id": "A",
       "archetype_name": "Archetype A: Dense Operational Console",
       "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
-      "design_benchmark": "Hennessey Performance Dyno Dispatch Console"
+      "design_benchmark": "Hennessey Performance Dyno Dispatch Console",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 24,
@@ -557,7 +672,12 @@ export const CATALOG_DATA = {
       "archetype_id": "E",
       "archetype_name": "Archetype E: Split-Screen Spec & Proof Panel",
       "archetype_description": "Fixed left media inspection preview, right scrollable technical breakdown, cryptographic proof logs, and provenance vault for horology, wealth, and fine art.",
-      "design_benchmark": "Architectural Digest Structural Spec Vault"
+      "design_benchmark": "Architectural Digest Structural Spec Vault",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 25,
@@ -578,7 +698,12 @@ export const CATALOG_DATA = {
       "archetype_id": "B",
       "archetype_name": "Archetype B: Asymmetric Editorial Showcase",
       "archetype_description": "Dynamic masonry grid, visual filtering, editorial typography, and slide-over commission sheet for high-end ateliers, creative studios, and maritime showcases.",
-      "design_benchmark": "Pixar Renderfarm & 3D Rigging Showcase"
+      "design_benchmark": "Pixar Renderfarm & 3D Rigging Showcase",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 26,
@@ -600,7 +725,12 @@ export const CATALOG_DATA = {
       "archetype_id": "A",
       "archetype_name": "Archetype A: Dense Operational Console",
       "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
-      "design_benchmark": "Shake Shack Kitchen Display System Console"
+      "design_benchmark": "Shake Shack Kitchen Display System Console",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 27,
@@ -621,7 +751,12 @@ export const CATALOG_DATA = {
       "archetype_id": "B",
       "archetype_name": "Archetype B: Asymmetric Editorial Showcase",
       "archetype_description": "Dynamic masonry grid, visual filtering, editorial typography, and slide-over commission sheet for high-end ateliers, creative studios, and maritime showcases.",
-      "design_benchmark": "Kilian Paris Olfactory Scent Pyramid Showcase"
+      "design_benchmark": "Kilian Paris Olfactory Scent Pyramid Showcase",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 28,
@@ -642,7 +777,12 @@ export const CATALOG_DATA = {
       "archetype_id": "C",
       "archetype_name": "Archetype C: Step-by-Step Calculator / Wizard",
       "archetype_description": "Stateful multi-stage progression stepper, interactive pricing/spec tally, and stage-by-stage validation for underwriting, legal retainers, and clinical intake.",
-      "design_benchmark": "Foster + Partners Architectural Scope Wizard"
+      "design_benchmark": "Foster + Partners Architectural Scope Wizard",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 29,
@@ -663,7 +803,12 @@ export const CATALOG_DATA = {
       "archetype_id": "D",
       "archetype_name": "Archetype D: Timeline & Station Reservation Grid",
       "archetype_description": "Interactive day/hour time-slot matrix, capacity/station status indicators, and instant seat/pod booking for Michelin dining, private clubs, and recovery labs.",
-      "design_benchmark": "Bordeaux Premier Cru Allocation Matrix"
+      "design_benchmark": "Bordeaux Premier Cru Allocation Matrix",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 30,
@@ -683,7 +828,12 @@ export const CATALOG_DATA = {
       "archetype_id": "E",
       "archetype_name": "Archetype E: Split-Screen Spec & Proof Panel",
       "archetype_description": "Fixed left media inspection preview, right scrollable technical breakdown, cryptographic proof logs, and provenance vault for horology, wealth, and fine art.",
-      "design_benchmark": "Rockefeller Family Trust Ledger Panel"
+      "design_benchmark": "Rockefeller Family Trust Ledger Panel",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 31,
@@ -703,7 +853,12 @@ export const CATALOG_DATA = {
       "archetype_id": "D",
       "archetype_name": "Archetype D: Timeline & Station Reservation Grid",
       "archetype_description": "Interactive day/hour time-slot matrix, capacity/station status indicators, and instant seat/pod booking for Michelin dining, private clubs, and recovery labs.",
-      "design_benchmark": "Truefitt & Hill 30-Min Barber Chair Matrix"
+      "design_benchmark": "Truefitt & Hill 30-Min Barber Chair Matrix",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 32,
@@ -724,7 +879,12 @@ export const CATALOG_DATA = {
       "archetype_id": "B",
       "archetype_name": "Archetype B: Asymmetric Editorial Showcase",
       "archetype_description": "Dynamic masonry grid, visual filtering, editorial typography, and slide-over commission sheet for high-end ateliers, creative studios, and maritime showcases.",
-      "design_benchmark": "Blind Barber VIP Grooming Goods Showcase"
+      "design_benchmark": "Blind Barber VIP Grooming Goods Showcase",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 33,
@@ -744,7 +904,12 @@ export const CATALOG_DATA = {
       "archetype_id": "C",
       "archetype_name": "Archetype C: Step-by-Step Calculator / Wizard",
       "archetype_description": "Stateful multi-stage progression stepper, interactive pricing/spec tally, and stage-by-stage validation for underwriting, legal retainers, and clinical intake.",
-      "design_benchmark": "Walker & Dunlop Commercial DSCR Underwriting Wizard"
+      "design_benchmark": "Walker & Dunlop Commercial DSCR Underwriting Wizard",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 34,
@@ -764,7 +929,12 @@ export const CATALOG_DATA = {
       "archetype_id": "E",
       "archetype_name": "Archetype E: Split-Screen Spec & Proof Panel",
       "archetype_description": "Fixed left media inspection preview, right scrollable technical breakdown, cryptographic proof logs, and provenance vault for horology, wealth, and fine art.",
-      "design_benchmark": "McKinsey High-Ticket Advisory Deal Blueprint"
+      "design_benchmark": "McKinsey High-Ticket Advisory Deal Blueprint",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 35,
@@ -784,7 +954,12 @@ export const CATALOG_DATA = {
       "archetype_id": "A",
       "archetype_name": "Archetype A: Dense Operational Console",
       "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
-      "design_benchmark": "Franklin Barbecue Pitmaster Probe Telemetry Console"
+      "design_benchmark": "Franklin Barbecue Pitmaster Probe Telemetry Console",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 36,
@@ -804,7 +979,12 @@ export const CATALOG_DATA = {
       "archetype_id": "B",
       "archetype_name": "Archetype B: Asymmetric Editorial Showcase",
       "archetype_description": "Dynamic masonry grid, visual filtering, editorial typography, and slide-over commission sheet for high-end ateliers, creative studios, and maritime showcases.",
-      "design_benchmark": "Kelly Wearstler California Modernism Showcase"
+      "design_benchmark": "Kelly Wearstler California Modernism Showcase",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 37,
@@ -825,7 +1005,12 @@ export const CATALOG_DATA = {
       "archetype_id": "D",
       "archetype_name": "Archetype D: Timeline & Station Reservation Grid",
       "archetype_description": "Interactive day/hour time-slot matrix, capacity/station status indicators, and instant seat/pod booking for Michelin dining, private clubs, and recovery labs.",
-      "design_benchmark": "L'Antica Pizzeria da Michele Fermentation Matrix"
+      "design_benchmark": "L'Antica Pizzeria da Michele Fermentation Matrix",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 38,
@@ -846,7 +1031,12 @@ export const CATALOG_DATA = {
       "archetype_id": "C",
       "archetype_name": "Archetype C: Step-by-Step Calculator / Wizard",
       "archetype_description": "Stateful multi-stage progression stepper, interactive pricing/spec tally, and stage-by-stage validation for underwriting, legal retainers, and clinical intake.",
-      "design_benchmark": "LIV Miami VIP Bottle Minimum & Table Wizard"
+      "design_benchmark": "LIV Miami VIP Bottle Minimum & Table Wizard",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 39,
@@ -867,7 +1057,12 @@ export const CATALOG_DATA = {
       "archetype_id": "E",
       "archetype_name": "Archetype E: Split-Screen Spec & Proof Panel",
       "archetype_description": "Fixed left media inspection preview, right scrollable technical breakdown, cryptographic proof logs, and provenance vault for horology, wealth, and fine art.",
-      "design_benchmark": "Pentagram Brand Identity Asset Spec Panel"
+      "design_benchmark": "Pentagram Brand Identity Asset Spec Panel",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 40,
@@ -888,7 +1083,12 @@ export const CATALOG_DATA = {
       "archetype_id": "B",
       "archetype_name": "Archetype B: Asymmetric Editorial Showcase",
       "archetype_description": "Dynamic masonry grid, visual filtering, editorial typography, and slide-over commission sheet for high-end ateliers, creative studios, and maritime showcases.",
-      "design_benchmark": "Supreme NYC Street Food Drop Editorial"
+      "design_benchmark": "Supreme NYC Street Food Drop Editorial",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 41,
@@ -909,7 +1109,12 @@ export const CATALOG_DATA = {
       "archetype_id": "E",
       "archetype_name": "Archetype E: Split-Screen Spec & Proof Panel",
       "archetype_description": "Fixed left media inspection preview, right scrollable technical breakdown, cryptographic proof logs, and provenance vault for horology, wealth, and fine art.",
-      "design_benchmark": "Trezor & Ledger Cold Storage UTXO Proof Panel"
+      "design_benchmark": "Trezor & Ledger Cold Storage UTXO Proof Panel",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 42,
@@ -930,7 +1135,12 @@ export const CATALOG_DATA = {
       "archetype_id": "A",
       "archetype_name": "Archetype A: Dense Operational Console",
       "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
-      "design_benchmark": "RWB Porsche Tuning Bay Dispatch Console"
+      "design_benchmark": "RWB Porsche Tuning Bay Dispatch Console",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 43,
@@ -951,7 +1161,12 @@ export const CATALOG_DATA = {
       "archetype_id": "D",
       "archetype_name": "Archetype D: Timeline & Station Reservation Grid",
       "archetype_description": "Interactive day/hour time-slot matrix, capacity/station status indicators, and instant seat/pod booking for Michelin dining, private clubs, and recovery labs.",
-      "design_benchmark": "Banja Bathhouse Hydrotherapy Grid"
+      "design_benchmark": "Banja Bathhouse Hydrotherapy Grid",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 44,
@@ -971,7 +1186,12 @@ export const CATALOG_DATA = {
       "archetype_id": "D",
       "archetype_name": "Archetype D: Timeline & Station Reservation Grid",
       "archetype_description": "Interactive day/hour time-slot matrix, capacity/station status indicators, and instant seat/pod booking for Michelin dining, private clubs, and recovery labs.",
-      "design_benchmark": "Marcus Samuelsson Heritage Chef Reservation Matrix"
+      "design_benchmark": "Marcus Samuelsson Heritage Chef Reservation Matrix",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 45,
@@ -992,7 +1212,12 @@ export const CATALOG_DATA = {
       "archetype_id": "B",
       "archetype_name": "Archetype B: Asymmetric Editorial Showcase",
       "archetype_description": "Dynamic masonry grid, visual filtering, editorial typography, and slide-over commission sheet for high-end ateliers, creative studios, and maritime showcases.",
-      "design_benchmark": "James Beard Foundation Culinary Archive Editorial"
+      "design_benchmark": "James Beard Foundation Culinary Archive Editorial",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 46,
@@ -1012,7 +1237,12 @@ export const CATALOG_DATA = {
       "archetype_id": "E",
       "archetype_name": "Archetype E: Split-Screen Spec & Proof Panel",
       "archetype_description": "Fixed left media inspection preview, right scrollable technical breakdown, cryptographic proof logs, and provenance vault for horology, wealth, and fine art.",
-      "design_benchmark": "Blue Hill at Stone Barns Sourcing Proof Panel"
+      "design_benchmark": "Blue Hill at Stone Barns Sourcing Proof Panel",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 47,
@@ -1033,7 +1263,12 @@ export const CATALOG_DATA = {
       "archetype_id": "B",
       "archetype_name": "Archetype B: Asymmetric Editorial Showcase",
       "archetype_description": "Dynamic masonry grid, visual filtering, editorial typography, and slide-over commission sheet for high-end ateliers, creative studios, and maritime showcases.",
-      "design_benchmark": "Architectural Digest Bel-Air Mega-Estate Showcase"
+      "design_benchmark": "Architectural Digest Bel-Air Mega-Estate Showcase",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 48,
@@ -1053,7 +1288,12 @@ export const CATALOG_DATA = {
       "archetype_id": "A",
       "archetype_name": "Archetype A: Dense Operational Console",
       "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
-      "design_benchmark": "In-N-Out Supercar Drive-Thru RFID Dispatch"
+      "design_benchmark": "In-N-Out Supercar Drive-Thru RFID Dispatch",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 49,
@@ -1072,7 +1312,12 @@ export const CATALOG_DATA = {
       "archetype_id": "C",
       "archetype_name": "Archetype C: Step-by-Step Calculator / Wizard",
       "archetype_description": "Stateful multi-stage progression stepper, interactive pricing/spec tally, and stage-by-stage validation for underwriting, legal retainers, and clinical intake.",
-      "design_benchmark": "CoStar 10-Year Pro-Forma DCF Underwriting Engine"
+      "design_benchmark": "CoStar 10-Year Pro-Forma DCF Underwriting Engine",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 50,
@@ -1092,7 +1337,12 @@ export const CATALOG_DATA = {
       "archetype_id": "A",
       "archetype_name": "Archetype A: Dense Operational Console",
       "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
-      "design_benchmark": "Eleven Madison Park BOH Station Velocity Console"
+      "design_benchmark": "Eleven Madison Park BOH Station Velocity Console",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 51,
@@ -1113,7 +1363,12 @@ export const CATALOG_DATA = {
       "archetype_id": "A",
       "archetype_name": "Archetype A: Dense Operational Console",
       "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
-      "design_benchmark": "Kogi BBQ Live GPS Food Truck Dispatch Console"
+      "design_benchmark": "Kogi BBQ Live GPS Food Truck Dispatch Console",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 52,
@@ -1133,7 +1388,12 @@ export const CATALOG_DATA = {
       "archetype_id": "B",
       "archetype_name": "Archetype B: Asymmetric Editorial Showcase",
       "archetype_description": "Dynamic masonry grid, visual filtering, editorial typography, and slide-over commission sheet for high-end ateliers, creative studios, and maritime showcases.",
-      "design_benchmark": "Ryokan Kyoto Sensory Omakase Editorial Showcase"
+      "design_benchmark": "Ryokan Kyoto Sensory Omakase Editorial Showcase",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 53,
@@ -1153,7 +1413,12 @@ export const CATALOG_DATA = {
       "archetype_id": "C",
       "archetype_name": "Archetype C: Step-by-Step Calculator / Wizard",
       "archetype_description": "Stateful multi-stage progression stepper, interactive pricing/spec tally, and stage-by-stage validation for underwriting, legal retainers, and clinical intake.",
-      "design_benchmark": "Montessori Early Developmental Milestone Wizard"
+      "design_benchmark": "Montessori Early Developmental Milestone Wizard",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 54,
@@ -1173,7 +1438,12 @@ export const CATALOG_DATA = {
       "archetype_id": "C",
       "archetype_name": "Archetype C: Step-by-Step Calculator / Wizard",
       "archetype_description": "Stateful multi-stage progression stepper, interactive pricing/spec tally, and stage-by-stage validation for underwriting, legal retainers, and clinical intake.",
-      "design_benchmark": "Four Seasons RevPASH & CapEx Yield Calculator"
+      "design_benchmark": "Four Seasons RevPASH & CapEx Yield Calculator",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 55,
@@ -1193,7 +1463,12 @@ export const CATALOG_DATA = {
       "archetype_id": "E",
       "archetype_name": "Archetype E: Split-Screen Spec & Proof Panel",
       "archetype_description": "Fixed left media inspection preview, right scrollable technical breakdown, cryptographic proof logs, and provenance vault for horology, wealth, and fine art.",
-      "design_benchmark": "Berkshire Hathaway Capital Compounding Terminal Panel"
+      "design_benchmark": "Berkshire Hathaway Capital Compounding Terminal Panel",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 56,
@@ -1214,7 +1489,12 @@ export const CATALOG_DATA = {
       "archetype_id": "A",
       "archetype_name": "Archetype A: Dense Operational Console",
       "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
-      "design_benchmark": "Carrier Chiller Plant & Commercial Dispatch Console"
+      "design_benchmark": "Carrier Chiller Plant & Commercial Dispatch Console",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 57,
@@ -1235,7 +1515,12 @@ export const CATALOG_DATA = {
       "archetype_id": "C",
       "archetype_name": "Archetype C: Step-by-Step Calculator / Wizard",
       "archetype_description": "Stateful multi-stage progression stepper, interactive pricing/spec tally, and stage-by-stage validation for underwriting, legal retainers, and clinical intake.",
-      "design_benchmark": "EagleView Drone Scope & Roofing Estimator Wizard"
+      "design_benchmark": "EagleView Drone Scope & Roofing Estimator Wizard",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 58,
@@ -1256,7 +1541,12 @@ export const CATALOG_DATA = {
       "archetype_id": "A",
       "archetype_name": "Archetype A: Dense Operational Console",
       "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
-      "design_benchmark": "Roto-Rooter Commercial Hydraulic Ops Console"
+      "design_benchmark": "Roto-Rooter Commercial Hydraulic Ops Console",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 59,
@@ -1277,7 +1567,12 @@ export const CATALOG_DATA = {
       "archetype_id": "D",
       "archetype_name": "Archetype D: Timeline & Station Reservation Grid",
       "archetype_description": "Interactive day/hour time-slot matrix, capacity/station status indicators, and instant seat/pod booking for Michelin dining, private clubs, and recovery labs.",
-      "design_benchmark": "Sunrun Commercial PV Sizing & AHJ Permit Grid"
+      "design_benchmark": "Sunrun Commercial PV Sizing & AHJ Permit Grid",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 60,
@@ -1298,7 +1593,12 @@ export const CATALOG_DATA = {
       "archetype_id": "A",
       "archetype_name": "Archetype A: Dense Operational Console",
       "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
-      "design_benchmark": "ABB Medium-Voltage Switchgear & EV Crew Console"
+      "design_benchmark": "ABB Medium-Voltage Switchgear & EV Crew Console",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 61,
@@ -1319,7 +1619,12 @@ export const CATALOG_DATA = {
       "archetype_id": "D",
       "archetype_name": "Archetype D: Timeline & Station Reservation Grid",
       "archetype_description": "Interactive day/hour time-slot matrix, capacity/station status indicators, and instant seat/pod booking for Michelin dining, private clubs, and recovery labs.",
-      "design_benchmark": "Pacific Dental Operatory Chair Scheduling Matrix"
+      "design_benchmark": "Pacific Dental Operatory Chair Scheduling Matrix",
+      "checkout_active": true,
+      "status_badge": "Active Checkout",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/boutique-dental-os",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 62,
@@ -1340,7 +1645,12 @@ export const CATALOG_DATA = {
       "archetype_id": "B",
       "archetype_name": "Archetype B: Asymmetric Editorial Showcase",
       "archetype_description": "Dynamic masonry grid, visual filtering, editorial typography, and slide-over commission sheet for high-end ateliers, creative studios, and maritime showcases.",
-      "design_benchmark": "VCA Animal Hospital Emergency Case Showcase"
+      "design_benchmark": "VCA Animal Hospital Emergency Case Showcase",
+      "checkout_active": true,
+      "status_badge": "Active Checkout",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/veterinary-hospital-os",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 63,
@@ -1361,7 +1671,12 @@ export const CATALOG_DATA = {
       "archetype_id": "C",
       "archetype_name": "Archetype C: Step-by-Step Calculator / Wizard",
       "archetype_description": "Stateful multi-stage progression stepper, interactive pricing/spec tally, and stage-by-stage validation for underwriting, legal retainers, and clinical intake.",
-      "design_benchmark": "Dr. Mark Hyman Epigenetic Longevity Protocol Wizard"
+      "design_benchmark": "Dr. Mark Hyman Epigenetic Longevity Protocol Wizard",
+      "checkout_active": true,
+      "status_badge": "Active Checkout",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/functional-medicine-os",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 64,
@@ -1382,7 +1697,12 @@ export const CATALOG_DATA = {
       "archetype_id": "D",
       "archetype_name": "Archetype D: Timeline & Station Reservation Grid",
       "archetype_description": "Interactive day/hour time-slot matrix, capacity/station status indicators, and instant seat/pod booking for Michelin dining, private clubs, and recovery labs.",
-      "design_benchmark": "EXOS Athletic Rehabilitation Station Grid"
+      "design_benchmark": "EXOS Athletic Rehabilitation Station Grid",
+      "checkout_active": true,
+      "status_badge": "Active Checkout",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/physical-therapy-os",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 65,
@@ -1403,7 +1723,12 @@ export const CATALOG_DATA = {
       "archetype_id": "D",
       "archetype_name": "Archetype D: Timeline & Station Reservation Grid",
       "archetype_description": "Interactive day/hour time-slot matrix, capacity/station status indicators, and instant seat/pod booking for Michelin dining, private clubs, and recovery labs.",
-      "design_benchmark": "Next Health Thermal Contrast & IV Lounge Grid"
+      "design_benchmark": "Next Health Thermal Contrast & IV Lounge Grid",
+      "checkout_active": true,
+      "status_badge": "Active Checkout",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/recovery-spa-os",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 66,
@@ -1424,7 +1749,12 @@ export const CATALOG_DATA = {
       "archetype_id": "C",
       "archetype_name": "Archetype C: Step-by-Step Calculator / Wizard",
       "archetype_description": "Stateful multi-stage progression stepper, interactive pricing/spec tally, and stage-by-stage validation for underwriting, legal retainers, and clinical intake.",
-      "design_benchmark": "Skadden Arps Commercial Trial Retainer Wizard"
+      "design_benchmark": "Skadden Arps Commercial Trial Retainer Wizard",
+      "checkout_active": true,
+      "status_badge": "Active Checkout",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/boutique-law-os",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 67,
@@ -1444,7 +1774,12 @@ export const CATALOG_DATA = {
       "archetype_id": "C",
       "archetype_name": "Archetype C: Step-by-Step Calculator / Wizard",
       "archetype_description": "Stateful multi-stage progression stepper, interactive pricing/spec tally, and stage-by-stage validation for underwriting, legal retainers, and clinical intake.",
-      "design_benchmark": "Goldman Sachs Lower Middle-Market M&A VDR Stepper"
+      "design_benchmark": "Goldman Sachs Lower Middle-Market M&A VDR Stepper",
+      "checkout_active": true,
+      "status_badge": "Active Checkout",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/ma-advisory-os",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 68,
@@ -1464,7 +1799,12 @@ export const CATALOG_DATA = {
       "archetype_id": "C",
       "archetype_name": "Archetype C: Step-by-Step Calculator / Wizard",
       "archetype_description": "Stateful multi-stage progression stepper, interactive pricing/spec tally, and stage-by-stage validation for underwriting, legal retainers, and clinical intake.",
-      "design_benchmark": "Korn Ferry Retained C-Suite Placement Stepper"
+      "design_benchmark": "Korn Ferry Retained C-Suite Placement Stepper",
+      "checkout_active": true,
+      "status_badge": "Active Checkout",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/executive-search-os",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 69,
@@ -1484,7 +1824,12 @@ export const CATALOG_DATA = {
       "archetype_id": "E",
       "archetype_name": "Archetype E: Split-Screen Spec & Proof Panel",
       "archetype_description": "Fixed left media inspection preview, right scrollable technical breakdown, cryptographic proof logs, and provenance vault for horology, wealth, and fine art.",
-      "design_benchmark": "Cambridge Associates Sovereign Wealth Spec Panel"
+      "design_benchmark": "Cambridge Associates Sovereign Wealth Spec Panel",
+      "checkout_active": true,
+      "status_badge": "Active Checkout",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/wealth-family-office-os",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 70,
@@ -1504,7 +1849,12 @@ export const CATALOG_DATA = {
       "archetype_id": "E",
       "archetype_name": "Archetype E: Split-Screen Spec & Proof Panel",
       "archetype_description": "Fixed left media inspection preview, right scrollable technical breakdown, cryptographic proof logs, and provenance vault for horology, wealth, and fine art.",
-      "design_benchmark": "FTI Consulting Commercial Trial E-Discovery War Room"
+      "design_benchmark": "FTI Consulting Commercial Trial E-Discovery War Room",
+      "checkout_active": true,
+      "status_badge": "Active Checkout",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/litigation-ops-os",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 71,
@@ -1525,7 +1875,12 @@ export const CATALOG_DATA = {
       "archetype_id": "A",
       "archetype_name": "Archetype A: Dense Operational Console",
       "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
-      "design_benchmark": "United Rentals Heavy Fleet Telematics Console"
+      "design_benchmark": "United Rentals Heavy Fleet Telematics Console",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 72,
@@ -1546,7 +1901,12 @@ export const CATALOG_DATA = {
       "archetype_id": "C",
       "archetype_name": "Archetype C: Step-by-Step Calculator / Wizard",
       "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
-      "design_benchmark": "C.H. Robinson Intermodal Freight Margin & Route Stepper"
+      "design_benchmark": "C.H. Robinson Intermodal Freight Margin & Route Stepper",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 73,
@@ -1567,7 +1927,12 @@ export const CATALOG_DATA = {
       "archetype_id": "B",
       "archetype_name": "Archetype B: Asymmetric Editorial Showcase",
       "archetype_description": "Stateful multi-stage progression stepper, interactive pricing/spec tally, and stage-by-stage validation for underwriting, legal retainers, and clinical intake.",
-      "design_benchmark": "NetJets Bespoke Fleet & Charter Flight Showcase"
+      "design_benchmark": "NetJets Bespoke Fleet & Charter Flight Showcase",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 74,
@@ -1588,7 +1953,12 @@ export const CATALOG_DATA = {
       "archetype_id": "D",
       "archetype_name": "Archetype D: Timeline & Station Reservation Grid",
       "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
-      "design_benchmark": "Lineage Logistics 24-Hour Reefer Dock Reservation Matrix"
+      "design_benchmark": "Lineage Logistics 24-Hour Reefer Dock Reservation Matrix",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 75,
@@ -1609,7 +1979,12 @@ export const CATALOG_DATA = {
       "archetype_id": "E",
       "archetype_name": "Archetype E: Split-Screen Spec & Proof Panel",
       "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
-      "design_benchmark": "Mammoet Heavy Lift Load Radius & OSHA Proof Panel"
+      "design_benchmark": "Mammoet Heavy Lift Load Radius & OSHA Proof Panel",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 76,
@@ -1630,7 +2005,12 @@ export const CATALOG_DATA = {
       "archetype_id": "C",
       "archetype_name": "Archetype C: Step-by-Step Calculator / Wizard",
       "archetype_description": "Stateful multi-stage progression stepper, interactive pricing/spec tally, and stage-by-stage validation for underwriting, legal retainers, and clinical intake.",
-      "design_benchmark": "XPEL Automotive Multi-Stage Coverage & Cleanroom Stepper"
+      "design_benchmark": "XPEL Automotive Multi-Stage Coverage & Cleanroom Stepper",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 77,
@@ -1651,7 +2031,12 @@ export const CATALOG_DATA = {
       "archetype_id": "A",
       "archetype_name": "Archetype A: Dense Operational Console",
       "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
-      "design_benchmark": "Samsara Mobile Fleet DI Water & Triage Dispatch Console"
+      "design_benchmark": "Samsara Mobile Fleet DI Water & Triage Dispatch Console",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 78,
@@ -1672,7 +2057,12 @@ export const CATALOG_DATA = {
       "archetype_id": "E",
       "archetype_name": "Archetype E: Split-Screen Spec & Proof Panel",
       "archetype_description": "Dynamic masonry grid, visual filtering, editorial typography, and slide-over commission sheet for high-end ateliers, creative studios, and maritime showcases.",
-      "design_benchmark": "ARRI Rental Cinema Grip & COI Insurance Proof Panel"
+      "design_benchmark": "ARRI Rental Cinema Grip & COI Insurance Proof Panel",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 79,
@@ -1693,7 +2083,12 @@ export const CATALOG_DATA = {
       "archetype_id": "B",
       "archetype_name": "Archetype B: Asymmetric Editorial Showcase",
       "archetype_description": "Dynamic masonry grid, visual filtering, editorial typography, and slide-over commission sheet for high-end ateliers, creative studios, and maritime showcases.",
-      "design_benchmark": "Bang Bang NYC Resident Tattoo Flash Editorial Grid"
+      "design_benchmark": "Bang Bang NYC Resident Tattoo Flash Editorial Grid",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 80,
@@ -1714,7 +2109,12 @@ export const CATALOG_DATA = {
       "archetype_id": "D",
       "archetype_name": "Archetype D: Timeline & Station Reservation Grid",
       "archetype_description": "Interactive day/hour time-slot matrix, capacity/station status indicators, and instant seat/pod booking for Michelin dining, private clubs, and recovery labs.",
-      "design_benchmark": "UFC Performance Institute Cryo & Contrast Chamber Matrix"
+      "design_benchmark": "UFC Performance Institute Cryo & Contrast Chamber Matrix",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 81,
@@ -1735,7 +2135,12 @@ export const CATALOG_DATA = {
       "archetype_id": "D",
       "archetype_name": "Archetype D: Timeline & Station Reservation Grid",
       "archetype_description": "Interactive day/hour time-slot matrix, capacity/station status indicators, and instant seat/pod booking for Michelin dining, private clubs, and recovery labs.",
-      "design_benchmark": "SevenRooms 24-Seat Michelin Timeline Matrix"
+      "design_benchmark": "SevenRooms 24-Seat Michelin Timeline Matrix",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 82,
@@ -1756,7 +2161,12 @@ export const CATALOG_DATA = {
       "archetype_id": "C",
       "archetype_name": "Archetype C: Step-by-Step Calculator / Wizard",
       "archetype_description": "Stateful multi-stage progression stepper, interactive pricing/spec tally, and stage-by-stage validation for underwriting, legal retainers, and clinical intake.",
-      "design_benchmark": "Beverly Hills Plastic Surgery Treatment Intake Wizard"
+      "design_benchmark": "Beverly Hills Plastic Surgery Treatment Intake Wizard",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 83,
@@ -1777,7 +2187,12 @@ export const CATALOG_DATA = {
       "archetype_id": "B",
       "archetype_name": "Archetype B: Asymmetric Editorial Showcase",
       "archetype_description": "Dynamic masonry grid, visual filtering, editorial typography, and slide-over commission sheet for high-end ateliers, creative studios, and maritime showcases.",
-      "design_benchmark": "Fraser Yachts Monaco Asymmetric Editorial Showcase"
+      "design_benchmark": "Fraser Yachts Monaco Asymmetric Editorial Showcase",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 84,
@@ -1798,7 +2213,12 @@ export const CATALOG_DATA = {
       "archetype_id": "E",
       "archetype_name": "Archetype E: Split-Screen Spec & Proof Panel",
       "archetype_description": "Fixed left media inspection preview, right scrollable technical breakdown, cryptographic proof logs, and provenance vault for horology, wealth, and fine art.",
-      "design_benchmark": "Chrono24 Split-Screen Inspection Loupe & Caliber Vault"
+      "design_benchmark": "Chrono24 Split-Screen Inspection Loupe & Caliber Vault",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     },
     {
       "id": 85,
@@ -1819,37 +2239,35 @@ export const CATALOG_DATA = {
       "archetype_id": "A",
       "archetype_name": "Archetype A: Dense Operational Console",
       "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
-      "design_benchmark": "Aman Resorts Private Villa Concierge & Butler Console"
+      "design_benchmark": "Aman Resorts Private Villa Concierge & Butler Console",
+      "checkout_active": false,
+      "status_badge": "Packaged / Deployment Ready",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
     }
   ],
   "vertical_slices": {
-    "medical": {
-      "name": "Medical & VIP Aesthetics Vault",
-      "description": "Clinical booking, patient intake, medspas, salon grooming & olfactory OS",
-      "apa_valuation_range": "$35,000 – $55,000",
-      "target_asset_count": 50,
-      "current_asset_count": 11
-    },
-    "automotive": {
-      "name": "Automotive & Mobility Vault",
-      "description": "Dyno testing, tuning dispatch, luxury fleet rentals & workshop OS",
-      "apa_valuation_range": "$28,000 – $45,000",
-      "target_asset_count": 40,
-      "current_asset_count": 5
-    },
     "hospitality": {
       "name": "Luxury Hospitality & Dining Vault",
       "description": "Bespoke counters, omakase, jazz bistros, supper clubs, estates & vineyards OS",
       "apa_valuation_range": "$42,000 – $65,000",
       "target_asset_count": 60,
-      "current_asset_count": 19
+      "current_asset_count": 23
     },
     "wealth": {
       "name": "Private Wealth & Real Estate Vault",
       "description": "Private equity LP portals, estate syndication, family office & luxury listings OS",
       "apa_valuation_range": "$30,000 – $48,000",
       "target_asset_count": 35,
-      "current_asset_count": 15
+      "current_asset_count": 16
+    },
+    "medical": {
+      "name": "Medical & VIP Aesthetics Vault",
+      "description": "Clinical booking, patient intake, medspas, salon grooming & olfactory OS",
+      "apa_valuation_range": "$35,000 – $55,000",
+      "target_asset_count": 50,
+      "current_asset_count": 13
     },
     "creative": {
       "name": "Creative Agency & Studio Vault",
@@ -1857,6 +2275,13 @@ export const CATALOG_DATA = {
       "apa_valuation_range": "$28,000 – $40,000",
       "target_asset_count": 40,
       "current_asset_count": 12
+    },
+    "automotive": {
+      "name": "Automotive & Mobility Vault",
+      "description": "Dyno testing, tuning dispatch, luxury fleet rentals & workshop OS",
+      "apa_valuation_range": "$28,000 – $45,000",
+      "target_asset_count": 40,
+      "current_asset_count": 6
     },
     "fitness": {
       "name": "Performance Fitness & Athletics Vault",
@@ -1954,6 +2379,71 @@ export const CATALOG_DATA = {
         "Christie's Provenance"
       ]
     }
+  },
+  "vaults": {
+    "master_agency_vault_85": {
+      "name": "Aura & Grid Master Agency Whitelabel Vault (85 Flagships)",
+      "total_apps": 85,
+      "license_price": 2999,
+      "archive_path": "dist/vaults/master-agency-vault-85.zip",
+      "description": "Complete 85-asset production catalog with turnkey Supabase PostgreSQL schemas, RLS policies, and commercial whitelabel deployment license."
+    },
+    "phase_1_agency_vault_50": {
+      "name": "Phase 1 Agency Whitelabel Vault (50 Flagships)",
+      "total_apps": 50,
+      "license_price": 1999,
+      "archive_path": "dist/vaults/phase-1-agency-vault-50.zip"
+    },
+    "vertical_slices": [
+      {
+        "name": "Luxury Hospitality & Dining Vault",
+        "appsCount": 23,
+        "zipFile": "luxury-hospitality-dining-vault-23.zip",
+        "sizeMb": "1.7"
+      },
+      {
+        "name": "Private Wealth & Real Estate Vault",
+        "appsCount": 16,
+        "zipFile": "private-wealth-real-estate-vault-16.zip",
+        "sizeMb": "1.2"
+      },
+      {
+        "name": "Medical & VIP Aesthetics Vault",
+        "appsCount": 13,
+        "zipFile": "medical-aesthetics-vault-13.zip",
+        "sizeMb": "1.2"
+      },
+      {
+        "name": "Creative Agency & Studio Vault",
+        "appsCount": 12,
+        "zipFile": "creative-agency-studio-vault-12.zip",
+        "sizeMb": "0.9"
+      },
+      {
+        "name": "Automotive & Mobility Vault",
+        "appsCount": 6,
+        "zipFile": "automotive-mobility-vault-6.zip",
+        "sizeMb": "0.4"
+      },
+      {
+        "name": "Performance Fitness & Athletics Vault",
+        "appsCount": 5,
+        "zipFile": "performance-fitness-athletics-vault-5.zip",
+        "sizeMb": "2.4"
+      },
+      {
+        "name": "Home Services & Contracting Vault",
+        "appsCount": 5,
+        "zipFile": "home-services-contracting-vault-5.zip",
+        "sizeMb": "0.3"
+      },
+      {
+        "name": "Heavy Commercial Fleet Vault",
+        "appsCount": 5,
+        "zipFile": "heavy-commercial-fleet-vault-5.zip",
+        "sizeMb": "0.4"
+      }
+    ]
   }
 };
 export const CATALOG_PRODUCTS: ProductItem[] = CATALOG_DATA.products;
