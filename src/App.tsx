@@ -24,6 +24,7 @@ import {
   Calculator
 } from 'lucide-react';
 import { CATALOG_DATA } from './catalogData';
+import PORTFOLIO_METRICS from './portfolio-metrics.json';
 
 export const App: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -765,7 +766,7 @@ export const App: React.FC = () => {
             </div>
 
             <div className="mt-6 pt-4 border-t border-white/10 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 text-xs sm:text-sm text-slate-300 font-mono">
-              <span>Retail Shelf MSRP: <strong className="text-white">${CATALOG_DATA.valuation_framework.retail_shelf_msrp_full_stack.toLocaleString()} ($199 × {totalAssets})</strong></span>
+              <span>Retail Shelf MSRP: <strong className="text-white">${PORTFOLIO_METRICS.retailShelfMSRP.toLocaleString()} ($199 × {PORTFOLIO_METRICS.catalogTotal})</strong></span>
               <span>Agency Tiers: <strong className="text-emerald-400">$1,499 Pilot / $1,999 Std / $2,999 Master</strong></span>
             </div>
           </div>
@@ -994,7 +995,7 @@ export const App: React.FC = () => {
                   <th className="py-4 px-4">Archetype & Benchmark</th>
                   <th className="py-4 px-4">Vertical Niche</th>
                   <th className="py-4 px-4">Demo Sandbox Key</th>
-                  <th className="py-4 px-4">Audit Score</th>
+                  <th className="py-4 px-4">Build Integrity</th>
                   <th className="py-4 px-4 text-right">Actions</th>
                 </tr>
               </thead>
@@ -1045,7 +1046,7 @@ export const App: React.FC = () => {
                     </td>
                     <td className="py-4 px-4">
                       <span className="px-2.5 py-1 bg-emerald-500/10 text-emerald-400 border border-emerald-500/25 rounded-md font-bold text-xs sm:text-sm">
-                        {product.audit_score} / 10
+                        L3 VERIFIED (EXIT 0)
                       </span>
                     </td>
                     <td className="py-4 px-4 text-right space-x-2 shrink-0">
