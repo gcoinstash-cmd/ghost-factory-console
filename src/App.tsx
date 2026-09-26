@@ -67,21 +67,22 @@ export const App: React.FC = () => {
   const phase3Percent = Math.min(100, Math.round((totalAssets / phase3Target) * 100));
   const phase4Percent = Math.min(100, Math.round((totalAssets / phase4Target) * 100));
 
-  // Engine C Calibrated Institutional Valuations (70 Flagships)
-  // 1. Emergency Wholesale Cash (72h distress liquidation floor)
-  const fireSaleMin = Math.round(totalAssets * 114.28); // $8,000 at 70 apps
-  const fireSaleMax = Math.round(totalAssets * 285.71); // $20,000 at 70 apps
-  // 2. Realistic Strategic Close (Negotiated LOI Wire — Center of Gravity: $30k–$40k)
-  const strategicCloseMin = Math.round(totalAssets * 357.14); // $25,000 at 70 apps
-  const strategicCloseMax = Math.round(totalAssets * 642.85); // $45,000 at 70 apps
-  // 3. Private Strategic Ask (Confidential Deal Rooms on Acquire.com / Direct B2B)
-  const mktApaMin = Math.round(totalAssets * 557.14); // $39,000 at 70 apps
-  const mktApaMax = Math.round(totalAssets * 842.85); // $59,000 at 70 apps
-  // 4. Internal Walk-Away Reserve (Holding is mathematically superior)
+  // Engine C Calibrated Institutional Valuations (85 Flagships)
+  // 1. Independent Replacement Labor (Narrative Replacement Cost)
+  const replacementAgencyCostMin = 340000;
+  const replacementAgencyCostMax = 850000;
+  // 2. Strategic Asking Range (Confidential Target Asking Multiple)
+  const strategicAskMin = 49000;
+  const strategicAskMax = 59000;
+  // 3. Pre-Revenue Fair-Market Valuation Corridor (Arms-Length Transaction)
+  const fmvMin = 25000;
+  const fmvMax = 45000;
+  const fmvTarget = 35000;
+  // 4. Emergency Wholesale Cash (72h distress liquidation floor)
+  const fireSaleMin = Math.round(totalAssets * 250); // $21,250 at 85 apps
+  const fireSaleMax = Math.round(totalAssets * 368); // $31,280 at 85 apps
+  // 5. Internal Walk-Away Reserve (Holding is mathematically superior)
   const walkAwayReserve = 35000;
-  // 5. Traditional Dev Cost Replacement Value ($4,000 – $10,000 per bespoke agency full-stack build)
-  const replacementAgencyCostMin = totalAssets * 4000; // $280,000 at 70 apps
-  const replacementAgencyCostMax = totalAssets * 10000; // $700,000 at 70 apps
 
   // Simulator calculations
   const monthlyStarterRevenue = starterSales * 79;
@@ -680,39 +681,39 @@ export const App: React.FC = () => {
               </div>
 
               <div className="space-y-4 font-mono text-xs sm:text-sm">
-                {/* 1. Private Strategic Ask */}
+                {/* 1. Independent Replacement Labor */}
+                <div className="bg-black/60 p-4 sm:p-5 rounded-xl border-l-4 border-purple-500 flex justify-between items-center gap-4">
+                  <div>
+                    <span className="text-purple-400 font-bold block text-sm">🟣 INDEPENDENT REPLACEMENT LABOR</span>
+                    <span className="text-slate-300 text-xs sm:text-sm">Industry dev payroll cost to build 85 apps ($4k–$10k/app)</span>
+                  </div>
+                  <div className="text-right shrink-0">
+                    <span className="text-base sm:text-lg font-bold text-white block">${replacementAgencyCostMin.toLocaleString()} – ${replacementAgencyCostMax.toLocaleString()}</span>
+                    <span className="text-xs text-purple-300 block">Replacement Narrative</span>
+                  </div>
+                </div>
+
+                {/* 2. Strategic Asking Range */}
                 <div className="bg-black/60 p-4 sm:p-5 rounded-xl border-l-4 border-emerald-500 flex justify-between items-center gap-4">
                   <div>
-                    <span className="text-emerald-400 font-bold block text-sm">🟢 PRIVATE STRATEGIC ASK</span>
-                    <span className="text-slate-300 text-xs sm:text-sm">Acquire.com Private Deal Room / Direct B2B</span>
+                    <span className="text-emerald-400 font-bold block text-sm">🟢 STRATEGIC ASKING RANGE (CONFIDENTIAL)</span>
+                    <span className="text-slate-300 text-xs sm:text-sm">Acquire.com Private Deal Room / Direct B2B Outbound</span>
                   </div>
                   <div className="text-right shrink-0">
-                    <span className="text-base sm:text-lg font-bold text-white block">${mktApaMin.toLocaleString()} – ${mktApaMax.toLocaleString()}</span>
-                    <span className="text-xs text-slate-400 block">$557 – $843 / app</span>
+                    <span className="text-base sm:text-lg font-bold text-white block">${strategicAskMin.toLocaleString()} – ${strategicAskMax.toLocaleString()}</span>
+                    <span className="text-xs text-slate-400 block">$576 – $694 / app</span>
                   </div>
                 </div>
 
-                {/* 2. Realistic Strategic Close */}
+                {/* 3. Pre-Revenue Fair-Market Valuation */}
                 <div className="bg-black/60 p-4 sm:p-5 rounded-xl border-l-4 border-cyan-500 flex justify-between items-center gap-4">
                   <div>
-                    <span className="text-cyan-400 font-bold block text-sm">🟡 REALISTIC STRATEGIC CLOSE</span>
-                    <span className="text-slate-300 text-xs sm:text-sm">Negotiated LOI wire transfer (Center: $30k–$40k)</span>
+                    <span className="text-cyan-400 font-bold block text-sm">🟡 PRE-REVENUE FAIR-MARKET VALUATION</span>
+                    <span className="text-slate-300 text-xs sm:text-sm">Baseline transaction corridor (Target: $35,000)</span>
                   </div>
                   <div className="text-right shrink-0">
-                    <span className="text-base sm:text-lg font-bold text-white block">${strategicCloseMin.toLocaleString()} – ${strategicCloseMax.toLocaleString()}</span>
-                    <span className="text-xs text-slate-400 block">$357 – $643 / app</span>
-                  </div>
-                </div>
-
-                {/* 3. Internal Walk-Away Reserve */}
-                <div className="bg-black/60 p-4 sm:p-5 rounded-xl border-l-4 border-amber-500 flex justify-between items-center gap-4">
-                  <div>
-                    <span className="text-amber-400 font-bold block text-sm">🛡️ INTERNAL WALK-AWAY RESERVE</span>
-                    <span className="text-slate-300 text-xs sm:text-sm">Holding & client billing is mathematically superior below $35k</span>
-                  </div>
-                  <div className="text-right shrink-0">
-                    <span className="text-base sm:text-lg font-bold text-white block">${walkAwayReserve.toLocaleString()} CASH</span>
-                    <span className="text-xs text-slate-400 block">Strict Reserve Floor</span>
+                    <span className="text-base sm:text-lg font-bold text-white block">${fmvMin.toLocaleString()} – ${fmvMax.toLocaleString()}</span>
+                    <span className="text-xs text-slate-400 block">$294 – $529 / app</span>
                   </div>
                 </div>
 
@@ -724,7 +725,7 @@ export const App: React.FC = () => {
                   </div>
                   <div className="text-right shrink-0">
                     <span className="text-base sm:text-lg font-bold text-white block">${fireSaleMin.toLocaleString()} – ${fireSaleMax.toLocaleString()}</span>
-                    <span className="text-xs text-slate-400 block">$114 – $286 / app</span>
+                    <span className="text-xs text-slate-400 block">$250 – $368 / app</span>
                   </div>
                 </div>
 
@@ -838,6 +839,9 @@ export const App: React.FC = () => {
 
             {/* Projected Outputs */}
             <div className="mt-6 pt-6 border-t border-white/10 bg-black/60 p-5 rounded-xl">
+              <div className="text-[11px] text-amber-400 font-mono uppercase tracking-wider text-center mb-3">
+                ⚠️ Illustrative Financial Scenario (Post-Launch Target)
+              </div>
               <div className="grid grid-cols-2 gap-4 text-center font-mono">
                 <div>
                   <span className="text-xs text-slate-400 block uppercase font-semibold">Projected Net Monthly</span>
@@ -860,7 +864,7 @@ export const App: React.FC = () => {
               <h2 className="font-bold text-lg sm:text-xl text-white">Ghost Factory™ 5-Stage Assembly Line Status</h2>
             </div>
             <div className="text-xs sm:text-sm font-mono text-slate-300">
-              CURRENT STATUS: <span className="text-emerald-400 font-bold">60 / 100 VERIFIED (BATCH #8 CLEARED)</span>
+              CURRENT STATUS: <span className="text-emerald-400 font-bold">85 / 85 COMPLETED & VERIFIED (FLEET RECONCILED)</span>
             </div>
           </div>
 
@@ -975,7 +979,7 @@ export const App: React.FC = () => {
                   <th className="py-4 px-4">Product Name</th>
                   <th className="py-4 px-4">Archetype & Benchmark</th>
                   <th className="py-4 px-4">Vertical Niche</th>
-                  <th className="py-4 px-4">1-Click Passkey</th>
+                  <th className="py-4 px-4">Demo Sandbox Key</th>
                   <th className="py-4 px-4">Audit Score</th>
                   <th className="py-4 px-4 text-right">Actions</th>
                 </tr>
@@ -1010,17 +1014,20 @@ export const App: React.FC = () => {
                     </td>
                     <td className="py-4 px-4 text-slate-300 max-w-xs font-sans text-xs sm:text-sm leading-relaxed">{product.category}</td>
                     <td className="py-4 px-4">
-                      <button 
-                        onClick={() => handleCopyPasscode(product.admin_passcode)}
-                        className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/5 hover:bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 rounded-lg text-xs sm:text-sm font-mono font-bold transition-all"
-                        title="Click to copy passkey"
-                      >
-                        <Key size={14} />
-                        <span>{product.admin_passcode}</span>
-                        {copiedCode === product.admin_passcode && (
-                          <span className="text-xs text-white bg-emerald-600 px-1.5 py-0.5 rounded font-bold">COPIED</span>
-                        )}
-                      </button>
+                      <div className="flex flex-col gap-1">
+                        <button 
+                          onClick={() => handleCopyPasscode(product.admin_passcode)}
+                          className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/5 hover:bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 rounded-lg text-xs sm:text-sm font-mono font-bold transition-all"
+                          title="Click to copy sandbox key"
+                        >
+                          <Key size={14} />
+                          <span>{product.admin_passcode}</span>
+                          {copiedCode === product.admin_passcode && (
+                            <span className="text-xs text-white bg-emerald-600 px-1.5 py-0.5 rounded font-bold">COPIED</span>
+                          )}
+                        </button>
+                        <span className="text-[10px] text-slate-400 font-mono">DEMO SANDBOX PASSKEY</span>
+                      </div>
                     </td>
                     <td className="py-4 px-4">
                       <span className="px-2.5 py-1 bg-emerald-500/10 text-emerald-400 border border-emerald-500/25 rounded-md font-bold text-xs sm:text-sm">
@@ -1032,7 +1039,7 @@ export const App: React.FC = () => {
                         href={product.preview_url} 
                         target="_blank" 
                         rel="noreferrer"
-                        className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white/5 hover:bg-white/10 text-slate-200 rounded-lg border border-white/15 hover:text-white transition-all text-xs sm:text-sm font-semibold"
+                        className="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-white/5 hover:bg-white/10 text-slate-200 rounded-lg border border-white/15 hover:text-white transition-all text-xs font-semibold"
                       >
                         <span>Demo</span>
                         <ExternalLink size={12} />
@@ -1041,11 +1048,34 @@ export const App: React.FC = () => {
                         href={product.admin_url} 
                         target="_blank" 
                         rel="noreferrer"
-                        className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 rounded-lg border border-emerald-500/35 transition-all text-xs sm:text-sm font-bold"
+                        className="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 rounded-lg border border-emerald-500/35 transition-all text-xs font-bold"
                       >
                         <span>/admin</span>
                         <ExternalLink size={12} />
                       </a>
+                      {product.checkout_active ? (
+                        <a 
+                          href={product.gumroad_url} 
+                          target="_blank" 
+                          rel="noreferrer"
+                          className="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 rounded-lg border border-amber-500/35 transition-all text-xs font-bold"
+                          title="Active Gumroad Checkout ($150)"
+                        >
+                          <span>$150</span>
+                          <ExternalLink size={12} />
+                        </a>
+                      ) : (
+                        <a 
+                          href="https://auraandgrid.gumroad.com/l/agency-whitelabel-vault" 
+                          target="_blank" 
+                          rel="noreferrer"
+                          className="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-purple-500/20 hover:bg-purple-500/30 text-purple-300 rounded-lg border border-purple-500/35 transition-all text-xs font-bold"
+                          title="Packaged in Founding Agency Vault ($1,499)"
+                        >
+                          <span>Vault</span>
+                          <ExternalLink size={12} />
+                        </a>
+                      )}
                     </td>
                   </tr>
                 ))}
