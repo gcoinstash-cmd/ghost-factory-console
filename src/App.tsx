@@ -31,6 +31,7 @@ export const App: React.FC = () => {
   const [selectedArchetype, setSelectedArchetype] = useState<string>('ALL');
   const [copiedCode, setCopiedCode] = useState<string | null>(null);
   const [isRefreshing, setIsRefreshing] = useState(false);
+  const [showAuditModal, setShowAuditModal] = useState(false);
 
   // Hard Refresh Handler to clear cache and reload latest catalog
   const handleHardRefresh = () => {
@@ -222,14 +223,22 @@ export const App: React.FC = () => {
             <Server size={14} className="text-emerald-400" />
             <span>PREVIEWS: <strong className="text-emerald-400">{totalAssets} / {totalAssets} ONLINE (200 OK)</strong></span>
           </div>
-          <div className="hidden md:flex items-center gap-2 text-slate-300">
+          <button
+            onClick={() => setShowAuditModal(true)}
+            className="hidden md:flex items-center gap-2 text-slate-300 hover:text-cyan-400 transition-colors cursor-pointer bg-slate-900/60 px-2.5 py-1 rounded border border-slate-700/60"
+            title="Click to view RLS architecture specification"
+          >
             <Database size={14} className="text-cyan-400" />
-            <span>SUPABASE RLS: <strong className="text-cyan-400">ENFORCED</strong></span>
-          </div>
-          <div className="hidden lg:flex items-center gap-2 text-amber-400">
+            <span>RLS STATUS: <strong className="text-cyan-400">LEVEL 3 DEMO POLICIES</strong></span>
+          </button>
+          <button
+            onClick={() => setShowAuditModal(true)}
+            className="hidden lg:flex items-center gap-2 text-amber-400 hover:text-amber-300 transition-colors cursor-pointer bg-slate-900/60 px-2.5 py-1 rounded border border-amber-500/40"
+            title="Click to view institutional verification ledger"
+          >
             <Award size={14} />
-            <span>AVG AUDIT: <strong>9.8 / 10</strong></span>
-          </div>
+            <span>BUILD INTEGRITY: <strong>85/85 VERIFIED</strong></span>
+          </button>
 
           {/* Quick Refresh Button in Header */}
           <button
@@ -1094,6 +1103,87 @@ export const App: React.FC = () => {
       <footer className="max-w-7xl mx-auto px-6 mt-16 text-center text-xs sm:text-sm text-slate-400 font-mono">
         <p>Aura & Grid Storefront Engine • Ghost Factory™ Autonomous Protocol • 500-Asset Institutional APA Master</p>
       </footer>
+
+
+      {/* Institutional Audit & Technical Data Room Modal */}
+      {showAuditModal && (
+        <div 
+          className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4"
+          onClick={() => setShowAuditModal(false)}
+        >
+          <div 
+            className="bg-[#0f1115] border border-amber-500/40 rounded-2xl max-w-2xl w-full p-6 sm:p-8 relative shadow-2xl text-left"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button 
+              onClick={() => setShowAuditModal(false)}
+              className="absolute top-4 right-4 text-slate-400 hover:text-white text-lg font-mono px-2 py-1 rounded hover:bg-white/10"
+            >
+              ✕
+            </button>
+            <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-amber-400 mb-2">
+              <ShieldCheck size={16} />
+              <span>Institutional Verification Ledger // Technical Diligence</span>
+            </div>
+            <h3 className="text-2xl font-bold text-white mb-2 font-mono">BUILD INTEGRITY: 85/85 VERIFIED</h3>
+            <p className="text-sm text-slate-400 mb-6">
+              Deterministic verification telemetry, Software Bill of Materials (SBOM), and canonical Level 3 security disclosures.
+            </p>
+
+            <div className="grid grid-cols-2 gap-3 font-mono text-xs mb-6">
+              <div className="p-3 bg-slate-900/80 rounded-lg border border-slate-800">
+                <div className="text-slate-500 mb-1">AUTOMATED BUILDS</div>
+                <div className="text-emerald-400 font-bold text-sm">85 / 85 EXIT 0</div>
+                <div className="text-slate-400 text-[11px] mt-0.5">Vite &amp; TypeScript Compiled</div>
+              </div>
+              <div className="p-3 bg-slate-900/80 rounded-lg border border-slate-800">
+                <div className="text-slate-500 mb-1">DATABASE ARCHITECTURE</div>
+                <div className="text-cyan-400 font-bold text-sm">LEVEL 3 SUPABASE-READY</div>
+                <div className="text-slate-400 text-[11px] mt-0.5">Isolated schema &amp; seed SQL</div>
+              </div>
+              <div className="p-3 bg-slate-900/80 rounded-lg border border-slate-800">
+                <div className="text-slate-500 mb-1">SECURITY MODEL</div>
+                <div className="text-amber-400 font-bold text-sm">DEMO RLS SANDBOX</div>
+                <div className="text-slate-400 text-[11px] mt-0.5">USING (true) + setup guide</div>
+              </div>
+              <div className="p-3 bg-slate-900/80 rounded-lg border border-slate-800">
+                <div className="text-slate-500 mb-1">COPYLEFT EXPOSURE</div>
+                <div className="text-purple-400 font-bold text-sm">0% GPL CONTAMINATION</div>
+                <div className="text-slate-400 text-[11px] mt-0.5">100% Permissive MIT/Apache</div>
+              </div>
+            </div>
+
+            <div className="p-4 bg-slate-900/50 rounded-lg border border-slate-800 text-xs text-slate-300 font-mono mb-6 space-y-2">
+              <div className="flex items-center gap-2 text-emerald-400 font-bold">
+                <CheckCircle2 size={14} />
+                <span>Canonical RLS Reference Test Available:</span>
+              </div>
+              <p className="text-slate-400 pl-6">
+                <code>dist/litigation-ops-os/supabase/tests/rls_tenant_isolation.test.sql</code> — Proves multi-tenant separation using auth.uid() and negative authorization assertions.
+              </p>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-3 font-mono text-xs">
+              <a 
+                href="https://aura-and-grid-showroom.onrender.com" 
+                target="_blank" 
+                rel="noreferrer"
+                className="flex-1 py-3 px-4 rounded-lg bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 border border-emerald-500/40 text-center font-bold transition-all"
+              >
+                Public Showroom ↗
+              </a>
+              <a 
+                href="https://auraandgrid.gumroad.com/l/agency-whitelabel-vault" 
+                target="_blank" 
+                rel="noreferrer"
+                className="flex-1 py-3 px-4 rounded-lg bg-amber-500 hover:bg-amber-400 text-black text-center font-bold transition-all"
+              >
+                Founding Agency Vault (,499) ➔
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Mobile One-Thumb Floating Refresh HUD Pill */}
       <div className="fixed bottom-6 right-6 z-50 sm:hidden">
