@@ -78,6 +78,11 @@ export const App: React.FC = () => {
   const fmvMin = 25000;
   const fmvMax = 45000;
   const fmvTarget = 35000;
+  // Aliases for Hero HUD
+  const mktApaMin = strategicAskMin;
+  const mktApaMax = strategicAskMax;
+  const strategicCloseMin = fmvMin;
+  const strategicCloseMax = fmvMax;
   // 4. Emergency Wholesale Cash (72h distress liquidation floor)
   const fireSaleMin = Math.round(totalAssets * 250); // $21,250 at 85 apps
   const fireSaleMax = Math.round(totalAssets * 368); // $31,280 at 85 apps
