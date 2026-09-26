@@ -945,7 +945,7 @@ export const App: React.FC = () => {
                 <h2 className="font-bold text-xl sm:text-2xl text-white">Master Asset Registry & Passkey Vault</h2>
               </div>
               <p className="text-xs sm:text-sm text-slate-300 mt-1.5">
-                Showing {filteredProducts.length} of {CATALOG_DATA.total_flagships} verified production flagships.
+                Showing {filteredProducts.length} of {CATALOG_DATA.total_flagships} Cataloged Level 3 Supabase-Ready Blueprints.
               </p>
             </div>
 
@@ -1133,9 +1133,9 @@ export const App: React.FC = () => {
 
             <div className="grid grid-cols-2 gap-3 font-mono text-xs mb-6">
               <div className="p-3 bg-slate-900/80 rounded-lg border border-slate-800">
-                <div className="text-slate-500 mb-1">AUTOMATED BUILDS</div>
-                <div className="text-emerald-400 font-bold text-sm">85 / 85 EXIT 0</div>
-                <div className="text-slate-400 text-[11px] mt-0.5">Vite &amp; TypeScript Compiled</div>
+                <div className="text-slate-500 mb-1">PREVIEW AVAILABILITY</div>
+                <div className="text-emerald-400 font-bold text-sm">85 / 85 VERIFIED (EXIT 0)</div>
+                <div className="text-slate-400 text-[11px] mt-0.5">Preview Availability: 85/85 Endpoints Verified (Exit 0)</div>
               </div>
               <div className="p-3 bg-slate-900/80 rounded-lg border border-slate-800">
                 <div className="text-slate-500 mb-1">DATABASE ARCHITECTURE</div>
