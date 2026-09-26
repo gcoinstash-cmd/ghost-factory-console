@@ -1178,7 +1178,7 @@ export const App: React.FC = () => {
                 rel="noreferrer"
                 className="flex-1 py-3 px-4 rounded-lg bg-amber-500 hover:bg-amber-400 text-black text-center font-bold transition-all"
               >
-                Founding Agency Vault (,499) ➔
+                Founding Agency Vault ($1,499) ➔
               </a>
             </div>
           </div>
