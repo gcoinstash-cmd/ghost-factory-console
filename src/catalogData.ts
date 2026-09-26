@@ -82,7 +82,7 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/stride-mb",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 2,
@@ -108,7 +108,7 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/the-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 3,
@@ -134,7 +134,7 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/velocity-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 4,
@@ -160,7 +160,7 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/apex-club-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 5,
@@ -186,7 +186,7 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/elevate-capital-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 6,
@@ -212,7 +212,7 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/obsidian-lab-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 7,
@@ -239,7 +239,7 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/the-enclave-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 8,
@@ -265,7 +265,7 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/aura-medspa-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 9,
@@ -291,7 +291,7 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/royal-apex-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 10,
@@ -317,7 +317,7 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/aura-reserve-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 11,
@@ -343,7 +343,7 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/monolith-studio-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 12,
@@ -369,7 +369,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 13,
@@ -395,7 +395,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 14,
@@ -420,7 +420,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 15,
@@ -445,7 +445,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 16,
@@ -470,7 +470,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 17,
@@ -495,7 +495,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 18,
@@ -520,7 +520,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 19,
@@ -546,7 +546,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 20,
@@ -572,7 +572,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 21,
@@ -598,7 +598,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 22,
@@ -624,7 +624,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 23,
@@ -650,7 +650,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 24,
@@ -677,7 +677,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 25,
@@ -703,7 +703,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 26,
@@ -711,8 +711,8 @@ export const CATALOG_DATA = {
       "category": "Craft Smash Burger, Fast-Casual Ordering & Kitchen Dispatch OS",
       "vertical": "hospitality",
       "gumroad_url": "https://auraandgrid.gumroad.com/l/burger-lab-os",
-      "preview_url": "https://burger-lab-os.onrender.com",
-      "admin_url": "https://burger-lab-os.onrender.com/admin",
+      "preview_url": "https://gcoinstash-cmd.github.io/burger-lab-os/",
+      "admin_url": "https://gcoinstash-cmd.github.io/burger-lab-os/admin/",
       "admin_passcode": "burger2026",
       "audit_score": 9.8,
       "tables": [
@@ -730,7 +730,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 27,
@@ -756,7 +756,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 28,
@@ -782,7 +782,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 29,
@@ -808,7 +808,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 30,
@@ -833,7 +833,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 31,
@@ -858,7 +858,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 32,
@@ -884,7 +884,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 33,
@@ -909,7 +909,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 34,
@@ -934,7 +934,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 35,
@@ -959,7 +959,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 36,
@@ -984,7 +984,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 37,
@@ -1010,7 +1010,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 38,
@@ -1036,7 +1036,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 39,
@@ -1062,7 +1062,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 40,
@@ -1088,7 +1088,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 41,
@@ -1114,7 +1114,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 42,
@@ -1140,7 +1140,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 43,
@@ -1166,7 +1166,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 44,
@@ -1191,7 +1191,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 45,
@@ -1217,7 +1217,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 46,
@@ -1242,7 +1242,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 47,
@@ -1268,7 +1268,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 48,
@@ -1293,7 +1293,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 49,
@@ -1317,7 +1317,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 50,
@@ -1342,7 +1342,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 51,
@@ -1368,7 +1368,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 52,
@@ -1393,7 +1393,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 53,
@@ -1418,7 +1418,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 54,
@@ -1443,7 +1443,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 55,
@@ -1468,7 +1468,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 56,
@@ -1494,7 +1494,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 57,
@@ -1520,7 +1520,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 58,
@@ -1546,7 +1546,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 59,
@@ -1572,7 +1572,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 60,
@@ -1598,7 +1598,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 61,
@@ -1624,7 +1624,7 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/boutique-dental-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 62,
@@ -1650,7 +1650,7 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/veterinary-hospital-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 63,
@@ -1676,7 +1676,7 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/functional-medicine-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 64,
@@ -1702,7 +1702,7 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/physical-therapy-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 65,
@@ -1728,7 +1728,7 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/recovery-spa-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 66,
@@ -1754,7 +1754,7 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/boutique-law-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 67,
@@ -1779,7 +1779,7 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/ma-advisory-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 68,
@@ -1804,7 +1804,7 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/executive-search-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 69,
@@ -1829,7 +1829,7 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/wealth-family-office-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 70,
@@ -1854,7 +1854,7 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/litigation-ops-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 71,
@@ -1880,7 +1880,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 72,
@@ -1906,7 +1906,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 73,
@@ -1932,7 +1932,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 74,
@@ -1958,7 +1958,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 75,
@@ -1984,7 +1984,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 76,
@@ -2010,7 +2010,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 77,
@@ -2036,7 +2036,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 78,
@@ -2062,7 +2062,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 79,
@@ -2088,7 +2088,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 80,
@@ -2114,7 +2114,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 81,
@@ -2140,7 +2140,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 82,
@@ -2166,7 +2166,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 83,
@@ -2192,7 +2192,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 84,
@@ -2218,7 +2218,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     },
     {
       "id": 85,
@@ -2244,7 +2244,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Supabase PostgreSQL (Multi-Tenant Row Level Security Active)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
     }
   ],
   "vertical_slices": {
