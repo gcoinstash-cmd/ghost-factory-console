@@ -1046,7 +1046,7 @@ export const App: React.FC = () => {
                     </td>
                     <td className="py-4 px-4">
                       <span className="px-2.5 py-1 bg-emerald-500/10 text-emerald-400 border border-emerald-500/25 rounded-md font-bold text-xs sm:text-sm">
-                        L3 VERIFIED (EXIT 0)
+                        L3 VERIFIED BLUEPRINT
                       </span>
                     </td>
                     <td className="py-4 px-4 text-right space-x-2 shrink-0">
@@ -1134,8 +1134,8 @@ export const App: React.FC = () => {
             <div className="grid grid-cols-2 gap-3 font-mono text-xs mb-6">
               <div className="p-3 bg-slate-900/80 rounded-lg border border-slate-800">
                 <div className="text-slate-500 mb-1">PREVIEW AVAILABILITY</div>
-                <div className="text-emerald-400 font-bold text-sm">85 / 85 VERIFIED (EXIT 0)</div>
-                <div className="text-slate-400 text-[11px] mt-0.5">Preview Availability: 85/85 Endpoints Verified (Exit 0)</div>
+                <div className="text-emerald-400 font-bold text-sm">85 / 85 VERIFIED BLUEPRINTS</div>
+                <div className="text-slate-400 text-[11px] mt-0.5">Preview Availability: 85/85 Endpoints Verified (HTTP 200)</div>
               </div>
               <div className="p-3 bg-slate-900/80 rounded-lg border border-slate-800">
                 <div className="text-slate-500 mb-1">DATABASE ARCHITECTURE</div>
