@@ -97,8 +97,8 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
             <span className="text-emerald-400 font-mono text-[9px] bg-emerald-950/40 px-1 py-0.2 rounded border border-emerald-500/30">FMV</span>
           </div>
           <div className="mt-1">
-            <span className="text-sm sm:text-base font-black text-emerald-400 block">$25,500 – $40,375</span>
-            <span className="text-[10px] text-slate-400 block font-sans">Anchor: ~$33,000 (Pre-Rev)</span>
+            <span className="text-sm sm:text-base font-black text-emerald-400 block">$32,700 – $51,775</span>
+            <span className="text-[10px] text-slate-400 block font-sans">Anchor: ~$42,500 ({totalAssets} Assets)</span>
           </div>
         </div>
 
@@ -109,7 +109,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
             <span className="text-cyan-400 font-mono text-[9px] bg-cyan-950/40 px-1 py-0.2 rounded border border-cyan-500/30">ASK</span>
           </div>
           <div className="mt-1">
-            <span className="text-sm sm:text-base font-black text-cyan-400 block">$49,000 – $59,000</span>
+            <span className="text-sm sm:text-base font-black text-cyan-400 block">$62,000 – $75,000</span>
             <span className="text-[10px] text-slate-400 block font-sans">Data Room Asking Target</span>
           </div>
         </div>
@@ -121,7 +121,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
             <span className="text-amber-400 font-mono text-[9px] bg-amber-950/40 px-1 py-0.2 rounded border border-amber-500/30">LOI</span>
           </div>
           <div className="mt-1">
-            <span className="text-sm sm:text-base font-black text-amber-400 block">$28,000 – $36,000</span>
+            <span className="text-sm sm:text-base font-black text-amber-400 block">$36,000 – $46,000</span>
             <span className="text-[10px] text-slate-400 block font-sans">Quick-Close / Wire Ready</span>
           </div>
         </div>
@@ -133,8 +133,8 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
             <span className="text-purple-400 font-mono text-[9px] bg-purple-950/40 px-1 py-0.2 rounded border border-purple-500/30">DEV</span>
           </div>
           <div className="mt-1">
-            <span className="text-sm sm:text-base font-black text-purple-400 block">$340k – $850k</span>
-            <span className="text-[10px] text-slate-400 block font-sans">Agency Cost to Duplicate</span>
+            <span className="text-sm sm:text-base font-black text-purple-400 block">$436k – $1.09M</span>
+            <span className="text-[10px] text-slate-400 block font-sans">Agency Duplicate ({totalAssets} Models)</span>
           </div>
         </div>
 

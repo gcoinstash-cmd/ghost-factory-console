@@ -1,19 +1,32 @@
 {
-  "catalogTotal": 85,
+  "catalogTotal": 109,
   "unitRetailPrice": 199,
-  "retailShelfMSRP": 16915,
-  "buildVerified": 85,
-  "previewHttp200": 85,
+  "retailShelfMSRP": 21691,
+  "buildVerified": 109,
+  "previewHttp200": 109,
   "diligenceGrade": "L3-SUPABASE-READY",
-  "buildIntegrity": "85/85 VERIFIED (HTTP 200)",
+  "buildIntegrity": "109/109 VERIFIED (HTTP 200)",
   "retentionFloorPercent": 80,
-  "retainedFloorCount": 68,
-  "maxApaCapacity": 17,
+  "retainedFloorCount": 87,
+  "maxApaCapacity": 22,
   "valuationAppraisal": {
-    "planningFmv": 33000,
-    "fmvRange": [25500, 40375],
-    "strategicAskRange": [49000, 59000],
-    "replacementDevLabor": [340000, 850000],
+    "planningFmv": 42500,
+    "fmvRange": [
+      32700,
+      51775
+    ],
+    "strategicAskRange": [
+      62000,
+      75000
+    ],
+    "realisticAcceptedRange": [
+      36000,
+      46000
+    ],
+    "replacementDevLabor": [
+      436000,
+      1090000
+    ],
     "status": "PRE_REVENUE_SIMULATED_DEMOS"
   },
   "pricingProtocol": {
@@ -21,36 +34,54 @@
       "name": "Lean Rapid-Sale Track (Default)",
       "retailMsrp": 199,
       "teamSeat": 599,
-      "buyoutFloor": [3800, 6500],
+      "buyoutFloor": [
+        3800,
+        6500
+      ],
       "buyoutAnchor": 4500
     },
     "track2": {
-      "name": "Flagship $10K+ Track (Selective Tier-1)",
-      "commercialLicense": [1500, 3500],
+      "name": "Flagship K+ Track (Selective Tier-1)",
+      "commercialLicense": [
+        1500,
+        3500
+      ],
       "entryBuyoutAnchor": 14500,
-      "entryBuyoutRange": [10000, 18000],
-      "fullBuyoutRange": [18000, 35000],
-      "strategicAcquisitionRange": [35000, 75000]
+      "entryBuyoutRange": [
+        10000,
+        18000
+      ],
+      "fullBuyoutRange": [
+        18000,
+        35000
+      ],
+      "strategicAcquisitionRange": [
+        35000,
+        75000
+      ]
     }
   },
   "sectors": {
-    "hospitality": 23,
-    "wealth": 16,
-    "medical": 13,
+    "fitness": 5,
     "creative": 12,
     "automotive": 6,
-    "fitness": 5,
+    "wealth": 18,
+    "hospitality": 24,
+    "medical": 14,
     "home_services": 5,
-    "heavy_fleet": 5,
-    "total": 85
+    "heavy_fleet": 9,
+    "defense": 1,
+    "subsea": 4,
+    "aerospace": 6,
+    "clean_energy": 3,
+    "deep_tech": 2
   },
   "archetypes": {
-    "A": 15,
-    "B": 17,
-    "C": 17,
-    "D": 22,
-    "E": 14,
-    "total": 85
+    "A": 19,
+    "B": 20,
+    "D": 26,
+    "C": 30,
+    "E": 14
   },
-  "verifiedTimestamp": "2026-09-30T10:10:00Z"
+  "verifiedTimestamp": "2026-09-30T10:18:00Z"
 }
