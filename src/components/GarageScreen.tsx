@@ -126,30 +126,30 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
           </div>
 
           {/* 5 Core Valuation HUD Metric Badges */}
-          <div className="w-full lg:w-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 bg-black/70 p-4 rounded-xl border border-white/10 text-xs">
+          <div className="w-full lg:w-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 sm:gap-3 bg-black/70 p-3 sm:p-4 rounded-xl border border-white/10 text-xs">
             <div className="p-1">
               <span className="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Fair Market Value</span>
-              <span className="text-sm sm:text-base font-black text-emerald-400">$85.5k – $148.4k</span>
+              <span className="text-xs sm:text-base font-black text-emerald-400">$85.5k – $148.4k</span>
               <span className="text-[10px] text-emerald-300 block font-semibold">Anchor: ~${planningValue.toLocaleString()}</span>
             </div>
-            <div className="p-1 border-l border-white/10 pl-3">
+            <div className="p-1 border-l border-white/10 pl-2 sm:pl-3">
               <span className="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Direct B2B Ask</span>
-              <span className="text-sm sm:text-base font-black text-cyan-400">$145.0k – $185.0k</span>
+              <span className="text-xs sm:text-base font-black text-cyan-400">$145.0k – $185.0k</span>
               <span className="text-[10px] text-cyan-300 block font-semibold">Data Room Ask</span>
             </div>
-            <div className="p-1 border-l border-white/10 pl-3">
+            <div className="p-1 border-t sm:border-t-0 sm:border-l border-white/10 pt-2 sm:pt-1 sm:pl-3">
               <span className="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Realistic Accepted</span>
-              <span className="text-sm sm:text-base font-black text-amber-400">$95.0k – $125.0k</span>
+              <span className="text-xs sm:text-base font-black text-amber-400">$95.0k – $125.0k</span>
               <span className="text-[10px] text-amber-300 block font-semibold">Negotiated LOI Wire</span>
             </div>
-            <div className="p-1 border-l border-white/10 pl-3">
+            <div className="p-1 border-t sm:border-t-0 border-l border-white/10 pt-2 sm:pt-1 pl-2 sm:pl-3">
               <span className="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Dev Replacement</span>
-              <span className="text-sm sm:text-base font-black text-purple-400">$700k – $1.69M</span>
+              <span className="text-xs sm:text-base font-black text-purple-400">$700k – $1.69M</span>
               <span className="text-[10px] text-purple-300 block font-semibold">Cost to Duplicate</span>
             </div>
-            <div className="p-1 border-l border-white/10 pl-3 col-span-2 sm:col-span-1">
+            <div className="p-1 border-t sm:border-t-0 sm:border-l border-white/10 pt-2 sm:pt-1 sm:pl-3 col-span-2 sm:col-span-1">
               <span className="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Exclusive Buyout</span>
-              <span className="text-sm sm:text-base font-black text-pink-400">$14,500 Anchor</span>
+              <span className="text-xs sm:text-base font-black text-pink-400">$14,500 Anchor</span>
               <span className="text-[10px] text-pink-300 block font-semibold">T2 ($10k–$18k) / T1 ($4.5k)</span>
             </div>
           </div>

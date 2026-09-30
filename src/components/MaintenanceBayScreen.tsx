@@ -197,7 +197,7 @@ export const MaintenanceBayScreen: React.FC<MaintenanceBayScreenProps> = ({
           <span className="text-xs text-slate-400">All 85 Passed Build Integrity</span>
         </div>
 
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto touch-pan-x overscroll-contain">
           <table className="w-full text-xs text-left">
             <thead>
               <tr className="border-b border-white/10 text-slate-400 font-bold uppercase text-[10px]">

@@ -115,7 +115,7 @@ export const ShowroomEngineScreen: React.FC<ShowroomEngineScreenProps> = ({
             <span>{products.length} Models</span>
           </div>
 
-          <div className="space-y-1.5 max-h-[550px] overflow-y-auto pr-1">
+          <div className="space-y-1.5 max-h-[260px] sm:max-h-[380px] lg:max-h-[550px] overflow-y-auto overscroll-contain pr-1 touch-pan-y">
             {products.map((p) => {
               const isSelected = selectedProduct.id === p.id;
               return (
