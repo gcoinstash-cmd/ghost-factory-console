@@ -73,7 +73,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
             title="Inspect Institutional Build Ledger"
           >
             <Award size={13} />
-            <span>INTEGRITY: <strong>85/85 VERIFIED</strong></span>
+            <span>INTEGRITY: <strong>{totalAssets}/{totalAssets} VERIFIED</strong></span>
           </button>
 
           <button
@@ -97,8 +97,8 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
             <span className="text-emerald-400 font-mono text-[9px] bg-emerald-950/40 px-1 py-0.2 rounded border border-emerald-500/30">FMV</span>
           </div>
           <div className="mt-1">
-            <span className="text-sm sm:text-base font-black text-emerald-400 block">$32,700 – $51,775</span>
-            <span className="text-[10px] text-slate-400 block font-sans">Anchor: ~$42,500 ({totalAssets} Assets)</span>
+            <span className="text-sm sm:text-base font-black text-emerald-400 block">$85,500 – $148,375</span>
+            <span className="text-[10px] text-slate-400 block font-sans">Anchor: ~$115,000 ({totalAssets} Assets)</span>
           </div>
         </div>
 
@@ -109,7 +109,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
             <span className="text-cyan-400 font-mono text-[9px] bg-cyan-950/40 px-1 py-0.2 rounded border border-cyan-500/30">ASK</span>
           </div>
           <div className="mt-1">
-            <span className="text-sm sm:text-base font-black text-cyan-400 block">$62,000 – $75,000</span>
+            <span className="text-sm sm:text-base font-black text-cyan-400 block">$145,000 – $185,000</span>
             <span className="text-[10px] text-slate-400 block font-sans">Data Room Asking Target</span>
           </div>
         </div>
@@ -121,7 +121,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
             <span className="text-amber-400 font-mono text-[9px] bg-amber-950/40 px-1 py-0.2 rounded border border-amber-500/30">LOI</span>
           </div>
           <div className="mt-1">
-            <span className="text-sm sm:text-base font-black text-amber-400 block">$36,000 – $46,000</span>
+            <span className="text-sm sm:text-base font-black text-amber-400 block">$95,000 – $125,000</span>
             <span className="text-[10px] text-slate-400 block font-sans">Quick-Close / Wire Ready</span>
           </div>
         </div>
@@ -133,7 +133,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
             <span className="text-purple-400 font-mono text-[9px] bg-purple-950/40 px-1 py-0.2 rounded border border-purple-500/30">DEV</span>
           </div>
           <div className="mt-1">
-            <span className="text-sm sm:text-base font-black text-purple-400 block">$436k – $1.09M</span>
+            <span className="text-sm sm:text-base font-black text-purple-400 block">$700k – $1.69M</span>
             <span className="text-[10px] text-slate-400 block font-sans">Agency Duplicate ({totalAssets} Models)</span>
           </div>
         </div>
@@ -145,8 +145,8 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
             <span className="text-pink-400 font-mono text-[9px] bg-pink-950/40 px-1 py-0.2 rounded border border-pink-500/30">APA</span>
           </div>
           <div className="mt-1">
-            <span className="text-sm sm:text-base font-black text-pink-400 block">$3,800 – $6,500</span>
-            <span className="text-[10px] text-slate-400 block font-sans">Track 1 ($4.5k) / T2 ($14.5k)</span>
+            <span className="text-sm sm:text-base font-black text-pink-400 block">$14,500 Anchor</span>
+            <span className="text-[10px] text-slate-400 block font-sans">T2 Flagship ($10k–$18k) / T1 ($4.5k)</span>
           </div>
         </div>
       </div>

@@ -21,11 +21,11 @@ export const FactoryLineScreen: React.FC<FactoryLineScreenProps> = ({
 }) => {
   // 5 Stages of the Assembly Line
   const stages = [
-    { id: 1, name: '1. Concept & Wireframe', count: 12, desc: 'B2B niche workflow definition & domain research' },
-    { id: 2, name: '2. Working Prototype', count: 18, desc: 'Tailwind UI, React components & mock sensor states' },
-    { id: 3, name: '3. Hosted Demo Sandbox', count: 50, desc: 'Render deployment, Supabase schema & demo passcodes' },
-    { id: 4, name: '4. Catalog Ready (MSRP)', count: 79, desc: 'Passed 8-point Intake Gate. Listed on Aura & Grid' },
-    { id: 5, name: '5. Flagship Candidate', count: 6, desc: 'Passed Flagship Gate (ECLSS, Crawler, EGS Wellhead)' }
+    { id: 1, name: '1. Concept & Wireframe', count: 14, desc: 'B2B niche workflow definition & domain research' },
+    { id: 2, name: '2. Working Prototype', count: 20, desc: 'Tailwind UI, React components & mock sensor states' },
+    { id: 3, name: '3. Hosted Demo Sandbox', count: 65, desc: 'Render deployment, Supabase schema & demo passcodes' },
+    { id: 4, name: '4. Track 1 Lean Rapid-Sale', count: 85, desc: 'Passed 8-point Intake Gate ($199 MSRP / $4.5k Buyout Anchor)' },
+    { id: 5, name: '5. Track 2 Flagship Tier-1', count: 24, desc: 'Passed 8-point Flagship Gate ($1,500 MSRP / $14.5k Anchor)' }
   ];
 
   // Interactive Intake Gate Checklist State (for a prospective asset, e.g. Asset #110)

@@ -22,11 +22,33 @@ export const ShowroomEngineScreen: React.FC<ShowroomEngineScreenProps> = ({
   const [selectedLicense, setSelectedLicense] = useState<'retail' | 'team' | 'lease' | 'fleet'>('retail');
   const [copiedLink, setCopiedLink] = useState(false);
 
+  const isTrack2 = selectedProduct && (selectedProduct.id >= 86 || selectedProduct.flagship_qualified || selectedProduct.pricing_track?.includes('Track 2'));
+
   const licenseTiers = {
-    retail: { name: 'Non-Exclusive Commercial Source License', price: 199, term: 'Perpetual single-client deployment', scope: 'Source blueprint, schema.sql, React frontend' },
-    team: { name: 'Commercial Agency Team Seat', price: 599, term: 'Up to 5 developer seats, 3 client deployments', scope: 'Includes private GitHub repository access & updates' },
-    lease: { name: 'Managed Hosted Subscription Lease', price: 450, term: 'Monthly managed sandbox hosting with 99.9% SLA', scope: 'Customer-configured demo instance with managed backups' },
-    fleet: { name: 'Full Enterprise Fleet License Pack', price: 2999, term: '50-blueprint commercial deployment pack', scope: 'Unlimited internal customization and white-labeling' },
+    retail: { 
+      name: isTrack2 ? 'Flagship Commercial Source License' : 'Non-Exclusive Commercial Source License', 
+      price: isTrack2 ? 1500 : 199, 
+      term: 'Perpetual single-client deployment', 
+      scope: isTrack2 ? 'Full Tier-1 SCADA source blueprint, physics solver, Postgres schema, and operator console' : 'Source blueprint, schema.sql, React frontend' 
+    },
+    team: { 
+      name: isTrack2 ? 'Flagship Multi-Seat Engineering Team' : 'Commercial Agency Team Seat', 
+      price: isTrack2 ? 3500 : 599, 
+      term: 'Up to 5 developer seats, 3 client deployments', 
+      scope: 'Includes private GitHub repository access & updates' 
+    },
+    lease: { 
+      name: 'Managed Hosted Subscription Lease', 
+      price: isTrack2 ? 950 : 450, 
+      term: 'Monthly managed sandbox hosting with 99.9% SLA', 
+      scope: 'Customer-configured demo instance with managed telemetry feeds' 
+    },
+    fleet: { 
+      name: isTrack2 ? 'Exclusive Micro-APA Buyout Anchor' : 'Full Enterprise Fleet License Pack', 
+      price: isTrack2 ? 14500 : 2999, 
+      term: isTrack2 ? 'Asset Purchase Agreement (APA) Exclusive Buyout' : '50-blueprint commercial deployment pack', 
+      scope: isTrack2 ? 'Selective micro-APA ownership transfer for single asset (strictly excludes factory core)' : 'Unlimited internal customization and white-labeling' 
+    },
   };
 
   const currentTier = licenseTiers[selectedLicense];
@@ -129,8 +151,8 @@ export const ShowroomEngineScreen: React.FC<ShowroomEngineScreenProps> = ({
                 <span className="text-xs font-mono text-zinc-400 bg-zinc-900 px-2 py-0.5 rounded border border-zinc-800">
                   SPECIFICATION SHEET // MODEL #{selectedProduct.id?.toString().padStart(3, '0')}
                 </span>
-                <span className="text-xs font-mono text-emerald-400 bg-emerald-950/30 px-2 py-0.5 rounded border border-emerald-500/30">
-                  Commercial License Ready
+                <span className={`text-xs font-mono px-2 py-0.5 rounded border ${isTrack2 ? 'text-amber-400 bg-amber-950/40 border-amber-500/40 font-bold' : 'text-emerald-400 bg-emerald-950/30 border-emerald-500/30'}`}>
+                  {isTrack2 ? 'TRACK 2 FLAGSHIP TIER-1 ($14.5k ANCHOR)' : 'TRACK 1 COMMERCIAL READY ($199 MSRP)'}
                 </span>
               </div>
               <h2 className="text-2xl sm:text-3xl font-black text-white">

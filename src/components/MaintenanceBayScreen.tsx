@@ -18,7 +18,7 @@ interface MaintenanceBayScreenProps {
 
 export const MaintenanceBayScreen: React.FC<MaintenanceBayScreenProps> = ({
   products,
-  totalAssets: _totalAssets
+  totalAssets
 }) => {
   const [isRunningAudit, setIsRunningAudit] = useState(false);
   const [auditMessage, setAuditMessage] = useState<string | null>(null);
@@ -29,7 +29,7 @@ export const MaintenanceBayScreen: React.FC<MaintenanceBayScreenProps> = ({
     { id: 2, title: 'Verify RLS demo isolation policies across all 16 Wealth & Banking blueprints', domain: 'Security & RLS', status: 'COMPLETED', assignee: 'Security Lead' },
     { id: 3, title: 'Update Tailwind token references on Heavy Fleet & Mining crawler prototypes', domain: 'Frontend Core', status: 'PENDING', assignee: 'Design Systems' },
     { id: 4, title: 'Audit Gumroad commercial checkout webhooks and license dispatch automation', domain: 'Storefront', status: 'COMPLETED', assignee: 'Operations' },
-    { id: 5, title: 'Verify simulated data disclosure labels on all 85 public showroom listings', domain: 'Compliance', status: 'COMPLETED', assignee: 'Legal & Risk' },
+    { id: 5, title: `Verify simulated data disclosure labels on all ${totalAssets} public showroom listings`, domain: 'Compliance', status: 'COMPLETED', assignee: 'Legal & Risk' },
   ]);
 
   const handleToggleTask = (id: number) => {
@@ -49,7 +49,7 @@ export const MaintenanceBayScreen: React.FC<MaintenanceBayScreenProps> = ({
     setAuditMessage(null);
     setTimeout(() => {
       setIsRunningAudit(false);
-      setAuditMessage(`SYSTEM TELEMETRY AUDIT COMPLETE: 85/85 endpoints verified. HTTP 200 OK across all Render/Vercel hosted instances. 0 broken seed files. All simulated data disclosure disclaimers intact.`);
+      setAuditMessage(`SYSTEM TELEMETRY AUDIT COMPLETE: ${totalAssets}/${totalAssets} endpoints verified. HTTP 200 OK across all Render/Vercel hosted instances. 0 broken seed files. All simulated data disclosure disclaimers intact.`);
     }, 1500);
   };
 
@@ -68,7 +68,7 @@ export const MaintenanceBayScreen: React.FC<MaintenanceBayScreenProps> = ({
               FLEET TELEMETRY & <span className="text-purple-400 font-mono">PIT CREW DIAGNOSTICS</span>
             </h1>
             <p className="text-slate-300 text-xs sm:text-sm mt-1 max-w-2xl leading-relaxed">
-              Automated health monitoring across all 85 digital vehicles. Continuous checks for HTTP availability, schema integrity, and compliance disclosures.
+              Automated health monitoring across all {totalAssets} digital vehicles. Continuous checks for HTTP availability, schema integrity, and compliance disclosures.
             </p>
           </div>
 
@@ -99,7 +99,7 @@ export const MaintenanceBayScreen: React.FC<MaintenanceBayScreenProps> = ({
             <span className="uppercase text-[10px] font-bold">Route Uptime (200 OK)</span>
             <Server size={14} className="text-emerald-400" />
           </div>
-          <span className="text-2xl font-black text-white">85 / 85</span>
+          <span className="text-2xl font-black text-white">{totalAssets} / {totalAssets}</span>
           <span className="text-[10px] text-emerald-400 block mt-1 font-semibold">100% Hosted Endpoints Online</span>
         </div>
 

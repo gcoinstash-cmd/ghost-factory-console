@@ -31,7 +31,7 @@ export type RarityTier = 'Mythic Candidate' | 'Legendary' | 'Elite' | 'Rare' | '
 export function getRarityTier(product: ProductItem): RarityTier {
   const name = product.name.toLowerCase();
   const cat = product.category.toLowerCase();
-  if (product.id === 109 || name.includes('eclss') || cat.includes('scada') || name.includes('mining') || name.includes('hypersonic') || name.includes('laser isl') || name.includes('aegis')) {
+  if (product.id >= 86 || product.flagship_qualified || product.pricing_track?.includes('Track 2') || name.includes('eclss') || cat.includes('scada') || name.includes('mining') || name.includes('hypersonic') || name.includes('laser isl') || name.includes('aegis')) {
     return 'Mythic Candidate';
   }
   if (product.audit_score >= 9.6 && (product.vertical === 'heavy_fleet' || product.vertical === 'wealth' || product.vertical === 'medical')) {
@@ -129,28 +129,28 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
           <div className="w-full lg:w-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 bg-black/70 p-4 rounded-xl border border-white/10 text-xs">
             <div className="p-1">
               <span className="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Fair Market Value</span>
-              <span className="text-sm sm:text-base font-black text-emerald-400">$25.5k – $40.3k</span>
+              <span className="text-sm sm:text-base font-black text-emerald-400">$85.5k – $148.4k</span>
               <span className="text-[10px] text-emerald-300 block font-semibold">Anchor: ~${planningValue.toLocaleString()}</span>
             </div>
             <div className="p-1 border-l border-white/10 pl-3">
               <span className="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Direct B2B Ask</span>
-              <span className="text-sm sm:text-base font-black text-cyan-400">$49.0k – $59.0k</span>
+              <span className="text-sm sm:text-base font-black text-cyan-400">$145.0k – $185.0k</span>
               <span className="text-[10px] text-cyan-300 block font-semibold">Data Room Ask</span>
             </div>
             <div className="p-1 border-l border-white/10 pl-3">
               <span className="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Realistic Accepted</span>
-              <span className="text-sm sm:text-base font-black text-amber-400">$28.0k – $36.0k</span>
+              <span className="text-sm sm:text-base font-black text-amber-400">$95.0k – $125.0k</span>
               <span className="text-[10px] text-amber-300 block font-semibold">Negotiated LOI Wire</span>
             </div>
             <div className="p-1 border-l border-white/10 pl-3">
               <span className="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Dev Replacement</span>
-              <span className="text-sm sm:text-base font-black text-purple-400">$340k – $850k</span>
+              <span className="text-sm sm:text-base font-black text-purple-400">$700k – $1.69M</span>
               <span className="text-[10px] text-purple-300 block font-semibold">Cost to Duplicate</span>
             </div>
             <div className="p-1 border-l border-white/10 pl-3 col-span-2 sm:col-span-1">
               <span className="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Exclusive Buyout</span>
-              <span className="text-sm sm:text-base font-black text-pink-400">$3,800 – $6,500</span>
-              <span className="text-[10px] text-pink-300 block font-semibold">Anchor: $4,500 (T1)</span>
+              <span className="text-sm sm:text-base font-black text-pink-400">$14,500 Anchor</span>
+              <span className="text-[10px] text-pink-300 block font-semibold">T2 ($10k–$18k) / T1 ($4.5k)</span>
             </div>
           </div>
         </div>

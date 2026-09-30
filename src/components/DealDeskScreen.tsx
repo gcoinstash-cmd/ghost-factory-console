@@ -104,7 +104,7 @@ export const DealDeskScreen: React.FC<DealDeskScreenProps> = ({
             <div>
               <span className="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Max Transferable</span>
               <span className="text-xl font-black text-amber-400">{maxTransferable} SLOTS</span>
-              <span className="text-[10px] text-amber-300 block">Cap at 85 Fleet</span>
+              <span className="text-[10px] text-amber-300 block">Cap at {totalAssets} Fleet</span>
             </div>
           </div>
         </div>
@@ -244,7 +244,7 @@ export const DealDeskScreen: React.FC<DealDeskScreenProps> = ({
               APA Staging Engine & Floor Breach Safeguard
             </h3>
             <p className="text-xs text-slate-300 mt-1">
-              Guarantees the factory permanently retains at least 80% (68 of 85 assets). Prevents portfolio liquidation.
+              Guarantees the factory permanently retains at least 80% ({retainedFloor} of {totalAssets} assets). Prevents portfolio liquidation.
             </p>
           </div>
 
@@ -254,7 +254,7 @@ export const DealDeskScreen: React.FC<DealDeskScreenProps> = ({
               className="px-3 py-1.5 rounded-lg bg-red-500/20 hover:bg-red-500/30 text-red-300 border border-red-500/40 text-xs font-bold cursor-pointer transition-colors"
               title="Test the 80% Retention Floor Barrier"
             >
-              TEST BREACH SHIELD (&gt;17 ASSETS)
+              TEST BREACH SHIELD (&gt;{maxTransferable} ASSETS)
             </button>
             <button
               onClick={handleResetBasket}
@@ -302,12 +302,12 @@ export const DealDeskScreen: React.FC<DealDeskScreenProps> = ({
                   RETENTION FLOOR BREACH: FACTORY PROTECTION LOCK ACTIVE
                 </h4>
                 <p className="text-xs text-red-200 mt-0.5">
-                  Asset cannot be scheduled for exclusive buyout. Portfolio retention has dropped below the immutable 80% floor (Minimum 68 assets must remain permanently in the factory vault).
+                  Asset cannot be scheduled for exclusive buyout. Portfolio retention has dropped below the immutable 80% floor (Minimum {retainedFloor} assets must remain permanently in the factory vault).
                 </p>
               </div>
             </div>
             <div className="p-3 bg-black/60 rounded-lg border border-red-500/40 text-[11px] text-slate-300">
-              🛡️ <strong>Rule Enforced:</strong> GhostFactoryOS core infrastructure, shared UI token libraries, and at least 80% of digital vehicles are permanently protected from transfer. Max ownership transfer capacity is 17 assets.
+              🛡️ <strong>Rule Enforced:</strong> GhostFactoryOS core infrastructure, shared UI token libraries, and at least 80% of digital vehicles are permanently protected from transfer. Max ownership transfer capacity is {maxTransferable} assets.
             </div>
           </div>
         )}
@@ -341,15 +341,22 @@ export const DealDeskScreen: React.FC<DealDeskScreenProps> = ({
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 text-xs">
             {stagedAssetIds.map((id) => {
-              const product = products.find(p => p.id === id) || { name: `Vehicle #${id}`, category: 'Operations OS' };
+              const product = products.find(p => p.id === id);
+              const isT2 = (product && (product.id >= 86 || product.flagship_qualified || product.pricing_track?.includes('Track 2'))) || id >= 86;
+              const displayName = product?.name || `Vehicle #${id}`;
               return (
                 <div 
                   key={id} 
                   className="bg-black/60 border border-white/10 rounded-xl p-3 flex items-center justify-between gap-2"
                 >
                   <div className="space-y-0.5">
-                    <span className="text-[10px] text-slate-500 font-mono">SLOT #{id.toString().padStart(3, '0')}</span>
-                    <p className="font-bold text-white line-clamp-1">{product.name}</p>
+                    <div className="flex items-center gap-1.5">
+                      <span className="text-[10px] text-slate-500 font-mono">SLOT #{id.toString().padStart(3, '0')}</span>
+                      <span className={`text-[9px] px-1 rounded font-bold ${isT2 ? 'bg-amber-500/20 text-amber-300' : 'bg-emerald-500/20 text-emerald-300'}`}>
+                        {isT2 ? 'T2 ($14.5k)' : 'T1 ($4.5k)'}
+                      </span>
+                    </div>
+                    <p className="font-bold text-white line-clamp-1">{displayName}</p>
                   </div>
                   <button
                     onClick={() => handleRemoveStagedAsset(id)}
@@ -367,7 +374,12 @@ export const DealDeskScreen: React.FC<DealDeskScreenProps> = ({
         {/* Deal Action Buttons */}
         <div className="border-t border-white/10 pt-4 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="text-xs text-slate-400">
-            Est. Staged APA Value: <strong className="text-white">${(stagedAssetIds.length * 4500).toLocaleString()} USD</strong> (Track 1 Anchor)
+            Est. Staged APA Value: <strong className="text-white">
+              ${stagedAssetIds.reduce((sum, id) => {
+                const p = products.find(x => x.id === id);
+                return sum + ((p?.flagship_qualified || p?.pricing_track?.includes('Track 2') || id >= 86) ? 14500 : 4500);
+              }, 0).toLocaleString()} USD
+            </strong> (Dual-Track Anchors)
           </div>
 
           <div className="flex items-center gap-3 w-full sm:w-auto">

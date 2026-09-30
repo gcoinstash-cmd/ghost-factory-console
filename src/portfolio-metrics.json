@@ -1,7 +1,9 @@
 {
   "catalogTotal": 109,
+  "track1Count": 85,
+  "track2Count": 24,
   "unitRetailPrice": 199,
-  "retailShelfMSRP": 21691,
+  "retailShelfMSRP": 52915,
   "buildVerified": 109,
   "previewHttp200": 109,
   "diligenceGrade": "L3-SUPABASE-READY",
@@ -10,28 +12,29 @@
   "retainedFloorCount": 87,
   "maxApaCapacity": 22,
   "valuationAppraisal": {
-    "planningFmv": 42500,
+    "planningFmv": 115000,
     "fmvRange": [
-      32700,
-      51775
+      85500,
+      148375
     ],
     "strategicAskRange": [
-      62000,
-      75000
+      145000,
+      185000
     ],
     "realisticAcceptedRange": [
-      36000,
-      46000
+      95000,
+      125000
     ],
     "replacementDevLabor": [
-      436000,
-      1090000
+      700000,
+      1690000
     ],
-    "status": "PRE_REVENUE_SIMULATED_DEMOS"
+    "status": "PRE_REVENUE_SIMULATED_DEMOS",
+    "notes": "85 Lean Rapid-Sale Track 1 (.5k anchor) + 24 Flagship Tier-1 Track 2 (.5k anchor)"
   },
   "pricingProtocol": {
     "track1": {
-      "name": "Lean Rapid-Sale Track (Default)",
+      "name": "Lean Rapid-Sale Track (85 Models)",
       "retailMsrp": 199,
       "teamSeat": 599,
       "buyoutFloor": [
@@ -41,7 +44,7 @@
       "buyoutAnchor": 4500
     },
     "track2": {
-      "name": "Flagship K+ Track (Selective Tier-1)",
+      "name": "Flagship K+ Track (24 Elite Models)",
       "commercialLicense": [
         1500,
         3500
@@ -83,5 +86,5 @@
     "C": 30,
     "E": 14
   },
-  "verifiedTimestamp": "2026-09-30T10:18:00Z"
+  "verifiedTimestamp": "2026-09-30T10:26:00Z"
 }
