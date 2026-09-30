@@ -125,27 +125,32 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
             </p>
           </div>
 
-          {/* Core HUD Metric Badges */}
-          <div className="w-full lg:w-auto grid grid-cols-2 sm:grid-cols-4 gap-3 bg-black/70 p-4 rounded-xl border border-white/10 text-xs">
+          {/* 5 Core Valuation HUD Metric Badges */}
+          <div className="w-full lg:w-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 bg-black/70 p-4 rounded-xl border border-white/10 text-xs">
             <div className="p-1">
-              <span className="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Catalog Inventory</span>
-              <span className="text-lg sm:text-xl font-black text-white">{totalAssets} / 500</span>
-              <span className="text-[10px] text-emerald-400 block font-semibold">17% of 500 Target</span>
+              <span className="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Fair Market Value</span>
+              <span className="text-sm sm:text-base font-black text-emerald-400">$25.5k – $40.3k</span>
+              <span className="text-[10px] text-emerald-300 block font-semibold">Anchor: ~${planningValue.toLocaleString()}</span>
             </div>
             <div className="p-1 border-l border-white/10 pl-3">
-              <span className="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Protected Core</span>
-              <span className="text-lg sm:text-xl font-black text-cyan-400">{retainedFloor} ASSETS</span>
-              <span className="text-[10px] text-cyan-300 block font-semibold">80% Immutable Floor</span>
+              <span className="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Direct B2B Ask</span>
+              <span className="text-sm sm:text-base font-black text-cyan-400">$49.0k – $59.0k</span>
+              <span className="text-[10px] text-cyan-300 block font-semibold">Data Room Ask</span>
             </div>
             <div className="p-1 border-l border-white/10 pl-3">
-              <span className="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Available APA Slots</span>
-              <span className="text-lg sm:text-xl font-black text-amber-400">{availableApaSlots} MAX</span>
-              <span className="text-[10px] text-amber-300 block font-semibold">Non-Core Transfers</span>
+              <span className="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Realistic Accepted</span>
+              <span className="text-sm sm:text-base font-black text-amber-400">$28.0k – $36.0k</span>
+              <span className="text-[10px] text-amber-300 block font-semibold">Negotiated LOI Wire</span>
             </div>
             <div className="p-1 border-l border-white/10 pl-3">
-              <span className="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Planning FMV</span>
-              <span className="text-lg sm:text-xl font-black text-purple-400">~${planningValue.toLocaleString()}</span>
-              <span className="text-[10px] text-purple-300 block font-semibold">$25.5k–$40.3k FMV</span>
+              <span className="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Dev Replacement</span>
+              <span className="text-sm sm:text-base font-black text-purple-400">$340k – $850k</span>
+              <span className="text-[10px] text-purple-300 block font-semibold">Cost to Duplicate</span>
+            </div>
+            <div className="p-1 border-l border-white/10 pl-3 col-span-2 sm:col-span-1">
+              <span className="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Exclusive Buyout</span>
+              <span className="text-sm sm:text-base font-black text-pink-400">$3,800 – $6,500</span>
+              <span className="text-[10px] text-pink-300 block font-semibold">Anchor: $4,500 (T1)</span>
             </div>
           </div>
         </div>
@@ -158,7 +163,7 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
               <span>Immutable Portfolio Retention Floor Shield:</span>
               <strong className="text-emerald-400">80% Locked ({retainedFloor} of {totalAssets} Vehicles Permanent)</strong>
             </span>
-            <span className="text-amber-400 font-bold">17 Slots Transferable</span>
+            <span className="text-amber-400 font-bold">{availableApaSlots} Slots Transferable</span>
           </div>
           <div className="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden flex">
             <div className="bg-emerald-500 h-full transition-all" style={{ width: `80%` }} title="80% Protected Factory Core" />

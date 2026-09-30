@@ -88,6 +88,69 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
         </div>
       </div>
 
+      {/* PERSISTENT 5-PILLAR VALUATION HUD RIBBON */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 py-2.5 border-b border-white/10 text-xs">
+        {/* 1. Fair Market Value */}
+        <div className="bg-black/60 border border-emerald-500/30 rounded-xl p-2.5 flex flex-col justify-between hover:border-emerald-400 transition-colors">
+          <div className="flex items-center justify-between text-slate-400 text-[10px] font-bold uppercase tracking-wider">
+            <span>Fair Market Value</span>
+            <span className="text-emerald-400 font-mono text-[9px] bg-emerald-950/40 px-1 py-0.2 rounded border border-emerald-500/30">FMV</span>
+          </div>
+          <div className="mt-1">
+            <span className="text-sm sm:text-base font-black text-emerald-400 block">$25,500 – $40,375</span>
+            <span className="text-[10px] text-slate-400 block font-sans">Anchor: ~$33,000 (Pre-Rev)</span>
+          </div>
+        </div>
+
+        {/* 2. Direct B2B Ask */}
+        <div className="bg-black/60 border border-cyan-500/30 rounded-xl p-2.5 flex flex-col justify-between hover:border-cyan-400 transition-colors">
+          <div className="flex items-center justify-between text-slate-400 text-[10px] font-bold uppercase tracking-wider">
+            <span>Direct B2B Ask</span>
+            <span className="text-cyan-400 font-mono text-[9px] bg-cyan-950/40 px-1 py-0.2 rounded border border-cyan-500/30">ASK</span>
+          </div>
+          <div className="mt-1">
+            <span className="text-sm sm:text-base font-black text-cyan-400 block">$49,000 – $59,000</span>
+            <span className="text-[10px] text-slate-400 block font-sans">Data Room Asking Target</span>
+          </div>
+        </div>
+
+        {/* 3. Realistic Accepted Offer */}
+        <div className="bg-black/60 border border-amber-500/30 rounded-xl p-2.5 flex flex-col justify-between hover:border-amber-400 transition-colors">
+          <div className="flex items-center justify-between text-slate-400 text-[10px] font-bold uppercase tracking-wider">
+            <span>Realistic Accepted Offer</span>
+            <span className="text-amber-400 font-mono text-[9px] bg-amber-950/40 px-1 py-0.2 rounded border border-amber-500/30">LOI</span>
+          </div>
+          <div className="mt-1">
+            <span className="text-sm sm:text-base font-black text-amber-400 block">$28,000 – $36,000</span>
+            <span className="text-[10px] text-slate-400 block font-sans">Quick-Close / Wire Ready</span>
+          </div>
+        </div>
+
+        {/* 4. Replacement Development Cost */}
+        <div className="bg-black/60 border border-purple-500/30 rounded-xl p-2.5 flex flex-col justify-between hover:border-purple-400 transition-colors">
+          <div className="flex items-center justify-between text-slate-400 text-[10px] font-bold uppercase tracking-wider">
+            <span>Dev Replacement Cost</span>
+            <span className="text-purple-400 font-mono text-[9px] bg-purple-950/40 px-1 py-0.2 rounded border border-purple-500/30">DEV</span>
+          </div>
+          <div className="mt-1">
+            <span className="text-sm sm:text-base font-black text-purple-400 block">$340k – $850k</span>
+            <span className="text-[10px] text-slate-400 block font-sans">Agency Cost to Duplicate</span>
+          </div>
+        </div>
+
+        {/* 5. Exclusive Buyout */}
+        <div className="bg-black/60 border border-pink-500/30 rounded-xl p-2.5 flex flex-col justify-between col-span-2 sm:col-span-1 hover:border-pink-400 transition-colors">
+          <div className="flex items-center justify-between text-slate-400 text-[10px] font-bold uppercase tracking-wider">
+            <span>Exclusive Buyout</span>
+            <span className="text-pink-400 font-mono text-[9px] bg-pink-950/40 px-1 py-0.2 rounded border border-pink-500/30">APA</span>
+          </div>
+          <div className="mt-1">
+            <span className="text-sm sm:text-base font-black text-pink-400 block">$3,800 – $6,500</span>
+            <span className="text-[10px] text-slate-400 block font-sans">Track 1 ($4.5k) / T2 ($14.5k)</span>
+          </div>
+        </div>
+      </div>
+
       {/* Screen Navigation Tabs (Screens 1 to 5) */}
       <nav className="flex items-center gap-2 pt-2.5 overflow-x-auto no-scrollbar">
         <button
