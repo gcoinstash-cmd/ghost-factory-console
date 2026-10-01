@@ -41,10 +41,10 @@ export const CATALOG_DATA = {
   "database_engine": "Supabase PostgreSQL (RLS Enabled)",
   "frontend_stack": "React 19 + Tailwind CSS + Lucide Icons + Vite",
   "valuation_framework": {
-    "total_products": 110,
+    "total_products": 85,
     "agency_whitelabel_vault_per_license": 2999,
     "retail_shelf_msrp_starter_ui": 6715,
-    "retail_shelf_msrp_full_stack": 54415,
+    "retail_shelf_msrp_full_stack": 16915,
     "pre_revenue_liquidation_protocol": {
       "fire_sale_24_72h": {
         "per_product_min": 250,
@@ -86,20 +86,13 @@ export const CATALOG_DATA = {
       "vertical": "fitness",
       "archetype_id": "A",
       "archetype_name": "Archetype A: Dense Operational Console",
-      "archetype_description": "Persistent utility rail, simulated operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
+      "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
       "design_benchmark": "Sneaker Con & Flight Club Authentication Console",
       "checkout_active": true,
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/stride-mb",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
@@ -126,14 +119,7 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/the-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
@@ -154,20 +140,13 @@ export const CATALOG_DATA = {
       "vertical": "automotive",
       "archetype_id": "A",
       "archetype_name": "Archetype A: Dense Operational Console",
-      "archetype_description": "Persistent utility rail, simulated operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
+      "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
       "design_benchmark": "Exotic Fleet Telematics & GPS Triage",
       "checkout_active": true,
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/velocity-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
@@ -194,14 +173,7 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/apex-club-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
@@ -228,14 +200,7 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/elevate-capital-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
@@ -262,14 +227,7 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/obsidian-lab-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
@@ -297,14 +255,7 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/the-enclave-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
@@ -331,14 +282,7 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/aura-medspa-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
@@ -365,14 +309,7 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/royal-apex-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
@@ -390,7 +327,7 @@ export const CATALOG_DATA = {
         "vintage_allocations",
         "vault_lockers"
       ],
-      "vertical": "wealth",
+      "vertical": "hospitality",
       "archetype_id": "D",
       "archetype_name": "Archetype D: Timeline & Station Reservation Grid",
       "archetype_description": "Interactive day/hour time-slot matrix, capacity/station status indicators, and instant seat/pod booking for Michelin dining, private clubs, and recovery labs.",
@@ -399,16 +336,9 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/aura-reserve-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 11,
@@ -433,14 +363,7 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/monolith-studio-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
@@ -467,14 +390,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
@@ -501,14 +417,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
@@ -525,7 +434,7 @@ export const CATALOG_DATA = {
         "accommodation_tiers",
         "cohort_applications"
       ],
-      "vertical": "medical",
+      "vertical": "hospitality",
       "archetype_id": "D",
       "archetype_name": "Archetype D: Timeline & Station Reservation Grid",
       "archetype_description": "Interactive day/hour time-slot matrix, capacity/station status indicators, and instant seat/pod booking for Michelin dining, private clubs, and recovery labs.",
@@ -534,16 +443,9 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 15,
@@ -567,14 +469,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
@@ -600,14 +495,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
@@ -624,7 +512,7 @@ export const CATALOG_DATA = {
         "raw_essence_vault",
         "house_signatures"
       ],
-      "vertical": "medical",
+      "vertical": "creative",
       "archetype_id": "C",
       "archetype_name": "Archetype C: Step-by-Step Calculator / Wizard",
       "archetype_description": "Stateful multi-stage progression stepper, interactive pricing/spec tally, and stage-by-stage validation for underwriting, legal retainers, and clinical intake.",
@@ -633,16 +521,9 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 18,
@@ -666,14 +547,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
@@ -700,14 +574,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
@@ -734,14 +601,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
@@ -768,14 +628,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
@@ -802,14 +655,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
@@ -830,20 +676,13 @@ export const CATALOG_DATA = {
       "vertical": "automotive",
       "archetype_id": "A",
       "archetype_name": "Archetype A: Dense Operational Console",
-      "archetype_description": "Persistent utility rail, simulated operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
+      "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
       "design_benchmark": "Hennessey Performance Dyno Dispatch Console",
       "checkout_active": false,
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
@@ -851,7 +690,7 @@ export const CATALOG_DATA = {
       "id": 24,
       "name": "VILLA OBSIDIAN",
       "category": "Ultra-Luxury Architectural Estates & Private Villa OS",
-      "vertical": "wealth",
+      "vertical": "hospitality",
       "gumroad_url": "https://auraandgrid.gumroad.com/l/villa-obsidian-os",
       "preview_url": "https://villa-obsidian-os.onrender.com",
       "admin_url": "https://villa-obsidian-os.onrender.com",
@@ -871,16 +710,9 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 25,
@@ -905,14 +737,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
@@ -934,20 +759,13 @@ export const CATALOG_DATA = {
       ],
       "archetype_id": "A",
       "archetype_name": "Archetype A: Dense Operational Console",
-      "archetype_description": "Persistent utility rail, simulated operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
+      "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
       "design_benchmark": "Shake Shack Kitchen Display System Console",
       "checkout_active": false,
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
@@ -955,7 +773,7 @@ export const CATALOG_DATA = {
       "id": 27,
       "name": "AURA FRAGRANCE",
       "category": "Haute Parfumerie, Bespoke Scent Formulation & Olfactory Atelier OS",
-      "vertical": "medical",
+      "vertical": "creative",
       "gumroad_url": "https://auraandgrid.gumroad.com/l/aura-fragrance-os",
       "preview_url": "https://aura-fragrance-os.onrender.com",
       "admin_url": "https://aura-fragrance-os.onrender.com/admin",
@@ -974,16 +792,9 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 28,
@@ -1008,14 +819,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
@@ -1042,14 +846,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
@@ -1075,14 +872,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
@@ -1090,7 +880,7 @@ export const CATALOG_DATA = {
       "id": 31,
       "name": "DIAMOND CUTS",
       "category": "Luxury Barber Salon, Chair Scheduling & Grooming Atelier Floor OS",
-      "vertical": "medical",
+      "vertical": "creative",
       "gumroad_url": "https://auraandgrid.gumroad.com/l/diamond-cuts-os",
       "preview_url": "https://diamond-cuts-os.onrender.com",
       "admin_url": "https://diamond-cuts-os.onrender.com/admin",
@@ -1108,22 +898,15 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 32,
       "name": "CROWN & COLLECTIVE",
       "category": "Boutique Barber Atelier, VIP Chair Booking & Haircare Goods OS",
-      "vertical": "medical",
+      "vertical": "creative",
       "gumroad_url": "https://auraandgrid.gumroad.com/l/crown-collective-os",
       "preview_url": "https://crown-collective-os.onrender.com",
       "admin_url": "https://crown-collective-os.onrender.com/admin",
@@ -1142,16 +925,9 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 33,
@@ -1175,14 +951,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
@@ -1208,21 +977,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 35,
       "name": "BBQ PIT",
-      "category": "Oak Smokehouse, Simulated Smoker Pit Telemetry & Kitchen Dispatch OS",
+      "category": "Oak Smokehouse, Real-Time Smoker Pit Telemetry & Kitchen Dispatch OS",
       "vertical": "hospitality",
       "gumroad_url": "https://auraandgrid.gumroad.com/l/bbq-pit-os",
       "preview_url": "https://bbq-pit-os.onrender.com",
@@ -1235,20 +997,13 @@ export const CATALOG_DATA = {
       ],
       "archetype_id": "A",
       "archetype_name": "Archetype A: Dense Operational Console",
-      "archetype_description": "Persistent utility rail, simulated operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
+      "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
       "design_benchmark": "Franklin Barbecue Pitmaster Probe Telemetry Console",
       "checkout_active": false,
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
@@ -1274,14 +1029,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
@@ -1308,14 +1056,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
@@ -1342,14 +1083,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
@@ -1376,14 +1110,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
@@ -1410,14 +1137,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
@@ -1444,14 +1164,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
@@ -1472,20 +1185,13 @@ export const CATALOG_DATA = {
       ],
       "archetype_id": "A",
       "archetype_name": "Archetype A: Dense Operational Console",
-      "archetype_description": "Persistent utility rail, simulated operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
+      "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
       "design_benchmark": "RWB Porsche Tuning Bay Dispatch Console",
       "checkout_active": false,
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
@@ -1493,7 +1199,7 @@ export const CATALOG_DATA = {
       "id": 43,
       "name": "SPA TREATMENT OS",
       "category": "Ultra-Luxury Spa Treatment, Ritual Booking & Wellness Sanctuary OS",
-      "vertical": "medical",
+      "vertical": "hospitality",
       "gumroad_url": "https://auraandgrid.gumroad.com/l/spa-treatment-os",
       "preview_url": "https://spa-treatment-os.onrender.com",
       "admin_url": "https://spa-treatment-os.onrender.com/admin",
@@ -1512,16 +1218,9 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 44,
@@ -1545,14 +1244,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
@@ -1579,14 +1271,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
@@ -1612,14 +1297,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
@@ -1646,14 +1324,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
@@ -1673,20 +1344,13 @@ export const CATALOG_DATA = {
       ],
       "archetype_id": "A",
       "archetype_name": "Archetype A: Dense Operational Console",
-      "archetype_description": "Persistent utility rail, simulated operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
+      "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
       "design_benchmark": "In-N-Out Supercar Drive-Thru RFID Dispatch",
       "checkout_active": false,
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
@@ -1711,14 +1375,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
@@ -1738,20 +1395,13 @@ export const CATALOG_DATA = {
       ],
       "archetype_id": "A",
       "archetype_name": "Archetype A: Dense Operational Console",
-      "archetype_description": "Persistent utility rail, simulated operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
+      "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
       "design_benchmark": "Eleven Madison Park BOH Station Velocity Console",
       "checkout_active": false,
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
@@ -1772,20 +1422,13 @@ export const CATALOG_DATA = {
       ],
       "archetype_id": "A",
       "archetype_name": "Archetype A: Dense Operational Console",
-      "archetype_description": "Persistent utility rail, simulated operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
+      "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
       "design_benchmark": "Kogi BBQ Live GPS Food Truck Dispatch Console",
       "checkout_active": false,
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
@@ -1811,14 +1454,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
@@ -1844,14 +1480,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
@@ -1877,14 +1506,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
@@ -1910,14 +1532,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
@@ -1938,20 +1553,13 @@ export const CATALOG_DATA = {
       ],
       "archetype_id": "A",
       "archetype_name": "Archetype A: Dense Operational Console",
-      "archetype_description": "Persistent utility rail, simulated operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
+      "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
       "design_benchmark": "Carrier Chiller Plant & Commercial Dispatch Console",
       "checkout_active": false,
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
@@ -1978,16 +1586,9 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 58,
@@ -2006,22 +1607,15 @@ export const CATALOG_DATA = {
       ],
       "archetype_id": "A",
       "archetype_name": "Archetype A: Dense Operational Console",
-      "archetype_description": "Persistent utility rail, simulated operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
+      "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
       "design_benchmark": "Roto-Rooter Commercial Hydraulic Ops Console",
       "checkout_active": false,
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 59,
@@ -2046,14 +1640,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
@@ -2074,20 +1661,13 @@ export const CATALOG_DATA = {
       ],
       "archetype_id": "A",
       "archetype_name": "Archetype A: Dense Operational Console",
-      "archetype_description": "Persistent utility rail, simulated operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
+      "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
       "design_benchmark": "ABB Medium-Voltage Switchgear & EV Crew Console",
       "checkout_active": false,
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
@@ -2114,14 +1694,7 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/boutique-dental-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
@@ -2148,14 +1721,7 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/veterinary-hospital-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
@@ -2182,14 +1748,7 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/functional-medicine-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
@@ -2216,14 +1775,7 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/physical-therapy-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
@@ -2250,14 +1802,7 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/recovery-spa-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
@@ -2284,14 +1829,7 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/boutique-law-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
@@ -2317,14 +1855,7 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/ma-advisory-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
@@ -2350,14 +1881,7 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/executive-search-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
@@ -2383,14 +1907,7 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/wealth-family-office-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
@@ -2416,14 +1933,7 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/litigation-ops-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
@@ -2444,20 +1954,13 @@ export const CATALOG_DATA = {
       ],
       "archetype_id": "A",
       "archetype_name": "Archetype A: Dense Operational Console",
-      "archetype_description": "Persistent utility rail, simulated operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
+      "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
       "design_benchmark": "United Rentals Heavy Fleet Telematics Console",
       "checkout_active": false,
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
@@ -2478,20 +1981,13 @@ export const CATALOG_DATA = {
       ],
       "archetype_id": "C",
       "archetype_name": "Archetype C: Step-by-Step Calculator / Wizard",
-      "archetype_description": "Persistent utility rail, simulated operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
+      "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
       "design_benchmark": "C.H. Robinson Intermodal Freight Margin & Route Stepper",
       "checkout_active": false,
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
@@ -2518,14 +2014,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
@@ -2546,20 +2035,13 @@ export const CATALOG_DATA = {
       ],
       "archetype_id": "D",
       "archetype_name": "Archetype D: Timeline & Station Reservation Grid",
-      "archetype_description": "Persistent utility rail, simulated operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
+      "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
       "design_benchmark": "Lineage Logistics 24-Hour Reefer Dock Reservation Matrix",
       "checkout_active": false,
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
@@ -2580,20 +2062,13 @@ export const CATALOG_DATA = {
       ],
       "archetype_id": "E",
       "archetype_name": "Archetype E: Split-Screen Spec & Proof Panel",
-      "archetype_description": "Persistent utility rail, simulated operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
+      "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
       "design_benchmark": "Mammoet Heavy Lift Load Radius & OSHA Proof Panel",
       "checkout_active": false,
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
@@ -2620,14 +2095,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
@@ -2648,20 +2116,13 @@ export const CATALOG_DATA = {
       ],
       "archetype_id": "A",
       "archetype_name": "Archetype A: Dense Operational Console",
-      "archetype_description": "Persistent utility rail, simulated operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
+      "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
       "design_benchmark": "Samsara Mobile Fleet DI Water & Triage Dispatch Console",
       "checkout_active": false,
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
@@ -2688,14 +2149,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
@@ -2722,14 +2176,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
@@ -2756,16 +2203,9 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 81,
@@ -2790,14 +2230,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
@@ -2824,14 +2257,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
@@ -2858,14 +2284,7 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
@@ -2873,7 +2292,7 @@ export const CATALOG_DATA = {
       "id": 84,
       "name": "LUXURY HOROLOGY VAULT OS",
       "category": "Chrono Inspection, Caliber Specs & Provenance Certificate OS",
-      "vertical": "wealth",
+      "vertical": "creative",
       "gumroad_url": "https://auraandgrid.gumroad.com/l/luxury-horology-vault-os",
       "preview_url": "https://gcoinstash-cmd.github.io/luxury-horology-vault-os/",
       "admin_url": "https://gcoinstash-cmd.github.io/luxury-horology-vault-os/admin",
@@ -2892,16 +2311,9 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 85,
@@ -2920,20 +2332,13 @@ export const CATALOG_DATA = {
       ],
       "archetype_id": "A",
       "archetype_name": "Archetype A: Dense Operational Console",
-      "archetype_description": "Persistent utility rail, simulated operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
+      "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
       "design_benchmark": "Aman Resorts Private Villa Concierge & Butler Console",
       "checkout_active": false,
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Postgres Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 1 - Lean Rapid-Sale",
-      "truth_label": "Interactive Prototype // Simulated Data Only",
-      "exclusive_buyout_anchor": 4500,
-      "exclusive_buyout_range": [
-        3800,
-        6500
-      ],
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
@@ -2957,11 +2362,11 @@ export const CATALOG_DATA = {
       "archetype_description": "Fleet asset tracking, dispatch coordination, and route telemetry.",
       "design_benchmark": "Flexport Global Logistics & Samsara Fleet Hub",
       "checkout_active": true,
-      "status_badge": "Track 2 Flagship Candidate",
+      "status_badge": "Flagship Interactive Prototype",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/aegis-swarm-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "SCADA/Aerospace Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 2 - Flagship Candidate",
+      "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 2 — Flagship Tier-1 ($14,500 Anchor)",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
@@ -2969,21 +2374,8 @@ export const CATALOG_DATA = {
         10000,
         18000
       ],
-      "truth_label": "Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit",
-      "flagship_license_range": [
-        1500,
-        3500
-      ],
-      "full_asset_buyout_range": [
-        18000,
-        35000
-      ],
-      "strategic_acquisition_range": [
-        35000,
-        75000
-      ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 87,
@@ -2994,10 +2386,7 @@ export const CATALOG_DATA = {
       "admin_url": "https://autonomous-mining-haulage-fleet-dispatch-os.onrender.com/admin",
       "audit_score": 9.8,
       "tables": [
-        "haulage_vehicles",
-        "dispatch_routes",
-        "payload_telemetry",
-        "pit_zones"
+        "IF"
       ],
       "vertical": "subsea",
       "archetype_id": "C",
@@ -3005,11 +2394,11 @@ export const CATALOG_DATA = {
       "archetype_description": "Fleet asset tracking, dispatch coordination, and route telemetry.",
       "design_benchmark": "Flexport Global Logistics & Samsara Fleet Hub",
       "checkout_active": true,
-      "status_badge": "Track 2 Flagship Candidate",
+      "status_badge": "Flagship Interactive Prototype",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/autonomous-mining-haulage-fleet-dispatch-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "SCADA/Aerospace Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 2 - Flagship Candidate",
+      "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 2 — Flagship Tier-1 ($14,500 Anchor)",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
@@ -3017,21 +2406,8 @@ export const CATALOG_DATA = {
         10000,
         18000
       ],
-      "truth_label": "Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit",
-      "flagship_license_range": [
-        1500,
-        3500
-      ],
-      "full_asset_buyout_range": [
-        18000,
-        35000
-      ],
-      "strategic_acquisition_range": [
-        35000,
-        75000
-      ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 88,
@@ -3042,22 +2418,19 @@ export const CATALOG_DATA = {
       "admin_url": "https://autonomous-subsea-mining-crawler-telemetry-os.onrender.com/admin",
       "audit_score": 9.8,
       "tables": [
-        "crawler_units",
-        "bathymetric_scans",
-        "trenching_depths",
-        "slurry_pumps"
+        "IF"
       ],
       "vertical": "subsea",
       "archetype_id": "A",
       "archetype_name": "Archetype A: Dense Operational Console",
-      "archetype_description": "Persistent utility rail, simulated operational triage queue, and slide-out inspection drawer.",
+      "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out inspection drawer.",
       "design_benchmark": "NASA Mission Control & Palantir Foundry Console",
       "checkout_active": true,
-      "status_badge": "Track 2 Flagship Candidate",
+      "status_badge": "Flagship Interactive Prototype",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/autonomous-subsea-mining-crawler-telemetry-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "SCADA/Aerospace Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 2 - Flagship Candidate",
+      "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 2 — Flagship Tier-1 ($14,500 Anchor)",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
@@ -3065,21 +2438,8 @@ export const CATALOG_DATA = {
         10000,
         18000
       ],
-      "truth_label": "Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit",
-      "flagship_license_range": [
-        1500,
-        3500
-      ],
-      "full_asset_buyout_range": [
-        18000,
-        35000
-      ],
-      "strategic_acquisition_range": [
-        35000,
-        75000
-      ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 89,
@@ -3090,10 +2450,7 @@ export const CATALOG_DATA = {
       "admin_url": "https://aviation-fbo-dispatch-os.onrender.com/admin",
       "audit_score": 9.8,
       "tables": [
-        "flight_manifests",
-        "fbo_ramps",
-        "jet_fuel_reserves",
-        "hangar_assignments"
+        "IF"
       ],
       "vertical": "aerospace",
       "archetype_id": "C",
@@ -3101,30 +2458,17 @@ export const CATALOG_DATA = {
       "archetype_description": "Fleet asset tracking, dispatch coordination, and route telemetry.",
       "design_benchmark": "Flexport Global Logistics & Samsara Fleet Hub",
       "checkout_active": true,
-      "status_badge": "Track 2 Flagship Candidate",
+      "status_badge": "Flagship Interactive Prototype",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/aviation-fbo-dispatch-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "SCADA/Aerospace Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 2 - Flagship Candidate",
+      "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 2 — Flagship Tier-1 ($14,500 Anchor)",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
       "exclusive_buyout_range": [
         10000,
         18000
-      ],
-      "truth_label": "Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit",
-      "flagship_license_range": [
-        1500,
-        3500
-      ],
-      "full_asset_buyout_range": [
-        18000,
-        35000
-      ],
-      "strategic_acquisition_range": [
-        35000,
-        75000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
@@ -3138,10 +2482,7 @@ export const CATALOG_DATA = {
       "admin_url": "https://boutique-winery-production-os.onrender.com/admin",
       "audit_score": 9.8,
       "tables": [
-        "vineyard_blocks",
-        "fermentation_tanks",
-        "barrel_aging",
-        "bottling_lots"
+        "IF"
       ],
       "vertical": "hospitality",
       "archetype_id": "B",
@@ -3149,30 +2490,17 @@ export const CATALOG_DATA = {
       "archetype_description": "Dynamic masonry grid, visual filtering, and slide-over commission sheet.",
       "design_benchmark": "LVMH Luxury Atelier & Monaco Yacht Show",
       "checkout_active": true,
-      "status_badge": "Track 2 Flagship Candidate",
+      "status_badge": "Flagship Interactive Prototype",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/boutique-winery-production-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "SCADA/Aerospace Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 2 - Flagship Candidate",
+      "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 2 — Flagship Tier-1 ($14,500 Anchor)",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
       "exclusive_buyout_range": [
         10000,
         18000
-      ],
-      "truth_label": "Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit",
-      "flagship_license_range": [
-        1500,
-        3500
-      ],
-      "full_asset_buyout_range": [
-        18000,
-        35000
-      ],
-      "strategic_acquisition_range": [
-        35000,
-        75000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
@@ -3186,10 +2514,7 @@ export const CATALOG_DATA = {
       "admin_url": "https://clinical-trial-operations-os.onrender.com/admin",
       "audit_score": 9.8,
       "tables": [
-        "trial_cohorts",
-        "patient_enrollments",
-        "adverse_events",
-        "protocol_milestones"
+        "IF"
       ],
       "vertical": "medical",
       "archetype_id": "C",
@@ -3197,30 +2522,17 @@ export const CATALOG_DATA = {
       "archetype_description": "Fleet asset tracking, dispatch coordination, and route telemetry.",
       "design_benchmark": "Flexport Global Logistics & Samsara Fleet Hub",
       "checkout_active": true,
-      "status_badge": "Track 2 Flagship Candidate",
+      "status_badge": "Flagship Interactive Prototype",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/clinical-trial-operations-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "SCADA/Aerospace Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 2 - Flagship Candidate",
+      "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 2 — Flagship Tier-1 ($14,500 Anchor)",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
       "exclusive_buyout_range": [
         10000,
         18000
-      ],
-      "truth_label": "Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit",
-      "flagship_license_range": [
-        1500,
-        3500
-      ],
-      "full_asset_buyout_range": [
-        18000,
-        35000
-      ],
-      "strategic_acquisition_range": [
-        35000,
-        75000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
@@ -3234,10 +2546,7 @@ export const CATALOG_DATA = {
       "admin_url": "https://cold-storage-logistics-os.onrender.com/admin",
       "audit_score": 9.8,
       "tables": [
-        "temperature_zones",
-        "pallet_manifests",
-        "refrigeration_units",
-        "reefer_trailers"
+        "IF"
       ],
       "vertical": "heavy_fleet",
       "archetype_id": "C",
@@ -3245,30 +2554,17 @@ export const CATALOG_DATA = {
       "archetype_description": "Fleet asset tracking, dispatch coordination, and route telemetry.",
       "design_benchmark": "Flexport Global Logistics & Samsara Fleet Hub",
       "checkout_active": true,
-      "status_badge": "Track 2 Flagship Candidate",
+      "status_badge": "Flagship Interactive Prototype",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/cold-storage-logistics-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "SCADA/Aerospace Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 2 - Flagship Candidate",
+      "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 2 — Flagship Tier-1 ($14,500 Anchor)",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
       "exclusive_buyout_range": [
         10000,
         18000
-      ],
-      "truth_label": "Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit",
-      "flagship_license_range": [
-        1500,
-        3500
-      ],
-      "full_asset_buyout_range": [
-        18000,
-        35000
-      ],
-      "strategic_acquisition_range": [
-        35000,
-        75000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
@@ -3282,22 +2578,22 @@ export const CATALOG_DATA = {
       "admin_url": "https://commercial-supersonic-airliner-engine-inverted-aerospike-telemetry-os.onrender.com/admin",
       "audit_score": 9.8,
       "tables": [
-        "aerospike_chambers",
-        "shock_diamonds",
-        "nozzle_expansion_ratios",
-        "thermal_barriers"
+        "telemetry",
+        "subsystems",
+        "events",
+        "metrics"
       ],
       "vertical": "aerospace",
       "archetype_id": "A",
       "archetype_name": "Archetype A: Dense Operational Console",
-      "archetype_description": "Persistent utility rail, simulated operational triage queue, and slide-out inspection drawer.",
+      "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out inspection drawer.",
       "design_benchmark": "NASA Mission Control & Palantir Foundry Console",
       "checkout_active": true,
-      "status_badge": "Track 2 Flagship Candidate",
+      "status_badge": "Flagship Interactive Prototype",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/commercial-supersonic-airliner-engine-inverted-aerospike-telemetry-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "SCADA/Aerospace Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 2 - Flagship Candidate",
+      "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 2 — Flagship Tier-1 ($14,500 Anchor)",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
@@ -3305,21 +2601,8 @@ export const CATALOG_DATA = {
         10000,
         18000
       ],
-      "truth_label": "Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit",
-      "flagship_license_range": [
-        1500,
-        3500
-      ],
-      "full_asset_buyout_range": [
-        18000,
-        35000
-      ],
-      "strategic_acquisition_range": [
-        35000,
-        75000
-      ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 94,
@@ -3330,10 +2613,12 @@ export const CATALOG_DATA = {
       "admin_url": "https://commercial-tokamak-fusion-plasma-scada-os.onrender.com/admin",
       "audit_score": 9.8,
       "tables": [
-        "plasma_confinements",
+        "fusion_reactors",
+        "plasma_pulses",
         "magnetic_coils",
-        "toroidal_flux",
-        "tritium_breeding"
+        "divertor_thermal_logs",
+        "disruption_events",
+        "scada_audit_logs"
       ],
       "vertical": "clean_energy",
       "archetype_id": "D",
@@ -3341,11 +2626,11 @@ export const CATALOG_DATA = {
       "archetype_description": "High-density telemetry streams, closed-loop sensor controllers, and industrial process automation.",
       "design_benchmark": "Siemens WinCC & Schneider EcoStruxure SCADA",
       "checkout_active": true,
-      "status_badge": "Track 2 Flagship Candidate",
+      "status_badge": "Flagship Interactive Prototype",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/commercial-tokamak-fusion-plasma-scada-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "SCADA/Aerospace Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 2 - Flagship Candidate",
+      "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 2 — Flagship Tier-1 ($14,500 Anchor)",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
@@ -3353,21 +2638,8 @@ export const CATALOG_DATA = {
         10000,
         18000
       ],
-      "truth_label": "Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit",
-      "flagship_license_range": [
-        1500,
-        3500
-      ],
-      "full_asset_buyout_range": [
-        18000,
-        35000
-      ],
-      "strategic_acquisition_range": [
-        35000,
-        75000
-      ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 95,
@@ -3378,10 +2650,7 @@ export const CATALOG_DATA = {
       "admin_url": "https://deep-sea-rov-trenching-and-cable-burial-os.onrender.com/admin",
       "audit_score": 9.8,
       "tables": [
-        "rov_umbilicals",
-        "burial_plows",
-        "subsea_cables",
-        "sonar_bathymetry"
+        "IF"
       ],
       "vertical": "subsea",
       "archetype_id": "C",
@@ -3389,11 +2658,11 @@ export const CATALOG_DATA = {
       "archetype_description": "Fleet asset tracking, dispatch coordination, and route telemetry.",
       "design_benchmark": "Flexport Global Logistics & Samsara Fleet Hub",
       "checkout_active": true,
-      "status_badge": "Track 2 Flagship Candidate",
+      "status_badge": "Flagship Interactive Prototype",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/deep-sea-rov-trenching-and-cable-burial-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "SCADA/Aerospace Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 2 - Flagship Candidate",
+      "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 2 — Flagship Tier-1 ($14,500 Anchor)",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
@@ -3401,21 +2670,8 @@ export const CATALOG_DATA = {
         10000,
         18000
       ],
-      "truth_label": "Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit",
-      "flagship_license_range": [
-        1500,
-        3500
-      ],
-      "full_asset_buyout_range": [
-        18000,
-        35000
-      ],
-      "strategic_acquisition_range": [
-        35000,
-        75000
-      ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 96,
@@ -3426,10 +2682,7 @@ export const CATALOG_DATA = {
       "admin_url": "https://geothermal-supercritical-egs-wellhead-scada-os.onrender.com/admin",
       "audit_score": 9.8,
       "tables": [
-        "wellhead_pressures",
-        "fracture_networks",
-        "enthalpy_injectors",
-        "binary_turbines"
+        "IF"
       ],
       "vertical": "clean_energy",
       "archetype_id": "D",
@@ -3437,11 +2690,11 @@ export const CATALOG_DATA = {
       "archetype_description": "High-density telemetry streams, closed-loop sensor controllers, and industrial process automation.",
       "design_benchmark": "Siemens WinCC & Schneider EcoStruxure SCADA",
       "checkout_active": true,
-      "status_badge": "Track 2 Flagship Candidate",
+      "status_badge": "Flagship Interactive Prototype",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/geothermal-supercritical-egs-wellhead-scada-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "SCADA/Aerospace Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 2 - Flagship Candidate",
+      "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 2 — Flagship Tier-1 ($14,500 Anchor)",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
@@ -3449,21 +2702,8 @@ export const CATALOG_DATA = {
         10000,
         18000
       ],
-      "truth_label": "Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit",
-      "flagship_license_range": [
-        1500,
-        3500
-      ],
-      "full_asset_buyout_range": [
-        18000,
-        35000
-      ],
-      "strategic_acquisition_range": [
-        35000,
-        75000
-      ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 97,
@@ -3474,10 +2714,10 @@ export const CATALOG_DATA = {
       "admin_url": "https://hft-colocation-and-microwave-os.onrender.com/admin",
       "audit_score": 9.8,
       "tables": [
-        "microwave_hops",
-        "fpga_transceivers",
-        "tick_latencies",
-        "colocation_racks"
+        "telemetry",
+        "subsystems",
+        "events",
+        "metrics"
       ],
       "vertical": "wealth",
       "archetype_id": "C",
@@ -3485,30 +2725,17 @@ export const CATALOG_DATA = {
       "archetype_description": "Fleet asset tracking, dispatch coordination, and route telemetry.",
       "design_benchmark": "Flexport Global Logistics & Samsara Fleet Hub",
       "checkout_active": true,
-      "status_badge": "Track 2 Flagship Candidate",
+      "status_badge": "Flagship Interactive Prototype",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/hft-colocation-and-microwave-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "SCADA/Aerospace Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 2 - Flagship Candidate",
+      "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 2 — Flagship Tier-1 ($14,500 Anchor)",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
       "exclusive_buyout_range": [
         10000,
         18000
-      ],
-      "truth_label": "Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit",
-      "flagship_license_range": [
-        1500,
-        3500
-      ],
-      "full_asset_buyout_range": [
-        18000,
-        35000
-      ],
-      "strategic_acquisition_range": [
-        35000,
-        75000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
@@ -3522,22 +2749,22 @@ export const CATALOG_DATA = {
       "admin_url": "https://hypersonic-wind-tunnel-aerodynamics-telemetry-os.onrender.com/admin",
       "audit_score": 9.8,
       "tables": [
-        "mach_flow_regimes",
-        "stagnation_enthalpy",
-        "schlieren_optics",
-        "boundary_layers"
+        "telemetry",
+        "subsystems",
+        "events",
+        "metrics"
       ],
       "vertical": "aerospace",
       "archetype_id": "A",
       "archetype_name": "Archetype A: Dense Operational Console",
-      "archetype_description": "Persistent utility rail, simulated operational triage queue, and slide-out inspection drawer.",
+      "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out inspection drawer.",
       "design_benchmark": "NASA Mission Control & Palantir Foundry Console",
       "checkout_active": true,
-      "status_badge": "Track 2 Flagship Candidate",
+      "status_badge": "Flagship Interactive Prototype",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/hypersonic-wind-tunnel-aerodynamics-telemetry-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "SCADA/Aerospace Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 2 - Flagship Candidate",
+      "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 2 — Flagship Tier-1 ($14,500 Anchor)",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
@@ -3545,21 +2772,8 @@ export const CATALOG_DATA = {
         10000,
         18000
       ],
-      "truth_label": "Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit",
-      "flagship_license_range": [
-        1500,
-        3500
-      ],
-      "full_asset_buyout_range": [
-        18000,
-        35000
-      ],
-      "strategic_acquisition_range": [
-        35000,
-        75000
-      ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 99,
@@ -3570,10 +2784,12 @@ export const CATALOG_DATA = {
       "admin_url": "https://luxury-auto-concierge-os.onrender.com/admin",
       "audit_score": 9.8,
       "tables": [
-        "vehicle_vaults",
+        "vault_clients",
+        "collector_vehicles",
         "transport_manifests",
-        "detailing_cadence",
-        "client_requests"
+        "service_tickets",
+        "vault_telemetry_logs",
+        "security_audit_logs"
       ],
       "vertical": "heavy_fleet",
       "archetype_id": "B",
@@ -3581,30 +2797,17 @@ export const CATALOG_DATA = {
       "archetype_description": "Dynamic masonry grid, visual filtering, and slide-over commission sheet.",
       "design_benchmark": "LVMH Luxury Atelier & Monaco Yacht Show",
       "checkout_active": true,
-      "status_badge": "Track 2 Flagship Candidate",
+      "status_badge": "Flagship Interactive Prototype",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/luxury-auto-concierge-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "SCADA/Aerospace Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 2 - Flagship Candidate",
+      "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 2 — Flagship Tier-1 ($14,500 Anchor)",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
       "exclusive_buyout_range": [
         10000,
         18000
-      ],
-      "truth_label": "Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit",
-      "flagship_license_range": [
-        1500,
-        3500
-      ],
-      "full_asset_buyout_range": [
-        18000,
-        35000
-      ],
-      "strategic_acquisition_range": [
-        35000,
-        75000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
@@ -3618,10 +2821,7 @@ export const CATALOG_DATA = {
       "admin_url": "https://maritime-freight-brokerage-os.onrender.com/admin",
       "audit_score": 9.8,
       "tables": [
-        "vessel_manifests",
-        "charter_fixtures",
-        "bunker_hedges",
-        "demurrage_claims"
+        "IF"
       ],
       "vertical": "heavy_fleet",
       "archetype_id": "C",
@@ -3629,30 +2829,17 @@ export const CATALOG_DATA = {
       "archetype_description": "Fleet asset tracking, dispatch coordination, and route telemetry.",
       "design_benchmark": "Flexport Global Logistics & Samsara Fleet Hub",
       "checkout_active": true,
-      "status_badge": "Track 2 Flagship Candidate",
+      "status_badge": "Flagship Interactive Prototype",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/maritime-freight-brokerage-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "SCADA/Aerospace Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 2 - Flagship Candidate",
+      "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 2 — Flagship Tier-1 ($14,500 Anchor)",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
       "exclusive_buyout_range": [
         10000,
         18000
-      ],
-      "truth_label": "Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit",
-      "flagship_license_range": [
-        1500,
-        3500
-      ],
-      "full_asset_buyout_range": [
-        18000,
-        35000
-      ],
-      "strategic_acquisition_range": [
-        35000,
-        75000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
@@ -3666,22 +2853,19 @@ export const CATALOG_DATA = {
       "admin_url": "https://orbital-satellite-laser-isl-optical-terminal-os.onrender.com/admin",
       "audit_score": 9.8,
       "tables": [
-        "laser_crosslinks",
-        "pointing_gimbals",
-        "constellation_ephemeris",
-        "photodiode_telemetry"
+        "IF"
       ],
       "vertical": "aerospace",
       "archetype_id": "A",
       "archetype_name": "Archetype A: Dense Operational Console",
-      "archetype_description": "Persistent utility rail, simulated operational triage queue, and slide-out inspection drawer.",
+      "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out inspection drawer.",
       "design_benchmark": "NASA Mission Control & Palantir Foundry Console",
       "checkout_active": true,
-      "status_badge": "Track 2 Flagship Candidate",
+      "status_badge": "Flagship Interactive Prototype",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/orbital-satellite-laser-isl-optical-terminal-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "SCADA/Aerospace Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 2 - Flagship Candidate",
+      "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 2 — Flagship Tier-1 ($14,500 Anchor)",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
@@ -3689,21 +2873,8 @@ export const CATALOG_DATA = {
         10000,
         18000
       ],
-      "truth_label": "Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit",
-      "flagship_license_range": [
-        1500,
-        3500
-      ],
-      "full_asset_buyout_range": [
-        18000,
-        35000
-      ],
-      "strategic_acquisition_range": [
-        35000,
-        75000
-      ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 102,
@@ -3714,10 +2885,10 @@ export const CATALOG_DATA = {
       "admin_url": "https://private-credit-syndication-os.onrender.com/admin",
       "audit_score": 9.8,
       "tables": [
-        "credit_facilities",
-        "syndicate_lenders",
-        "covenant_monitoring",
-        "drawdown_schedules"
+        "telemetry",
+        "subsystems",
+        "events",
+        "metrics"
       ],
       "vertical": "wealth",
       "archetype_id": "C",
@@ -3725,30 +2896,17 @@ export const CATALOG_DATA = {
       "archetype_description": "Fleet asset tracking, dispatch coordination, and route telemetry.",
       "design_benchmark": "Flexport Global Logistics & Samsara Fleet Hub",
       "checkout_active": true,
-      "status_badge": "Track 2 Flagship Candidate",
+      "status_badge": "Flagship Interactive Prototype",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/private-credit-syndication-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "SCADA/Aerospace Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 2 - Flagship Candidate",
+      "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 2 — Flagship Tier-1 ($14,500 Anchor)",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
       "exclusive_buyout_range": [
         10000,
         18000
-      ],
-      "truth_label": "Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit",
-      "flagship_license_range": [
-        1500,
-        3500
-      ],
-      "full_asset_buyout_range": [
-        18000,
-        35000
-      ],
-      "strategic_acquisition_range": [
-        35000,
-        75000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
@@ -3762,10 +2920,7 @@ export const CATALOG_DATA = {
       "admin_url": "https://renewable-energy-microgrid-dispatch-os.onrender.com/admin",
       "audit_score": 9.8,
       "tables": [
-        "bess_storage",
-        "solar_arrays",
-        "inverter_dispatch",
-        "grid_interconnects"
+        "IF"
       ],
       "vertical": "clean_energy",
       "archetype_id": "C",
@@ -3773,30 +2928,17 @@ export const CATALOG_DATA = {
       "archetype_description": "Fleet asset tracking, dispatch coordination, and route telemetry.",
       "design_benchmark": "Flexport Global Logistics & Samsara Fleet Hub",
       "checkout_active": true,
-      "status_badge": "Track 2 Flagship Candidate",
+      "status_badge": "Flagship Interactive Prototype",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/renewable-energy-microgrid-dispatch-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "SCADA/Aerospace Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 2 - Flagship Candidate",
+      "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 2 — Flagship Tier-1 ($14,500 Anchor)",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
       "exclusive_buyout_range": [
         10000,
         18000
-      ],
-      "truth_label": "Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit",
-      "flagship_license_range": [
-        1500,
-        3500
-      ],
-      "full_asset_buyout_range": [
-        18000,
-        35000
-      ],
-      "strategic_acquisition_range": [
-        35000,
-        75000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
@@ -3810,10 +2952,7 @@ export const CATALOG_DATA = {
       "admin_url": "https://semiconductor-fab-cleanroom-scada-os.onrender.com/admin",
       "audit_score": 9.8,
       "tables": [
-        "cleanroom_plenums",
-        "air_particulates",
-        "stepper_chambers",
-        "ultra_pure_water"
+        "IF"
       ],
       "vertical": "deep_tech",
       "archetype_id": "D",
@@ -3821,11 +2960,11 @@ export const CATALOG_DATA = {
       "archetype_description": "High-density telemetry streams, closed-loop sensor controllers, and industrial process automation.",
       "design_benchmark": "Siemens WinCC & Schneider EcoStruxure SCADA",
       "checkout_active": true,
-      "status_badge": "Track 2 Flagship Candidate",
+      "status_badge": "Flagship Interactive Prototype",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/semiconductor-fab-cleanroom-scada-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "SCADA/Aerospace Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 2 - Flagship Candidate",
+      "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 2 — Flagship Tier-1 ($14,500 Anchor)",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
@@ -3833,21 +2972,8 @@ export const CATALOG_DATA = {
         10000,
         18000
       ],
-      "truth_label": "Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit",
-      "flagship_license_range": [
-        1500,
-        3500
-      ],
-      "full_asset_buyout_range": [
-        18000,
-        35000
-      ],
-      "strategic_acquisition_range": [
-        35000,
-        75000
-      ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 105,
@@ -3858,10 +2984,10 @@ export const CATALOG_DATA = {
       "admin_url": "https://space-launch-payload-manifest-os.onrender.com/admin",
       "audit_score": 9.8,
       "tables": [
-        "payload_fairs",
-        "orbital_insertions",
-        "stage_separations",
-        "telemetry_downlinks"
+        "launch_missions",
+        "orbital_trajectories",
+        "licensing_milestones",
+        "payload_manifests"
       ],
       "vertical": "aerospace",
       "archetype_id": "C",
@@ -3869,11 +2995,11 @@ export const CATALOG_DATA = {
       "archetype_description": "Fleet asset tracking, dispatch coordination, and route telemetry.",
       "design_benchmark": "Flexport Global Logistics & Samsara Fleet Hub",
       "checkout_active": true,
-      "status_badge": "Track 2 Flagship Candidate",
+      "status_badge": "Flagship Interactive Prototype",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/space-launch-payload-manifest-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "SCADA/Aerospace Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 2 - Flagship Candidate",
+      "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 2 — Flagship Tier-1 ($14,500 Anchor)",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
@@ -3881,21 +3007,8 @@ export const CATALOG_DATA = {
         10000,
         18000
       ],
-      "truth_label": "Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit",
-      "flagship_license_range": [
-        1500,
-        3500
-      ],
-      "full_asset_buyout_range": [
-        18000,
-        35000
-      ],
-      "strategic_acquisition_range": [
-        35000,
-        75000
-      ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 106,
@@ -3906,10 +3019,7 @@ export const CATALOG_DATA = {
       "admin_url": "https://subsea-cable-restoration-os.onrender.com/admin",
       "audit_score": 9.8,
       "tables": [
-        "cable_faults",
-        "repeater_voltages",
-        "splice_bays",
-        "repair_vessels"
+        "IF"
       ],
       "vertical": "subsea",
       "archetype_id": "C",
@@ -3917,11 +3027,11 @@ export const CATALOG_DATA = {
       "archetype_description": "Fleet asset tracking, dispatch coordination, and route telemetry.",
       "design_benchmark": "Flexport Global Logistics & Samsara Fleet Hub",
       "checkout_active": true,
-      "status_badge": "Track 2 Flagship Candidate",
+      "status_badge": "Flagship Interactive Prototype",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/subsea-cable-restoration-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "SCADA/Aerospace Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 2 - Flagship Candidate",
+      "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 2 — Flagship Tier-1 ($14,500 Anchor)",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
@@ -3929,21 +3039,8 @@ export const CATALOG_DATA = {
         10000,
         18000
       ],
-      "truth_label": "Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit",
-      "flagship_license_range": [
-        1500,
-        3500
-      ],
-      "full_asset_buyout_range": [
-        18000,
-        35000
-      ],
-      "strategic_acquisition_range": [
-        35000,
-        75000
-      ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 107,
@@ -3954,10 +3051,7 @@ export const CATALOG_DATA = {
       "admin_url": "https://superconducting-quantum-processor-cryostat-os.onrender.com/admin",
       "audit_score": 9.8,
       "tables": [
-        "dilution_fridges",
-        "milli_kelvin_stages",
-        "qubit_coherence",
-        "microwave_lines"
+        "IF"
       ],
       "vertical": "deep_tech",
       "archetype_id": "D",
@@ -3965,11 +3059,11 @@ export const CATALOG_DATA = {
       "archetype_description": "High-density telemetry streams, closed-loop sensor controllers, and industrial process automation.",
       "design_benchmark": "Siemens WinCC & Schneider EcoStruxure SCADA",
       "checkout_active": true,
-      "status_badge": "Track 2 Flagship Candidate",
+      "status_badge": "Flagship Interactive Prototype",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/superconducting-quantum-processor-cryostat-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "SCADA/Aerospace Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 2 - Flagship Candidate",
+      "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 2 — Flagship Tier-1 ($14,500 Anchor)",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
@@ -3977,21 +3071,8 @@ export const CATALOG_DATA = {
         10000,
         18000
       ],
-      "truth_label": "Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit",
-      "flagship_license_range": [
-        1500,
-        3500
-      ],
-      "full_asset_buyout_range": [
-        18000,
-        35000
-      ],
-      "strategic_acquisition_range": [
-        35000,
-        75000
-      ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 108,
@@ -4002,10 +3083,7 @@ export const CATALOG_DATA = {
       "admin_url": "https://yacht-charter-fleet-ecosystem.onrender.com/admin",
       "audit_score": 9.8,
       "tables": [
-        "charter_bookings",
-        "crew_rotations",
-        "berth_allocations",
-        "provisioning_logs"
+        "IF"
       ],
       "vertical": "heavy_fleet",
       "archetype_id": "B",
@@ -4013,30 +3091,17 @@ export const CATALOG_DATA = {
       "archetype_description": "Dynamic masonry grid, visual filtering, and slide-over commission sheet.",
       "design_benchmark": "LVMH Luxury Atelier & Monaco Yacht Show",
       "checkout_active": true,
-      "status_badge": "Track 2 Flagship Candidate",
+      "status_badge": "Flagship Interactive Prototype",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/yacht-charter-fleet-ecosystem",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "SCADA/Aerospace Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 2 - Flagship Candidate",
+      "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 2 — Flagship Tier-1 ($14,500 Anchor)",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
       "exclusive_buyout_range": [
         10000,
         18000
-      ],
-      "truth_label": "Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit",
-      "flagship_license_range": [
-        1500,
-        3500
-      ],
-      "full_asset_buyout_range": [
-        18000,
-        35000
-      ],
-      "strategic_acquisition_range": [
-        35000,
-        75000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
@@ -4050,10 +3115,7 @@ export const CATALOG_DATA = {
       "admin_url": "https://orbital-habitat-closed-loop-os.onrender.com/admin",
       "audit_score": 9.8,
       "tables": [
-        "sabatier_reactors",
-        "oxygen_generation_assemblies",
-        "co2_scrubbers",
-        "water_recovery_loops"
+        "IF"
       ],
       "vertical": "aerospace",
       "archetype_id": "C",
@@ -4061,11 +3123,11 @@ export const CATALOG_DATA = {
       "archetype_description": "Fleet asset tracking, dispatch coordination, and route telemetry.",
       "design_benchmark": "Flexport Global Logistics & Samsara Fleet Hub",
       "checkout_active": true,
-      "status_badge": "Track 2 Flagship Candidate",
+      "status_badge": "Flagship Interactive Prototype",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/orbital-habitat-closed-loop-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "SCADA/Aerospace Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 2 - Flagship Candidate",
+      "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 2 — Flagship Tier-1 ($14,500 Anchor)",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
@@ -4073,21 +3135,8 @@ export const CATALOG_DATA = {
         10000,
         18000
       ],
-      "truth_label": "Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit",
-      "flagship_license_range": [
-        1500,
-        3500
-      ],
-      "full_asset_buyout_range": [
-        18000,
-        35000
-      ],
-      "strategic_acquisition_range": [
-        35000,
-        75000
-      ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 110,
@@ -4110,11 +3159,11 @@ export const CATALOG_DATA = {
       "archetype_description": "Persistent utility rail, simulated operational triage queue, and slide-out inspection drawer.",
       "design_benchmark": "NASA Mission Control & Palantir Foundry Console",
       "checkout_active": true,
-      "status_badge": "Track 2 Flagship Candidate",
+      "status_badge": "Flagship Interactive Prototype",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/orbital-cryo-depot-scada-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "SCADA/Aerospace Blueprint with RLS Pattern (Frontend + Schema + Seed Data)",
-      "pricing_track": "Track 2 - Flagship Candidate",
+      "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 2 — Flagship Tier-1 ($14,500 Anchor)",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "flagship_license_range": [
@@ -4145,28 +3194,28 @@ export const CATALOG_DATA = {
       "description": "Bespoke counters, omakase, jazz bistros, supper clubs, estates & vineyards OS",
       "apa_valuation_range": "$42,000 – $65,000",
       "target_asset_count": 60,
-      "current_asset_count": 23
+      "current_asset_count": 27
     },
     "wealth": {
       "name": "Private Wealth & Real Estate Vault",
       "description": "Private equity LP portals, estate syndication, family office & luxury listings OS",
       "apa_valuation_range": "$30,000 – $48,000",
       "target_asset_count": 35,
-      "current_asset_count": 16
+      "current_asset_count": 13
     },
     "medical": {
       "name": "Medical & VIP Aesthetics Vault",
       "description": "Clinical booking, patient intake, medspas, salon grooming & olfactory OS",
       "apa_valuation_range": "$35,000 – $55,000",
       "target_asset_count": 50,
-      "current_asset_count": 13
+      "current_asset_count": 7
     },
     "creative": {
       "name": "Creative Agency & Studio Vault",
       "description": "Motion VFX, architecture atelier, soundstage production & design OS",
       "apa_valuation_range": "$28,000 – $40,000",
       "target_asset_count": 40,
-      "current_asset_count": 12
+      "current_asset_count": 17
     },
     "automotive": {
       "name": "Automotive & Mobility Vault",
@@ -4218,7 +3267,7 @@ export const CATALOG_DATA = {
     "A": {
       "id": "A",
       "name": "Archetype A: Dense Operational Console",
-      "description": "Persistent utility rail, simulated operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
+      "description": "Persistent utility rail, real-time operational triage queue, and slide-out master-detail inspection drawer for high-velocity dispatch and logistics.",
       "benchmarks": [
         "Flexport",
         "Samsara",
@@ -4289,25 +3338,25 @@ export const CATALOG_DATA = {
     "vertical_slices": [
       {
         "name": "Luxury Hospitality & Dining Vault",
-        "appsCount": 23,
+        "appsCount": 27,
         "zipFile": "luxury-hospitality-dining-vault-23.zip",
         "sizeMb": "1.7"
       },
       {
         "name": "Private Wealth & Real Estate Vault",
-        "appsCount": 16,
+        "appsCount": 13,
         "zipFile": "private-wealth-real-estate-vault-16.zip",
         "sizeMb": "1.2"
       },
       {
         "name": "Medical & VIP Aesthetics Vault",
-        "appsCount": 13,
+        "appsCount": 7,
         "zipFile": "medical-aesthetics-vault-13.zip",
         "sizeMb": "1.2"
       },
       {
         "name": "Creative Agency & Studio Vault",
-        "appsCount": 12,
+        "appsCount": 17,
         "zipFile": "creative-agency-studio-vault-12.zip",
         "sizeMb": "0.9"
       },

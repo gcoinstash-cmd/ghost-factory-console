@@ -7,6 +7,11 @@ import { ProductItem } from '../catalogData';
  * fusion/tokamak, orbital/space, and deep SCADA systems.
  */
 export const isRegulatedSector = (product: ProductItem): boolean => {
+  const v = (product.vertical || '').toLowerCase();
+  if (['hospitality', 'creative', 'fitness'].includes(v) && product.id < 86) {
+    return false;
+  }
+
   const combined = `${product.name} ${product.category || ''} ${product.vertical || ''} ${product.archetype_name || ''}`;
 
   const regulatedRegexes = [

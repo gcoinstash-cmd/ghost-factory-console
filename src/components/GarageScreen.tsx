@@ -10,7 +10,7 @@ import {
 } from 'lucide-react';
 import { ProductItem } from '../catalogData';
 import { NextBestActionBanner } from './NextBestActionBanner';
-import { BlueprintCard } from './BlueprintCard';
+import { BlueprintCard, getDomainClass, getRarityTier, RarityTier } from './BlueprintCard';
 
 interface GarageScreenProps {
   products: ProductItem[];
@@ -23,39 +23,6 @@ interface GarageScreenProps {
   onOpenTestDrive: (product: ProductItem) => void;
   isOperatorAuthenticated?: boolean;
   onOpenOperatorAuth?: () => void;
-}
-
-export type RarityTier = 'Mythic Candidate' | 'Legendary' | 'Elite' | 'Rare' | 'Common';
-
-export function getRarityTier(product: ProductItem): RarityTier {
-  const name = product.name.toLowerCase();
-  const cat = product.category.toLowerCase();
-  if (product.id >= 86 || product.flagship_qualified || product.pricing_track?.includes('Track 2') || name.includes('eclss') || cat.includes('scada') || name.includes('mining') || name.includes('hypersonic') || name.includes('laser isl') || name.includes('aegis')) {
-    return 'Mythic Candidate';
-  }
-  if (product.audit_score >= 9.6 && (product.vertical === 'heavy_fleet' || product.vertical === 'wealth' || product.vertical === 'medical')) {
-    return 'Legendary';
-  }
-  if (product.audit_score >= 9.5) {
-    return 'Elite';
-  }
-  if (product.audit_score >= 9.0) {
-    return 'Rare';
-  }
-  return 'Common';
-}
-
-export function getDomainClass(product: ProductItem): string {
-  const cat = product.category.toLowerCase();
-  const v = product.vertical.toLowerCase();
-  if (cat.includes('scada') || cat.includes('telemetry') || cat.includes('terminal')) return 'Deep Tech & SCADA';
-  if (cat.includes('mining') || cat.includes('aegis') || cat.includes('wind tunnel')) return 'Industrial Robotics';
-  if (v === 'wealth' || cat.includes('wealth') || cat.includes('bank') || cat.includes('capital')) return 'Wealth & Private Banking';
-  if (v === 'medical' || cat.includes('clinical') || cat.includes('dental') || cat.includes('health')) return 'Medical & Health Systems';
-  if (v === 'hospitality' || cat.includes('resort') || cat.includes('dining') || cat.includes('hotel')) return 'Luxury Hospitality';
-  if (v === 'creative' || cat.includes('studio') || cat.includes('production') || cat.includes('atelier')) return 'Creative & Studios';
-  if (v === 'automotive' || v === 'heavy_fleet' || cat.includes('fleet') || cat.includes('rental')) return 'Automotive & Fleet';
-  return 'Boutique Operations';
 }
 
 export const GarageScreen: React.FC<GarageScreenProps> = ({

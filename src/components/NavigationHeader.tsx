@@ -118,7 +118,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
             title="Inspect Postgres Schema with RLS Pattern Architecture"
           >
             <Database size={14} className="text-cyan-400" />
-            <span>RLS: <strong className="text-cyan-400">LEVEL 3 DEMO</strong></span>
+            <span>RLS: <strong className="text-cyan-400">Postgres Pattern</strong></span>
           </button>
 
           <button
