@@ -59,11 +59,21 @@ const regulatedRegexes = [
   /\btelemetry\b/i
 ];
 
+const REGULATED_ASSET_IDS = new Set([
+  5, 8, 10, 14, 17, 24, 27, 30, 31, 32, 33, 34, 35, 41, 43, 47, 49, 53, 54, 55,
+  57, 58, 61, 62, 63, 65, 66, 67, 68, 69, 70, 73, 80, 82, 84, 86, 87, 88, 89,
+  90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106,
+  107, 108, 109, 110
+]);
+
 function isRegulated(p) {
+  if (REGULATED_ASSET_IDS.has(p.id)) {
+    return true;
+  }
+  if (p.id >= 86) return true;
   if (['hospitality', 'creative', 'fitness'].includes((p.vertical || '').toLowerCase()) && p.id < 86) {
     return false;
   }
-  if (p.id >= 86) return true;
   const combined = `${p.name} ${p.category || ''} ${p.vertical || ''} ${p.archetype_name || ''}`;
   return regulatedRegexes.some(r => r.test(combined));
 }
