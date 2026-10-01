@@ -6,7 +6,7 @@ export interface ProductItem {
   gumroad_url: string;
   preview_url: string;
   admin_url: string;
-  admin_passcode: string;
+  admin_passcode?: string;
   audit_score: number;
   tables: string[];
   vertical: string;
@@ -74,7 +74,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/stride-mb",
       "preview_url": "https://stride-manhattan-beach.onrender.com",
       "admin_url": "https://stride-manhattan-beach.onrender.com/admin",
-      "admin_passcode": "stridemb2026",
       "audit_score": 9.6,
       "tables": [
         "classes",
@@ -107,7 +106,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/the-vault",
       "preview_url": "https://the-vault-studio.onrender.com",
       "admin_url": "https://the-vault-studio.onrender.com/admin",
-      "admin_passcode": "vault2026",
       "audit_score": 9.6,
       "tables": [
         "studios",
@@ -140,7 +138,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/velocity-os",
       "preview_url": "https://velocity-exotic-fleet.onrender.com",
       "admin_url": "https://velocity-exotic-fleet.onrender.com/admin",
-      "admin_passcode": "velocity2026",
       "audit_score": 9.7,
       "tables": [
         "vehicles",
@@ -173,7 +170,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/apex-club-os",
       "preview_url": "https://apex-fight-club.onrender.com",
       "admin_url": "https://apex-fight-club.onrender.com/admin",
-      "admin_passcode": "apex2026",
       "audit_score": 9.8,
       "tables": [
         "roster",
@@ -206,7 +202,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/elevate-capital-os",
       "preview_url": "https://elevate-capital-os.onrender.com",
       "admin_url": "https://elevate-capital-os.onrender.com",
-      "admin_passcode": "elevate2026",
       "audit_score": 9.8,
       "tables": [
         "funds",
@@ -239,7 +234,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/obsidian-lab-os",
       "preview_url": "https://obsidian-slow-bar.onrender.com",
       "admin_url": "https://obsidian-slow-bar.onrender.com",
-      "admin_passcode": "obsidian2026",
       "audit_score": 9.8,
       "tables": [
         "beans",
@@ -272,7 +266,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/the-enclave-os",
       "preview_url": "https://the-enclave-villas.onrender.com",
       "admin_url": "https://the-enclave-villas.onrender.com/admin",
-      "admin_passcode": "enclave2026",
       "audit_score": 9.8,
       "tables": [
         "properties",
@@ -306,7 +299,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/aura-medspa-os",
       "preview_url": "https://aura-medspa-os.onrender.com",
       "admin_url": "https://aura-medspa-os.onrender.com/admin",
-      "admin_passcode": "medspa2026",
       "audit_score": 9.8,
       "tables": [
         "profiles",
@@ -339,7 +331,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/royal-apex-os",
       "preview_url": "https://royal-apex-atelier.onrender.com",
       "admin_url": "https://royal-apex-atelier.onrender.com/admin",
-      "admin_passcode": "royal2026",
       "audit_score": 9.8,
       "tables": [
         "profiles",
@@ -372,7 +363,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/aura-reserve-os",
       "preview_url": "https://aura-reserve-estate.onrender.com",
       "admin_url": "https://aura-reserve-estate.onrender.com/admin",
-      "admin_passcode": "reserve2026",
       "audit_score": 9.8,
       "tables": [
         "patron_profiles",
@@ -405,7 +395,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/monolith-studio-os",
       "preview_url": "https://monolith-studio-os.onrender.com",
       "admin_url": "https://monolith-studio-os.onrender.com/admin",
-      "admin_passcode": "monolith2026",
       "audit_score": 9.8,
       "tables": [
         "architect_clients",
@@ -438,7 +427,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/kinetic-lab-os",
       "preview_url": "https://kinetic-lab-os.onrender.com",
       "admin_url": "https://kinetic-lab-os.onrender.com/admin",
-      "admin_passcode": "kinetic2026",
       "audit_score": 9.8,
       "tables": [
         "athlete_profiles",
@@ -471,7 +459,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/the-velvet-note-os",
       "preview_url": "https://the-velvet-note-os.onrender.com",
       "admin_url": "https://the-velvet-note-os.onrender.com/admin",
-      "admin_passcode": "velvet2026",
       "audit_score": 9.8,
       "tables": [
         "vip_reservations",
@@ -504,7 +491,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/retreat-os",
       "preview_url": "https://retreat-os.onrender.com",
       "admin_url": "https://retreat-os.onrender.com/admin",
-      "admin_passcode": "retreat2026",
       "audit_score": 9.8,
       "tables": [
         "retreat_programs",
@@ -536,7 +522,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/omakase-counter-os",
       "preview_url": "https://omakase-counter-os.onrender.com",
       "admin_url": "https://omakase-counter-os.onrender.com/admin",
-      "admin_passcode": "omakase2026",
       "audit_score": 9.8,
       "tables": [
         "counter_reservations",
@@ -568,7 +553,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/aethel-bespoke-os",
       "preview_url": "https://aethel-bespoke-os.onrender.com",
       "admin_url": "https://aethel-bespoke-os.onrender.com/admin",
-      "admin_passcode": "aethel2026",
       "audit_score": 9.8,
       "tables": [
         "bespoke_commissions",
@@ -600,7 +584,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/aura-apothecary-os",
       "preview_url": "https://aura-apothecary-os.onrender.com",
       "admin_url": "https://aura-apothecary-os.onrender.com/admin",
-      "admin_passcode": "apothecary2026",
       "audit_score": 9.8,
       "tables": [
         "perfume_formulations",
@@ -632,7 +615,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/the-winter-parlor-os",
       "preview_url": "https://the-winter-parlor-os.onrender.com",
       "admin_url": "https://the-winter-parlor-os.onrender.com/admin",
-      "admin_passcode": "parlor2026",
       "audit_score": 9.8,
       "tables": [
         "parlor_reservations",
@@ -664,7 +646,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/motionscale-os",
       "preview_url": "https://motionscale-os.onrender.com",
       "admin_url": "https://motionscale-os.onrender.com/admin",
-      "admin_passcode": "motionscale2026",
       "audit_score": 9.8,
       "tables": [
         "projects",
@@ -697,7 +678,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/aura-supper-club-os",
       "preview_url": "https://aura-supper-club-os.onrender.com",
       "admin_url": "https://aura-supper-club-os.onrender.com/admin",
-      "admin_passcode": "supperclub2026",
       "audit_score": 9.8,
       "tables": [
         "supper_reservations",
@@ -730,7 +710,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/neo-shinjuku-os",
       "preview_url": "https://neo-shinjuku-os.onrender.com",
       "admin_url": "https://neo-shinjuku-os.onrender.com/admin",
-      "admin_passcode": "shinjuku2026",
       "audit_score": 9.8,
       "tables": [
         "izakaya_reservations",
@@ -763,7 +742,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/neon-lotus-os",
       "preview_url": "https://neon-lotus-os.onrender.com",
       "admin_url": "https://neon-lotus-os.onrender.com/admin",
-      "admin_passcode": "lotus2026",
       "audit_score": 9.8,
       "tables": [
         "bistro_reservations",
@@ -796,7 +774,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/apex-tuning-os",
       "preview_url": "https://apex-tuning-os.onrender.com",
       "admin_url": "https://apex-tuning-os.onrender.com",
-      "admin_passcode": "apextuning2026",
       "audit_score": 9.8,
       "tables": [
         "work_orders",
@@ -830,7 +807,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/villa-obsidian-os",
       "preview_url": "https://villa-obsidian-os.onrender.com",
       "admin_url": "https://villa-obsidian-os.onrender.com",
-      "admin_passcode": "villa2026",
       "audit_score": 9.8,
       "tables": [
         "properties",
@@ -864,7 +840,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/afrodigital-motion-os",
       "preview_url": "https://afrodigital-motion-os.onrender.com",
       "admin_url": "https://afrodigital-motion-os.onrender.com",
-      "admin_passcode": "motion2026",
       "audit_score": 9.8,
       "tables": [
         "production_pipelines",
@@ -897,7 +872,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/burger-lab-os",
       "preview_url": "https://gcoinstash-cmd.github.io/burger-lab-os/",
       "admin_url": "https://gcoinstash-cmd.github.io/burger-lab-os/admin/",
-      "admin_passcode": "burger2026",
       "audit_score": 9.8,
       "tables": [
         "menu_items",
@@ -931,7 +905,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/aura-fragrance-os",
       "preview_url": "https://aura-fragrance-os.onrender.com",
       "admin_url": "https://aura-fragrance-os.onrender.com/admin",
-      "admin_passcode": "fragrance2026",
       "audit_score": 9.8,
       "tables": [
         "fragrance_catalog",
@@ -964,7 +937,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/focus-architecture-os",
       "preview_url": "https://focus-architecture-os.onrender.com",
       "admin_url": "https://focus-architecture-os.onrender.com/admin",
-      "admin_passcode": "focus2026",
       "audit_score": 9.8,
       "tables": [
         "architectural_projects",
@@ -997,7 +969,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/the-vineyards-os",
       "preview_url": "https://the-vineyards-os.onrender.com",
       "admin_url": "https://the-vineyards-os.onrender.com/admin",
-      "admin_passcode": "vineyards2026",
       "audit_score": 9.8,
       "tables": [
         "wine_allocations",
@@ -1030,7 +1001,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/family-legacy-wealth-os",
       "preview_url": "https://family-legacy-wealth-os.onrender.com",
       "admin_url": "https://family-legacy-wealth-os.onrender.com/admin",
-      "admin_passcode": "legacy2026",
       "audit_score": 9.8,
       "tables": [
         "legacy_goals",
@@ -1062,7 +1032,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/diamond-cuts-os",
       "preview_url": "https://diamond-cuts-os.onrender.com",
       "admin_url": "https://diamond-cuts-os.onrender.com/admin",
-      "admin_passcode": "diamond2026",
       "audit_score": 9.8,
       "tables": [
         "appointments",
@@ -1094,7 +1063,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/crown-collective-os",
       "preview_url": "https://crown-collective-os.onrender.com",
       "admin_url": "https://crown-collective-os.onrender.com/admin",
-      "admin_passcode": "crown2026",
       "audit_score": 9.8,
       "tables": [
         "appointments",
@@ -1127,7 +1095,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/commercial-finance-os",
       "preview_url": "https://commercial-finance-os.onrender.com",
       "admin_url": "https://commercial-finance-os.onrender.com/admin",
-      "admin_passcode": "finance2026",
       "audit_score": 9.8,
       "tables": [
         "underwriting_deals",
@@ -1159,7 +1126,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/high-ticket-studio-os",
       "preview_url": "https://high-ticket-studio-os.onrender.com",
       "admin_url": "https://high-ticket-studio-os.onrender.com/admin",
-      "admin_passcode": "architect2026",
       "audit_score": 9.8,
       "tables": [
         "offer_blueprints",
@@ -1191,7 +1157,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/bbq-pit-os",
       "preview_url": "https://bbq-pit-os.onrender.com",
       "admin_url": "https://bbq-pit-os.onrender.com/admin",
-      "admin_passcode": "bbq2026",
       "audit_score": 9.8,
       "tables": [
         "smoker_pits",
@@ -1223,7 +1188,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/studio-veronique-os",
       "preview_url": "https://studio-veronique-os.onrender.com",
       "admin_url": "https://studio-veronique-os.onrender.com/admin",
-      "admin_passcode": "veronique2026",
       "audit_score": 9.8,
       "tables": [
         "design_projects",
@@ -1255,7 +1219,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/pizza-parlor-os",
       "preview_url": "https://pizza-parlor-os.onrender.com",
       "admin_url": "https://pizza-parlor-os.onrender.com/admin",
-      "admin_passcode": "pizza2026",
       "audit_score": 9.8,
       "tables": [
         "dough_fermentation_logs",
@@ -1288,7 +1251,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/premium-nightlife-os",
       "preview_url": "https://premium-nightlife-os.onrender.com",
       "admin_url": "https://premium-nightlife-os.onrender.com/admin",
-      "admin_passcode": "nightlife2026",
       "audit_score": 9.8,
       "tables": [
         "vip_tables",
@@ -1321,7 +1283,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/zenith-agency-os",
       "preview_url": "https://zenith-agency-os.onrender.com",
       "admin_url": "https://zenith-agency-os.onrender.com/admin",
-      "admin_passcode": "zenith2026",
       "audit_score": 9.8,
       "tables": [
         "client_intake",
@@ -1354,7 +1315,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/street-culture-kitchen-os",
       "preview_url": "https://street-culture-kitchen-os.onrender.com",
       "admin_url": "https://street-culture-kitchen-os.onrender.com/admin",
-      "admin_passcode": "street2026",
       "audit_score": 9.8,
       "tables": [
         "truck_status",
@@ -1387,7 +1347,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/satstacker-os",
       "preview_url": "https://satstacker-os.onrender.com",
       "admin_url": "https://satstacker-os.onrender.com/admin",
-      "admin_passcode": "satstacker2026",
       "audit_score": 9.8,
       "tables": [
         "users",
@@ -1420,7 +1379,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/auto-repair-shop-os",
       "preview_url": "https://auto-repair-shop-os.onrender.com",
       "admin_url": "https://auto-repair-shop-os.onrender.com/admin",
-      "admin_passcode": "autorepair2026",
       "audit_score": 9.8,
       "tables": [
         "service_bookings",
@@ -1453,7 +1411,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/spa-treatment-os",
       "preview_url": "https://spa-treatment-os.onrender.com",
       "admin_url": "https://spa-treatment-os.onrender.com/admin",
-      "admin_passcode": "spatreatment2026",
       "audit_score": 9.8,
       "tables": [
         "reservations",
@@ -1486,7 +1443,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/soul-and-spice-os",
       "preview_url": "https://soul-and-spice-os.onrender.com",
       "admin_url": "https://soul-and-spice-os.onrender.com/admin",
-      "admin_passcode": "soulspice2026",
       "audit_score": 9.8,
       "tables": [
         "catering_orders",
@@ -1518,7 +1474,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/resonance-culinary-os",
       "preview_url": "https://gcoinstash-cmd.github.io/resonance-culinary-os/",
       "admin_url": "https://gcoinstash-cmd.github.io/resonance-culinary-os/admin",
-      "admin_passcode": "resonance2026",
       "audit_score": 9.8,
       "tables": [
         "culinary_chapters",
@@ -1551,7 +1506,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/heritage-and-honey-os",
       "preview_url": "https://heritage-and-honey-os.onrender.com",
       "admin_url": "https://heritage-and-honey-os.onrender.com/admin",
-      "admin_passcode": "heritage2026",
       "audit_score": 9.8,
       "tables": [
         "reservations",
@@ -1583,7 +1537,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/luxury-real-estate-portal-os",
       "preview_url": "https://luxury-real-estate-portal-os.onrender.com",
       "admin_url": "https://luxury-real-estate-portal-os.onrender.com/admin",
-      "admin_passcode": "estate2026",
       "audit_score": 9.8,
       "tables": [
         "properties",
@@ -1616,7 +1569,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/midnight-express-os",
       "preview_url": "https://midnight-express-os.onrender.com",
       "admin_url": "https://midnight-express-os.onrender.com/admin",
-      "admin_passcode": "midnight2026",
       "audit_score": 9.8,
       "tables": [
         "orders",
@@ -1648,7 +1600,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/real-estate-analytics-hub-os",
       "preview_url": "https://real-estate-analytics-hub-os.onrender.com",
       "admin_url": "https://real-estate-analytics-hub-os.onrender.com/admin",
-      "admin_passcode": "analytics2026",
       "audit_score": 9.8,
       "tables": [
         "underwritten_deals",
@@ -1679,7 +1630,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/culinary-workspace-os",
       "preview_url": "https://culinary-workspace-os.onrender.com",
       "admin_url": "https://culinary-workspace-os.onrender.com/admin",
-      "admin_passcode": "culinary2026",
       "audit_score": 9.9,
       "tables": [
         "banquet_bookings",
@@ -1711,7 +1661,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/trendy-taco-truck-os",
       "preview_url": "https://gcoinstash-cmd.github.io/trendy-taco-truck-os/",
       "admin_url": "https://gcoinstash-cmd.github.io/trendy-taco-truck-os/admin/",
-      "admin_passcode": "tacotruck2026",
       "audit_score": 9.9,
       "tables": [
         "truck_location",
@@ -1744,7 +1693,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/yugen-sensory-os",
       "preview_url": "https://gcoinstash-cmd.github.io/yugen-sensory-os/",
       "admin_url": "https://gcoinstash-cmd.github.io/yugen-sensory-os/admin/",
-      "admin_passcode": "yugen2026",
       "audit_score": 9.9,
       "tables": [
         "reservations",
@@ -1776,7 +1724,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/little-roots-wellness-os",
       "preview_url": "https://gcoinstash-cmd.github.io/little-roots-wellness-os/",
       "admin_url": "https://gcoinstash-cmd.github.io/little-roots-wellness-os/admin/",
-      "admin_passcode": "roots2026",
       "audit_score": 9.9,
       "tables": [
         "admissions_waitlist",
@@ -1808,7 +1755,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/hospitality-roi-engine-os",
       "preview_url": "https://gcoinstash-cmd.github.io/hospitality-roi-engine-os/",
       "admin_url": "https://gcoinstash-cmd.github.io/hospitality-roi-engine-os/admin/",
-      "admin_passcode": "roi2026",
       "audit_score": 9.9,
       "tables": [
         "proforma_projects",
@@ -1840,7 +1786,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/zen-capital-os",
       "preview_url": "https://gcoinstash-cmd.github.io/zen-capital-os/",
       "admin_url": "https://gcoinstash-cmd.github.io/zen-capital-os/admin/",
-      "admin_passcode": "zencapital2026",
       "audit_score": 9.9,
       "tables": [
         "portfolio_holdings",
@@ -1872,7 +1817,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/hvac-dispatch-os",
       "preview_url": "https://gcoinstash-cmd.github.io/hvac-dispatch-os/",
       "admin_url": "https://gcoinstash-cmd.github.io/hvac-dispatch-os/admin/",
-      "admin_passcode": "hvac2026",
       "audit_score": 9.8,
       "tables": [
         "hvac_work_orders",
@@ -1905,7 +1849,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/roofing-estimator-os",
       "preview_url": "https://gcoinstash-cmd.github.io/roofing-estimator-os/",
       "admin_url": "https://gcoinstash-cmd.github.io/roofing-estimator-os/admin/",
-      "admin_passcode": "roofing2026",
       "audit_score": 9.8,
       "tables": [
         "roofing_estimates",
@@ -1938,7 +1881,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/plumbing-ops-os",
       "preview_url": "https://gcoinstash-cmd.github.io/plumbing-ops-os/",
       "admin_url": "https://gcoinstash-cmd.github.io/plumbing-ops-os/admin/",
-      "admin_passcode": "plumbing2026",
       "audit_score": 9.8,
       "tables": [
         "emergency_tickets",
@@ -1971,7 +1913,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/solar-install-os",
       "preview_url": "https://gcoinstash-cmd.github.io/solar-install-os/",
       "admin_url": "https://gcoinstash-cmd.github.io/solar-install-os/admin/",
-      "admin_passcode": "solar2026",
       "audit_score": 9.8,
       "tables": [
         "solar_projects",
@@ -2004,7 +1945,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/electrical-dispatch-os",
       "preview_url": "https://gcoinstash-cmd.github.io/electrical-dispatch-os/",
       "admin_url": "https://gcoinstash-cmd.github.io/electrical-dispatch-os/admin/",
-      "admin_passcode": "electric2026",
       "audit_score": 9.8,
       "tables": [
         "electrical_work_orders",
@@ -2037,7 +1977,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/boutique-dental-os",
       "preview_url": "https://gcoinstash-cmd.github.io/boutique-dental-os/",
       "admin_url": "https://gcoinstash-cmd.github.io/boutique-dental-os/admin/",
-      "admin_passcode": "dental2026",
       "audit_score": 9.8,
       "tables": [
         "dental_patients",
@@ -2070,7 +2009,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/veterinary-hospital-os",
       "preview_url": "https://gcoinstash-cmd.github.io/veterinary-hospital-os/",
       "admin_url": "https://gcoinstash-cmd.github.io/veterinary-hospital-os/admin/",
-      "admin_passcode": "vet2026",
       "audit_score": 9.8,
       "tables": [
         "pet_patients",
@@ -2103,7 +2041,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/functional-medicine-os",
       "preview_url": "https://gcoinstash-cmd.github.io/functional-medicine-os/",
       "admin_url": "https://gcoinstash-cmd.github.io/functional-medicine-os/admin/",
-      "admin_passcode": "functional2026",
       "audit_score": 9.8,
       "tables": [
         "patients",
@@ -2136,7 +2073,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/physical-therapy-os",
       "preview_url": "https://gcoinstash-cmd.github.io/physical-therapy-os/",
       "admin_url": "https://gcoinstash-cmd.github.io/physical-therapy-os/admin/",
-      "admin_passcode": "pt2026",
       "audit_score": 9.8,
       "tables": [
         "pt_patients",
@@ -2169,7 +2105,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/recovery-spa-os",
       "preview_url": "https://gcoinstash-cmd.github.io/recovery-spa-os/",
       "admin_url": "https://gcoinstash-cmd.github.io/recovery-spa-os/admin/",
-      "admin_passcode": "recovery2026",
       "audit_score": 9.8,
       "tables": [
         "recovery_members",
@@ -2202,7 +2137,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/boutique-law-os",
       "preview_url": "https://gcoinstash-cmd.github.io/boutique-law-os/",
       "admin_url": "https://gcoinstash-cmd.github.io/boutique-law-os/admin/",
-      "admin_passcode": "law2026",
       "audit_score": 9.8,
       "tables": [
         "legal_matters",
@@ -2235,7 +2169,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/ma-advisory-os",
       "preview_url": "https://gcoinstash-cmd.github.io/ma-advisory-os/",
       "admin_url": "https://gcoinstash-cmd.github.io/ma-advisory-os/admin/",
-      "admin_passcode": "ma2026",
       "audit_score": 9.8,
       "tables": [
         "deal_mandates",
@@ -2267,7 +2200,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/executive-search-os",
       "preview_url": "https://gcoinstash-cmd.github.io/executive-search-os/",
       "admin_url": "https://gcoinstash-cmd.github.io/executive-search-os/admin/",
-      "admin_passcode": "search2026",
       "audit_score": 9.8,
       "tables": [
         "retained_mandates",
@@ -2299,7 +2231,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/wealth-family-office-os",
       "preview_url": "https://gcoinstash-cmd.github.io/wealth-family-office-os/",
       "admin_url": "https://gcoinstash-cmd.github.io/wealth-family-office-os/admin/",
-      "admin_passcode": "familyoffice2026",
       "audit_score": 9.8,
       "tables": [
         "direct_syndicates",
@@ -2331,7 +2262,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/litigation-ops-os",
       "preview_url": "https://gcoinstash-cmd.github.io/litigation-ops-os/",
       "admin_url": "https://gcoinstash-cmd.github.io/litigation-ops-os/admin/",
-      "admin_passcode": "litigation2026",
       "audit_score": 9.8,
       "tables": [
         "litigation_dockets",
@@ -2363,7 +2293,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/heavy-plant-rental-os",
       "preview_url": "https://gcoinstash-cmd.github.io/heavy-plant-rental-os/",
       "admin_url": "https://gcoinstash-cmd.github.io/heavy-plant-rental-os/admin/",
-      "admin_passcode": "plant2026",
       "audit_score": 9.8,
       "tables": [
         "machinery_fleet",
@@ -2396,7 +2325,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/freight-broker-dispatch-os",
       "preview_url": "https://gcoinstash-cmd.github.io/freight-broker-dispatch-os/",
       "admin_url": "https://gcoinstash-cmd.github.io/freight-broker-dispatch-os/admin/",
-      "admin_passcode": "freight2026",
       "audit_score": 9.8,
       "tables": [
         "load_board",
@@ -2429,7 +2357,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/aviation-charter-os",
       "preview_url": "https://gcoinstash-cmd.github.io/aviation-charter-os/",
       "admin_url": "https://gcoinstash-cmd.github.io/aviation-charter-os/admin/",
-      "admin_passcode": "aviation2026",
       "audit_score": 9.8,
       "tables": [
         "aircraft_fleet",
@@ -2462,7 +2389,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/cold-chain-storage-os",
       "preview_url": "https://gcoinstash-cmd.github.io/cold-chain-storage-os/",
       "admin_url": "https://gcoinstash-cmd.github.io/cold-chain-storage-os/admin/",
-      "admin_passcode": "coldchain2026",
       "audit_score": 9.8,
       "tables": [
         "cold_storage_zones",
@@ -2495,7 +2421,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/crane-rigging-ops-os",
       "preview_url": "https://gcoinstash-cmd.github.io/crane-rigging-ops-os/",
       "admin_url": "https://gcoinstash-cmd.github.io/crane-rigging-ops-os/admin/",
-      "admin_passcode": "crane2026",
       "audit_score": 9.8,
       "tables": [
         "crane_inventory",
@@ -2528,7 +2453,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/ceramic-shield-ppf-os",
       "preview_url": "https://gcoinstash-cmd.github.io/ceramic-shield-ppf-os/",
       "admin_url": "https://gcoinstash-cmd.github.io/ceramic-shield-ppf-os/admin/",
-      "admin_passcode": "ceramic2026",
       "audit_score": 9.8,
       "tables": [
         "paint_inspections",
@@ -2561,7 +2485,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/mobile-detail-dispatch-os",
       "preview_url": "https://gcoinstash-cmd.github.io/mobile-detail-dispatch-os/",
       "admin_url": "https://gcoinstash-cmd.github.io/mobile-detail-dispatch-os/admin/",
-      "admin_passcode": "detail2026",
       "audit_score": 9.8,
       "tables": [
         "mobile_vans",
@@ -2594,7 +2517,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/cinegrip-equipment-os",
       "preview_url": "https://gcoinstash-cmd.github.io/cinegrip-equipment-os/",
       "admin_url": "https://gcoinstash-cmd.github.io/cinegrip-equipment-os/admin/",
-      "admin_passcode": "cinegrip2026",
       "audit_score": 9.8,
       "tables": [
         "gear_inventory",
@@ -2627,7 +2549,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/custom-ink-studio-os",
       "preview_url": "https://gcoinstash-cmd.github.io/custom-ink-studio-os/",
       "admin_url": "https://gcoinstash-cmd.github.io/custom-ink-studio-os/admin/",
-      "admin_passcode": "customink2026",
       "audit_score": 9.8,
       "tables": [
         "artist_roster",
@@ -2660,7 +2581,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/combat-recovery-lab-os",
       "preview_url": "https://gcoinstash-cmd.github.io/combat-recovery-lab-os/",
       "admin_url": "https://gcoinstash-cmd.github.io/combat-recovery-lab-os/admin/",
-      "admin_passcode": "recovery2026",
       "audit_score": 9.8,
       "tables": [
         "recovery_modalities",
@@ -2693,7 +2613,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/fine-dining-matrix-os",
       "preview_url": "https://gcoinstash-cmd.github.io/fine-dining-matrix-os/",
       "admin_url": "https://gcoinstash-cmd.github.io/fine-dining-matrix-os/admin",
-      "admin_passcode": "finedining2026",
       "audit_score": 9.8,
       "tables": [
         "dining_tables",
@@ -2726,7 +2645,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/medspa-clinic-os",
       "preview_url": "https://gcoinstash-cmd.github.io/medspa-clinic-os/",
       "admin_url": "https://gcoinstash-cmd.github.io/medspa-clinic-os/admin",
-      "admin_passcode": "medspaclinic2026",
       "audit_score": 9.8,
       "tables": [
         "patients",
@@ -2759,7 +2677,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/superyacht-charter-os",
       "preview_url": "https://gcoinstash-cmd.github.io/superyacht-charter-os/",
       "admin_url": "https://gcoinstash-cmd.github.io/superyacht-charter-os/admin",
-      "admin_passcode": "yacht2026",
       "audit_score": 9.8,
       "tables": [
         "yachts",
@@ -2792,7 +2709,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/luxury-horology-vault-os",
       "preview_url": "https://gcoinstash-cmd.github.io/luxury-horology-vault-os/",
       "admin_url": "https://gcoinstash-cmd.github.io/luxury-horology-vault-os/admin",
-      "admin_passcode": "horology2026",
       "audit_score": 9.8,
       "tables": [
         "timepieces",
@@ -2825,7 +2741,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/private-villa-estate-os",
       "preview_url": "https://gcoinstash-cmd.github.io/private-villa-estate-os/",
       "admin_url": "https://gcoinstash-cmd.github.io/private-villa-estate-os/admin",
-      "admin_passcode": "villaestate2026",
       "audit_score": 9.8,
       "tables": [
         "estates",
@@ -2857,7 +2772,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/aegis-swarm-os",
       "preview_url": "https://aegis-swarm-os.onrender.com",
       "admin_url": "https://aegis-swarm-os.onrender.com/admin",
-      "admin_passcode": "aegis2026",
       "audit_score": 9.8,
       "tables": [
         "defense_perimeters",
@@ -2904,7 +2818,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/autonomous-mining-haulage-fleet-dispatch-os",
       "preview_url": "https://autonomous-mining-haulage-fleet-dispatch-os.onrender.com",
       "admin_url": "https://autonomous-mining-haulage-fleet-dispatch-os.onrender.com/admin",
-      "admin_passcode": "autonomous2026",
       "audit_score": 9.8,
       "tables": [
         "haulage_vehicles",
@@ -2951,7 +2864,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/autonomous-subsea-mining-crawler-telemetry-os",
       "preview_url": "https://autonomous-subsea-mining-crawler-telemetry-os.onrender.com",
       "admin_url": "https://autonomous-subsea-mining-crawler-telemetry-os.onrender.com/admin",
-      "admin_passcode": "autonomous2026",
       "audit_score": 9.8,
       "tables": [
         "crawler_units",
@@ -2998,7 +2910,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/aviation-fbo-dispatch-os",
       "preview_url": "https://aviation-fbo-dispatch-os.onrender.com",
       "admin_url": "https://aviation-fbo-dispatch-os.onrender.com/admin",
-      "admin_passcode": "aviation2026",
       "audit_score": 9.8,
       "tables": [
         "flight_manifests",
@@ -3045,7 +2956,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/boutique-winery-production-os",
       "preview_url": "https://boutique-winery-production-os.onrender.com",
       "admin_url": "https://boutique-winery-production-os.onrender.com/admin",
-      "admin_passcode": "boutique2026",
       "audit_score": 9.8,
       "tables": [
         "vineyard_blocks",
@@ -3092,7 +3002,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/clinical-trial-operations-os",
       "preview_url": "https://clinical-trial-operations-os.onrender.com",
       "admin_url": "https://clinical-trial-operations-os.onrender.com/admin",
-      "admin_passcode": "clinical2026",
       "audit_score": 9.8,
       "tables": [
         "trial_cohorts",
@@ -3139,7 +3048,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/cold-storage-logistics-os",
       "preview_url": "https://cold-storage-logistics-os.onrender.com",
       "admin_url": "https://cold-storage-logistics-os.onrender.com/admin",
-      "admin_passcode": "cold2026",
       "audit_score": 9.8,
       "tables": [
         "temperature_zones",
@@ -3186,7 +3094,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/commercial-supersonic-airliner-engine-inverted-aerospike-telemetry-os",
       "preview_url": "https://commercial-supersonic-airliner-engine-inverted-aerospike-telemetry-os.onrender.com",
       "admin_url": "https://commercial-supersonic-airliner-engine-inverted-aerospike-telemetry-os.onrender.com/admin",
-      "admin_passcode": "commercial2026",
       "audit_score": 9.8,
       "tables": [
         "aerospike_chambers",
@@ -3233,7 +3140,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/commercial-tokamak-fusion-plasma-scada-os",
       "preview_url": "https://commercial-tokamak-fusion-plasma-scada-os.onrender.com",
       "admin_url": "https://commercial-tokamak-fusion-plasma-scada-os.onrender.com/admin",
-      "admin_passcode": "commercial2026",
       "audit_score": 9.8,
       "tables": [
         "plasma_confinements",
@@ -3280,7 +3186,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/deep-sea-rov-trenching-and-cable-burial-os",
       "preview_url": "https://deep-sea-rov-trenching-and-cable-burial-os.onrender.com",
       "admin_url": "https://deep-sea-rov-trenching-and-cable-burial-os.onrender.com/admin",
-      "admin_passcode": "deep2026",
       "audit_score": 9.8,
       "tables": [
         "rov_umbilicals",
@@ -3327,7 +3232,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/geothermal-supercritical-egs-wellhead-scada-os",
       "preview_url": "https://geothermal-supercritical-egs-wellhead-scada-os.onrender.com",
       "admin_url": "https://geothermal-supercritical-egs-wellhead-scada-os.onrender.com/admin",
-      "admin_passcode": "geothermal2026",
       "audit_score": 9.8,
       "tables": [
         "wellhead_pressures",
@@ -3374,7 +3278,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/hft-colocation-and-microwave-os",
       "preview_url": "https://hft-colocation-and-microwave-os.onrender.com",
       "admin_url": "https://hft-colocation-and-microwave-os.onrender.com/admin",
-      "admin_passcode": "hft2026",
       "audit_score": 9.8,
       "tables": [
         "microwave_hops",
@@ -3421,7 +3324,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/hypersonic-wind-tunnel-aerodynamics-telemetry-os",
       "preview_url": "https://hypersonic-wind-tunnel-aerodynamics-telemetry-os.onrender.com",
       "admin_url": "https://hypersonic-wind-tunnel-aerodynamics-telemetry-os.onrender.com/admin",
-      "admin_passcode": "hypersonic2026",
       "audit_score": 9.8,
       "tables": [
         "mach_flow_regimes",
@@ -3468,7 +3370,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/luxury-auto-concierge-os",
       "preview_url": "https://luxury-auto-concierge-os.onrender.com",
       "admin_url": "https://luxury-auto-concierge-os.onrender.com/admin",
-      "admin_passcode": "luxury2026",
       "audit_score": 9.8,
       "tables": [
         "vehicle_vaults",
@@ -3515,7 +3416,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/maritime-freight-brokerage-os",
       "preview_url": "https://maritime-freight-brokerage-os.onrender.com",
       "admin_url": "https://maritime-freight-brokerage-os.onrender.com/admin",
-      "admin_passcode": "maritime2026",
       "audit_score": 9.8,
       "tables": [
         "vessel_manifests",
@@ -3562,7 +3462,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/orbital-satellite-laser-isl-optical-terminal-os",
       "preview_url": "https://orbital-satellite-laser-isl-optical-terminal-os.onrender.com",
       "admin_url": "https://orbital-satellite-laser-isl-optical-terminal-os.onrender.com/admin",
-      "admin_passcode": "orbital2026",
       "audit_score": 9.8,
       "tables": [
         "laser_crosslinks",
@@ -3609,7 +3508,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/private-credit-syndication-os",
       "preview_url": "https://private-credit-syndication-os.onrender.com",
       "admin_url": "https://private-credit-syndication-os.onrender.com/admin",
-      "admin_passcode": "private2026",
       "audit_score": 9.8,
       "tables": [
         "credit_facilities",
@@ -3656,7 +3554,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/renewable-energy-microgrid-dispatch-os",
       "preview_url": "https://renewable-energy-microgrid-dispatch-os.onrender.com",
       "admin_url": "https://renewable-energy-microgrid-dispatch-os.onrender.com/admin",
-      "admin_passcode": "renewable2026",
       "audit_score": 9.8,
       "tables": [
         "bess_storage",
@@ -3703,7 +3600,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/semiconductor-fab-cleanroom-scada-os",
       "preview_url": "https://semiconductor-fab-cleanroom-scada-os.onrender.com",
       "admin_url": "https://semiconductor-fab-cleanroom-scada-os.onrender.com/admin",
-      "admin_passcode": "semiconductor2026",
       "audit_score": 9.8,
       "tables": [
         "cleanroom_plenums",
@@ -3750,7 +3646,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/space-launch-payload-manifest-os",
       "preview_url": "https://space-launch-payload-manifest-os.onrender.com",
       "admin_url": "https://space-launch-payload-manifest-os.onrender.com/admin",
-      "admin_passcode": "space2026",
       "audit_score": 9.8,
       "tables": [
         "payload_fairs",
@@ -3797,7 +3692,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/subsea-cable-restoration-os",
       "preview_url": "https://subsea-cable-restoration-os.onrender.com",
       "admin_url": "https://subsea-cable-restoration-os.onrender.com/admin",
-      "admin_passcode": "subsea2026",
       "audit_score": 9.8,
       "tables": [
         "cable_faults",
@@ -3844,7 +3738,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/superconducting-quantum-processor-cryostat-os",
       "preview_url": "https://superconducting-quantum-processor-cryostat-os.onrender.com",
       "admin_url": "https://superconducting-quantum-processor-cryostat-os.onrender.com/admin",
-      "admin_passcode": "superconducting2026",
       "audit_score": 9.8,
       "tables": [
         "dilution_fridges",
@@ -3891,7 +3784,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/yacht-charter-fleet-ecosystem",
       "preview_url": "https://yacht-charter-fleet-ecosystem.onrender.com",
       "admin_url": "https://yacht-charter-fleet-ecosystem.onrender.com/admin",
-      "admin_passcode": "yacht2026",
       "audit_score": 9.8,
       "tables": [
         "charter_bookings",
@@ -3938,7 +3830,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/orbital-habitat-closed-loop-os",
       "preview_url": "https://orbital-habitat-closed-loop-os.onrender.com",
       "admin_url": "https://orbital-habitat-closed-loop-os.onrender.com/admin",
-      "admin_passcode": "orbital2026",
       "audit_score": 9.8,
       "tables": [
         "sabatier_reactors",
@@ -3985,7 +3876,6 @@ export const CATALOG_DATA = {
       "gumroad_url": "https://auraandgrid.gumroad.com/l/orbital-cryo-depot-scada-os",
       "preview_url": "https://orbital-cryo-depot-scada-os.onrender.com",
       "admin_url": "https://orbital-cryo-depot-scada-os.onrender.com/admin",
-      "admin_passcode": "cryo2026",
       "audit_score": 9.9,
       "tables": [
         "depot_stations",
