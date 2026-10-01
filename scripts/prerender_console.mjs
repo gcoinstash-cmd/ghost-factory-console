@@ -97,9 +97,9 @@ const cardsHtml = products.map(p => {
 
 let html = fs.readFileSync(htmlPath, 'utf8');
 
-// Replace contents of #root with prerendered cards
-const rootRegex = /<div id="root">[\s\S]*?<\/div>/;
-const replacement = `<div id="root">\n    <section id="static-prerender" style="display:none;" aria-hidden="true">\n${cardsHtml}\n    </section>\n  </div>`;
+// Replace contents of #root with prerendered cards (matching cleanly up to <script type="module")
+const rootRegex = /<div id="root">[\s\S]*?<\/div>(\s*<script type="module)/;
+const replacement = `<div id="root">\n    <section id="static-prerender" style="display:none;" aria-hidden="true">\n${cardsHtml}\n    </section>\n  </div>$1`;
 
 if (rootRegex.test(html)) {
   html = html.replace(rootRegex, replacement);
