@@ -242,13 +242,83 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
         missionCompleted={missionCompleted}
       />
 
+      {/* GLOBAL HERO CTA & WHAT-YOU-GET DELIVERABLES SECTION */}
+      <section className="bg-gradient-to-r from-emerald-950/30 via-black to-zinc-950 border border-emerald-500/40 rounded-2xl p-6 sm:p-8 space-y-6 shadow-2xl relative overflow-hidden font-sans">
+        <div className="absolute top-0 right-0 w-80 h-80 bg-emerald-500/10 rounded-full filter blur-3xl pointer-events-none" />
+
+        <div className="relative z-10 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
+          <div className="space-y-2">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-500/10 border border-emerald-500/30 rounded-lg text-xs font-mono font-bold text-emerald-400 uppercase tracking-widest">
+              <ShieldCheck size={14} /> GHOSTFACTORY™ MASTER BLUEPRINT REPOSITORY
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
+              Browse 110 Commercial Software Blueprints
+            </h2>
+            <p className="text-slate-300 text-xs sm:text-sm max-w-2xl leading-relaxed">
+              85 Lean Rapid-Sale prototypes ($199 MSRP) + 25 Tier-1 Flagship SCADA operational consoles ($1,500–$3,500).
+              Each asset includes complete React 19 source, PostgreSQL schema, seed data, and commercial deployment rights.
+            </p>
+          </div>
+
+          <div className="flex flex-wrap items-center gap-3 shrink-0 font-mono text-xs">
+            <a
+              href="#catalog-grid"
+              className="px-5 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-black uppercase tracking-wider transition-all shadow-lg shadow-emerald-500/20 active:scale-95"
+            >
+              Browse 110 Blueprints ↓
+            </a>
+            <a
+              href="https://auraandgrid.gumroad.com"
+              target="_blank"
+              rel="noreferrer"
+              className="px-5 py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold border border-white/20 uppercase tracking-wider transition-all"
+            >
+              Request Vault Catalog ➔
+            </a>
+          </div>
+        </div>
+
+        {/* What You Get Deliverables Strip */}
+        <div className="pt-5 border-t border-white/10 space-y-3 font-mono">
+          <span className="text-xs uppercase font-bold tracking-widest text-slate-400 block">
+            What You Get With Every Deployment-Ready Blueprint:
+          </span>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2.5 text-xs">
+            <div className="bg-black/60 border border-white/10 p-3 rounded-xl space-y-1">
+              <strong className="text-emerald-400 block font-bold text-[11px]">1. React 19 Frontend</strong>
+              <span className="text-[10px] text-slate-400 block leading-tight">Tailwind CSS + Lucide UI blueprint</span>
+            </div>
+            <div className="bg-black/60 border border-white/10 p-3 rounded-xl space-y-1">
+              <strong className="text-cyan-400 block font-bold text-[11px]">2. Postgres Schema</strong>
+              <span className="text-[10px] text-slate-400 block leading-tight">Relational schema with RLS patterns</span>
+            </div>
+            <div className="bg-black/60 border border-white/10 p-3 rounded-xl space-y-1">
+              <strong className="text-amber-400 block font-bold text-[11px]">3. Mock Seed Data</strong>
+              <span className="text-[10px] text-slate-400 block leading-tight">Turnkey schema.sql & seed.sql files</span>
+            </div>
+            <div className="bg-black/60 border border-white/10 p-3 rounded-xl space-y-1">
+              <strong className="text-purple-400 block font-bold text-[11px]">4. Setup Guide</strong>
+              <span className="text-[10px] text-slate-400 block leading-tight">Step-by-step Render/Vercel guide</span>
+            </div>
+            <div className="bg-black/60 border border-white/10 p-3 rounded-xl space-y-1">
+              <strong className="text-pink-400 block font-bold text-[11px]">5. Commercial License</strong>
+              <span className="text-[10px] text-slate-400 block leading-tight">Perpetual single-client deployment</span>
+            </div>
+            <div className="bg-black/60 border border-amber-500/40 p-3 rounded-xl space-y-1 bg-amber-950/10">
+              <strong className="text-amber-300 block font-bold text-[11px]">6. Simulated Truth</strong>
+              <span className="text-[10px] text-amber-200/80 block leading-tight">Interactive prototype / sample data</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FILTER & SEARCH CONTROL CONSOLE */}
       <section className="bg-[#121215] border border-white/15 rounded-xl p-4 sm:p-6 flex flex-col md:flex-row gap-4 items-center justify-between text-sm">
         <div className="relative w-full md:w-96">
           <Search size={18} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-300" />
           <input
             type="text"
-            placeholder="Search vehicle designation, domain, passcode..."
+            placeholder="Search blueprint, industry, or use case..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             className="w-full bg-black/70 border border-white/20 rounded-lg pl-11 pr-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:border-emerald-500 text-sm sm:text-base font-mono font-bold"
@@ -291,7 +361,7 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
       </section>
 
       {/* CAR CARDS GRID */}
-      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <section id="catalog-grid" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredProducts.map((product) => {
           const rarity = getRarityTier(product);
           const domain = getDomainClass(product);
@@ -429,9 +499,9 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
 
               {/* Architecture specs */}
               <div className="flex items-center justify-between text-xs text-slate-300 font-bold px-1">
-                <span className="flex items-center gap-1.5">
+                <span className="flex items-center gap-1.5" title="Includes Postgres schema with row-level-security pattern">
                   <Database size={13} className="text-cyan-400" />
-                  <span>Postgres RLS Level 3</span>
+                  <span>Postgres RLS Pattern</span>
                 </span>
                 <span className="flex items-center gap-1.5">
                   <Activity size={13} className="text-emerald-400" />
@@ -454,7 +524,7 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
                   </p>
                   <div className="flex items-center justify-between text-[11px] pt-1">
                     <span className="text-slate-400">Database Engine:</span>
-                    <span className="text-cyan-400 font-mono font-bold">Postgres RLS Level 3</span>
+                    <span className="text-cyan-400 font-mono font-bold" title="Includes Postgres schema with row-level-security pattern">Postgres Schema with RLS Pattern</span>
                   </div>
                   <div className="flex items-center justify-between text-[11px]">
                     <span className="text-slate-400">Status:</span>

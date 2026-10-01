@@ -108,7 +108,7 @@ export const MaintenanceBayScreen: React.FC<MaintenanceBayScreenProps> = ({
             <span className="uppercase text-[10px] font-bold">RLS Demo Policies</span>
             <Database size={14} className="text-cyan-400" />
           </div>
-          <span className="text-2xl font-black text-white">Level 3 Demo</span>
+          <span className="text-2xl font-black text-white">RLS Pattern</span>
           <span className="text-[10px] text-cyan-400 block mt-1 font-semibold">PostgreSQL Sandbox Active</span>
         </div>
 
@@ -216,7 +216,7 @@ export const MaintenanceBayScreen: React.FC<MaintenanceBayScreenProps> = ({
                   <td className="py-2.5 px-3 font-bold text-white">{p.name}</td>
                   <td className="py-2.5 px-3 text-emerald-400 font-semibold">200 OK</td>
                   <td className="py-2.5 px-3 text-slate-300">{p.tables ? p.tables.length : 4} Tables</td>
-                  <td className="py-2.5 px-3 text-cyan-400">Level 3 Demo</td>
+                  <td className="py-2.5 px-3 text-cyan-400">RLS Pattern</td>
                   <td className="py-2.5 px-3 text-amber-300 text-[10px]">Interactive Prototype</td>
                 </tr>
               ))}

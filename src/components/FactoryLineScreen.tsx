@@ -628,7 +628,7 @@ export const FactoryLineScreen: React.FC<FactoryLineScreenProps> = ({
                 <div className="pt-2 border-t border-white/10 flex flex-wrap items-center justify-between gap-3 text-xs font-mono">
                   <div className="flex items-center gap-1.5 text-slate-300">
                     <ShieldCheck size={13} className="text-emerald-400" />
-                    <span>Postgres RLS Level 3 Sandbox</span>
+                    <span>Postgres Schema with RLS Pattern</span>
                   </div>
 
                   <a 

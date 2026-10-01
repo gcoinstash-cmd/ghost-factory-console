@@ -64,7 +64,7 @@ export const TestDriveModal: React.FC<TestDriveModalProps> = ({
             </span>
           </div>
           <span className="text-[10px] bg-black/60 px-2 py-0.5 rounded border border-amber-500/40 text-amber-300">
-            Postgres RLS Level 3 Sandbox
+            Postgres Schema with RLS Pattern
           </span>
         </div>
 

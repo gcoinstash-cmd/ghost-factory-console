@@ -115,7 +115,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
           <button
             onClick={onOpenAudit}
             className="hidden md:flex items-center gap-1.5 text-slate-200 hover:text-cyan-400 transition-colors cursor-pointer bg-slate-900/80 px-3 py-1.5 rounded border border-slate-700 font-bold"
-            title="Inspect Level 3 Demo RLS Architecture"
+            title="Inspect Postgres Schema with RLS Pattern Architecture"
           >
             <Database size={14} className="text-cyan-400" />
             <span>RLS: <strong className="text-cyan-400">LEVEL 3 DEMO</strong></span>

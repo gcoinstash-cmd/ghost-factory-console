@@ -39,7 +39,7 @@ export const AuditModal: React.FC<AuditModalProps> = ({
               <span>DILIGENCE GRADE: LEVEL 3 SUPABASE-READY</span>
             </h4>
             <p className="text-slate-300 leading-relaxed text-xs">
-              Every digital vehicle in the {totalAssets}-asset catalog is verified with clean React 19 frontend blueprints, documented PostgreSQL relational tables, and Level 3 Row Level Security (RLS) policies configured for sandboxed demonstration access.
+              Every digital vehicle in the {totalAssets}-asset catalog is verified with clean React 19 frontend blueprints, documented PostgreSQL relational tables, and PostgreSQL Row Level Security (RLS) patterns configured for sandboxed demonstration access.
             </p>
           </div>
 

@@ -5,9 +5,11 @@ import {
   Check, 
   Copy, 
   ChevronRight,
-  Info
+  Info,
+  AlertTriangle
 } from 'lucide-react';
 import { ProductItem } from '../catalogData';
+import { isRegulatedSector, VERTICAL_COMPLIANCE_DISCLAIMER } from '../utils/compliance';
 
 interface ShowroomEngineScreenProps {
   products: ProductItem[];
@@ -129,9 +131,16 @@ export const ShowroomEngineScreen: React.FC<ShowroomEngineScreenProps> = ({
                   }`}
                 >
                   <div className="space-y-0.5">
-                    <span className="text-[10px] text-zinc-500 font-mono block">
-                      MODEL #{p.id.toString().padStart(3, '0')}
-                    </span>
+                    <div className="flex items-center gap-1.5">
+                      <span className="text-[10px] text-zinc-500 font-mono block">
+                        MODEL #{p.id.toString().padStart(3, '0')}
+                      </span>
+                      {isRegulatedSector(p) && (
+                        <span className="text-[8px] font-bold text-amber-400 bg-amber-950/60 border border-amber-500/40 px-1 py-0.2 rounded uppercase">
+                          DISCLAIMER
+                        </span>
+                      )}
+                    </div>
                     <p className="font-bold">{p.name}</p>
                     <p className="text-[10px] text-zinc-400 line-clamp-1">{p.category}</p>
                   </div>
@@ -145,31 +154,46 @@ export const ShowroomEngineScreen: React.FC<ShowroomEngineScreenProps> = ({
         {/* Right: Technical Spec Sheet & Commercial Offering */}
         <div className="lg:col-span-8 bg-zinc-950 border border-zinc-800 rounded-2xl p-6 sm:p-8 space-y-6">
           {/* Spec Sheet Header */}
-          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-b border-zinc-800 pb-5">
-            <div>
-              <div className="flex items-center gap-2 mb-1">
-                <span className="text-xs font-mono text-zinc-400 bg-zinc-900 px-2 py-0.5 rounded border border-zinc-800">
-                  SPECIFICATION SHEET // MODEL #{selectedProduct.id?.toString().padStart(3, '0')}
-                </span>
-                <span className={`text-xs font-mono px-2 py-0.5 rounded border ${isTrack2 ? 'text-amber-400 bg-amber-950/40 border-amber-500/40 font-bold' : 'text-emerald-400 bg-emerald-950/30 border-emerald-500/30'}`}>
-                  {isTrack2 ? 'TRACK 2 FLAGSHIP TIER-1 ($14.5k ANCHOR)' : 'TRACK 1 COMMERCIAL READY ($199 MSRP)'}
-                </span>
+          <div className="border-b border-zinc-800 pb-5">
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+              <div>
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="text-xs font-mono text-zinc-400 bg-zinc-900 px-2 py-0.5 rounded border border-zinc-800">
+                    SPECIFICATION SHEET // MODEL #{selectedProduct.id?.toString().padStart(3, '0')}
+                  </span>
+                  <span className={`text-xs font-mono px-2 py-0.5 rounded border ${isTrack2 ? 'text-amber-400 bg-amber-950/40 border-amber-500/40 font-bold' : 'text-emerald-400 bg-emerald-950/30 border-emerald-500/30'}`}>
+                    {isTrack2 ? 'TRACK 2 FLAGSHIP TIER-1 ($14.5k ANCHOR)' : 'TRACK 1 COMMERCIAL READY ($199 MSRP)'}
+                  </span>
+                </div>
+                <h2 className="text-2xl sm:text-3xl font-black text-white">
+                  {selectedProduct.name}
+                </h2>
+                <p className="text-xs sm:text-sm text-zinc-400 mt-0.5">
+                  {selectedProduct.category}
+                </p>
               </div>
-              <h2 className="text-2xl sm:text-3xl font-black text-white">
-                {selectedProduct.name}
-              </h2>
-              <p className="text-xs sm:text-sm text-zinc-400 mt-0.5">
-                {selectedProduct.category}
-              </p>
+
+              <button
+                onClick={() => onOpenTestDrive(selectedProduct)}
+                className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white hover:bg-zinc-200 text-black font-extrabold text-xs uppercase tracking-wider transition-all cursor-pointer shadow-lg active:scale-95 font-mono shrink-0"
+              >
+                <ExternalLink size={14} />
+                <span>TEST DRIVE DEMO</span>
+              </button>
             </div>
 
-            <button
-              onClick={() => onOpenTestDrive(selectedProduct)}
-              className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white hover:bg-zinc-200 text-black font-extrabold text-xs uppercase tracking-wider transition-all cursor-pointer shadow-lg active:scale-95 font-mono"
-            >
-              <ExternalLink size={14} />
-              <span>TEST DRIVE DEMO</span>
-            </button>
+            {/* Regulated Vertical Compliance Disclaimer */}
+            {isRegulatedSector(selectedProduct) && (
+              <div className="mt-4 bg-amber-950/40 border border-amber-500/50 rounded-xl p-3.5 flex items-start gap-2.5 text-xs font-mono text-amber-200">
+                <AlertTriangle size={15} className="text-amber-400 shrink-0 mt-0.5" />
+                <div className="leading-snug">
+                  <strong className="text-amber-300 block uppercase tracking-wider text-[10px] mb-0.5">
+                    Regulated Sector Compliance Notice:
+                  </strong>
+                  {VERTICAL_COMPLIANCE_DISCLAIMER}
+                </div>
+              </div>
+            )}
           </div>
 
           {/* License Tier Selector */}
@@ -256,7 +280,7 @@ export const ShowroomEngineScreen: React.FC<ShowroomEngineScreenProps> = ({
               </div>
               <div className="bg-zinc-900/60 p-3 rounded-xl border border-zinc-800">
                 <span className="text-[10px] text-zinc-500 uppercase block">Access Model</span>
-                <span className="text-white font-bold text-xs mt-0.5 block">RLS Level 3 Demo</span>
+                <span className="text-white font-bold text-xs mt-0.5 block">Postgres Schema with RLS Pattern</span>
               </div>
               <div className="bg-zinc-900/60 p-3 rounded-xl border border-zinc-800">
                 <span className="text-[10px] text-zinc-500 uppercase block">Deployment</span>
