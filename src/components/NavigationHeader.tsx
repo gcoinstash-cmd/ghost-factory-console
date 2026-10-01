@@ -130,6 +130,14 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
             <span>INTEGRITY: <strong>{totalAssets}/{totalAssets} VERIFIED</strong></span>
           </button>
 
+          <div
+            className="hidden xl:flex items-center gap-1.5 px-2.5 py-1.5 rounded bg-emerald-500/15 border border-emerald-500/40 text-emerald-300 font-mono text-xs font-bold"
+            title="Production Diligence Freeze Lock"
+          >
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>BUILD: <strong>v1.2.0-diligence-cleared</strong></span>
+          </div>
+
           <button
             onClick={onHardRefresh}
             disabled={isRefreshing}

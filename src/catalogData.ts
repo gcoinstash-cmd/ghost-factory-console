@@ -34,7 +34,7 @@ export interface ProductItem {
 }
 
 export const CATALOG_DATA = {
-  "catalog_version": "1.0.0",
+  "catalog_version": "1.2.0-diligence-cleared",
   "store": "Aura & Grid",
   "store_url": "https://auraandgrid.gumroad.com",
   "total_flagships": 110,

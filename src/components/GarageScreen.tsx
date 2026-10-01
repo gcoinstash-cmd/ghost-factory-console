@@ -40,6 +40,10 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedDomain, setSelectedDomain] = useState<string>('ALL');
   const [selectedRarity, setSelectedRarity] = useState<string>('ALL');
+  const [selectedTrack, setSelectedTrack] = useState<string>('ALL');
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const [viewAll, setViewAll] = useState<boolean>(false);
+  const PAGE_SIZE = 24;
 
   const domainOptions = useMemo(() => {
     const set = new Set<string>();
@@ -51,16 +55,51 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
     return products.filter(p => {
       const rarity = getRarityTier(p);
       const domain = getDomainClass(p);
+      const isTrack2 = Boolean(p.flagship_qualified) || (p.pricing_track?.includes('Track 2') ?? false) || p.id >= 86;
+
       const matchesSearch = 
         p.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         p.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
         p.id.toString().includes(searchTerm) ||
+        (p.best_for || '').toLowerCase().includes(searchTerm.toLowerCase()) ||
         (p.vertical || '').toLowerCase().includes(searchTerm.toLowerCase());
+
       const matchesDomain = selectedDomain === 'ALL' || domain === selectedDomain;
       const matchesRarity = selectedRarity === 'ALL' || rarity === selectedRarity;
-      return matchesSearch && matchesDomain && matchesRarity;
+      const matchesTrack = 
+        selectedTrack === 'ALL' ||
+        (selectedTrack === 'TRACK_1' && !isTrack2) ||
+        (selectedTrack === 'TRACK_2' && isTrack2);
+
+      return matchesSearch && matchesDomain && matchesRarity && matchesTrack;
     });
-  }, [products, searchTerm, selectedDomain, selectedRarity]);
+  }, [products, searchTerm, selectedDomain, selectedRarity, selectedTrack]);
+
+  const totalPages = Math.ceil(filteredProducts.length / PAGE_SIZE) || 1;
+  const safeCurrentPage = Math.min(Math.max(1, currentPage), totalPages);
+
+  const displayedProducts = useMemo(() => {
+    if (viewAll) return filteredProducts;
+    const startIdx = (safeCurrentPage - 1) * PAGE_SIZE;
+    return filteredProducts.slice(startIdx, startIdx + PAGE_SIZE);
+  }, [filteredProducts, viewAll, safeCurrentPage]);
+
+  const handleSearchChange = (val: string) => {
+    setSearchTerm(val);
+    setCurrentPage(1);
+  };
+  const handleDomainChange = (val: string) => {
+    setSelectedDomain(val);
+    setCurrentPage(1);
+  };
+  const handleRarityChange = (val: string) => {
+    setSelectedRarity(val);
+    setCurrentPage(1);
+  };
+  const handleTrackChange = (val: string) => {
+    setSelectedTrack(val);
+    setCurrentPage(1);
+  };
 
   // Dynamic valuation computation based on live catalog composition (85 T1 + 25 T2)
   const valuation = useMemo(() => {
@@ -103,8 +142,14 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
 
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 mb-6 relative z-10">
           <div>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-emerald-500/15 border border-emerald-500/40 rounded-lg text-sm sm:text-base font-mono font-black text-emerald-400 uppercase tracking-widest mb-3">
-              <Car size={18} /> SCREEN 1 // DIGITAL VEHICLE GARAGE HUD
+            <div className="flex flex-wrap items-center gap-2 mb-3">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-emerald-500/15 border border-emerald-500/40 rounded-lg text-sm sm:text-base font-mono font-black text-emerald-400 uppercase tracking-widest">
+                <Car size={18} /> SCREEN 1 // DIGITAL VEHICLE GARAGE HUD
+              </div>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-emerald-500/20 border border-emerald-500/50 rounded-lg text-xs font-mono font-black text-emerald-300">
+                <Sparkles size={13} className="text-emerald-400" />
+                <span>v1.2.0-diligence-cleared</span>
+              </span>
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white flex flex-wrap items-center gap-3">
               COLLECTION: <span className="text-emerald-400 font-mono">{totalAssets} / 500 DIGITAL VEHICLES</span>
@@ -327,24 +372,24 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
 
       {/* FILTER & SEARCH CONTROL CONSOLE */}
       <section className="bg-[#121215] border border-white/15 rounded-xl p-4 sm:p-6 flex flex-col md:flex-row gap-4 items-center justify-between text-sm">
-        <div className="relative w-full md:w-96">
+        <div className="relative w-full md:w-80">
           <Search size={18} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-300" />
           <input
             type="text"
-            placeholder="Search blueprint, industry, or use case..."
+            placeholder="Search blueprint, industry, or target..."
             value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
+            onChange={(e) => handleSearchChange(e.target.value)}
             className="w-full bg-black/70 border border-white/20 rounded-lg pl-11 pr-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:border-emerald-500 text-sm sm:text-base font-mono font-bold"
           />
         </div>
 
         <div className="flex flex-wrap items-center gap-3 w-full md:w-auto">
-          {/* Domain Filter */}
+          {/* Domain / Category Filter */}
           <div className="flex items-center gap-2">
             <Filter size={16} className="text-slate-300" />
             <select
               value={selectedDomain}
-              onChange={(e) => setSelectedDomain(e.target.value)}
+              onChange={(e) => handleDomainChange(e.target.value)}
               className="bg-black/70 border border-white/20 rounded-lg px-3.5 py-3 text-slate-200 focus:outline-none focus:border-emerald-500 text-sm sm:text-base font-mono font-bold cursor-pointer"
             >
               {domainOptions.map(d => (
@@ -353,10 +398,21 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
             </select>
           </div>
 
+          {/* Pricing Track Filter (Track 1 / Flagship) */}
+          <select
+            value={selectedTrack}
+            onChange={(e) => handleTrackChange(e.target.value)}
+            className="bg-black/70 border border-white/20 rounded-lg px-3.5 py-3 text-slate-200 focus:outline-none focus:border-emerald-500 text-sm sm:text-base font-mono font-bold cursor-pointer"
+          >
+            <option value="ALL">All Pricing Tracks (110)</option>
+            <option value="TRACK_1">Track 1 — Lean Rapid-Sale (85)</option>
+            <option value="TRACK_2">Track 2 — Flagship Tier-1 (25)</option>
+          </select>
+
           {/* Rarity Filter */}
           <select
             value={selectedRarity}
-            onChange={(e) => setSelectedRarity(e.target.value)}
+            onChange={(e) => handleRarityChange(e.target.value)}
             className="bg-black/70 border border-white/20 rounded-lg px-3.5 py-3 text-slate-200 focus:outline-none focus:border-emerald-500 text-sm sm:text-base font-mono font-bold cursor-pointer"
           >
             <option value="ALL">All Rarity Tiers</option>
@@ -373,15 +429,78 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
         </div>
       </section>
 
-      {/* CAR CARDS GRID */}
+      {/* CAR CARDS GRID (Paginated 24 Blueprints / View) */}
       <section id="catalog-grid" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filteredProducts.map((product) => (
+        {displayedProducts.map((product) => (
           <BlueprintCard
             key={product.id}
             product={product}
             isOperatorAuthenticated={isOperatorAuthenticated}
           />
         ))}
+      </section>
+
+      {/* PAGINATION TOOLBAR & FLEET CONTROLS (24 Blueprints / View) */}
+      <section className="bg-[#121215] border border-white/15 rounded-xl p-4 sm:p-5 flex flex-col md:flex-row items-center justify-between gap-4 font-mono text-xs">
+        <div className="text-slate-300 font-bold text-center md:text-left">
+          Showing <span className="text-emerald-400">{filteredProducts.length === 0 ? 0 : (safeCurrentPage - 1) * PAGE_SIZE + 1}</span>–
+          <span className="text-emerald-400">{viewAll ? filteredProducts.length : Math.min(safeCurrentPage * PAGE_SIZE, filteredProducts.length)}</span> of{' '}
+          <strong className="text-white">{filteredProducts.length}</strong> Filtered Vehicles ({totalAssets} Total)
+        </div>
+
+        <div className="flex items-center gap-1.5 flex-wrap justify-center">
+          <button
+            onClick={() => {
+              if (safeCurrentPage > 1) {
+                setCurrentPage(p => Math.max(1, p - 1));
+                document.getElementById('catalog-grid')?.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+            disabled={safeCurrentPage === 1 || viewAll}
+            className="px-3 py-1.5 rounded-lg bg-black/60 border border-white/20 text-slate-300 hover:text-white hover:border-emerald-500/50 disabled:opacity-30 disabled:cursor-not-allowed font-bold transition-all cursor-pointer"
+          >
+            ‹ Prev
+          </button>
+
+          {!viewAll && Array.from({ length: totalPages }, (_, i) => i + 1).map((pg) => (
+            <button
+              key={pg}
+              onClick={() => {
+                setCurrentPage(pg);
+                document.getElementById('catalog-grid')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className={`w-8 h-8 rounded-lg font-bold transition-all cursor-pointer ${
+                pg === safeCurrentPage
+                  ? 'bg-emerald-500 text-black shadow-lg shadow-emerald-500/30'
+                  : 'bg-black/60 border border-white/20 text-slate-400 hover:text-white hover:border-white/40'
+              }`}
+            >
+              {pg}
+            </button>
+          ))}
+
+          <button
+            onClick={() => {
+              if (safeCurrentPage < totalPages) {
+                setCurrentPage(p => Math.min(totalPages, p + 1));
+                document.getElementById('catalog-grid')?.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+            disabled={safeCurrentPage === totalPages || viewAll}
+            className="px-3 py-1.5 rounded-lg bg-black/60 border border-white/20 text-slate-300 hover:text-white hover:border-emerald-500/50 disabled:opacity-30 disabled:cursor-not-allowed font-bold transition-all cursor-pointer"
+          >
+            Next ›
+          </button>
+        </div>
+
+        <div className="flex items-center gap-2">
+          <button
+            onClick={() => setViewAll(!viewAll)}
+            className="px-3.5 py-1.5 rounded-lg bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-bold transition-all cursor-pointer"
+          >
+            {viewAll ? `Paginate (24/view)` : `View All (${filteredProducts.length})`}
+          </button>
+        </div>
       </section>
     </div>
   );
