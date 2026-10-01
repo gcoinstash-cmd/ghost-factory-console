@@ -48,7 +48,8 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
   const domainOptions = useMemo(() => {
     const set = new Set<string>();
     products.forEach(p => set.add(getDomainClass(p)));
-    return ['ALL', ...Array.from(set)];
+    const sorted = Array.from(set).sort((a, b) => a.localeCompare(b));
+    return ['ALL', ...sorted];
   }, [products]);
 
   const filteredProducts = useMemo(() => {
@@ -416,11 +417,9 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
             className="bg-black/70 border border-white/20 rounded-lg px-3.5 py-3 text-slate-200 focus:outline-none focus:border-emerald-500 text-sm sm:text-base font-mono font-bold cursor-pointer"
           >
             <option value="ALL">All Rarity Tiers</option>
-            <option value="Mythic Candidate">Mythic Candidate</option>
-            <option value="Legendary">Legendary</option>
-            <option value="Elite">Elite</option>
-            <option value="Rare">Rare</option>
-            <option value="Common">Common</option>
+            <option value="Elite">Elite (25 Flagship)</option>
+            <option value="Pro">Pro (46 Advanced)</option>
+            <option value="Core">Core (39 Turnkey)</option>
           </select>
 
           <span className="text-slate-200 ml-auto md:ml-0 text-sm sm:text-base font-bold">

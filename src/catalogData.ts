@@ -11,6 +11,8 @@ export interface ProductItem {
   audit_score: number;
   tables: string[];
   vertical: string;
+  domain?: string;
+  rarity_tier?: 'Core' | 'Pro' | 'Elite';
   archetype_id?: string;
   archetype_name?: string;
   archetype_description?: string;
@@ -68,7 +70,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Boutique fitness studios & personal training collectives"
+      "best_for": "Best for: Boutique fitness studios & personal training collectives",
+      "domain": "Performance Athletics & Fitness",
+      "rarity_tier": "Pro"
     },
     {
       "id": 2,
@@ -96,7 +100,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Luxury supercar & exotic vehicle rental agencies"
+      "best_for": "Best for: Luxury supercar & exotic vehicle rental agencies",
+      "domain": "Creative & Media Production",
+      "rarity_tier": "Core"
     },
     {
       "id": 3,
@@ -124,7 +130,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: High-ticket creative agencies & production houses"
+      "best_for": "Best for: High-ticket creative agencies & production houses",
+      "domain": "Mobility & Fleet Logistics",
+      "rarity_tier": "Pro"
     },
     {
       "id": 4,
@@ -152,7 +160,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Architectural & interior design studio portfolios"
+      "best_for": "Best for: Architectural & interior design studio portfolios",
+      "domain": "Performance Athletics & Fitness",
+      "rarity_tier": "Core"
     },
     {
       "id": 5,
@@ -180,7 +190,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
-      "best_for": "Best for: Emerging private equity managers & LP syndicates"
+      "best_for": "Best for: Emerging private equity managers & LP syndicates",
+      "domain": "Institutional Capital & Wealth",
+      "rarity_tier": "Pro"
     },
     {
       "id": 6,
@@ -208,7 +220,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Specialty micro-roasteries & artisanal coffee tasting bars"
+      "best_for": "Best for: Specialty micro-roasteries & artisanal coffee tasting bars",
+      "domain": "Lifestyle & Boutique Hospitality",
+      "rarity_tier": "Core"
     },
     {
       "id": 7,
@@ -237,7 +251,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Ultra-luxury estate brokers & private villa management"
+      "best_for": "Best for: Ultra-luxury estate brokers & private villa management",
+      "domain": "Lifestyle & Boutique Hospitality",
+      "rarity_tier": "Pro"
     },
     {
       "id": 8,
@@ -265,7 +281,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
-      "best_for": "Best for: Boutique aesthetics clinics & medical spa practitioners"
+      "best_for": "Best for: Boutique aesthetics clinics & medical spa practitioners",
+      "domain": "Lifestyle & Boutique Hospitality",
+      "rarity_tier": "Pro"
     },
     {
       "id": 9,
@@ -293,7 +311,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Sports biomechanics & athlete physical therapy clinics"
+      "best_for": "Best for: Sports biomechanics & athlete physical therapy clinics",
+      "domain": "Lifestyle & Boutique Hospitality",
+      "rarity_tier": "Core"
     },
     {
       "id": 10,
@@ -321,7 +341,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Private vineyard cellars & allocation tasting estates"
+      "best_for": "Best for: Private vineyard cellars & allocation tasting estates",
+      "domain": "Lifestyle & Boutique Hospitality",
+      "rarity_tier": "Core"
     },
     {
       "id": 11,
@@ -349,7 +371,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Exclusive private member clubs & executive lounges"
+      "best_for": "Best for: Exclusive private member clubs & executive lounges",
+      "domain": "Creative & Media Production",
+      "rarity_tier": "Pro"
     },
     {
       "id": 12,
@@ -377,7 +401,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Independent record labels & analog mastering studios"
+      "best_for": "Best for: Independent record labels & analog mastering studios",
+      "domain": "Performance Athletics & Fitness",
+      "rarity_tier": "Core"
     },
     {
       "id": 13,
@@ -405,7 +431,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Speakeasy jazz lounges & sommelier listening rooms"
+      "best_for": "Best for: Speakeasy jazz lounges & sommelier listening rooms",
+      "domain": "Lifestyle & Boutique Hospitality",
+      "rarity_tier": "Core"
     },
     {
       "id": 14,
@@ -432,7 +460,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: High-ticket wellness retreats & executive expeditions"
+      "best_for": "Best for: High-ticket wellness retreats & executive expeditions",
+      "domain": "Lifestyle & Boutique Hospitality",
+      "rarity_tier": "Core"
     },
     {
       "id": 15,
@@ -459,7 +489,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Intimate chef counter tasting rooms & omakase bars"
+      "best_for": "Best for: Intimate chef counter tasting rooms & omakase bars",
+      "domain": "Lifestyle & Boutique Hospitality",
+      "rarity_tier": "Core"
     },
     {
       "id": 16,
@@ -486,7 +518,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: 3D CGI, motion design & visual effects studios"
+      "best_for": "Best for: 3D CGI, motion design & visual effects studios",
+      "domain": "Creative & Media Production",
+      "rarity_tier": "Core"
     },
     {
       "id": 17,
@@ -513,7 +547,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Bespoke fragrance houses & botanical olfactory ateliers"
+      "best_for": "Best for: Bespoke fragrance houses & botanical olfactory ateliers",
+      "domain": "Lifestyle & Boutique Hospitality",
+      "rarity_tier": "Pro"
     },
     {
       "id": 18,
@@ -540,7 +576,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Alpine tasting salons & biodynamic cellar lounges"
+      "best_for": "Best for: Alpine tasting salons & biodynamic cellar lounges",
+      "domain": "Lifestyle & Boutique Hospitality",
+      "rarity_tier": "Core"
     },
     {
       "id": 19,
@@ -568,7 +606,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Modern architectural ateliers & structural engineering firms"
+      "best_for": "Best for: Modern architectural ateliers & structural engineering firms",
+      "domain": "Creative & Media Production",
+      "rarity_tier": "Core"
     },
     {
       "id": 20,
@@ -596,7 +636,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Private dining clubs & vinyl listening restaurants"
+      "best_for": "Best for: Private dining clubs & vinyl listening restaurants",
+      "domain": "Lifestyle & Boutique Hospitality",
+      "rarity_tier": "Core"
     },
     {
       "id": 21,
@@ -624,7 +666,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: High-energy izakayas & modern craft robata cantinas"
+      "best_for": "Best for: High-energy izakayas & modern craft robata cantinas",
+      "domain": "Lifestyle & Boutique Hospitality",
+      "rarity_tier": "Core"
     },
     {
       "id": 22,
@@ -652,7 +696,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Contemporary dim sum bistros & craft baijiu bars"
+      "best_for": "Best for: Contemporary dim sum bistros & craft baijiu bars",
+      "domain": "Lifestyle & Boutique Hospitality",
+      "rarity_tier": "Core"
     },
     {
       "id": 23,
@@ -680,7 +726,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Commercial lighting designers & architectural fixture firms"
+      "best_for": "Best for: Commercial lighting designers & architectural fixture firms",
+      "domain": "Mobility & Fleet Logistics",
+      "rarity_tier": "Pro"
     },
     {
       "id": 24,
@@ -709,7 +757,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Luxury architectural villa rentals & private island retreats"
+      "best_for": "Best for: Luxury architectural villa rentals & private island retreats",
+      "domain": "Lifestyle & Boutique Hospitality",
+      "rarity_tier": "Pro"
     },
     {
       "id": 25,
@@ -737,7 +787,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Commercial architecture studios & urban master planners"
+      "best_for": "Best for: Commercial architecture studios & urban master planners",
+      "domain": "Creative & Media Production",
+      "rarity_tier": "Core"
     },
     {
       "id": 26,
@@ -766,7 +818,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Craft smash burger joints & fast-casual kitchen collectives"
+      "best_for": "Best for: Craft smash burger joints & fast-casual kitchen collectives",
+      "domain": "Lifestyle & Boutique Hospitality",
+      "rarity_tier": "Pro"
     },
     {
       "id": 27,
@@ -794,7 +848,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Haute parfumerie brands & bespoke scent formulation labs"
+      "best_for": "Best for: Haute parfumerie brands & bespoke scent formulation labs",
+      "domain": "Lifestyle & Boutique Hospitality",
+      "rarity_tier": "Core"
     },
     {
       "id": 28,
@@ -822,7 +878,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Commercial portrait photographers & editorial studios"
+      "best_for": "Best for: Commercial portrait photographers & editorial studios",
+      "domain": "Creative & Media Production",
+      "rarity_tier": "Pro"
     },
     {
       "id": 29,
@@ -850,7 +908,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Boutique wine estates & allocation membership programs"
+      "best_for": "Best for: Boutique wine estates & allocation membership programs",
+      "domain": "Lifestyle & Boutique Hospitality",
+      "rarity_tier": "Core"
     },
     {
       "id": 30,
@@ -877,7 +937,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
-      "best_for": "Best for: Multi-generational family offices & private wealth trusts"
+      "best_for": "Best for: Multi-generational family offices & private wealth trusts",
+      "domain": "Institutional Capital & Wealth",
+      "rarity_tier": "Pro"
     },
     {
       "id": 31,
@@ -904,7 +966,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: High-end grooming salons & luxury barber ateliers"
+      "best_for": "Best for: High-end grooming salons & luxury barber ateliers",
+      "domain": "Lifestyle & Boutique Hospitality",
+      "rarity_tier": "Core"
     },
     {
       "id": 32,
@@ -932,7 +996,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: VIP barber studios & curated grooming product retailers"
+      "best_for": "Best for: VIP barber studios & curated grooming product retailers",
+      "domain": "Lifestyle & Boutique Hospitality",
+      "rarity_tier": "Core"
     },
     {
       "id": 33,
@@ -959,7 +1025,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
-      "best_for": "Best for: Commercial real estate loan brokers & debt underwriters"
+      "best_for": "Best for: Commercial real estate loan brokers & debt underwriters",
+      "domain": "Lifestyle & Boutique Hospitality",
+      "rarity_tier": "Pro"
     },
     {
       "id": 34,
@@ -986,7 +1054,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: B2B strategy consultants & high-ticket agency founders"
+      "best_for": "Best for: B2B strategy consultants & high-ticket agency founders",
+      "domain": "Creative & Media Production",
+      "rarity_tier": "Pro"
     },
     {
       "id": 35,
@@ -1013,7 +1083,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Oak smokehouse barbecue joints with pit telemetry needs"
+      "best_for": "Best for: Oak smokehouse barbecue joints with pit telemetry needs",
+      "domain": "Lifestyle & Boutique Hospitality",
+      "rarity_tier": "Pro"
     },
     {
       "id": 36,
@@ -1040,7 +1112,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Creative film directors & cultural motion studios"
+      "best_for": "Best for: Creative film directors & cultural motion studios",
+      "domain": "Creative & Media Production",
+      "rarity_tier": "Core"
     },
     {
       "id": 37,
@@ -1068,7 +1142,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Neapolitan pizzerias & artisanal fermentation kitchens"
+      "best_for": "Best for: Neapolitan pizzerias & artisanal fermentation kitchens",
+      "domain": "Lifestyle & Boutique Hospitality",
+      "rarity_tier": "Core"
     },
     {
       "id": 38,
@@ -1096,7 +1172,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: VIP nightclub bottle service & hospitality promoters"
+      "best_for": "Best for: VIP nightclub bottle service & hospitality promoters",
+      "domain": "Lifestyle & Boutique Hospitality",
+      "rarity_tier": "Pro"
     },
     {
       "id": 39,
@@ -1124,7 +1202,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Wholesale coffee roasters & cafe bean delivery fleets"
+      "best_for": "Best for: Wholesale coffee roasters & cafe bean delivery fleets",
+      "domain": "Creative & Media Production",
+      "rarity_tier": "Pro"
     },
     {
       "id": 40,
@@ -1152,7 +1232,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Food truck operators & ghost kitchen delivery brands"
+      "best_for": "Best for: Food truck operators & ghost kitchen delivery brands",
+      "domain": "Lifestyle & Boutique Hospitality",
+      "rarity_tier": "Core"
     },
     {
       "id": 41,
@@ -1180,7 +1262,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
-      "best_for": "Best for: Bitcoin treasury managers & cryptographic asset holders"
+      "best_for": "Best for: Bitcoin treasury managers & cryptographic asset holders",
+      "domain": "Institutional Capital & Wealth",
+      "rarity_tier": "Pro"
     },
     {
       "id": 42,
@@ -1208,7 +1292,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Sourdough micro-bakeries & pastry wholesale dispatch"
+      "best_for": "Best for: Sourdough micro-bakeries & pastry wholesale dispatch",
+      "domain": "Mobility & Fleet Logistics",
+      "rarity_tier": "Pro"
     },
     {
       "id": 43,
@@ -1236,7 +1322,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Destination luxury spas & holistic wellness sanctuaries"
+      "best_for": "Best for: Destination luxury spas & holistic wellness sanctuaries",
+      "domain": "Lifestyle & Boutique Hospitality",
+      "rarity_tier": "Core"
     },
     {
       "id": 44,
@@ -1263,7 +1351,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Heritage culinary concepts & private dining chefs"
+      "best_for": "Best for: Heritage culinary concepts & private dining chefs",
+      "domain": "Lifestyle & Boutique Hospitality",
+      "rarity_tier": "Core"
     },
     {
       "id": 45,
@@ -1291,7 +1381,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Gastronomic research collectives & experiential dining"
+      "best_for": "Best for: Gastronomic research collectives & experiential dining",
+      "domain": "Lifestyle & Boutique Hospitality",
+      "rarity_tier": "Core"
     },
     {
       "id": 46,
@@ -1318,7 +1410,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Farm-to-table restaurants & local farm partnership networks"
+      "best_for": "Best for: Farm-to-table restaurants & local farm partnership networks",
+      "domain": "Lifestyle & Boutique Hospitality",
+      "rarity_tier": "Pro"
     },
     {
       "id": 47,
@@ -1346,7 +1440,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
-      "best_for": "Best for: High-end residential real estate brokers & property portals"
+      "best_for": "Best for: High-end residential real estate brokers & property portals",
+      "domain": "Lifestyle & Boutique Hospitality",
+      "rarity_tier": "Core"
     },
     {
       "id": 48,
@@ -1373,7 +1469,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: High-volume drive-thru concepts & late-night wok kitchens"
+      "best_for": "Best for: High-volume drive-thru concepts & late-night wok kitchens",
+      "domain": "Lifestyle & Boutique Hospitality",
+      "rarity_tier": "Pro"
     },
     {
       "id": 49,
@@ -1399,7 +1497,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
-      "best_for": "Best for: Real estate private equity analysts & property syndicators"
+      "best_for": "Best for: Real estate private equity analysts & property syndicators",
+      "domain": "Institutional Capital & Wealth",
+      "rarity_tier": "Pro"
     },
     {
       "id": 50,
@@ -1426,7 +1526,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Banquet catering facilities & commercial production kitchens"
+      "best_for": "Best for: Banquet catering facilities & commercial production kitchens",
+      "domain": "Lifestyle & Boutique Hospitality",
+      "rarity_tier": "Pro"
     },
     {
       "id": 51,
@@ -1454,7 +1556,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Mobile street food fleets & festival event caterers"
+      "best_for": "Best for: Mobile street food fleets & festival event caterers",
+      "domain": "Lifestyle & Boutique Hospitality",
+      "rarity_tier": "Pro"
     },
     {
       "id": 52,
@@ -1481,7 +1585,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Minimalist Zen dining rooms & sensory gastronomy seatings"
+      "best_for": "Best for: Minimalist Zen dining rooms & sensory gastronomy seatings",
+      "domain": "Lifestyle & Boutique Hospitality",
+      "rarity_tier": "Core"
     },
     {
       "id": 53,
@@ -1508,7 +1614,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
-      "best_for": "Best for: Pediatric development centers & sensory therapy clinics"
+      "best_for": "Best for: Pediatric development centers & sensory therapy clinics",
+      "domain": "Clinical & Medical Operations",
+      "rarity_tier": "Pro"
     },
     {
       "id": 54,
@@ -1535,7 +1643,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
-      "best_for": "Best for: Hotel asset managers & boutique hospitality investors"
+      "best_for": "Best for: Hotel asset managers & boutique hospitality investors",
+      "domain": "Lifestyle & Boutique Hospitality",
+      "rarity_tier": "Pro"
     },
     {
       "id": 55,
@@ -1562,7 +1672,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
-      "best_for": "Best for: Private equity portfolio managers & investment committees"
+      "best_for": "Best for: Private equity portfolio managers & investment committees",
+      "domain": "Institutional Capital & Wealth",
+      "rarity_tier": "Pro"
     },
     {
       "id": 56,
@@ -1590,7 +1702,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Commercial HVAC contractors & chiller plant technicians"
+      "best_for": "Best for: Commercial HVAC contractors & chiller plant technicians",
+      "domain": "Lifestyle & Boutique Hospitality",
+      "rarity_tier": "Pro"
     },
     {
       "id": 57,
@@ -1618,7 +1732,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Drone roofing contractors & insurance scope estimators"
+      "best_for": "Best for: Drone roofing contractors & insurance scope estimators",
+      "domain": "Trades & Infrastructure",
+      "rarity_tier": "Pro"
     },
     {
       "id": 58,
@@ -1646,12 +1762,14 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Commercial plumbing firms & backflow testing services"
+      "best_for": "Best for: Commercial plumbing firms & backflow testing services",
+      "domain": "Lifestyle & Boutique Hospitality",
+      "rarity_tier": "Pro"
     },
     {
       "id": 59,
       "name": "HELIOS SOLAR INSTALL & PERMIT OS",
-      "category": "Commercial PV Sizing, Stamped AHJ & Interconnect PTO OS",
+      "category": "Commercial PV Sizing, AHJ Reference Spec (Simulation) & Interconnect PTO OS",
       "vertical": "home_services",
       "gumroad_url": "https://auraandgrid.gumroad.com/l/solar-install-os",
       "preview_url": "https://gcoinstash-cmd.github.io/solar-install-os/",
@@ -1674,7 +1792,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Solar EPC installers & renewable energy contractors"
+      "best_for": "Best for: Solar EPC installers & renewable energy contractors",
+      "domain": "Trades & Infrastructure",
+      "rarity_tier": "Core"
     },
     {
       "id": 60,
@@ -1702,7 +1822,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Commercial electrical contractors & EV charger deployers"
+      "best_for": "Best for: Commercial electrical contractors & EV charger deployers",
+      "domain": "Lifestyle & Boutique Hospitality",
+      "rarity_tier": "Pro"
     },
     {
       "id": 61,
@@ -1730,7 +1852,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
-      "best_for": "Best for: Private dental practices & cosmetic dentistry clinics"
+      "best_for": "Best for: Private dental practices & cosmetic dentistry clinics",
+      "domain": "Clinical & Medical Operations",
+      "rarity_tier": "Core"
     },
     {
       "id": 62,
@@ -1758,7 +1882,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
-      "best_for": "Best for: Emergency veterinary hospitals & animal surgical clinics"
+      "best_for": "Best for: Emergency veterinary hospitals & animal surgical clinics",
+      "domain": "Clinical & Medical Operations",
+      "rarity_tier": "Core"
     },
     {
       "id": 63,
@@ -1786,7 +1912,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
-      "best_for": "Best for: Functional medicine doctors & epigenetic longevity clinics"
+      "best_for": "Best for: Functional medicine doctors & epigenetic longevity clinics",
+      "domain": "Clinical & Medical Operations",
+      "rarity_tier": "Pro"
     },
     {
       "id": 64,
@@ -1814,7 +1942,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Orthopedic physical therapists & sports recovery clinics"
+      "best_for": "Best for: Orthopedic physical therapists & sports recovery clinics",
+      "domain": "Clinical & Medical Operations",
+      "rarity_tier": "Core"
     },
     {
       "id": 65,
@@ -1842,7 +1972,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
-      "best_for": "Best for: Contrast therapy lounges & hyperbaric wellness clinics"
+      "best_for": "Best for: Contrast therapy lounges & hyperbaric wellness clinics",
+      "domain": "Clinical & Medical Operations",
+      "rarity_tier": "Core"
     },
     {
       "id": 66,
@@ -1870,7 +2002,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
-      "best_for": "Best for: Commercial boutique law firms & transactional attorneys"
+      "best_for": "Best for: Commercial boutique law firms & transactional attorneys",
+      "domain": "Institutional Capital & Wealth",
+      "rarity_tier": "Pro"
     },
     {
       "id": 67,
@@ -1897,7 +2031,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
-      "best_for": "Best for: Lower middle-market M&A advisors & investment banks"
+      "best_for": "Best for: Lower middle-market M&A advisors & investment banks",
+      "domain": "Institutional Capital & Wealth",
+      "rarity_tier": "Pro"
     },
     {
       "id": 68,
@@ -1924,7 +2060,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
-      "best_for": "Best for: Retained executive search consultants & board recruiters"
+      "best_for": "Best for: Retained executive search consultants & board recruiters",
+      "domain": "Institutional Capital & Wealth",
+      "rarity_tier": "Pro"
     },
     {
       "id": 69,
@@ -1951,7 +2089,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
-      "best_for": "Best for: Sovereign wealth managers & multi-family offices"
+      "best_for": "Best for: Sovereign wealth managers & multi-family offices",
+      "domain": "Institutional Capital & Wealth",
+      "rarity_tier": "Pro"
     },
     {
       "id": 70,
@@ -1978,7 +2118,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
-      "best_for": "Best for: Complex litigation teams & trial war room managers"
+      "best_for": "Best for: Complex litigation teams & trial war room managers",
+      "domain": "Institutional Capital & Wealth",
+      "rarity_tier": "Pro"
     },
     {
       "id": 71,
@@ -2006,7 +2148,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Earthmoving equipment rental yards & plant hire fleets"
+      "best_for": "Best for: Earthmoving equipment rental yards & plant hire fleets",
+      "domain": "Mobility & Fleet Logistics",
+      "rarity_tier": "Pro"
     },
     {
       "id": 72,
@@ -2034,7 +2178,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Intermodal freight brokerages & carrier logistics dispatchers"
+      "best_for": "Best for: Intermodal freight brokerages & carrier logistics dispatchers",
+      "domain": "Lifestyle & Boutique Hospitality",
+      "rarity_tier": "Pro"
     },
     {
       "id": 73,
@@ -2062,7 +2208,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
-      "best_for": "Best for: On-demand private jet brokers & aircraft fleet operators"
+      "best_for": "Best for: On-demand private jet brokers & aircraft fleet operators",
+      "domain": "Mobility & Fleet Logistics",
+      "rarity_tier": "Core"
     },
     {
       "id": 74,
@@ -2090,12 +2238,14 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Temperature-controlled cold warehouses & reefer dock hubs"
+      "best_for": "Best for: Temperature-controlled cold warehouses & reefer dock hubs",
+      "domain": "Mobility & Fleet Logistics",
+      "rarity_tier": "Core"
     },
     {
       "id": 75,
       "name": "CRANE & RIGGING OPS OS",
-      "category": "Heavy Lift Engineering & Certified Crane Rigging OS",
+      "category": "Heavy Lift Engineering & Simulated Rigging Telemetry OS",
       "vertical": "heavy_fleet",
       "gumroad_url": "https://auraandgrid.gumroad.com/l/crane-rigging-ops-os",
       "preview_url": "https://gcoinstash-cmd.github.io/crane-rigging-ops-os/",
@@ -2118,7 +2268,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Heavy lift contractors & mobile crane rigging engineers"
+      "best_for": "Best for: Heavy lift contractors & mobile crane rigging engineers",
+      "domain": "Mobility & Fleet Logistics",
+      "rarity_tier": "Pro"
     },
     {
       "id": 76,
@@ -2146,7 +2298,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Paint protection film installers & luxury auto restylers"
+      "best_for": "Best for: Paint protection film installers & luxury auto restylers",
+      "domain": "Mobility & Fleet Logistics",
+      "rarity_tier": "Pro"
     },
     {
       "id": 77,
@@ -2174,7 +2328,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Mobile detailing operators & corporate fleet wash services"
+      "best_for": "Best for: Mobile detailing operators & corporate fleet wash services",
+      "domain": "Lifestyle & Boutique Hospitality",
+      "rarity_tier": "Pro"
     },
     {
       "id": 78,
@@ -2202,7 +2358,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Camera rental houses & grip truck equipment dispatchers"
+      "best_for": "Best for: Camera rental houses & grip truck equipment dispatchers",
+      "domain": "Creative & Media Production",
+      "rarity_tier": "Pro"
     },
     {
       "id": 79,
@@ -2230,7 +2388,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: High-ticket tattoo studios & resident artist collectives"
+      "best_for": "Best for: High-ticket tattoo studios & resident artist collectives",
+      "domain": "Creative & Media Production",
+      "rarity_tier": "Core"
     },
     {
       "id": 80,
@@ -2258,7 +2418,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Combat sports gyms & elite athlete recovery facilities"
+      "best_for": "Best for: Combat sports gyms & elite athlete recovery facilities",
+      "domain": "Performance Athletics & Fitness",
+      "rarity_tier": "Core"
     },
     {
       "id": 81,
@@ -2286,7 +2448,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Michelin-starred restaurants & multi-course tasting rooms"
+      "best_for": "Best for: Michelin-starred restaurants & multi-course tasting rooms",
+      "domain": "Lifestyle & Boutique Hospitality",
+      "rarity_tier": "Core"
     },
     {
       "id": 82,
@@ -2314,7 +2478,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
-      "best_for": "Best for: Aesthetic injection nurses & medical aesthetics practices"
+      "best_for": "Best for: Aesthetic injection nurses & medical aesthetics practices",
+      "domain": "Lifestyle & Boutique Hospitality",
+      "rarity_tier": "Pro"
     },
     {
       "id": 83,
@@ -2342,12 +2508,14 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Luxury yacht charter brokers & Mediterranean fleet managers"
+      "best_for": "Best for: Luxury yacht charter brokers & Mediterranean fleet managers",
+      "domain": "Mobility & Fleet Logistics",
+      "rarity_tier": "Core"
     },
     {
       "id": 84,
       "name": "LUXURY HOROLOGY VAULT OS",
-      "category": "Chrono Inspection, Caliber Specs & Provenance Certificate OS",
+      "category": "Chrono Inspection, Caliber Specs & Digital Blueprint Ledger OS",
       "vertical": "creative",
       "gumroad_url": "https://auraandgrid.gumroad.com/l/luxury-horology-vault-os",
       "preview_url": "https://gcoinstash-cmd.github.io/luxury-horology-vault-os/",
@@ -2370,7 +2538,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: High-end watch dealers & horological provenance vaults"
+      "best_for": "Best for: High-end watch dealers & horological provenance vaults",
+      "domain": "Institutional Capital & Wealth",
+      "rarity_tier": "Pro"
     },
     {
       "id": 85,
@@ -2398,7 +2568,9 @@ export const CATALOG_DATA = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Estate managers & luxury villa rental concierges"
+      "best_for": "Best for: Estate managers & luxury villa rental concierges",
+      "domain": "Lifestyle & Boutique Hospitality",
+      "rarity_tier": "Pro"
     },
     {
       "id": 86,
@@ -2434,7 +2606,9 @@ export const CATALOG_DATA = {
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Perimeter security operators & autonomous drone fleet coordinators"
+      "best_for": "Best for: Perimeter security operators & autonomous drone fleet coordinators",
+      "domain": "Deep Tech SCADA",
+      "rarity_tier": "Elite"
     },
     {
       "id": 87,
@@ -2467,7 +2641,9 @@ export const CATALOG_DATA = {
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Open-pit mining dispatchers & autonomous haulage operators"
+      "best_for": "Best for: Open-pit mining dispatchers & autonomous haulage operators",
+      "domain": "Industrial Robotics & Autonomous SCADA",
+      "rarity_tier": "Elite"
     },
     {
       "id": 88,
@@ -2500,7 +2676,9 @@ export const CATALOG_DATA = {
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Deep-sea mining engineers & seabed crawler telemetry operators"
+      "best_for": "Best for: Deep-sea mining engineers & seabed crawler telemetry operators",
+      "domain": "Industrial Robotics & Autonomous SCADA",
+      "rarity_tier": "Elite"
     },
     {
       "id": 89,
@@ -2533,7 +2711,9 @@ export const CATALOG_DATA = {
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
-      "best_for": "Best for: Airport FBO ground handlers & private aviation terminal managers"
+      "best_for": "Best for: Airport FBO ground handlers & private aviation terminal managers",
+      "domain": "Lifestyle & Boutique Hospitality",
+      "rarity_tier": "Elite"
     },
     {
       "id": 90,
@@ -2566,7 +2746,9 @@ export const CATALOG_DATA = {
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Estate winemakers & barrel cellar production managers"
+      "best_for": "Best for: Estate winemakers & barrel cellar production managers",
+      "domain": "Lifestyle & Boutique Hospitality",
+      "rarity_tier": "Elite"
     },
     {
       "id": 91,
@@ -2599,7 +2781,9 @@ export const CATALOG_DATA = {
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
-      "best_for": "Best for: Biopharma CROs & clinical trial site coordinators"
+      "best_for": "Best for: Biopharma CROs & clinical trial site coordinators",
+      "domain": "Clinical & Medical Operations",
+      "rarity_tier": "Elite"
     },
     {
       "id": 92,
@@ -2632,7 +2816,9 @@ export const CATALOG_DATA = {
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Cold chain logistics managers & multi-zone freezer facilities"
+      "best_for": "Best for: Cold chain logistics managers & multi-zone freezer facilities",
+      "domain": "Mobility & Fleet Logistics",
+      "rarity_tier": "Elite"
     },
     {
       "id": 93,
@@ -2668,7 +2854,9 @@ export const CATALOG_DATA = {
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Supersonic propulsion engineers & test cell telemetry analysts"
+      "best_for": "Best for: Supersonic propulsion engineers & test cell telemetry analysts",
+      "domain": "Deep Tech SCADA",
+      "rarity_tier": "Elite"
     },
     {
       "id": 94,
@@ -2706,7 +2894,9 @@ export const CATALOG_DATA = {
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Tokamak control engineers & magnetic confinement fusion labs"
+      "best_for": "Best for: Tokamak control engineers & magnetic confinement fusion labs",
+      "domain": "Energy SCADA",
+      "rarity_tier": "Elite"
     },
     {
       "id": 95,
@@ -2739,7 +2929,9 @@ export const CATALOG_DATA = {
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Offshore marine contractors & subsea cable trenching engineers"
+      "best_for": "Best for: Offshore marine contractors & subsea cable trenching engineers",
+      "domain": "Industrial Robotics & Autonomous SCADA",
+      "rarity_tier": "Elite"
     },
     {
       "id": 96,
@@ -2772,7 +2964,9 @@ export const CATALOG_DATA = {
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Geothermal energy operators & enhanced geothermal wellhead engineers"
+      "best_for": "Best for: Geothermal energy operators & enhanced geothermal wellhead engineers",
+      "domain": "Energy SCADA",
+      "rarity_tier": "Elite"
     },
     {
       "id": 97,
@@ -2808,7 +3002,9 @@ export const CATALOG_DATA = {
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
-      "best_for": "Best for: Low-latency prop trading firms & colocation infrastructure teams"
+      "best_for": "Best for: Low-latency prop trading firms & colocation infrastructure teams",
+      "domain": "Institutional Capital & Wealth",
+      "rarity_tier": "Elite"
     },
     {
       "id": 98,
@@ -2844,7 +3040,9 @@ export const CATALOG_DATA = {
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Aerodynamic test engineers & hypersonic wind tunnel researchers"
+      "best_for": "Best for: Aerodynamic test engineers & hypersonic wind tunnel researchers",
+      "domain": "Deep Tech SCADA",
+      "rarity_tier": "Elite"
     },
     {
       "id": 99,
@@ -2882,7 +3080,9 @@ export const CATALOG_DATA = {
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: High-net-worth vehicle concierges & private car collector managers"
+      "best_for": "Best for: High-net-worth vehicle concierges & private car collector managers",
+      "domain": "Mobility & Fleet Logistics",
+      "rarity_tier": "Elite"
     },
     {
       "id": 100,
@@ -2915,7 +3115,9 @@ export const CATALOG_DATA = {
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Dry bulk & container ship brokers & maritime cargo dispatchers"
+      "best_for": "Best for: Dry bulk & container ship brokers & maritime cargo dispatchers",
+      "domain": "Mobility & Fleet Logistics",
+      "rarity_tier": "Elite"
     },
     {
       "id": 101,
@@ -2948,7 +3150,9 @@ export const CATALOG_DATA = {
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Satellite constellation operators & optical inter-satellite link engineers"
+      "best_for": "Best for: Satellite constellation operators & optical inter-satellite link engineers",
+      "domain": "Deep Tech SCADA",
+      "rarity_tier": "Elite"
     },
     {
       "id": 102,
@@ -2984,7 +3188,9 @@ export const CATALOG_DATA = {
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
-      "best_for": "Best for: Direct lenders, credit funds & private loan syndication desks"
+      "best_for": "Best for: Direct lenders, credit funds & private loan syndication desks",
+      "domain": "Institutional Capital & Wealth",
+      "rarity_tier": "Elite"
     },
     {
       "id": 103,
@@ -3017,7 +3223,9 @@ export const CATALOG_DATA = {
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Island microgrid operators & commercial battery BESS engineers"
+      "best_for": "Best for: Island microgrid operators & commercial battery BESS engineers",
+      "domain": "Lifestyle & Boutique Hospitality",
+      "rarity_tier": "Elite"
     },
     {
       "id": 104,
@@ -3050,7 +3258,9 @@ export const CATALOG_DATA = {
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Wafer fab contamination engineers & cleanroom facility managers"
+      "best_for": "Best for: Wafer fab contamination engineers & cleanroom facility managers",
+      "domain": "Energy SCADA",
+      "rarity_tier": "Elite"
     },
     {
       "id": 105,
@@ -3086,7 +3296,9 @@ export const CATALOG_DATA = {
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Commercial launch providers & satellite integration manifest managers"
+      "best_for": "Best for: Commercial launch providers & satellite integration manifest managers",
+      "domain": "Lifestyle & Boutique Hospitality",
+      "rarity_tier": "Elite"
     },
     {
       "id": 106,
@@ -3119,7 +3331,9 @@ export const CATALOG_DATA = {
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Subsea fiber cable owners & maritime repair ship dispatchers"
+      "best_for": "Best for: Subsea fiber cable owners & maritime repair ship dispatchers",
+      "domain": "Industrial Robotics & Autonomous SCADA",
+      "rarity_tier": "Elite"
     },
     {
       "id": 107,
@@ -3152,7 +3366,9 @@ export const CATALOG_DATA = {
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Quantum computing researchers & dilution refrigerator engineers"
+      "best_for": "Best for: Quantum computing researchers & dilution refrigerator engineers",
+      "domain": "Energy SCADA",
+      "rarity_tier": "Elite"
     },
     {
       "id": 108,
@@ -3185,7 +3401,9 @@ export const CATALOG_DATA = {
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Yacht fleet management companies & luxury maritime charter brokers"
+      "best_for": "Best for: Yacht fleet management companies & luxury maritime charter brokers",
+      "domain": "Mobility & Fleet Logistics",
+      "rarity_tier": "Elite"
     },
     {
       "id": 109,
@@ -3218,7 +3436,9 @@ export const CATALOG_DATA = {
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Commercial space station operators & life support ECLSS flight controllers"
+      "best_for": "Best for: Commercial space station operators & life support ECLSS flight controllers",
+      "domain": "Deep Tech SCADA",
+      "rarity_tier": "Elite"
     },
     {
       "id": 110,
@@ -3268,7 +3488,9 @@ export const CATALOG_DATA = {
       "truth_label": "Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
-      "best_for": "Best for: In-space propellant depot engineers & cryogenic boiloff telemetry teams"
+      "best_for": "Best for: In-space propellant depot engineers & cryogenic boiloff telemetry teams",
+      "domain": "Lifestyle & Boutique Hospitality",
+      "rarity_tier": "Elite"
     }
   ],
   "vertical_slices": {
