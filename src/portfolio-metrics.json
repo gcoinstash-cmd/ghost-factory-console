@@ -12,22 +12,22 @@
   "retainedFloorCount": 88,
   "maxApaCapacity": 22,
   "valuationAppraisal": {
-    "planningFmv": 115000,
+    "planningFmv": 160000,
     "fmvRange": [
-      85500,
-      148375
+      105000,
+      235250
     ],
     "strategicAskRange": [
-      145000,
-      185000
+      195000,
+      265000
     ],
     "realisticAcceptedRange": [
-      95000,
-      125000
+      135000,
+      175000
     ],
     "replacementDevLabor": [
-      700000,
-      1690000
+      715000,
+      2020000
     ],
     "status": "PRE_REVENUE_SIMULATED_DEMOS",
     "notes": "85 Lean Rapid-Sale Track 1 ($4.5k anchor) + 25 Flagship Candidate Track 2 ($14.5k anchor)"
