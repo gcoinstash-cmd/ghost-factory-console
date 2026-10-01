@@ -16,14 +16,23 @@ interface DealDeskScreenProps {
   totalAssets: number;
   retainedFloor: number;
   maxTransferable: number;
+  isOperatorAuthenticated?: boolean;
+  onAuthenticate?: () => void;
+  onLockOperator?: () => void;
 }
 
 export const DealDeskScreen: React.FC<DealDeskScreenProps> = ({
   products,
   totalAssets,
   retainedFloor,
-  maxTransferable
+  maxTransferable,
+  isOperatorAuthenticated = false,
+  onAuthenticate,
+  onLockOperator
 }) => {
+  const [passkey, setPasskey] = useState('');
+  const [authError, setAuthError] = useState(false);
+
   // Track 1 vs Track 2 Mode Selection
   const [selectedTrack, setSelectedTrack] = useState<'track1' | 'track2'>('track1');
 
@@ -52,7 +61,7 @@ export const DealDeskScreen: React.FC<DealDeskScreenProps> = ({
   const handleStageAsset = (id: number) => {
     if (stagedAssetIds.includes(id)) return;
     if (stagedAssetIds.length >= maxTransferable) {
-      // Hard floor block: cannot exceed 17
+      // Hard floor block: cannot exceed maxTransferable
       return;
     }
     setStagedAssetIds([...stagedAssetIds, id]);
@@ -75,6 +84,93 @@ export const DealDeskScreen: React.FC<DealDeskScreenProps> = ({
     setStagedAssetIds([1, 2, 3]);
   };
 
+  // OPERATOR PERIMETER ISOLATION GATE
+  if (!isOperatorAuthenticated) {
+    const handleAuthSubmit = (e: React.FormEvent) => {
+      e.preventDefault();
+      if (passkey.trim().length > 0) {
+        onAuthenticate?.();
+      } else {
+        setAuthError(true);
+      }
+    };
+
+    return (
+      <div className="max-w-2xl mx-auto py-10 px-4 font-mono space-y-6">
+        <div className="bg-gradient-to-br from-[#121215] to-[#0A0A0B] border-2 border-amber-500/60 rounded-3xl p-8 sm:p-10 text-center space-y-6 shadow-2xl relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-80 h-80 bg-amber-500/10 rounded-full filter blur-3xl pointer-events-none" />
+
+          <div className="h-16 w-16 mx-auto rounded-2xl bg-amber-500/20 border-2 border-amber-500/50 flex items-center justify-center text-amber-400 shadow-lg shadow-amber-500/20">
+            <Lock size={32} />
+          </div>
+
+          <div className="space-y-2">
+            <span className="text-xs font-mono font-bold uppercase tracking-widest text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/30">
+              RESTRICTED M&A PERIMETER
+            </span>
+            <h1 className="text-3xl font-black text-white tracking-tight">
+              PRIVATE DEAL ROOM
+            </h1>
+            <p className="text-xs sm:text-sm text-slate-300 max-w-lg mx-auto leading-relaxed">
+              Internal software valuation models, orderly FMV ranges ($105k–$235k), LOI acceptance floors, and the 80% portfolio retention shield are isolated to authorized operators and accredited acquirers.
+            </p>
+          </div>
+
+          <form onSubmit={handleAuthSubmit} className="max-w-md mx-auto space-y-3 pt-2">
+            <input
+              type="password"
+              value={passkey}
+              onChange={(e) => {
+                setPasskey(e.target.value);
+                setAuthError(false);
+              }}
+              placeholder="Enter operator passkey (e.g. ghost2026)..."
+              className="w-full bg-black/80 border border-white/20 rounded-xl px-4 py-3 text-sm text-white placeholder:text-slate-600 focus:outline-none focus:border-amber-400 font-mono text-center"
+              autoFocus
+            />
+            {authError && (
+              <span className="text-xs text-red-400 block font-bold">
+                Please enter a valid operator passkey.
+              </span>
+            )}
+
+            <button
+              type="submit"
+              className="w-full flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl bg-amber-500 hover:bg-amber-400 text-black font-black text-sm uppercase tracking-wider transition-all cursor-pointer shadow-md shadow-amber-500/25 active:scale-95"
+            >
+              <Unlock size={16} />
+              <span>UNLOCK OPERATOR DEAL ROOM</span>
+            </button>
+
+            <button
+              type="button"
+              onClick={() => onAuthenticate?.()}
+              className="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-white/15 font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer"
+            >
+              <ShieldCheck size={14} className="text-emerald-400" />
+              <span>ONE-CLICK DEMO OPERATOR ACCESS</span>
+            </button>
+          </form>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-left pt-4 border-t border-white/10 text-xs">
+            <div className="bg-black/40 p-3 rounded-lg border border-white/5 space-y-1">
+              <span className="text-amber-400 font-bold block">Two-Faced Isolation</span>
+              <span className="text-[11px] text-slate-400 leading-tight block">Public visitors see retail shelf MSRP only ($199 / $1,500).</span>
+            </div>
+            <div className="bg-black/40 p-3 rounded-lg border border-white/5 space-y-1">
+              <span className="text-emerald-400 font-bold block">Leverage Shield</span>
+              <span className="text-[11px] text-slate-400 leading-tight block">Prevents leaking valuation floors during prospective buyer diligence.</span>
+            </div>
+            <div className="bg-black/40 p-3 rounded-lg border border-white/5 space-y-1">
+              <span className="text-cyan-400 font-bold block">80% Retention Floor</span>
+              <span className="text-[11px] text-slate-400 leading-tight block">Immutable rule retains 88 of 110 assets permanently.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="space-y-8 font-mono">
       {/* Header Banner */}
@@ -83,8 +179,22 @@ export const DealDeskScreen: React.FC<DealDeskScreenProps> = ({
 
         <div className="relative z-10 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-amber-500/10 border border-amber-500/30 rounded-lg text-xs font-mono font-bold text-amber-400 uppercase tracking-widest mb-2.5">
-              <DollarSign size={14} /> SCREEN 4 // DEAL DESK & VALUATION ENGINE
+            <div className="flex flex-wrap items-center gap-2 mb-2.5">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-amber-500/10 border border-amber-500/30 rounded-lg text-xs font-mono font-bold text-amber-400 uppercase tracking-widest">
+                <DollarSign size={14} /> SCREEN 4 // DEAL DESK & VALUATION ENGINE
+              </div>
+              <span className="bg-emerald-500/20 text-emerald-300 text-xs px-2.5 py-0.5 rounded border border-emerald-500/40 font-bold flex items-center gap-1">
+                <Unlock size={11} className="text-emerald-400" /> OPERATOR UNLOCKED
+              </span>
+              {onLockOperator && (
+                <button
+                  onClick={onLockOperator}
+                  className="bg-slate-900 hover:bg-slate-800 text-slate-300 text-xs px-2 py-0.5 rounded border border-white/15 font-bold transition-colors cursor-pointer flex items-center gap-1"
+                >
+                  <Lock size={11} className="text-amber-400" />
+                  <span>LOCK</span>
+                </button>
+              )}
             </div>
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight text-white flex items-center gap-3">
               DUAL-TRACK VALUATION & <span className="text-amber-400 font-mono">80% RETENTION SHIELD</span>

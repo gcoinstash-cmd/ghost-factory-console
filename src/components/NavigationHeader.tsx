@@ -11,7 +11,9 @@ import {
   Wrench, 
   LayoutGrid,
   ChevronDown,
-  ChevronUp
+  ChevronUp,
+  Lock,
+  Unlock
 } from 'lucide-react';
 import PORTFOLIO_METRICS from '../portfolio-metrics.json';
 
@@ -24,6 +26,9 @@ interface NavigationHeaderProps {
   onHardRefresh: () => void;
   onOpenAudit: () => void;
   totalAssets: number;
+  isOperatorAuthenticated: boolean;
+  onOpenOperatorAuth: () => void;
+  onLockOperator: () => void;
 }
 
 export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
@@ -32,7 +37,10 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
   isRefreshing,
   onHardRefresh,
   onOpenAudit,
-  totalAssets
+  totalAssets,
+  isOperatorAuthenticated,
+  onOpenOperatorAuth,
+  onLockOperator
 }) => {
   const [isMobileHudCollapsed, setIsMobileHudCollapsed] = useState(false);
 
@@ -44,6 +52,8 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
   const loiStr = `$${PORTFOLIO_METRICS.valuationAppraisal.realisticAcceptedRange[0].toLocaleString()} – $${PORTFOLIO_METRICS.valuationAppraisal.realisticAcceptedRange[1].toLocaleString()}`;
   const devStr = `$${(PORTFOLIO_METRICS.valuationAppraisal.replacementDevLabor[0] / 1000).toFixed(0)}k – $${(PORTFOLIO_METRICS.valuationAppraisal.replacementDevLabor[1] / 1000000).toFixed(2)}M`;
   const buyoutAnchor = `$${PORTFOLIO_METRICS.pricingProtocol.track2.entryBuyoutAnchor.toLocaleString()} Anchor`;
+
+  const showInternalValuation = isOperatorAuthenticated || currentView === 'dealdesk';
 
   return (
     <header className="sticky top-0 z-50 bg-[#0A0A0B]/95 backdrop-blur-xl border-b border-emerald-500/30 px-3 sm:px-6 py-2.5 sm:py-3 font-mono text-sm">
@@ -61,12 +71,42 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
           <span className="text-slate-300 hidden md:inline text-xs sm:text-sm font-bold">
             AUDIT 360 COCKPIT
           </span>
-          <span className="bg-emerald-500/15 text-emerald-400 text-xs px-2 py-0.5 rounded border border-emerald-500/40 font-black uppercase tracking-wider hidden lg:inline">
-            V2.0 DUAL-TRACK ACTIVE
-          </span>
+
+          {/* Operator Status Pill */}
+          {isOperatorAuthenticated ? (
+            <span className="bg-emerald-500/20 text-emerald-300 text-xs px-2.5 py-0.5 rounded border border-emerald-500/50 font-black uppercase tracking-wider flex items-center gap-1.5 shadow-sm shadow-emerald-500/20">
+              <Unlock size={12} className="text-emerald-400" />
+              <span className="hidden sm:inline">OPERATOR MODE</span> ACTIVE
+            </span>
+          ) : (
+            <span className="bg-slate-800/80 text-slate-300 text-xs px-2.5 py-0.5 rounded border border-white/15 font-bold uppercase tracking-wider hidden sm:inline">
+              PUBLIC STOREFRONT
+            </span>
+          )}
         </div>
 
         <div className="flex items-center gap-2 sm:gap-4 text-xs sm:text-sm">
+          {/* Operator Lock / Unlock button */}
+          {isOperatorAuthenticated ? (
+            <button
+              onClick={onLockOperator}
+              className="flex items-center gap-1.5 px-2.5 py-1 rounded bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-white/20 font-bold transition-colors cursor-pointer text-xs"
+              title="Lock Private Deal Room (Hide internal valuation math)"
+            >
+              <Lock size={13} className="text-amber-400" />
+              <span>LOCK</span>
+            </button>
+          ) : (
+            <button
+              onClick={onOpenOperatorAuth}
+              className="flex items-center gap-1.5 px-2.5 py-1 rounded bg-amber-500/15 hover:bg-amber-500/25 text-amber-300 border border-amber-500/40 font-black transition-all cursor-pointer text-xs"
+              title="Unlock Private Deal Room with Operator Key"
+            >
+              <Lock size={13} className="text-amber-400" />
+              <span className="hidden xs:inline">OPERATOR</span> ACCESS
+            </button>
+          )}
+
           <div className="flex items-center gap-1.5 text-slate-200 font-bold">
             <Server size={14} className="text-emerald-400 shrink-0" />
             <span>FLEET: <strong className="text-emerald-400">{totalAssets} LIVE</strong></span>
@@ -102,75 +142,146 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
         </div>
       </div>
 
-      {/* DESKTOP 5-PILLAR VALUATION HUD RIBBON (Visible on lg screens) */}
-      <div className="hidden lg:grid lg:grid-cols-5 gap-3 py-3 border-b border-white/10 text-xs sm:text-sm">
-        {/* 1. Fair Market Value */}
-        <div className="bg-black/75 border border-emerald-500/40 rounded-xl p-3 flex flex-col justify-between hover:border-emerald-400 transition-colors">
-          <div className="flex items-center justify-between text-slate-300 text-xs font-bold uppercase tracking-wider">
-            <span>Fair Market Value</span>
-            <span className="text-emerald-400 font-mono text-xs bg-emerald-950/80 px-1.5 py-0.5 rounded border border-emerald-500/40 font-black">FMV</span>
+      {/* DESKTOP 5-PILLAR RIBBON (Visible on lg screens) */}
+      {showInternalValuation ? (
+        /* 1. OPERATOR AUTHENTICATED: INTERNAL M&A VALUATION TELEMETRY */
+        <div className="hidden lg:grid lg:grid-cols-5 gap-3 py-3 border-b border-white/10 text-xs sm:text-sm">
+          {/* 1. Fair Market Value */}
+          <div className="bg-black/75 border border-emerald-500/40 rounded-xl p-3 flex flex-col justify-between hover:border-emerald-400 transition-colors">
+            <div className="flex items-center justify-between text-slate-300 text-xs font-bold uppercase tracking-wider">
+              <span>Fair Market Value</span>
+              <span className="text-emerald-400 font-mono text-xs bg-emerald-950/80 px-1.5 py-0.5 rounded border border-emerald-500/40 font-black">FMV</span>
+            </div>
+            <div className="mt-1.5">
+              <span className="text-base sm:text-lg font-black text-emerald-400 block">{fmvStr}</span>
+              <span className="text-xs text-slate-300 block font-semibold">Anchor: {fmvAnchor} ({totalAssets} Assets)</span>
+            </div>
           </div>
-          <div className="mt-1.5">
-            <span className="text-base sm:text-lg font-black text-emerald-400 block">{fmvStr}</span>
-            <span className="text-xs text-slate-300 block font-semibold">Anchor: {fmvAnchor} ({totalAssets} Assets)</span>
-          </div>
-        </div>
 
-        {/* 2. Direct B2B Ask */}
-        <div className="bg-black/75 border border-cyan-500/40 rounded-xl p-3 flex flex-col justify-between hover:border-cyan-400 transition-colors">
-          <div className="flex items-center justify-between text-slate-300 text-xs font-bold uppercase tracking-wider">
-            <span>Direct B2B Ask</span>
-            <span className="text-cyan-400 font-mono text-xs bg-cyan-950/80 px-1.5 py-0.5 rounded border border-cyan-500/40 font-black">ASK</span>
+          {/* 2. Direct B2B Ask */}
+          <div className="bg-black/75 border border-cyan-500/40 rounded-xl p-3 flex flex-col justify-between hover:border-cyan-400 transition-colors">
+            <div className="flex items-center justify-between text-slate-300 text-xs font-bold uppercase tracking-wider">
+              <span>Direct B2B Ask</span>
+              <span className="text-cyan-400 font-mono text-xs bg-cyan-950/80 px-1.5 py-0.5 rounded border border-cyan-500/40 font-black">ASK</span>
+            </div>
+            <div className="mt-1.5">
+              <span className="text-base sm:text-lg font-black text-cyan-400 block">{askStr}</span>
+              <span className="text-xs text-slate-300 block font-semibold">Data Room Asking Target</span>
+            </div>
           </div>
-          <div className="mt-1.5">
-            <span className="text-base sm:text-lg font-black text-cyan-400 block">{askStr}</span>
-            <span className="text-xs text-slate-300 block font-semibold">Data Room Asking Target</span>
-          </div>
-        </div>
 
-        {/* 3. Realistic Accepted Offer */}
-        <div className="bg-black/75 border border-amber-500/40 rounded-xl p-3 flex flex-col justify-between hover:border-amber-400 transition-colors">
-          <div className="flex items-center justify-between text-slate-300 text-xs font-bold uppercase tracking-wider">
-            <span>Realistic Accepted Offer</span>
-            <span className="text-amber-400 font-mono text-xs bg-amber-950/80 px-1.5 py-0.5 rounded border border-amber-500/40 font-black">LOI</span>
+          {/* 3. Realistic Accepted Offer */}
+          <div className="bg-black/75 border border-amber-500/40 rounded-xl p-3 flex flex-col justify-between hover:border-amber-400 transition-colors">
+            <div className="flex items-center justify-between text-slate-300 text-xs font-bold uppercase tracking-wider">
+              <span>Realistic Accepted Offer</span>
+              <span className="text-amber-400 font-mono text-xs bg-amber-950/80 px-1.5 py-0.5 rounded border border-amber-500/40 font-black">LOI</span>
+            </div>
+            <div className="mt-1.5">
+              <span className="text-base sm:text-lg font-black text-amber-400 block">{loiStr}</span>
+              <span className="text-xs text-slate-300 block font-semibold">Quick-Close / Wire Ready</span>
+            </div>
           </div>
-          <div className="mt-1.5">
-            <span className="text-base sm:text-lg font-black text-amber-400 block">{loiStr}</span>
-            <span className="text-xs text-slate-300 block font-semibold">Quick-Close / Wire Ready</span>
-          </div>
-        </div>
 
-        {/* 4. Replacement Development Cost */}
-        <div className="bg-black/75 border border-purple-500/40 rounded-xl p-3 flex flex-col justify-between hover:border-purple-400 transition-colors">
-          <div className="flex items-center justify-between text-slate-300 text-xs font-bold uppercase tracking-wider">
-            <span>Dev Replacement Cost</span>
-            <span className="text-purple-400 font-mono text-xs bg-purple-950/80 px-1.5 py-0.5 rounded border border-purple-500/40 font-black">DEV</span>
+          {/* 4. Replacement Development Cost */}
+          <div className="bg-black/75 border border-purple-500/40 rounded-xl p-3 flex flex-col justify-between hover:border-purple-400 transition-colors">
+            <div className="flex items-center justify-between text-slate-300 text-xs font-bold uppercase tracking-wider">
+              <span>Dev Replacement Cost</span>
+              <span className="text-purple-400 font-mono text-xs bg-purple-950/80 px-1.5 py-0.5 rounded border border-purple-500/40 font-black">DEV</span>
+            </div>
+            <div className="mt-1.5">
+              <span className="text-base sm:text-lg font-black text-purple-400 block">{devStr}</span>
+              <span className="text-xs text-slate-300 block font-semibold">Agency Duplicate ({totalAssets} Models)</span>
+            </div>
           </div>
-          <div className="mt-1.5">
-            <span className="text-base sm:text-lg font-black text-purple-400 block">{devStr}</span>
-            <span className="text-xs text-slate-300 block font-semibold">Agency Duplicate ({totalAssets} Models)</span>
-          </div>
-        </div>
 
-        {/* 5. Exclusive Buyout */}
-        <div className="bg-black/75 border border-pink-500/40 rounded-xl p-3 flex flex-col justify-between hover:border-pink-400 transition-colors">
-          <div className="flex items-center justify-between text-slate-300 text-xs font-bold uppercase tracking-wider">
-            <span>Exclusive Buyout</span>
-            <span className="text-pink-400 font-mono text-xs bg-pink-950/80 px-1.5 py-0.5 rounded border border-pink-500/40 font-black">APA</span>
-          </div>
-          <div className="mt-1.5">
-            <span className="text-base sm:text-lg font-black text-pink-400 block">{buyoutAnchor}</span>
-            <span className="text-xs text-slate-300 block font-semibold">T2 Flagship ($10k–$18k) / T1 ($4.5k)</span>
+          {/* 5. Exclusive Buyout */}
+          <div className="bg-black/75 border border-pink-500/40 rounded-xl p-3 flex flex-col justify-between hover:border-pink-400 transition-colors">
+            <div className="flex items-center justify-between text-slate-300 text-xs font-bold uppercase tracking-wider">
+              <span>Exclusive Buyout</span>
+              <span className="text-pink-400 font-mono text-xs bg-pink-950/80 px-1.5 py-0.5 rounded border border-pink-500/40 font-black">APA</span>
+            </div>
+            <div className="mt-1.5">
+              <span className="text-base sm:text-lg font-black text-pink-400 block">{buyoutAnchor}</span>
+              <span className="text-xs text-slate-300 block font-semibold">T2 Flagship ($10k–$18k) / T1 ($4.5k)</span>
+            </div>
           </div>
         </div>
-      </div>
+      ) : (
+        /* 2. PUBLIC STOREFRONT: RETAIL SHELF PRICING & CUSTOMER DELIVERABLES */
+        <div className="hidden lg:grid lg:grid-cols-5 gap-3 py-3 border-b border-white/10 text-xs sm:text-sm">
+          {/* 1. Verified Inventory */}
+          <div className="bg-black/75 border border-emerald-500/40 rounded-xl p-3 flex flex-col justify-between hover:border-emerald-400 transition-colors">
+            <div className="flex items-center justify-between text-slate-300 text-xs font-bold uppercase tracking-wider">
+              <span>Verified Inventory</span>
+              <span className="text-emerald-400 font-mono text-xs bg-emerald-950/80 px-1.5 py-0.5 rounded border border-emerald-500/40 font-black">FLEET</span>
+            </div>
+            <div className="mt-1.5">
+              <span className="text-base sm:text-lg font-black text-emerald-400 block">{totalAssets} Blueprints</span>
+              <span className="text-xs text-slate-300 block font-semibold">85 Track 1 + 25 Flagship SCADA</span>
+            </div>
+          </div>
+
+          {/* 2. Track 1 Retail Shelf */}
+          <div className="bg-black/75 border border-cyan-500/40 rounded-xl p-3 flex flex-col justify-between hover:border-cyan-400 transition-colors">
+            <div className="flex items-center justify-between text-slate-300 text-xs font-bold uppercase tracking-wider">
+              <span>Track 1 Retail MSRP</span>
+              <span className="text-cyan-400 font-mono text-xs bg-cyan-950/80 px-1.5 py-0.5 rounded border border-cyan-500/40 font-black">$199</span>
+            </div>
+            <div className="mt-1.5">
+              <span className="text-base sm:text-lg font-black text-cyan-400 block">$199 USD</span>
+              <span className="text-xs text-slate-300 block font-semibold">Turn-Key Concept Console Source</span>
+            </div>
+          </div>
+
+          {/* 3. Commercial Team Seat */}
+          <div className="bg-black/75 border border-amber-500/40 rounded-xl p-3 flex flex-col justify-between hover:border-amber-400 transition-colors">
+            <div className="flex items-center justify-between text-slate-300 text-xs font-bold uppercase tracking-wider">
+              <span>Commercial Team Seat</span>
+              <span className="text-amber-400 font-mono text-xs bg-amber-950/80 px-1.5 py-0.5 rounded border border-amber-500/40 font-black">TEAM</span>
+            </div>
+            <div className="mt-1.5">
+              <span className="text-base sm:text-lg font-black text-amber-400 block">$599 USD</span>
+              <span className="text-xs text-slate-300 block font-semibold">Agency Multi-Seat Commercial License</span>
+            </div>
+          </div>
+
+          {/* 4. Track 2 Flagship License */}
+          <div className="bg-black/75 border border-purple-500/40 rounded-xl p-3 flex flex-col justify-between hover:border-purple-400 transition-colors">
+            <div className="flex items-center justify-between text-slate-300 text-xs font-bold uppercase tracking-wider">
+              <span>Flagship Tier-1 License</span>
+              <span className="text-purple-400 font-mono text-xs bg-purple-950/80 px-1.5 py-0.5 rounded border border-purple-500/40 font-black">SCADA</span>
+            </div>
+            <div className="mt-1.5">
+              <span className="text-base sm:text-lg font-black text-purple-400 block">$1,500 – $3,500</span>
+              <span className="text-xs text-slate-300 block font-semibold">Full Physics Solver & Operator Console</span>
+            </div>
+          </div>
+
+          {/* 5. Operator Deal Room Lock */}
+          <div 
+            onClick={onOpenOperatorAuth}
+            className="bg-amber-950/20 border-2 border-amber-500/50 rounded-xl p-3 flex flex-col justify-between hover:border-amber-400 transition-colors cursor-pointer group"
+          >
+            <div className="flex items-center justify-between text-amber-300 text-xs font-bold uppercase tracking-wider">
+              <span className="flex items-center gap-1"><Lock size={12} /> Deal Room</span>
+              <span className="text-amber-400 font-mono text-xs bg-amber-950 px-1.5 py-0.5 rounded border border-amber-500/40 font-black">M&A</span>
+            </div>
+            <div className="mt-1.5">
+              <span className="text-base sm:text-lg font-black text-amber-400 group-hover:underline block">RESTRICTED</span>
+              <span className="text-xs text-amber-300/80 block font-semibold">Click to Unlock M&A Telemetry</span>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* MOBILE & TABLET 5-PILLAR VALUATION HUD RIBBON (< lg screens) */}
       <div className="lg:hidden border-b border-white/10 py-2 font-mono">
         <div className="flex items-center justify-between text-xs pb-1.5 px-1">
           <div className="flex items-center gap-1.5 text-slate-200 font-bold">
             <DollarSign size={15} className="text-emerald-400" />
-            <span className="text-xs sm:text-sm font-black tracking-wide">VALUATION HUD (5 PILLARS)</span>
+            <span className="text-xs sm:text-sm font-black tracking-wide">
+              {showInternalValuation ? 'VALUATION HUD (OPERATOR)' : 'PUBLIC SHELF PRICING'}
+            </span>
             <span className="text-xs text-slate-400 font-normal">| Swipe ↔</span>
           </div>
           <button
@@ -178,81 +289,161 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
             className="flex items-center gap-1 text-xs font-bold text-slate-300 hover:text-white bg-slate-900 px-2.5 py-1 rounded-lg border border-white/20 cursor-pointer"
             title="Toggle valuation HUD visibility"
           >
-            <span>{isMobileHudCollapsed ? 'Expand HUD' : 'Collapse HUD'}</span>
+            <span>{isMobileHudCollapsed ? 'Expand' : 'Collapse'}</span>
             {isMobileHudCollapsed ? <ChevronDown size={14} /> : <ChevronUp size={14} />}
           </button>
         </div>
 
         {isMobileHudCollapsed ? (
-          <div 
-            onClick={() => setIsMobileHudCollapsed(false)}
-            className="flex items-center justify-between bg-black/80 border border-emerald-500/40 rounded-xl px-3 py-2 text-xs sm:text-sm text-slate-200 cursor-pointer hover:border-emerald-400 transition-colors"
-          >
-            <span className="text-emerald-400 font-black">FMV: $105k–$235k</span>
-            <span className="text-cyan-400 font-black hidden xs:inline">Ask: $195k–$265k</span>
-            <span className="text-pink-400 font-black">APA: {buyoutAnchor}</span>
-          </div>
+          showInternalValuation ? (
+            <div 
+              onClick={() => setIsMobileHudCollapsed(false)}
+              className="flex items-center justify-between bg-black/80 border border-emerald-500/40 rounded-xl px-3 py-2 text-xs sm:text-sm text-slate-200 cursor-pointer hover:border-emerald-400 transition-colors"
+            >
+              <span className="text-emerald-400 font-black">FMV: $105k–$235k</span>
+              <span className="text-cyan-400 font-black hidden xs:inline">Ask: $195k–$265k</span>
+              <span className="text-pink-400 font-black">APA: {buyoutAnchor}</span>
+            </div>
+          ) : (
+            <div 
+              onClick={() => setIsMobileHudCollapsed(false)}
+              className="flex items-center justify-between bg-black/80 border border-amber-500/40 rounded-xl px-3 py-2 text-xs sm:text-sm text-slate-200 cursor-pointer hover:border-amber-400 transition-colors"
+            >
+              <span className="text-emerald-400 font-black">{totalAssets} Blueprints</span>
+              <span className="text-cyan-400 font-black">T1: $199</span>
+              <span className="text-purple-400 font-black hidden xs:inline">T2: $1,500</span>
+              <span 
+                onClick={(e) => { e.stopPropagation(); onOpenOperatorAuth(); }}
+                className="text-amber-400 font-black flex items-center gap-1 bg-amber-500/10 px-2 py-0.5 rounded border border-amber-500/30"
+              >
+                <Lock size={11} /> Deal Room
+              </span>
+            </div>
+          )
         ) : (
           <div className="flex items-center gap-2.5 overflow-x-auto no-scrollbar snap-x snap-mandatory pt-1 pb-1.5 touch-pan-x">
-            {/* 1. Fair Market Value */}
-            <div className="min-w-[210px] shrink-0 snap-start bg-black/85 border-2 border-emerald-500/50 rounded-xl p-3 flex flex-col justify-between">
-              <div className="flex items-center justify-between text-xs font-bold text-slate-300 uppercase tracking-wider">
-                <span>Fair Market Value</span>
-                <span className="text-emerald-400 font-mono text-xs bg-emerald-950/80 px-1.5 py-0.5 rounded border border-emerald-500/40 font-black">FMV</span>
-              </div>
-              <div className="mt-1.5">
-                <span className="text-base sm:text-lg font-black text-emerald-400 block">{fmvStr}</span>
-                <span className="text-xs text-slate-300 block font-semibold">Anchor: {fmvAnchorShort} ({totalAssets})</span>
-              </div>
-            </div>
+            {showInternalValuation ? (
+              /* Mobile Expanded Internal Valuation */
+              <>
+                <div className="min-w-[210px] shrink-0 snap-start bg-black/85 border-2 border-emerald-500/50 rounded-xl p-3 flex flex-col justify-between">
+                  <div className="flex items-center justify-between text-xs font-bold text-slate-300 uppercase tracking-wider">
+                    <span>Fair Market Value</span>
+                    <span className="text-emerald-400 font-mono text-xs bg-emerald-950/80 px-1.5 py-0.5 rounded border border-emerald-500/40 font-black">FMV</span>
+                  </div>
+                  <div className="mt-1.5">
+                    <span className="text-base sm:text-lg font-black text-emerald-400 block">{fmvStr}</span>
+                    <span className="text-xs text-slate-300 block font-semibold">Anchor: {fmvAnchorShort} ({totalAssets})</span>
+                  </div>
+                </div>
 
-            {/* 2. Direct B2B Ask */}
-            <div className="min-w-[210px] shrink-0 snap-start bg-black/85 border-2 border-cyan-500/50 rounded-xl p-3 flex flex-col justify-between">
-              <div className="flex items-center justify-between text-xs font-bold text-slate-300 uppercase tracking-wider">
-                <span>Direct B2B Ask</span>
-                <span className="text-cyan-400 font-mono text-xs bg-cyan-950/80 px-1.5 py-0.5 rounded border border-cyan-500/40 font-black">ASK</span>
-              </div>
-              <div className="mt-1.5">
-                <span className="text-base sm:text-lg font-black text-cyan-400 block">{askStr}</span>
-                <span className="text-xs text-slate-300 block font-semibold">Data Room Target</span>
-              </div>
-            </div>
+                <div className="min-w-[210px] shrink-0 snap-start bg-black/85 border-2 border-cyan-500/50 rounded-xl p-3 flex flex-col justify-between">
+                  <div className="flex items-center justify-between text-xs font-bold text-slate-300 uppercase tracking-wider">
+                    <span>Direct B2B Ask</span>
+                    <span className="text-cyan-400 font-mono text-xs bg-cyan-950/80 px-1.5 py-0.5 rounded border border-cyan-500/40 font-black">ASK</span>
+                  </div>
+                  <div className="mt-1.5">
+                    <span className="text-base sm:text-lg font-black text-cyan-400 block">{askStr}</span>
+                    <span className="text-xs text-slate-300 block font-semibold">Data Room Target</span>
+                  </div>
+                </div>
 
-            {/* 3. Realistic Accepted Offer */}
-            <div className="min-w-[210px] shrink-0 snap-start bg-black/85 border-2 border-amber-500/50 rounded-xl p-3 flex flex-col justify-between">
-              <div className="flex items-center justify-between text-xs font-bold text-slate-300 uppercase tracking-wider">
-                <span>Realistic Accepted</span>
-                <span className="text-amber-400 font-mono text-xs bg-amber-950/80 px-1.5 py-0.5 rounded border border-amber-500/40 font-black">LOI</span>
-              </div>
-              <div className="mt-1.5">
-                <span className="text-base sm:text-lg font-black text-amber-400 block">{loiStr}</span>
-                <span className="text-xs text-slate-300 block font-semibold">Quick-Close Wire</span>
-              </div>
-            </div>
+                <div className="min-w-[210px] shrink-0 snap-start bg-black/85 border-2 border-amber-500/50 rounded-xl p-3 flex flex-col justify-between">
+                  <div className="flex items-center justify-between text-xs font-bold text-slate-300 uppercase tracking-wider">
+                    <span>Realistic Accepted</span>
+                    <span className="text-amber-400 font-mono text-xs bg-amber-950/80 px-1.5 py-0.5 rounded border border-amber-500/40 font-black">LOI</span>
+                  </div>
+                  <div className="mt-1.5">
+                    <span className="text-base sm:text-lg font-black text-amber-400 block">{loiStr}</span>
+                    <span className="text-xs text-slate-300 block font-semibold">Quick-Close Wire</span>
+                  </div>
+                </div>
 
-            {/* 4. Dev Replacement Cost */}
-            <div className="min-w-[210px] shrink-0 snap-start bg-black/85 border-2 border-purple-500/50 rounded-xl p-3 flex flex-col justify-between">
-              <div className="flex items-center justify-between text-xs font-bold text-slate-300 uppercase tracking-wider">
-                <span>Dev Replacement</span>
-                <span className="text-purple-400 font-mono text-xs bg-purple-950/80 px-1.5 py-0.5 rounded border border-purple-500/40 font-black">DEV</span>
-              </div>
-              <div className="mt-1.5">
-                <span className="text-base sm:text-lg font-black text-purple-400 block">{devStr}</span>
-                <span className="text-xs text-slate-300 block font-semibold">Cost to Duplicate</span>
-              </div>
-            </div>
+                <div className="min-w-[210px] shrink-0 snap-start bg-black/85 border-2 border-purple-500/50 rounded-xl p-3 flex flex-col justify-between">
+                  <div className="flex items-center justify-between text-xs font-bold text-slate-300 uppercase tracking-wider">
+                    <span>Dev Replacement</span>
+                    <span className="text-purple-400 font-mono text-xs bg-purple-950/80 px-1.5 py-0.5 rounded border border-purple-500/40 font-black">DEV</span>
+                  </div>
+                  <div className="mt-1.5">
+                    <span className="text-base sm:text-lg font-black text-purple-400 block">{devStr}</span>
+                    <span className="text-xs text-slate-300 block font-semibold">Cost to Duplicate</span>
+                  </div>
+                </div>
 
-            {/* 5. Exclusive Buyout */}
-            <div className="min-w-[210px] shrink-0 snap-start bg-black/85 border-2 border-pink-500/50 rounded-xl p-3 flex flex-col justify-between">
-              <div className="flex items-center justify-between text-xs font-bold text-slate-300 uppercase tracking-wider">
-                <span>Exclusive Buyout</span>
-                <span className="text-pink-400 font-mono text-xs bg-pink-950/80 px-1.5 py-0.5 rounded border border-pink-500/40 font-black">APA</span>
-              </div>
-              <div className="mt-1.5">
-                <span className="text-base sm:text-lg font-black text-pink-400 block">{buyoutAnchor}</span>
-                <span className="text-xs text-slate-300 block font-semibold">T2 ($10k–$18k) / T1</span>
-              </div>
-            </div>
+                <div className="min-w-[210px] shrink-0 snap-start bg-black/85 border-2 border-pink-500/50 rounded-xl p-3 flex flex-col justify-between">
+                  <div className="flex items-center justify-between text-xs font-bold text-slate-300 uppercase tracking-wider">
+                    <span>Exclusive Buyout</span>
+                    <span className="text-pink-400 font-mono text-xs bg-pink-950/80 px-1.5 py-0.5 rounded border border-pink-500/40 font-black">APA</span>
+                  </div>
+                  <div className="mt-1.5">
+                    <span className="text-base sm:text-lg font-black text-pink-400 block">{buyoutAnchor}</span>
+                    <span className="text-xs text-slate-300 block font-semibold">T2 ($10k–$18k) / T1</span>
+                  </div>
+                </div>
+              </>
+            ) : (
+              /* Mobile Expanded Public Storefront */
+              <>
+                <div className="min-w-[210px] shrink-0 snap-start bg-black/85 border-2 border-emerald-500/50 rounded-xl p-3 flex flex-col justify-between">
+                  <div className="flex items-center justify-between text-xs font-bold text-slate-300 uppercase tracking-wider">
+                    <span>Catalog Fleet</span>
+                    <span className="text-emerald-400 font-mono text-xs bg-emerald-950/80 px-1.5 py-0.5 rounded border border-emerald-500/40 font-black">FLEET</span>
+                  </div>
+                  <div className="mt-1.5">
+                    <span className="text-base sm:text-lg font-black text-emerald-400 block">{totalAssets} Blueprints</span>
+                    <span className="text-xs text-slate-300 block font-semibold">85 Track 1 + 25 Flagship</span>
+                  </div>
+                </div>
+
+                <div className="min-w-[210px] shrink-0 snap-start bg-black/85 border-2 border-cyan-500/50 rounded-xl p-3 flex flex-col justify-between">
+                  <div className="flex items-center justify-between text-xs font-bold text-slate-300 uppercase tracking-wider">
+                    <span>Track 1 Retail MSRP</span>
+                    <span className="text-cyan-400 font-mono text-xs bg-cyan-950/80 px-1.5 py-0.5 rounded border border-cyan-500/40 font-black">$199</span>
+                  </div>
+                  <div className="mt-1.5">
+                    <span className="text-base sm:text-lg font-black text-cyan-400 block">$199 USD</span>
+                    <span className="text-xs text-slate-300 block font-semibold">Source Blueprint License</span>
+                  </div>
+                </div>
+
+                <div className="min-w-[210px] shrink-0 snap-start bg-black/85 border-2 border-amber-500/50 rounded-xl p-3 flex flex-col justify-between">
+                  <div className="flex items-center justify-between text-xs font-bold text-slate-300 uppercase tracking-wider">
+                    <span>Commercial Team</span>
+                    <span className="text-amber-400 font-mono text-xs bg-amber-950/80 px-1.5 py-0.5 rounded border border-amber-500/40 font-black">TEAM</span>
+                  </div>
+                  <div className="mt-1.5">
+                    <span className="text-base sm:text-lg font-black text-amber-400 block">$599 USD</span>
+                    <span className="text-xs text-slate-300 block font-semibold">Multi-Seat Agency Pack</span>
+                  </div>
+                </div>
+
+                <div className="min-w-[210px] shrink-0 snap-start bg-black/85 border-2 border-purple-500/50 rounded-xl p-3 flex flex-col justify-between">
+                  <div className="flex items-center justify-between text-xs font-bold text-slate-300 uppercase tracking-wider">
+                    <span>Flagship License</span>
+                    <span className="text-purple-400 font-mono text-xs bg-purple-950/80 px-1.5 py-0.5 rounded border border-purple-500/40 font-black">SCADA</span>
+                  </div>
+                  <div className="mt-1.5">
+                    <span className="text-base sm:text-lg font-black text-purple-400 block">$1,500 – $3,500</span>
+                    <span className="text-xs text-slate-300 block font-semibold">Tier-1 Operations Suite</span>
+                  </div>
+                </div>
+
+                <div 
+                  onClick={onOpenOperatorAuth}
+                  className="min-w-[210px] shrink-0 snap-start bg-amber-950/30 border-2 border-amber-500/70 rounded-xl p-3 flex flex-col justify-between cursor-pointer"
+                >
+                  <div className="flex items-center justify-between text-xs font-bold text-amber-300 uppercase tracking-wider">
+                    <span>Private Deal Room</span>
+                    <span className="text-amber-400 font-mono text-xs bg-amber-950 px-1.5 py-0.5 rounded border border-amber-500/40 font-black">AUTH</span>
+                  </div>
+                  <div className="mt-1.5">
+                    <span className="text-base sm:text-lg font-black text-amber-400 block flex items-center gap-1.5">
+                      <Lock size={15} /> RESTRICTED
+                    </span>
+                    <span className="text-xs text-amber-200 block font-semibold">Tap to Unlock M&A Telemetry</span>
+                  </div>
+                </div>
+              </>
+            )}
           </div>
         )}
       </div>
@@ -318,12 +509,14 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
               : 'text-slate-300 hover:text-white hover:bg-white/5 border border-transparent'
           }`}
         >
-          <DollarSign size={15} />
-          <span>Screen 4: Deal Desk</span>
+          {isOperatorAuthenticated ? <Unlock size={15} /> : <Lock size={15} />}
+          <span>Screen 4: Deal Room</span>
           <span className={`text-xs px-2 py-0.5 rounded font-mono font-bold ${
-            currentView === 'dealdesk' ? 'bg-black/25 text-black' : 'bg-slate-800 text-slate-200'
+            currentView === 'dealdesk' 
+              ? 'bg-black/25 text-black' 
+              : isOperatorAuthenticated ? 'bg-emerald-950 text-emerald-300' : 'bg-amber-950 text-amber-300'
           }`}>
-            80% Shield
+            {isOperatorAuthenticated ? 'UNLOCKED' : 'AUTH REQ'}
           </span>
         </button>
 

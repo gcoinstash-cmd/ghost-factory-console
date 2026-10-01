@@ -9,7 +9,6 @@ import {
   Sparkles,
   ExternalLink,
   ShieldCheck,
-  Key,
   Search,
   AlertTriangle
 } from 'lucide-react';
@@ -60,16 +59,9 @@ export const FactoryLineScreen: React.FC<FactoryLineScreenProps> = ({
     }, 4000);
   };
 
-  // Stage 5 Track 2 Flagship Candidate Audit State (Assets #086 to #109)
+  // Stage 5 Track 2 Flagship Candidate Audit State (Assets #086 to #110)
   const [candidateFilter, setCandidateFilter] = useState('');
-  const [copiedCode, setCopiedCode] = useState<string | null>(null);
   const [candidateAudits, setCandidateAudits] = useState<Record<number, Record<string, boolean>>>({});
-
-  const handleCopyPasscode = (code: string) => {
-    navigator.clipboard.writeText(code);
-    setCopiedCode(code);
-    setTimeout(() => setCopiedCode(null), 2000);
-  };
 
   const toggleCheck = (productId: number, checkKey: string) => {
     setCandidateAudits(prev => {
@@ -632,21 +624,11 @@ export const FactoryLineScreen: React.FC<FactoryLineScreenProps> = ({
                   </div>
                 </div>
 
-                {/* Footer Actions: Test Drive & Passcode */}
+                {/* Footer Actions: Live Demo Direct Route */}
                 <div className="pt-2 border-t border-white/10 flex flex-wrap items-center justify-between gap-3 text-xs font-mono">
-                  <div className="flex items-center gap-2">
-                    <span className="text-slate-400 flex items-center gap-1">
-                      <Key size={12} /> Passcode:
-                    </span>
-                    <code className="text-emerald-400 bg-black px-2 py-0.5 rounded border border-emerald-500/30">
-                      {product.admin_passcode}
-                    </code>
-                    <button
-                      onClick={() => handleCopyPasscode(product.admin_passcode)}
-                      className="px-2 py-0.5 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded border border-white/10 text-[10px]"
-                    >
-                      {copiedCode === product.admin_passcode ? 'COPIED' : 'COPY'}
-                    </button>
+                  <div className="flex items-center gap-1.5 text-slate-300">
+                    <ShieldCheck size={13} className="text-emerald-400" />
+                    <span>Postgres RLS Level 3 Sandbox</span>
                   </div>
 
                   <a 
@@ -656,7 +638,7 @@ export const FactoryLineScreen: React.FC<FactoryLineScreenProps> = ({
                     className="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-black font-black text-xs uppercase tracking-wider flex items-center gap-1.5 transition-all shadow-md shadow-amber-500/20"
                   >
                     <ExternalLink size={13} />
-                    <span>TEST DRIVE DEMO</span>
+                    <span>[VIEW LIVE DEMO]</span>
                   </a>
                 </div>
               </div>

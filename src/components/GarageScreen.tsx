@@ -3,17 +3,17 @@ import {
   Search, 
   Filter, 
   ExternalLink, 
-  Key, 
   ShieldCheck, 
   Database, 
   Activity, 
-  Check, 
-  ChevronRight,
+  ChevronDown,
   Car,
-  AlertTriangle
+  AlertTriangle,
+  Lock
 } from 'lucide-react';
 import { ProductItem } from '../catalogData';
 import { NextBestActionBanner } from './NextBestActionBanner';
+import { isRegulatedSector, VERTICAL_COMPLIANCE_DISCLAIMER } from '../utils/compliance';
 
 interface GarageScreenProps {
   products: ProductItem[];
@@ -24,6 +24,8 @@ interface GarageScreenProps {
   onEngageMission: () => void;
   missionCompleted: boolean;
   onOpenTestDrive: (product: ProductItem) => void;
+  isOperatorAuthenticated?: boolean;
+  onOpenOperatorAuth?: () => void;
 }
 
 export type RarityTier = 'Mythic Candidate' | 'Legendary' | 'Elite' | 'Rare' | 'Common';
@@ -67,18 +69,13 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
   planningValue,
   onEngageMission,
   missionCompleted,
-  onOpenTestDrive
+  onOpenTestDrive: _onOpenTestDrive,
+  isOperatorAuthenticated = false,
+  onOpenOperatorAuth
 }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedDomain, setSelectedDomain] = useState<string>('ALL');
   const [selectedRarity, setSelectedRarity] = useState<string>('ALL');
-  const [copiedCode, setCopiedCode] = useState<string | null>(null);
-
-  const handleCopyPasscode = (code: string) => {
-    navigator.clipboard.writeText(code);
-    setCopiedCode(code);
-    setTimeout(() => setCopiedCode(null), 2000);
-  };
 
   const domainOptions = useMemo(() => {
     const set = new Set<string>();
@@ -93,7 +90,8 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
       const matchesSearch = 
         p.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         p.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        p.admin_passcode.toLowerCase().includes(searchTerm.toLowerCase());
+        p.id.toString().includes(searchTerm) ||
+        (p.vertical || '').toLowerCase().includes(searchTerm.toLowerCase());
       const matchesDomain = selectedDomain === 'ALL' || domain === selectedDomain;
       const matchesRarity = selectedRarity === 'ALL' || rarity === selectedRarity;
       return matchesSearch && matchesDomain && matchesRarity;
@@ -152,34 +150,69 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
             </p>
           </div>
 
-          {/* 5 Core Valuation HUD Metric Badges (Dynamically Wired) */}
-          <div className="w-full lg:w-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 bg-black/80 p-4 sm:p-5 rounded-xl border border-white/15 text-sm">
-            <div className="p-1">
-              <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">Fair Market Value</span>
-              <span className="text-base sm:text-xl font-black text-emerald-400">{valuation.fmvRangeStr}</span>
-              <span className="text-xs sm:text-sm text-emerald-300 block font-bold">Anchor: ~{valuation.planFmvStr}</span>
+          {/* 5 Core Valuation / Public Deliverable Badges (Two-Faced Separation) */}
+          {isOperatorAuthenticated ? (
+            <div className="w-full lg:w-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 bg-black/80 p-4 sm:p-5 rounded-xl border border-emerald-500/40 text-sm">
+              <div className="p-1">
+                <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">Fair Market Value</span>
+                <span className="text-base sm:text-xl font-black text-emerald-400">{valuation.fmvRangeStr}</span>
+                <span className="text-xs sm:text-sm text-emerald-300 block font-bold">Anchor: ~{valuation.planFmvStr}</span>
+              </div>
+              <div className="p-1 border-l border-white/15 pl-3">
+                <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">Direct B2B Ask</span>
+                <span className="text-base sm:text-xl font-black text-cyan-400">{valuation.b2bAskStr}</span>
+                <span className="text-xs sm:text-sm text-cyan-300 block font-bold">Data Room Ask</span>
+              </div>
+              <div className="p-1 border-t sm:border-t-0 sm:border-l border-white/15 pt-2 sm:pt-1 sm:pl-3">
+                <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">Realistic Accepted</span>
+                <span className="text-base sm:text-xl font-black text-amber-400">{valuation.acceptedStr}</span>
+                <span className="text-xs sm:text-sm text-amber-300 block font-bold">Negotiated LOI Wire</span>
+              </div>
+              <div className="p-1 border-t sm:border-t-0 border-l border-white/15 pt-2 sm:pt-1 pl-3">
+                <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">Dev Replacement</span>
+                <span className="text-base sm:text-xl font-black text-purple-400">{valuation.devCostStr}</span>
+                <span className="text-xs sm:text-sm text-purple-300 block font-bold">Cost to Duplicate</span>
+              </div>
+              <div className="p-1 border-t sm:border-t-0 sm:border-l border-white/15 pt-2 sm:pt-1 sm:pl-3 col-span-2 sm:col-span-1">
+                <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">Exclusive Buyout</span>
+                <span className="text-base sm:text-xl font-black text-pink-400">$14,500 Anchor</span>
+                <span className="text-xs sm:text-sm text-pink-300 block font-bold">T2 ($10k–$18k) / T1</span>
+              </div>
             </div>
-            <div className="p-1 border-l border-white/15 pl-3">
-              <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">Direct B2B Ask</span>
-              <span className="text-base sm:text-xl font-black text-cyan-400">{valuation.b2bAskStr}</span>
-              <span className="text-xs sm:text-sm text-cyan-300 block font-bold">Data Room Ask</span>
+          ) : (
+            <div className="w-full lg:w-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 bg-black/80 p-4 sm:p-5 rounded-xl border border-white/15 text-sm">
+              <div className="p-1">
+                <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">Track 1 Retail MSRP</span>
+                <span className="text-base sm:text-xl font-black text-emerald-400">$199 USD</span>
+                <span className="text-xs sm:text-sm text-slate-300 block font-semibold">Single-Client Blueprint</span>
+              </div>
+              <div className="p-1 border-l border-white/15 pl-3">
+                <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">Commercial Team</span>
+                <span className="text-base sm:text-xl font-black text-cyan-400">$599 USD</span>
+                <span className="text-xs sm:text-sm text-slate-300 block font-semibold">Agency Multi-Seat Pack</span>
+              </div>
+              <div className="p-1 border-t sm:border-t-0 sm:border-l border-white/15 pt-2 sm:pt-1 sm:pl-3">
+                <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">Flagship License</span>
+                <span className="text-base sm:text-xl font-black text-purple-400">$1,500 – $3,500</span>
+                <span className="text-xs sm:text-sm text-slate-300 block font-semibold">Tier-1 SCADA Physics</span>
+              </div>
+              <div className="p-1 border-t sm:border-t-0 border-l border-white/15 pt-2 sm:pt-1 pl-3">
+                <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">Core Deliverable</span>
+                <span className="text-base sm:text-xl font-black text-amber-400">React 19 + RLS</span>
+                <span className="text-xs sm:text-sm text-slate-300 block font-semibold">Postgres Schema & Seed</span>
+              </div>
+              <div 
+                onClick={onOpenOperatorAuth}
+                className="p-1 border-t sm:border-t-0 sm:border-l border-amber-500/50 pt-2 sm:pt-1 sm:pl-3 col-span-2 sm:col-span-1 bg-amber-950/20 rounded-lg cursor-pointer hover:bg-amber-950/40 transition-colors"
+              >
+                <span className="text-amber-300 block text-xs sm:text-sm uppercase font-black tracking-wider flex items-center gap-1">
+                  <Lock size={12} /> Deal Room
+                </span>
+                <span className="text-base sm:text-lg font-black text-amber-400 block">RESTRICTED</span>
+                <span className="text-xs sm:text-sm text-amber-300/80 block font-semibold underline">Unlock M&A Telemetry</span>
+              </div>
             </div>
-            <div className="p-1 border-t sm:border-t-0 sm:border-l border-white/15 pt-2 sm:pt-1 sm:pl-3">
-              <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">Realistic Accepted</span>
-              <span className="text-base sm:text-xl font-black text-amber-400">{valuation.acceptedStr}</span>
-              <span className="text-xs sm:text-sm text-amber-300 block font-bold">Negotiated LOI Wire</span>
-            </div>
-            <div className="p-1 border-t sm:border-t-0 border-l border-white/15 pt-2 sm:pt-1 pl-3">
-              <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">Dev Replacement</span>
-              <span className="text-base sm:text-xl font-black text-purple-400">{valuation.devCostStr}</span>
-              <span className="text-xs sm:text-sm text-purple-300 block font-bold">Cost to Duplicate</span>
-            </div>
-            <div className="p-1 border-t sm:border-t-0 sm:border-l border-white/15 pt-2 sm:pt-1 sm:pl-3 col-span-2 sm:col-span-1">
-              <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">Exclusive Buyout</span>
-              <span className="text-base sm:text-xl font-black text-pink-400">$14,500 Anchor</span>
-              <span className="text-xs sm:text-sm text-pink-300 block font-bold">T2 ($10k–$18k) / T1</span>
-            </div>
-          </div>
+          )}
         </div>
 
         {/* 80% Retained Floor Progress Bar */}
@@ -313,7 +346,7 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
                 </div>
               </div>
 
-              {/* DUAL-TRACK PRICING PROTOCOL BADGE (No Track 1 numbers on Track 2) */}
+              {/* DUAL-TRACK PRICING PROTOCOL BADGE (Two-Faced Separation) */}
               <div className={`p-3.5 rounded-xl border text-xs sm:text-sm font-mono space-y-2 ${
                 isTrack2 
                   ? 'bg-amber-950/30 border-amber-500/50 text-amber-200' 
@@ -327,12 +360,22 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
                   }`}>
                     {isTrack2 ? 'TRACK 2 // FLAGSHIP CANDIDATE' : 'TRACK 1 // LEAN RAPID-SALE'}
                   </span>
-                  <div className="text-right">
-                    <span className="text-[10px] text-slate-400 block uppercase font-semibold">Exclusive Buyout</span>
-                    <strong className={`text-sm sm:text-base font-black ${isTrack2 ? 'text-amber-400' : 'text-emerald-400'}`}>
-                      {isTrack2 ? '$14,500 Anchor' : '$4,500 Anchor'}
-                    </strong>
-                  </div>
+                  
+                  {isOperatorAuthenticated ? (
+                    <div className="text-right">
+                      <span className="text-[10px] text-slate-400 block uppercase font-semibold">Exclusive Buyout</span>
+                      <strong className={`text-sm sm:text-base font-black ${isTrack2 ? 'text-amber-400' : 'text-emerald-400'}`}>
+                        {isTrack2 ? '$14,500 Anchor' : '$4,500 Anchor'}
+                      </strong>
+                    </div>
+                  ) : (
+                    <div className="text-right">
+                      <span className="text-[10px] text-slate-400 block uppercase font-semibold">Public Shelf</span>
+                      <strong className={`text-sm sm:text-base font-black ${isTrack2 ? 'text-amber-400' : 'text-emerald-400'}`}>
+                        {isTrack2 ? '$1,500 – $3,500' : '$199 MSRP'}
+                      </strong>
+                    </div>
+                  )}
                 </div>
 
                 <div className="grid grid-cols-2 gap-2 pt-1.5 border-t border-white/10 text-xs">
@@ -346,86 +389,102 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
                   </div>
                   <div>
                     <span className="text-slate-400 block text-[10px] uppercase font-semibold">
-                      {isTrack2 ? 'Buyout Floor Range:' : 'Commercial Seat:'}
+                      {isOperatorAuthenticated ? (isTrack2 ? 'Buyout Floor:' : 'Commercial Seat:') : 'Commercial License:'}
                     </span>
                     <strong className="text-white font-bold">
-                      {isTrack2 ? '$10k – $18k' : '$599'}
+                      {isOperatorAuthenticated 
+                        ? (isTrack2 ? '$10k – $18k' : '$599')
+                        : (isTrack2 ? 'SCADA Suite' : '$599 Team Seat')}
                     </strong>
                   </div>
                 </div>
 
-                {isTrack2 && (
+                {isTrack2 && isOperatorAuthenticated && (
                   <div className="pt-1.5 border-t border-amber-500/20 text-[10px] text-amber-300/90 leading-tight">
                     Full Asset Buyout: $18k–$35k | Strategic: $35k–$75k+
                   </div>
                 )}
               </div>
 
-              {/* MANDATORY PRODUCT TRUTH BADGES (Rule 1 Strict Compliance) */}
-              <div className="space-y-2.5 pt-1 text-sm">
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 bg-black/70 p-2.5 rounded-lg border border-amber-500/40">
-                  <div className="flex items-center gap-1.5 text-amber-300 text-xs sm:text-sm font-black uppercase tracking-wider shrink-0">
-                    <AlertTriangle size={14} className="text-amber-400 shrink-0" />
-                    <span>TRUTH BADGE:</span>
-                  </div>
-                  <span className="text-xs sm:text-sm font-bold text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded border border-amber-500/30 text-left sm:text-right">
-                    {product.truth_label || (isTrack2 ? 'Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit' : 'Interactive Prototype // Simulated Data Only')}
-                  </span>
+              {/* MANDATORY PRODUCT TRUTH BADGE */}
+              <div className="flex items-center justify-between gap-1.5 bg-black/70 p-2.5 rounded-lg border border-amber-500/40 text-xs">
+                <div className="flex items-center gap-1.5 text-amber-300 font-bold uppercase tracking-wider shrink-0">
+                  <AlertTriangle size={13} className="text-amber-400 shrink-0" />
+                  <span>TRUTH:</span>
                 </div>
-
-                {/* Architecture specs */}
-                <div className="flex items-center justify-between text-xs sm:text-sm text-slate-300 font-bold">
-                  <span className="flex items-center gap-1.5">
-                    <Database size={13} className="text-cyan-400" />
-                    <span>Postgres RLS Demo</span>
-                  </span>
-                  <span className="flex items-center gap-1.5">
-                    <Activity size={13} className="text-emerald-400" />
-                    <span className="text-emerald-400 font-black">200 OK Live</span>
-                  </span>
-                </div>
-
-                {/* Admin Passcode Row */}
-                <div className="flex items-center justify-between bg-black/70 p-2.5 rounded-lg border border-white/10 text-xs sm:text-sm font-bold">
-                  <span className="text-slate-300 flex items-center gap-1.5">
-                    <Key size={13} /> Passcode:
-                  </span>
-                  <div className="flex items-center gap-2">
-                    <code className="text-emerald-400 font-mono font-black bg-black px-2 py-1 rounded border border-emerald-500/40">
-                      {product.admin_passcode}
-                    </code>
-                    <button
-                      onClick={() => handleCopyPasscode(product.admin_passcode)}
-                      className="text-slate-300 hover:text-white transition-colors cursor-pointer px-2 py-1 bg-slate-900 rounded border border-white/15"
-                      title="Copy Passcode"
-                    >
-                      {copiedCode === product.admin_passcode ? (
-                        <Check size={14} className="text-emerald-400" />
-                      ) : (
-                        <span className="text-xs font-bold text-slate-300 hover:text-white">COPY</span>
-                      )}
-                    </button>
-                  </div>
-                </div>
+                <span className="text-[11px] font-bold text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded border border-amber-500/30 truncate">
+                  {product.truth_label || (isTrack2 ? 'Interactive Prototype (Simulated Data Only)' : 'Interactive Prototype // Simulated Data')}
+                </span>
               </div>
 
-              {/* Action Buttons */}
-              <div className="pt-3 flex items-center gap-2.5">
-                <button
-                  onClick={() => onOpenTestDrive(product)}
-                  className="flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-black text-sm sm:text-base uppercase tracking-wider transition-all cursor-pointer shadow-md shadow-emerald-500/25 active:scale-95"
-                >
-                  <ExternalLink size={16} />
-                  <span>[TEST DRIVE]</span>
-                </button>
+              {/* MANDATORY VERTICAL COMPLIANCE DISCLAIMER (Regulated Sectors) */}
+              {isRegulatedSector(product) && (
+                <div className="bg-amber-950/40 border border-amber-500/50 rounded-lg p-2.5 flex items-start gap-2 text-[11px] font-mono text-amber-200">
+                  <AlertTriangle size={13} className="text-amber-400 shrink-0 mt-0.5" />
+                  <span className="leading-snug">
+                    <strong className="text-amber-300">DISCLAIMER:</strong> {VERTICAL_COMPLIANCE_DISCLAIMER}
+                  </span>
+                </div>
+              )}
+
+              {/* Architecture specs */}
+              <div className="flex items-center justify-between text-xs text-slate-300 font-bold px-1">
+                <span className="flex items-center gap-1.5">
+                  <Database size={13} className="text-cyan-400" />
+                  <span>Postgres RLS Level 3</span>
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <Activity size={13} className="text-emerald-400" />
+                  <span className="text-emerald-400 font-black">200 OK Live</span>
+                </span>
+              </div>
+
+              {/* COLLAPSIBLE DELIVERABLES & SCHEMA DETAILS SHEET */}
+              <details className="text-xs bg-black/60 rounded-xl border border-white/10 p-3 group">
+                <summary className="font-bold text-slate-300 cursor-pointer flex items-center justify-between text-xs uppercase tracking-wider select-none">
+                  <span className="flex items-center gap-1.5 text-cyan-400">
+                    <Database size={13} />
+                    <span>Deliverables & Schema</span>
+                  </span>
+                  <ChevronDown size={14} className="group-open:rotate-180 transition-transform text-slate-400" />
+                </summary>
+                <div className="pt-2.5 mt-2.5 border-t border-white/10 space-y-2 text-slate-300">
+                  <p className="text-[11px] text-slate-300 leading-relaxed">
+                    <strong className="text-white">Included:</strong> React 19 Frontend Blueprint, Supabase PostgreSQL Schema, Mock Seed Data, Setup Guide, Commercial License.
+                  </p>
+                  <div className="flex items-center justify-between text-[11px] pt-1">
+                    <span className="text-slate-400">Database Engine:</span>
+                    <span className="text-cyan-400 font-mono font-bold">Postgres RLS Level 3</span>
+                  </div>
+                  <div className="flex items-center justify-between text-[11px]">
+                    <span className="text-slate-400">Status:</span>
+                    <span className="text-emerald-400 font-mono font-bold">200 OK Verified</span>
+                  </div>
+                  {product.tables && product.tables.length > 0 && (
+                    <div className="text-[10px] text-slate-400 font-mono bg-black/80 p-2 rounded border border-white/5 overflow-x-auto">
+                      <span className="text-slate-300 font-bold block mb-1">Database Tables ({product.tables.length}):</span>
+                      {product.tables.join(', ')}
+                    </div>
+                  )}
+                  {isOperatorAuthenticated && (
+                    <div className="pt-2 border-t border-amber-500/30 text-amber-300 text-[11px] flex justify-between items-center">
+                      <span>Operator Buyout Floor:</span>
+                      <strong className="text-amber-400 font-mono">{isTrack2 ? '$10,000 – $18,000' : '$3,800 – $6,500'}</strong>
+                    </div>
+                  )}
+                </div>
+              </details>
+
+              {/* UNIFIED PRIMARY ACTION BUTTON (Direct Route, No Exposed Passcode) */}
+              <div className="pt-2">
                 <a
                   href={product.preview_url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white transition-colors border border-white/20"
-                  title="Direct New Window Link"
+                  className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-black text-sm uppercase tracking-wider transition-all cursor-pointer shadow-md shadow-emerald-500/25 active:scale-95"
                 >
-                  <ChevronRight size={18} />
+                  <ExternalLink size={16} />
+                  <span>[VIEW LIVE DEMO]</span>
                 </a>
               </div>
             </div>

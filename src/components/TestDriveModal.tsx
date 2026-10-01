@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { X, ExternalLink, Key, Check, AlertTriangle } from 'lucide-react';
+import React from 'react';
+import { X, ExternalLink, ShieldCheck, AlertTriangle } from 'lucide-react';
 import { ProductItem } from '../catalogData';
 
 interface TestDriveModalProps {
@@ -13,15 +13,7 @@ export const TestDriveModal: React.FC<TestDriveModalProps> = ({
   isOpen,
   onClose
 }) => {
-  const [copied, setCopied] = useState(false);
-
   if (!isOpen || !product) return null;
-
-  const handleCopy = () => {
-    navigator.clipboard.writeText(product.admin_passcode);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 backdrop-blur-md p-2 sm:p-4 font-mono">
@@ -36,28 +28,22 @@ export const TestDriveModal: React.FC<TestDriveModalProps> = ({
           </div>
 
           <div className="flex items-center gap-3">
-            {/* Passcode helper */}
+            {/* Ephemeral preview indicator (No exposed passcodes) */}
             <div className="flex items-center gap-1.5 bg-slate-900 border border-emerald-500/40 px-2.5 py-1 rounded text-[11px]">
-              <Key size={12} className="text-emerald-400" />
-              <span className="text-slate-400">Passcode:</span>
-              <code className="text-emerald-400 font-bold">{product.admin_passcode}</code>
-              <button 
-                onClick={handleCopy} 
-                className="text-slate-400 hover:text-white ml-1 cursor-pointer"
-                title="Copy Passcode"
-              >
-                {copied ? <Check size={12} className="text-emerald-400" /> : <span className="text-[10px]">COPY</span>}
-              </button>
+              <ShieldCheck size={12} className="text-emerald-400" />
+              <span className="text-slate-300 font-bold">PREVIEW MODE:</span>
+              <span className="text-emerald-400 font-mono font-bold">EPHEMERAL SANDBOX</span>
             </div>
 
             <a
               href={product.preview_url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1 text-slate-300 hover:text-emerald-400 transition-colors p-1"
-              title="Open full screen in new tab"
+              className="flex items-center gap-1.5 text-black bg-emerald-500 hover:bg-emerald-400 font-black px-2.5 py-1 rounded transition-colors text-[11px]"
+              title="Open direct live demo in new tab"
             >
-              <ExternalLink size={15} />
+              <ExternalLink size={13} />
+              <span>LAUNCH TAB</span>
             </a>
 
             <button 

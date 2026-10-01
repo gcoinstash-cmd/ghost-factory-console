@@ -10,10 +10,40 @@ import { MaintenanceBayScreen } from './components/MaintenanceBayScreen';
 import { MissionModal } from './components/MissionModal';
 import { TestDriveModal } from './components/TestDriveModal';
 import { AuditModal } from './components/AuditModal';
+import { OperatorAuthModal } from './components/OperatorAuthModal';
+import { LayoutGrid, Compass, DollarSign, Wrench, Lock } from 'lucide-react';
 
 export const App: React.FC = () => {
   // Navigation View State (Screens 1 to 5)
   const [currentView, setCurrentView] = useState<ScreenView>('garage');
+
+  // Operator Authentication State (Private Deal Room Perimeter Isolation)
+  const [isOperatorAuthenticated, setIsOperatorAuthenticated] = useState<boolean>(() => {
+    try {
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('operator') === 'true' || window.location.hash === '#deal-room') {
+        return true;
+      }
+      return sessionStorage.getItem('gfcc_operator_auth') === 'true';
+    } catch {
+      return false;
+    }
+  });
+  const [isOperatorModalOpen, setIsOperatorModalOpen] = useState(false);
+
+  const handleAuthenticateOperator = () => {
+    setIsOperatorAuthenticated(true);
+    try {
+      sessionStorage.setItem('gfcc_operator_auth', 'true');
+    } catch {}
+  };
+
+  const handleLockOperator = () => {
+    setIsOperatorAuthenticated(false);
+    try {
+      sessionStorage.removeItem('gfcc_operator_auth');
+    } catch {}
+  };
 
   // Modal states
   const [isMissionModalOpen, setIsMissionModalOpen] = useState(false);
@@ -23,10 +53,10 @@ export const App: React.FC = () => {
   const [isRefreshing, setIsRefreshing] = useState(false);
 
   // Core metrics derived from v2 specifications & portfolio metrics
-  const totalAssets = CATALOG_DATA.total_flagships || 85;
-  const retainedFloor = PORTFOLIO_METRICS.retainedFloorCount || 68; // 80% immutable retention floor
-  const availableApaSlots = PORTFOLIO_METRICS.maxApaCapacity || 17; // 20% max APA capacity
-  const planningValue = PORTFOLIO_METRICS.valuationAppraisal?.planningFmv || 33000;
+  const totalAssets = CATALOG_DATA.total_flagships || 110;
+  const retainedFloor = PORTFOLIO_METRICS.retainedFloorCount || 88; // 80% immutable retention floor
+  const availableApaSlots = PORTFOLIO_METRICS.maxApaCapacity || 22; // 20% max APA capacity
+  const planningValue = PORTFOLIO_METRICS.valuationAppraisal?.planningFmv || 160000;
 
   // Hard Refresh Handler to clear cache and refresh view
   const handleHardRefresh = () => {
@@ -47,7 +77,7 @@ export const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#0A0A0B] text-slate-100 hud-grid pb-24 selection:bg-emerald-500 selection:text-black">
+    <div className="min-h-screen bg-[#0A0A0B] text-slate-100 hud-grid pb-28 md:pb-24 selection:bg-emerald-500 selection:text-black">
       {/* Top Header & Screen Navigation */}
       <NavigationHeader
         currentView={currentView}
@@ -56,10 +86,13 @@ export const App: React.FC = () => {
         onHardRefresh={handleHardRefresh}
         onOpenAudit={() => setShowAuditModal(true)}
         totalAssets={totalAssets}
+        isOperatorAuthenticated={isOperatorAuthenticated}
+        onOpenOperatorAuth={() => setIsOperatorModalOpen(true)}
+        onLockOperator={handleLockOperator}
       />
 
       {/* Main Screen Views */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 sm:pt-8">
         {/* Screen 1: Garage HUD */}
         {currentView === 'garage' && (
           <GarageScreen
@@ -71,6 +104,8 @@ export const App: React.FC = () => {
             onEngageMission={() => setIsMissionModalOpen(true)}
             missionCompleted={missionCompleted}
             onOpenTestDrive={(product) => setTestDriveProduct(product)}
+            isOperatorAuthenticated={isOperatorAuthenticated}
+            onOpenOperatorAuth={() => setIsOperatorModalOpen(true)}
           />
         )}
 
@@ -90,13 +125,16 @@ export const App: React.FC = () => {
           />
         )}
 
-        {/* Screen 4: Deal Desk & 80% Retention Floor Shield */}
+        {/* Screen 4: Deal Desk & 80% Retention Floor Shield (Private Deal Room) */}
         {currentView === 'dealdesk' && (
           <DealDeskScreen
             products={CATALOG_DATA.products}
             totalAssets={totalAssets}
             retainedFloor={retainedFloor}
             maxTransferable={availableApaSlots}
+            isOperatorAuthenticated={isOperatorAuthenticated}
+            onAuthenticate={handleAuthenticateOperator}
+            onLockOperator={handleLockOperator}
           />
         )}
 
@@ -108,6 +146,65 @@ export const App: React.FC = () => {
           />
         )}
       </main>
+
+      {/* STICKY MOBILE BOTTOM HUD BAR (Fixed on viewport < md for Mobile Ergonomics) */}
+      <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#0A0A0B]/95 backdrop-blur-xl border-t border-emerald-500/30 px-2 py-2 flex items-center justify-around shadow-2xl font-mono text-xs">
+        <button
+          onClick={() => setCurrentView('garage')}
+          className={`flex flex-col items-center gap-1 py-1 px-3 rounded-xl transition-all cursor-pointer ${
+            currentView === 'garage'
+              ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/50 font-black'
+              : 'text-slate-400 hover:text-white'
+          }`}
+        >
+          <LayoutGrid size={17} />
+          <span className="text-[10px] uppercase font-bold tracking-wide">Garage</span>
+        </button>
+
+        <button
+          onClick={() => setCurrentView('showroom')}
+          className={`flex flex-col items-center gap-1 py-1 px-3 rounded-xl transition-all cursor-pointer ${
+            currentView === 'showroom'
+              ? 'bg-white/20 text-white border border-white/40 font-black'
+              : 'text-slate-400 hover:text-white'
+          }`}
+        >
+          <Compass size={17} />
+          <span className="text-[10px] uppercase font-bold tracking-wide">Catalog</span>
+        </button>
+
+        <button
+          onClick={() => {
+            if (!isOperatorAuthenticated) {
+              setIsOperatorModalOpen(true);
+            }
+            setCurrentView('dealdesk');
+          }}
+          className={`flex flex-col items-center gap-1 py-1 px-3 rounded-xl transition-all cursor-pointer ${
+            currentView === 'dealdesk'
+              ? 'bg-amber-500/20 text-amber-400 border border-amber-500/50 font-black'
+              : 'text-slate-400 hover:text-white'
+          }`}
+        >
+          <DollarSign size={17} />
+          <span className="text-[10px] uppercase font-bold tracking-wide flex items-center gap-0.5">
+            Deal Room
+            {!isOperatorAuthenticated && <Lock size={9} className="text-amber-400 inline" />}
+          </span>
+        </button>
+
+        <button
+          onClick={() => setCurrentView('maintenance')}
+          className={`flex flex-col items-center gap-1 py-1 px-3 rounded-xl transition-all cursor-pointer ${
+            currentView === 'maintenance'
+              ? 'bg-purple-500/20 text-purple-400 border border-purple-500/50 font-black'
+              : 'text-slate-400 hover:text-white'
+          }`}
+        >
+          <Wrench size={17} />
+          <span className="text-[10px] uppercase font-bold tracking-wide">Diagnostics</span>
+        </button>
+      </div>
 
       {/* Modals */}
       <MissionModal
@@ -127,6 +224,12 @@ export const App: React.FC = () => {
         isOpen={showAuditModal}
         onClose={() => setShowAuditModal(false)}
         totalAssets={totalAssets}
+      />
+
+      <OperatorAuthModal
+        isOpen={isOperatorModalOpen}
+        onClose={() => setIsOperatorModalOpen(false)}
+        onAuthenticate={handleAuthenticateOperator}
       />
     </div>
   );
