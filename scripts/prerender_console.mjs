@@ -17,12 +17,24 @@ const rootDir = path.resolve(consoleDir, '../..');
 const manifestPath = path.join(rootDir, 'CATALOG_MANIFEST.json');
 const htmlPath = path.join(consoleDir, 'index.html');
 
-if (!fs.existsSync(manifestPath)) {
-  console.error('Missing CATALOG_MANIFEST.json at:', manifestPath);
-  process.exit(1);
+let products = [];
+if (fs.existsSync(manifestPath)) {
+  const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
+  products = manifest.products || [];
+} else {
+  const catalogDataPath = path.join(consoleDir, 'src', 'catalogData.ts');
+  const catalogContent = fs.readFileSync(catalogDataPath, 'utf8');
+  const jsonMatch = catalogContent.match(/export const CATALOG_DATA = ({[\s\S]*});/);
+  if (jsonMatch) {
+    const data = JSON.parse(jsonMatch[1]);
+    products = data.products || [];
+  }
 }
 
-const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
+if (!products.length) {
+  console.error('Could not load products for pre-rendering.');
+  process.exit(1);
+}
 
 const regulatedRegexes = [
   /\bclinical\b/i, /\btrial\b/i, /\bmedical\b/i, /\bmedicine\b/i, /\bmedspa\b/i,
@@ -63,7 +75,7 @@ function escapeHtml(str) {
     .replace(/>/g, '&gt;');
 }
 
-const cardsHtml = manifest.products.map(p => {
+const cardsHtml = products.map(p => {
   const reg = isRegulated(p);
   const notice = reg
     ? 'TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE. NOT PRODUCTION OR ADVICE.'
@@ -88,7 +100,7 @@ const replacement = `<div id="root">\n    <section id="static-prerender" style="
 if (rootRegex.test(html)) {
   html = html.replace(rootRegex, replacement);
   fs.writeFileSync(htmlPath, html, 'utf8');
-  console.log(`✅ Pre-rendered ${manifest.products.length} Blueprint Cards into ${htmlPath}`);
+  console.log(`✅ Pre-rendered ${products.length} Blueprint Cards into ${htmlPath}`);
 } else {
   console.error('Could not find <div id="root"> in index.html');
   process.exit(1);
