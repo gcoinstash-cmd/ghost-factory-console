@@ -6,7 +6,12 @@ import {
   AlertOctagon, 
   Check, 
   X,
-  Sparkles
+  Sparkles,
+  ExternalLink,
+  ShieldCheck,
+  Key,
+  Search,
+  AlertTriangle
 } from 'lucide-react';
 import { ProductItem } from '../catalogData';
 
@@ -16,7 +21,7 @@ interface FactoryLineScreenProps {
 }
 
 export const FactoryLineScreen: React.FC<FactoryLineScreenProps> = ({
-  products: _products,
+  products,
   totalAssets
 }) => {
   // 5 Stages of the Assembly Line
@@ -54,6 +59,47 @@ export const FactoryLineScreen: React.FC<FactoryLineScreenProps> = ({
       setIntakeSuccess(false);
     }, 4000);
   };
+
+  // Stage 5 Track 2 Flagship Candidate Audit State (Assets #086 to #109)
+  const [candidateFilter, setCandidateFilter] = useState('');
+  const [copiedCode, setCopiedCode] = useState<string | null>(null);
+  const [candidateAudits, setCandidateAudits] = useState<Record<number, Record<string, boolean>>>({});
+
+  const handleCopyPasscode = (code: string) => {
+    navigator.clipboard.writeText(code);
+    setCopiedCode(code);
+    setTimeout(() => setCopiedCode(null), 2000);
+  };
+
+  const toggleCheck = (productId: number, checkKey: string) => {
+    setCandidateAudits(prev => {
+      const current = prev[productId] || {
+        workflow: true,
+        identity: true,
+        screens: true,
+        physics: true,
+        journey: true,
+        simulatedTerms: true,
+        brief: true,
+        disclosure: true
+      };
+      return {
+        ...prev,
+        [productId]: {
+          ...current,
+          [checkKey]: !current[checkKey]
+        }
+      };
+    });
+  };
+
+  const flagshipCandidates = products.filter(p => p.id >= 86 || p.pricing_track?.includes('Track 2'));
+  const filteredCandidates = flagshipCandidates.filter(p => 
+    p.name.toLowerCase().includes(candidateFilter.toLowerCase()) ||
+    p.category.toLowerCase().includes(candidateFilter.toLowerCase()) ||
+    p.vertical.toLowerCase().includes(candidateFilter.toLowerCase()) ||
+    p.id.toString().includes(candidateFilter)
+  );
 
   return (
     <div className="space-y-8 font-mono">
@@ -366,6 +412,257 @@ export const FactoryLineScreen: React.FC<FactoryLineScreenProps> = ({
             <span>SUCCESS: Asset #{candidateId} verified and admitted to Ghost Factory inventory ledger!</span>
           </div>
         )}
+      </section>
+
+      {/* STAGE 5: TRACK 2 FLAGSHIP CANDIDATE AUDIT STATION (24 MODELS) */}
+      <section className="bg-gradient-to-br from-[#14120f] to-[#0A0A0B] border-2 border-amber-500/40 rounded-2xl p-6 sm:p-8 space-y-6 glow-gold">
+        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 border-b border-amber-500/20 pb-5">
+          <div>
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-amber-500/15 border border-amber-500/40 rounded-lg text-xs font-mono font-bold text-amber-400 uppercase tracking-widest mb-2.5">
+              <ShieldCheck size={14} /> STAGE 5 // TRACK 2 FLAGSHIP QUALIFICATION STATION
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-black text-white flex items-center gap-3">
+              TRACK 2 CANDIDATE FLEET // <span className="text-amber-400 font-mono">24 ELITE MODELS</span>
+            </h2>
+            <p className="text-xs sm:text-sm text-slate-300 mt-1 max-w-2xl leading-relaxed">
+              Every candidate digital vehicle from Slot #086 to Slot #109 is classified under Track 2 ($14,500 Anchor). Review the attached 8-point Flagship Qualification Gate checklist on each unit before final commercial release.
+            </p>
+          </div>
+
+          <div className="bg-black/80 border border-amber-500/30 p-3.5 rounded-xl text-xs font-mono space-y-1">
+            <div className="flex justify-between items-center gap-4">
+              <span className="text-slate-400">Candidate Fleet:</span>
+              <strong className="text-amber-400 font-bold">24 Vehicles (#086–#109)</strong>
+            </div>
+            <div className="flex justify-between items-center gap-4">
+              <span className="text-slate-400">Buyout Anchor:</span>
+              <strong className="text-white font-bold">$14,500 USD (T2 Protocol)</strong>
+            </div>
+            <div className="flex justify-between items-center gap-4">
+              <span className="text-slate-400">Commercial License:</span>
+              <strong className="text-emerald-400 font-bold">$1,500 – $3,500 USD</strong>
+            </div>
+          </div>
+        </div>
+
+        {/* Filter / Search Bar */}
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="relative w-full sm:w-96">
+            <Search size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" />
+            <input 
+              type="text"
+              placeholder="Search candidate name, domain, or ID..."
+              value={candidateFilter}
+              onChange={(e) => setCandidateFilter(e.target.value)}
+              className="w-full bg-black/70 border border-white/15 rounded-xl pl-10 pr-4 py-2.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-amber-500 font-mono"
+            />
+          </div>
+          <span className="text-xs text-slate-400 font-mono self-end sm:self-center">
+            Showing <strong className="text-amber-400">{filteredCandidates.length}</strong> of 24 Flagship Candidates
+          </span>
+        </div>
+
+        {/* 24 Candidate Cards with Attached 8-Point Gate Checklist */}
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
+          {filteredCandidates.map((product) => {
+            const checks = candidateAudits[product.id] || {
+              workflow: true,
+              identity: true,
+              screens: true,
+              physics: true,
+              journey: true,
+              simulatedTerms: true,
+              brief: true,
+              disclosure: true
+            };
+            const passedCount = Object.values(checks).filter(Boolean).length;
+            const isAllPassed = passedCount === 8;
+
+            return (
+              <div 
+                key={product.id}
+                className="bg-black/70 border-2 border-amber-500/40 rounded-2xl p-5 sm:p-6 space-y-4 hover:border-amber-400 transition-all shadow-lg shadow-amber-500/5 relative overflow-hidden"
+              >
+                {/* Header: Slot + Name + Track 2 Badge */}
+                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 border-b border-white/10 pb-3">
+                  <div className="space-y-1">
+                    <div className="flex items-center gap-2">
+                      <span className="text-xs font-mono font-bold text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded border border-amber-500/30">
+                        SLOT #{product.id.toString().padStart(3, '0')}
+                      </span>
+                      <span className="text-xs font-mono text-cyan-300 bg-cyan-950/50 px-2 py-0.5 rounded border border-cyan-500/30">
+                        {product.vertical.toUpperCase()}
+                      </span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-black text-white leading-tight">
+                      {product.name}
+                    </h3>
+                  </div>
+
+                  <span className="px-2.5 py-1 rounded font-black text-xs uppercase tracking-wider bg-amber-500/20 border border-amber-500/60 text-amber-300 shrink-0">
+                    TRACK 2 // FLAGSHIP CANDIDATE
+                  </span>
+                </div>
+
+                {/* Track 2 Valuation Schedule (No Track 1 numbers) */}
+                <div className="bg-amber-950/20 border border-amber-500/30 rounded-xl p-3 grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs font-mono">
+                  <div>
+                    <span className="text-[10px] text-slate-400 block uppercase">Buyout Anchor</span>
+                    <strong className="text-amber-400 font-bold text-sm">$14,500</strong>
+                  </div>
+                  <div>
+                    <span className="text-[10px] text-slate-400 block uppercase">Flagship License</span>
+                    <strong className="text-white font-bold text-sm">$1,500–$3,500</strong>
+                  </div>
+                  <div>
+                    <span className="text-[10px] text-slate-400 block uppercase">Buyout Range</span>
+                    <strong className="text-slate-200 font-bold text-sm">$10k–$18k</strong>
+                  </div>
+                  <div>
+                    <span className="text-[10px] text-slate-400 block uppercase">Strategic APA</span>
+                    <strong className="text-purple-300 font-bold text-sm">$35k–$75k+</strong>
+                  </div>
+                </div>
+
+                {/* Mandatory Truth Label */}
+                <div className="bg-black/80 border border-amber-500/30 p-2.5 rounded-lg flex items-center justify-between text-xs font-mono">
+                  <div className="flex items-center gap-1.5 text-amber-300 font-bold">
+                    <AlertTriangle size={13} className="text-amber-400" />
+                    <span>TRUTH BADGE:</span>
+                  </div>
+                  <span className="text-amber-400 text-right font-semibold text-[11px] sm:text-xs">
+                    {product.truth_label || 'Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit'}
+                  </span>
+                </div>
+
+                {/* ATTACHED 8-POINT FLAGSHIP QUALIFICATION GATE CHECKLIST */}
+                <div className="space-y-2 pt-1 border-t border-white/10 font-mono">
+                  <div className="flex justify-between items-center text-xs">
+                    <span className="text-slate-300 font-bold uppercase tracking-wider flex items-center gap-1.5">
+                      <Sparkles size={13} className="text-amber-400" />
+                      <span>Attached Flagship Qualification Gate Checklist:</span>
+                    </span>
+                    <span className={`px-2 py-0.5 rounded text-[10px] font-bold ${
+                      isAllPassed ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40' : 'bg-amber-500/20 text-amber-300 border border-amber-500/40'
+                    }`}>
+                      {passedCount}/8 AUDIT CHECKS {isAllPassed ? 'PASSED ✅' : 'PENDING ⚠️'}
+                    </span>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px]">
+                    <div 
+                      onClick={() => toggleCheck(product.id, 'workflow')}
+                      className={`p-2 rounded border cursor-pointer flex items-center justify-between transition-all ${
+                        checks.workflow ? 'bg-emerald-950/20 border-emerald-500/40 text-emerald-200' : 'bg-red-950/20 border-red-500/40 text-red-300'
+                      }`}
+                    >
+                      <span>1. High-Stakes B2B Workflow</span>
+                      {checks.workflow ? <Check size={12} className="text-emerald-400" /> : <X size={12} className="text-red-400" />}
+                    </div>
+
+                    <div 
+                      onClick={() => toggleCheck(product.id, 'identity')}
+                      className={`p-2 rounded border cursor-pointer flex items-center justify-between transition-all ${
+                        checks.identity ? 'bg-emerald-950/20 border-emerald-500/40 text-emerald-200' : 'bg-red-950/20 border-red-500/40 text-red-300'
+                      }`}
+                    >
+                      <span>2. Visual Identity & Benchmark</span>
+                      {checks.identity ? <Check size={12} className="text-emerald-400" /> : <X size={12} className="text-red-400" />}
+                    </div>
+
+                    <div 
+                      onClick={() => toggleCheck(product.id, 'screens')}
+                      className={`p-2 rounded border cursor-pointer flex items-center justify-between transition-all ${
+                        checks.screens ? 'bg-emerald-950/20 border-emerald-500/40 text-emerald-200' : 'bg-red-950/20 border-red-500/40 text-red-300'
+                      }`}
+                    >
+                      <span>3. 8–15 Interactive Sub-Panels</span>
+                      {checks.screens ? <Check size={12} className="text-emerald-400" /> : <X size={12} className="text-red-400" />}
+                    </div>
+
+                    <div 
+                      onClick={() => toggleCheck(product.id, 'physics')}
+                      className={`p-2 rounded border cursor-pointer flex items-center justify-between transition-all ${
+                        checks.physics ? 'bg-emerald-950/20 border-emerald-500/40 text-emerald-200' : 'bg-red-950/20 border-red-500/40 text-red-300'
+                      }`}
+                    >
+                      <span>4. Domain Physics / SCADA Logic</span>
+                      {checks.physics ? <Check size={12} className="text-emerald-400" /> : <X size={12} className="text-red-400" />}
+                    </div>
+
+                    <div 
+                      onClick={() => toggleCheck(product.id, 'journey')}
+                      className={`p-2 rounded border cursor-pointer flex items-center justify-between transition-all ${
+                        checks.journey ? 'bg-emerald-950/20 border-emerald-500/40 text-emerald-200' : 'bg-red-950/20 border-red-500/40 text-red-300'
+                      }`}
+                    >
+                      <span>5. Full Operator Journey</span>
+                      {checks.journey ? <Check size={12} className="text-emerald-400" /> : <X size={12} className="text-red-400" />}
+                    </div>
+
+                    <div 
+                      onClick={() => toggleCheck(product.id, 'simulatedTerms')}
+                      className={`p-2 rounded border cursor-pointer flex items-center justify-between transition-all ${
+                        checks.simulatedTerms ? 'bg-emerald-950/20 border-emerald-500/40 text-emerald-200' : 'bg-red-950/20 border-red-500/40 text-red-300'
+                      }`}
+                    >
+                      <span>6. Simulated Domain Terminology</span>
+                      {checks.simulatedTerms ? <Check size={12} className="text-emerald-400" /> : <X size={12} className="text-red-400" />}
+                    </div>
+
+                    <div 
+                      onClick={() => toggleCheck(product.id, 'brief')}
+                      className={`p-2 rounded border cursor-pointer flex items-center justify-between transition-all ${
+                        checks.brief ? 'bg-emerald-950/20 border-emerald-500/40 text-emerald-200' : 'bg-red-950/20 border-red-500/40 text-red-300'
+                      }`}
+                    >
+                      <span>7. Walkthrough Brief & Demo URL</span>
+                      {checks.brief ? <Check size={12} className="text-emerald-400" /> : <X size={12} className="text-red-400" />}
+                    </div>
+
+                    <div 
+                      onClick={() => toggleCheck(product.id, 'disclosure')}
+                      className={`p-2 rounded border cursor-pointer flex items-center justify-between transition-all ${
+                        checks.disclosure ? 'bg-emerald-950/20 border-emerald-500/40 text-emerald-200' : 'bg-red-950/20 border-red-500/40 text-red-300'
+                      }`}
+                    >
+                      <span>8. Simulated Data Disclosure (Rule 1)</span>
+                      {checks.disclosure ? <Check size={12} className="text-emerald-400" /> : <X size={12} className="text-red-400" />}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Footer Actions: Test Drive & Passcode */}
+                <div className="pt-2 border-t border-white/10 flex flex-wrap items-center justify-between gap-3 text-xs font-mono">
+                  <div className="flex items-center gap-2">
+                    <span className="text-slate-400 flex items-center gap-1">
+                      <Key size={12} /> Passcode:
+                    </span>
+                    <code className="text-emerald-400 bg-black px-2 py-0.5 rounded border border-emerald-500/30">
+                      {product.admin_passcode}
+                    </code>
+                    <button
+                      onClick={() => handleCopyPasscode(product.admin_passcode)}
+                      className="px-2 py-0.5 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded border border-white/10 text-[10px]"
+                    >
+                      {copiedCode === product.admin_passcode ? 'COPIED' : 'COPY'}
+                    </button>
+                  </div>
+
+                  <a 
+                    href={product.preview_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-black font-black text-xs uppercase tracking-wider flex items-center gap-1.5 transition-all shadow-md shadow-amber-500/20"
+                  >
+                    <ExternalLink size={13} />
+                    <span>TEST DRIVE DEMO</span>
+                  </a>
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </section>
     </div>
   );

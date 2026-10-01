@@ -22,8 +22,12 @@ export interface ProductItem {
   pricing_track?: string;
   flagship_qualified?: boolean;
   flagship_license_msrp?: number;
+  flagship_license_range?: number[];
   exclusive_buyout_anchor?: number;
   exclusive_buyout_range?: number[];
+  full_asset_buyout_range?: number[];
+  strategic_acquisition_range?: number[];
+  truth_label?: string;
 }
 
 export const CATALOG_DATA = {
@@ -87,7 +91,14 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/stride-mb",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 2,
@@ -113,7 +124,14 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/the-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 3,
@@ -139,7 +157,14 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/velocity-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 4,
@@ -165,7 +190,14 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/apex-club-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 5,
@@ -191,7 +223,14 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/elevate-capital-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 6,
@@ -217,7 +256,14 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/obsidian-lab-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 7,
@@ -244,7 +290,14 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/the-enclave-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 8,
@@ -270,7 +323,14 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/aura-medspa-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 9,
@@ -296,7 +356,14 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/royal-apex-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 10,
@@ -322,7 +389,14 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/aura-reserve-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 11,
@@ -348,7 +422,14 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/monolith-studio-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 12,
@@ -374,7 +455,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 13,
@@ -400,7 +488,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 14,
@@ -425,7 +520,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 15,
@@ -450,7 +552,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 16,
@@ -475,7 +584,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 17,
@@ -500,7 +616,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 18,
@@ -525,7 +648,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 19,
@@ -551,7 +681,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 20,
@@ -577,7 +714,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 21,
@@ -603,7 +747,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 22,
@@ -629,7 +780,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 23,
@@ -655,7 +813,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 24,
@@ -682,7 +847,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 25,
@@ -708,7 +880,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 26,
@@ -735,7 +914,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 27,
@@ -761,7 +947,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 28,
@@ -787,7 +980,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 29,
@@ -813,7 +1013,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 30,
@@ -838,7 +1045,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 31,
@@ -863,7 +1077,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 32,
@@ -889,7 +1110,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 33,
@@ -914,7 +1142,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 34,
@@ -939,7 +1174,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 35,
@@ -964,7 +1206,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 36,
@@ -989,7 +1238,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 37,
@@ -1015,7 +1271,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 38,
@@ -1041,7 +1304,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 39,
@@ -1067,7 +1337,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 40,
@@ -1093,7 +1370,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 41,
@@ -1119,7 +1403,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 42,
@@ -1145,7 +1436,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 43,
@@ -1171,7 +1469,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 44,
@@ -1196,7 +1501,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 45,
@@ -1222,7 +1534,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 46,
@@ -1247,7 +1566,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 47,
@@ -1273,7 +1599,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 48,
@@ -1298,7 +1631,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 49,
@@ -1322,7 +1662,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 50,
@@ -1347,7 +1694,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 51,
@@ -1373,7 +1727,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 52,
@@ -1398,7 +1759,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 53,
@@ -1423,7 +1791,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 54,
@@ -1448,7 +1823,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 55,
@@ -1473,7 +1855,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 56,
@@ -1499,7 +1888,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 57,
@@ -1525,7 +1921,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 58,
@@ -1551,7 +1954,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 59,
@@ -1577,7 +1987,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 60,
@@ -1603,7 +2020,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 61,
@@ -1629,7 +2053,14 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/boutique-dental-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 62,
@@ -1655,7 +2086,14 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/veterinary-hospital-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 63,
@@ -1681,7 +2119,14 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/functional-medicine-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 64,
@@ -1707,7 +2152,14 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/physical-therapy-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 65,
@@ -1733,7 +2185,14 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/recovery-spa-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 66,
@@ -1759,7 +2218,14 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/boutique-law-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 67,
@@ -1784,7 +2250,14 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/ma-advisory-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 68,
@@ -1809,7 +2282,14 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/executive-search-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 69,
@@ -1834,7 +2314,14 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/wealth-family-office-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 70,
@@ -1859,7 +2346,14 @@ export const CATALOG_DATA = {
       "status_badge": "Active Checkout",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/litigation-ops-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 71,
@@ -1885,7 +2379,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 72,
@@ -1911,7 +2412,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 73,
@@ -1937,7 +2445,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 74,
@@ -1963,7 +2478,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 75,
@@ -1989,7 +2511,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 76,
@@ -2015,7 +2544,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 77,
@@ -2041,7 +2577,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 78,
@@ -2067,7 +2610,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 79,
@@ -2093,7 +2643,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 80,
@@ -2119,7 +2676,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 81,
@@ -2145,7 +2709,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 82,
@@ -2171,7 +2742,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 83,
@@ -2197,7 +2775,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 84,
@@ -2223,7 +2808,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 85,
@@ -2249,7 +2841,14 @@ export const CATALOG_DATA = {
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
-      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)"
+      "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 1 - Lean Rapid-Sale",
+      "truth_label": "Interactive Prototype // Simulated Data Only",
+      "exclusive_buyout_anchor": 4500,
+      "exclusive_buyout_range": [
+        3800,
+        6500
+      ]
     },
     {
       "id": 86,
@@ -2272,17 +2871,30 @@ export const CATALOG_DATA = {
       "archetype_description": "Fleet asset tracking, dispatch coordination, and route telemetry.",
       "design_benchmark": "Flexport Global Logistics & Samsara Fleet Hub",
       "checkout_active": true,
-      "status_badge": "Flagship Interactive Prototype",
+      "status_badge": "Track 2 Flagship Candidate",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/aegis-swarm-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
-      "pricing_track": "Track 2 \u2014 Flagship Tier-1 (,500 Anchor)",
+      "pricing_track": "Track 2 - Flagship Candidate",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
       "exclusive_buyout_range": [
         10000,
         18000
+      ],
+      "truth_label": "Interactive Prototype (Simulated Data Only) \u2014 Awaiting Flagship Qualification Audit",
+      "flagship_license_range": [
+        1500,
+        3500
+      ],
+      "full_asset_buyout_range": [
+        18000,
+        35000
+      ],
+      "strategic_acquisition_range": [
+        35000,
+        75000
       ]
     },
     {
@@ -2295,7 +2907,10 @@ export const CATALOG_DATA = {
       "admin_passcode": "autonomous2026",
       "audit_score": 9.8,
       "tables": [
-        "IF"
+        "haulage_vehicles",
+        "dispatch_routes",
+        "payload_telemetry",
+        "pit_zones"
       ],
       "vertical": "subsea",
       "archetype_id": "C",
@@ -2303,17 +2918,30 @@ export const CATALOG_DATA = {
       "archetype_description": "Fleet asset tracking, dispatch coordination, and route telemetry.",
       "design_benchmark": "Flexport Global Logistics & Samsara Fleet Hub",
       "checkout_active": true,
-      "status_badge": "Flagship Interactive Prototype",
+      "status_badge": "Track 2 Flagship Candidate",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/autonomous-mining-haulage-fleet-dispatch-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
-      "pricing_track": "Track 2 \u2014 Flagship Tier-1 (,500 Anchor)",
+      "pricing_track": "Track 2 - Flagship Candidate",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
       "exclusive_buyout_range": [
         10000,
         18000
+      ],
+      "truth_label": "Interactive Prototype (Simulated Data Only) \u2014 Awaiting Flagship Qualification Audit",
+      "flagship_license_range": [
+        1500,
+        3500
+      ],
+      "full_asset_buyout_range": [
+        18000,
+        35000
+      ],
+      "strategic_acquisition_range": [
+        35000,
+        75000
       ]
     },
     {
@@ -2326,7 +2954,10 @@ export const CATALOG_DATA = {
       "admin_passcode": "autonomous2026",
       "audit_score": 9.8,
       "tables": [
-        "IF"
+        "crawler_units",
+        "bathymetric_scans",
+        "trenching_depths",
+        "slurry_pumps"
       ],
       "vertical": "subsea",
       "archetype_id": "A",
@@ -2334,17 +2965,30 @@ export const CATALOG_DATA = {
       "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out inspection drawer.",
       "design_benchmark": "NASA Mission Control & Palantir Foundry Console",
       "checkout_active": true,
-      "status_badge": "Flagship Interactive Prototype",
+      "status_badge": "Track 2 Flagship Candidate",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/autonomous-subsea-mining-crawler-telemetry-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
-      "pricing_track": "Track 2 \u2014 Flagship Tier-1 (,500 Anchor)",
+      "pricing_track": "Track 2 - Flagship Candidate",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
       "exclusive_buyout_range": [
         10000,
         18000
+      ],
+      "truth_label": "Interactive Prototype (Simulated Data Only) \u2014 Awaiting Flagship Qualification Audit",
+      "flagship_license_range": [
+        1500,
+        3500
+      ],
+      "full_asset_buyout_range": [
+        18000,
+        35000
+      ],
+      "strategic_acquisition_range": [
+        35000,
+        75000
       ]
     },
     {
@@ -2357,7 +3001,10 @@ export const CATALOG_DATA = {
       "admin_passcode": "aviation2026",
       "audit_score": 9.8,
       "tables": [
-        "IF"
+        "flight_manifests",
+        "fbo_ramps",
+        "jet_fuel_reserves",
+        "hangar_assignments"
       ],
       "vertical": "aerospace",
       "archetype_id": "C",
@@ -2365,17 +3012,30 @@ export const CATALOG_DATA = {
       "archetype_description": "Fleet asset tracking, dispatch coordination, and route telemetry.",
       "design_benchmark": "Flexport Global Logistics & Samsara Fleet Hub",
       "checkout_active": true,
-      "status_badge": "Flagship Interactive Prototype",
+      "status_badge": "Track 2 Flagship Candidate",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/aviation-fbo-dispatch-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
-      "pricing_track": "Track 2 \u2014 Flagship Tier-1 (,500 Anchor)",
+      "pricing_track": "Track 2 - Flagship Candidate",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
       "exclusive_buyout_range": [
         10000,
         18000
+      ],
+      "truth_label": "Interactive Prototype (Simulated Data Only) \u2014 Awaiting Flagship Qualification Audit",
+      "flagship_license_range": [
+        1500,
+        3500
+      ],
+      "full_asset_buyout_range": [
+        18000,
+        35000
+      ],
+      "strategic_acquisition_range": [
+        35000,
+        75000
       ]
     },
     {
@@ -2388,7 +3048,10 @@ export const CATALOG_DATA = {
       "admin_passcode": "boutique2026",
       "audit_score": 9.8,
       "tables": [
-        "IF"
+        "vineyard_blocks",
+        "fermentation_tanks",
+        "barrel_aging",
+        "bottling_lots"
       ],
       "vertical": "hospitality",
       "archetype_id": "B",
@@ -2396,17 +3059,30 @@ export const CATALOG_DATA = {
       "archetype_description": "Dynamic masonry grid, visual filtering, and slide-over commission sheet.",
       "design_benchmark": "LVMH Luxury Atelier & Monaco Yacht Show",
       "checkout_active": true,
-      "status_badge": "Flagship Interactive Prototype",
+      "status_badge": "Track 2 Flagship Candidate",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/boutique-winery-production-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
-      "pricing_track": "Track 2 \u2014 Flagship Tier-1 (,500 Anchor)",
+      "pricing_track": "Track 2 - Flagship Candidate",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
       "exclusive_buyout_range": [
         10000,
         18000
+      ],
+      "truth_label": "Interactive Prototype (Simulated Data Only) \u2014 Awaiting Flagship Qualification Audit",
+      "flagship_license_range": [
+        1500,
+        3500
+      ],
+      "full_asset_buyout_range": [
+        18000,
+        35000
+      ],
+      "strategic_acquisition_range": [
+        35000,
+        75000
       ]
     },
     {
@@ -2419,7 +3095,10 @@ export const CATALOG_DATA = {
       "admin_passcode": "clinical2026",
       "audit_score": 9.8,
       "tables": [
-        "IF"
+        "trial_cohorts",
+        "patient_enrollments",
+        "adverse_events",
+        "protocol_milestones"
       ],
       "vertical": "medical",
       "archetype_id": "C",
@@ -2427,17 +3106,30 @@ export const CATALOG_DATA = {
       "archetype_description": "Fleet asset tracking, dispatch coordination, and route telemetry.",
       "design_benchmark": "Flexport Global Logistics & Samsara Fleet Hub",
       "checkout_active": true,
-      "status_badge": "Flagship Interactive Prototype",
+      "status_badge": "Track 2 Flagship Candidate",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/clinical-trial-operations-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
-      "pricing_track": "Track 2 \u2014 Flagship Tier-1 (,500 Anchor)",
+      "pricing_track": "Track 2 - Flagship Candidate",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
       "exclusive_buyout_range": [
         10000,
         18000
+      ],
+      "truth_label": "Interactive Prototype (Simulated Data Only) \u2014 Awaiting Flagship Qualification Audit",
+      "flagship_license_range": [
+        1500,
+        3500
+      ],
+      "full_asset_buyout_range": [
+        18000,
+        35000
+      ],
+      "strategic_acquisition_range": [
+        35000,
+        75000
       ]
     },
     {
@@ -2450,7 +3142,10 @@ export const CATALOG_DATA = {
       "admin_passcode": "cold2026",
       "audit_score": 9.8,
       "tables": [
-        "IF"
+        "temperature_zones",
+        "pallet_manifests",
+        "refrigeration_units",
+        "reefer_trailers"
       ],
       "vertical": "heavy_fleet",
       "archetype_id": "C",
@@ -2458,17 +3153,30 @@ export const CATALOG_DATA = {
       "archetype_description": "Fleet asset tracking, dispatch coordination, and route telemetry.",
       "design_benchmark": "Flexport Global Logistics & Samsara Fleet Hub",
       "checkout_active": true,
-      "status_badge": "Flagship Interactive Prototype",
+      "status_badge": "Track 2 Flagship Candidate",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/cold-storage-logistics-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
-      "pricing_track": "Track 2 \u2014 Flagship Tier-1 (,500 Anchor)",
+      "pricing_track": "Track 2 - Flagship Candidate",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
       "exclusive_buyout_range": [
         10000,
         18000
+      ],
+      "truth_label": "Interactive Prototype (Simulated Data Only) \u2014 Awaiting Flagship Qualification Audit",
+      "flagship_license_range": [
+        1500,
+        3500
+      ],
+      "full_asset_buyout_range": [
+        18000,
+        35000
+      ],
+      "strategic_acquisition_range": [
+        35000,
+        75000
       ]
     },
     {
@@ -2481,10 +3189,10 @@ export const CATALOG_DATA = {
       "admin_passcode": "commercial2026",
       "audit_score": 9.8,
       "tables": [
-        "telemetry",
-        "subsystems",
-        "events",
-        "metrics"
+        "aerospike_chambers",
+        "shock_diamonds",
+        "nozzle_expansion_ratios",
+        "thermal_barriers"
       ],
       "vertical": "aerospace",
       "archetype_id": "A",
@@ -2492,17 +3200,30 @@ export const CATALOG_DATA = {
       "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out inspection drawer.",
       "design_benchmark": "NASA Mission Control & Palantir Foundry Console",
       "checkout_active": true,
-      "status_badge": "Flagship Interactive Prototype",
+      "status_badge": "Track 2 Flagship Candidate",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/commercial-supersonic-airliner-engine-inverted-aerospike-telemetry-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
-      "pricing_track": "Track 2 \u2014 Flagship Tier-1 (,500 Anchor)",
+      "pricing_track": "Track 2 - Flagship Candidate",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
       "exclusive_buyout_range": [
         10000,
         18000
+      ],
+      "truth_label": "Interactive Prototype (Simulated Data Only) \u2014 Awaiting Flagship Qualification Audit",
+      "flagship_license_range": [
+        1500,
+        3500
+      ],
+      "full_asset_buyout_range": [
+        18000,
+        35000
+      ],
+      "strategic_acquisition_range": [
+        35000,
+        75000
       ]
     },
     {
@@ -2515,12 +3236,10 @@ export const CATALOG_DATA = {
       "admin_passcode": "commercial2026",
       "audit_score": 9.8,
       "tables": [
-        "fusion_reactors",
-        "plasma_pulses",
+        "plasma_confinements",
         "magnetic_coils",
-        "divertor_thermal_logs",
-        "disruption_events",
-        "scada_audit_logs"
+        "toroidal_flux",
+        "tritium_breeding"
       ],
       "vertical": "clean_energy",
       "archetype_id": "D",
@@ -2528,17 +3247,30 @@ export const CATALOG_DATA = {
       "archetype_description": "High-density telemetry streams, closed-loop sensor controllers, and industrial process automation.",
       "design_benchmark": "Siemens WinCC & Schneider EcoStruxure SCADA",
       "checkout_active": true,
-      "status_badge": "Flagship Interactive Prototype",
+      "status_badge": "Track 2 Flagship Candidate",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/commercial-tokamak-fusion-plasma-scada-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
-      "pricing_track": "Track 2 \u2014 Flagship Tier-1 (,500 Anchor)",
+      "pricing_track": "Track 2 - Flagship Candidate",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
       "exclusive_buyout_range": [
         10000,
         18000
+      ],
+      "truth_label": "Interactive Prototype (Simulated Data Only) \u2014 Awaiting Flagship Qualification Audit",
+      "flagship_license_range": [
+        1500,
+        3500
+      ],
+      "full_asset_buyout_range": [
+        18000,
+        35000
+      ],
+      "strategic_acquisition_range": [
+        35000,
+        75000
       ]
     },
     {
@@ -2551,7 +3283,10 @@ export const CATALOG_DATA = {
       "admin_passcode": "deep2026",
       "audit_score": 9.8,
       "tables": [
-        "IF"
+        "rov_umbilicals",
+        "burial_plows",
+        "subsea_cables",
+        "sonar_bathymetry"
       ],
       "vertical": "subsea",
       "archetype_id": "C",
@@ -2559,17 +3294,30 @@ export const CATALOG_DATA = {
       "archetype_description": "Fleet asset tracking, dispatch coordination, and route telemetry.",
       "design_benchmark": "Flexport Global Logistics & Samsara Fleet Hub",
       "checkout_active": true,
-      "status_badge": "Flagship Interactive Prototype",
+      "status_badge": "Track 2 Flagship Candidate",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/deep-sea-rov-trenching-and-cable-burial-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
-      "pricing_track": "Track 2 \u2014 Flagship Tier-1 (,500 Anchor)",
+      "pricing_track": "Track 2 - Flagship Candidate",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
       "exclusive_buyout_range": [
         10000,
         18000
+      ],
+      "truth_label": "Interactive Prototype (Simulated Data Only) \u2014 Awaiting Flagship Qualification Audit",
+      "flagship_license_range": [
+        1500,
+        3500
+      ],
+      "full_asset_buyout_range": [
+        18000,
+        35000
+      ],
+      "strategic_acquisition_range": [
+        35000,
+        75000
       ]
     },
     {
@@ -2582,7 +3330,10 @@ export const CATALOG_DATA = {
       "admin_passcode": "geothermal2026",
       "audit_score": 9.8,
       "tables": [
-        "IF"
+        "wellhead_pressures",
+        "fracture_networks",
+        "enthalpy_injectors",
+        "binary_turbines"
       ],
       "vertical": "clean_energy",
       "archetype_id": "D",
@@ -2590,17 +3341,30 @@ export const CATALOG_DATA = {
       "archetype_description": "High-density telemetry streams, closed-loop sensor controllers, and industrial process automation.",
       "design_benchmark": "Siemens WinCC & Schneider EcoStruxure SCADA",
       "checkout_active": true,
-      "status_badge": "Flagship Interactive Prototype",
+      "status_badge": "Track 2 Flagship Candidate",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/geothermal-supercritical-egs-wellhead-scada-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
-      "pricing_track": "Track 2 \u2014 Flagship Tier-1 (,500 Anchor)",
+      "pricing_track": "Track 2 - Flagship Candidate",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
       "exclusive_buyout_range": [
         10000,
         18000
+      ],
+      "truth_label": "Interactive Prototype (Simulated Data Only) \u2014 Awaiting Flagship Qualification Audit",
+      "flagship_license_range": [
+        1500,
+        3500
+      ],
+      "full_asset_buyout_range": [
+        18000,
+        35000
+      ],
+      "strategic_acquisition_range": [
+        35000,
+        75000
       ]
     },
     {
@@ -2613,10 +3377,10 @@ export const CATALOG_DATA = {
       "admin_passcode": "hft2026",
       "audit_score": 9.8,
       "tables": [
-        "telemetry",
-        "subsystems",
-        "events",
-        "metrics"
+        "microwave_hops",
+        "fpga_transceivers",
+        "tick_latencies",
+        "colocation_racks"
       ],
       "vertical": "wealth",
       "archetype_id": "C",
@@ -2624,17 +3388,30 @@ export const CATALOG_DATA = {
       "archetype_description": "Fleet asset tracking, dispatch coordination, and route telemetry.",
       "design_benchmark": "Flexport Global Logistics & Samsara Fleet Hub",
       "checkout_active": true,
-      "status_badge": "Flagship Interactive Prototype",
+      "status_badge": "Track 2 Flagship Candidate",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/hft-colocation-and-microwave-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
-      "pricing_track": "Track 2 \u2014 Flagship Tier-1 (,500 Anchor)",
+      "pricing_track": "Track 2 - Flagship Candidate",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
       "exclusive_buyout_range": [
         10000,
         18000
+      ],
+      "truth_label": "Interactive Prototype (Simulated Data Only) \u2014 Awaiting Flagship Qualification Audit",
+      "flagship_license_range": [
+        1500,
+        3500
+      ],
+      "full_asset_buyout_range": [
+        18000,
+        35000
+      ],
+      "strategic_acquisition_range": [
+        35000,
+        75000
       ]
     },
     {
@@ -2647,10 +3424,10 @@ export const CATALOG_DATA = {
       "admin_passcode": "hypersonic2026",
       "audit_score": 9.8,
       "tables": [
-        "telemetry",
-        "subsystems",
-        "events",
-        "metrics"
+        "mach_flow_regimes",
+        "stagnation_enthalpy",
+        "schlieren_optics",
+        "boundary_layers"
       ],
       "vertical": "aerospace",
       "archetype_id": "A",
@@ -2658,17 +3435,30 @@ export const CATALOG_DATA = {
       "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out inspection drawer.",
       "design_benchmark": "NASA Mission Control & Palantir Foundry Console",
       "checkout_active": true,
-      "status_badge": "Flagship Interactive Prototype",
+      "status_badge": "Track 2 Flagship Candidate",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/hypersonic-wind-tunnel-aerodynamics-telemetry-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
-      "pricing_track": "Track 2 \u2014 Flagship Tier-1 (,500 Anchor)",
+      "pricing_track": "Track 2 - Flagship Candidate",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
       "exclusive_buyout_range": [
         10000,
         18000
+      ],
+      "truth_label": "Interactive Prototype (Simulated Data Only) \u2014 Awaiting Flagship Qualification Audit",
+      "flagship_license_range": [
+        1500,
+        3500
+      ],
+      "full_asset_buyout_range": [
+        18000,
+        35000
+      ],
+      "strategic_acquisition_range": [
+        35000,
+        75000
       ]
     },
     {
@@ -2681,12 +3471,10 @@ export const CATALOG_DATA = {
       "admin_passcode": "luxury2026",
       "audit_score": 9.8,
       "tables": [
-        "vault_clients",
-        "collector_vehicles",
+        "vehicle_vaults",
         "transport_manifests",
-        "service_tickets",
-        "vault_telemetry_logs",
-        "security_audit_logs"
+        "detailing_cadence",
+        "client_requests"
       ],
       "vertical": "heavy_fleet",
       "archetype_id": "B",
@@ -2694,17 +3482,30 @@ export const CATALOG_DATA = {
       "archetype_description": "Dynamic masonry grid, visual filtering, and slide-over commission sheet.",
       "design_benchmark": "LVMH Luxury Atelier & Monaco Yacht Show",
       "checkout_active": true,
-      "status_badge": "Flagship Interactive Prototype",
+      "status_badge": "Track 2 Flagship Candidate",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/luxury-auto-concierge-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
-      "pricing_track": "Track 2 \u2014 Flagship Tier-1 (,500 Anchor)",
+      "pricing_track": "Track 2 - Flagship Candidate",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
       "exclusive_buyout_range": [
         10000,
         18000
+      ],
+      "truth_label": "Interactive Prototype (Simulated Data Only) \u2014 Awaiting Flagship Qualification Audit",
+      "flagship_license_range": [
+        1500,
+        3500
+      ],
+      "full_asset_buyout_range": [
+        18000,
+        35000
+      ],
+      "strategic_acquisition_range": [
+        35000,
+        75000
       ]
     },
     {
@@ -2717,7 +3518,10 @@ export const CATALOG_DATA = {
       "admin_passcode": "maritime2026",
       "audit_score": 9.8,
       "tables": [
-        "IF"
+        "vessel_manifests",
+        "charter_fixtures",
+        "bunker_hedges",
+        "demurrage_claims"
       ],
       "vertical": "heavy_fleet",
       "archetype_id": "C",
@@ -2725,17 +3529,30 @@ export const CATALOG_DATA = {
       "archetype_description": "Fleet asset tracking, dispatch coordination, and route telemetry.",
       "design_benchmark": "Flexport Global Logistics & Samsara Fleet Hub",
       "checkout_active": true,
-      "status_badge": "Flagship Interactive Prototype",
+      "status_badge": "Track 2 Flagship Candidate",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/maritime-freight-brokerage-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
-      "pricing_track": "Track 2 \u2014 Flagship Tier-1 (,500 Anchor)",
+      "pricing_track": "Track 2 - Flagship Candidate",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
       "exclusive_buyout_range": [
         10000,
         18000
+      ],
+      "truth_label": "Interactive Prototype (Simulated Data Only) \u2014 Awaiting Flagship Qualification Audit",
+      "flagship_license_range": [
+        1500,
+        3500
+      ],
+      "full_asset_buyout_range": [
+        18000,
+        35000
+      ],
+      "strategic_acquisition_range": [
+        35000,
+        75000
       ]
     },
     {
@@ -2748,7 +3565,10 @@ export const CATALOG_DATA = {
       "admin_passcode": "orbital2026",
       "audit_score": 9.8,
       "tables": [
-        "IF"
+        "laser_crosslinks",
+        "pointing_gimbals",
+        "constellation_ephemeris",
+        "photodiode_telemetry"
       ],
       "vertical": "aerospace",
       "archetype_id": "A",
@@ -2756,17 +3576,30 @@ export const CATALOG_DATA = {
       "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out inspection drawer.",
       "design_benchmark": "NASA Mission Control & Palantir Foundry Console",
       "checkout_active": true,
-      "status_badge": "Flagship Interactive Prototype",
+      "status_badge": "Track 2 Flagship Candidate",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/orbital-satellite-laser-isl-optical-terminal-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
-      "pricing_track": "Track 2 \u2014 Flagship Tier-1 (,500 Anchor)",
+      "pricing_track": "Track 2 - Flagship Candidate",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
       "exclusive_buyout_range": [
         10000,
         18000
+      ],
+      "truth_label": "Interactive Prototype (Simulated Data Only) \u2014 Awaiting Flagship Qualification Audit",
+      "flagship_license_range": [
+        1500,
+        3500
+      ],
+      "full_asset_buyout_range": [
+        18000,
+        35000
+      ],
+      "strategic_acquisition_range": [
+        35000,
+        75000
       ]
     },
     {
@@ -2779,10 +3612,10 @@ export const CATALOG_DATA = {
       "admin_passcode": "private2026",
       "audit_score": 9.8,
       "tables": [
-        "telemetry",
-        "subsystems",
-        "events",
-        "metrics"
+        "credit_facilities",
+        "syndicate_lenders",
+        "covenant_monitoring",
+        "drawdown_schedules"
       ],
       "vertical": "wealth",
       "archetype_id": "C",
@@ -2790,17 +3623,30 @@ export const CATALOG_DATA = {
       "archetype_description": "Fleet asset tracking, dispatch coordination, and route telemetry.",
       "design_benchmark": "Flexport Global Logistics & Samsara Fleet Hub",
       "checkout_active": true,
-      "status_badge": "Flagship Interactive Prototype",
+      "status_badge": "Track 2 Flagship Candidate",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/private-credit-syndication-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
-      "pricing_track": "Track 2 \u2014 Flagship Tier-1 (,500 Anchor)",
+      "pricing_track": "Track 2 - Flagship Candidate",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
       "exclusive_buyout_range": [
         10000,
         18000
+      ],
+      "truth_label": "Interactive Prototype (Simulated Data Only) \u2014 Awaiting Flagship Qualification Audit",
+      "flagship_license_range": [
+        1500,
+        3500
+      ],
+      "full_asset_buyout_range": [
+        18000,
+        35000
+      ],
+      "strategic_acquisition_range": [
+        35000,
+        75000
       ]
     },
     {
@@ -2813,7 +3659,10 @@ export const CATALOG_DATA = {
       "admin_passcode": "renewable2026",
       "audit_score": 9.8,
       "tables": [
-        "IF"
+        "bess_storage",
+        "solar_arrays",
+        "inverter_dispatch",
+        "grid_interconnects"
       ],
       "vertical": "clean_energy",
       "archetype_id": "C",
@@ -2821,17 +3670,30 @@ export const CATALOG_DATA = {
       "archetype_description": "Fleet asset tracking, dispatch coordination, and route telemetry.",
       "design_benchmark": "Flexport Global Logistics & Samsara Fleet Hub",
       "checkout_active": true,
-      "status_badge": "Flagship Interactive Prototype",
+      "status_badge": "Track 2 Flagship Candidate",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/renewable-energy-microgrid-dispatch-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
-      "pricing_track": "Track 2 \u2014 Flagship Tier-1 (,500 Anchor)",
+      "pricing_track": "Track 2 - Flagship Candidate",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
       "exclusive_buyout_range": [
         10000,
         18000
+      ],
+      "truth_label": "Interactive Prototype (Simulated Data Only) \u2014 Awaiting Flagship Qualification Audit",
+      "flagship_license_range": [
+        1500,
+        3500
+      ],
+      "full_asset_buyout_range": [
+        18000,
+        35000
+      ],
+      "strategic_acquisition_range": [
+        35000,
+        75000
       ]
     },
     {
@@ -2844,7 +3706,10 @@ export const CATALOG_DATA = {
       "admin_passcode": "semiconductor2026",
       "audit_score": 9.8,
       "tables": [
-        "IF"
+        "cleanroom_plenums",
+        "air_particulates",
+        "stepper_chambers",
+        "ultra_pure_water"
       ],
       "vertical": "deep_tech",
       "archetype_id": "D",
@@ -2852,17 +3717,30 @@ export const CATALOG_DATA = {
       "archetype_description": "High-density telemetry streams, closed-loop sensor controllers, and industrial process automation.",
       "design_benchmark": "Siemens WinCC & Schneider EcoStruxure SCADA",
       "checkout_active": true,
-      "status_badge": "Flagship Interactive Prototype",
+      "status_badge": "Track 2 Flagship Candidate",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/semiconductor-fab-cleanroom-scada-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
-      "pricing_track": "Track 2 \u2014 Flagship Tier-1 (,500 Anchor)",
+      "pricing_track": "Track 2 - Flagship Candidate",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
       "exclusive_buyout_range": [
         10000,
         18000
+      ],
+      "truth_label": "Interactive Prototype (Simulated Data Only) \u2014 Awaiting Flagship Qualification Audit",
+      "flagship_license_range": [
+        1500,
+        3500
+      ],
+      "full_asset_buyout_range": [
+        18000,
+        35000
+      ],
+      "strategic_acquisition_range": [
+        35000,
+        75000
       ]
     },
     {
@@ -2875,10 +3753,10 @@ export const CATALOG_DATA = {
       "admin_passcode": "space2026",
       "audit_score": 9.8,
       "tables": [
-        "launch_missions",
-        "orbital_trajectories",
-        "licensing_milestones",
-        "payload_manifests"
+        "payload_fairs",
+        "orbital_insertions",
+        "stage_separations",
+        "telemetry_downlinks"
       ],
       "vertical": "aerospace",
       "archetype_id": "C",
@@ -2886,17 +3764,30 @@ export const CATALOG_DATA = {
       "archetype_description": "Fleet asset tracking, dispatch coordination, and route telemetry.",
       "design_benchmark": "Flexport Global Logistics & Samsara Fleet Hub",
       "checkout_active": true,
-      "status_badge": "Flagship Interactive Prototype",
+      "status_badge": "Track 2 Flagship Candidate",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/space-launch-payload-manifest-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
-      "pricing_track": "Track 2 \u2014 Flagship Tier-1 (,500 Anchor)",
+      "pricing_track": "Track 2 - Flagship Candidate",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
       "exclusive_buyout_range": [
         10000,
         18000
+      ],
+      "truth_label": "Interactive Prototype (Simulated Data Only) \u2014 Awaiting Flagship Qualification Audit",
+      "flagship_license_range": [
+        1500,
+        3500
+      ],
+      "full_asset_buyout_range": [
+        18000,
+        35000
+      ],
+      "strategic_acquisition_range": [
+        35000,
+        75000
       ]
     },
     {
@@ -2909,7 +3800,10 @@ export const CATALOG_DATA = {
       "admin_passcode": "subsea2026",
       "audit_score": 9.8,
       "tables": [
-        "IF"
+        "cable_faults",
+        "repeater_voltages",
+        "splice_bays",
+        "repair_vessels"
       ],
       "vertical": "subsea",
       "archetype_id": "C",
@@ -2917,17 +3811,30 @@ export const CATALOG_DATA = {
       "archetype_description": "Fleet asset tracking, dispatch coordination, and route telemetry.",
       "design_benchmark": "Flexport Global Logistics & Samsara Fleet Hub",
       "checkout_active": true,
-      "status_badge": "Flagship Interactive Prototype",
+      "status_badge": "Track 2 Flagship Candidate",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/subsea-cable-restoration-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
-      "pricing_track": "Track 2 \u2014 Flagship Tier-1 (,500 Anchor)",
+      "pricing_track": "Track 2 - Flagship Candidate",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
       "exclusive_buyout_range": [
         10000,
         18000
+      ],
+      "truth_label": "Interactive Prototype (Simulated Data Only) \u2014 Awaiting Flagship Qualification Audit",
+      "flagship_license_range": [
+        1500,
+        3500
+      ],
+      "full_asset_buyout_range": [
+        18000,
+        35000
+      ],
+      "strategic_acquisition_range": [
+        35000,
+        75000
       ]
     },
     {
@@ -2940,7 +3847,10 @@ export const CATALOG_DATA = {
       "admin_passcode": "superconducting2026",
       "audit_score": 9.8,
       "tables": [
-        "IF"
+        "dilution_fridges",
+        "milli_kelvin_stages",
+        "qubit_coherence",
+        "microwave_lines"
       ],
       "vertical": "deep_tech",
       "archetype_id": "D",
@@ -2948,17 +3858,30 @@ export const CATALOG_DATA = {
       "archetype_description": "High-density telemetry streams, closed-loop sensor controllers, and industrial process automation.",
       "design_benchmark": "Siemens WinCC & Schneider EcoStruxure SCADA",
       "checkout_active": true,
-      "status_badge": "Flagship Interactive Prototype",
+      "status_badge": "Track 2 Flagship Candidate",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/superconducting-quantum-processor-cryostat-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
-      "pricing_track": "Track 2 \u2014 Flagship Tier-1 (,500 Anchor)",
+      "pricing_track": "Track 2 - Flagship Candidate",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
       "exclusive_buyout_range": [
         10000,
         18000
+      ],
+      "truth_label": "Interactive Prototype (Simulated Data Only) \u2014 Awaiting Flagship Qualification Audit",
+      "flagship_license_range": [
+        1500,
+        3500
+      ],
+      "full_asset_buyout_range": [
+        18000,
+        35000
+      ],
+      "strategic_acquisition_range": [
+        35000,
+        75000
       ]
     },
     {
@@ -2971,7 +3894,10 @@ export const CATALOG_DATA = {
       "admin_passcode": "yacht2026",
       "audit_score": 9.8,
       "tables": [
-        "IF"
+        "charter_bookings",
+        "crew_rotations",
+        "berth_allocations",
+        "provisioning_logs"
       ],
       "vertical": "heavy_fleet",
       "archetype_id": "B",
@@ -2979,17 +3905,30 @@ export const CATALOG_DATA = {
       "archetype_description": "Dynamic masonry grid, visual filtering, and slide-over commission sheet.",
       "design_benchmark": "LVMH Luxury Atelier & Monaco Yacht Show",
       "checkout_active": true,
-      "status_badge": "Flagship Interactive Prototype",
+      "status_badge": "Track 2 Flagship Candidate",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/yacht-charter-fleet-ecosystem",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
-      "pricing_track": "Track 2 \u2014 Flagship Tier-1 (,500 Anchor)",
+      "pricing_track": "Track 2 - Flagship Candidate",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
       "exclusive_buyout_range": [
         10000,
         18000
+      ],
+      "truth_label": "Interactive Prototype (Simulated Data Only) \u2014 Awaiting Flagship Qualification Audit",
+      "flagship_license_range": [
+        1500,
+        3500
+      ],
+      "full_asset_buyout_range": [
+        18000,
+        35000
+      ],
+      "strategic_acquisition_range": [
+        35000,
+        75000
       ]
     },
     {
@@ -3002,7 +3941,10 @@ export const CATALOG_DATA = {
       "admin_passcode": "orbital2026",
       "audit_score": 9.8,
       "tables": [
-        "IF"
+        "sabatier_reactors",
+        "oxygen_generation_assemblies",
+        "co2_scrubbers",
+        "water_recovery_loops"
       ],
       "vertical": "aerospace",
       "archetype_id": "C",
@@ -3010,17 +3952,30 @@ export const CATALOG_DATA = {
       "archetype_description": "Fleet asset tracking, dispatch coordination, and route telemetry.",
       "design_benchmark": "Flexport Global Logistics & Samsara Fleet Hub",
       "checkout_active": true,
-      "status_badge": "Flagship Interactive Prototype",
+      "status_badge": "Track 2 Flagship Candidate",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/orbital-habitat-closed-loop-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
-      "pricing_track": "Track 2 \u2014 Flagship Tier-1 (,500 Anchor)",
+      "pricing_track": "Track 2 - Flagship Candidate",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
       "exclusive_buyout_range": [
         10000,
         18000
+      ],
+      "truth_label": "Interactive Prototype (Simulated Data Only) \u2014 Awaiting Flagship Qualification Audit",
+      "flagship_license_range": [
+        1500,
+        3500
+      ],
+      "full_asset_buyout_range": [
+        18000,
+        35000
+      ],
+      "strategic_acquisition_range": [
+        35000,
+        75000
       ]
     }
   ],

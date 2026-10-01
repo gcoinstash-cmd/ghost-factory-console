@@ -229,6 +229,7 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
         {filteredProducts.map((product) => {
           const rarity = getRarityTier(product);
           const domain = getDomainClass(product);
+          const isTrack2 = product.id >= 86 || Boolean(product.flagship_qualified) || Boolean(product.pricing_track?.includes('Track 2'));
 
           // Rarity styling tokens
           const rarityStyles: Record<RarityTier, { border: string; bg: string; text: string; glow: string }> = {
@@ -279,15 +280,63 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
                 </div>
               </div>
 
+              {/* DUAL-TRACK PRICING PROTOCOL BADGE (No Track 1 numbers on Track 2) */}
+              <div className={`p-3.5 rounded-xl border text-xs sm:text-sm font-mono space-y-2 ${
+                isTrack2 
+                  ? 'bg-amber-950/30 border-amber-500/50 text-amber-200' 
+                  : 'bg-emerald-950/20 border-emerald-500/40 text-emerald-200'
+              }`}>
+                <div className="flex items-center justify-between">
+                  <span className={`px-2.5 py-1 rounded font-black text-[11px] sm:text-xs uppercase tracking-wider border ${
+                    isTrack2 
+                      ? 'bg-amber-500/20 border-amber-500/60 text-amber-300 shadow-sm shadow-amber-500/20' 
+                      : 'bg-emerald-500/20 border-emerald-500/50 text-emerald-300'
+                  }`}>
+                    {isTrack2 ? 'TRACK 2 // FLAGSHIP CANDIDATE' : 'TRACK 1 // LEAN RAPID-SALE'}
+                  </span>
+                  <div className="text-right">
+                    <span className="text-[10px] text-slate-400 block uppercase font-semibold">Exclusive Buyout</span>
+                    <strong className={`text-sm sm:text-base font-black ${isTrack2 ? 'text-amber-400' : 'text-emerald-400'}`}>
+                      {isTrack2 ? '$14,500 Anchor' : '$4,500 Anchor'}
+                    </strong>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-2 gap-2 pt-1.5 border-t border-white/10 text-xs">
+                  <div>
+                    <span className="text-slate-400 block text-[10px] uppercase font-semibold">
+                      {isTrack2 ? 'Flagship License:' : 'Retail MSRP:'}
+                    </span>
+                    <strong className="text-white font-bold">
+                      {isTrack2 ? '$1,500 – $3,500' : '$199'}
+                    </strong>
+                  </div>
+                  <div>
+                    <span className="text-slate-400 block text-[10px] uppercase font-semibold">
+                      {isTrack2 ? 'Buyout Floor Range:' : 'Commercial Seat:'}
+                    </span>
+                    <strong className="text-white font-bold">
+                      {isTrack2 ? '$10k – $18k' : '$599'}
+                    </strong>
+                  </div>
+                </div>
+
+                {isTrack2 && (
+                  <div className="pt-1.5 border-t border-amber-500/20 text-[10px] text-amber-300/90 leading-tight">
+                    Full Asset Buyout: $18k–$35k | Strategic: $35k–$75k+
+                  </div>
+                )}
+              </div>
+
               {/* MANDATORY PRODUCT TRUTH BADGES (Rule 1 Strict Compliance) */}
-              <div className="space-y-2.5 pt-3 border-t border-white/15 text-sm">
-                <div className="flex items-center justify-between bg-black/70 p-2.5 rounded-lg border border-amber-500/40">
-                  <div className="flex items-center gap-1.5 text-amber-300 text-xs sm:text-sm font-black uppercase tracking-wider">
+              <div className="space-y-2.5 pt-1 text-sm">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 bg-black/70 p-2.5 rounded-lg border border-amber-500/40">
+                  <div className="flex items-center gap-1.5 text-amber-300 text-xs sm:text-sm font-black uppercase tracking-wider shrink-0">
                     <AlertTriangle size={14} className="text-amber-400 shrink-0" />
                     <span>TRUTH BADGE:</span>
                   </div>
-                  <span className="text-xs sm:text-sm font-bold text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded border border-amber-500/30">
-                    Interactive Prototype // Simulated Data Only
+                  <span className="text-xs sm:text-sm font-bold text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded border border-amber-500/30 text-left sm:text-right">
+                    {product.truth_label || (isTrack2 ? 'Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit' : 'Interactive Prototype // Simulated Data Only')}
                   </span>
                 </div>
 

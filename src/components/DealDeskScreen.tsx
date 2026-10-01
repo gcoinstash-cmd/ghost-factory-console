@@ -323,9 +323,14 @@ export const DealDeskScreen: React.FC<DealDeskScreenProps> = ({
                 onChange={(e) => setSelectedAssetIdToAdd(Number(e.target.value))}
                 className="bg-black/60 border border-white/10 rounded-lg px-2.5 py-1 text-xs text-slate-300 font-mono"
               >
-                {products.map(p => (
-                  <option key={p.id} value={p.id}>#{p.id} {p.name}</option>
-                ))}
+                {products.map(p => {
+                  const isT2 = p.id >= 86 || p.pricing_track?.includes('Track 2');
+                  return (
+                    <option key={p.id} value={p.id}>
+                      #{p.id.toString().padStart(3, '0')} [{isT2 ? 'TRACK 2 // CANDIDATE ($14.5k)' : 'TRACK 1 // LEAN ($4.5k)'}] {p.name}
+                    </option>
+                  );
+                })}
               </select>
               <button
                 onClick={() => handleStageAsset(selectedAssetIdToAdd)}
@@ -347,23 +352,89 @@ export const DealDeskScreen: React.FC<DealDeskScreenProps> = ({
               return (
                 <div 
                   key={id} 
-                  className="bg-black/60 border border-white/10 rounded-xl p-3 flex items-center justify-between gap-2"
+                  className={`border rounded-xl p-3.5 flex items-start justify-between gap-2.5 ${
+                    isT2 ? 'bg-amber-950/20 border-amber-500/40' : 'bg-black/60 border-white/10'
+                  }`}
                 >
-                  <div className="space-y-0.5">
-                    <div className="flex items-center gap-1.5">
-                      <span className="text-[10px] text-slate-500 font-mono">SLOT #{id.toString().padStart(3, '0')}</span>
-                      <span className={`text-[9px] px-1 rounded font-bold ${isT2 ? 'bg-amber-500/20 text-amber-300' : 'bg-emerald-500/20 text-emerald-300'}`}>
-                        {isT2 ? 'T2 ($14.5k)' : 'T1 ($4.5k)'}
+                  <div className="space-y-1.5 flex-1">
+                    <div className="flex flex-wrap items-center gap-1.5">
+                      <span className="text-[10px] text-slate-400 font-mono bg-black px-1.5 py-0.5 rounded border border-white/10">
+                        SLOT #{id.toString().padStart(3, '0')}
+                      </span>
+                      <span className={`text-[9px] px-2 py-0.5 rounded font-black uppercase tracking-wider border ${
+                        isT2 
+                          ? 'bg-amber-500/20 text-amber-300 border-amber-500/50' 
+                          : 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40'
+                      }`}>
+                        {isT2 ? 'TRACK 2 // FLAGSHIP CANDIDATE' : 'TRACK 1 // LEAN RAPID-SALE'}
                       </span>
                     </div>
-                    <p className="font-bold text-white line-clamp-1">{displayName}</p>
+                    <p className="font-bold text-white text-xs sm:text-sm line-clamp-1">{displayName}</p>
+                    <div className="flex items-center justify-between text-[11px] font-mono pt-1 border-t border-white/10">
+                      <span className="text-slate-400">Anchor:</span>
+                      <strong className={isT2 ? 'text-amber-400 font-bold' : 'text-emerald-400 font-bold'}>
+                        {isT2 ? '$14,500 Buyout' : '$4,500 Buyout'}
+                      </strong>
+                    </div>
+                    {isT2 ? (
+                      <p className="text-[10px] text-amber-300/80 font-mono">
+                        License: $1,500–$3,500 | Buyout: $10k–$18k
+                      </p>
+                    ) : (
+                      <p className="text-[10px] text-slate-400 font-mono">
+                        Retail: $199 | Team Seat: $599
+                      </p>
+                    )}
                   </div>
                   <button
                     onClick={() => handleRemoveStagedAsset(id)}
-                    className="p-1.5 text-slate-400 hover:text-red-400 transition-colors cursor-pointer"
+                    className="p-1.5 text-slate-400 hover:text-red-400 transition-colors cursor-pointer shrink-0 mt-0.5"
                     title="Remove from staging"
                   >
-                    <Trash2 size={14} />
+                    <Trash2 size={15} />
+                  </button>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* TRACK 2 FLAGSHIP CANDIDATE ROSTER DRAWER */}
+        <div className="bg-black/50 border border-amber-500/30 rounded-xl p-4 space-y-3 font-mono text-xs">
+          <div className="flex items-center justify-between border-b border-amber-500/20 pb-2">
+            <span className="font-bold text-amber-400 uppercase tracking-wider flex items-center gap-1.5">
+              <Sparkles size={14} />
+              <span>Track 2 Flagship Candidate Schedule (24 Elite Prototypes // $14,500 Anchor)</span>
+            </span>
+            <span className="text-slate-400 text-[11px]">Click +Stage to add to Micro-APA basket</span>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2.5 max-h-56 overflow-y-auto pr-1">
+            {products.filter(p => p.id >= 86 || p.pricing_track?.includes('Track 2')).map(p => {
+              const isStaged = stagedAssetIds.includes(p.id);
+              return (
+                <div 
+                  key={p.id}
+                  className="bg-black/70 border border-amber-500/30 rounded-lg p-2.5 flex items-center justify-between gap-2"
+                >
+                  <div className="space-y-0.5 flex-1 min-w-0">
+                    <div className="flex items-center gap-1">
+                      <span className="text-[10px] text-amber-400 font-bold">#{p.id.toString().padStart(3, '0')}</span>
+                      <span className="text-[9px] text-slate-400 uppercase truncate">[{p.vertical}]</span>
+                    </div>
+                    <p className="font-bold text-white text-[11px] truncate">{p.name}</p>
+                    <p className="text-[10px] text-amber-300 font-bold">$14,500 Anchor</p>
+                  </div>
+                  <button
+                    onClick={() => handleStageAsset(p.id)}
+                    disabled={isFloorBreached || isStaged}
+                    className={`px-2 py-1 rounded text-[10px] font-bold shrink-0 transition-colors ${
+                      isStaged 
+                        ? 'bg-amber-500/20 text-amber-300 border border-amber-500/40 cursor-default'
+                        : 'bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 border border-emerald-500/40 cursor-pointer disabled:opacity-30'
+                    }`}
+                  >
+                    {isStaged ? 'STAGED' : '+STAGE'}
                   </button>
                 </div>
               );

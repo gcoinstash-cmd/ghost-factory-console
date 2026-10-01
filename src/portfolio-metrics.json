@@ -30,7 +30,7 @@
       1690000
     ],
     "status": "PRE_REVENUE_SIMULATED_DEMOS",
-    "notes": "85 Lean Rapid-Sale Track 1 (.5k anchor) + 24 Flagship Tier-1 Track 2 (.5k anchor)"
+    "notes": "85 Lean Rapid-Sale Track 1 ($4.5k anchor) + 24 Flagship Candidate Track 2 ($14.5k anchor)"
   },
   "pricingProtocol": {
     "track1": {
@@ -44,7 +44,7 @@
       "buyoutAnchor": 4500
     },
     "track2": {
-      "name": "Flagship K+ Track (24 Elite Models)",
+      "name": "Track 2 \u2014 Flagship Candidate Track ($14,500 Anchor, 24 Models)",
       "commercialLicense": [
         1500,
         3500
