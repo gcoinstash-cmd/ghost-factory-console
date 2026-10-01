@@ -98,6 +98,14 @@ export const BlueprintCard: React.FC<BlueprintCardProps> = ({
         </div>
       </div>
 
+      {/* BUYER TARGETING: Best For */}
+      {product.best_for && (
+        <div className="px-3.5 py-2.5 rounded-xl bg-black/60 border border-white/15 text-xs font-mono flex items-start gap-2 shadow-inner">
+          <span className="text-amber-400 font-black uppercase tracking-wider shrink-0 text-[11px]">Best For:</span>
+          <span className="text-slate-200 font-medium text-[11px] leading-snug">{product.best_for.replace(/^Best for:\s*/i, '')}</span>
+        </div>
+      )}
+
       {/* DUAL-TRACK PRICING PROTOCOL BADGE */}
       <div className={`p-3.5 rounded-xl border text-xs sm:text-sm font-mono space-y-2 ${
         isTrack2 

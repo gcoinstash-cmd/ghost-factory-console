@@ -60,6 +60,9 @@ const regulatedRegexes = [
 ];
 
 function isRegulated(p) {
+  if (['hospitality', 'creative', 'fitness'].includes((p.vertical || '').toLowerCase()) && p.id < 86) {
+    return false;
+  }
   if (p.id >= 86) return true;
   const combined = `${p.name} ${p.category || ''} ${p.vertical || ''} ${p.archetype_name || ''}`;
   return regulatedRegexes.some(r => r.test(combined));
@@ -84,6 +87,7 @@ const cardsHtml = products.map(p => {
   return `      <article class="blueprint-card" data-slot="${p.id}">
         <h3>${escapeHtml(p.name)}</h3>
         <span class="truth-badge">[SIMULATED DATA PROTOTYPE]</span>
+        <div class="best-for">Best For: ${escapeHtml(p.best_for ? p.best_for.replace(/^Best for:\s*/i, '') : 'Commercial client adaptation')}</div>
         <details>
           <summary><span>Truth & Compliance</span></summary>
           <p>${notice}</p>

@@ -3,6 +3,7 @@ export interface ProductItem {
   id: number;
   name: string;
   category: string;
+  best_for: string;
   gumroad_url: string;
   preview_url: string;
   admin_url: string;
@@ -94,7 +95,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Boutique fitness studios & personal training collectives"
     },
     {
       "id": 2,
@@ -121,7 +123,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Luxury supercar & exotic vehicle rental agencies"
     },
     {
       "id": 3,
@@ -148,7 +151,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: High-ticket creative agencies & production houses"
     },
     {
       "id": 4,
@@ -175,7 +179,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Architectural & interior design studio portfolios"
     },
     {
       "id": 5,
@@ -202,7 +207,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
+      "best_for": "Best for: Emerging private equity managers & LP syndicates"
     },
     {
       "id": 6,
@@ -229,7 +235,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Specialty micro-roasteries & artisanal coffee tasting bars"
     },
     {
       "id": 7,
@@ -257,7 +264,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Ultra-luxury estate brokers & private villa management"
     },
     {
       "id": 8,
@@ -284,7 +292,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
+      "best_for": "Best for: Boutique aesthetics clinics & medical spa practitioners"
     },
     {
       "id": 9,
@@ -311,7 +320,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Sports biomechanics & athlete physical therapy clinics"
     },
     {
       "id": 10,
@@ -338,7 +348,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Private vineyard cellars & allocation tasting estates"
     },
     {
       "id": 11,
@@ -365,7 +376,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Exclusive private member clubs & executive lounges"
     },
     {
       "id": 12,
@@ -392,7 +404,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Independent record labels & analog mastering studios"
     },
     {
       "id": 13,
@@ -419,7 +432,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Speakeasy jazz lounges & sommelier listening rooms"
     },
     {
       "id": 14,
@@ -445,7 +459,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: High-ticket wellness retreats & executive expeditions"
     },
     {
       "id": 15,
@@ -471,7 +486,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Intimate chef counter tasting rooms & omakase bars"
     },
     {
       "id": 16,
@@ -497,7 +513,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: 3D CGI, motion design & visual effects studios"
     },
     {
       "id": 17,
@@ -523,7 +540,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Bespoke fragrance houses & botanical olfactory ateliers"
     },
     {
       "id": 18,
@@ -549,7 +567,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Alpine tasting salons & biodynamic cellar lounges"
     },
     {
       "id": 19,
@@ -576,7 +595,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Modern architectural ateliers & structural engineering firms"
     },
     {
       "id": 20,
@@ -603,7 +623,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Private dining clubs & vinyl listening restaurants"
     },
     {
       "id": 21,
@@ -630,7 +651,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: High-energy izakayas & modern craft robata cantinas"
     },
     {
       "id": 22,
@@ -657,7 +679,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Contemporary dim sum bistros & craft baijiu bars"
     },
     {
       "id": 23,
@@ -684,7 +707,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Commercial lighting designers & architectural fixture firms"
     },
     {
       "id": 24,
@@ -712,7 +736,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Luxury architectural villa rentals & private island retreats"
     },
     {
       "id": 25,
@@ -739,7 +764,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Commercial architecture studios & urban master planners"
     },
     {
       "id": 26,
@@ -767,7 +793,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Craft smash burger joints & fast-casual kitchen collectives"
     },
     {
       "id": 27,
@@ -794,7 +821,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Haute parfumerie brands & bespoke scent formulation labs"
     },
     {
       "id": 28,
@@ -821,7 +849,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Commercial portrait photographers & editorial studios"
     },
     {
       "id": 29,
@@ -848,7 +877,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Boutique wine estates & allocation membership programs"
     },
     {
       "id": 30,
@@ -874,7 +904,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
+      "best_for": "Best for: Multi-generational family offices & private wealth trusts"
     },
     {
       "id": 31,
@@ -900,7 +931,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: High-end grooming salons & luxury barber ateliers"
     },
     {
       "id": 32,
@@ -927,7 +959,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: VIP barber studios & curated grooming product retailers"
     },
     {
       "id": 33,
@@ -953,7 +986,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
+      "best_for": "Best for: Commercial real estate loan brokers & debt underwriters"
     },
     {
       "id": 34,
@@ -979,7 +1013,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: B2B strategy consultants & high-ticket agency founders"
     },
     {
       "id": 35,
@@ -1005,7 +1040,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Oak smokehouse barbecue joints with pit telemetry needs"
     },
     {
       "id": 36,
@@ -1031,7 +1067,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Creative film directors & cultural motion studios"
     },
     {
       "id": 37,
@@ -1058,7 +1095,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Neapolitan pizzerias & artisanal fermentation kitchens"
     },
     {
       "id": 38,
@@ -1085,7 +1123,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: VIP nightclub bottle service & hospitality promoters"
     },
     {
       "id": 39,
@@ -1112,7 +1151,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Wholesale coffee roasters & cafe bean delivery fleets"
     },
     {
       "id": 40,
@@ -1139,7 +1179,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Food truck operators & ghost kitchen delivery brands"
     },
     {
       "id": 41,
@@ -1166,7 +1207,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
+      "best_for": "Best for: Bitcoin treasury managers & cryptographic asset holders"
     },
     {
       "id": 42,
@@ -1193,7 +1235,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Sourdough micro-bakeries & pastry wholesale dispatch"
     },
     {
       "id": 43,
@@ -1220,7 +1263,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Destination luxury spas & holistic wellness sanctuaries"
     },
     {
       "id": 44,
@@ -1246,7 +1290,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Heritage culinary concepts & private dining chefs"
     },
     {
       "id": 45,
@@ -1273,7 +1318,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Gastronomic research collectives & experiential dining"
     },
     {
       "id": 46,
@@ -1299,7 +1345,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Farm-to-table restaurants & local farm partnership networks"
     },
     {
       "id": 47,
@@ -1326,7 +1373,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
+      "best_for": "Best for: High-end residential real estate brokers & property portals"
     },
     {
       "id": 48,
@@ -1352,7 +1400,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: High-volume drive-thru concepts & late-night wok kitchens"
     },
     {
       "id": 49,
@@ -1377,7 +1426,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
+      "best_for": "Best for: Real estate private equity analysts & property syndicators"
     },
     {
       "id": 50,
@@ -1403,7 +1453,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Banquet catering facilities & commercial production kitchens"
     },
     {
       "id": 51,
@@ -1430,7 +1481,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Mobile street food fleets & festival event caterers"
     },
     {
       "id": 52,
@@ -1456,7 +1508,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Minimalist Zen dining rooms & sensory gastronomy seatings"
     },
     {
       "id": 53,
@@ -1482,7 +1535,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
+      "best_for": "Best for: Pediatric development centers & sensory therapy clinics"
     },
     {
       "id": 54,
@@ -1508,7 +1562,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
+      "best_for": "Best for: Hotel asset managers & boutique hospitality investors"
     },
     {
       "id": 55,
@@ -1534,7 +1589,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
+      "best_for": "Best for: Private equity portfolio managers & investment committees"
     },
     {
       "id": 56,
@@ -1561,7 +1617,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Commercial HVAC contractors & chiller plant technicians"
     },
     {
       "id": 57,
@@ -1588,7 +1645,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Drone roofing contractors & insurance scope estimators"
     },
     {
       "id": 58,
@@ -1615,7 +1673,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Commercial plumbing firms & backflow testing services"
     },
     {
       "id": 59,
@@ -1642,7 +1701,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Solar EPC installers & renewable energy contractors"
     },
     {
       "id": 60,
@@ -1669,7 +1729,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Commercial electrical contractors & EV charger deployers"
     },
     {
       "id": 61,
@@ -1696,7 +1757,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
+      "best_for": "Best for: Private dental practices & cosmetic dentistry clinics"
     },
     {
       "id": 62,
@@ -1723,7 +1785,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
+      "best_for": "Best for: Emergency veterinary hospitals & animal surgical clinics"
     },
     {
       "id": 63,
@@ -1750,7 +1813,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
+      "best_for": "Best for: Functional medicine doctors & epigenetic longevity clinics"
     },
     {
       "id": 64,
@@ -1777,7 +1841,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Orthopedic physical therapists & sports recovery clinics"
     },
     {
       "id": 65,
@@ -1804,7 +1869,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
+      "best_for": "Best for: Contrast therapy lounges & hyperbaric wellness clinics"
     },
     {
       "id": 66,
@@ -1831,7 +1897,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
+      "best_for": "Best for: Commercial boutique law firms & transactional attorneys"
     },
     {
       "id": 67,
@@ -1857,7 +1924,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
+      "best_for": "Best for: Lower middle-market M&A advisors & investment banks"
     },
     {
       "id": 68,
@@ -1883,7 +1951,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
+      "best_for": "Best for: Retained executive search consultants & board recruiters"
     },
     {
       "id": 69,
@@ -1909,7 +1978,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
+      "best_for": "Best for: Sovereign wealth managers & multi-family offices"
     },
     {
       "id": 70,
@@ -1935,7 +2005,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
+      "best_for": "Best for: Complex litigation teams & trial war room managers"
     },
     {
       "id": 71,
@@ -1962,7 +2033,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Earthmoving equipment rental yards & plant hire fleets"
     },
     {
       "id": 72,
@@ -1989,7 +2061,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Intermodal freight brokerages & carrier logistics dispatchers"
     },
     {
       "id": 73,
@@ -2016,7 +2089,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
+      "best_for": "Best for: On-demand private jet brokers & aircraft fleet operators"
     },
     {
       "id": 74,
@@ -2043,7 +2117,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Temperature-controlled cold warehouses & reefer dock hubs"
     },
     {
       "id": 75,
@@ -2070,7 +2145,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Heavy lift contractors & mobile crane rigging engineers"
     },
     {
       "id": 76,
@@ -2097,7 +2173,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Paint protection film installers & luxury auto restylers"
     },
     {
       "id": 77,
@@ -2124,7 +2201,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Mobile detailing operators & corporate fleet wash services"
     },
     {
       "id": 78,
@@ -2151,7 +2229,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Camera rental houses & grip truck equipment dispatchers"
     },
     {
       "id": 79,
@@ -2178,7 +2257,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: High-ticket tattoo studios & resident artist collectives"
     },
     {
       "id": 80,
@@ -2205,7 +2285,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Combat sports gyms & elite athlete recovery facilities"
     },
     {
       "id": 81,
@@ -2232,7 +2313,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Michelin-starred restaurants & multi-course tasting rooms"
     },
     {
       "id": 82,
@@ -2259,7 +2341,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
+      "best_for": "Best for: Aesthetic injection nurses & medical aesthetics practices"
     },
     {
       "id": 83,
@@ -2286,7 +2369,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Luxury yacht charter brokers & Mediterranean fleet managers"
     },
     {
       "id": 84,
@@ -2313,7 +2397,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: High-end watch dealers & horological provenance vaults"
     },
     {
       "id": 85,
@@ -2340,7 +2425,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Estate managers & luxury villa rental concierges"
     },
     {
       "id": 86,
@@ -2375,7 +2461,8 @@ export const CATALOG_DATA = {
         18000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Perimeter security operators & autonomous drone fleet coordinators"
     },
     {
       "id": 87,
@@ -2407,7 +2494,8 @@ export const CATALOG_DATA = {
         18000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Open-pit mining dispatchers & autonomous haulage operators"
     },
     {
       "id": 88,
@@ -2439,7 +2527,8 @@ export const CATALOG_DATA = {
         18000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Deep-sea mining engineers & seabed crawler telemetry operators"
     },
     {
       "id": 89,
@@ -2471,7 +2560,8 @@ export const CATALOG_DATA = {
         18000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
+      "best_for": "Best for: Airport FBO ground handlers & private aviation terminal managers"
     },
     {
       "id": 90,
@@ -2503,7 +2593,8 @@ export const CATALOG_DATA = {
         18000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Estate winemakers & barrel cellar production managers"
     },
     {
       "id": 91,
@@ -2535,7 +2626,8 @@ export const CATALOG_DATA = {
         18000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
+      "best_for": "Best for: Biopharma CROs & clinical trial site coordinators"
     },
     {
       "id": 92,
@@ -2567,7 +2659,8 @@ export const CATALOG_DATA = {
         18000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Cold chain logistics managers & multi-zone freezer facilities"
     },
     {
       "id": 93,
@@ -2602,7 +2695,8 @@ export const CATALOG_DATA = {
         18000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Supersonic propulsion engineers & test cell telemetry analysts"
     },
     {
       "id": 94,
@@ -2639,7 +2733,8 @@ export const CATALOG_DATA = {
         18000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Tokamak control engineers & magnetic confinement fusion labs"
     },
     {
       "id": 95,
@@ -2671,7 +2766,8 @@ export const CATALOG_DATA = {
         18000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Offshore marine contractors & subsea cable trenching engineers"
     },
     {
       "id": 96,
@@ -2703,7 +2799,8 @@ export const CATALOG_DATA = {
         18000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Geothermal energy operators & enhanced geothermal wellhead engineers"
     },
     {
       "id": 97,
@@ -2738,7 +2835,8 @@ export const CATALOG_DATA = {
         18000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
+      "best_for": "Best for: Low-latency prop trading firms & colocation infrastructure teams"
     },
     {
       "id": 98,
@@ -2773,7 +2871,8 @@ export const CATALOG_DATA = {
         18000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Aerodynamic test engineers & hypersonic wind tunnel researchers"
     },
     {
       "id": 99,
@@ -2810,7 +2909,8 @@ export const CATALOG_DATA = {
         18000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: High-net-worth vehicle concierges & private car collector managers"
     },
     {
       "id": 100,
@@ -2842,7 +2942,8 @@ export const CATALOG_DATA = {
         18000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Dry bulk & container ship brokers & maritime cargo dispatchers"
     },
     {
       "id": 101,
@@ -2874,7 +2975,8 @@ export const CATALOG_DATA = {
         18000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Satellite constellation operators & optical inter-satellite link engineers"
     },
     {
       "id": 102,
@@ -2909,7 +3011,8 @@ export const CATALOG_DATA = {
         18000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
+      "best_for": "Best for: Direct lenders, credit funds & private loan syndication desks"
     },
     {
       "id": 103,
@@ -2941,7 +3044,8 @@ export const CATALOG_DATA = {
         18000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Island microgrid operators & commercial battery BESS engineers"
     },
     {
       "id": 104,
@@ -2973,7 +3077,8 @@ export const CATALOG_DATA = {
         18000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Wafer fab contamination engineers & cleanroom facility managers"
     },
     {
       "id": 105,
@@ -3008,7 +3113,8 @@ export const CATALOG_DATA = {
         18000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Commercial launch providers & satellite integration manifest managers"
     },
     {
       "id": 106,
@@ -3040,7 +3146,8 @@ export const CATALOG_DATA = {
         18000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Subsea fiber cable owners & maritime repair ship dispatchers"
     },
     {
       "id": 107,
@@ -3072,7 +3179,8 @@ export const CATALOG_DATA = {
         18000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Quantum computing researchers & dilution refrigerator engineers"
     },
     {
       "id": 108,
@@ -3104,7 +3212,8 @@ export const CATALOG_DATA = {
         18000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Yacht fleet management companies & luxury maritime charter brokers"
     },
     {
       "id": 109,
@@ -3136,7 +3245,8 @@ export const CATALOG_DATA = {
         18000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Commercial space station operators & life support ECLSS flight controllers"
     },
     {
       "id": 110,
@@ -3185,7 +3295,8 @@ export const CATALOG_DATA = {
       ],
       "truth_label": "Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
+      "best_for": "Best for: In-space propellant depot engineers & cryogenic boiloff telemetry teams"
     }
   ],
   "vertical_slices": {
