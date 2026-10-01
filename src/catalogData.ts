@@ -28,6 +28,8 @@ export interface ProductItem {
   full_asset_buyout_range?: number[];
   strategic_acquisition_range?: number[];
   truth_label?: string;
+  truth_badge: string;
+  disclaimer: string;
 }
 
 export const CATALOG_DATA = {
@@ -35,7 +37,7 @@ export const CATALOG_DATA = {
   "store": "Aura & Grid",
   "store_url": "https://auraandgrid.gumroad.com",
   "total_flagships": 110,
-  "standards": "Ghost Factory\u2122 9.0+ Verified Production Grade (Permanent 5-Archetype Rotation & Curated Design Intelligence)",
+  "standards": "Ghost Factory™ 9.0+ Verified Production Grade (Permanent 5-Archetype Rotation & Curated Design Intelligence)",
   "database_engine": "Supabase PostgreSQL (RLS Enabled)",
   "frontend_stack": "React 19 + Tailwind CSS + Lucide Icons + Vite",
   "valuation_framework": {
@@ -97,7 +99,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 2,
@@ -129,7 +133,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 3,
@@ -161,7 +167,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 4,
@@ -193,7 +201,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 5,
@@ -225,7 +235,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
     {
       "id": 6,
@@ -257,7 +269,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 7,
@@ -290,7 +304,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 8,
@@ -322,7 +338,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
     {
       "id": 9,
@@ -354,7 +372,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 10,
@@ -386,7 +406,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
     {
       "id": 11,
@@ -418,7 +440,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 12,
@@ -450,7 +474,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 13,
@@ -482,7 +508,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 14,
@@ -513,7 +541,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
     {
       "id": 15,
@@ -544,7 +574,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 16,
@@ -575,7 +607,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 17,
@@ -606,7 +640,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
     {
       "id": 18,
@@ -637,7 +673,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 19,
@@ -669,7 +707,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 20,
@@ -701,7 +741,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 21,
@@ -733,7 +775,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 22,
@@ -765,7 +809,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 23,
@@ -797,7 +843,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 24,
@@ -830,7 +878,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
     {
       "id": 25,
@@ -862,7 +912,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 26,
@@ -895,7 +947,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 27,
@@ -927,7 +981,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
     {
       "id": 28,
@@ -959,7 +1015,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 29,
@@ -991,7 +1049,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 30,
@@ -1022,7 +1082,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
     {
       "id": 31,
@@ -1053,7 +1115,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
     {
       "id": 32,
@@ -1085,7 +1149,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
     {
       "id": 33,
@@ -1116,7 +1182,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
     {
       "id": 34,
@@ -1147,7 +1215,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
     {
       "id": 35,
@@ -1178,11 +1248,13 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 36,
-      "name": "STUDIO V\u00c9RONIQUE LA",
+      "name": "STUDIO VÉRONIQUE LA",
       "category": "California Warm Modernism, Residential Interior Design & Material Sourcing OS",
       "vertical": "creative",
       "gumroad_url": "https://auraandgrid.gumroad.com/l/studio-veronique-os",
@@ -1209,7 +1281,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 37,
@@ -1241,7 +1315,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 38,
@@ -1273,7 +1349,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 39,
@@ -1305,7 +1383,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 40,
@@ -1337,7 +1417,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 41,
@@ -1369,7 +1451,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
     {
       "id": 42,
@@ -1401,7 +1485,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 43,
@@ -1433,7 +1519,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
     {
       "id": 44,
@@ -1464,7 +1552,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 45,
@@ -1496,7 +1586,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 46,
@@ -1527,7 +1619,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 47,
@@ -1559,7 +1653,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
     {
       "id": 48,
@@ -1590,7 +1686,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 49,
@@ -1620,7 +1718,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
     {
       "id": 50,
@@ -1651,7 +1751,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 51,
@@ -1683,11 +1785,13 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 52,
-      "name": "Y\u016aGEN SENSORY OS",
+      "name": "YŪGEN SENSORY OS",
       "category": "Zen Minimalist Sensory Dining Sanctuary & Omakase Booking OS",
       "vertical": "hospitality",
       "gumroad_url": "https://auraandgrid.gumroad.com/l/yugen-sensory-os",
@@ -1714,7 +1818,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 53,
@@ -1745,7 +1851,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
     {
       "id": 54,
@@ -1776,7 +1884,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
     {
       "id": 55,
@@ -1807,7 +1917,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
     {
       "id": 56,
@@ -1839,7 +1951,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 57,
@@ -1871,7 +1985,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
     {
       "id": 58,
@@ -1903,7 +2019,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
     {
       "id": 59,
@@ -1935,7 +2053,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 60,
@@ -1967,7 +2087,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 61,
@@ -1999,7 +2121,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
     {
       "id": 62,
@@ -2031,7 +2155,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
     {
       "id": 63,
@@ -2063,7 +2189,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
     {
       "id": 64,
@@ -2095,7 +2223,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 65,
@@ -2127,7 +2257,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
     {
       "id": 66,
@@ -2159,7 +2291,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
     {
       "id": 67,
@@ -2190,7 +2324,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
     {
       "id": 68,
@@ -2221,7 +2357,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
     {
       "id": 69,
@@ -2252,7 +2390,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
     {
       "id": 70,
@@ -2283,7 +2423,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
     {
       "id": 71,
@@ -2315,7 +2457,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 72,
@@ -2347,7 +2491,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 73,
@@ -2379,7 +2525,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
     {
       "id": 74,
@@ -2411,7 +2559,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 75,
@@ -2443,7 +2593,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 76,
@@ -2475,7 +2627,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 77,
@@ -2507,7 +2661,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 78,
@@ -2539,7 +2695,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 79,
@@ -2571,7 +2729,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 80,
@@ -2603,7 +2763,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
     {
       "id": 81,
@@ -2635,7 +2797,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 82,
@@ -2667,7 +2831,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
     {
       "id": 83,
@@ -2699,7 +2865,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 84,
@@ -2731,7 +2899,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
     {
       "id": 85,
@@ -2763,7 +2933,9 @@ export const CATALOG_DATA = {
       "exclusive_buyout_range": [
         3800,
         6500
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 86,
@@ -2797,7 +2969,7 @@ export const CATALOG_DATA = {
         10000,
         18000
       ],
-      "truth_label": "Interactive Prototype (Simulated Data Only) \u2014 Awaiting Flagship Qualification Audit",
+      "truth_label": "Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit",
       "flagship_license_range": [
         1500,
         3500
@@ -2809,7 +2981,9 @@ export const CATALOG_DATA = {
       "strategic_acquisition_range": [
         35000,
         75000
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
     {
       "id": 87,
@@ -2843,7 +3017,7 @@ export const CATALOG_DATA = {
         10000,
         18000
       ],
-      "truth_label": "Interactive Prototype (Simulated Data Only) \u2014 Awaiting Flagship Qualification Audit",
+      "truth_label": "Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit",
       "flagship_license_range": [
         1500,
         3500
@@ -2855,7 +3029,9 @@ export const CATALOG_DATA = {
       "strategic_acquisition_range": [
         35000,
         75000
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
     {
       "id": 88,
@@ -2889,7 +3065,7 @@ export const CATALOG_DATA = {
         10000,
         18000
       ],
-      "truth_label": "Interactive Prototype (Simulated Data Only) \u2014 Awaiting Flagship Qualification Audit",
+      "truth_label": "Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit",
       "flagship_license_range": [
         1500,
         3500
@@ -2901,7 +3077,9 @@ export const CATALOG_DATA = {
       "strategic_acquisition_range": [
         35000,
         75000
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
     {
       "id": 89,
@@ -2935,7 +3113,7 @@ export const CATALOG_DATA = {
         10000,
         18000
       ],
-      "truth_label": "Interactive Prototype (Simulated Data Only) \u2014 Awaiting Flagship Qualification Audit",
+      "truth_label": "Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit",
       "flagship_license_range": [
         1500,
         3500
@@ -2947,7 +3125,9 @@ export const CATALOG_DATA = {
       "strategic_acquisition_range": [
         35000,
         75000
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
     {
       "id": 90,
@@ -2981,7 +3161,7 @@ export const CATALOG_DATA = {
         10000,
         18000
       ],
-      "truth_label": "Interactive Prototype (Simulated Data Only) \u2014 Awaiting Flagship Qualification Audit",
+      "truth_label": "Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit",
       "flagship_license_range": [
         1500,
         3500
@@ -2993,7 +3173,9 @@ export const CATALOG_DATA = {
       "strategic_acquisition_range": [
         35000,
         75000
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 91,
@@ -3027,7 +3209,7 @@ export const CATALOG_DATA = {
         10000,
         18000
       ],
-      "truth_label": "Interactive Prototype (Simulated Data Only) \u2014 Awaiting Flagship Qualification Audit",
+      "truth_label": "Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit",
       "flagship_license_range": [
         1500,
         3500
@@ -3039,7 +3221,9 @@ export const CATALOG_DATA = {
       "strategic_acquisition_range": [
         35000,
         75000
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
     {
       "id": 92,
@@ -3073,7 +3257,7 @@ export const CATALOG_DATA = {
         10000,
         18000
       ],
-      "truth_label": "Interactive Prototype (Simulated Data Only) \u2014 Awaiting Flagship Qualification Audit",
+      "truth_label": "Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit",
       "flagship_license_range": [
         1500,
         3500
@@ -3085,7 +3269,9 @@ export const CATALOG_DATA = {
       "strategic_acquisition_range": [
         35000,
         75000
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 93,
@@ -3119,7 +3305,7 @@ export const CATALOG_DATA = {
         10000,
         18000
       ],
-      "truth_label": "Interactive Prototype (Simulated Data Only) \u2014 Awaiting Flagship Qualification Audit",
+      "truth_label": "Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit",
       "flagship_license_range": [
         1500,
         3500
@@ -3131,7 +3317,9 @@ export const CATALOG_DATA = {
       "strategic_acquisition_range": [
         35000,
         75000
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
     {
       "id": 94,
@@ -3165,7 +3353,7 @@ export const CATALOG_DATA = {
         10000,
         18000
       ],
-      "truth_label": "Interactive Prototype (Simulated Data Only) \u2014 Awaiting Flagship Qualification Audit",
+      "truth_label": "Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit",
       "flagship_license_range": [
         1500,
         3500
@@ -3177,7 +3365,9 @@ export const CATALOG_DATA = {
       "strategic_acquisition_range": [
         35000,
         75000
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
     {
       "id": 95,
@@ -3211,7 +3401,7 @@ export const CATALOG_DATA = {
         10000,
         18000
       ],
-      "truth_label": "Interactive Prototype (Simulated Data Only) \u2014 Awaiting Flagship Qualification Audit",
+      "truth_label": "Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit",
       "flagship_license_range": [
         1500,
         3500
@@ -3223,7 +3413,9 @@ export const CATALOG_DATA = {
       "strategic_acquisition_range": [
         35000,
         75000
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
     {
       "id": 96,
@@ -3257,7 +3449,7 @@ export const CATALOG_DATA = {
         10000,
         18000
       ],
-      "truth_label": "Interactive Prototype (Simulated Data Only) \u2014 Awaiting Flagship Qualification Audit",
+      "truth_label": "Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit",
       "flagship_license_range": [
         1500,
         3500
@@ -3269,7 +3461,9 @@ export const CATALOG_DATA = {
       "strategic_acquisition_range": [
         35000,
         75000
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
     {
       "id": 97,
@@ -3303,7 +3497,7 @@ export const CATALOG_DATA = {
         10000,
         18000
       ],
-      "truth_label": "Interactive Prototype (Simulated Data Only) \u2014 Awaiting Flagship Qualification Audit",
+      "truth_label": "Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit",
       "flagship_license_range": [
         1500,
         3500
@@ -3315,7 +3509,9 @@ export const CATALOG_DATA = {
       "strategic_acquisition_range": [
         35000,
         75000
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
     {
       "id": 98,
@@ -3349,7 +3545,7 @@ export const CATALOG_DATA = {
         10000,
         18000
       ],
-      "truth_label": "Interactive Prototype (Simulated Data Only) \u2014 Awaiting Flagship Qualification Audit",
+      "truth_label": "Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit",
       "flagship_license_range": [
         1500,
         3500
@@ -3361,7 +3557,9 @@ export const CATALOG_DATA = {
       "strategic_acquisition_range": [
         35000,
         75000
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
     {
       "id": 99,
@@ -3395,7 +3593,7 @@ export const CATALOG_DATA = {
         10000,
         18000
       ],
-      "truth_label": "Interactive Prototype (Simulated Data Only) \u2014 Awaiting Flagship Qualification Audit",
+      "truth_label": "Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit",
       "flagship_license_range": [
         1500,
         3500
@@ -3407,7 +3605,9 @@ export const CATALOG_DATA = {
       "strategic_acquisition_range": [
         35000,
         75000
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 100,
@@ -3441,7 +3641,7 @@ export const CATALOG_DATA = {
         10000,
         18000
       ],
-      "truth_label": "Interactive Prototype (Simulated Data Only) \u2014 Awaiting Flagship Qualification Audit",
+      "truth_label": "Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit",
       "flagship_license_range": [
         1500,
         3500
@@ -3453,7 +3653,9 @@ export const CATALOG_DATA = {
       "strategic_acquisition_range": [
         35000,
         75000
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 101,
@@ -3487,7 +3689,7 @@ export const CATALOG_DATA = {
         10000,
         18000
       ],
-      "truth_label": "Interactive Prototype (Simulated Data Only) \u2014 Awaiting Flagship Qualification Audit",
+      "truth_label": "Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit",
       "flagship_license_range": [
         1500,
         3500
@@ -3499,7 +3701,9 @@ export const CATALOG_DATA = {
       "strategic_acquisition_range": [
         35000,
         75000
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
     {
       "id": 102,
@@ -3533,7 +3737,7 @@ export const CATALOG_DATA = {
         10000,
         18000
       ],
-      "truth_label": "Interactive Prototype (Simulated Data Only) \u2014 Awaiting Flagship Qualification Audit",
+      "truth_label": "Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit",
       "flagship_license_range": [
         1500,
         3500
@@ -3545,7 +3749,9 @@ export const CATALOG_DATA = {
       "strategic_acquisition_range": [
         35000,
         75000
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
     {
       "id": 103,
@@ -3579,7 +3785,7 @@ export const CATALOG_DATA = {
         10000,
         18000
       ],
-      "truth_label": "Interactive Prototype (Simulated Data Only) \u2014 Awaiting Flagship Qualification Audit",
+      "truth_label": "Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit",
       "flagship_license_range": [
         1500,
         3500
@@ -3591,7 +3797,9 @@ export const CATALOG_DATA = {
       "strategic_acquisition_range": [
         35000,
         75000
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 104,
@@ -3625,7 +3833,7 @@ export const CATALOG_DATA = {
         10000,
         18000
       ],
-      "truth_label": "Interactive Prototype (Simulated Data Only) \u2014 Awaiting Flagship Qualification Audit",
+      "truth_label": "Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit",
       "flagship_license_range": [
         1500,
         3500
@@ -3637,7 +3845,9 @@ export const CATALOG_DATA = {
       "strategic_acquisition_range": [
         35000,
         75000
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
     {
       "id": 105,
@@ -3671,7 +3881,7 @@ export const CATALOG_DATA = {
         10000,
         18000
       ],
-      "truth_label": "Interactive Prototype (Simulated Data Only) \u2014 Awaiting Flagship Qualification Audit",
+      "truth_label": "Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit",
       "flagship_license_range": [
         1500,
         3500
@@ -3683,7 +3893,9 @@ export const CATALOG_DATA = {
       "strategic_acquisition_range": [
         35000,
         75000
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
     {
       "id": 106,
@@ -3717,7 +3929,7 @@ export const CATALOG_DATA = {
         10000,
         18000
       ],
-      "truth_label": "Interactive Prototype (Simulated Data Only) \u2014 Awaiting Flagship Qualification Audit",
+      "truth_label": "Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit",
       "flagship_license_range": [
         1500,
         3500
@@ -3729,7 +3941,9 @@ export const CATALOG_DATA = {
       "strategic_acquisition_range": [
         35000,
         75000
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
     {
       "id": 107,
@@ -3763,7 +3977,7 @@ export const CATALOG_DATA = {
         10000,
         18000
       ],
-      "truth_label": "Interactive Prototype (Simulated Data Only) \u2014 Awaiting Flagship Qualification Audit",
+      "truth_label": "Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit",
       "flagship_license_range": [
         1500,
         3500
@@ -3775,7 +3989,9 @@ export const CATALOG_DATA = {
       "strategic_acquisition_range": [
         35000,
         75000
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
     {
       "id": 108,
@@ -3809,7 +4025,7 @@ export const CATALOG_DATA = {
         10000,
         18000
       ],
-      "truth_label": "Interactive Prototype (Simulated Data Only) \u2014 Awaiting Flagship Qualification Audit",
+      "truth_label": "Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit",
       "flagship_license_range": [
         1500,
         3500
@@ -3821,7 +4037,9 @@ export const CATALOG_DATA = {
       "strategic_acquisition_range": [
         35000,
         75000
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"
     },
     {
       "id": 109,
@@ -3855,7 +4073,7 @@ export const CATALOG_DATA = {
         10000,
         18000
       ],
-      "truth_label": "Interactive Prototype (Simulated Data Only) \u2014 Awaiting Flagship Qualification Audit",
+      "truth_label": "Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit",
       "flagship_license_range": [
         1500,
         3500
@@ -3867,7 +4085,9 @@ export const CATALOG_DATA = {
       "strategic_acquisition_range": [
         35000,
         75000
-      ]
+      ],
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     },
     {
       "id": 110,
@@ -3914,63 +4134,65 @@ export const CATALOG_DATA = {
         35000,
         75000
       ],
-      "truth_label": "Interactive Prototype (Simulated Data Only) \u2014 Awaiting Flagship Qualification Audit"
+      "truth_label": "Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit",
+      "truth_badge": "Interactive Prototype // Simulated Data Only",
+      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE."
     }
   ],
   "vertical_slices": {
     "hospitality": {
       "name": "Luxury Hospitality & Dining Vault",
       "description": "Bespoke counters, omakase, jazz bistros, supper clubs, estates & vineyards OS",
-      "apa_valuation_range": "$42,000 \u2013 $65,000",
+      "apa_valuation_range": "$42,000 – $65,000",
       "target_asset_count": 60,
       "current_asset_count": 23
     },
     "wealth": {
       "name": "Private Wealth & Real Estate Vault",
       "description": "Private equity LP portals, estate syndication, family office & luxury listings OS",
-      "apa_valuation_range": "$30,000 \u2013 $48,000",
+      "apa_valuation_range": "$30,000 – $48,000",
       "target_asset_count": 35,
       "current_asset_count": 16
     },
     "medical": {
       "name": "Medical & VIP Aesthetics Vault",
       "description": "Clinical booking, patient intake, medspas, salon grooming & olfactory OS",
-      "apa_valuation_range": "$35,000 \u2013 $55,000",
+      "apa_valuation_range": "$35,000 – $55,000",
       "target_asset_count": 50,
       "current_asset_count": 13
     },
     "creative": {
       "name": "Creative Agency & Studio Vault",
       "description": "Motion VFX, architecture atelier, soundstage production & design OS",
-      "apa_valuation_range": "$28,000 \u2013 $40,000",
+      "apa_valuation_range": "$28,000 – $40,000",
       "target_asset_count": 40,
       "current_asset_count": 12
     },
     "automotive": {
       "name": "Automotive & Mobility Vault",
       "description": "Dyno testing, tuning dispatch, luxury fleet rentals & workshop OS",
-      "apa_valuation_range": "$28,000 \u2013 $45,000",
+      "apa_valuation_range": "$28,000 – $45,000",
       "target_asset_count": 40,
       "current_asset_count": 6
     },
     "fitness": {
       "name": "Performance Fitness & Athletics Vault",
       "description": "Boutique fight clubs, reformer training & athletic performance OS",
-      "apa_valuation_range": "$25,000 \u2013 $38,000",
+      "apa_valuation_range": "$25,000 – $38,000",
       "target_asset_count": 35,
       "current_asset_count": 5
     },
     "home_services": {
       "name": "Home Services & Commercial Contracting Vault",
       "description": "Commercial HVAC, drone roofing, hydraulic plumbing, solar EPC permits & switchgear dispatch OS",
-      "apa_valuation_range": "$35,000 \u2013 $60,000",
+      "apa_valuation_range": "$35,000 – $60,000",
       "target_asset_count": 50,
       "current_asset_count": 5
     },
     "heavy_fleet": {
       "name": "Heavy Commercial Fleet & Logistics Vault",
       "description": "Heavy plant rental, freight brokerage dispatch, private aviation charter, cold storage & crane rigging OS",
-      "apa_valuation_range": "$30,000 \u2013 $52,000",
+      "apa_valuation_range": "$30,000 – $52,000",
       "target_asset_count": 40,
       "current_asset_count": 5
     }
@@ -3978,18 +4200,18 @@ export const CATALOG_DATA = {
   "roadmap_horizons": {
     "immediate_focus": {
       "target": "500 Apps (Phase 1 to 4)",
-      "timeline": "2026 \u2013 Late 2027",
+      "timeline": "2026 – Late 2027",
       "phase_1_archive_clearance": "50 Apps ($2,999 Agency Vault Launch)",
-      "phase_2_century_funnel": "100 Apps ($3,500 VIP Setup + $35k\u2013$50k Micro-APA)",
+      "phase_2_century_funnel": "100 Apps ($3,500 VIP Setup + $35k–$50k Micro-APA)",
       "phase_3_category_dominance": "350 Apps (5-in-1 Niche Bundles + Micro-PE Multiple)",
-      "phase_4_master_buyout": "500 Apps ($125,000\u2013$200,000 Cash Buyout / $1.2M\u2013$2.5M+ Cash Flow)"
+      "phase_4_master_buyout": "500 Apps ($125,000–$200,000 Cash Buyout / $1.2M–$2.5M+ Cash Flow)"
     },
     "long_term_expansion": {
       "target": "3,000 to 5,000 Apps (Phase 5 to 7)",
-      "timeline": "2028 \u2013 2031 (3\u20135 Year Horizon)",
+      "timeline": "2028 – 2031 (3–5 Year Horizon)",
       "phase_5_multi_channel": "1,500 Apps (Custom Storefront, ThemeForest, B2B Outbound)",
-      "phase_6_saas_franchise": "3,000 Apps ($450k\u2013$900k Pre-Revenue Buyout / $4.5M Exit)",
-      "phase_7_holding_conglomerate": "5,000 Apps ($750k\u2013$1.5M Wholesale Buyout / $8.75M+ Exit)"
+      "phase_6_saas_franchise": "3,000 Apps ($450k–$900k Pre-Revenue Buyout / $4.5M Exit)",
+      "phase_7_holding_conglomerate": "5,000 Apps ($750k–$1.5M Wholesale Buyout / $8.75M+ Exit)"
     }
   },
   "archetypes": {

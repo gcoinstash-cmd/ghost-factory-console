@@ -168,6 +168,15 @@ export const ShowroomEngineScreen: React.FC<ShowroomEngineScreenProps> = ({
                 <h2 className="text-2xl sm:text-3xl font-black text-white">
                   {selectedProduct.name}
                 </h2>
+                
+                {/* High-Contrast Universal Truth Pill Badge */}
+                <div className="mt-1.5 mb-1.5 flex items-center">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-400 text-black font-black text-xs font-mono uppercase tracking-wider shadow-md shadow-amber-400/20">
+                    <span className="w-1.5 h-1.5 rounded-full bg-black animate-pulse" />
+                    [SIMULATED DATA PROTOTYPE]
+                  </span>
+                </div>
+
                 <p className="text-xs sm:text-sm text-zinc-400 mt-0.5">
                   {selectedProduct.category}
                 </p>
@@ -182,18 +191,16 @@ export const ShowroomEngineScreen: React.FC<ShowroomEngineScreenProps> = ({
               </button>
             </div>
 
-            {/* Regulated Vertical Compliance Disclaimer */}
-            {isRegulatedSector(selectedProduct) && (
-              <div className="mt-4 bg-amber-950/40 border border-amber-500/50 rounded-xl p-3.5 flex items-start gap-2.5 text-xs font-mono text-amber-200">
-                <AlertTriangle size={15} className="text-amber-400 shrink-0 mt-0.5" />
-                <div className="leading-snug">
-                  <strong className="text-amber-300 block uppercase tracking-wider text-[10px] mb-0.5">
-                    Regulated Sector Compliance Notice:
-                  </strong>
-                  {VERTICAL_COMPLIANCE_DISCLAIMER}
-                </div>
+            {/* Universal Product Truth & Regulatory Compliance Disclaimer */}
+            <div className="mt-4 bg-amber-950/40 border border-amber-500/50 rounded-xl p-3.5 flex items-start gap-2.5 text-xs font-mono text-amber-200">
+              <AlertTriangle size={15} className="text-amber-400 shrink-0 mt-0.5" />
+              <div className="leading-snug">
+                <strong className="text-amber-300 block uppercase tracking-wider text-[10px] mb-0.5">
+                  PRODUCT TRUTH & REGULATORY DISCLAIMER:
+                </strong>
+                {selectedProduct.disclaimer || (isRegulatedSector(selectedProduct) ? VERTICAL_COMPLIANCE_DISCLAIMER : "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE")}
               </div>
-            )}
+            </div>
           </div>
 
           {/* License Tier Selector */}

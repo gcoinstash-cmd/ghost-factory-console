@@ -450,6 +450,15 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
                   <h3 className="text-lg sm:text-xl md:text-2xl font-black text-white group-hover:text-emerald-300 transition-colors leading-tight">
                     {product.name}
                   </h3>
+                  
+                  {/* High-Contrast Universal Truth Pill Badge */}
+                  <div className="mt-1.5 mb-1.5 flex items-center">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-400 text-black font-black text-[11px] sm:text-xs font-mono uppercase tracking-wider shadow-md shadow-amber-400/20">
+                      <span className="w-1.5 h-1.5 rounded-full bg-black animate-pulse" />
+                      [SIMULATED DATA PROTOTYPE]
+                    </span>
+                  </div>
+
                   <p className="text-sm sm:text-base text-slate-200 font-bold mt-1 line-clamp-1">
                     {product.category}
                   </p>
@@ -569,6 +578,17 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
                   <ChevronDown size={14} className="group-open:rotate-180 transition-transform text-slate-400" />
                 </summary>
                 <div className="pt-2.5 mt-2.5 border-t border-white/10 space-y-2 text-slate-300">
+                  {/* Universal Truth & Compliance Disclaimer Line */}
+                  <div className="p-2.5 rounded-lg bg-amber-950/50 border border-amber-500/50 text-amber-200 font-mono text-[11px] leading-relaxed">
+                    <div className="flex items-center gap-1.5 font-black text-amber-300 uppercase tracking-wider mb-1">
+                      <AlertTriangle size={13} className="text-amber-400 shrink-0" />
+                      <span>TRUTH & COMPLIANCE DISCLAIMER:</span>
+                    </div>
+                    <p className="text-amber-200 font-semibold leading-normal">
+                      {product.disclaimer || "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE"}
+                    </p>
+                  </div>
+
                   <p className="text-[11px] text-slate-300 leading-relaxed">
                     <strong className="text-white">Included:</strong> React 19 Frontend Blueprint, Supabase PostgreSQL Schema, Mock Seed Data, Setup Guide, Commercial License.
                   </p>
