@@ -10,7 +10,7 @@ import {
 } from 'lucide-react';
 import { ProductItem } from '../catalogData';
 import { NextBestActionBanner } from './NextBestActionBanner';
-import { BlueprintCard, getDomainClass, getRarityTier, RarityTier } from './BlueprintCard';
+import { BlueprintCard, getDomainClass, getRarityTier } from './BlueprintCard';
 
 interface GarageScreenProps {
   products: ProductItem[];

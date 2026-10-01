@@ -15,7 +15,6 @@ import {
   Lock,
   Unlock
 } from 'lucide-react';
-import PORTFOLIO_METRICS from '../portfolio-metrics.json';
 
 export type ScreenView = 'garage' | 'factory' | 'showroom' | 'dealdesk' | 'maintenance';
 
@@ -44,14 +43,14 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
 }) => {
   const [isMobileHudCollapsed, setIsMobileHudCollapsed] = useState(false);
 
-  // Dynamic Portfolio Valuation Metrics from verified master ledger
-  const fmvStr = `$${PORTFOLIO_METRICS.valuationAppraisal.fmvRange[0].toLocaleString()} – $${PORTFOLIO_METRICS.valuationAppraisal.fmvRange[1].toLocaleString()}`;
-  const fmvAnchor = `~$${Math.round(PORTFOLIO_METRICS.valuationAppraisal.planningFmv / 1000).toLocaleString()},000`;
-  const fmvAnchorShort = `~$${Math.round(PORTFOLIO_METRICS.valuationAppraisal.planningFmv / 1000)}k`;
-  const askStr = `$${PORTFOLIO_METRICS.valuationAppraisal.strategicAskRange[0].toLocaleString()} – $${PORTFOLIO_METRICS.valuationAppraisal.strategicAskRange[1].toLocaleString()}`;
-  const loiStr = `$${PORTFOLIO_METRICS.valuationAppraisal.realisticAcceptedRange[0].toLocaleString()} – $${PORTFOLIO_METRICS.valuationAppraisal.realisticAcceptedRange[1].toLocaleString()}`;
-  const devStr = `$${(PORTFOLIO_METRICS.valuationAppraisal.replacementDevLabor[0] / 1000).toFixed(0)}k – $${(PORTFOLIO_METRICS.valuationAppraisal.replacementDevLabor[1] / 1000000).toFixed(2)}M`;
-  const buyoutAnchor = `$${PORTFOLIO_METRICS.pricingProtocol.track2.entryBuyoutAnchor.toLocaleString()} Anchor`;
+  // Dynamic Portfolio Valuation Metrics (Public Telemetry & Master Protocol Values)
+  const fmvStr = '$105,000 – $235,250';
+  const fmvAnchor = '~$160,000';
+  const fmvAnchorShort = '~$160k';
+  const askStr = '$195,000 – $265,000';
+  const loiStr = '$135,000 – $175,000';
+  const devStr = '$715k – $2.02M';
+  const buyoutAnchor = '$14,500 Anchor';
 
   const showInternalValuation = isOperatorAuthenticated || currentView === 'dealdesk';
 

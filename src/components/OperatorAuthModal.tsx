@@ -52,7 +52,7 @@ export const OperatorAuthModal: React.FC<OperatorAuthModalProps> = ({
             <span>OPERATOR DEAL ROOM</span>
           </h2>
           <p className="text-xs text-slate-300 leading-relaxed">
-            Internal valuation models, FMV ranges ($105k–$235k), LOI acceptance floors, Dev replacement labor, and portfolio retention algorithms are restricted to authorized operators.
+            Review mode grants access to Deal Desk telemetry, 80% portfolio retention floor controls, and dual-track pricing schedules.
           </p>
         </div>
 
@@ -61,7 +61,7 @@ export const OperatorAuthModal: React.FC<OperatorAuthModalProps> = ({
           <div>
             <label className="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1.5 flex items-center gap-1.5">
               <Key size={13} className="text-amber-400" />
-              <span>Operator Access Key</span>
+              <span>Operator / Reviewer Passkey</span>
             </label>
             <input
               type="password"
@@ -96,7 +96,7 @@ export const OperatorAuthModal: React.FC<OperatorAuthModalProps> = ({
               className="w-full flex items-center justify-center gap-2 py-2 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-white/15 font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer"
             >
               <ShieldCheck size={14} className="text-emerald-400" />
-              <span>ONE-CLICK DEMO OPERATOR ACCESS</span>
+              <span>ENTER GATED PROTOTYPE REVIEW MODE</span>
             </button>
           </div>
         </form>
@@ -105,7 +105,7 @@ export const OperatorAuthModal: React.FC<OperatorAuthModalProps> = ({
         <div className="pt-2 border-t border-white/10 flex items-start gap-2 text-[11px] text-slate-400">
           <AlertTriangle size={13} className="text-amber-400 shrink-0 mt-0.5" />
           <span>
-            Two-faced separation strictly enforced: Public visitors see retail shelf pricing ($199 / $1,500). Internal M&A floors are hidden.
+            Two-faced separation strictly enforced: Prototype review mode demonstrates management simulations and portfolio retention controls. All telemetry is simulated.
           </span>
         </div>
       </div>

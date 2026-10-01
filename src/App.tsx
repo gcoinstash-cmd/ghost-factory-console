@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { CATALOG_DATA, ProductItem } from './catalogData';
-import PORTFOLIO_METRICS from './portfolio-metrics.json';
 import { NavigationHeader, ScreenView } from './components/NavigationHeader';
 import { GarageScreen } from './components/GarageScreen';
 import { FactoryLineScreen } from './components/FactoryLineScreen';
@@ -52,11 +51,11 @@ export const App: React.FC = () => {
   const [testDriveProduct, setTestDriveProduct] = useState<ProductItem | null>(null);
   const [isRefreshing, setIsRefreshing] = useState(false);
 
-  // Core metrics derived from v2 specifications & portfolio metrics
+  // Core metrics derived from v2 specifications (Inline Public Telemetry Constants)
   const totalAssets = CATALOG_DATA.total_flagships || 110;
-  const retainedFloor = PORTFOLIO_METRICS.retainedFloorCount || 88; // 80% immutable retention floor
-  const availableApaSlots = PORTFOLIO_METRICS.maxApaCapacity || 22; // 20% max APA capacity
-  const planningValue = PORTFOLIO_METRICS.valuationAppraisal?.planningFmv || 160000;
+  const retainedFloor = 88; // 80% immutable retention floor
+  const availableApaSlots = 22; // 20% max APA capacity
+  const planningValue = 160000; // Curated Public Telemetry Reference
 
   // Hard Refresh Handler to clear cache and refresh view
   const handleHardRefresh = () => {

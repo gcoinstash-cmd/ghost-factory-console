@@ -106,62 +106,60 @@ export const BlueprintCard: React.FC<BlueprintCardProps> = ({
         </div>
       )}
 
-      {/* DUAL-TRACK PRICING PROTOCOL BADGE */}
-      <div className={`p-3.5 rounded-xl border text-xs sm:text-sm font-mono space-y-2 ${
+      {/* DUAL-TRACK DEALERSHIP WINDOW STICKER */}
+      <div className={`p-3.5 rounded-xl border text-xs font-mono space-y-2.5 transition-colors ${
         isTrack2 
           ? 'bg-amber-950/30 border-amber-500/50 text-amber-200' 
           : 'bg-emerald-950/20 border-emerald-500/40 text-emerald-200'
       }`}>
-        <div className="flex items-center justify-between">
-          <span className={`px-2.5 py-1 rounded font-black text-[11px] sm:text-xs uppercase tracking-wider border ${
+        <div className="flex items-center justify-between gap-2">
+          <span className={`px-2.5 py-1 rounded font-black text-[10px] sm:text-xs uppercase tracking-wider border shrink-0 ${
             isTrack2 
               ? 'bg-amber-500/20 border-amber-500/60 text-amber-300 shadow-sm shadow-amber-500/20' 
               : 'bg-emerald-500/20 border-emerald-500/50 text-emerald-300'
           }`}>
-            {isTrack2 ? 'TRACK 2 // FLAGSHIP CANDIDATE' : 'TRACK 1 // LEAN RAPID-SALE'}
+            {isTrack2 ? 'TRACK 2 // FLAGSHIP TIER-1' : 'TRACK 1 // LEAN RAPID-SALE'}
           </span>
-          
-          {isOperatorAuthenticated ? (
-            <div className="text-right">
-              <span className="text-[10px] text-slate-400 block uppercase font-semibold">Exclusive Buyout</span>
-              <strong className={`text-sm sm:text-base font-black ${isTrack2 ? 'text-amber-400' : 'text-emerald-400'}`}>
-                {isTrack2 ? '$14,500 Anchor' : '$4,500 Anchor'}
-              </strong>
-            </div>
-          ) : (
-            <div className="text-right">
-              <span className="text-[10px] text-slate-400 block uppercase font-semibold">Public Shelf</span>
-              <strong className={`text-sm sm:text-base font-black ${isTrack2 ? 'text-amber-400' : 'text-emerald-400'}`}>
-                {isTrack2 ? '$1,500 – $3,500' : '$199 MSRP'}
-              </strong>
-            </div>
-          )}
+          <span className="text-[10px] text-slate-400 uppercase font-bold tracking-wider truncate">
+            {isTrack2 ? 'SCADA / Deep Tech' : 'Turnkey Template'}
+          </span>
         </div>
 
-        <div className="grid grid-cols-2 gap-2 pt-1.5 border-t border-white/10 text-xs">
-          <div>
-            <span className="text-slate-400 block text-[10px] uppercase font-semibold">
-              {isTrack2 ? 'Flagship License:' : 'Retail MSRP:'}
-            </span>
-            <strong className="text-white font-bold">
-              {isTrack2 ? '$1,500 – $3,500' : '$199'}
-            </strong>
+        {/* Pricing Tier Grid */}
+        {isTrack2 ? (
+          <div className="space-y-1.5 pt-1 border-t border-amber-500/20 text-xs">
+            <div className="flex items-center justify-between gap-2">
+              <span className="text-slate-400 text-[11px]">Commercial License:</span>
+              <span className="text-amber-300 font-bold font-mono">$1,500 – $3,500 USD</span>
+            </div>
+            <div className="flex items-center justify-between gap-2">
+              <span className="text-slate-400 text-[11px]">Buyout Anchor:</span>
+              <span className="text-amber-400 font-black font-mono">$14,500 USD</span>
+            </div>
+            <div className="flex items-center justify-between gap-2 text-[10px] text-amber-200/70 border-t border-amber-500/15 pt-1">
+              <span>Buyout Range:</span>
+              <span className="font-mono">$10,000 – $18,000 USD</span>
+            </div>
+            {isOperatorAuthenticated && (
+              <div className="text-[10px] text-amber-300/80 pt-1 border-t border-amber-500/15 leading-tight">
+                Full Buyout: $18k–$35k | Strategic: $35k–$75k+
+              </div>
+            )}
           </div>
-          <div>
-            <span className="text-slate-400 block text-[10px] uppercase font-semibold">
-              {isOperatorAuthenticated ? (isTrack2 ? 'Buyout Floor:' : 'Commercial Seat:') : 'Commercial License:'}
-            </span>
-            <strong className="text-white font-bold">
-              {isOperatorAuthenticated 
-                ? (isTrack2 ? '$10k – $18k' : '$599')
-                : (isTrack2 ? 'SCADA Suite' : '$599 Team Seat')}
-            </strong>
-          </div>
-        </div>
-
-        {isTrack2 && isOperatorAuthenticated && (
-          <div className="pt-1.5 border-t border-amber-500/20 text-[10px] text-amber-300/90 leading-tight">
-            Full Asset Buyout: $18k–$35k | Strategic: $35k–$75k+
+        ) : (
+          <div className="space-y-1.5 pt-1 border-t border-emerald-500/20 text-xs">
+            <div className="flex items-center justify-between gap-2">
+              <span className="text-slate-400 text-[11px]">Retail License:</span>
+              <span className="text-emerald-300 font-bold font-mono">$199 USD</span>
+            </div>
+            <div className="flex items-center justify-between gap-2">
+              <span className="text-slate-400 text-[11px]">Multi-Seat Team Pass:</span>
+              <span className="text-cyan-300 font-bold font-mono">$599 USD</span>
+            </div>
+            <div className="flex items-center justify-between gap-2 text-[10px] text-emerald-200/80 border-t border-emerald-500/15 pt-1">
+              <span>Exclusive Buyout Floor:</span>
+              <span className="font-mono font-bold text-emerald-400">$3,800 – $6,500 ($4,500 Anchor)</span>
+            </div>
           </div>
         )}
       </div>
