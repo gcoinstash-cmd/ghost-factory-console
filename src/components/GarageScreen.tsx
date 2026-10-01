@@ -9,7 +9,8 @@ import {
   ChevronDown,
   Car,
   AlertTriangle,
-  Lock
+  Lock,
+  Sparkles
 } from 'lucide-react';
 import { ProductItem } from '../catalogData';
 import { NextBestActionBanner } from './NextBestActionBanner';
@@ -309,6 +310,55 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
               <span className="text-[10px] text-amber-200/80 block leading-tight">Interactive prototype / sample data</span>
             </div>
           </div>
+        </div>
+
+        {/* Flagship Tier Comparison & Commercial License Summary (Dual Accordion) */}
+        <div className="pt-4 border-t border-white/10 grid grid-cols-1 md:grid-cols-2 gap-4 font-mono text-xs">
+          {/* Drawer 1: Track 1 vs Track 2 Flagship Breakdown */}
+          <details className="bg-black/60 border border-white/10 rounded-xl p-3.5 group">
+            <summary className="font-bold text-slate-200 cursor-pointer flex items-center justify-between text-xs select-none">
+              <span className="flex items-center gap-2 text-amber-400">
+                <Sparkles size={14} />
+                <span>Tier Comparison // Track 1 vs. Track 2 Flagship</span>
+              </span>
+              <ChevronDown size={14} className="group-open:rotate-180 transition-transform text-slate-400" />
+            </summary>
+            <div className="pt-3 mt-3 border-t border-white/10 space-y-2.5 text-slate-300 text-[11px] leading-relaxed">
+              <div className="bg-emerald-950/20 border border-emerald-500/30 p-2.5 rounded-lg space-y-1">
+                <strong className="text-emerald-400 block font-bold">Track 1 — Lean Rapid-Sale ($199 MSRP / $4,500 Anchor)</strong>
+                <p className="text-slate-300">Single-view interactive telemetry prototypes, PostgreSQL schema.sql and seed data. Built for rapid agency client adaptation and fast deployment.</p>
+              </div>
+              <div className="bg-amber-950/20 border border-amber-500/30 p-2.5 rounded-lg space-y-1">
+                <strong className="text-amber-400 block font-bold">Track 2 — Flagship Tier-1 SCADA ($1,500–$3,500 MSRP / $14,500 Anchor)</strong>
+                <p className="text-slate-300">8–15 interactive sub-panels, domain physics solvers (cryo, tokamak, EGS, aerodynamics), comprehensive operator journeys, and concept briefs.</p>
+              </div>
+            </div>
+          </details>
+
+          {/* Drawer 2: Commercial License Rights & Exclusion Summary */}
+          <details className="bg-black/60 border border-white/10 rounded-xl p-3.5 group">
+            <summary className="font-bold text-slate-200 cursor-pointer flex items-center justify-between text-xs select-none">
+              <span className="flex items-center gap-2 text-cyan-400">
+                <ShieldCheck size={14} />
+                <span>Commercial License Rights & Exclusions Summary</span>
+              </span>
+              <ChevronDown size={14} className="group-open:rotate-180 transition-transform text-slate-400" />
+            </summary>
+            <div className="pt-3 mt-3 border-t border-white/10 space-y-2 text-slate-300 text-[11px] leading-relaxed">
+              <div className="flex items-start gap-1.5 text-emerald-300">
+                <span className="font-bold">✓ INCLUDED:</span>
+                <span className="text-slate-300">Perpetual commercial client deployment, unlimited branding/reskinning, hosting freedom (Vercel/Render/AWS), zero royalties.</span>
+              </div>
+              <div className="flex items-start gap-1.5 text-red-300">
+                <span className="font-bold">✕ EXCLUDED:</span>
+                <span className="text-slate-300">Raw marketplace resale (ThemeForest/Gumroad/Etsy), competing template foundry bundles, master GhostFactoryOS/Aura & Grid brand/core IP transfer.</span>
+              </div>
+              <div className="flex items-start gap-1.5 text-amber-300">
+                <span className="font-bold">ℹ NOTICE:</span>
+                <span className="text-slate-300">License grant only (not micro-APA ownership transfer unless contracted via formal APA). Sample/simulated data used for technical demonstration.</span>
+              </div>
+            </div>
+          </details>
         </div>
       </section>
 
