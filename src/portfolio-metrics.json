@@ -1,15 +1,15 @@
 {
-  "catalogTotal": 109,
+  "catalogTotal": 110,
   "track1Count": 85,
-  "track2Count": 24,
+  "track2Count": 25,
   "unitRetailPrice": 199,
   "retailShelfMSRP": 52915,
-  "buildVerified": 109,
-  "previewHttp200": 109,
+  "buildVerified": 110,
+  "previewHttp200": 110,
   "diligenceGrade": "L3-SUPABASE-READY",
-  "buildIntegrity": "109/109 VERIFIED (HTTP 200)",
+  "buildIntegrity": "110/110 VERIFIED (HTTP 200)",
   "retentionFloorPercent": 80,
-  "retainedFloorCount": 87,
+  "retainedFloorCount": 88,
   "maxApaCapacity": 22,
   "valuationAppraisal": {
     "planningFmv": 115000,
@@ -30,7 +30,7 @@
       1690000
     ],
     "status": "PRE_REVENUE_SIMULATED_DEMOS",
-    "notes": "85 Lean Rapid-Sale Track 1 ($4.5k anchor) + 24 Flagship Candidate Track 2 ($14.5k anchor)"
+    "notes": "85 Lean Rapid-Sale Track 1 ($4.5k anchor) + 25 Flagship Candidate Track 2 ($14.5k anchor)"
   },
   "pricingProtocol": {
     "track1": {
@@ -44,7 +44,7 @@
       "buyoutAnchor": 4500
     },
     "track2": {
-      "name": "Track 2 \u2014 Flagship Candidate Track ($14,500 Anchor, 24 Models)",
+      "name": "Track 2 \u2014 Flagship Candidate Track ($14,500 Anchor, 25 Models)",
       "commercialLicense": [
         1500,
         3500
@@ -75,12 +75,12 @@
     "heavy_fleet": 9,
     "defense": 1,
     "subsea": 4,
-    "aerospace": 6,
+    "aerospace": 7,
     "clean_energy": 3,
     "deep_tech": 2
   },
   "archetypes": {
-    "A": 19,
+    "A": 20,
     "B": 20,
     "D": 26,
     "C": 30,

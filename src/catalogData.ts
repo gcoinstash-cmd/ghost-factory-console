@@ -34,7 +34,7 @@ export const CATALOG_DATA = {
   "catalog_version": "1.0.0",
   "store": "Aura & Grid",
   "store_url": "https://auraandgrid.gumroad.com",
-  "total_flagships": 109,
+  "total_flagships": 110,
   "standards": "Ghost Factory\u2122 9.0+ Verified Production Grade (Permanent 5-Archetype Rotation & Curated Design Intelligence)",
   "database_engine": "Supabase PostgreSQL (RLS Enabled)",
   "frontend_stack": "React 19 + Tailwind CSS + Lucide Icons + Vite",
@@ -3977,6 +3977,54 @@ export const CATALOG_DATA = {
         35000,
         75000
       ]
+    },
+    {
+      "id": 110,
+      "name": "Orbital In-Space Cryogenic Propellant Depot SCADA OS",
+      "category": "Orbital In-Space Cryogenic Propellant Depot SCADA OS Console",
+      "gumroad_url": "https://auraandgrid.gumroad.com/l/orbital-cryo-depot-scada-os",
+      "preview_url": "https://orbital-cryo-depot-scada-os.onrender.com",
+      "admin_url": "https://orbital-cryo-depot-scada-os.onrender.com/admin",
+      "admin_passcode": "cryo2026",
+      "audit_score": 9.9,
+      "tables": [
+        "depot_stations",
+        "cryo_tanks",
+        "cryo_cooling_loops",
+        "propellant_transfers",
+        "telemetry_snaps"
+      ],
+      "vertical": "aerospace",
+      "archetype_id": "A",
+      "archetype_name": "Archetype A: Dense Operational Console",
+      "archetype_description": "Persistent utility rail, real-time operational triage queue, and slide-out inspection drawer.",
+      "design_benchmark": "NASA Mission Control & Palantir Foundry Console",
+      "checkout_active": true,
+      "status_badge": "Track 2 Flagship Candidate",
+      "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/orbital-cryo-depot-scada-os",
+      "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
+      "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
+      "pricing_track": "Track 2 - Flagship Candidate",
+      "flagship_qualified": true,
+      "flagship_license_msrp": 1500,
+      "flagship_license_range": [
+        1500,
+        3500
+      ],
+      "exclusive_buyout_anchor": 14500,
+      "exclusive_buyout_range": [
+        10000,
+        18000
+      ],
+      "full_asset_buyout_range": [
+        18000,
+        35000
+      ],
+      "strategic_acquisition_range": [
+        35000,
+        75000
+      ],
+      "truth_label": "Interactive Prototype (Simulated Data Only) \u2014 Awaiting Flagship Qualification Audit"
     }
   ],
   "vertical_slices": {
