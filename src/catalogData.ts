@@ -1,4 +1,59 @@
-export const CATALOG_DATA = {
+// Auto-generated from CATALOG_MANIFEST.json — Ghost Factory™ Registry
+export interface ProductItem {
+  id: number;
+  name: string;
+  category: string;
+  best_for: string;
+  gumroad_url: string;
+  preview_url: string;
+  admin_url: string;
+  admin_passcode?: string;
+  audit_score: number;
+  tables: string[];
+  vertical: string;
+  domain?: string;
+  rarity_tier?: 'Core' | 'Pro' | 'Elite';
+  archetype_id?: string;
+  archetype_name?: string;
+  archetype_description?: string;
+  design_benchmark?: string;
+  checkout_active?: boolean;
+  status_badge?: string;
+  commercial_checkout_url?: string;
+  demo_passcode_type?: string;
+  security_architecture?: string;
+  pricing_track?: string;
+  flagship_qualified?: boolean;
+  flagship_license_msrp?: number;
+  flagship_license_range?: number[];
+  exclusive_buyout_anchor?: number;
+  exclusive_buyout_range?: number[];
+  full_asset_buyout_range?: number[];
+  strategic_acquisition_range?: number[];
+  truth_label?: string;
+  truth_badge: string;
+  disclaimer: string;
+  permanent?: boolean;
+  buyoutEligible: boolean;
+  bestFor?: string | string[];
+  sabatier_bypass_valve?: string;
+  gate_criterion_4?: string;
+  [key: string]: any;
+}
+
+export interface CatalogData {
+  catalog_version: string;
+  store: string;
+  store_url: string;
+  total_flagships: number;
+  standards: string;
+  database_engine: string;
+  frontend_stack: string;
+  products: ProductItem[];
+  [key: string]: any;
+}
+
+export const CATALOG_DATA: CatalogData = {
   "catalog_version": "1.3.1",
   "store": "Aura & Grid",
   "store_url": "https://auraandgrid.gumroad.com",

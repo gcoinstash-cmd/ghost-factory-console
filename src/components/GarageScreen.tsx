@@ -5,7 +5,6 @@ import {
   ShieldCheck, 
   ChevronDown,
   Car,
-  Lock,
   Sparkles
 } from 'lucide-react';
 import { ProductItem } from '../catalogData';
@@ -38,7 +37,7 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
   missionCompleted,
   onOpenTestDrive: _onOpenTestDrive,
   isOperatorAuthenticated = false,
-  onOpenOperatorAuth
+  onOpenOperatorAuth: _onOpenOperatorAuth
 }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedDomain, setSelectedDomain] = useState<string>('ALL');
