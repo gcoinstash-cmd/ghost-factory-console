@@ -17,7 +17,7 @@ export const DealDeskHud: React.FC<DealDeskHudProps> = ({
   acquisitionStr = '$135,000 – $175,000',
   devStr = '$715k – $2.02M',
   buyoutAnchor = '$14,500 Anchor',
-  totalAssets = 110,
+  totalAssets = 114,
 }) => {
   return (
     <div className="py-3 border-b border-white/10 text-xs sm:text-sm font-mono space-y-2">

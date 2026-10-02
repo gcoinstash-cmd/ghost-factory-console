@@ -28,13 +28,13 @@ export const FactoryLineScreen: React.FC<FactoryLineScreenProps> = ({
     { id: 1, name: '1. Concept & Wireframe', count: 14, desc: 'B2B niche workflow definition & domain research' },
     { id: 2, name: '2. Working Prototype', count: 20, desc: 'Tailwind UI, React components & mock sensor states' },
     { id: 3, name: '3. Hosted Demo Sandbox', count: 65, desc: 'Render deployment, Supabase schema & demo passcodes' },
-    { id: 4, name: '4. Track 1 Lean Rapid-Sale', count: 85, desc: 'Passed 8-point Intake Gate ($199 MSRP / $4.5k Buyout Anchor)' },
-    { id: 5, name: '5. Track 2 Flagship Tier-1', count: 25, desc: 'Passed 8-point Flagship Gate ($1,500 MSRP / $14.5k Anchor)' }
+    { id: 4, name: '4. Track 1 Lean Rapid-Sale', count: 86, desc: 'Passed 8-point Intake Gate ($199 MSRP / $4.5k Buyout Anchor)' },
+    { id: 5, name: '5. Track 2 Flagship Tier-1', count: 28, desc: 'Passed 8-point Flagship Gate ($1,500 MSRP / $14.5k Anchor)' }
   ];
 
-  // Interactive Intake Gate Checklist State (for a prospective asset, e.g. Asset #110)
+  // Interactive Intake Gate Checklist State (for a prospective asset, e.g. Asset #115)
   const [candidateName, setCandidateName] = useState('Deep-Sea Trench Bathymetric Sonar SCADA OS');
-  const [candidateId, setCandidateId] = useState('110');
+  const [candidateId, setCandidateId] = useState('115');
   const [candidateDomain, setCandidateDomain] = useState('Subsea Robotics & Bathymetry');
   
   const [check1, setCheck1] = useState(true); // Unique Asset ID
@@ -85,7 +85,7 @@ export const FactoryLineScreen: React.FC<FactoryLineScreenProps> = ({
     });
   };
 
-  const flagshipCandidates = products.filter(p => p.id >= 86 || p.pricing_track?.includes('Track 2'));
+  const flagshipCandidates = products.filter(p => (p.id >= 86 && p.id !== 112) || (typeof p.pricing_track === 'string' && p.pricing_track.includes('Track 2')));
   const filteredCandidates = flagshipCandidates.filter(p => 
     p.name.toLowerCase().includes(candidateFilter.toLowerCase()) ||
     p.category.toLowerCase().includes(candidateFilter.toLowerCase()) ||
@@ -417,7 +417,7 @@ export const FactoryLineScreen: React.FC<FactoryLineScreenProps> = ({
               TRACK 2 CANDIDATE FLEET // <span className="text-amber-400 font-mono">{flagshipCandidates.length} ELITE MODELS</span>
             </h2>
             <p className="text-xs sm:text-sm text-slate-300 mt-1 max-w-2xl leading-relaxed">
-              Every candidate digital vehicle from Slot #086 to Slot #110 is classified under Track 2 ($14,500 Anchor). Review the attached 8-point Flagship Qualification Gate checklist on each unit before final commercial release.
+              Every candidate digital vehicle from Slot #086 to Slot #114 is classified under Track 2 ($14,500 Anchor). Review the attached 8-point Flagship Qualification Gate checklist on each unit before final commercial release.
             </p>
           </div>
 

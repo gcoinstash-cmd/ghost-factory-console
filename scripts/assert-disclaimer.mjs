@@ -79,7 +79,7 @@ try {
     process.exit(1);
   }
 
-  console.log(`✅ [AUDIT PASSED] 110/110 cards render disclaimer (including all ${regulatedPassed}/${regulatedCount} regulated sector blueprints strictly resolving to constant)`);
+  console.log(`✅ [AUDIT PASSED] ${total}/${total} cards render disclaimer (including all ${regulatedPassed}/${regulatedCount} regulated sector blueprints strictly resolving to constant)`);
   process.exit(0);
 } catch (error) {
   await server.close();

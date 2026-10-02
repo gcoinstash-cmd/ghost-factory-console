@@ -25,7 +25,7 @@ export const ShowroomEngineScreen: React.FC<ShowroomEngineScreenProps> = ({
   const [selectedLicense, setSelectedLicense] = useState<LicenseType>('standard');
   const [copiedLink, setCopiedLink] = useState(false);
 
-  const isTrack2 = selectedProduct && (selectedProduct.id >= 86 || selectedProduct.flagship_qualified || selectedProduct.pricing_track?.includes('Track 2'));
+  const isTrack2 = selectedProduct && (selectedProduct.pricing_track?.includes('Track 1') ? false : ((selectedProduct.id >= 86 && selectedProduct.id !== 112) || selectedProduct.flagship_qualified || selectedProduct.pricing_track?.includes('Track 2')));
   const pricing = getBlueprintPricing(selectedProduct);
 
   const licenseTiers: Record<LicenseType, { 

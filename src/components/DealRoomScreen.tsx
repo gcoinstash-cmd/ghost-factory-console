@@ -90,12 +90,12 @@ export const DealRoomCore: React.FC<DealRoomScreenProps> = ({
   onLockOperator
 }) => {
   // Safe Fallback Defaults to prevent null/undefined data reads
-  const track1Count = 85;
-  const track2Count = 25;
+  const track1Count = 86;
+  const track2Count = 28;
   const safeProducts = Array.isArray(products) && products.length > 0 ? products : (CATALOG_DATA?.products || []);
   const safeTotalAssets = totalAssets || safeProducts.length || (track1Count + track2Count);
-  const safeRetainedFloor = retainedFloor || Math.round(safeTotalAssets * 0.8) || 88;
-  const safeMaxTransferable = maxTransferable || Math.max(0, safeTotalAssets - safeRetainedFloor) || 22;
+  const safeRetainedFloor = retainedFloor || Math.round(safeTotalAssets * 0.8) || 91;
+  const safeMaxTransferable = maxTransferable || Math.max(0, safeTotalAssets - safeRetainedFloor) || 23;
 
   // Local authentication state: allows unlocking locally regardless of parent state
   const [internalUnlocked, setInternalUnlocked] = useState<boolean>(() => {
@@ -432,7 +432,7 @@ export const DealRoomCore: React.FC<DealRoomScreenProps> = ({
                 <h3 className="text-sm font-bold text-white leading-tight">Strategic Acquisition Ceiling</h3>
               </div>
               <div>
-                <span className="text-xl sm:text-2xl font-black text-purple-300 font-mono block">$1.38M – $2.64M+</span>
+                <span className="text-xl sm:text-2xl font-black text-purple-300 font-mono block">$1.49M – $2.85M+</span>
                 <span className="text-xs text-slate-300 mt-1 block leading-snug">Deep-tech niche monopoly premium</span>
               </div>
             </div>
@@ -447,8 +447,8 @@ export const DealRoomCore: React.FC<DealRoomScreenProps> = ({
                 <h3 className="text-sm font-bold text-white leading-tight">Dev Agency Replacement Benchmark</h3>
               </div>
               <div>
-                <span className="text-xl sm:text-2xl font-black text-cyan-300 font-mono block">$890.0k – $1.62M</span>
-                <span className="text-xs text-slate-300 mt-1 block leading-snug">Benchmark: 4,000+ engineering hours @ $150–$250/hr</span>
+                <span className="text-xl sm:text-2xl font-black text-cyan-300 font-mono block">$965.0k – $1.76M</span>
+                <span className="text-xs text-slate-300 mt-1 block leading-snug">Benchmark: 4,250+ engineering hours @ $150–$250/hr</span>
               </div>
             </div>
 
@@ -462,8 +462,8 @@ export const DealRoomCore: React.FC<DealRoomScreenProps> = ({
                 <h3 className="text-sm font-bold text-white leading-tight">Dual-Track Strategic Buyout Range</h3>
               </div>
               <div>
-                <span className="text-xl sm:text-2xl font-black text-amber-300 font-mono block">$562.0k – $976.5k</span>
-                <span className="text-xs text-amber-400 font-bold mt-1 block">Anchor: $673.0k</span>
+                <span className="text-xl sm:text-2xl font-black text-amber-300 font-mono block">$608.0k – $1.04M</span>
+                <span className="text-xs text-amber-400 font-bold mt-1 block">Anchor: $721.0k</span>
                 <span className="text-xs text-slate-300 block mt-0.5">{track1Count} T1 ($4.5k) + {track2Count} Flagship ($14.5k) anchors</span>
               </div>
             </div>
@@ -478,7 +478,7 @@ export const DealRoomCore: React.FC<DealRoomScreenProps> = ({
                 <h3 className="text-sm font-bold text-white leading-tight">Distress / Quick-Sale Cash Floor</h3>
               </div>
               <div>
-                <span className="text-xl sm:text-2xl font-black text-red-400 font-mono block">$118.5k – $228.0k</span>
+                <span className="text-xl sm:text-2xl font-black text-red-400 font-mono block">$128.0k – $246.0k</span>
                 <span className="text-xs text-slate-300 mt-1 block italic leading-snug">Note: 40–60% buyer discount liquidation scenario</span>
               </div>
             </div>
@@ -512,16 +512,16 @@ export const DealRoomCore: React.FC<DealRoomScreenProps> = ({
                     </span>
                   </div>
                   <h5 className="text-sm font-black text-white">Core Sovereign Reserve ({safeRetainedFloor} Units)</h5>
-                  <p className="text-xs text-emerald-300 font-mono font-semibold mt-0.5">68 Track 1 Units + 20 Track 2 Flagships</p>
+                  <p className="text-xs text-emerald-300 font-mono font-semibold mt-0.5">68 Track 1 Units + 23 Track 2 Flagships</p>
                   <div className="mt-3 space-y-2">
                     <div className="bg-black/80 p-2 rounded-lg border border-white/10">
                       <span className="text-slate-400 text-[10px] uppercase block font-mono">Protected Equity Base</span>
-                      <span className="text-xl font-black text-emerald-400 font-mono block">$596,000 Anchor</span>
-                      <span className="text-[11px] text-slate-300 font-mono">Range: $449.5k – $781.2k</span>
+                      <span className="text-xl font-black text-emerald-400 font-mono block">$638,000 Anchor</span>
+                      <span className="text-[11px] text-slate-300 font-mono">Range: $530.0k – $920.0k</span>
                     </div>
                     <div className="bg-black/80 p-2 rounded-lg border border-white/10">
                       <span className="text-slate-400 text-[10px] uppercase block font-mono">Dev Replacement Benchmark</span>
-                      <span className="text-base font-bold text-cyan-400 font-mono block">$712.0k – $1.30M</span>
+                      <span className="text-base font-bold text-cyan-400 font-mono block">$750k – $1.40M</span>
                     </div>
                   </div>
                 </div>
@@ -540,25 +540,25 @@ export const DealRoomCore: React.FC<DealRoomScreenProps> = ({
                     </span>
                   </div>
                   <h5 className="text-sm font-black text-white">Active Liquidity Tranche ({safeMaxTransferable} Units Max)</h5>
-                  <p className="text-xs text-amber-300 font-mono font-semibold mt-0.5">17 Track 1 Units + 5 Track 2 Flagships</p>
+                  <p className="text-xs text-amber-300 font-mono font-semibold mt-0.5">18 Track 1 Units + 5 Track 2 Flagships</p>
                   <div className="mt-3 space-y-2">
                     <div className="bg-black/80 p-2 rounded-lg border border-white/10">
                       <span className="text-slate-400 text-[10px] uppercase block font-mono">Planning Anchor</span>
-                      <span className="text-xl font-black text-amber-400 font-mono block">$149,000</span>
-                      <span className="text-[11px] text-slate-300 font-mono">Range: $112.5k – $195.3k</span>
+                      <span className="text-xl font-black text-amber-400 font-mono block">$155,000</span>
+                      <span className="text-[11px] text-slate-300 font-mono">Range: $118.0k – $208.0k</span>
                     </div>
                     <div className="bg-black/80 p-2 rounded-lg border border-white/10">
                       <span className="text-slate-400 text-[10px] uppercase block font-mono">Distress Cash Floor</span>
-                      <span className="text-base font-bold text-red-400 font-mono block">$23.7k – $45.6k</span>
+                      <span className="text-base font-bold text-red-400 font-mono block">$25.0k – $49.0k</span>
                     </div>
                   </div>
                 </div>
                 <span className="text-[11px] text-slate-400 block pt-1 border-t border-white/10">
-                  80% retention limit strictly bounds micro-APA liquidations to 22 units.
+                  80% retention limit strictly bounds micro-APA liquidations to 23 units.
                 </span>
               </div>
 
-              {/* Complete Fleet (110 Units) */}
+              {/* Complete Fleet (114 Units) */}
               <div className="bg-black/60 border-2 border-purple-500/40 rounded-xl p-4 flex flex-col justify-between space-y-3 hover:border-purple-400/70 transition-colors">
                 <div>
                   <div className="flex items-center justify-between text-xs mb-1">
@@ -568,22 +568,22 @@ export const DealRoomCore: React.FC<DealRoomScreenProps> = ({
                     </span>
                   </div>
                   <h5 className="text-sm font-black text-white">Complete Fleet ({safeTotalAssets} Units)</h5>
-                  <p className="text-xs text-purple-300 font-mono font-semibold mt-0.5">85 Track 1 + 25 Flagships</p>
+                  <p className="text-xs text-purple-300 font-mono font-semibold mt-0.5">86 Track 1 + 28 Flagships</p>
                   <div className="mt-3 space-y-2">
                     <div className="bg-black/80 p-2 rounded-lg border border-white/10">
                       <span className="text-slate-400 text-[10px] uppercase block font-mono">Total Buyout Anchor</span>
-                      <span className="text-xl font-black text-purple-300 font-mono block">$673,000</span>
-                      <span className="text-[11px] text-slate-300 font-mono">Range: $562.0k – $976.5k</span>
+                      <span className="text-xl font-black text-purple-300 font-mono block">$721,000</span>
+                      <span className="text-[11px] text-slate-300 font-mono">Range: $608.0k – $1.04M</span>
                     </div>
                     <div className="bg-black/80 p-2 rounded-lg border border-white/10">
                       <span className="text-slate-400 text-[10px] uppercase block font-mono">Strategic Monopoly Ceiling</span>
-                      <span className="text-base font-bold text-pink-400 font-mono block">$1.38M – $2.64M+</span>
+                      <span className="text-base font-bold text-pink-400 font-mono block">$1.49M – $2.85M+</span>
                     </div>
                   </div>
                 </div>
                 <div className="text-[11px] text-slate-400 flex justify-between items-center font-mono pt-1 border-t border-white/10">
-                  <span>Density: $6,118/unit</span>
-                  <span>Multiple: 1.85x ROIC</span>
+                  <span>Density: $6,324/unit</span>
+                  <span>Multiple: 1.89x ROIC</span>
                 </div>
               </div>
             </div>
@@ -906,7 +906,7 @@ export const DealRoomCore: React.FC<DealRoomScreenProps> = ({
                   {safeProducts.map(p => {
                     if (!p) return null;
                     const isEligible = Boolean(p.buyoutEligible && !p.permanent);
-                    const isT2 = p.id >= 86 || (typeof p.pricing_track === 'string' && p.pricing_track.includes('Track 2'));
+                    const isT2 = (p.id >= 86 && p.id !== 112) || (typeof p.pricing_track === 'string' && p.pricing_track.includes('Track 2'));
                     return (
                       <option key={p.id} value={p.id} disabled={!isEligible}>
                         #{p.id.toString().padStart(3, '0')} [{!isEligible ? 'PERMANENT VAULT // N/A' : (isT2 ? 'TRACK 2 // CANDIDATE ($14.5k)' : 'TRACK 1 // LEAN ($4.5k)')}] {p.name || `Vehicle #${p.id}`}
@@ -929,7 +929,7 @@ export const DealRoomCore: React.FC<DealRoomScreenProps> = ({
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 text-xs">
               {stagedAssetIds.map((id) => {
                 const product = safeProducts.find(p => p && p.id === id);
-                const isT2 = (product && (product.id >= 86 || product.flagship_qualified || (typeof product.pricing_track === 'string' && product.pricing_track.includes('Track 2')))) || id >= 86;
+                const isT2 = (product && ((product.id >= 86 && product.id !== 112) || product.flagship_qualified || (typeof product.pricing_track === 'string' && product.pricing_track.includes('Track 2')))) || (id >= 86 && id !== 112);
                 const displayName = product?.name || `Vehicle #${id}`;
                 return (
                   <div 
@@ -992,7 +992,7 @@ export const DealRoomCore: React.FC<DealRoomScreenProps> = ({
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2.5 max-h-56 overflow-y-auto pr-1">
-              {safeProducts.filter(p => p && (p.id >= 86 || (typeof p.pricing_track === 'string' && p.pricing_track.includes('Track 2')))).map(p => {
+              {safeProducts.filter(p => p && ((p.id >= 86 && p.id !== 112) || (typeof p.pricing_track === 'string' && p.pricing_track.includes('Track 2')))).map(p => {
                 const isStaged = stagedAssetIds.includes(p.id);
                 return (
                   <div 
@@ -1030,7 +1030,7 @@ export const DealRoomCore: React.FC<DealRoomScreenProps> = ({
               Est. Staged APA Value: <strong className="text-white">
                 ${stagedAssetIds.reduce((sum, id) => {
                   const p = safeProducts.find(x => x && x.id === id);
-                  const isT2 = (p && (p.flagship_qualified || (typeof p.pricing_track === 'string' && p.pricing_track.includes('Track 2')) || id >= 86)) || id >= 86;
+                  const isT2 = (p && (p.flagship_qualified || (typeof p.pricing_track === 'string' && p.pricing_track.includes('Track 2')) || (p.id >= 86 && p.id !== 112))) || (id >= 86 && id !== 112);
                   return sum + (isT2 ? 14500 : 4500);
                 }, 0).toLocaleString()} USD
               </strong> (Dual-Track Anchors)

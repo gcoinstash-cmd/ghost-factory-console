@@ -52,7 +52,7 @@ const AUDIT_PARAMETERS = [
   {
     label: 'Security',
     value: '80% Retention Floor Hard-Locked',
-    detail: '88 of 110 units permanently vaulted. Max 22 micro-APA transferable. APA basket enforces ceiling at runtime.',
+    detail: '91 of 114 units permanently vaulted. Max 23 micro-APA transferable. APA basket enforces ceiling at runtime.',
     color: 'text-amber-400',
     border: 'border-amber-500/40',
     bg: 'bg-amber-950/40',
@@ -60,7 +60,7 @@ const AUDIT_PARAMETERS = [
   {
     label: 'Product Truth',
     value: 'Simulated Data Prototypes Only',
-    detail: 'All 110 assets carry REGULATED_SECTOR_DISCLAIMER. No live compliance certification, production-readiness, or safety approval implied.', // [audit-badge-exempt]
+    detail: 'All 114 assets carry REGULATED_SECTOR_DISCLAIMER. No live compliance certification, production-readiness, or safety approval implied.', // [audit-badge-exempt]
     color: 'text-pink-400',
     border: 'border-pink-500/40',
     bg: 'bg-pink-950/40',
@@ -117,7 +117,7 @@ function Audit360Badge() {
                   <div className="text-slate-300 text-xs mt-0.5">
                     Commit: <span className="text-cyan-400 font-bold">7e43696</span> &nbsp;|&nbsp;
                     Build: <span className="text-cyan-400 font-bold">index-iMVwGL6Q.js</span> &nbsp;|&nbsp;
-                    v<span className="text-emerald-400 font-bold">1.3.1</span>
+                    v<span className="text-emerald-400 font-bold">1.5.0</span>
                   </div>
                 </div>
               </div>
@@ -310,7 +310,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
               <span className="text-pink-400 font-mono text-xs bg-pink-950/80 px-1.5 py-0.5 rounded border border-pink-500/40 font-black">MONOPOLY PREMIUM</span>
             </div>
             <div className="mt-2">
-              <span className="text-xl sm:text-2xl font-black text-pink-400 block tracking-tight">$1.38M – $2.64M+</span>
+              <span className="text-xl sm:text-2xl font-black text-pink-400 block tracking-tight">$1.49M – $2.85M+</span>
               <span className="text-sm text-slate-200 block font-semibold leading-relaxed mt-0.5">Deep-tech niche enterprise acquisition</span>
             </div>
           </div>
@@ -322,8 +322,8 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
               <span className="text-cyan-400 font-mono text-xs bg-cyan-950/80 px-1.5 py-0.5 rounded border border-cyan-500/40 font-black">REPLACEMENT COST</span>
             </div>
             <div className="mt-2">
-              <span className="text-xl sm:text-2xl font-black text-cyan-400 block tracking-tight">$890.0k – $1.62M</span>
-              <span className="text-sm text-slate-200 block font-semibold leading-relaxed mt-0.5">4,000+ engineering hours @ $150–$250/hr</span>
+              <span className="text-xl sm:text-2xl font-black text-cyan-400 block tracking-tight">$965.0k – $1.76M</span>
+              <span className="text-sm text-slate-200 block font-semibold leading-relaxed mt-0.5">4,250+ engineering hours @ $150–$250/hr</span>
             </div>
           </div>
 
@@ -334,8 +334,8 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
               <span className="text-amber-400 font-mono text-xs bg-amber-950/80 px-1.5 py-0.5 rounded border border-amber-500/40 font-black">PORTFOLIO BUYOUT</span>
             </div>
             <div className="mt-2">
-              <span className="text-xl sm:text-2xl font-black text-amber-400 block tracking-tight">$562.0k – $976.5k</span>
-              <span className="text-sm text-slate-200 block font-semibold leading-relaxed mt-0.5">Anchor: $673.0k (85 T1 @ $4.5k + 25 Flagship @ $14.5k)</span>
+              <span className="text-xl sm:text-2xl font-black text-amber-400 block tracking-tight">$608.0k – $1.04M</span>
+              <span className="text-sm text-slate-200 block font-semibold leading-relaxed mt-0.5">Anchor: $721.0k (86 T1 @ $4.5k + 28 Flagship @ $14.5k)</span>
             </div>
           </div>
 
@@ -346,7 +346,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
               <span className="text-emerald-400 font-mono text-xs bg-emerald-950/80 px-1.5 py-0.5 rounded border border-emerald-500/40 font-black">LIQUIDATION</span>
             </div>
             <div className="mt-2">
-              <span className="text-xl sm:text-2xl font-black text-emerald-400 block tracking-tight">$118.5k – $228.0k</span>
+              <span className="text-xl sm:text-2xl font-black text-emerald-400 block tracking-tight">$128.0k – $246.0k</span>
               <span className="text-sm text-slate-200 block font-semibold leading-relaxed mt-0.5">40–60% buyer discount quick realization</span>
             </div>
           </div>
@@ -388,9 +388,9 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
               onClick={() => setIsMobileHudCollapsed(false)}
               className="flex items-center justify-between bg-black/80 border border-amber-500/40 rounded-xl px-3 py-2 text-xs sm:text-sm text-slate-200 cursor-pointer hover:border-amber-400 transition-colors"
             >
-              <span className="text-pink-400 font-black">Ceiling: $1.38M+</span>
-              <span className="text-amber-400 font-black">Buyout: $673.0k</span>
-              <span className="text-emerald-400 font-black">Floor: $118.5k</span>
+              <span className="text-pink-400 font-black">Ceiling: $1.49M+</span>
+              <span className="text-amber-400 font-black">Buyout: $721.0k</span>
+              <span className="text-emerald-400 font-black">Floor: $128.0k</span>
             </div>
           )
         ) : (
@@ -414,7 +414,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
                   <span className="text-pink-400 font-mono text-xs bg-pink-950/80 px-1.5 py-0.5 rounded border border-pink-500/40 font-black">CEILING</span>
                 </div>
                 <div className="mt-1.5">
-                  <span className="text-base sm:text-lg font-black text-pink-400 block">$1.38M – $2.64M+</span>
+                  <span className="text-base sm:text-lg font-black text-pink-400 block">$1.49M – $2.85M+</span>
                   <span className="text-xs text-slate-300 block font-semibold">Deep-Tech Monopoly</span>
                 </div>
               </div>
@@ -425,8 +425,8 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
                   <span className="text-cyan-400 font-mono text-xs bg-cyan-950/80 px-1.5 py-0.5 rounded border border-cyan-500/40 font-black">COST</span>
                 </div>
                 <div className="mt-1.5">
-                  <span className="text-base sm:text-lg font-black text-cyan-400 block">$890.0k – $1.62M</span>
-                  <span className="text-xs text-slate-300 block font-semibold">4,000+ Eng Hours</span>
+                  <span className="text-base sm:text-lg font-black text-cyan-400 block">$965.0k – $1.76M</span>
+                  <span className="text-xs text-slate-300 block font-semibold">4,250+ Eng Hours</span>
                 </div>
               </div>
 
@@ -436,8 +436,8 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
                   <span className="text-amber-400 font-mono text-xs bg-amber-950/80 px-1.5 py-0.5 rounded border border-amber-500/40 font-black">BUYOUT</span>
                 </div>
                 <div className="mt-1.5">
-                  <span className="text-base sm:text-lg font-black text-amber-400 block">$562.0k – $976.5k</span>
-                  <span className="text-xs text-slate-300 block font-semibold">Anchor: $673.0k</span>
+                  <span className="text-base sm:text-lg font-black text-amber-400 block">$608.0k – $1.04M</span>
+                  <span className="text-xs text-slate-300 block font-semibold">Anchor: $721.0k</span>
                 </div>
               </div>
 
@@ -447,7 +447,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
                   <span className="text-emerald-400 font-mono text-xs bg-emerald-950/80 px-1.5 py-0.5 rounded border border-emerald-500/40 font-black">FLOOR</span>
                 </div>
                 <div className="mt-1.5">
-                  <span className="text-base sm:text-lg font-black text-emerald-400 block">$118.5k – $228.0k</span>
+                  <span className="text-base sm:text-lg font-black text-emerald-400 block">$128.0k – $246.0k</span>
                   <span className="text-xs text-slate-300 block font-semibold">40–60% Realization</span>
                 </div>
               </div>
@@ -466,7 +466,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
               ? 'bg-emerald-500 text-black border-emerald-400 shadow-lg shadow-emerald-500/25 font-black'
               : 'bg-[#111114] text-slate-200 hover:text-white hover:bg-white/5 border-white/10 hover:border-emerald-500/30'
           }`}
-          title="SCREEN 1: GARAGE (110)"
+          title="SCREEN 1: GARAGE (114)"
         >
           <div className={`p-1.5 rounded-lg shrink-0 ${
             currentView === 'garage' ? 'bg-black/20 text-black' : 'bg-emerald-950/80 text-emerald-400 border border-emerald-500/30'

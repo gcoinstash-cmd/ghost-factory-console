@@ -59,7 +59,7 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
     return products.filter(p => {
       const rarity = getRarityTier(p);
       const domain = getDomainClass(p);
-      const isTrack2 = Boolean(p.flagship_qualified) || (p.pricing_track?.includes('Track 2') ?? false) || p.id >= 86;
+      const isTrack2 = p.pricing_track?.includes('Track 1') ? false : (Boolean(p.flagship_qualified) || (p.pricing_track?.includes('Track 2') ?? false) || (p.id >= 86 && p.id !== 112));
 
       const matchesSearch = 
         p.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -141,27 +141,27 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
             <div className="w-full lg:w-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 bg-black/80 p-4 sm:p-5 rounded-xl border border-white/15 text-sm">
               <div className="p-1">
                 <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">TRACK 1 FLEET</span>
-                <span className="text-xl sm:text-2xl font-black text-cyan-400 block tracking-tight mt-1">85 Models</span>
+                <span className="text-xl sm:text-2xl font-black text-cyan-400 block tracking-tight mt-1">86 Models</span>
                 <span className="text-sm text-slate-200 block font-semibold leading-relaxed mt-0.5">Turnkey Consoles</span>
               </div>
               <div className="p-1 border-l border-white/15 pl-3">
                 <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">TRACK 2 FLEET</span>
-                <span className="text-xl sm:text-2xl font-black text-amber-400 block tracking-tight mt-1">25 Models</span>
+                <span className="text-xl sm:text-2xl font-black text-amber-400 block tracking-tight mt-1">28 Models</span>
                 <span className="text-sm text-slate-200 block font-semibold leading-relaxed mt-0.5">Flagship SCADA</span>
               </div>
               <div className="p-1 border-t sm:border-t-0 sm:border-l border-white/15 pt-2 sm:pt-1 sm:pl-3">
                 <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">CAPITAL DENSITY</span>
-                <span className="text-xl sm:text-2xl font-black text-purple-400 block tracking-tight mt-1">$6,118 / Asset</span>
-                <span className="text-sm text-slate-200 block font-semibold leading-relaxed mt-0.5">$673k Anchor NAV</span>
+                <span className="text-xl sm:text-2xl font-black text-purple-400 block tracking-tight mt-1">$6,324 / Asset</span>
+                <span className="text-sm text-slate-200 block font-semibold leading-relaxed mt-0.5">$721k Anchor NAV</span>
               </div>
               <div className="p-1 border-t sm:border-t-0 border-l border-white/15 pt-2 sm:pt-1 pl-3">
                 <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">LIQUID TRANCHE</span>
-                <span className="text-xl sm:text-2xl font-black text-amber-300 block tracking-tight mt-1">22 Max Units</span>
+                <span className="text-xl sm:text-2xl font-black text-amber-300 block tracking-tight mt-1">23 Max Units</span>
                 <span className="text-sm text-slate-200 block font-semibold leading-relaxed mt-0.5">80% Retention Floor</span>
               </div>
               <div className="p-1 border-t sm:border-t-0 sm:border-l border-white/15 pt-2 sm:pt-1 sm:pl-3 col-span-2 sm:col-span-1">
                 <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">VAULT CORE</span>
-                <span className="text-xl sm:text-2xl font-black text-emerald-400 block tracking-tight mt-1">88 Protected</span>
+                <span className="text-xl sm:text-2xl font-black text-emerald-400 block tracking-tight mt-1">91 Protected</span>
                 <span className="text-sm text-slate-200 block font-semibold leading-relaxed mt-0.5">Sovereign Reserve</span>
               </div>
             </div>
@@ -205,10 +205,10 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
               <ShieldCheck size={14} /> GHOSTFACTORY™ MASTER BLUEPRINT REPOSITORY
             </div>
             <h2 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
-              Browse 110 Commercial Software Blueprints
+              Browse 114 Commercial Software Blueprints
             </h2>
             <p className="text-slate-300 text-xs sm:text-sm max-w-2xl leading-relaxed">
-              85 Lean Rapid-Sale prototypes ($199 MSRP) + 25 Tier-1 Flagship SCADA operational consoles ($1,500–$3,500).
+              86 Lean Rapid-Sale prototypes ($199 MSRP) + 28 Tier-1 Flagship SCADA operational consoles ($1,500–$3,500).
               Each asset includes complete React 19 source, PostgreSQL schema, seed data, and perpetual commercial deployment rights (Standard & Pro unlimited end-client use).
             </p>
           </div>
@@ -218,7 +218,7 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
               href="#catalog-grid"
               className="px-5 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-black uppercase tracking-wider transition-all shadow-lg shadow-emerald-500/20 active:scale-95"
             >
-              Browse 110 Blueprints ↓
+              Browse 114 Blueprints ↓
             </a>
             <a
               href="https://auraandgrid.gumroad.com"
@@ -348,9 +348,9 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
             onChange={(e) => handleTrackChange(e.target.value)}
             className="bg-black/70 border border-white/20 rounded-lg px-3.5 py-3 text-slate-200 focus:outline-none focus:border-emerald-500 text-sm sm:text-base font-mono font-bold cursor-pointer"
           >
-            <option value="ALL">All Pricing Tracks (110)</option>
-            <option value="TRACK_1">Track 1 — Lean Rapid-Sale (85)</option>
-            <option value="TRACK_2">Track 2 — Flagship Tier-1 (25)</option>
+            <option value="ALL">All Pricing Tracks (114)</option>
+            <option value="TRACK_1">Track 1 — Lean Rapid-Sale (86)</option>
+            <option value="TRACK_2">Track 2 — Flagship Tier-1 (28)</option>
           </select>
 
           {/* Rarity Filter */}

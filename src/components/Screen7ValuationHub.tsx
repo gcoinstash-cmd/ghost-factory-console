@@ -20,16 +20,16 @@ interface Screen7ValuationHubProps {
 }
 
 export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
-  totalAssets = 110,
-  retainedFloor = 88,
-  maxTransferable = 22,
+  totalAssets = 114,
+  retainedFloor = 91,
+  maxTransferable = 23,
 }) => {
-  const track1Count = 85;
-  const track2Count = 25;
+  const track1Count = 86;
+  const track2Count = 28;
 
   const [sliderVal, setSliderVal] = useState<number>(22);
-  const floorVal = 118500;
-  const ceilingVal = 2640000;
+  const floorVal = 128000;
+  const ceilingVal = 2850000;
   const projectedVal = Math.round(floorVal + (ceilingVal - floorVal) * (sliderVal / 100));
 
   const formatCurrency = (val: number) => {
@@ -41,11 +41,11 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
   };
 
   const getScenarioLabel = (pct: number) => {
-    if (pct <= 10) return { label: 'Distress Liquidation Realization ($118.5k)', color: 'text-red-400 bg-red-950/80 border-red-500/40' };
-    if (pct <= 35) return { label: 'Dual-Track Buyout Anchor Target ($673.0k)', color: 'text-amber-400 bg-amber-950/80 border-amber-500/40' };
-    if (pct <= 65) return { label: 'Dev Agency Replacement Benchmark ($1.25M mid)', color: 'text-cyan-400 bg-cyan-950/80 border-cyan-500/40' };
-    if (pct <= 85) return { label: 'Strategic Acquisition Entry ($1.38M+)', color: 'text-purple-400 bg-purple-950/80 border-purple-500/40' };
-    return { label: 'Strategic Deep-Tech Monopoly Ceiling ($2.64M+)', color: 'text-pink-400 bg-pink-950/80 border-pink-500/40' };
+    if (pct <= 10) return { label: 'Distress Liquidation Realization ($128.0k)', color: 'text-red-400 bg-red-950/80 border-red-500/40' };
+    if (pct <= 35) return { label: 'Dual-Track Buyout Anchor Target ($721.0k)', color: 'text-amber-400 bg-amber-950/80 border-amber-500/40' };
+    if (pct <= 65) return { label: 'Dev Agency Replacement Benchmark ($1.36M mid)', color: 'text-cyan-400 bg-cyan-950/80 border-cyan-500/40' };
+    if (pct <= 85) return { label: 'Strategic Acquisition Entry ($1.49M+)', color: 'text-purple-400 bg-purple-950/80 border-purple-500/40' };
+    return { label: 'Strategic Deep-Tech Monopoly Ceiling ($2.85M+)', color: 'text-pink-400 bg-pink-950/80 border-pink-500/40' };
   };
 
   const scenarioLabel = getScenarioLabel(sliderVal);
@@ -77,10 +77,10 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
               Dual-Track Buyout Anchor
             </span>
             <div className="text-3xl sm:text-4xl font-black text-white font-mono tracking-tight">
-              $673,000
+              $721,000
             </div>
             <span className="text-xs text-slate-300 block mt-1 font-semibold">
-              Range: $562.0k – $976.5k
+              Range: $608.0k – $1.04M
             </span>
             <span className="text-[11px] text-slate-400 block mt-0.5">
               {track1Count} T1 ($4.5k) + {track2Count} Flagships ($14.5k)
@@ -121,7 +121,7 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
             </div>
             <div className="mt-4 pt-4 border-t border-white/10">
               <span className="text-2xl sm:text-3xl font-black text-purple-400 font-mono tracking-tight block">
-                $1.38M – $2.64M+
+                $1.49M – $2.85M+
               </span>
               <span className="text-xs text-slate-400 block mt-1 font-semibold">
                 Strategic Niche Monopoly Premium
@@ -137,14 +137,14 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
                 <span className="text-cyan-400 font-bold bg-cyan-950/80 px-2 py-0.5 rounded border border-cyan-500/40 text-xs">REPLACEMENT COST</span>
               </div>
               <h3 className="text-sm font-bold text-white">Dev Agency Replacement</h3>
-              <p className="text-xs text-slate-300 mt-1">Engineering hours required to recreate 110 specialized prototypes.</p>
+              <p className="text-xs text-slate-300 mt-1">Engineering hours required to recreate 114 specialized prototypes.</p>
             </div>
             <div className="mt-4 pt-4 border-t border-white/10">
               <span className="text-2xl sm:text-3xl font-black text-cyan-400 font-mono tracking-tight block">
-                $890.0k – $1.62M
+                $965.0k – $1.76M
               </span>
               <span className="text-xs text-slate-400 block mt-1 font-semibold">
-                4,000+ engineering hours @ $150–$250/hr
+                4,250+ engineering hours @ $150–$250/hr
               </span>
             </div>
           </div>
@@ -157,14 +157,14 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
                 <span className="text-amber-400 font-bold bg-amber-950/80 px-2 py-0.5 rounded border border-amber-500/40 text-xs">PORTFOLIO BUYOUT</span>
               </div>
               <h3 className="text-sm font-bold text-white">Dual-Track Strategic Buyout</h3>
-              <p className="text-xs text-slate-300 mt-1">Asset-by-asset baseline: 85 Track 1 anchors + 25 Flagship anchors.</p>
+              <p className="text-xs text-slate-300 mt-1">Asset-by-asset baseline: 86 Track 1 anchors + 28 Flagship anchors.</p>
             </div>
             <div className="mt-4 pt-4 border-t border-white/10">
               <span className="text-2xl sm:text-3xl font-black text-amber-400 font-mono tracking-tight block">
-                $562.0k – $976.5k
+                $608.0k – $1.04M
               </span>
               <span className="text-xs text-amber-300 font-bold block mt-1">
-                Anchor: $673.0k
+                Anchor: $721.0k
               </span>
               <span className="text-xs text-slate-400 block mt-0.5">
                 {track1Count} T1 ($4.5k) + {track2Count} Flagship ($14.5k)
@@ -184,7 +184,7 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
             </div>
             <div className="mt-4 pt-4 border-t border-white/10">
               <span className="text-2xl sm:text-3xl font-black text-red-400 font-mono tracking-tight block">
-                $118.5k – $228.0k
+                $128.0k – $246.0k
               </span>
               <span className="text-xs text-slate-400 block mt-1 font-semibold">
                 40–60% buyer discount quick realization
@@ -262,7 +262,7 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
                 <span className="text-emerald-400 font-bold bg-emerald-950/80 px-2 py-0.5 rounded border border-emerald-500/40 text-xs">FMV BASELINE</span>
               </div>
               <h3 className="text-sm font-bold text-white">Annual Fair Market Value</h3>
-              <p className="text-xs text-slate-300 mt-1">Realistic recurring licensing cash flow for all 110 assets.</p>
+              <p className="text-xs text-slate-300 mt-1">Realistic recurring licensing cash flow for all 114 assets.</p>
             </div>
             <div className="mt-4 pt-4 border-t border-white/10">
               <span className="text-2xl sm:text-3xl font-black text-emerald-400 font-mono tracking-tight block">
@@ -298,7 +298,7 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {/* Card 1: Vault 2: Core Sovereign Reserve (88 Units) — Leftmost (Largest) */}
+            {/* Card 1: Vault 2: Core Sovereign Reserve (91 Units) — Leftmost (Largest) */}
             <div className="bg-[#111114] border-2 border-emerald-500/50 rounded-2xl p-5 flex flex-col justify-between hover:border-emerald-400 transition-colors shadow-lg">
               <div>
                 <div className="flex items-center justify-between text-xs mb-2">
@@ -309,17 +309,17 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
                 </div>
                 <h3 className="text-base font-black text-white">Core Sovereign Reserve ({retainedFloor} Units)</h3>
                 <p className="text-xs text-slate-300 mt-1 font-mono font-semibold text-emerald-300">
-                  68 Track 1 Units + 20 Track 2 Flagships
+                  68 Track 1 Units + 23 Track 2 Flagships
                 </p>
                 <div className="mt-4 space-y-2">
                   <div className="bg-black/60 p-2.5 rounded-xl border border-white/10">
                     <span className="text-slate-400 text-[11px] uppercase block font-mono">Protected Equity Base</span>
-                    <span className="text-2xl font-black text-emerald-400 font-mono block">$596,000 Anchor</span>
-                    <span className="text-xs text-slate-300 font-mono">Range: $449.5k – $781.2k</span>
+                    <span className="text-2xl font-black text-emerald-400 font-mono block">$638,000 Anchor</span>
+                    <span className="text-xs text-slate-300 font-mono">Range: $530.0k – $920.0k</span>
                   </div>
                   <div className="bg-black/60 p-2.5 rounded-xl border border-white/10">
                     <span className="text-slate-400 text-[11px] uppercase block font-mono">Dev Replacement Benchmark</span>
-                    <span className="text-lg font-bold text-cyan-400 font-mono block">$712.0k – $1.30M</span>
+                    <span className="text-lg font-bold text-cyan-400 font-mono block">$750k – $1.40M</span>
                   </div>
                 </div>
               </div>
@@ -328,7 +328,7 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
               </div>
             </div>
 
-            {/* Card 2: Vault 1: Active Liquidity Tranche (22 Units Max) — Right (Smallest) */}
+            {/* Card 2: Vault 1: Active Liquidity Tranche (23 Units Max) — Right (Smallest) */}
             <div className="bg-[#111114] border-2 border-amber-500/50 rounded-2xl p-5 flex flex-col justify-between hover:border-amber-400 transition-colors shadow-lg">
               <div>
                 <div className="flex items-center justify-between text-xs mb-2">
@@ -339,22 +339,22 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
                 </div>
                 <h3 className="text-base font-black text-white">Active Liquidity Tranche ({maxTransferable} Units Max)</h3>
                 <p className="text-xs text-slate-300 mt-1 font-mono font-semibold text-amber-300">
-                  17 Track 1 Units + 5 Track 2 Flagships
+                  18 Track 1 Units + 5 Track 2 Flagships
                 </p>
                 <div className="mt-4 space-y-2">
                   <div className="bg-black/60 p-2.5 rounded-xl border border-white/10">
                     <span className="text-slate-400 text-[11px] uppercase block font-mono">Planning Anchor</span>
-                    <span className="text-2xl font-black text-amber-400 font-mono block">$149,000</span>
-                    <span className="text-xs text-slate-300 font-mono">Range: $112.5k – $195.3k</span>
+                    <span className="text-2xl font-black text-amber-400 font-mono block">$155,000</span>
+                    <span className="text-xs text-slate-300 font-mono">Range: $118.0k – $208.0k</span>
                   </div>
                   <div className="bg-black/60 p-2.5 rounded-xl border border-white/10">
                     <span className="text-slate-400 text-[11px] uppercase block font-mono">Distress Cash Floor</span>
-                    <span className="text-lg font-bold text-red-400 font-mono block">$23.7k – $45.6k</span>
+                    <span className="text-lg font-bold text-red-400 font-mono block">$25.0k – $49.0k</span>
                   </div>
                 </div>
               </div>
               <div className="mt-4 pt-3 border-t border-white/10 text-xs text-slate-400">
-                80% retention limit strictly bounds total micro-APA liquidations to 22 units.
+                80% retention limit strictly bounds total micro-APA liquidations to 23 units.
               </div>
             </div>
           </div>
@@ -368,10 +368,10 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
               <span className="text-slate-200 font-bold">{totalAssets} Units Total ({track1Count} Track 1 + {track2Count} Flagships)</span>
             </div>
             <div className="flex flex-wrap items-center gap-4 text-slate-300">
-              <span>Total Anchor: <strong className="text-purple-300">$673,000</strong></span>
-              <span>Ceiling: <strong className="text-pink-400">$1.38M – $2.64M+</strong></span>
-              <span>Density: <strong className="text-amber-400">$6,118 / Unit</strong></span>
-              <span>Multiple: <strong className="text-cyan-400">1.85x ROIC</strong></span>
+              <span>Total Anchor: <strong className="text-purple-300">$721,000</strong></span>
+              <span>Ceiling: <strong className="text-pink-400">$1.49M – $2.85M+</strong></span>
+              <span>Density: <strong className="text-amber-400">$6,324 / Unit</strong></span>
+              <span>Multiple: <strong className="text-cyan-400">1.89x ROIC</strong></span>
             </div>
           </div>
         </div>
@@ -501,10 +501,10 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
               <h3 className="text-sm font-bold text-white">Portfolio Capital Density</h3>
               <div className="mt-3">
                 <span className="text-3xl font-black text-amber-400 font-mono tracking-tight block">
-                  $6,118 / Asset
+                  $6,324 / Asset
                 </span>
                 <div className="mt-1.5 px-3 py-1.5 rounded-lg bg-black/60 border border-white/10 text-xs text-slate-300 font-mono">
-                  Formula: <strong className="text-amber-300">NAV Anchor ($673.0k)</strong> / Active Fleet ({totalAssets} Units)
+                  Formula: <strong className="text-amber-300">NAV Anchor ($721.0k)</strong> / Active Fleet ({totalAssets} Units)
                 </div>
               </div>
             </div>
@@ -548,17 +548,17 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2.5 text-xs">
                   <div className="p-2.5 rounded-lg bg-emerald-950/30 border border-emerald-500/30">
                     <span className="text-emerald-400 font-bold block">{retainedFloor} Units Vaulted</span>
-                    <span className="text-[11px] text-slate-300 font-mono">$538,400 Protected Asset Base</span>
+                    <span className="text-[11px] text-slate-300 font-mono">$576,800 Protected Asset Base</span>
                   </div>
                   <div className="p-2.5 rounded-lg bg-amber-950/30 border border-amber-500/30 sm:text-right">
                     <span className="text-amber-400 font-bold block">{maxTransferable} Units Max Liquid</span>
-                    <span className="text-[11px] text-slate-300 font-mono">$134,600 Realization Capacity @ Anchor</span>
+                    <span className="text-[11px] text-slate-300 font-mono">$144,200 Realization Capacity @ Anchor</span>
                   </div>
                 </div>
               </div>
             </div>
             <div className="mt-3 pt-3 border-t border-white/10 text-xs text-slate-300 leading-relaxed font-semibold">
-              Security Lock: HARD RETENTION FLOOR ENFORCED. Max 22 transferable units.
+              Security Lock: HARD RETENTION FLOOR ENFORCED. Max 23 transferable units.
             </div>
           </div>
 
@@ -570,21 +570,21 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
                   <ArrowUpRight size={13} className="text-cyan-400" /> Module 3: Rebuild Multiple
                 </span>
                 <span className="text-cyan-400 font-bold bg-cyan-950/80 px-2 py-0.5 rounded border border-cyan-500/40 text-xs">
-                  1.85x ROIC
+                  1.89x ROIC
                 </span>
               </div>
               <h3 className="text-sm font-bold text-white">Enterprise Replacement Multiple (ROIC)</h3>
               <div className="mt-3">
                 <span className="text-3xl font-black text-cyan-400 font-mono tracking-tight block">
-                  1.85x Rebuild Multiple
+                  1.89x Rebuild Multiple
                 </span>
                 <div className="mt-1.5 px-3 py-1.5 rounded-lg bg-black/60 border border-white/10 text-xs text-slate-300 font-mono">
-                  Comparative: <strong className="text-cyan-300">Dev Agency Cost ($1.25M mid)</strong> vs. Buyout Anchor ($673.0k)
+                  Comparative: <strong className="text-cyan-300">Dev Agency Cost ($1.36M mid)</strong> vs. Buyout Anchor ($721.0k)
                 </div>
               </div>
             </div>
             <div className="mt-4 pt-3 border-t border-white/10 text-xs text-slate-300 leading-relaxed font-semibold">
-              Buyer Signal: Represents a 46% acquisition discount vs. 4,000+ custom agency dev hours.
+              Buyer Signal: Represents a 47% acquisition discount vs. 4,250+ custom agency dev hours.
             </div>
           </div>
 
@@ -603,11 +603,11 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
               <div className="mt-3 space-y-1.5">
                 <div className="flex justify-between items-center text-xs p-2 rounded-lg bg-black/60 border border-white/10">
                   <span className="text-slate-300">Floor Realization:</span>
-                  <span className="text-red-400 font-bold font-mono">$118.5k Distress Realization</span>
+                  <span className="text-red-400 font-bold font-mono">$128.0k Distress Realization</span>
                 </div>
                 <div className="flex justify-between items-center text-xs p-2 rounded-lg bg-black/60 border border-white/10">
                   <span className="text-slate-300">Ceiling Premium:</span>
-                  <span className="text-purple-400 font-bold font-mono">$2.64M+ Strategic Deep-Tech Monopoly</span>
+                  <span className="text-purple-400 font-bold font-mono">$2.85M+ Strategic Deep-Tech Monopoly</span>
                 </div>
               </div>
             </div>
@@ -630,7 +630,7 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
                 </div>
                 <h3 className="text-lg font-black text-white">Interactive Scenario Stress-Tester</h3>
                 <p className="text-xs text-slate-300 mt-0.5">
-                  Real-time dynamic sensitivity engine across liquidation floor ($118.5k) to strategic monopoly ceiling ($2.64M+).
+                  Real-time dynamic sensitivity engine across liquidation floor ($128.0k) to strategic monopoly ceiling ($2.85M+).
                 </p>
               </div>
 
@@ -648,10 +648,10 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
             {/* Range Slider Control */}
             <div className="mt-6 space-y-3">
               <div className="flex items-center justify-between text-xs font-mono">
-                <span className="text-red-400 font-bold">0% (Distress Floor $118.5k)</span>
-                <span className="text-amber-400 font-bold hidden sm:inline">22% Anchor ($673.0k)</span>
-                <span className="text-cyan-400 font-bold hidden md:inline">45% Dev Rebuild ($1.25M)</span>
-                <span className="text-purple-400 font-bold">100% (Strategic Monopoly $2.64M+)</span>
+                <span className="text-red-400 font-bold">0% (Distress Floor $128.0k)</span>
+                <span className="text-amber-400 font-bold hidden sm:inline">22% Anchor ($721.0k)</span>
+                <span className="text-cyan-400 font-bold hidden md:inline">45% Dev Rebuild ($1.36M)</span>
+                <span className="text-purple-400 font-bold">100% (Strategic Monopoly $2.85M+)</span>
               </div>
 
               <input
@@ -666,11 +666,11 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
               />
 
               <div className="flex items-center justify-between text-xs text-slate-400 font-mono">
-                <span>$118,500</span>
+                <span>$128,000</span>
                 <span className="text-slate-200 font-semibold text-center">
                   Live Dynamic Readout: {formatCurrency(projectedVal)} @ {sliderVal}%
                 </span>
-                <span>$2,640,000</span>
+                <span>$2,850,000</span>
               </div>
             </div>
           </div>

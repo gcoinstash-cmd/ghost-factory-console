@@ -15,8 +15,8 @@ interface BlueprintCardProps {
 }
 
 export const getRarityTier = (product: ProductItem): RarityTier => {
-  if (product.rarity_tier) return product.rarity_tier;
-  if (product.id >= 86 || Boolean(product.flagship_qualified) || Boolean(product.pricing_track?.includes('Track 2'))) {
+  if (product.pricing_track?.includes('Track 1')) return 'Core';
+  if ((product.id >= 86 && product.id !== 112) || Boolean(product.flagship_qualified) || Boolean(product.pricing_track?.includes('Track 2'))) {
     return 'Elite';
   }
   if (['A', 'C', 'E'].includes(product.archetype_id || '')) {
@@ -131,7 +131,7 @@ export const BlueprintCard: React.FC<BlueprintCardProps> = ({
 }) => {
   const rarity = getRarityTier(product);
   const domain = getDomainClass(product);
-  const isTrack2 = product.id >= 86 || Boolean(product.flagship_qualified) || Boolean(product.pricing_track?.includes('Track 2'));
+  const isTrack2 = product.pricing_track?.includes('Track 1') ? false : ((product.id >= 86 && product.id !== 112) || Boolean(product.flagship_qualified) || Boolean(product.pricing_track?.includes('Track 2')));
   const pricing = getBlueprintPricing(product);
 
   const rarityStyles: Record<RarityTier, { border: string; bg: string; text: string; glow: string }> = {

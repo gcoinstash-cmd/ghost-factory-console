@@ -85,7 +85,7 @@ export function getBlueprintPricing(product: {
   exclusive_buyout_anchor?: number;
   exclusive_buyout_range?: number[];
 }): BlueprintPricing {
-  const isTrack2 = Boolean(product.flagship_qualified) || (product.pricing_track?.includes('Track 2') ?? false) || product.id >= 86;
+  const isTrack2 = product.pricing_track?.includes('Track 1') ? false : (Boolean(product.flagship_qualified) || (product.pricing_track?.includes('Track 2') ?? false) || (product.id >= 86 && product.id !== 112));
 
   const standardPrice = isTrack2 ? '$1,500 – $3,500 USD' : '$199 USD';
   const proPrice = isTrack2 ? '$3,500 USD' : '$599 USD';

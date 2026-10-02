@@ -198,7 +198,7 @@ export const Screen6Pricing: React.FC = () => {
             </p>
           </div>
           <span className="px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-bold uppercase tracking-wider hidden sm:inline">
-            110/110 AUDITED
+            114/114 AUDITED
           </span>
         </div>
 
@@ -207,8 +207,8 @@ export const Screen6Pricing: React.FC = () => {
             <thead>
               <tr className="border-b border-white/15 text-slate-400 font-bold uppercase tracking-wider text-xs">
                 <th className="py-3.5 px-4">Architecture Parameter</th>
-                <th className="py-3.5 px-4 text-cyan-400">Track 1: Lean Rapid-Sale (85 Assets)</th>
-                <th className="py-3.5 px-4 text-purple-400">Track 2: Flagship Tier-1 (25 Assets)</th>
+                <th className="py-3.5 px-4 text-cyan-400">Track 1: Lean Rapid-Sale (86 Assets)</th>
+                <th className="py-3.5 px-4 text-purple-400">Track 2: Flagship Tier-1 (28 Assets)</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-white/5 text-slate-200">
