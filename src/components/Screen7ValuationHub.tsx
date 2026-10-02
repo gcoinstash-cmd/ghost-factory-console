@@ -307,6 +307,207 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
         </div>
       </div>
 
+      {/* PORTFOLIO VAULT SEGREGATION (VAULT TRANCHE BUYOUT) */}
+      <div className="space-y-4">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div>
+            <h2 className="text-xl font-black text-white tracking-tight flex items-center gap-2">
+              <Shield size={20} className="text-emerald-400" />
+              Portfolio Vault Segregation & Tranche Buyout
+            </h2>
+            <p className="text-xs text-slate-300 mt-0.5">
+              Granular vault capital allocation partitioning: Active Liquidity vs. Protected Sovereign Reserve.
+            </p>
+          </div>
+          <span className="px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/40 text-emerald-300 text-xs font-bold uppercase tracking-wider self-start sm:self-auto">
+            VAULT TRANCHES (80/20 SPLIT)
+          </span>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+          {/* Vault 1: Active Liquidity Tranche */}
+          <div className="bg-[#111114] border-2 border-amber-500/50 rounded-2xl p-5 flex flex-col justify-between hover:border-amber-400 transition-colors shadow-lg">
+            <div>
+              <div className="flex items-center justify-between text-xs mb-2">
+                <span className="text-amber-400 uppercase font-bold tracking-wider text-xs">VAULT 1 // LIQUIDITY TRANCHE</span>
+                <span className="text-amber-400 font-bold bg-amber-950/80 px-2 py-0.5 rounded border border-amber-500/40 text-[10px]">
+                  AUTHORIZED FOR ACQUISITION
+                </span>
+              </div>
+              <h3 className="text-base font-black text-white">Active Liquidity Tranche (22 Units Max)</h3>
+              <p className="text-xs text-slate-300 mt-1 font-mono font-semibold text-amber-300">
+                17 Track 1 Units + 5 Track 2 Flagships
+              </p>
+              <div className="mt-4 space-y-2">
+                <div className="bg-black/60 p-2.5 rounded-xl border border-white/10">
+                  <span className="text-slate-400 text-[11px] uppercase block font-mono">Planning Anchor</span>
+                  <span className="text-2xl font-black text-amber-400 font-mono block">$149,000</span>
+                  <span className="text-xs text-slate-300 font-mono">Range: $112.5k – $195.3k</span>
+                </div>
+                <div className="bg-black/60 p-2.5 rounded-xl border border-white/10">
+                  <span className="text-slate-400 text-[11px] uppercase block font-mono">Distress Cash Floor</span>
+                  <span className="text-lg font-bold text-red-400 font-mono block">$23.7k – $45.6k</span>
+                </div>
+              </div>
+            </div>
+            <div className="mt-4 pt-3 border-t border-white/10 text-xs text-slate-400">
+              80% retention limit strictly bounds total micro-APA liquidations to 22 units.
+            </div>
+          </div>
+
+          {/* Vault 2: Core Sovereign Reserve */}
+          <div className="bg-[#111114] border-2 border-emerald-500/50 rounded-2xl p-5 flex flex-col justify-between hover:border-emerald-400 transition-colors shadow-lg">
+            <div>
+              <div className="flex items-center justify-between text-xs mb-2">
+                <span className="text-emerald-400 uppercase font-bold tracking-wider text-xs">VAULT 2 // SOVEREIGN RESERVE</span>
+                <span className="text-emerald-400 font-bold bg-emerald-950/80 px-2 py-0.5 rounded border border-emerald-500/40 text-[10px] flex items-center gap-1">
+                  <Lock size={10} /> HARD RETENTION FLOOR ENFORCED
+                </span>
+              </div>
+              <h3 className="text-base font-black text-white">Core Sovereign Reserve (88 Units)</h3>
+              <p className="text-xs text-slate-300 mt-1 font-mono font-semibold text-emerald-300">
+                68 Track 1 Units + 20 Track 2 Flagships
+              </p>
+              <div className="mt-4 space-y-2">
+                <div className="bg-black/60 p-2.5 rounded-xl border border-white/10">
+                  <span className="text-slate-400 text-[11px] uppercase block font-mono">Protected Equity Base</span>
+                  <span className="text-2xl font-black text-emerald-400 font-mono block">$596,000 Anchor</span>
+                  <span className="text-xs text-slate-300 font-mono">Range: $449.5k – $781.2k</span>
+                </div>
+                <div className="bg-black/60 p-2.5 rounded-xl border border-white/10">
+                  <span className="text-slate-400 text-[11px] uppercase block font-mono">Dev Replacement Benchmark</span>
+                  <span className="text-lg font-bold text-cyan-400 font-mono block">$712.0k – $1.30M</span>
+                </div>
+              </div>
+            </div>
+            <div className="mt-4 pt-3 border-t border-white/10 text-xs text-slate-400">
+              Permanent retention reserve. Assets cannot be transferred or alienated under any single APA.
+            </div>
+          </div>
+
+          {/* Complete Fleet (110 Units) */}
+          <div className="bg-[#111114] border-2 border-purple-500/50 rounded-2xl p-5 flex flex-col justify-between hover:border-purple-400 transition-colors shadow-lg">
+            <div>
+              <div className="flex items-center justify-between text-xs mb-2">
+                <span className="text-purple-400 uppercase font-bold tracking-wider text-xs">COMPLETE FLEET // 100% CATALOG</span>
+                <span className="text-purple-400 font-bold bg-purple-950/80 px-2 py-0.5 rounded border border-purple-500/40 text-[10px]">
+                  TOTAL PORTFOLIO
+                </span>
+              </div>
+              <h3 className="text-base font-black text-white">Complete Fleet (110 Units)</h3>
+              <p className="text-xs text-slate-300 mt-1 font-mono font-semibold text-purple-300">
+                85 Track 1 + 25 Flagships
+              </p>
+              <div className="mt-4 space-y-2">
+                <div className="bg-black/60 p-2.5 rounded-xl border border-white/10">
+                  <span className="text-slate-400 text-[11px] uppercase block font-mono">Total Buyout Anchor</span>
+                  <span className="text-2xl font-black text-purple-300 font-mono block">$673,000</span>
+                  <span className="text-xs text-slate-300 font-mono">Range: $562.0k – $976.5k</span>
+                </div>
+                <div className="bg-black/60 p-2.5 rounded-xl border border-white/10">
+                  <span className="text-slate-400 text-[11px] uppercase block font-mono">Strategic Monopoly Ceiling</span>
+                  <span className="text-lg font-bold text-pink-400 font-mono block">$1.38M – $2.64M+</span>
+                </div>
+              </div>
+            </div>
+            <div className="mt-4 pt-3 border-t border-white/10 text-xs text-slate-400 flex justify-between items-center font-mono">
+              <span>Density: $6,118/unit</span>
+              <span>Multiple: 1.85x ROIC</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* PER-ASSET CAPITAL BENCHMARKS (INDIVIDUAL ASSET EXCLUSIVE BUYOUT) */}
+      <div className="space-y-4">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div>
+            <h2 className="text-xl font-black text-white tracking-tight flex items-center gap-2">
+              <Cpu size={20} className="text-cyan-400" />
+              Per-Asset Capital Benchmarks (Individual Micro-APAs)
+            </h2>
+            <p className="text-xs text-slate-300 mt-0.5">
+              Granular per-unit economic models distinguishing Track 1 Lean Rapid-Sale blueprints from Track 2 Flagship SCADA systems.
+            </p>
+          </div>
+          <span className="px-3 py-1 rounded-full bg-cyan-500/15 border border-cyan-500/40 text-cyan-300 text-xs font-bold uppercase tracking-wider self-start sm:self-auto">
+            PER-UNIT PRICING ARCHITECTURE
+          </span>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {/* Track 1 Single Unit (85 Units) */}
+          <div className="bg-[#111114] border border-cyan-500/40 rounded-2xl p-6 hover:border-cyan-400 transition-colors shadow-lg space-y-4">
+            <div className="flex items-center justify-between border-b border-white/10 pb-3">
+              <div>
+                <span className="text-cyan-400 text-xs font-bold uppercase tracking-widest bg-cyan-500/10 px-2.5 py-0.5 rounded border border-cyan-500/30">
+                  TRACK 1 // LEAN PROTOTYPE
+                </span>
+                <h3 className="text-lg font-black text-white mt-1.5">Track 1 Single Unit ({track1Count} Units)</h3>
+              </div>
+              <span className="text-xs font-mono text-slate-400">Turn-Key Concept</span>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div className="bg-black/60 p-3 rounded-xl border border-white/10">
+                <span className="text-slate-400 text-[10px] uppercase font-mono block">Buyout Anchor</span>
+                <span className="text-xl font-black text-cyan-400 font-mono block">$4,500</span>
+                <span className="text-[11px] text-slate-400 font-mono block">$3,800 – $6,500</span>
+              </div>
+              <div className="bg-black/60 p-3 rounded-xl border border-white/10">
+                <span className="text-slate-400 text-[10px] uppercase font-mono block">Distress Floor</span>
+                <span className="text-xl font-black text-red-400 font-mono block">$800 – $1,500</span>
+                <span className="text-[11px] text-slate-400 font-mono block">Liquidation realization</span>
+              </div>
+              <div className="bg-black/60 p-3 rounded-xl border border-white/10">
+                <span className="text-slate-400 text-[10px] uppercase font-mono block">Dev Replacement</span>
+                <span className="text-xl font-black text-emerald-400 font-mono block">$5,000 – $8,000</span>
+                <span className="text-[11px] text-slate-400 font-mono block">30–40 hrs @ agency rates</span>
+              </div>
+            </div>
+
+            <div className="text-xs text-slate-300 leading-relaxed font-semibold pt-1">
+              Single-view turn-key telemetry prototype with complete PostgreSQL schema, seed data, and simulated operations dashboard.
+            </div>
+          </div>
+
+          {/* Track 2 Flagship Unit (25 Units) */}
+          <div className="bg-[#111114] border border-amber-500/40 rounded-2xl p-6 hover:border-amber-400 transition-colors shadow-lg space-y-4">
+            <div className="flex items-center justify-between border-b border-white/10 pb-3">
+              <div>
+                <span className="text-amber-400 text-xs font-bold uppercase tracking-widest bg-amber-500/10 px-2.5 py-0.5 rounded border border-amber-500/30">
+                  TRACK 2 // FLAGSHIP TIER-1
+                </span>
+                <h3 className="text-lg font-black text-white mt-1.5">Track 2 Flagship Unit ({track2Count} Units)</h3>
+              </div>
+              <span className="text-xs font-mono text-slate-400">Deep-Tech SCADA</span>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div className="bg-black/60 p-3 rounded-xl border border-white/10">
+                <span className="text-slate-400 text-[10px] uppercase font-mono block">Buyout Anchor</span>
+                <span className="text-xl font-black text-amber-400 font-mono block">$14,500</span>
+                <span className="text-[11px] text-slate-400 font-mono block">$9,580 – $16,960 (Full: $18k–$35k)</span>
+              </div>
+              <div className="bg-black/60 p-3 rounded-xl border border-white/10">
+                <span className="text-slate-400 text-[10px] uppercase font-mono block">Distress Floor</span>
+                <span className="text-xl font-black text-red-400 font-mono block">$2,020 – $4,020</span>
+                <span className="text-[11px] text-slate-400 font-mono block">Liquidation realization</span>
+              </div>
+              <div className="bg-black/60 p-3 rounded-xl border border-white/10">
+                <span className="text-slate-400 text-[10px] uppercase font-mono block">Dev Replacement</span>
+                <span className="text-xl font-black text-emerald-400 font-mono block">$18,600 – $37,800</span>
+                <span className="text-[11px] text-slate-400 font-mono block">80+ hrs SCADA physics</span>
+              </div>
+            </div>
+
+            <div className="text-xs text-slate-300 leading-relaxed font-semibold pt-1">
+              Complex multi-view industrial/scientific console with domain-specific physics solver, operator journeys, and mission telemetry.
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* SECTION 2: EXCLUSIVE BUYOUT & DEV REPLACEMENT (DESCENDING ORDER - BIGGEST TO SMALLEST) */}
       <div className="space-y-4">
         <div className="flex items-center justify-between">
