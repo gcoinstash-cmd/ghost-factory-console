@@ -118,7 +118,7 @@ function Audit360Badge() {
                   <div className="text-slate-300 text-xs mt-0.5">
                     Commit: <span className="text-cyan-400 font-bold">7e43696</span> &nbsp;|&nbsp;
                     Build: <span className="text-cyan-400 font-bold">index-DncAsvPE.js</span> &nbsp;|&nbsp;
-                    v<span className="text-emerald-400 font-bold">1.5.3</span>
+                    v<span className="text-emerald-400 font-bold">1.5.4</span>
                   </div>
                 </div>
               </div>
@@ -273,7 +273,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
             className="hidden xl:flex items-center gap-1.5 px-2.5 py-1.5 rounded bg-emerald-500/15 border border-emerald-500/40 text-emerald-300 font-mono text-xs font-bold"
             title="Production Diligence Freeze Lock"
           >
-            <span>Build: v1.5.3</span>
+            <span>Build: v1.5.4</span>
           </div>
 
           <button
@@ -305,12 +305,12 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
         /* SECTION 2 VALUATION HEADER (DESCENDING: STRATEGIC CEILING -> DEV REPLACEMENT -> STRATEGIC BUYOUT -> DISTRESS FLOOR) */
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 py-3 border-b border-white/10 text-xs sm:text-sm w-full">
           {/* Card 1: Strategic Acquisition Ceiling */}
-          <div className="bg-black/75 border border-pink-500/40 hover:border-pink-400 transition-colors w-full flex flex-col justify-between p-5 rounded-xl min-h-[220px] shadow-lg">
+          <div className="bg-black/75 border border-pink-500/40 hover:border-pink-400 transition-colors w-full p-5 flex flex-col justify-between min-h-[230px] rounded-xl shadow-lg">
             <div className="flex flex-col">
-              <span className="inline-flex items-center justify-center px-3 py-1 rounded-md text-[11px] font-mono font-bold leading-none shrink-0 self-start text-pink-400 bg-pink-950/80 border border-pink-500/40 mb-2">
+              <span className="self-start px-2.5 py-1 rounded text-[10px] font-mono font-bold tracking-wider text-pink-400 bg-pink-950/80 border border-pink-500/40 inline-flex items-center justify-center leading-none shrink-0">
                 MONOPOLY PREMIUM
               </span>
-              <h4 className="text-sm font-black tracking-wider uppercase text-zinc-100 whitespace-normal leading-snug">
+              <h4 className="text-xs font-black tracking-wider uppercase text-zinc-200 mt-2 whitespace-normal leading-snug">
                 STRATEGIC ACQUISITION CEILING
               </h4>
               <span className="text-2xl sm:text-3xl font-mono font-black tracking-tight my-2 text-pink-400 block">
@@ -326,12 +326,12 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
           </div>
 
           {/* Card 2: Dev Agency Replacement Benchmark */}
-          <div className="bg-black/75 border border-cyan-500/40 hover:border-cyan-400 transition-colors w-full flex flex-col justify-between p-5 rounded-xl min-h-[220px] shadow-lg">
+          <div className="bg-black/75 border border-cyan-500/40 hover:border-cyan-400 transition-colors w-full p-5 flex flex-col justify-between min-h-[230px] rounded-xl shadow-lg">
             <div className="flex flex-col">
-              <span className="inline-flex items-center justify-center px-3 py-1 rounded-md text-[11px] font-mono font-bold leading-none shrink-0 self-start text-cyan-400 bg-cyan-950/80 border border-cyan-500/40 mb-2">
+              <span className="self-start px-2.5 py-1 rounded text-[10px] font-mono font-bold tracking-wider text-cyan-400 bg-cyan-950/80 border border-cyan-500/40 inline-flex items-center justify-center leading-none shrink-0">
                 REPLACEMENT COST
               </span>
-              <h4 className="text-sm font-black tracking-wider uppercase text-zinc-100 whitespace-normal leading-snug">
+              <h4 className="text-xs font-black tracking-wider uppercase text-zinc-200 mt-2 whitespace-normal leading-snug">
                 DEV AGENCY REPLACEMENT
               </h4>
               <span className="text-2xl sm:text-3xl font-mono font-black tracking-tight my-2 text-cyan-400 block">
@@ -347,12 +347,12 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
           </div>
 
           {/* Card 3: Dual-Track Strategic Buyout Range */}
-          <div className="bg-black/75 border border-amber-500/40 hover:border-amber-400 transition-colors w-full flex flex-col justify-between p-5 rounded-xl min-h-[220px] shadow-lg">
+          <div className="bg-black/75 border border-amber-500/40 hover:border-amber-400 transition-colors w-full p-5 flex flex-col justify-between min-h-[230px] rounded-xl shadow-lg">
             <div className="flex flex-col">
-              <span className="inline-flex items-center justify-center px-3 py-1 rounded-md text-[11px] font-mono font-bold leading-none shrink-0 self-start text-amber-400 bg-amber-950/80 border border-amber-500/40 mb-2">
+              <span className="self-start px-2.5 py-1 rounded text-[10px] font-mono font-bold tracking-wider text-amber-400 bg-amber-950/80 border border-amber-500/40 inline-flex items-center justify-center leading-none shrink-0">
                 PORTFOLIO BUYOUT
               </span>
-              <h4 className="text-sm font-black tracking-wider uppercase text-zinc-100 whitespace-normal leading-snug">
+              <h4 className="text-xs font-black tracking-wider uppercase text-zinc-200 mt-2 whitespace-normal leading-snug">
                 STRATEGIC BUYOUT RANGE
               </h4>
               <span className="text-2xl sm:text-3xl font-mono font-black tracking-tight my-2 text-amber-400 block">
@@ -368,12 +368,12 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
           </div>
 
           {/* Card 4: Distress / Quick-Sale Cash Floor */}
-          <div className="bg-black/75 border border-emerald-500/40 hover:border-emerald-400 transition-colors w-full flex flex-col justify-between p-5 rounded-xl min-h-[220px] shadow-lg">
+          <div className="bg-black/75 border border-emerald-500/40 hover:border-emerald-400 transition-colors w-full p-5 flex flex-col justify-between min-h-[230px] rounded-xl shadow-lg">
             <div className="flex flex-col">
-              <span className="inline-flex items-center justify-center px-3 py-1 rounded-md text-[11px] font-mono font-bold leading-none shrink-0 self-start text-emerald-400 bg-emerald-950/80 border border-emerald-500/40 mb-2">
+              <span className="self-start px-2.5 py-1 rounded text-[10px] font-mono font-bold tracking-wider text-emerald-400 bg-emerald-950/80 border border-emerald-500/40 inline-flex items-center justify-center leading-none shrink-0">
                 LIQUIDATION
               </span>
-              <h4 className="text-sm font-black tracking-wider uppercase text-zinc-100 whitespace-normal leading-snug">
+              <h4 className="text-xs font-black tracking-wider uppercase text-zinc-200 mt-2 whitespace-normal leading-snug">
                 DISTRESS / QUICK-SALE FLOOR
               </h4>
               <span className="text-2xl sm:text-3xl font-mono font-black tracking-tight my-2 text-emerald-400 block">
@@ -389,12 +389,12 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
           </div>
 
           {/* Card 5: Exclusive Vault Buyout */}
-          <div className="bg-black/75 border border-purple-500/40 hover:border-purple-400 transition-colors w-full flex flex-col justify-between p-5 rounded-xl min-h-[220px] shadow-lg">
+          <div className="bg-black/75 border border-purple-500/40 hover:border-purple-400 transition-colors w-full p-5 flex flex-col justify-between min-h-[230px] rounded-xl shadow-lg">
             <div className="flex flex-col">
-              <span className="inline-flex items-center justify-center px-3 py-1 rounded-md text-[11px] font-mono font-bold leading-none shrink-0 self-start text-purple-400 bg-purple-950/80 border border-purple-500/40 mb-2">
+              <span className="self-start px-2.5 py-1 rounded text-[10px] font-mono font-bold tracking-wider text-purple-400 bg-purple-950/80 border border-purple-500/40 inline-flex items-center justify-center leading-none shrink-0">
                 MONOPOLY PREMIUM
               </span>
-              <h4 className="text-sm font-black tracking-wider uppercase text-zinc-100 whitespace-normal leading-snug">
+              <h4 className="text-xs font-black tracking-wider uppercase text-zinc-200 mt-2 whitespace-normal leading-snug">
                 EXCLUSIVE VAULT BUYOUT
               </h4>
               <span className="text-2xl sm:text-3xl font-mono font-black tracking-tight my-2 text-purple-400 block">
@@ -530,7 +530,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
         {/* Screen 1: Garage */}
         <button
           onClick={() => onViewChange('garage')}
-          className={`min-h-[56px] px-3 py-2 flex items-center justify-center gap-3 rounded-xl border transition-all text-center cursor-pointer ${
+          className={`flex items-center justify-center gap-2.5 px-3 py-2.5 min-h-[56px] rounded-xl border transition-all text-center w-full cursor-pointer ${
             currentView === 'garage'
               ? 'bg-emerald-500 text-black border-emerald-400 shadow-lg shadow-emerald-500/25'
               : 'bg-[#111114] text-slate-200 hover:text-white hover:bg-white/5 border-white/10 hover:border-emerald-500/30'
@@ -542,7 +542,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
           }`}>
             <LayoutGrid className="w-5 h-5 shrink-0" />
           </div>
-          <div className="flex flex-col text-left leading-tight min-w-0">
+          <div className="flex flex-col items-center justify-center text-center leading-tight min-w-0">
             <span className={`text-[11px] font-mono font-bold tracking-wider uppercase ${
               currentView === 'garage' ? 'text-black/80' : 'text-zinc-400'
             }`}>
@@ -559,7 +559,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
         {/* Screen 2: Intake */}
         <button
           onClick={() => onViewChange('factory')}
-          className={`min-h-[56px] px-3 py-2 flex items-center justify-center gap-3 rounded-xl border transition-all text-center cursor-pointer ${
+          className={`flex items-center justify-center gap-2.5 px-3 py-2.5 min-h-[56px] rounded-xl border transition-all text-center w-full cursor-pointer ${
             currentView === 'factory'
               ? 'bg-cyan-500 text-black border-cyan-400 shadow-lg shadow-cyan-500/25'
               : 'bg-[#111114] text-slate-200 hover:text-white hover:bg-white/5 border-white/10 hover:border-cyan-500/30'
@@ -571,7 +571,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
           }`}>
             <Cpu className="w-5 h-5 shrink-0" />
           </div>
-          <div className="flex flex-col text-left leading-tight min-w-0">
+          <div className="flex flex-col items-center justify-center text-center leading-tight min-w-0">
             <span className={`text-[11px] font-mono font-bold tracking-wider uppercase ${
               currentView === 'factory' ? 'text-black/80' : 'text-zinc-400'
             }`}>
@@ -588,7 +588,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
         {/* Screen 3: Showroom */}
         <button
           onClick={() => onViewChange('showroom')}
-          className={`min-h-[56px] px-3 py-2 flex items-center justify-center gap-3 rounded-xl border transition-all text-center cursor-pointer ${
+          className={`flex items-center justify-center gap-2.5 px-3 py-2.5 min-h-[56px] rounded-xl border transition-all text-center w-full cursor-pointer ${
             currentView === 'showroom'
               ? 'bg-white text-black border-slate-200 shadow-lg shadow-white/25'
               : 'bg-[#111114] text-slate-200 hover:text-white hover:bg-white/5 border-white/10 hover:border-white/30'
@@ -600,7 +600,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
           }`}>
             <Compass className="w-5 h-5 shrink-0" />
           </div>
-          <div className="flex flex-col text-left leading-tight min-w-0">
+          <div className="flex flex-col items-center justify-center text-center leading-tight min-w-0">
             <span className={`text-[11px] font-mono font-bold tracking-wider uppercase ${
               currentView === 'showroom' ? 'text-black/80' : 'text-zinc-400'
             }`}>
@@ -617,7 +617,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
         {/* Screen 4: Deal Room */}
         <button
           onClick={() => onViewChange('dealdesk')}
-          className={`min-h-[56px] px-3 py-2 flex items-center justify-center gap-3 rounded-xl border transition-all text-center cursor-pointer ${
+          className={`flex items-center justify-center gap-2.5 px-3 py-2.5 min-h-[56px] rounded-xl border transition-all text-center w-full cursor-pointer ${
             currentView === 'dealdesk'
               ? 'bg-amber-500 text-black border-amber-400 shadow-lg shadow-amber-500/25'
               : 'bg-[#111114] text-slate-200 hover:text-white hover:bg-white/5 border-white/10 hover:border-amber-500/30'
@@ -629,7 +629,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
           }`}>
             {isOperatorAuthenticated ? <Unlock className="w-5 h-5 shrink-0" /> : <Lock className="w-5 h-5 shrink-0" />}
           </div>
-          <div className="flex flex-col text-left leading-tight min-w-0">
+          <div className="flex flex-col items-center justify-center text-center leading-tight min-w-0">
             <span className={`text-[11px] font-mono font-bold tracking-wider uppercase ${
               currentView === 'dealdesk' ? 'text-black/80' : 'text-zinc-400'
             }`}>
@@ -646,7 +646,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
         {/* Screen 5: Diagnostics */}
         <button
           onClick={() => onViewChange('maintenance')}
-          className={`min-h-[56px] px-3 py-2 flex items-center justify-center gap-3 rounded-xl border transition-all text-center cursor-pointer ${
+          className={`flex items-center justify-center gap-2.5 px-3 py-2.5 min-h-[56px] rounded-xl border transition-all text-center w-full cursor-pointer ${
             currentView === 'maintenance'
               ? 'bg-purple-500 text-white border-purple-400 shadow-lg shadow-purple-500/25'
               : 'bg-[#111114] text-slate-200 hover:text-white hover:bg-white/5 border-white/10 hover:border-purple-500/30'
@@ -658,7 +658,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
           }`}>
             <Wrench className="w-5 h-5 shrink-0" />
           </div>
-          <div className="flex flex-col text-left leading-tight min-w-0">
+          <div className="flex flex-col items-center justify-center text-center leading-tight min-w-0">
             <span className={`text-[11px] font-mono font-bold tracking-wider uppercase ${
               currentView === 'maintenance' ? 'text-white/80' : 'text-zinc-400'
             }`}>
@@ -675,7 +675,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
         {/* Screen 6: Pricing */}
         <button
           onClick={() => onViewChange('pricing')}
-          className={`min-h-[56px] px-3 py-2 flex items-center justify-center gap-3 rounded-xl border transition-all text-center cursor-pointer ${
+          className={`flex items-center justify-center gap-2.5 px-3 py-2.5 min-h-[56px] rounded-xl border transition-all text-center w-full cursor-pointer ${
             currentView === 'pricing'
               ? 'bg-teal-500 text-black border-teal-400 shadow-lg shadow-teal-500/25'
               : 'bg-[#111114] text-slate-200 hover:text-white hover:bg-white/5 border-white/10 hover:border-teal-500/30'
@@ -687,7 +687,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
           }`}>
             <Tag className="w-5 h-5 shrink-0" />
           </div>
-          <div className="flex flex-col text-left leading-tight min-w-0">
+          <div className="flex flex-col items-center justify-center text-center leading-tight min-w-0">
             <span className={`text-[11px] font-mono font-bold tracking-wider uppercase ${
               currentView === 'pricing' ? 'text-black/80' : 'text-zinc-400'
             }`}>
@@ -704,7 +704,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
         {/* Screen 7: Valuation Hub */}
         <button
           onClick={() => onViewChange('valuationhub')}
-          className={`col-span-2 sm:col-span-2 lg:col-span-1 min-h-[56px] px-3 py-2 flex items-center justify-center gap-3 rounded-xl border transition-all text-center cursor-pointer ${
+          className={`col-span-2 sm:col-span-2 lg:col-span-1 flex items-center justify-center gap-2.5 px-3 py-2.5 min-h-[56px] rounded-xl border transition-all text-center w-full cursor-pointer ${
             currentView === 'valuationhub'
               ? 'bg-rose-500 text-white border-rose-400 shadow-lg shadow-rose-500/25'
               : 'bg-[#111114] text-slate-200 hover:text-white hover:bg-white/5 border-white/10 hover:border-rose-500/30'
@@ -716,7 +716,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
           }`}>
             <TrendingUp className="w-5 h-5 shrink-0" />
           </div>
-          <div className="flex flex-col text-left leading-tight min-w-0">
+          <div className="flex flex-col items-center justify-center text-center leading-tight min-w-0">
             <span className={`text-[11px] font-mono font-bold tracking-wider uppercase ${
               currentView === 'valuationhub' ? 'text-white/80' : 'text-zinc-400'
             }`}>
