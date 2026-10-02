@@ -154,7 +154,7 @@ export const App: React.FC = () => {
       <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#0A0A0B]/95 backdrop-blur-xl border-t border-emerald-500/30 px-2 py-2 flex items-center justify-around shadow-2xl font-mono text-xs">
         <button
           onClick={() => setCurrentView('garage')}
-          className={`flex flex-col items-center gap-1 py-1 px-3 rounded-xl transition-all cursor-pointer ${
+          className={`flex flex-col items-center gap-1 py-2 px-3 rounded-xl min-h-[44px] justify-center transition-all cursor-pointer ${
             currentView === 'garage'
               ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/50 font-black'
               : 'text-slate-400 hover:text-white'
@@ -166,7 +166,7 @@ export const App: React.FC = () => {
 
         <button
           onClick={() => setCurrentView('showroom')}
-          className={`flex flex-col items-center gap-1 py-1 px-3 rounded-xl transition-all cursor-pointer ${
+          className={`flex flex-col items-center gap-1 py-2 px-3 rounded-xl min-h-[44px] justify-center transition-all cursor-pointer ${
             currentView === 'showroom'
               ? 'bg-white/20 text-white border border-white/40 font-black'
               : 'text-slate-400 hover:text-white'
@@ -183,7 +183,7 @@ export const App: React.FC = () => {
             }
             setCurrentView('dealdesk');
           }}
-          className={`flex flex-col items-center gap-1 py-1 px-3 rounded-xl transition-all cursor-pointer ${
+          className={`flex flex-col items-center gap-1 py-2 px-3 rounded-xl min-h-[44px] justify-center transition-all cursor-pointer ${
             currentView === 'dealdesk'
               ? 'bg-amber-500/20 text-amber-400 border border-amber-500/50 font-black'
               : 'text-slate-400 hover:text-white'
@@ -198,7 +198,7 @@ export const App: React.FC = () => {
 
         <button
           onClick={() => setCurrentView('maintenance')}
-          className={`flex flex-col items-center gap-1 py-1 px-3 rounded-xl transition-all cursor-pointer ${
+          className={`flex flex-col items-center gap-1 py-2 px-3 rounded-xl min-h-[44px] justify-center transition-all cursor-pointer ${
             currentView === 'maintenance'
               ? 'bg-purple-500/20 text-purple-400 border border-purple-500/50 font-black'
               : 'text-slate-400 hover:text-white'
