@@ -83,19 +83,21 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
             </p>
           </div>
 
-          {/* Top Metric: Total Individual Buyout Planning Anchor */}
-          <div className="bg-[#111114] border-2 border-amber-500/60 rounded-2xl p-5 shrink-0 text-center shadow-xl shadow-amber-500/10">
-            <span className="text-xs uppercase font-black tracking-widest text-amber-400 block mb-1">
-              Dual-Track Buyout Anchor
-            </span>
-            <div className="text-3xl sm:text-4xl font-black text-white font-mono tracking-tight">
-              $721,000
+          {/* Top Metric: Strategic Acquisition Ceiling */}
+          <div className="bg-[#111114] border-2 border-purple-500/60 rounded-2xl p-5 shrink-0 text-center shadow-xl shadow-purple-500/10">
+            <div className="flex flex-wrap items-center justify-center gap-2 mb-1">
+              <span className="text-xs uppercase font-black tracking-widest text-purple-400 block">
+                STRATEGIC ACQUISITION CEILING
+              </span>
+              <span className="text-[10px] font-mono font-black text-pink-400 bg-pink-950/80 px-1.5 py-0.5 rounded border border-pink-500/40">
+                MONOPOLY PREMIUM
+              </span>
             </div>
-            <span className="text-xs text-slate-300 block mt-1 font-semibold">
-              Range: $608.0k – $1.04M
-            </span>
-            <span className="text-[11px] text-slate-400 block mt-0.5">
-              {track1Count} T1 ($4.5k) + {track2Count} Flagships ($14.5k)
+            <div className="text-3xl sm:text-4xl font-black text-white font-mono tracking-tight">
+              $1.49M – $2.85M+
+            </div>
+            <span className="text-xs text-purple-300 block mt-1 font-semibold">
+              Deep-Tech Enterprise APA Ceiling (114 Catalog Models)
             </span>
           </div>
         </div>

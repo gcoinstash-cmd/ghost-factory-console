@@ -303,7 +303,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
         </React.Suspense>
       ) : (
         /* SECTION 2 VALUATION HEADER (DESCENDING: STRATEGIC CEILING -> DEV REPLACEMENT -> STRATEGIC BUYOUT -> DISTRESS FLOOR) */
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 py-3 border-b border-white/10 text-xs sm:text-sm w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 py-3 border-b border-white/10 text-xs sm:text-sm w-full">
           {/* Card 1: Strategic Acquisition Ceiling */}
           <div className="bg-black/75 border border-pink-500/40 rounded-xl p-3.5 flex flex-col justify-between hover:border-pink-400 transition-colors w-full">
             <div className="flex items-center justify-between text-slate-300 text-xs font-bold uppercase tracking-wider">
@@ -349,6 +349,19 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
             <div className="mt-2">
               <span className="text-xl sm:text-2xl font-black text-emerald-400 block tracking-tight">$128.0k – $246.0k</span>
               <span className="text-sm text-slate-200 block font-semibold leading-relaxed mt-0.5">40–60% buyer discount quick realization</span>
+            </div>
+          </div>
+
+          {/* Card 5: Exclusive Vault Buyout */}
+          <div className="bg-black/75 border border-purple-500/40 rounded-xl p-3.5 flex flex-col justify-between hover:border-purple-400 transition-colors w-full">
+            <div className="flex items-center justify-between text-slate-300 text-xs font-bold uppercase tracking-wider">
+              <span>Exclusive Vault Buyout</span>
+              <span className="text-purple-400 font-mono text-xs bg-purple-950/80 px-1.5 py-0.5 rounded border border-purple-500/40 font-black">MONOPOLY PREMIUM</span>
+            </div>
+            <div className="mt-2">
+              <span className="text-xl sm:text-2xl font-black text-purple-400 block tracking-tight">$13.1k – $25.0k+</span>
+              <span className="text-sm text-slate-200 block font-semibold leading-relaxed mt-0.5">Average Exclusive Buyout / Vault (T1 + T2 Fleet Weighted)</span>
+              <span className="text-xs text-slate-400 block mt-0.5 font-normal">Includes IP Transfer + Sovereign Reserve Lockout</span>
             </div>
           </div>
         </div>
@@ -450,6 +463,17 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
                 <div className="mt-1.5">
                   <span className="text-base sm:text-lg font-black text-emerald-400 block">$128.0k – $246.0k</span>
                   <span className="text-xs text-slate-300 block font-semibold">40–60% Realization</span>
+                </div>
+              </div>
+
+              <div className="min-w-[210px] shrink-0 snap-start bg-black/85 border-2 border-purple-500/50 rounded-xl p-3 flex flex-col justify-between">
+                <div className="flex items-center justify-between text-xs font-bold text-slate-300 uppercase tracking-wider">
+                  <span>Vault Buyout</span>
+                  <span className="text-purple-400 font-mono text-xs bg-purple-950/80 px-1.5 py-0.5 rounded border border-purple-500/40 font-black">MONOPOLY</span>
+                </div>
+                <div className="mt-1.5">
+                  <span className="text-base sm:text-lg font-black text-purple-400 block">$13.1k – $25.0k+</span>
+                  <span className="text-xs text-slate-300 block font-semibold">T1 + T2 Weighted</span>
                 </div>
               </div>
             </div>
