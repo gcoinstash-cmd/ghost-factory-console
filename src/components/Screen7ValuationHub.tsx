@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { 
   Shield, 
   TrendingUp, 
@@ -6,7 +6,12 @@ import {
   AlertTriangle, 
   Layers, 
   BarChart3, 
-  Cpu 
+  Cpu,
+  Sliders,
+  Calculator,
+  ArrowUpRight,
+  Maximize2,
+  Activity
 } from 'lucide-react';
 
 interface Screen7ValuationHubProps {
@@ -22,6 +27,29 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
 }) => {
   const track1Count = 85;
   const track2Count = 25;
+
+  const [sliderVal, setSliderVal] = useState<number>(22);
+  const floorVal = 118500;
+  const ceilingVal = 2640000;
+  const projectedVal = Math.round(floorVal + (ceilingVal - floorVal) * (sliderVal / 100));
+
+  const formatCurrency = (val: number) => {
+    return new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+      maximumFractionDigits: 0
+    }).format(val);
+  };
+
+  const getScenarioLabel = (pct: number) => {
+    if (pct <= 10) return { label: 'Distress Liquidation Realization ($118.5k)', color: 'text-red-400 bg-red-950/80 border-red-500/40' };
+    if (pct <= 35) return { label: 'Dual-Track Buyout Anchor Target ($673.0k)', color: 'text-amber-400 bg-amber-950/80 border-amber-500/40' };
+    if (pct <= 65) return { label: 'Dev Agency Replacement Benchmark ($1.25M mid)', color: 'text-cyan-400 bg-cyan-950/80 border-cyan-500/40' };
+    if (pct <= 85) return { label: 'Strategic Acquisition Entry ($1.38M+)', color: 'text-purple-400 bg-purple-950/80 border-purple-500/40' };
+    return { label: 'Strategic Deep-Tech Monopoly Ceiling ($2.64M+)', color: 'text-pink-400 bg-pink-950/80 border-pink-500/40' };
+  };
+
+  const scenarioLabel = getScenarioLabel(sliderVal);
 
   return (
     <div className="space-y-8 font-mono pb-12">
@@ -62,48 +90,220 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
         </div>
       </div>
 
-      {/* Vault Retention Gauge (80% Protected Floor) */}
-      <div className="border border-emerald-500/30 bg-emerald-950/10 rounded-2xl p-6 backdrop-blur-xl">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
-          <div className="flex items-center gap-3">
-            <div className="p-2.5 rounded-xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-400">
-              <Shield size={20} />
-            </div>
+      {/* CAPITAL ALLOCATOR INTELLIGENCE */}
+      <div className="space-y-4">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div>
+            <h2 className="text-xl font-black text-white tracking-tight flex items-center gap-2">
+              <Activity size={20} className="text-amber-400" />
+              Capital Allocator Intelligence Suite
+            </h2>
+            <p className="text-xs text-slate-300 mt-0.5">
+              5 institutional telemetry modules for portfolio risk management, capital density, and dynamic scenario stress-testing.
+            </p>
+          </div>
+          <span className="px-3 py-1 rounded-full bg-amber-500/15 border border-amber-500/40 text-amber-300 text-xs font-bold uppercase tracking-wider self-start sm:self-auto">
+            5 ALLOCATOR MODULES
+          </span>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {/* Module 1: Capital Density Gauge */}
+          <div className="bg-[#111114] border border-amber-500/40 rounded-2xl p-5 flex flex-col justify-between hover:border-amber-400 transition-colors shadow-lg">
             <div>
-              <h2 className="text-lg font-black text-white flex items-center gap-2">
-                Vault Retention Floor: 80% Hard-Locked
-              </h2>
-              <p className="text-xs text-slate-300">
-                Guarantees portfolio retains ≥ 80% of all cataloged assets at every phase. Micro-APAs are capped.
-              </p>
+              <div className="flex items-center justify-between text-xs mb-2">
+                <span className="text-slate-300 uppercase font-bold tracking-wider text-xs flex items-center gap-1.5">
+                  <Calculator size={13} className="text-amber-400" /> Module 1: Capital Density
+                </span>
+                <span className="text-amber-400 font-bold bg-amber-950/80 px-2 py-0.5 rounded border border-amber-500/40 text-xs">
+                  DENSITY GAUGE
+                </span>
+              </div>
+              <h3 className="text-sm font-bold text-white">Portfolio Capital Density</h3>
+              <div className="mt-3">
+                <span className="text-3xl font-black text-amber-400 font-mono tracking-tight block">
+                  $6,118 / Asset
+                </span>
+                <div className="mt-1.5 px-3 py-1.5 rounded-lg bg-black/60 border border-white/10 text-xs text-slate-300 font-mono">
+                  Formula: <strong className="text-amber-300">NAV Anchor ($673.0k)</strong> / Active Fleet ({totalAssets} Units)
+                </div>
+              </div>
+            </div>
+            <div className="mt-4 pt-3 border-t border-white/10 text-xs text-slate-300 leading-relaxed font-semibold">
+              Track 2 Flagship additions push density toward $10k+; Track 1 drives velocity.
             </div>
           </div>
-          <div className="flex items-center gap-2 text-xs font-bold shrink-0">
-            <span className="px-3 py-1.5 rounded-xl bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">
-              {retainedFloor} UNITS VAULTED
-            </span>
-            <span className="px-3 py-1.5 rounded-xl bg-amber-500/20 text-amber-300 border border-amber-500/40">
-              MAX {maxTransferable} APA CAPACITY
-            </span>
+
+          {/* Module 2: 80/20 Vault Liquidity Capacity Bar */}
+          <div className="bg-[#111114] border border-emerald-500/40 rounded-2xl p-5 flex flex-col justify-between hover:border-emerald-400 transition-colors shadow-lg">
+            <div>
+              <div className="flex items-center justify-between text-xs mb-2">
+                <span className="text-slate-300 uppercase font-bold tracking-wider text-xs flex items-center gap-1.5">
+                  <Shield size={13} className="text-emerald-400" /> Module 2: Vault Liquidity
+                </span>
+                <span className="text-emerald-400 font-bold bg-emerald-950/80 px-2 py-0.5 rounded border border-emerald-500/40 text-[11px] flex items-center gap-1">
+                  <Lock size={10} /> HARD RETENTION FLOOR ENFORCED
+                </span>
+              </div>
+              <h3 className="text-sm font-bold text-white">80/20 Vault Liquidity Capacity Bar</h3>
+              
+              <div className="mt-3">
+                {/* Visual Bar: 80% Emerald (Protected Vault) vs. 20% Gold (Authorized Liquidity) */}
+                <div className="w-full bg-black/80 rounded-full h-4 border border-white/15 overflow-hidden flex shadow-inner">
+                  <div 
+                    className="bg-emerald-500 h-full flex items-center justify-center text-[10px] font-black text-black font-mono transition-all duration-500" 
+                    style={{ width: '80%' }}
+                    title="80% Protected Vault Floor"
+                  >
+                    80% PROTECTED VAULT
+                  </div>
+                  <div 
+                    className="bg-amber-400 h-full flex items-center justify-center text-[10px] font-black text-black font-mono transition-all duration-500" 
+                    style={{ width: '20%' }}
+                    title="20% Authorized Liquidity Ceiling"
+                  >
+                    20% LIQUID
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2.5 text-xs">
+                  <div className="p-2.5 rounded-lg bg-emerald-950/30 border border-emerald-500/30">
+                    <span className="text-emerald-400 font-bold block">{retainedFloor} Units Vaulted</span>
+                    <span className="text-[11px] text-slate-300 font-mono">$538,400 Protected Asset Base</span>
+                  </div>
+                  <div className="p-2.5 rounded-lg bg-amber-950/30 border border-amber-500/30 sm:text-right">
+                    <span className="text-amber-400 font-bold block">{maxTransferable} Units Max Liquid</span>
+                    <span className="text-[11px] text-slate-300 font-mono">$134,600 Realization Capacity @ Anchor</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="mt-3 pt-3 border-t border-white/10 text-xs text-slate-300 leading-relaxed font-semibold">
+              Security Lock: HARD RETENTION FLOOR ENFORCED. Max 22 transferable units.
+            </div>
+          </div>
+
+          {/* Module 3: Enterprise Replacement Multiple (ROIC) */}
+          <div className="bg-[#111114] border border-cyan-500/40 rounded-2xl p-5 flex flex-col justify-between hover:border-cyan-400 transition-colors shadow-lg">
+            <div>
+              <div className="flex items-center justify-between text-xs mb-2">
+                <span className="text-slate-300 uppercase font-bold tracking-wider text-xs flex items-center gap-1.5">
+                  <ArrowUpRight size={13} className="text-cyan-400" /> Module 3: Rebuild Multiple
+                </span>
+                <span className="text-cyan-400 font-bold bg-cyan-950/80 px-2 py-0.5 rounded border border-cyan-500/40 text-xs">
+                  1.85x ROIC
+                </span>
+              </div>
+              <h3 className="text-sm font-bold text-white">Enterprise Replacement Multiple (ROIC)</h3>
+              <div className="mt-3">
+                <span className="text-3xl font-black text-cyan-400 font-mono tracking-tight block">
+                  1.85x Rebuild Multiple
+                </span>
+                <div className="mt-1.5 px-3 py-1.5 rounded-lg bg-black/60 border border-white/10 text-xs text-slate-300 font-mono">
+                  Comparative: <strong className="text-cyan-300">Dev Agency Cost ($1.25M mid)</strong> vs. Buyout Anchor ($673.0k)
+                </div>
+              </div>
+            </div>
+            <div className="mt-4 pt-3 border-t border-white/10 text-xs text-slate-300 leading-relaxed font-semibold">
+              Buyer Signal: Represents a 46% acquisition discount vs. 4,000+ custom agency dev hours.
+            </div>
+          </div>
+
+          {/* Module 4: Valuation Spread & Asymmetry */}
+          <div className="bg-[#111114] border border-purple-500/40 rounded-2xl p-5 flex flex-col justify-between hover:border-purple-400 transition-colors shadow-lg">
+            <div>
+              <div className="flex items-center justify-between text-xs mb-2">
+                <span className="text-slate-300 uppercase font-bold tracking-wider text-xs flex items-center gap-1.5">
+                  <Maximize2 size={13} className="text-purple-400" /> Module 4: Spread & Asymmetry
+                </span>
+                <span className="text-purple-400 font-bold bg-purple-950/80 px-2 py-0.5 rounded border border-purple-500/40 text-xs">
+                  22.3x ASYMMETRY
+                </span>
+              </div>
+              <h3 className="text-sm font-bold text-white">Valuation Spread & Asymmetry</h3>
+              <div className="mt-3 space-y-1.5">
+                <div className="flex justify-between items-center text-xs p-2 rounded-lg bg-black/60 border border-white/10">
+                  <span className="text-slate-300">Floor Realization:</span>
+                  <span className="text-red-400 font-bold font-mono">$118.5k Distress Realization</span>
+                </div>
+                <div className="flex justify-between items-center text-xs p-2 rounded-lg bg-black/60 border border-white/10">
+                  <span className="text-slate-300">Ceiling Premium:</span>
+                  <span className="text-purple-400 font-bold font-mono">$2.64M+ Strategic Deep-Tech Monopoly</span>
+                </div>
+              </div>
+            </div>
+            <div className="mt-4 pt-3 border-t border-white/10 text-xs text-slate-300 leading-relaxed font-semibold">
+              Delta: 22.3x Upside Asymmetry Window between distress floor and monopoly ceiling.
+            </div>
+          </div>
+
+          {/* Module 5: Interactive Scenario Stress-Tester */}
+          <div className="col-span-1 md:col-span-2 bg-[#111114] border-2 border-emerald-500/50 rounded-2xl p-6 hover:border-emerald-400 transition-colors shadow-xl relative overflow-hidden">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-white/10">
+              <div>
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="text-xs font-black uppercase tracking-wider text-emerald-400 flex items-center gap-1.5">
+                    <Sliders size={14} /> MODULE 5 // DYNAMIC STRESS-TESTER
+                  </span>
+                  <span className={`text-[11px] font-bold px-2 py-0.5 rounded border ${scenarioLabel.color}`}>
+                    {scenarioLabel.label}
+                  </span>
+                </div>
+                <h3 className="text-lg font-black text-white">Interactive Scenario Stress-Tester</h3>
+                <p className="text-xs text-slate-300 mt-0.5">
+                  Real-time dynamic sensitivity engine across liquidation floor ($118.5k) to strategic monopoly ceiling ($2.64M+).
+                </p>
+              </div>
+
+              <div className="bg-black/80 border border-emerald-500/50 rounded-xl px-5 py-3 text-right shrink-0">
+                <span className="text-xs text-slate-400 uppercase font-mono block">Projected Portfolio Realization</span>
+                <span className="text-2xl sm:text-3xl font-black text-emerald-400 font-mono tracking-tight block">
+                  {formatCurrency(projectedVal)}
+                </span>
+                <span className="text-[11px] text-slate-400 font-mono">
+                  Stress Position: {sliderVal}% Realization Index
+                </span>
+              </div>
+            </div>
+
+            {/* Range Slider Control */}
+            <div className="mt-6 space-y-3">
+              <div className="flex items-center justify-between text-xs font-mono">
+                <span className="text-red-400 font-bold">0% (Distress Floor $118.5k)</span>
+                <span className="text-amber-400 font-bold hidden sm:inline">22% Anchor ($673.0k)</span>
+                <span className="text-cyan-400 font-bold hidden md:inline">45% Dev Rebuild ($1.25M)</span>
+                <span className="text-purple-400 font-bold">100% (Strategic Monopoly $2.64M+)</span>
+              </div>
+
+              <input
+                type="range"
+                min="0"
+                max="100"
+                step="1"
+                value={sliderVal}
+                onChange={(e) => setSliderVal(Number(e.target.value))}
+                className="w-full h-3 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-emerald-400 hover:accent-emerald-300 transition-all"
+                title="Interactive Portfolio Stress-Tester Slider"
+              />
+
+              <div className="flex items-center justify-between text-xs text-slate-400 font-mono">
+                <span>$118,500</span>
+                <span className="text-slate-200 font-semibold text-center">
+                  Live Dynamic Readout: {formatCurrency(projectedVal)} @ {sliderVal}%
+                </span>
+                <span>$2,640,000</span>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Visual Progress Bar */}
-        <div className="w-full bg-black/60 rounded-full h-3 border border-white/10 overflow-hidden flex">
-          <div 
-            className="bg-emerald-500 h-full transition-all duration-500" 
-            style={{ width: `${(retainedFloor / totalAssets) * 100}%` }}
-            title={`Vault Retained: ${retainedFloor} Assets`}
-          />
-          <div 
-            className="bg-amber-500 h-full transition-all duration-500" 
-            style={{ width: `${(maxTransferable / totalAssets) * 100}%` }}
-            title={`Max Transferable Capacity: ${maxTransferable} Assets`}
-          />
-        </div>
-        <div className="flex justify-between items-center text-xs text-slate-400 mt-2">
-          <span>80% Minimum Retained Floor ({retainedFloor} Assets Permanent)</span>
-          <span>20% Max APA Transfer Ceiling ({maxTransferable} Units Limit)</span>
+        {/* COMPLIANCE & LEGAL SAFETY LOCK */}
+        <div className="border border-white/10 bg-black/60 rounded-2xl p-5 flex items-start gap-3.5 text-xs text-slate-400">
+          <AlertTriangle size={18} className="text-amber-400 shrink-0 mt-0.5" />
+          <p className="leading-relaxed">
+            <strong className="text-slate-300">INTERNAL SCENARIO MODELING ONLY — PRE-REVENUE ASSET PORTFOLIO — VALUES ARE ESTIMATES FOR MANAGEMENT STRATEGY AND NOT GUARANTEED MARKET APPRAISALS.</strong>{' '}
+            All digital vehicles are pre-revenue interactive concept demos and source-code blueprints using simulated data. These benchmarks represent replacement cost estimates, orderly non-exclusive licensing models, and strategic exclusive buyout ceilings.
+          </p>
         </div>
       </div>
 
