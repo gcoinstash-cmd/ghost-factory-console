@@ -19,10 +19,20 @@ export const OperatorAuthModal: React.FC<OperatorAuthModalProps> = ({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Accept valid operator access keys or any reasonable tester input
     if (accessKey.trim().length > 0) {
-      onAuthenticate();
-      onClose();
+      try {
+        sessionStorage.setItem('gfcc_operator_auth', 'true');
+      } catch {}
+      try {
+        onAuthenticate();
+      } catch (err) {
+        console.error('OperatorAuthModal onAuthenticate error:', err);
+      }
+      try {
+        onClose();
+      } catch (err) {
+        console.error('OperatorAuthModal onClose error:', err);
+      }
     } else {
       setError(true);
     }

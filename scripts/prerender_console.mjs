@@ -109,7 +109,7 @@ let html = fs.readFileSync(htmlPath, 'utf8');
 
 // Replace contents of #root with prerendered cards (matching cleanly up to <script type="module")
 const rootRegex = /<div id="root">[\s\S]*?<\/div>(\s*<script type="module)/;
-const replacement = `<div id="root">\n    <section id="static-prerender" style="display:none;" aria-hidden="true">\n${cardsHtml}\n    </section>\n    <footer id="static-footer" style="padding:24px 16px;text-align:center;font-family:monospace;font-size:12px;color:#94a3b8;border-top:1px solid rgba(255,255,255,0.1);background:#0A0A0B;">\n      <div style="max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">\n        <span>GFCC Build: v1.2.1 | Commit: 162c14a</span>\n        <span style="color:#10B981;font-weight:bold;">110 / 110 Verified Digital Assets</span>\n      </div>\n    </footer>\n  </div>$1`;
+const replacement = `<div id="root">\n    <section id="static-prerender" style="display:none;" aria-hidden="true">\n${cardsHtml}\n    </section>\n    <footer id="static-footer" style="padding:24px 16px;text-align:center;font-family:monospace;font-size:12px;color:#94a3b8;border-top:1px solid rgba(255,255,255,0.1);background:#0A0A0B;">\n      <div style="max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">\n        <span>GFCC Build: v1.3.1 | Commit: 162c14a</span>\n        <span style="color:#10B981;font-weight:bold;">110 / 110 Verified Digital Assets</span>\n      </div>\n    </footer>\n  </div>$1`;
 
 if (rootRegex.test(html)) {
   html = html.replace(rootRegex, replacement);

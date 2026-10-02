@@ -53,7 +53,7 @@ export interface CatalogData {
 }
 
 export const CATALOG_DATA: CatalogData = {
-  "catalog_version": "1.2.1",
+  "catalog_version": "1.3.1",
   "store": "Aura & Grid",
   "store_url": "https://auraandgrid.gumroad.com",
   "total_flagships": 110,
