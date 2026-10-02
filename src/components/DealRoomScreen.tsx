@@ -335,21 +335,9 @@ export const DealRoomCore: React.FC<DealRoomScreenProps> = ({
             </span>
           </div>
 
-          {/* Metric Cards Panel */}
+          {/* Metric Cards Panel (Descending Order: Ask -> Target Close -> FMV) */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {/* Card 1: Annualized Fair Market Value (FMV) */}
-            <div className="bg-black/60 border border-emerald-500/30 hover:border-emerald-400/70 transition-colors rounded-xl p-4 flex flex-col justify-between space-y-2">
-              <div className="flex items-center justify-between text-xs">
-                <span className="text-slate-400 uppercase font-bold tracking-wider">Annualized Fair Market Value (FMV)</span>
-                <span className="text-emerald-400 font-bold bg-emerald-950/60 px-1.5 py-0.5 rounded border border-emerald-500/30 text-[10px]">FMV</span>
-              </div>
-              <div>
-                <span className="text-2xl sm:text-3xl font-black text-emerald-400 font-mono block">$54.4k – $121.3k / yr</span>
-                <span className="text-xs text-slate-300 mt-1 block">Annualized portfolio baseline deployment yield</span>
-              </div>
-            </div>
-
-            {/* Card 2: Direct B2B Enterprise Ask */}
+            {/* Card 1: Direct B2B Enterprise Ask */}
             <div className="bg-black/60 border border-cyan-500/30 hover:border-cyan-400/70 transition-colors rounded-xl p-4 flex flex-col justify-between space-y-2">
               <div className="flex items-center justify-between text-xs">
                 <span className="text-slate-400 uppercase font-bold tracking-wider">Direct B2B Enterprise Ask</span>
@@ -361,7 +349,7 @@ export const DealRoomCore: React.FC<DealRoomScreenProps> = ({
               </div>
             </div>
 
-            {/* Card 3: Realistic Accepted Offer (Target Close) */}
+            {/* Card 2: Realistic Accepted Offer (Target Close) */}
             <div className="bg-black/60 border border-amber-500/30 hover:border-amber-400/70 transition-colors rounded-xl p-4 flex flex-col justify-between space-y-2">
               <div className="flex items-center justify-between text-xs">
                 <span className="text-slate-400 uppercase font-bold tracking-wider">Realistic Accepted Offer (Target Close)</span>
@@ -370,6 +358,18 @@ export const DealRoomCore: React.FC<DealRoomScreenProps> = ({
               <div>
                 <span className="text-2xl sm:text-3xl font-black text-amber-400 font-mono block">$62.0k – $104.8k / yr</span>
                 <span className="text-xs text-slate-300 mt-1 block">Wire-ready acceptable institutional run-rate</span>
+              </div>
+            </div>
+
+            {/* Card 3: Annualized Fair Market Value (FMV) */}
+            <div className="bg-black/60 border border-emerald-500/30 hover:border-emerald-400/70 transition-colors rounded-xl p-4 flex flex-col justify-between space-y-2">
+              <div className="flex items-center justify-between text-xs">
+                <span className="text-slate-400 uppercase font-bold tracking-wider">Annualized Fair Market Value (FMV)</span>
+                <span className="text-emerald-400 font-bold bg-emerald-950/60 px-1.5 py-0.5 rounded border border-emerald-500/30 text-[10px]">FMV</span>
+              </div>
+              <div>
+                <span className="text-2xl sm:text-3xl font-black text-emerald-400 font-mono block">$54.4k – $121.3k / yr</span>
+                <span className="text-xs text-slate-300 mt-1 block">Annualized portfolio baseline deployment yield</span>
               </div>
             </div>
           </div>
@@ -502,34 +502,6 @@ export const DealRoomCore: React.FC<DealRoomScreenProps> = ({
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-              {/* Vault 1: Active Liquidity Tranche */}
-              <div className="bg-black/60 border-2 border-amber-500/40 rounded-xl p-4 flex flex-col justify-between space-y-3 hover:border-amber-400/70 transition-colors">
-                <div>
-                  <div className="flex items-center justify-between text-xs mb-1">
-                    <span className="text-amber-400 uppercase font-bold tracking-wider text-xs">VAULT 1 // LIQUIDITY</span>
-                    <span className="text-amber-400 font-bold bg-amber-950/60 px-2 py-0.5 rounded border border-amber-500/30 text-[10px]">
-                      AUTHORIZED FOR ACQUISITION
-                    </span>
-                  </div>
-                  <h5 className="text-sm font-black text-white">Active Liquidity Tranche ({safeMaxTransferable} Units Max)</h5>
-                  <p className="text-xs text-amber-300 font-mono font-semibold mt-0.5">17 Track 1 Units + 5 Track 2 Flagships</p>
-                  <div className="mt-3 space-y-2">
-                    <div className="bg-black/80 p-2 rounded-lg border border-white/10">
-                      <span className="text-slate-400 text-[10px] uppercase block font-mono">Planning Anchor</span>
-                      <span className="text-xl font-black text-amber-400 font-mono block">$149,000</span>
-                      <span className="text-[11px] text-slate-300 font-mono">Range: $112.5k – $195.3k</span>
-                    </div>
-                    <div className="bg-black/80 p-2 rounded-lg border border-white/10">
-                      <span className="text-slate-400 text-[10px] uppercase block font-mono">Distress Cash Floor</span>
-                      <span className="text-base font-bold text-red-400 font-mono block">$23.7k – $45.6k</span>
-                    </div>
-                  </div>
-                </div>
-                <span className="text-[11px] text-slate-400 block pt-1 border-t border-white/10">
-                  80% retention limit strictly bounds micro-APA liquidations to 22 units.
-                </span>
-              </div>
-
               {/* Vault 2: Core Sovereign Reserve */}
               <div className="bg-black/60 border-2 border-emerald-500/40 rounded-xl p-4 flex flex-col justify-between space-y-3 hover:border-emerald-400/70 transition-colors">
                 <div>
@@ -555,6 +527,34 @@ export const DealRoomCore: React.FC<DealRoomScreenProps> = ({
                 </div>
                 <span className="text-[11px] text-slate-400 block pt-1 border-t border-white/10">
                   Permanent retention reserve. Assets cannot be transferred under any APA.
+                </span>
+              </div>
+
+              {/* Vault 1: Active Liquidity Tranche */}
+              <div className="bg-black/60 border-2 border-amber-500/40 rounded-xl p-4 flex flex-col justify-between space-y-3 hover:border-amber-400/70 transition-colors">
+                <div>
+                  <div className="flex items-center justify-between text-xs mb-1">
+                    <span className="text-amber-400 uppercase font-bold tracking-wider text-xs">VAULT 1 // LIQUIDITY</span>
+                    <span className="text-amber-400 font-bold bg-amber-950/60 px-2 py-0.5 rounded border border-amber-500/30 text-[10px]">
+                      AUTHORIZED FOR ACQUISITION
+                    </span>
+                  </div>
+                  <h5 className="text-sm font-black text-white">Active Liquidity Tranche ({safeMaxTransferable} Units Max)</h5>
+                  <p className="text-xs text-amber-300 font-mono font-semibold mt-0.5">17 Track 1 Units + 5 Track 2 Flagships</p>
+                  <div className="mt-3 space-y-2">
+                    <div className="bg-black/80 p-2 rounded-lg border border-white/10">
+                      <span className="text-slate-400 text-[10px] uppercase block font-mono">Planning Anchor</span>
+                      <span className="text-xl font-black text-amber-400 font-mono block">$149,000</span>
+                      <span className="text-[11px] text-slate-300 font-mono">Range: $112.5k – $195.3k</span>
+                    </div>
+                    <div className="bg-black/80 p-2 rounded-lg border border-white/10">
+                      <span className="text-slate-400 text-[10px] uppercase block font-mono">Distress Cash Floor</span>
+                      <span className="text-base font-bold text-red-400 font-mono block">$23.7k – $45.6k</span>
+                    </div>
+                  </div>
+                </div>
+                <span className="text-[11px] text-slate-400 block pt-1 border-t border-white/10">
+                  80% retention limit strictly bounds micro-APA liquidations to 22 units.
                 </span>
               </div>
 
@@ -607,42 +607,7 @@ export const DealRoomCore: React.FC<DealRoomScreenProps> = ({
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {/* Track 1 Single Unit (85 Units) */}
-              <div className="bg-black/60 border border-cyan-500/30 rounded-xl p-4 hover:border-cyan-400/70 transition-colors space-y-3">
-                <div className="flex items-center justify-between border-b border-white/10 pb-2">
-                  <div>
-                    <span className="text-cyan-400 text-[10px] font-bold uppercase tracking-widest bg-cyan-500/10 px-2 py-0.5 rounded border border-cyan-500/30">
-                      TRACK 1 // LEAN PROTOTYPE
-                    </span>
-                    <h5 className="text-sm font-black text-white mt-1">Track 1 Single Unit ({track1Count} Units)</h5>
-                  </div>
-                  <span className="text-xs font-mono text-slate-400">Turn-Key Concept</span>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
-                  <div className="bg-black/80 p-2.5 rounded-lg border border-white/10">
-                    <span className="text-slate-400 text-[10px] uppercase font-mono block">Buyout Anchor</span>
-                    <span className="text-lg font-black text-cyan-400 font-mono block">$4,500</span>
-                    <span className="text-[10px] text-slate-400 font-mono block">$3,800 – $6,500</span>
-                  </div>
-                  <div className="bg-black/80 p-2.5 rounded-lg border border-white/10">
-                    <span className="text-slate-400 text-[10px] uppercase font-mono block">Distress Floor</span>
-                    <span className="text-lg font-black text-red-400 font-mono block">$800 – $1,500</span>
-                    <span className="text-[10px] text-slate-400 font-mono block">Liquidation floor</span>
-                  </div>
-                  <div className="bg-black/80 p-2.5 rounded-lg border border-white/10">
-                    <span className="text-slate-400 text-[10px] uppercase font-mono block">Dev Replacement</span>
-                    <span className="text-lg font-black text-emerald-400 font-mono block">$5,000 – $8,000</span>
-                    <span className="text-[10px] text-slate-400 font-mono block">30–40 hrs agency</span>
-                  </div>
-                </div>
-
-                <p className="text-xs text-slate-300 leading-snug">
-                  Single-view turn-key telemetry prototype with complete PostgreSQL schema, seed data, and simulated operations dashboard.
-                </p>
-              </div>
-
-              {/* Track 2 Flagship Unit (25 Units) */}
+              {/* Track 2 Flagship Unit (25 Units) — Leftmost (Largest) */}
               <div className="bg-black/60 border border-amber-500/30 rounded-xl p-4 hover:border-amber-400/70 transition-colors space-y-3">
                 <div className="flex items-center justify-between border-b border-white/10 pb-2">
                   <div>
@@ -674,6 +639,41 @@ export const DealRoomCore: React.FC<DealRoomScreenProps> = ({
 
                 <p className="text-xs text-slate-300 leading-snug">
                   Complex multi-view industrial/scientific console with domain-specific physics solver, operator journeys, and mission telemetry.
+                </p>
+              </div>
+
+              {/* Track 1 Single Unit (85 Units) — Right (Smallest) */}
+              <div className="bg-black/60 border border-cyan-500/30 rounded-xl p-4 hover:border-cyan-400/70 transition-colors space-y-3">
+                <div className="flex items-center justify-between border-b border-white/10 pb-2">
+                  <div>
+                    <span className="text-cyan-400 text-[10px] font-bold uppercase tracking-widest bg-cyan-500/10 px-2 py-0.5 rounded border border-cyan-500/30">
+                      TRACK 1 // LEAN PROTOTYPE
+                    </span>
+                    <h5 className="text-sm font-black text-white mt-1">Track 1 Single Unit ({track1Count} Units)</h5>
+                  </div>
+                  <span className="text-xs font-mono text-slate-400">Turn-Key Concept</span>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                  <div className="bg-black/80 p-2.5 rounded-lg border border-white/10">
+                    <span className="text-slate-400 text-[10px] uppercase font-mono block">Buyout Anchor</span>
+                    <span className="text-lg font-black text-cyan-400 font-mono block">$4,500</span>
+                    <span className="text-[10px] text-slate-400 font-mono block">$3,800 – $6,500</span>
+                  </div>
+                  <div className="bg-black/80 p-2.5 rounded-lg border border-white/10">
+                    <span className="text-slate-400 text-[10px] uppercase font-mono block">Distress Floor</span>
+                    <span className="text-lg font-black text-red-400 font-mono block">$800 – $1,500</span>
+                    <span className="text-[10px] text-slate-400 font-mono block">Liquidation floor</span>
+                  </div>
+                  <div className="bg-black/80 p-2.5 rounded-lg border border-white/10">
+                    <span className="text-slate-400 text-[10px] uppercase font-mono block">Dev Replacement</span>
+                    <span className="text-lg font-black text-emerald-400 font-mono block">$5,000 – $8,000</span>
+                    <span className="text-[10px] text-slate-400 font-mono block">30–40 hrs agency</span>
+                  </div>
+                </div>
+
+                <p className="text-xs text-slate-300 leading-snug">
+                  Single-view turn-key telemetry prototype with complete PostgreSQL schema, seed data, and simulated operations dashboard.
                 </p>
               </div>
             </div>
