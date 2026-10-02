@@ -73,7 +73,7 @@ function Audit360Badge() {
     <div className="relative">
       <button
         onClick={() => setOpen(o => !o)}
-        className="hidden md:flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-500/50 text-emerald-300 font-black text-[11px] uppercase tracking-wider transition-all cursor-pointer shadow-sm shadow-emerald-500/20 group"
+        className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-500/50 text-emerald-300 font-black text-[11px] uppercase tracking-wider transition-all cursor-pointer shadow-sm shadow-emerald-500/20 group"
         title="AUDIT 360 VERIFIED — 9.7/10 Institutional Pass — Click to inspect parameters" // [audit-badge-exempt]
         aria-expanded={open}
       >
