@@ -63,11 +63,11 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
   const scenarioLabel = getScenarioLabel(sliderVal);
 
   return (
-    <div className="min-h-screen space-y-8 font-mono pb-24 overflow-y-auto">
+    <div className="space-y-8 font-mono pb-16">
       {/* Header Banner */}
-      <div className="border border-white/10 bg-black/60 rounded-2xl p-6 sm:p-8 backdrop-blur-xl relative overflow-hidden">
+      <div className="border border-white/10 bg-black/60 rounded-2xl p-6 sm:p-8 pb-8 backdrop-blur-xl relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20" />
-        <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
+        <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6 pb-2">
           <div>
             <div className="flex items-center gap-2 mb-2">
               <span className="px-2.5 py-0.5 rounded-full text-xs font-black bg-amber-500/20 text-amber-400 border border-amber-500/40 uppercase tracking-wider">
@@ -75,7 +75,7 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
               </span>
               <span className="text-xs text-slate-400">| Dual-Track M&A Ledger</span>
             </div>
-            <h1 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
+            <h1 className="text-2xl sm:text-3xl font-black text-white tracking-tight leading-normal pb-1">
               Master Portfolio Valuation Intelligence
             </h1>
             <p className="text-sm text-slate-300 mt-2 max-w-2xl leading-relaxed">
