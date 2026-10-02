@@ -50,14 +50,15 @@ function validateProducts(products, sourceName) {
   products.forEach((p, idx) => {
     const id = p.id || (idx + 1);
     const domain = p.domain;
-    const bestFor = p.bestFor || p.best_for;
+    const rawBestFor = p.bestFor || p.best_for;
+    const bestForText = Array.isArray(rawBestFor) ? rawBestFor.join(', ') : (typeof rawBestFor === 'string' ? rawBestFor : '');
 
     if (!domain) {
       errors.push(`[${sourceName} Asset #${id}] Missing assigned domain.`);
       return;
     }
 
-    if (!bestFor || typeof bestFor !== 'string' || bestFor.trim().length === 0) {
+    if (!bestForText || bestForText.trim().length === 0) {
       errors.push(`[${sourceName} Asset #${id}] Missing or empty bestFor string.`);
       return;
     }
@@ -69,10 +70,38 @@ function validateProducts(products, sourceName) {
       return;
     }
 
-    const lowerBf = bestFor.toLowerCase();
+    const lowerBf = bestForText.toLowerCase();
     const hasKeyword = allowedKeywords.some(kw => lowerBf.includes(kw.toLowerCase()));
     if (!hasKeyword) {
-      errors.push(`[${sourceName} Asset #${id}] Domain mismatch! Domain="${domain}", bestFor="${bestFor}" (expected keyword matching domain).`);
+      errors.push(`[${sourceName} Asset #${id}] Domain mismatch! Domain="${domain}", bestFor="${bestForText}" (expected keyword matching domain).`);
+    }
+
+    // Strict Hard-Coded Check: Automotive blueprints MUST contain auto/mechanic/repair keywords and CANNOT contain food/baking/medical keywords
+    const isAutomotive = 
+      domain.toLowerCase() === 'automotive' ||
+      (p.vertical && p.vertical.toLowerCase() === 'automotive') ||
+      (p.category && p.category.toLowerCase().includes('automotive')) ||
+      (p.name && p.name.toLowerCase().includes('auto repair'));
+
+    if (isAutomotive) {
+      const autoRequiredKeywords = ['auto', 'mechanic', 'repair', 'tuning', 'vehicle', 'car', 'fleet', 'detailing', 'supercar', 'restyler', 'transmission', 'brake', 'ppf', 'paint protection', 'yacht', 'charter'];
+      const hasAutoKeyword = autoRequiredKeywords.some(kw => lowerBf.includes(kw));
+      if (!hasAutoKeyword) {
+        errors.push(`[${sourceName} Asset #${id}] Automotive blueprint "${p.name}" bestFor MUST contain auto/mechanic/repair keywords! Found: "${bestForText}"`);
+      }
+
+      const forbiddenContaminants = [
+        'bakery', 'bakeries', 'baking', 'baker', 'cafe', 'cafes', 'coffee', 
+        'food', 'restaurant', 'kitchen', 'dining', 'culinary', 'catering',
+        'medical', 'clinical', 'dental', 'dentist', 'hospital', 'doctor', 'patient', 'pharma', 'therapy'
+      ];
+      const foundForbidden = forbiddenContaminants.filter(kw => {
+        const re = new RegExp(`\\b${kw}\\b`, 'i');
+        return re.test(lowerBf);
+      });
+      if (foundForbidden.length > 0) {
+        errors.push(`[${sourceName} Asset #${id}] Automotive cross-contamination detected! Blueprint "${p.name}" contains forbidden keywords: ${foundForbidden.join(', ')}`);
+      }
     }
   });
 

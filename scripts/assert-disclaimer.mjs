@@ -3,7 +3,7 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import React from 'react';
 import { CATALOG_DATA } from '../src/catalogData.ts';
 
-const REQUIRED_TEXT = "NOT CERTIFIED FOR OPERATIONAL, REGULATORY, OR LIFE-CRITICAL USE";
+const REQUIRED_TEXT = "SIMULATED DATA PROTOTYPE — NOT CERTIFIED FOR OPERATIONAL, REGULATORY, OR LIFE-CRITICAL USE";
 
 console.log("🔍 [AUDIT] Running assert-disclaimer.mjs validation...");
 const products = CATALOG_DATA.products || [];
@@ -21,6 +21,7 @@ try {
 
   let passed = 0;
   let failed = 0;
+  let regulatedPassed = 0;
 
   for (const product of products) {
     const markup = renderToStaticMarkup(React.createElement(BlueprintCard, { product }));
@@ -29,6 +30,20 @@ try {
       failed++;
     } else {
       passed++;
+      const domain = product.domain || '';
+      const vertical = product.vertical || '';
+      if (
+        domain.includes('SCADA') ||
+        domain.includes('Clinical') ||
+        domain.includes('Capital') ||
+        domain.includes('Mobility') ||
+        vertical === 'aerospace' ||
+        vertical === 'clinical' ||
+        vertical === 'legal' ||
+        vertical === 'wealth'
+      ) {
+        regulatedPassed++;
+      }
     }
   }
 
@@ -39,7 +54,7 @@ try {
     process.exit(1);
   }
 
-  console.log(`✅ [AUDIT PASSED] ${passed}/${total} cards render disclaimer`);
+  console.log(`✅ [AUDIT PASSED] ${passed}/${total} cards render disclaimer (including all ${regulatedPassed} regulated sector blueprints)`);
   process.exit(0);
 } catch (error) {
   await server.close();

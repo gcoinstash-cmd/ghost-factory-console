@@ -1388,7 +1388,12 @@ export const CATALOG_DATA: CatalogData = {
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
       "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: High-performance auto repair & ECU tuning workshops",
+      "best_for": "Best for: Independent Auto Repair Shops, Fleet Mechanics, Transmission & Brake Specialists",
+      "bestFor": [
+        "Independent Auto Repair Shops",
+        "Fleet Mechanics",
+        "Transmission & Brake Specialists"
+      ],
       "domain": "Mobility & Fleet Logistics",
       "rarity_tier": "Pro",
       "permanent": true,
@@ -1899,7 +1904,7 @@ export const CATALOG_DATA: CatalogData = {
     {
       "id": 59,
       "name": "HELIOS SOLAR INSTALL & PERMIT OS",
-      "category": "Commercial PV Sizing, AHJ Reference Spec (Simulation) & Interconnect PTO OS",
+      "category": "Commercial PV Sizing, Local Permit Reference Spec (Simulation) & Interconnect PTO OS",
       "vertical": "home_services",
       "gumroad_url": "https://auraandgrid.gumroad.com/l/solar-install-os",
       "preview_url": "https://gcoinstash-cmd.github.io/solar-install-os/",
@@ -1907,14 +1912,14 @@ export const CATALOG_DATA: CatalogData = {
       "audit_score": 9.8,
       "tables": [
         "solar_projects",
-        "ahj_permits",
+        "permit_records",
         "utility_interconnects",
         "battery_storage_banks"
       ],
       "archetype_id": "D",
       "archetype_name": "Archetype D: Timeline & Station Reservation Grid",
       "archetype_description": "Interactive day/hour time-slot matrix, capacity/station status indicators, and instant seat/pod booking for Michelin dining, private clubs, and recovery labs.",
-      "design_benchmark": "Sunrun Commercial PV Sizing & AHJ Permit Grid",
+      "design_benchmark": "Sunrun Commercial PV Sizing & Local Permit Grid",
       "checkout_active": false,
       "status_badge": "Packaged / Deployment Ready",
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/agency-whitelabel-vault",
