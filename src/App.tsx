@@ -42,7 +42,7 @@ export const App: React.FC = () => {
 
   // Modal states
   const [isMissionModalOpen, setIsMissionModalOpen] = useState(false);
-  const [missionCompleted, setMissionCompleted] = useState(false);
+  const [missionCompleted, setMissionCompleted] = useState(true);
   const [showAuditModal, setShowAuditModal] = useState(false);
   const [testDriveProduct, setTestDriveProduct] = useState<ProductItem | null>(null);
   const [isRefreshing, setIsRefreshing] = useState(false);

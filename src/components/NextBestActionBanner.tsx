@@ -46,7 +46,7 @@ export const NextBestActionBanner: React.FC<NextBestActionBannerProps> = ({
           {missionCompleted ? (
             <div className="flex items-center gap-2 px-6 py-3.5 rounded-xl bg-emerald-500/20 border-2 border-emerald-500 text-emerald-300 text-sm sm:text-base font-black shadow-lg shadow-emerald-500/20">
               <CheckCircle2 size={20} />
-              <span>MISSION VERIFIED ✅</span>
+              <span>MISSION CONFIRMED ✅</span>
             </div>
           ) : (
             <button

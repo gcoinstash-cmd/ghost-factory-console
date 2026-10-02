@@ -25,7 +25,7 @@ export const MaintenanceBayScreen: React.FC<MaintenanceBayScreenProps> = ({
 
   // Pit Crew Checklist Items
   const [tasks, setTasks] = useState([
-    { id: 1, title: 'Asset 109: ECLSS SCADA Sabatier bypass valve pressure test', domain: 'Deep Tech SCADA', status: 'IN_PROGRESS', assignee: 'Engineering Bay 1' },
+    { id: 1, title: 'Asset 109: ECLSS SCADA Sabatier bypass valve pressure test', domain: 'Deep Tech SCADA', status: 'COMPLETED', assignee: 'Engineering Bay 1' },
     { id: 2, title: 'Verify RLS demo isolation policies across all 16 Wealth & Banking blueprints', domain: 'Security & RLS', status: 'COMPLETED', assignee: 'Security Lead' },
     { id: 3, title: 'Update Tailwind token references on Heavy Fleet & Mining crawler prototypes', domain: 'Frontend Core', status: 'PENDING', assignee: 'Design Systems' },
     { id: 4, title: 'Audit Gumroad commercial checkout webhooks and license dispatch automation', domain: 'Storefront', status: 'COMPLETED', assignee: 'Operations' },

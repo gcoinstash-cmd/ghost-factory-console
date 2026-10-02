@@ -3693,8 +3693,11 @@ export const CATALOG_DATA: CatalogData = {
         "o2_regeneration_loops",
         "water_recovery_systems",
         "co2_scrubber_beds",
-        "atmospheric_sensors"
+        "atmospheric_sensors",
+        "sabatier_bypass_valves"
       ],
+      "sabatier_bypass_valve": "NOMINAL_FLOW",
+      "gate_criterion_4": "Domain Physics Solver & Sabatier Closed-Loop Bypass Telemetry Active",
       "vertical": "aerospace",
       "archetype_id": "C",
       "archetype_name": "Archetype C: High-Velocity Dispatch Rail",

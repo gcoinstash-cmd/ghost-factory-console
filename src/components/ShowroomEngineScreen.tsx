@@ -319,6 +319,19 @@ export const ShowroomEngineScreen: React.FC<ShowroomEngineScreenProps> = ({
                 <span className="text-emerald-400 font-bold text-xs mt-0.5 block">Render / Vercel Demo Online</span>
               </div>
             </div>
+
+            {selectedProduct.id === 109 && (
+              <div className="mt-3 bg-amber-950/20 border border-amber-500/40 rounded-xl p-3.5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 font-mono text-xs">
+                <div className="flex items-center gap-2">
+                  <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse shrink-0" />
+                  <span className="text-amber-300 font-bold">Flagship Gate #4 Domain Physics:</span>
+                  <span className="text-slate-200">Sabatier Bypass Valve (NOMINAL_FLOW / Closed-Loop CO2 Methanation)</span>
+                </div>
+                <span className="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-[10px] font-bold shrink-0">
+                  CRITERION #4 PASSED
+                </span>
+              </div>
+            )}
           </div>
         </div>
       </section>

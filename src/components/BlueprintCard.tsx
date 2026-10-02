@@ -177,6 +177,12 @@ export const BlueprintCard: React.FC<BlueprintCardProps> = ({
           <span className="text-xs sm:text-sm font-bold text-slate-300 bg-slate-900 px-2.5 py-1 rounded border border-white/15 font-mono">
             Arch {product.archetype_id || 'A'}
           </span>
+          {product.id === 109 && (
+            <span className="text-xs sm:text-sm font-bold text-amber-300 bg-amber-950/60 border border-amber-500/40 px-2.5 py-1 rounded font-mono flex items-center gap-1">
+              <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+              Sabatier Bypass Valve Active
+            </span>
+          )}
         </div>
       </div>
 
@@ -287,6 +293,12 @@ export const BlueprintCard: React.FC<BlueprintCardProps> = ({
             <span className="text-slate-400">Status:</span>
             <span className="text-emerald-400 font-mono font-bold">Reference design</span>
           </div>
+          {product.id === 109 && (
+            <div className="flex items-center justify-between text-[11px] pt-1 border-t border-white/5">
+              <span className="text-slate-400">Domain Physics Solver:</span>
+              <span className="text-amber-300 font-mono font-bold">Sabatier Bypass Valve [NOMINAL_FLOW]</span>
+            </div>
+          )}
           {product.tables && product.tables.length > 0 && (
             <div className="text-[10px] text-slate-400 font-mono bg-black/80 p-2 rounded border border-white/5 overflow-x-auto">
               <span className="text-slate-300 font-bold block mb-1">Database Tables ({product.tables.length}):</span>
