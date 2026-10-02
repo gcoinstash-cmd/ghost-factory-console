@@ -35,6 +35,9 @@ export interface ProductItem {
   disclaimer: string;
   permanent?: boolean;
   buyoutEligible: boolean;
+  bestFor?: string | string[];
+  sabatier_bypass_valve?: string;
+  gate_criterion_4?: string;
 }
 
 export interface CatalogData {
