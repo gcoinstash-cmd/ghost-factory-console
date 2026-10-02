@@ -51,14 +51,16 @@ export const DealDeskScreen: React.FC<DealDeskScreenProps> = ({
   const allGatePassed = Object.values(gateChecklist).every(Boolean);
 
   // APA Staging Basket for testing the 80% Retention Floor Shield (Win C)
-  const [stagedAssetIds, setStagedAssetIds] = useState<number[]>([1, 2, 3]); // Starts with 3 staged
-  const [selectedAssetIdToAdd, setSelectedAssetIdToAdd] = useState<number>(4);
+  const [stagedAssetIds, setStagedAssetIds] = useState<number[]>([89, 90, 91]); // Starts with 3 buyout-eligible candidates
+  const [selectedAssetIdToAdd, setSelectedAssetIdToAdd] = useState<number>(92);
 
   // Retention Floor Logic (Win C)
   const currentStagedCount = stagedAssetIds.length;
   const isFloorBreached = currentStagedCount >= maxTransferable; // 17 limit
 
   const handleStageAsset = (id: number) => {
+    const p = products.find(x => x.id === id);
+    if (!p || !p.buyoutEligible || p.permanent) return;
     if (stagedAssetIds.includes(id)) return;
     if (stagedAssetIds.length >= maxTransferable) {
       // Hard floor block: cannot exceed maxTransferable
@@ -72,16 +74,14 @@ export const DealDeskScreen: React.FC<DealDeskScreenProps> = ({
   };
 
   const handleAttemptBreach = () => {
-    // Fill up to limit and attempt to breach for testing
-    const testIds: number[] = [];
-    for (let i = 1; i <= maxTransferable + 1; i++) {
-      testIds.push(i);
-    }
+    // Fill up to limit and attempt to breach for testing using eligible candidate IDs
+    const eligibleProducts = products.filter(p => p.buyoutEligible && !p.permanent);
+    const testIds: number[] = eligibleProducts.map(p => p.id).slice(0, maxTransferable + 1);
     setStagedAssetIds(testIds);
   };
 
   const handleResetBasket = () => {
-    setStagedAssetIds([1, 2, 3]);
+    setStagedAssetIds([89, 90, 91]);
   };
 
   // OPERATOR PERIMETER ISOLATION GATE
@@ -425,17 +425,18 @@ export const DealDeskScreen: React.FC<DealDeskScreenProps> = ({
                 className="bg-black/60 border border-white/10 rounded-lg px-2.5 py-1 text-xs text-slate-300 font-mono"
               >
                 {products.map(p => {
+                  const isEligible = Boolean(p.buyoutEligible && !p.permanent);
                   const isT2 = p.id >= 86 || p.pricing_track?.includes('Track 2');
                   return (
-                    <option key={p.id} value={p.id}>
-                      #{p.id.toString().padStart(3, '0')} [{isT2 ? 'TRACK 2 // CANDIDATE ($14.5k)' : 'TRACK 1 // LEAN ($4.5k)'}] {p.name}
+                    <option key={p.id} value={p.id} disabled={!isEligible}>
+                      #{p.id.toString().padStart(3, '0')} [{!isEligible ? 'PERMANENT VAULT // N/A' : (isT2 ? 'TRACK 2 // CANDIDATE ($14.5k)' : 'TRACK 1 // LEAN ($4.5k)')}] {p.name}
                     </option>
                   );
                 })}
               </select>
               <button
                 onClick={() => handleStageAsset(selectedAssetIdToAdd)}
-                disabled={isFloorBreached || stagedAssetIds.includes(selectedAssetIdToAdd)}
+                disabled={isFloorBreached || stagedAssetIds.includes(selectedAssetIdToAdd) || !products.find(p => p.id === selectedAssetIdToAdd)?.buyoutEligible}
                 className="px-3 py-1 rounded-lg bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 border border-emerald-500/40 text-xs font-bold cursor-pointer disabled:opacity-40"
               >
                 + STAGE ASSET

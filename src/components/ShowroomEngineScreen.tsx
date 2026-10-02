@@ -10,6 +10,7 @@ import {
 } from 'lucide-react';
 import { ProductItem } from '../catalogData';
 import { isRegulatedSector, VERTICAL_COMPLIANCE_DISCLAIMER } from '../utils/compliance';
+import { LICENSE_MATRIX, getBlueprintPricing, LicenseType } from '../data/licenseMatrix';
 
 interface ShowroomEngineScreenProps {
   products: ProductItem[];
@@ -21,39 +22,49 @@ export const ShowroomEngineScreen: React.FC<ShowroomEngineScreenProps> = ({
   onOpenTestDrive
 }) => {
   const [selectedProduct, setSelectedProduct] = useState<ProductItem>(products[0] || {} as ProductItem);
-  const [selectedLicense, setSelectedLicense] = useState<'retail' | 'team' | 'lease' | 'fleet'>('retail');
+  const [selectedLicense, setSelectedLicense] = useState<LicenseType>('standard');
   const [copiedLink, setCopiedLink] = useState(false);
 
   const isTrack2 = selectedProduct && (selectedProduct.id >= 86 || selectedProduct.flagship_qualified || selectedProduct.pricing_track?.includes('Track 2'));
+  const pricing = getBlueprintPricing(selectedProduct);
 
-  const licenseTiers = {
-    retail: { 
-      name: isTrack2 ? 'Flagship Commercial Source License' : 'Non-Exclusive Commercial Source License', 
-      price: isTrack2 ? 1500 : 199, 
-      term: 'Perpetual single-client deployment', 
-      scope: isTrack2 ? 'Full Tier-1 SCADA source blueprint, physics solver, Postgres schema, and operator console' : 'Source blueprint, schema.sql, React frontend' 
+  const licenseTiers: Record<LicenseType, { 
+    name: string; 
+    price: string; 
+    term: string; 
+    scope: string;
+    eligible: boolean;
+  }> = {
+    standard: { 
+      name: `${LICENSE_MATRIX.standard.name} (${LICENSE_MATRIX.standard.exclusivity})`, 
+      price: pricing.standardPrice, 
+      term: `${LICENSE_MATRIX.standard.term} — ${LICENSE_MATRIX.standard.rights}`, 
+      scope: isTrack2 
+        ? 'Full Tier-1 SCADA source blueprint, physics solver, Postgres schema, and operator console with unlimited end-client use.' 
+        : 'Complete React 19 source, PostgreSQL schema, seed data, and unlimited end-client deployment rights.',
+      eligible: true,
     },
-    team: { 
-      name: isTrack2 ? 'Flagship Multi-Seat Engineering Team' : 'Commercial Agency Team Seat', 
-      price: isTrack2 ? 3500 : 599, 
-      term: 'Up to 5 developer seats, 3 client deployments', 
-      scope: 'Includes private GitHub repository access & updates' 
+    pro: { 
+      name: `${LICENSE_MATRIX.pro.name} (${LICENSE_MATRIX.pro.exclusivity})`, 
+      price: pricing.proPrice, 
+      term: `${LICENSE_MATRIX.pro.term} — ${LICENSE_MATRIX.pro.rights}`, 
+      scope: 'Multi-seat engineering agency pass with private updates, schema migrations, and technical release notes.',
+      eligible: true,
     },
-    lease: { 
-      name: 'Managed Hosted Subscription Lease', 
-      price: isTrack2 ? 950 : 450, 
-      term: 'Monthly managed sandbox hosting with 99.9% SLA', 
-      scope: 'Customer-configured demo instance with managed telemetry feeds' 
-    },
-    fleet: { 
-      name: isTrack2 ? 'Exclusive Micro-APA Buyout Anchor' : 'Full Enterprise Fleet License Pack', 
-      price: isTrack2 ? 14500 : 2999, 
-      term: isTrack2 ? 'Asset Purchase Agreement (APA) Exclusive Buyout' : '50-blueprint commercial deployment pack', 
-      scope: isTrack2 ? 'Selective micro-APA ownership transfer for single asset (strictly excludes factory core)' : 'Unlimited internal customization and white-labeling' 
+    exclusive_buyout: { 
+      name: `${LICENSE_MATRIX.exclusive_buyout.name} (${LICENSE_MATRIX.exclusive_buyout.exclusivity})`, 
+      price: pricing.isBuyoutEligible ? (pricing.buyoutAnchor || '$14,500 USD') : 'N/A (Vault Retained)', 
+      term: pricing.isBuyoutEligible 
+        ? `${LICENSE_MATRIX.exclusive_buyout.term} — ${LICENSE_MATRIX.exclusive_buyout.description}`
+        : 'Permanent Vault Asset — Exclusivity buyout unavailable (80% floor)', 
+      scope: pricing.isBuyoutEligible 
+        ? 'Removes asset from sale. Asset Purchase Agreement (APA) exclusive ownership transfer for single asset (strictly excludes factory core).'
+        : 'Permanent factory vault asset retained under the immutable 80% portfolio shield. Not available for buyout.',
+      eligible: pricing.isBuyoutEligible,
     },
   };
 
-  const currentTier = licenseTiers[selectedLicense];
+  const currentTier = licenseTiers[selectedLicense] || licenseTiers.standard;
 
   const handleCopyListingLink = () => {
     navigator.clipboard.writeText(selectedProduct.gumroad_url || 'https://auraandgrid.gumroad.com');
@@ -209,24 +220,38 @@ export const ShowroomEngineScreen: React.FC<ShowroomEngineScreenProps> = ({
               Select Commercial License Structure
             </span>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs">
-              {(['retail', 'team', 'lease', 'fleet'] as const).map((tierKey) => {
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+              {(['standard', 'pro', 'exclusive_buyout'] as const).map((tierKey) => {
                 const tier = licenseTiers[tierKey];
                 const active = selectedLicense === tierKey;
+                const isEligible = tier.eligible;
                 return (
                   <div
                     key={tierKey}
-                    onClick={() => setSelectedLicense(tierKey)}
-                    className={`p-3.5 rounded-xl border cursor-pointer transition-all flex flex-col justify-between ${
-                      active
-                        ? 'bg-zinc-800 border-emerald-400 text-white shadow-md'
-                        : 'bg-zinc-900/60 border-zinc-800 text-zinc-400 hover:border-zinc-700'
+                    onClick={() => {
+                      if (isEligible) {
+                        setSelectedLicense(tierKey);
+                      }
+                    }}
+                    className={`p-3.5 rounded-xl border transition-all flex flex-col justify-between ${
+                      !isEligible
+                        ? 'bg-zinc-950/40 border-zinc-900 text-zinc-600 opacity-60 cursor-not-allowed'
+                        : active
+                        ? 'bg-zinc-800 border-emerald-400 text-white shadow-md cursor-pointer'
+                        : 'bg-zinc-900/60 border-zinc-800 text-zinc-400 hover:border-zinc-700 cursor-pointer'
                     }`}
                   >
                     <div>
-                      <span className="text-[10px] text-zinc-500 uppercase font-bold block">{tierKey}</span>
+                      <div className="flex items-center justify-between">
+                        <span className="text-[10px] text-zinc-400 uppercase font-bold">{LICENSE_MATRIX[tierKey].name}</span>
+                        {!isEligible && (
+                          <span className="text-[9px] px-1.5 py-0.5 rounded bg-red-950 text-red-400 border border-red-500/30 font-bold">
+                            PERMANENT
+                          </span>
+                        )}
+                      </div>
                       <span className="text-base font-black text-white mt-1 block">
-                        ${tier.price.toLocaleString()}{tierKey === 'lease' ? '/mo' : ''}
+                        {tier.price}
                       </span>
                     </div>
                     <span className="text-[10px] text-zinc-400 mt-2 block line-clamp-1">{tier.term}</span>
@@ -241,11 +266,11 @@ export const ShowroomEngineScreen: React.FC<ShowroomEngineScreenProps> = ({
             <div className="flex items-center justify-between">
               <span className="font-bold text-white uppercase">{currentTier.name}</span>
               <strong className="text-emerald-400 text-base">
-                ${currentTier.price.toLocaleString()}{selectedLicense === 'lease' ? ' / month' : ' USD'}
+                {currentTier.price}
               </strong>
             </div>
             <p className="text-zinc-400 leading-relaxed text-xs">
-              <strong className="text-zinc-200">Scope of Rights:</strong> {currentTier.scope}. Includes full source-code blueprint, documented PostgreSQL relational schema, sample seed data, and license authorization.
+              <strong className="text-zinc-200">Scope of Rights:</strong> {currentTier.scope}
             </p>
             <div className="flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-zinc-800">
               <div className="flex items-center gap-2">

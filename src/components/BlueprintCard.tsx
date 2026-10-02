@@ -2,6 +2,7 @@ import React from 'react';
 import { Database, Activity, ExternalLink, ChevronDown, AlertTriangle } from 'lucide-react';
 import { ProductItem } from '../catalogData';
 import { OperationalDisclaimer } from './OperationalDisclaimer';
+import { LICENSE_MATRIX, getBlueprintPricing } from '../data/licenseMatrix';
 
 export type RarityTier = 'Elite' | 'Pro' | 'Core';
 
@@ -123,11 +124,12 @@ export const getDomainClass = (product: ProductItem): string => {
 
 export const BlueprintCard: React.FC<BlueprintCardProps> = ({
   product,
-  isOperatorAuthenticated = false,
+  isOperatorAuthenticated: _isOperatorAuthenticated = false,
 }) => {
   const rarity = getRarityTier(product);
   const domain = getDomainClass(product);
   const isTrack2 = product.id >= 86 || Boolean(product.flagship_qualified) || Boolean(product.pricing_track?.includes('Track 2'));
+  const pricing = getBlueprintPricing(product);
 
   const rarityStyles: Record<RarityTier, { border: string; bg: string; text: string; glow: string }> = {
     'Elite': { border: 'border-amber-400/90', bg: 'bg-amber-950/20', text: 'text-amber-300', glow: 'shadow-[0_0_20px_rgba(245,158,11,0.25)]' },
@@ -205,38 +207,53 @@ export const BlueprintCard: React.FC<BlueprintCardProps> = ({
           </span>
         </div>
 
-        {/* Pricing Tier Grid */}
-        {isTrack2 ? (
-          <div className="space-y-1.5 pt-1 border-t border-amber-500/20 text-xs">
-            <div className="flex items-center justify-between gap-2">
-              <span className="text-slate-400 text-[11px]">Commercial License:</span>
-              <span className="text-amber-300 font-bold font-mono">$1,500 – $3,500 USD</span>
-            </div>
-            <div className="flex items-center justify-between gap-2">
-              <span className="text-slate-400 text-[11px]">Buyout Anchor:</span>
-              <span className="text-amber-400 font-black font-mono">$14,500 USD</span>
-            </div>
-            <div className="flex items-center justify-between gap-2 text-[10px] text-amber-200/70 border-t border-amber-500/15 pt-1">
-              <span>Buyout Range:</span>
-              <span className="font-mono">$10,000 – $18,000 USD</span>
-            </div>
+        {/* Canonical 3-Tier License Matrix Section */}
+        <div className={`space-y-1.5 pt-1.5 border-t text-xs ${isTrack2 ? 'border-amber-500/20' : 'border-emerald-500/20'}`}>
+          {/* 1. Standard License (Non-Exclusive, Perpetual, Unlimited End-Client Use) */}
+          <div className="flex items-center justify-between gap-2">
+            <span className="text-slate-400 text-[11px]" title={LICENSE_MATRIX.standard.description}>
+              {LICENSE_MATRIX.standard.name} ({LICENSE_MATRIX.standard.exclusivity}):
+            </span>
+            <span className={`${isTrack2 ? 'text-amber-300' : 'text-emerald-300'} font-bold font-mono`}>
+              {pricing.standardPrice}
+            </span>
           </div>
-        ) : (
-          <div className="space-y-1.5 pt-1 border-t border-emerald-500/20 text-xs">
-            <div className="flex items-center justify-between gap-2">
-              <span className="text-slate-400 text-[11px]">Retail License:</span>
-              <span className="text-emerald-300 font-bold font-mono">$199 USD</span>
-            </div>
-            <div className="flex items-center justify-between gap-2">
-              <span className="text-slate-400 text-[11px]">Multi-Seat Team Pass:</span>
-              <span className="text-cyan-300 font-bold font-mono">$599 USD</span>
-            </div>
-            <div className="flex items-center justify-between gap-2 text-[10px] text-emerald-200/80 border-t border-emerald-500/15 pt-1">
-              <span>Exclusive Buyout Floor:</span>
-              <span className="font-mono font-bold text-emerald-400">$3,800 – $6,500 ($4,500 Anchor)</span>
-            </div>
+
+          {/* 2. Pro License (Non-Exclusive, Includes Updates) */}
+          <div className="flex items-center justify-between gap-2">
+            <span className="text-slate-400 text-[11px]" title={LICENSE_MATRIX.pro.description}>
+              {LICENSE_MATRIX.pro.name} ({LICENSE_MATRIX.pro.exclusivity}):
+            </span>
+            <span className="text-cyan-300 font-bold font-mono">
+              {pricing.proPrice}
+            </span>
           </div>
-        )}
+
+          {/* 3. Exclusive Buyout (Removes Asset From Sale; ONLY Offered When NOT Permanent) */}
+          {pricing.isBuyoutEligible ? (
+            <div className="pt-1 border-t border-white/10 space-y-1">
+              <div className="flex items-center justify-between gap-2 text-[10px]">
+                <span className="text-pink-400 font-bold" title={LICENSE_MATRIX.exclusive_buyout.description}>
+                  {LICENSE_MATRIX.exclusive_buyout.name} Anchor:
+                </span>
+                <span className="text-pink-300 font-black font-mono">
+                  {pricing.buyoutAnchor}
+                </span>
+              </div>
+              {pricing.buyoutRange && (
+                <div className="flex items-center justify-between gap-2 text-[10px] text-slate-400">
+                  <span>Buyout Range:</span>
+                  <span className="font-mono">{pricing.buyoutRange}</span>
+                </div>
+              )}
+            </div>
+          ) : (
+            <div className="pt-1 border-t border-white/10 flex items-center justify-between text-[10px]">
+              <span className="text-slate-400">Buyout Status:</span>
+              <span className="text-emerald-400 font-bold font-mono">Permanent (80% Floor — No Buyout)</span>
+            </div>
+          )}
+        </div>
       </div>
 
       {/* Architecture specs */}

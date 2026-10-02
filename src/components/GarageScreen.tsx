@@ -33,7 +33,7 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
   totalAssets,
   retainedFloor,
   availableApaSlots,
-  planningValue,
+  planningValue: _planningValue,
   onEngageMission,
   missionCompleted,
   onOpenTestDrive: _onOpenTestDrive,
@@ -142,7 +142,7 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
               <div className="p-1">
                 <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">Track 1 Retail MSRP</span>
                 <span className="text-base sm:text-xl font-black text-emerald-400">$199 USD</span>
-                <span className="text-xs sm:text-sm text-slate-300 block font-semibold">Single-Client Blueprint</span>
+                <span className="text-xs sm:text-sm text-slate-300 block font-semibold">Unlimited End-Client Use</span>
               </div>
               <div className="p-1 border-l border-white/15 pl-3">
                 <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">Commercial Team</span>
@@ -214,7 +214,7 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
             </h2>
             <p className="text-slate-300 text-xs sm:text-sm max-w-2xl leading-relaxed">
               85 Lean Rapid-Sale prototypes ($199 MSRP) + 25 Tier-1 Flagship SCADA operational consoles ($1,500–$3,500).
-              Each asset includes complete React 19 source, PostgreSQL schema, seed data, and commercial deployment rights.
+              Each asset includes complete React 19 source, PostgreSQL schema, seed data, and perpetual commercial deployment rights (Standard & Pro unlimited end-client use).
             </p>
           </div>
 
@@ -259,8 +259,8 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
               <span className="text-[10px] text-slate-400 block leading-tight">Step-by-step Render/Vercel guide</span>
             </div>
             <div className="bg-black/60 border border-white/10 p-3 rounded-xl space-y-1">
-              <strong className="text-pink-400 block font-bold text-[11px]">5. Commercial License</strong>
-              <span className="text-[10px] text-slate-400 block leading-tight">Perpetual single-client deployment</span>
+              <strong className="text-pink-400 block font-bold text-[11px]">5. Standard License</strong>
+              <span className="text-[10px] text-slate-400 block leading-tight">Perpetual, unlimited end-client use</span>
             </div>
             <div className="bg-black/60 border border-amber-500/40 p-3 rounded-xl space-y-1 bg-amber-950/10">
               <strong className="text-amber-300 block font-bold text-[11px]">6. Simulated Truth</strong>
@@ -304,7 +304,7 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
             <div className="pt-3 mt-3 border-t border-white/10 space-y-2 text-slate-300 text-[11px] leading-relaxed">
               <div className="flex items-start gap-1.5 text-emerald-300">
                 <span className="font-bold">✓ INCLUDED:</span>
-                <span className="text-slate-300">Perpetual commercial client deployment, unlimited branding/reskinning, hosting freedom (Vercel/Render/AWS), zero royalties.</span>
+                <span className="text-slate-300">Perpetual non-exclusive deployment with unlimited end-client use, custom branding/reskinning, hosting freedom (Vercel/Render/AWS), zero royalties.</span>
               </div>
               <div className="flex items-start gap-1.5 text-red-300">
                 <span className="font-bold">✕ EXCLUDED:</span>

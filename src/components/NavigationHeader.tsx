@@ -49,7 +49,6 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
   // Dynamic Portfolio Appraisal Metrics (Public Telemetry & Master Protocol Values)
   const catalogAppraisalStr = '$105,000 – $235,250';
   const catalogAnchor = '~$160,000';
-  const catalogAnchorShort = '~$160k';
   const askStr = '$195,000 – $265,000';
   const acquisitionStr = '$135,000 – $175,000';
   const devStr = '$715k – $2.02M';
@@ -301,7 +300,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
                 </div>
                 <div className="mt-1.5">
                   <span className="text-base sm:text-lg font-black text-emerald-400 block">$199 USD</span>
-                  <span className="text-xs text-slate-300 block font-semibold">Single-Client Blueprint</span>
+                  <span className="text-xs text-slate-300 block font-semibold">Unlimited End-Client Use</span>
                 </div>
               </div>
 

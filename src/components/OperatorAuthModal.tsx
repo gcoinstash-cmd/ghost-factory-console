@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Lock, Unlock, X, ShieldCheck, Key, AlertTriangle } from 'lucide-react';
+import { Lock, Unlock, X, Key, AlertTriangle } from 'lucide-react';
 
 interface OperatorAuthModalProps {
   isOpen: boolean;
