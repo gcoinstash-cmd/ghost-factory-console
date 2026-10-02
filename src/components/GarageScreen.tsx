@@ -141,23 +141,23 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
             <div className="w-full lg:w-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 bg-black/80 p-4 sm:p-5 rounded-xl border border-white/15 text-sm">
               <div className="p-1">
                 <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">Track 1 Retail MSRP</span>
-                <span className="text-base sm:text-xl font-black text-emerald-400">$199 USD</span>
-                <span className="text-xs sm:text-sm text-slate-300 block font-semibold">Unlimited End-Client Use</span>
+                <span className="text-xl sm:text-2xl font-black text-emerald-400 block tracking-tight mt-1">$199 USD</span>
+                <span className="text-sm text-slate-200 block font-semibold leading-relaxed mt-0.5">Unlimited End-Client Use</span>
               </div>
               <div className="p-1 border-l border-white/15 pl-3">
                 <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">Commercial Team</span>
-                <span className="text-base sm:text-xl font-black text-cyan-400">$599 USD</span>
-                <span className="text-xs sm:text-sm text-slate-300 block font-semibold">Agency Multi-Seat Pack</span>
+                <span className="text-xl sm:text-2xl font-black text-cyan-400 block tracking-tight mt-1">$599 USD</span>
+                <span className="text-sm text-slate-200 block font-semibold leading-relaxed mt-0.5">Agency Multi-Seat Pack</span>
               </div>
               <div className="p-1 border-t sm:border-t-0 sm:border-l border-white/15 pt-2 sm:pt-1 sm:pl-3">
                 <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">Flagship License</span>
-                <span className="text-base sm:text-xl font-black text-purple-400">$1,500 – $3,500</span>
-                <span className="text-xs sm:text-sm text-slate-300 block font-semibold">Tier-1 SCADA Physics</span>
+                <span className="text-xl sm:text-2xl font-black text-purple-400 block tracking-tight mt-1">$1,500 – $3,500</span>
+                <span className="text-sm text-slate-200 block font-semibold leading-relaxed mt-0.5">Tier-1 SCADA Physics</span>
               </div>
               <div className="p-1 border-t sm:border-t-0 border-l border-white/15 pt-2 sm:pt-1 pl-3">
                 <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">Core Deliverable</span>
-                <span className="text-base sm:text-xl font-black text-amber-400">React 19 + RLS</span>
-                <span className="text-xs sm:text-sm text-slate-300 block font-semibold">Postgres Schema & Seed</span>
+                <span className="text-xl sm:text-2xl font-black text-amber-400 block tracking-tight mt-1">React 19 + RLS</span>
+                <span className="text-sm text-slate-200 block font-semibold leading-relaxed mt-0.5">Postgres Schema & Seed</span>
               </div>
               <div 
                 onClick={onOpenOperatorAuth}
@@ -166,8 +166,8 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
                 <span className="text-amber-300 block text-xs sm:text-sm uppercase font-black tracking-wider flex items-center gap-1">
                   <Lock size={12} /> Deal Room
                 </span>
-                <span className="text-base sm:text-lg font-black text-amber-400 block">RESTRICTED</span>
-                <span className="text-xs sm:text-sm text-amber-300/80 block font-semibold underline">Unlock M&A Telemetry</span>
+                <span className="text-xl sm:text-2xl font-black text-amber-400 block tracking-tight mt-1">RESTRICTED</span>
+                <span className="text-sm text-amber-300/90 block font-semibold leading-relaxed mt-0.5 underline">Unlock M&A Telemetry</span>
               </div>
             </div>
           )}
@@ -238,33 +238,33 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
 
         {/* What You Get Deliverables Strip */}
         <div className="pt-5 border-t border-white/10 space-y-3 font-mono">
-          <span className="text-xs uppercase font-bold tracking-widest text-slate-400 block">
+          <span className="text-xs uppercase font-bold tracking-widest text-slate-300 block">
             What You Get With Every Deployment-Ready Blueprint:
           </span>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2.5 text-xs">
             <div className="bg-black/60 border border-white/10 p-3 rounded-xl space-y-1">
-              <strong className="text-emerald-400 block font-bold text-[11px]">1. React 19 Frontend</strong>
-              <span className="text-[10px] text-slate-400 block leading-tight">Tailwind CSS + Lucide UI blueprint</span>
+              <strong className="text-emerald-400 block font-bold text-xs sm:text-sm">1. React 19 Frontend</strong>
+              <span className="text-xs text-slate-300 block leading-relaxed">Tailwind CSS + Lucide UI blueprint</span>
             </div>
             <div className="bg-black/60 border border-white/10 p-3 rounded-xl space-y-1">
-              <strong className="text-cyan-400 block font-bold text-[11px]">2. Postgres Schema</strong>
-              <span className="text-[10px] text-slate-400 block leading-tight">Relational schema with RLS patterns</span>
+              <strong className="text-cyan-400 block font-bold text-xs sm:text-sm">2. Postgres Schema</strong>
+              <span className="text-xs text-slate-300 block leading-relaxed">Relational schema with RLS patterns</span>
             </div>
             <div className="bg-black/60 border border-white/10 p-3 rounded-xl space-y-1">
-              <strong className="text-amber-400 block font-bold text-[11px]">3. Mock Seed Data</strong>
-              <span className="text-[10px] text-slate-400 block leading-tight">Turnkey schema.sql & seed.sql files</span>
+              <strong className="text-amber-400 block font-bold text-xs sm:text-sm">3. Mock Seed Data</strong>
+              <span className="text-xs text-slate-300 block leading-relaxed">Turnkey schema.sql & seed.sql files</span>
             </div>
             <div className="bg-black/60 border border-white/10 p-3 rounded-xl space-y-1">
-              <strong className="text-purple-400 block font-bold text-[11px]">4. Setup Guide</strong>
-              <span className="text-[10px] text-slate-400 block leading-tight">Step-by-step Render/Vercel guide</span>
+              <strong className="text-purple-400 block font-bold text-xs sm:text-sm">4. Setup Guide</strong>
+              <span className="text-xs text-slate-300 block leading-relaxed">Step-by-step Render/Vercel guide</span>
             </div>
             <div className="bg-black/60 border border-white/10 p-3 rounded-xl space-y-1">
-              <strong className="text-pink-400 block font-bold text-[11px]">5. Standard License</strong>
-              <span className="text-[10px] text-slate-400 block leading-tight">Perpetual, unlimited end-client use</span>
+              <strong className="text-pink-400 block font-bold text-xs sm:text-sm">5. Standard License</strong>
+              <span className="text-xs text-slate-300 block leading-relaxed">Perpetual, unlimited end-client use</span>
             </div>
             <div className="bg-black/60 border border-amber-500/40 p-3 rounded-xl space-y-1 bg-amber-950/10">
-              <strong className="text-amber-300 block font-bold text-[11px]">6. Simulated Truth</strong>
-              <span className="text-[10px] text-amber-200/80 block leading-tight">Interactive prototype / sample data</span>
+              <strong className="text-amber-300 block font-bold text-xs sm:text-sm">6. Simulated Truth</strong>
+              <span className="text-xs text-amber-200 block leading-relaxed">Interactive prototype / sample data</span>
             </div>
           </div>
         </div>

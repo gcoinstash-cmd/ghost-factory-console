@@ -72,7 +72,7 @@ export const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#0A0A0B] text-slate-100 hud-grid pb-28 md:pb-24 selection:bg-emerald-500 selection:text-black">
+    <div className="min-h-screen bg-[#0A0A0B] text-slate-100 hud-grid pb-28 md:pb-24 selection:bg-emerald-500 selection:text-black overflow-x-hidden w-full">
       {/* Top Header & Screen Navigation */}
       <NavigationHeader
         currentView={currentView}
@@ -87,7 +87,7 @@ export const App: React.FC = () => {
       />
 
       {/* Main Screen Views */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 sm:pt-8">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 sm:pt-8 w-full">
         {/* Screen 1: Garage HUD */}
         {currentView === 'garage' && (
           <GarageScreen
@@ -157,11 +157,11 @@ export const App: React.FC = () => {
           className={`flex flex-col items-center gap-1 py-2 px-3 rounded-xl min-h-[44px] justify-center transition-all cursor-pointer ${
             currentView === 'garage'
               ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/50 font-black'
-              : 'text-slate-400 hover:text-white'
+              : 'text-slate-300 hover:text-white'
           }`}
         >
           <LayoutGrid size={17} />
-          <span className="text-[10px] uppercase font-bold tracking-wide">Garage</span>
+          <span className="text-xs uppercase font-bold tracking-wide">Garage</span>
         </button>
 
         <button
@@ -169,11 +169,11 @@ export const App: React.FC = () => {
           className={`flex flex-col items-center gap-1 py-2 px-3 rounded-xl min-h-[44px] justify-center transition-all cursor-pointer ${
             currentView === 'showroom'
               ? 'bg-white/20 text-white border border-white/40 font-black'
-              : 'text-slate-400 hover:text-white'
+              : 'text-slate-300 hover:text-white'
           }`}
         >
           <Compass size={17} />
-          <span className="text-[10px] uppercase font-bold tracking-wide">Catalog</span>
+          <span className="text-xs uppercase font-bold tracking-wide">Catalog</span>
         </button>
 
         <button
@@ -186,13 +186,13 @@ export const App: React.FC = () => {
           className={`flex flex-col items-center gap-1 py-2 px-3 rounded-xl min-h-[44px] justify-center transition-all cursor-pointer ${
             currentView === 'dealdesk'
               ? 'bg-amber-500/20 text-amber-400 border border-amber-500/50 font-black'
-              : 'text-slate-400 hover:text-white'
+              : 'text-slate-300 hover:text-white'
           }`}
         >
           <DollarSign size={17} />
-          <span className="text-[10px] uppercase font-bold tracking-wide flex items-center gap-0.5">
+          <span className="text-xs uppercase font-bold tracking-wide flex items-center gap-1">
             Deal Room
-            {!isOperatorAuthenticated && <Lock size={9} className="text-amber-400 inline" />}
+            {!isOperatorAuthenticated && <Lock size={10} className="text-amber-400 inline" />}
           </span>
         </button>
 
@@ -201,11 +201,11 @@ export const App: React.FC = () => {
           className={`flex flex-col items-center gap-1 py-2 px-3 rounded-xl min-h-[44px] justify-center transition-all cursor-pointer ${
             currentView === 'maintenance'
               ? 'bg-purple-500/20 text-purple-400 border border-purple-500/50 font-black'
-              : 'text-slate-400 hover:text-white'
+              : 'text-slate-300 hover:text-white'
           }`}
         >
           <Wrench size={17} />
-          <span className="text-[10px] uppercase font-bold tracking-wide">Diagnostics</span>
+          <span className="text-xs uppercase font-bold tracking-wide">Diagnostics</span>
         </button>
       </div>
 

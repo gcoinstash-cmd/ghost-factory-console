@@ -112,7 +112,7 @@ function Audit360Badge() {
                 <ShieldCheck size={24} className="text-emerald-400 shrink-0" />
                 <div>
                   <div className="text-emerald-300 font-black text-xs uppercase tracking-wider">Full Desktop & Mobile Functional Audit</div>
-                  <div className="text-slate-400 text-[11px] mt-0.5">
+                  <div className="text-slate-300 text-xs mt-0.5">
                     Commit: <span className="text-cyan-400 font-bold">7e43696</span> &nbsp;|&nbsp;
                     Build: <span className="text-cyan-400 font-bold">index-iMVwGL6Q.js</span> &nbsp;|&nbsp;
                     v<span className="text-emerald-400 font-bold">1.3.1</span>
@@ -125,17 +125,17 @@ function Audit360Badge() {
                 {AUDIT_PARAMETERS.map(({ label, value, detail, color, border, bg }) => (
                   <div key={label} className={`rounded-xl border ${border} ${bg} px-4 py-3`}>
                     <div className="flex items-start justify-between gap-2">
-                      <span className="text-slate-400 text-[11px] font-bold uppercase tracking-wider shrink-0 pt-px">{label}</span>
+                      <span className="text-slate-300 text-xs font-bold uppercase tracking-wider shrink-0 pt-px">{label}</span>
                       <span className={`${color} text-xs font-black text-right leading-tight`}>{value}</span>
                     </div>
-                    <p className="text-slate-400 text-[11px] mt-1.5 leading-relaxed">{detail}</p>
+                    <p className="text-slate-300 text-xs mt-1.5 leading-relaxed">{detail}</p>
                   </div>
                 ))}
               </div>
 
               {/* Footer disclaimer */}
               <div className="border-t border-white/10 pt-3 pb-4">
-                <p className="text-[10px] text-slate-500 leading-relaxed text-center">
+                <p className="text-xs text-slate-400 leading-relaxed text-center">
                   INTERNAL SCENARIO MODELING ONLY — PRE-REVENUE ASSET PORTFOLIO — VALUES ARE ESTIMATES FOR MANAGEMENT STRATEGY AND NOT GUARANTEED MARKET APPRAISALS.
                 </p>
               </div>
@@ -188,40 +188,40 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
   const showInternalDealDesk = IS_OPERATOR_MODE && isOperatorAuthenticated;
 
   return (
-    <header className="sticky top-0 z-50 bg-[#0A0A0B]/95 backdrop-blur-xl border-b border-emerald-500/30 px-3 sm:px-6 py-2.5 sm:py-3 font-mono text-sm">
-      {/* Top Telemetry Ticker */}
-      <div className="flex items-center justify-between gap-2 sm:gap-4 pb-2.5 border-b border-white/10">
-        <div className="flex items-center gap-2 sm:gap-3">
-          <div className="relative flex h-3 w-3 shrink-0">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+    <header className="sticky top-0 z-50 bg-[#0A0A0B]/95 backdrop-blur-xl border-b border-emerald-500/30 px-3 sm:px-6 py-2.5 sm:py-3 font-mono text-sm w-full">
+      <div className="max-w-7xl mx-auto w-full">
+        {/* Top Telemetry Ticker */}
+        <div className="flex flex-wrap items-center justify-between gap-2 sm:gap-4 pb-2.5 border-b border-white/10 w-full">
+          <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+            <div className="relative flex h-3 w-3 shrink-0">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+            </div>
+            <span className="font-black tracking-wider text-emerald-400 flex items-center gap-1.5 text-sm sm:text-base whitespace-nowrap">
+              <Terminal size={16} className="shrink-0" /> GFCC // GHOST FACTORY™
+            </span>
+            <span className="text-slate-400 hidden sm:inline">|</span>
+            <span className="text-slate-200 hidden md:inline text-xs sm:text-sm font-bold">
+              AUDIT 360 COCKPIT
+            </span>
+
+            {/* AUDIT 360 VERIFIED BADGE — 9.7/10 INSTITUTIONAL PASS [audit-badge-exempt] */}
+            <Audit360Badge />
+
+            {/* Operator Status Pill */}
+            {isOperatorAuthenticated ? (
+              <span className="bg-emerald-500/20 text-emerald-300 text-xs px-2.5 py-0.5 rounded border border-emerald-500/50 font-black uppercase tracking-wider flex items-center gap-1.5 shadow-sm shadow-emerald-500/20">
+                <Unlock size={12} className="text-emerald-400" />
+                <span className="hidden sm:inline">OPERATOR MODE</span> ACTIVE
+              </span>
+            ) : (
+              <span className="bg-slate-800/80 text-slate-300 text-xs px-2.5 py-0.5 rounded border border-white/15 font-bold uppercase tracking-wider hidden sm:inline">
+                PUBLIC STOREFRONT
+              </span>
+            )}
           </div>
-          <span className="font-black tracking-wider text-emerald-400 flex items-center gap-1.5 text-sm sm:text-base whitespace-nowrap">
-            <Terminal size={16} className="shrink-0" /> GFCC // GHOST FACTORY™
-          </span>
-          <span className="text-slate-600 hidden sm:inline">|</span>
-          <span className="text-slate-300 hidden md:inline text-xs sm:text-sm font-bold">
-            AUDIT 360 COCKPIT
-          </span>
 
-          {/* AUDIT 360 VERIFIED BADGE — 9.7/10 INSTITUTIONAL PASS [audit-badge-exempt] */}
-          <Audit360Badge />
-
-          {/* Operator Status Pill */}
-          {isOperatorAuthenticated ? (
-            <span className="bg-emerald-500/20 text-emerald-300 text-xs px-2.5 py-0.5 rounded border border-emerald-500/50 font-black uppercase tracking-wider flex items-center gap-1.5 shadow-sm shadow-emerald-500/20">
-              <Unlock size={12} className="text-emerald-400" />
-              <span className="hidden sm:inline">OPERATOR MODE</span> ACTIVE
-            </span>
-          ) : (
-            <span className="bg-slate-800/80 text-slate-300 text-xs px-2.5 py-0.5 rounded border border-white/15 font-bold uppercase tracking-wider hidden sm:inline">
-              PUBLIC STOREFRONT
-            </span>
-          )}
-        </div>
-
-
-        <div className="flex items-center gap-2 sm:gap-4 text-xs sm:text-sm">
+          <div className="flex flex-wrap items-center gap-2 sm:gap-3 text-xs sm:text-sm">
           {/* Operator Lock / Unlock button */}
           {isOperatorAuthenticated ? (
             <button
@@ -300,67 +300,67 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
         </React.Suspense>
       ) : (
         /* 2. PUBLIC STOREFRONT: RETAIL SHELF PRICING & CUSTOMER DELIVERABLES */
-        <div className="hidden lg:grid lg:grid-cols-5 gap-3 py-3 border-b border-white/10 text-xs sm:text-sm">
+        <div className="hidden lg:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 py-3 border-b border-white/10 text-xs sm:text-sm w-full">
           {/* 1. Reference Design Inventory */}
-          <div className="bg-black/75 border border-emerald-500/40 rounded-xl p-3 flex flex-col justify-between hover:border-emerald-400 transition-colors">
+          <div className="bg-black/75 border border-emerald-500/40 rounded-xl p-3.5 flex flex-col justify-between hover:border-emerald-400 transition-colors w-full">
             <div className="flex items-center justify-between text-slate-300 text-xs font-bold uppercase tracking-wider">
               <span>Catalog Inventory</span>
               <span className="text-emerald-400 font-mono text-xs bg-emerald-950/80 px-1.5 py-0.5 rounded border border-emerald-500/40 font-black">FLEET</span>
             </div>
-            <div className="mt-1.5">
-              <span className="text-base sm:text-lg font-black text-emerald-400 block">{totalAssets} Blueprints</span>
-              <span className="text-xs text-slate-300 block font-semibold">85 Track 1 + 25 Flagship SCADA</span>
+            <div className="mt-2">
+              <span className="text-xl sm:text-2xl font-black text-emerald-400 block tracking-tight">{totalAssets} Blueprints</span>
+              <span className="text-sm text-slate-200 block font-semibold leading-relaxed mt-0.5">85 Track 1 + 25 Flagship SCADA</span>
             </div>
           </div>
 
           {/* 2. Track 1 Retail Shelf */}
-          <div className="bg-black/75 border border-cyan-500/40 rounded-xl p-3 flex flex-col justify-between hover:border-cyan-400 transition-colors">
+          <div className="bg-black/75 border border-cyan-500/40 rounded-xl p-3.5 flex flex-col justify-between hover:border-cyan-400 transition-colors w-full">
             <div className="flex items-center justify-between text-slate-300 text-xs font-bold uppercase tracking-wider">
               <span>Track 1 Retail MSRP</span>
               <span className="text-cyan-400 font-mono text-xs bg-cyan-950/80 px-1.5 py-0.5 rounded border border-cyan-500/40 font-black">$199</span>
             </div>
-            <div className="mt-1.5">
-              <span className="text-base sm:text-lg font-black text-cyan-400 block">$199 USD</span>
-              <span className="text-xs text-slate-300 block font-semibold">Turn-Key Concept Console Source</span>
+            <div className="mt-2">
+              <span className="text-xl sm:text-2xl font-black text-cyan-400 block tracking-tight">$199 USD</span>
+              <span className="text-sm text-slate-200 block font-semibold leading-relaxed mt-0.5">Turn-Key Concept Console Source</span>
             </div>
           </div>
 
           {/* 3. Commercial Team Seat */}
-          <div className="bg-black/75 border border-amber-500/40 rounded-xl p-3 flex flex-col justify-between hover:border-amber-400 transition-colors">
+          <div className="bg-black/75 border border-amber-500/40 rounded-xl p-3.5 flex flex-col justify-between hover:border-amber-400 transition-colors w-full">
             <div className="flex items-center justify-between text-slate-300 text-xs font-bold uppercase tracking-wider">
               <span>Commercial Team Seat</span>
               <span className="text-amber-400 font-mono text-xs bg-amber-950/80 px-1.5 py-0.5 rounded border border-amber-500/40 font-black">TEAM</span>
             </div>
-            <div className="mt-1.5">
-              <span className="text-base sm:text-lg font-black text-amber-400 block">$599 USD</span>
-              <span className="text-xs text-slate-300 block font-semibold">Agency Multi-Seat Commercial License</span>
+            <div className="mt-2">
+              <span className="text-xl sm:text-2xl font-black text-amber-400 block tracking-tight">$599 USD</span>
+              <span className="text-sm text-slate-200 block font-semibold leading-relaxed mt-0.5">Agency Multi-Seat Commercial License</span>
             </div>
           </div>
 
           {/* 4. Track 2 Flagship License */}
-          <div className="bg-black/75 border border-purple-500/40 rounded-xl p-3 flex flex-col justify-between hover:border-purple-400 transition-colors">
+          <div className="bg-black/75 border border-purple-500/40 rounded-xl p-3.5 flex flex-col justify-between hover:border-purple-400 transition-colors w-full">
             <div className="flex items-center justify-between text-slate-300 text-xs font-bold uppercase tracking-wider">
               <span>Flagship Tier-1 License</span>
               <span className="text-purple-400 font-mono text-xs bg-purple-950/80 px-1.5 py-0.5 rounded border border-purple-500/40 font-black">SCADA</span>
             </div>
-            <div className="mt-1.5">
-              <span className="text-base sm:text-lg font-black text-purple-400 block">$1,500 – $3,500</span>
-              <span className="text-xs text-slate-300 block font-semibold">Full Physics Solver & Operator Console</span>
+            <div className="mt-2">
+              <span className="text-xl sm:text-2xl font-black text-purple-400 block tracking-tight">$1,500 – $3,500</span>
+              <span className="text-sm text-slate-200 block font-semibold leading-relaxed mt-0.5">Full Physics Solver & Operator Console</span>
             </div>
           </div>
 
           {/* 5. Operator Deal Room Lock */}
           <div 
             onClick={onOpenOperatorAuth}
-            className="bg-amber-950/20 border-2 border-amber-500/50 rounded-xl p-3 flex flex-col justify-between hover:border-amber-400 transition-colors cursor-pointer group"
+            className="bg-amber-950/20 border-2 border-amber-500/50 rounded-xl p-3.5 flex flex-col justify-between hover:border-amber-400 transition-colors cursor-pointer group w-full"
           >
             <div className="flex items-center justify-between text-amber-300 text-xs font-bold uppercase tracking-wider">
               <span className="flex items-center gap-1"><Lock size={12} /> Deal Room</span>
               <span className="text-amber-400 font-mono text-xs bg-amber-950 px-1.5 py-0.5 rounded border border-amber-500/40 font-black">M&A</span>
             </div>
-            <div className="mt-1.5">
-              <span className="text-base sm:text-lg font-black text-amber-400 group-hover:underline block">RESTRICTED</span>
-              <span className="text-xs text-amber-300/80 block font-semibold">Click to Unlock M&A Telemetry</span>
+            <div className="mt-2">
+              <span className="text-xl sm:text-2xl font-black text-amber-400 group-hover:underline block tracking-tight">RESTRICTED</span>
+              <span className="text-sm text-amber-300/90 block font-semibold leading-relaxed mt-0.5">Click to Unlock M&A Telemetry</span>
             </div>
           </div>
         </div>
@@ -492,94 +492,68 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
       </div>
 
       {/* Screen Navigation Tabs (Screens 1 to 5) */}
-      <nav className="flex items-center gap-2 pt-2.5 overflow-x-auto no-scrollbar touch-pan-x">
+      <nav className="flex flex-wrap items-center gap-2 w-full pt-2.5">
         <button
           onClick={() => onViewChange('garage')}
-          className={`flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-black uppercase tracking-wider transition-all cursor-pointer whitespace-nowrap shrink-0 ${
+          className={`flex-1 min-w-[140px] flex items-center justify-center gap-2 text-center whitespace-nowrap px-3 py-2.5 rounded-xl text-xs sm:text-sm font-semibold tracking-wider transition-all cursor-pointer ${
             currentView === 'garage'
-              ? 'bg-emerald-500 text-black shadow-lg shadow-emerald-500/25'
-              : 'text-slate-300 hover:text-white hover:bg-white/5 border border-transparent'
+              ? 'bg-emerald-500 text-black shadow-lg shadow-emerald-500/25 font-black'
+              : 'text-slate-300 hover:text-white hover:bg-white/5 border border-white/10'
           }`}
         >
-          <LayoutGrid size={15} />
-          <span>Screen 1: Garage</span>
-          <span className={`text-xs px-2 py-0.5 rounded font-mono font-bold ${
-            currentView === 'garage' ? 'bg-black/25 text-black' : 'bg-slate-800 text-slate-200'
-          }`}>
-            {totalAssets}
-          </span>
+          <LayoutGrid size={15} className="shrink-0" />
+          <span>SCREEN 1: GARAGE ({totalAssets})</span>
         </button>
 
         <button
           onClick={() => onViewChange('factory')}
-          className={`flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-black uppercase tracking-wider transition-all cursor-pointer whitespace-nowrap shrink-0 ${
+          className={`flex-1 min-w-[140px] flex items-center justify-center gap-2 text-center whitespace-nowrap px-3 py-2.5 rounded-xl text-xs sm:text-sm font-semibold tracking-wider transition-all cursor-pointer ${
             currentView === 'factory'
-              ? 'bg-cyan-500 text-black shadow-lg shadow-cyan-500/25'
-              : 'text-slate-300 hover:text-white hover:bg-white/5 border border-transparent'
+              ? 'bg-cyan-500 text-black shadow-lg shadow-cyan-500/25 font-black'
+              : 'text-slate-300 hover:text-white hover:bg-white/5 border border-white/10'
           }`}
         >
-          <Cpu size={15} />
-          <span>Screen 2: Factory</span>
-          <span className={`text-xs px-2 py-0.5 rounded font-mono font-bold ${
-            currentView === 'factory' ? 'bg-black/25 text-black' : 'bg-slate-800 text-slate-200'
-          }`}>
-            Intake
-          </span>
+          <Cpu size={15} className="shrink-0" />
+          <span>SCREEN 2: FACTORY INTAKE</span>
         </button>
 
         <button
           onClick={() => onViewChange('showroom')}
-          className={`flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-black uppercase tracking-wider transition-all cursor-pointer whitespace-nowrap shrink-0 ${
+          className={`flex-1 min-w-[140px] flex items-center justify-center gap-2 text-center whitespace-nowrap px-3 py-2.5 rounded-xl text-xs sm:text-sm font-semibold tracking-wider transition-all cursor-pointer ${
             currentView === 'showroom'
               ? 'bg-white text-black shadow-lg shadow-white/25 font-black'
-              : 'text-slate-300 hover:text-white hover:bg-white/5 border border-transparent'
+              : 'text-slate-300 hover:text-white hover:bg-white/5 border border-white/10'
           }`}
         >
-          <Compass size={15} />
-          <span>Screen 3: Showroom</span>
-          <span className={`text-xs px-2 py-0.5 rounded font-mono font-bold uppercase ${
-            currentView === 'showroom' ? 'bg-black/20 text-black' : 'bg-slate-800 text-slate-200'
-          }`}>
-            Aura & Grid
-          </span>
+          <Compass size={15} className="shrink-0" />
+          <span>SCREEN 3: SHOWROOM (AURA & GRID)</span>
         </button>
 
         <button
           onClick={() => onViewChange('dealdesk')}
-          className={`flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-black uppercase tracking-wider transition-all cursor-pointer whitespace-nowrap shrink-0 ${
+          className={`flex-1 min-w-[140px] flex items-center justify-center gap-2 text-center whitespace-nowrap px-3 py-2.5 rounded-xl text-xs sm:text-sm font-semibold tracking-wider transition-all cursor-pointer ${
             currentView === 'dealdesk'
-              ? 'bg-amber-500 text-black shadow-lg shadow-amber-500/25'
-              : 'text-slate-300 hover:text-white hover:bg-white/5 border border-transparent'
+              ? 'bg-amber-500 text-black shadow-lg shadow-amber-500/25 font-black'
+              : 'text-slate-300 hover:text-white hover:bg-white/5 border border-white/10'
           }`}
         >
-          {isOperatorAuthenticated ? <Unlock size={15} /> : <Lock size={15} />}
-          <span>Screen 4: Deal Room</span>
-          <span className={`text-xs px-2 py-0.5 rounded font-mono font-bold ${
-            currentView === 'dealdesk' 
-              ? 'bg-black/25 text-black' 
-              : isOperatorAuthenticated ? 'bg-emerald-950 text-emerald-300' : 'bg-amber-950 text-amber-300'
-          }`}>
-            {isOperatorAuthenticated ? 'UNLOCKED' : 'AUTH REQ'}
-          </span>
+          {isOperatorAuthenticated ? <Unlock size={15} className="shrink-0" /> : <Lock size={15} className="shrink-0" />}
+          <span>SCREEN 4: DEAL ROOM ({isOperatorAuthenticated ? 'UNLOCKED' : 'AUTH REQ'})</span>
         </button>
 
         <button
           onClick={() => onViewChange('maintenance')}
-          className={`flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-black uppercase tracking-wider transition-all cursor-pointer whitespace-nowrap shrink-0 ${
+          className={`flex-1 min-w-[140px] flex items-center justify-center gap-2 text-center whitespace-nowrap px-3 py-2.5 rounded-xl text-xs sm:text-sm font-semibold tracking-wider transition-all cursor-pointer ${
             currentView === 'maintenance'
-              ? 'bg-purple-500 text-white shadow-lg shadow-purple-500/25'
-              : 'text-slate-300 hover:text-white hover:bg-white/5 border border-transparent'
+              ? 'bg-purple-500 text-white shadow-lg shadow-purple-500/25 font-black'
+              : 'text-slate-300 hover:text-white hover:bg-white/5 border border-white/10'
           }`}
         >
-          <Wrench size={15} />
-          <span>Screen 5: Pit Crew</span>
-          <span className={`text-xs px-2 py-0.5 rounded font-mono font-bold ${
-            currentView === 'maintenance' ? 'bg-black/25 text-white' : 'bg-slate-800 text-slate-200'
-          }`}>
-            Diagnostics
-          </span>
+          <Wrench size={15} className="shrink-0" />
+          <span>SCREEN 5: DIAGNOSTICS (PIT CREW)</span>
         </button>
       </nav>
+      </div>
     </header>
   );
 };
