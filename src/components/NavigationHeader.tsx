@@ -44,11 +44,11 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
   const [isMobileHudCollapsed, setIsMobileHudCollapsed] = useState(false);
 
   // Dynamic Portfolio Valuation Metrics (Public Telemetry & Master Protocol Values)
-  const fmvStr = '$105,000 – $235,250';
-  const fmvAnchor = '~$160,000';
-  const fmvAnchorShort = '~$160k';
+  const catalogValuationStr = '$105,000 – $235,250';
+  const catalogAnchor = '~$160,000';
+  const catalogAnchorShort = '~$160k';
   const askStr = '$195,000 – $265,000';
-  const loiStr = '$135,000 – $175,000';
+  const acquisitionStr = '$135,000 – $175,000';
   const devStr = '$715k – $2.02M';
   const buyoutAnchor = '$14,500 Anchor';
 
@@ -157,11 +157,11 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
           <div className="bg-black/75 border border-emerald-500/40 rounded-xl p-3 flex flex-col justify-between hover:border-emerald-400 transition-colors">
             <div className="flex items-center justify-between text-slate-300 text-xs font-bold uppercase tracking-wider">
               <span>Fair Market Value</span>
-              <span className="text-emerald-400 font-mono text-xs bg-emerald-950/80 px-1.5 py-0.5 rounded border border-emerald-500/40 font-black">FMV</span>
+              <span className="text-emerald-400 font-mono text-xs bg-emerald-950/80 px-1.5 py-0.5 rounded border border-emerald-500/40 font-black">VALUATION</span>
             </div>
             <div className="mt-1.5">
-              <span className="text-base sm:text-lg font-black text-emerald-400 block">{fmvStr}</span>
-              <span className="text-xs text-slate-300 block font-semibold">Anchor: {fmvAnchor} ({totalAssets} Assets)</span>
+              <span className="text-base sm:text-lg font-black text-emerald-400 block">{catalogValuationStr}</span>
+              <span className="text-xs text-slate-300 block font-semibold">Anchor: {catalogAnchor} ({totalAssets} Assets)</span>
             </div>
           </div>
 
@@ -181,11 +181,11 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
           <div className="bg-black/75 border border-amber-500/40 rounded-xl p-3 flex flex-col justify-between hover:border-amber-400 transition-colors">
             <div className="flex items-center justify-between text-slate-300 text-xs font-bold uppercase tracking-wider">
               <span>Realistic Accepted Offer</span>
-              <span className="text-amber-400 font-mono text-xs bg-amber-950/80 px-1.5 py-0.5 rounded border border-amber-500/40 font-black">LOI</span>
+              <span className="text-amber-400 font-mono text-xs bg-amber-950/80 px-1.5 py-0.5 rounded border border-amber-500/40 font-black">ACQUISITION</span>
             </div>
             <div className="mt-1.5">
-              <span className="text-base sm:text-lg font-black text-amber-400 block">{loiStr}</span>
-              <span className="text-xs text-slate-300 block font-semibold">Quick-Close / Wire Ready</span>
+              <span className="text-base sm:text-lg font-black text-amber-400 block">{acquisitionStr}</span>
+              <span className="text-xs text-slate-300 block font-semibold">Institutional Wire Ready</span>
             </div>
           </div>
 
@@ -307,7 +307,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
               onClick={() => setIsMobileHudCollapsed(false)}
               className="flex items-center justify-between bg-black/80 border border-emerald-500/40 rounded-xl px-3 py-2 text-xs sm:text-sm text-slate-200 cursor-pointer hover:border-emerald-400 transition-colors"
             >
-              <span className="text-emerald-400 font-black">FMV: $105k–$235k</span>
+              <span className="text-emerald-400 font-black">Valuation: $105k–$235k</span>
               <span className="text-cyan-400 font-black hidden xs:inline">Ask: $195k–$265k</span>
               <span className="text-pink-400 font-black">APA: {buyoutAnchor}</span>
             </div>
@@ -335,11 +335,11 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
                 <div className="min-w-[210px] shrink-0 snap-start bg-black/85 border-2 border-emerald-500/50 rounded-xl p-3 flex flex-col justify-between">
                   <div className="flex items-center justify-between text-xs font-bold text-slate-300 uppercase tracking-wider">
                     <span>Fair Market Value</span>
-                    <span className="text-emerald-400 font-mono text-xs bg-emerald-950/80 px-1.5 py-0.5 rounded border border-emerald-500/40 font-black">FMV</span>
+                    <span className="text-emerald-400 font-mono text-xs bg-emerald-950/80 px-1.5 py-0.5 rounded border border-emerald-500/40 font-black">VALUATION</span>
                   </div>
                   <div className="mt-1.5">
-                    <span className="text-base sm:text-lg font-black text-emerald-400 block">{fmvStr}</span>
-                    <span className="text-xs text-slate-300 block font-semibold">Anchor: {fmvAnchorShort} ({totalAssets})</span>
+                    <span className="text-base sm:text-lg font-black text-emerald-400 block">{catalogValuationStr}</span>
+                    <span className="text-xs text-slate-300 block font-semibold">Anchor: {catalogAnchorShort} ({totalAssets})</span>
                   </div>
                 </div>
 
@@ -357,11 +357,11 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
                 <div className="min-w-[210px] shrink-0 snap-start bg-black/85 border-2 border-amber-500/50 rounded-xl p-3 flex flex-col justify-between">
                   <div className="flex items-center justify-between text-xs font-bold text-slate-300 uppercase tracking-wider">
                     <span>Realistic Accepted</span>
-                    <span className="text-amber-400 font-mono text-xs bg-amber-950/80 px-1.5 py-0.5 rounded border border-amber-500/40 font-black">LOI</span>
+                    <span className="text-amber-400 font-mono text-xs bg-amber-950/80 px-1.5 py-0.5 rounded border border-amber-500/40 font-black">ACQUISITION</span>
                   </div>
                   <div className="mt-1.5">
-                    <span className="text-base sm:text-lg font-black text-amber-400 block">{loiStr}</span>
-                    <span className="text-xs text-slate-300 block font-semibold">Quick-Close Wire</span>
+                    <span className="text-base sm:text-lg font-black text-amber-400 block">{acquisitionStr}</span>
+                    <span className="text-xs text-slate-300 block font-semibold">Direct Commercial Wire</span>
                   </div>
                 </div>
 

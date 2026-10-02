@@ -112,7 +112,7 @@ export const DealDeskScreen: React.FC<DealDeskScreenProps> = ({
               PRIVATE DEAL ROOM
             </h1>
             <p className="text-xs sm:text-sm text-slate-300 max-w-lg mx-auto leading-relaxed">
-              Internal software valuation models, orderly FMV ranges ($105k–$235k), LOI acceptance floors, and the 80% portfolio retention shield are isolated to authorized operators and accredited acquirers.
+              Internal software valuation models, orderly fair-market ranges ($105k–$235k), target acceptance floors, and the 80% portfolio retention shield are isolated to authorized operators and accredited acquirers.
             </p>
           </div>
 

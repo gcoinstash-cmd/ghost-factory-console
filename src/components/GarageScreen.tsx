@@ -107,16 +107,16 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
     const t2Count = products.filter(p => p.flagship_qualified || p.pricing_track?.includes('Track 2') || p.id >= 86).length;
     const t1Count = products.length - t2Count;
 
-    // Orderly FMV: T1 (~$500 - $1,150, anchor $765) + T2 (~$2,500 - $5,500, anchor $3,800)
-    const minFmv = (t1Count * 500) + (t2Count * 2500);
-    const maxFmv = (t1Count * 1150) + (t2Count * 5500);
-    const planFmv = planningValue || (t1Count * 765) + (t2Count * 3800);
+    // Orderly Valuation: T1 (~$500 - $1,150, anchor $765) + T2 (~$2,500 - $5,500, anchor $3,800)
+    const minValuation = (t1Count * 500) + (t2Count * 2500);
+    const maxValuation = (t1Count * 1150) + (t2Count * 5500);
+    const planValuation = planningValue || (t1Count * 765) + (t2Count * 3800);
 
     // Direct B2B Ask (Data Room Target):
     const minAsk = 195000;
     const maxAsk = 265000;
 
-    // Realistic Accepted (Negotiated LOI Wire):
+    // Realistic Accepted (Negotiated Wire Transfer):
     const minAccepted = 135000;
     const maxAccepted = 175000;
 
@@ -125,8 +125,8 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
     const maxDev = (t1Count * 12000) + (t2Count * 40000);
 
     return {
-      fmvRangeStr: `$${(minFmv / 1000).toFixed(1)}k – $${(maxFmv / 1000).toFixed(1)}k`,
-      planFmvStr: `$${Math.round(planFmv).toLocaleString()}`,
+      valuationRangeStr: `$${(minValuation / 1000).toFixed(1)}k – $${(maxValuation / 1000).toFixed(1)}k`,
+      planValuationStr: `$${Math.round(planValuation).toLocaleString()}`,
       b2bAskStr: `$${(minAsk / 1000).toFixed(1)}k – $${(maxAsk / 1000).toFixed(1)}k`,
       acceptedStr: `$${(minAccepted / 1000).toFixed(1)}k – $${(maxAccepted / 1000).toFixed(1)}k`,
       devCostStr: `$${(minDev / 1000).toFixed(0)}k – $${(maxDev / 1000000).toFixed(2)}M`,
@@ -165,8 +165,8 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
             <div className="w-full lg:w-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 bg-black/80 p-4 sm:p-5 rounded-xl border border-emerald-500/40 text-sm">
               <div className="p-1">
                 <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">Fair Market Value</span>
-                <span className="text-base sm:text-xl font-black text-emerald-400">{valuation.fmvRangeStr}</span>
-                <span className="text-xs sm:text-sm text-emerald-300 block font-bold">Anchor: ~{valuation.planFmvStr}</span>
+                <span className="text-base sm:text-xl font-black text-emerald-400">{valuation.valuationRangeStr}</span>
+                <span className="text-xs sm:text-sm text-emerald-300 block font-bold">Anchor: ~{valuation.planValuationStr}</span>
               </div>
               <div className="p-1 border-l border-white/15 pl-3">
                 <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">Direct B2B Ask</span>
@@ -176,7 +176,7 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
               <div className="p-1 border-t sm:border-t-0 sm:border-l border-white/15 pt-2 sm:pt-1 sm:pl-3">
                 <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">Realistic Accepted</span>
                 <span className="text-base sm:text-xl font-black text-amber-400">{valuation.acceptedStr}</span>
-                <span className="text-xs sm:text-sm text-amber-300 block font-bold">Negotiated LOI Wire</span>
+                <span className="text-xs sm:text-sm text-amber-300 block font-bold">Negotiated Wire Transfer</span>
               </div>
               <div className="p-1 border-t sm:border-t-0 border-l border-white/15 pt-2 sm:pt-1 pl-3">
                 <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">Dev Replacement</span>
