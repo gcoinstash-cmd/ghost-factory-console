@@ -30,7 +30,7 @@ export const DealDeskScreen: React.FC<DealDeskScreenProps> = ({
   onAuthenticate,
   onLockOperator
 }) => {
-  const [passkey, setPasskey] = useState('');
+  const [authKey, setAuthKey] = useState('');
   const [authError, setAuthError] = useState(false);
 
   // Track 1 vs Track 2 Mode Selection
@@ -88,7 +88,7 @@ export const DealDeskScreen: React.FC<DealDeskScreenProps> = ({
   if (!isOperatorAuthenticated) {
     const handleAuthSubmit = (e: React.FormEvent) => {
       e.preventDefault();
-      if (passkey.trim().length > 0) {
+      if (authKey.trim().length > 0) {
         onAuthenticate?.();
       } else {
         setAuthError(true);
@@ -119,18 +119,18 @@ export const DealDeskScreen: React.FC<DealDeskScreenProps> = ({
           <form onSubmit={handleAuthSubmit} className="max-w-md mx-auto space-y-3 pt-2">
             <input
               type="password"
-              value={passkey}
+              value={authKey}
               onChange={(e) => {
-                setPasskey(e.target.value);
+                setAuthKey(e.target.value);
                 setAuthError(false);
               }}
-              placeholder="Enter operator passkey (e.g. ghost2026)..."
+              placeholder="Enter operator access key (e.g. ghost2026)..."
               className="w-full bg-black/80 border border-white/20 rounded-xl px-4 py-3 text-sm text-white placeholder:text-slate-600 focus:outline-none focus:border-amber-400 font-mono text-center"
               autoFocus
             />
             {authError && (
               <span className="text-xs text-red-400 block font-bold">
-                Please enter a valid operator passkey.
+                Please enter a valid operator access key.
               </span>
             )}
 

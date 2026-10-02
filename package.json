@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/prerender_console.mjs && vite build",
+    "build": "vite build",
     "lint": "tsc --noEmit",
     "preview": "vite preview"
   },

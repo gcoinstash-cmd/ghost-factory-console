@@ -12,15 +12,15 @@ export const OperatorAuthModal: React.FC<OperatorAuthModalProps> = ({
   onClose,
   onAuthenticate
 }) => {
-  const [passkey, setPasskey] = useState('');
+  const [accessKey, setAccessKey] = useState('');
   const [error, setError] = useState(false);
 
   if (!isOpen) return null;
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Accept valid operator passkeys or any reasonable tester input
-    if (passkey.trim().length > 0) {
+    // Accept valid operator access keys or any reasonable tester input
+    if (accessKey.trim().length > 0) {
       onAuthenticate();
       onClose();
     } else {
@@ -61,22 +61,22 @@ export const OperatorAuthModal: React.FC<OperatorAuthModalProps> = ({
           <div>
             <label className="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1.5 flex items-center gap-1.5">
               <Key size={13} className="text-amber-400" />
-              <span>Operator / Reviewer Passkey</span>
+              <span>Operator / Reviewer Access Key</span>
             </label>
             <input
               type="password"
-              value={passkey}
+              value={accessKey}
               onChange={(e) => {
-                setPasskey(e.target.value);
+                setAccessKey(e.target.value);
                 setError(false);
               }}
-              placeholder="Enter operator passkey (e.g. ghost2026)..."
+              placeholder="Enter operator access key (e.g. ghost2026)..."
               className="w-full bg-black/80 border border-white/20 rounded-xl px-4 py-2.5 text-sm text-white placeholder:text-slate-600 focus:outline-none focus:border-amber-400 font-mono"
               autoFocus
             />
             {error && (
               <span className="text-xs text-red-400 mt-1 block font-bold">
-                Please enter a valid operator passkey.
+                Please enter a valid operator access key.
               </span>
             )}
           </div>
