@@ -52,7 +52,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
   const devStr = '$715k – $2.02M';
   const buyoutAnchor = '$14,500 Anchor';
 
-  const showInternalValuation = isOperatorAuthenticated || currentView === 'dealdesk';
+  const showInternalValuation = isOperatorAuthenticated;
 
   return (
     <header className="sticky top-0 z-50 bg-[#0A0A0B]/95 backdrop-blur-xl border-b border-emerald-500/30 px-3 sm:px-6 py-2.5 sm:py-3 font-mono text-sm">
@@ -294,7 +294,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
           <button
             onClick={() => setIsMobileHudCollapsed(!isMobileHudCollapsed)}
             className="flex items-center gap-1 text-xs font-bold text-slate-300 hover:text-white bg-slate-900 px-2.5 py-1 rounded-lg border border-white/20 cursor-pointer"
-            title="Toggle valuation HUD visibility"
+            title="Toggle view visibility"
           >
             <span>{isMobileHudCollapsed ? 'Expand' : 'Collapse'}</span>
             {isMobileHudCollapsed ? <ChevronDown size={14} /> : <ChevronUp size={14} />}

@@ -35,12 +35,12 @@ export interface ProductItem {
   disclaimer: string;
 }
 
-export const CATALOG_DATA = {
+export const CATALOG_DATA: CatalogData = {
   "catalog_version": "1.2.0-diligence-cleared",
   "store": "Aura & Grid",
   "store_url": "https://auraandgrid.gumroad.com",
   "total_flagships": 110,
-  "standards": "Ghost Factory™ 9.0+ Verified Production Grade (Permanent 5-Archetype Rotation & Curated Design Intelligence)",
+  "standards": "Ghost Factory\u2122 9.0+ Verified Production Grade (Permanent 5-Archetype Rotation & Curated Design Intelligence)",
   "database_engine": "Supabase PostgreSQL (RLS Enabled)",
   "frontend_stack": "React 19 + Tailwind CSS + Lucide Icons + Vite",
   "products": [
@@ -69,8 +69,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Boutique fitness studios & personal training collectives",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Boutique fitness studios & athletic training clubs",
       "domain": "Performance Athletics & Fitness",
       "rarity_tier": "Pro"
     },
@@ -99,8 +99,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Luxury supercar & exotic vehicle rental agencies",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Film production soundstages & creative studio facilities",
       "domain": "Creative & Media Production",
       "rarity_tier": "Core"
     },
@@ -129,8 +129,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: High-ticket creative agencies & production houses",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Luxury supercar & exotic vehicle rental agencies",
       "domain": "Mobility & Fleet Logistics",
       "rarity_tier": "Pro"
     },
@@ -159,8 +159,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Architectural & interior design studio portfolios",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Boutique fight clubs & private boxing gyms",
       "domain": "Performance Athletics & Fitness",
       "rarity_tier": "Core"
     },
@@ -189,7 +189,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE \u2014 TECHNICAL PROTOTYPE ONLY \u2014 NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
       "best_for": "Best for: Emerging private equity managers & LP syndicates",
       "domain": "Institutional Capital & Wealth",
       "rarity_tier": "Pro"
@@ -219,7 +219,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Specialty micro-roasteries & artisanal coffee tasting bars",
       "domain": "Lifestyle & Boutique Hospitality",
       "rarity_tier": "Core"
@@ -250,7 +250,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Ultra-luxury estate brokers & private villa management",
       "domain": "Lifestyle & Boutique Hospitality",
       "rarity_tier": "Pro"
@@ -280,7 +280,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE \u2014 TECHNICAL PROTOTYPE ONLY \u2014 NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
       "best_for": "Best for: Boutique aesthetics clinics & medical spa practitioners",
       "domain": "Lifestyle & Boutique Hospitality",
       "rarity_tier": "Pro"
@@ -310,8 +310,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Sports biomechanics & athlete physical therapy clinics",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: High-end grooming salons & luxury barber ateliers",
       "domain": "Lifestyle & Boutique Hospitality",
       "rarity_tier": "Core"
     },
@@ -340,7 +340,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Private vineyard cellars & allocation tasting estates",
       "domain": "Lifestyle & Boutique Hospitality",
       "rarity_tier": "Core"
@@ -370,8 +370,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Exclusive private member clubs & executive lounges",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Brutalist architectural ateliers & BIM engineering studios",
       "domain": "Creative & Media Production",
       "rarity_tier": "Pro"
     },
@@ -400,8 +400,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Independent record labels & analog mastering studios",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: High-performance biomechanics & athletic testing labs",
       "domain": "Performance Athletics & Fitness",
       "rarity_tier": "Core"
     },
@@ -430,7 +430,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Speakeasy jazz lounges & sommelier listening rooms",
       "domain": "Lifestyle & Boutique Hospitality",
       "rarity_tier": "Core"
@@ -459,7 +459,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: High-ticket wellness retreats & executive expeditions",
       "domain": "Lifestyle & Boutique Hospitality",
       "rarity_tier": "Core"
@@ -488,7 +488,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Intimate chef counter tasting rooms & omakase bars",
       "domain": "Lifestyle & Boutique Hospitality",
       "rarity_tier": "Core"
@@ -517,8 +517,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: 3D CGI, motion design & visual effects studios",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Bespoke footwear cordwainers & custom leather ateliers",
       "domain": "Creative & Media Production",
       "rarity_tier": "Core"
     },
@@ -546,7 +546,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Bespoke fragrance houses & botanical olfactory ateliers",
       "domain": "Lifestyle & Boutique Hospitality",
       "rarity_tier": "Pro"
@@ -575,7 +575,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Alpine tasting salons & biodynamic cellar lounges",
       "domain": "Lifestyle & Boutique Hospitality",
       "rarity_tier": "Core"
@@ -605,8 +605,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Modern architectural ateliers & structural engineering firms",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: High-ticket 3D motion design & visual effects studios",
       "domain": "Creative & Media Production",
       "rarity_tier": "Core"
     },
@@ -635,7 +635,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Private dining clubs & vinyl listening restaurants",
       "domain": "Lifestyle & Boutique Hospitality",
       "rarity_tier": "Core"
@@ -665,7 +665,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: High-energy izakayas & modern craft robata cantinas",
       "domain": "Lifestyle & Boutique Hospitality",
       "rarity_tier": "Core"
@@ -695,7 +695,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Contemporary dim sum bistros & craft baijiu bars",
       "domain": "Lifestyle & Boutique Hospitality",
       "rarity_tier": "Core"
@@ -725,8 +725,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Commercial lighting designers & architectural fixture firms",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: High-performance auto tuners & dyno test facilities",
       "domain": "Mobility & Fleet Logistics",
       "rarity_tier": "Pro"
     },
@@ -756,7 +756,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Luxury architectural villa rentals & private island retreats",
       "domain": "Lifestyle & Boutique Hospitality",
       "rarity_tier": "Pro"
@@ -786,8 +786,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Commercial architecture studios & urban master planners",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: 3D character animation & visual effects pipelines",
       "domain": "Creative & Media Production",
       "rarity_tier": "Core"
     },
@@ -817,7 +817,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Craft smash burger joints & fast-casual kitchen collectives",
       "domain": "Lifestyle & Boutique Hospitality",
       "rarity_tier": "Pro"
@@ -847,7 +847,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Haute parfumerie brands & bespoke scent formulation labs",
       "domain": "Lifestyle & Boutique Hospitality",
       "rarity_tier": "Core"
@@ -877,8 +877,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Commercial portrait photographers & editorial studios",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Modern architecture studios & urban master planners",
       "domain": "Creative & Media Production",
       "rarity_tier": "Pro"
     },
@@ -907,7 +907,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Boutique wine estates & allocation membership programs",
       "domain": "Lifestyle & Boutique Hospitality",
       "rarity_tier": "Core"
@@ -936,7 +936,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE \u2014 TECHNICAL PROTOTYPE ONLY \u2014 NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
       "best_for": "Best for: Multi-generational family offices & private wealth trusts",
       "domain": "Institutional Capital & Wealth",
       "rarity_tier": "Pro"
@@ -965,8 +965,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: High-end grooming salons & luxury barber ateliers",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: Luxury barber salons & master chair booking operators",
       "domain": "Lifestyle & Boutique Hospitality",
       "rarity_tier": "Core"
     },
@@ -995,7 +995,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: VIP barber studios & curated grooming product retailers",
       "domain": "Lifestyle & Boutique Hospitality",
       "rarity_tier": "Core"
@@ -1024,9 +1024,9 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE \u2014 TECHNICAL PROTOTYPE ONLY \u2014 NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
       "best_for": "Best for: Commercial real estate loan brokers & debt underwriters",
-      "domain": "Lifestyle & Boutique Hospitality",
+      "domain": "Institutional Capital & Wealth",
       "rarity_tier": "Pro"
     },
     {
@@ -1053,9 +1053,9 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: B2B strategy consultants & high-ticket agency founders",
-      "domain": "Creative & Media Production",
+      "domain": "Institutional Capital & Wealth",
       "rarity_tier": "Pro"
     },
     {
@@ -1082,14 +1082,14 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Oak smokehouse barbecue joints with pit telemetry needs",
       "domain": "Lifestyle & Boutique Hospitality",
       "rarity_tier": "Pro"
     },
     {
       "id": 36,
-      "name": "STUDIO VÉRONIQUE LA",
+      "name": "STUDIO V\u00c9RONIQUE LA",
       "category": "California Warm Modernism, Residential Interior Design & Material Sourcing OS",
       "vertical": "creative",
       "gumroad_url": "https://auraandgrid.gumroad.com/l/studio-veronique-os",
@@ -1111,8 +1111,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Creative film directors & cultural motion studios",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: California modern interior design & residential architecture studios",
       "domain": "Creative & Media Production",
       "rarity_tier": "Core"
     },
@@ -1141,7 +1141,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Neapolitan pizzerias & artisanal fermentation kitchens",
       "domain": "Lifestyle & Boutique Hospitality",
       "rarity_tier": "Core"
@@ -1171,7 +1171,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: VIP nightclub bottle service & hospitality promoters",
       "domain": "Lifestyle & Boutique Hospitality",
       "rarity_tier": "Pro"
@@ -1201,8 +1201,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Wholesale coffee roasters & cafe bean delivery fleets",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: High-ticket digital design ateliers & kinetic motion agencies",
       "domain": "Creative & Media Production",
       "rarity_tier": "Pro"
     },
@@ -1231,7 +1231,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Food truck operators & ghost kitchen delivery brands",
       "domain": "Lifestyle & Boutique Hospitality",
       "rarity_tier": "Core"
@@ -1261,7 +1261,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE \u2014 TECHNICAL PROTOTYPE ONLY \u2014 NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
       "best_for": "Best for: Bitcoin treasury managers & cryptographic asset holders",
       "domain": "Institutional Capital & Wealth",
       "rarity_tier": "Pro"
@@ -1291,8 +1291,8 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
-      "best_for": "Best for: Sourdough micro-bakeries & pastry wholesale dispatch",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
+      "best_for": "Best for: High-performance auto repair & ECU tuning workshops",
       "domain": "Mobility & Fleet Logistics",
       "rarity_tier": "Pro"
     },
@@ -1321,7 +1321,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Destination luxury spas & holistic wellness sanctuaries",
       "domain": "Lifestyle & Boutique Hospitality",
       "rarity_tier": "Core"
@@ -1350,7 +1350,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Heritage culinary concepts & private dining chefs",
       "domain": "Lifestyle & Boutique Hospitality",
       "rarity_tier": "Core"
@@ -1380,7 +1380,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Gastronomic research collectives & experiential dining",
       "domain": "Lifestyle & Boutique Hospitality",
       "rarity_tier": "Core"
@@ -1409,7 +1409,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Farm-to-table restaurants & local farm partnership networks",
       "domain": "Lifestyle & Boutique Hospitality",
       "rarity_tier": "Pro"
@@ -1439,7 +1439,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE \u2014 TECHNICAL PROTOTYPE ONLY \u2014 NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
       "best_for": "Best for: High-end residential real estate brokers & property portals",
       "domain": "Lifestyle & Boutique Hospitality",
       "rarity_tier": "Core"
@@ -1468,7 +1468,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: High-volume drive-thru concepts & late-night wok kitchens",
       "domain": "Lifestyle & Boutique Hospitality",
       "rarity_tier": "Pro"
@@ -1496,7 +1496,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE \u2014 TECHNICAL PROTOTYPE ONLY \u2014 NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
       "best_for": "Best for: Real estate private equity analysts & property syndicators",
       "domain": "Institutional Capital & Wealth",
       "rarity_tier": "Pro"
@@ -1525,7 +1525,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Banquet catering facilities & commercial production kitchens",
       "domain": "Lifestyle & Boutique Hospitality",
       "rarity_tier": "Pro"
@@ -1555,14 +1555,14 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Mobile street food fleets & festival event caterers",
       "domain": "Lifestyle & Boutique Hospitality",
       "rarity_tier": "Pro"
     },
     {
       "id": 52,
-      "name": "YŪGEN SENSORY OS",
+      "name": "Y\u016aGEN SENSORY OS",
       "category": "Zen Minimalist Sensory Dining Sanctuary & Omakase Booking OS",
       "vertical": "hospitality",
       "gumroad_url": "https://auraandgrid.gumroad.com/l/yugen-sensory-os",
@@ -1584,7 +1584,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Minimalist Zen dining rooms & sensory gastronomy seatings",
       "domain": "Lifestyle & Boutique Hospitality",
       "rarity_tier": "Core"
@@ -1613,7 +1613,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE \u2014 TECHNICAL PROTOTYPE ONLY \u2014 NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
       "best_for": "Best for: Pediatric development centers & sensory therapy clinics",
       "domain": "Clinical & Medical Operations",
       "rarity_tier": "Pro"
@@ -1642,7 +1642,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE \u2014 TECHNICAL PROTOTYPE ONLY \u2014 NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
       "best_for": "Best for: Hotel asset managers & boutique hospitality investors",
       "domain": "Lifestyle & Boutique Hospitality",
       "rarity_tier": "Pro"
@@ -1671,7 +1671,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE \u2014 TECHNICAL PROTOTYPE ONLY \u2014 NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
       "best_for": "Best for: Private equity portfolio managers & investment committees",
       "domain": "Institutional Capital & Wealth",
       "rarity_tier": "Pro"
@@ -1701,9 +1701,9 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Commercial HVAC contractors & chiller plant technicians",
-      "domain": "Lifestyle & Boutique Hospitality",
+      "domain": "Trades & Infrastructure",
       "rarity_tier": "Pro"
     },
     {
@@ -1731,7 +1731,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Drone roofing contractors & insurance scope estimators",
       "domain": "Trades & Infrastructure",
       "rarity_tier": "Pro"
@@ -1761,9 +1761,9 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Commercial plumbing firms & backflow testing services",
-      "domain": "Lifestyle & Boutique Hospitality",
+      "domain": "Trades & Infrastructure",
       "rarity_tier": "Pro"
     },
     {
@@ -1791,7 +1791,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Solar EPC installers & renewable energy contractors",
       "domain": "Trades & Infrastructure",
       "rarity_tier": "Core"
@@ -1821,9 +1821,9 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Commercial electrical contractors & EV charger deployers",
-      "domain": "Lifestyle & Boutique Hospitality",
+      "domain": "Trades & Infrastructure",
       "rarity_tier": "Pro"
     },
     {
@@ -1851,7 +1851,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE \u2014 TECHNICAL PROTOTYPE ONLY \u2014 NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
       "best_for": "Best for: Private dental practices & cosmetic dentistry clinics",
       "domain": "Clinical & Medical Operations",
       "rarity_tier": "Core"
@@ -1881,7 +1881,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE \u2014 TECHNICAL PROTOTYPE ONLY \u2014 NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
       "best_for": "Best for: Emergency veterinary hospitals & animal surgical clinics",
       "domain": "Clinical & Medical Operations",
       "rarity_tier": "Core"
@@ -1911,7 +1911,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE \u2014 TECHNICAL PROTOTYPE ONLY \u2014 NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
       "best_for": "Best for: Functional medicine doctors & epigenetic longevity clinics",
       "domain": "Clinical & Medical Operations",
       "rarity_tier": "Pro"
@@ -1941,7 +1941,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Orthopedic physical therapists & sports recovery clinics",
       "domain": "Clinical & Medical Operations",
       "rarity_tier": "Core"
@@ -1971,7 +1971,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE \u2014 TECHNICAL PROTOTYPE ONLY \u2014 NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
       "best_for": "Best for: Contrast therapy lounges & hyperbaric wellness clinics",
       "domain": "Clinical & Medical Operations",
       "rarity_tier": "Core"
@@ -2001,7 +2001,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE \u2014 TECHNICAL PROTOTYPE ONLY \u2014 NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
       "best_for": "Best for: Commercial boutique law firms & transactional attorneys",
       "domain": "Institutional Capital & Wealth",
       "rarity_tier": "Pro"
@@ -2030,7 +2030,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE \u2014 TECHNICAL PROTOTYPE ONLY \u2014 NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
       "best_for": "Best for: Lower middle-market M&A advisors & investment banks",
       "domain": "Institutional Capital & Wealth",
       "rarity_tier": "Pro"
@@ -2059,7 +2059,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE \u2014 TECHNICAL PROTOTYPE ONLY \u2014 NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
       "best_for": "Best for: Retained executive search consultants & board recruiters",
       "domain": "Institutional Capital & Wealth",
       "rarity_tier": "Pro"
@@ -2088,7 +2088,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE \u2014 TECHNICAL PROTOTYPE ONLY \u2014 NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
       "best_for": "Best for: Sovereign wealth managers & multi-family offices",
       "domain": "Institutional Capital & Wealth",
       "rarity_tier": "Pro"
@@ -2117,7 +2117,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE \u2014 TECHNICAL PROTOTYPE ONLY \u2014 NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
       "best_for": "Best for: Complex litigation teams & trial war room managers",
       "domain": "Institutional Capital & Wealth",
       "rarity_tier": "Pro"
@@ -2147,7 +2147,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Earthmoving equipment rental yards & plant hire fleets",
       "domain": "Mobility & Fleet Logistics",
       "rarity_tier": "Pro"
@@ -2177,9 +2177,9 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Intermodal freight brokerages & carrier logistics dispatchers",
-      "domain": "Lifestyle & Boutique Hospitality",
+      "domain": "Mobility & Fleet Logistics",
       "rarity_tier": "Pro"
     },
     {
@@ -2207,7 +2207,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE \u2014 TECHNICAL PROTOTYPE ONLY \u2014 NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
       "best_for": "Best for: On-demand private jet brokers & aircraft fleet operators",
       "domain": "Mobility & Fleet Logistics",
       "rarity_tier": "Core"
@@ -2237,7 +2237,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Temperature-controlled cold warehouses & reefer dock hubs",
       "domain": "Mobility & Fleet Logistics",
       "rarity_tier": "Core"
@@ -2267,7 +2267,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Heavy lift contractors & mobile crane rigging engineers",
       "domain": "Mobility & Fleet Logistics",
       "rarity_tier": "Pro"
@@ -2297,7 +2297,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Paint protection film installers & luxury auto restylers",
       "domain": "Mobility & Fleet Logistics",
       "rarity_tier": "Pro"
@@ -2327,9 +2327,9 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Mobile detailing operators & corporate fleet wash services",
-      "domain": "Lifestyle & Boutique Hospitality",
+      "domain": "Mobility & Fleet Logistics",
       "rarity_tier": "Pro"
     },
     {
@@ -2357,7 +2357,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Camera rental houses & grip truck equipment dispatchers",
       "domain": "Creative & Media Production",
       "rarity_tier": "Pro"
@@ -2387,7 +2387,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: High-ticket tattoo studios & resident artist collectives",
       "domain": "Creative & Media Production",
       "rarity_tier": "Core"
@@ -2417,7 +2417,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Combat sports gyms & elite athlete recovery facilities",
       "domain": "Performance Athletics & Fitness",
       "rarity_tier": "Core"
@@ -2447,7 +2447,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Michelin-starred restaurants & multi-course tasting rooms",
       "domain": "Lifestyle & Boutique Hospitality",
       "rarity_tier": "Core"
@@ -2477,7 +2477,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE \u2014 TECHNICAL PROTOTYPE ONLY \u2014 NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
       "best_for": "Best for: Aesthetic injection nurses & medical aesthetics practices",
       "domain": "Lifestyle & Boutique Hospitality",
       "rarity_tier": "Pro"
@@ -2507,7 +2507,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Luxury yacht charter brokers & Mediterranean fleet managers",
       "domain": "Mobility & Fleet Logistics",
       "rarity_tier": "Core"
@@ -2537,7 +2537,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: High-end watch dealers & horological provenance vaults",
       "domain": "Institutional Capital & Wealth",
       "rarity_tier": "Pro"
@@ -2567,7 +2567,7 @@ export const CATALOG_DATA = {
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: Supabase-Ready Blueprint (Frontend + Schema + Demo RLS Policies)",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Estate managers & luxury villa rental concierges",
       "domain": "Lifestyle & Boutique Hospitality",
       "rarity_tier": "Pro"
@@ -2596,7 +2596,7 @@ export const CATALOG_DATA = {
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/aegis-swarm-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
-      "pricing_track": "Track 2 — Flagship Tier-1 ($14,500 Anchor)",
+      "pricing_track": "Track 2 \u2014 Flagship Tier-1 ($14,500 Anchor)",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
@@ -2605,7 +2605,7 @@ export const CATALOG_DATA = {
         18000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Perimeter security operators & autonomous drone fleet coordinators",
       "domain": "Deep Tech SCADA",
       "rarity_tier": "Elite"
@@ -2619,7 +2619,11 @@ export const CATALOG_DATA = {
       "admin_url": "https://autonomous-mining-haulage-fleet-dispatch-os.onrender.com/admin",
       "audit_score": 9.8,
       "tables": [
-        "IF"
+        "haul_trucks",
+        "dispatch_routes",
+        "pit_telemetry",
+        "payload_cycles",
+        "obstacle_events"
       ],
       "vertical": "subsea",
       "archetype_id": "C",
@@ -2631,7 +2635,7 @@ export const CATALOG_DATA = {
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/autonomous-mining-haulage-fleet-dispatch-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
-      "pricing_track": "Track 2 — Flagship Tier-1 ($14,500 Anchor)",
+      "pricing_track": "Track 2 \u2014 Flagship Tier-1 ($14,500 Anchor)",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
@@ -2640,7 +2644,7 @@ export const CATALOG_DATA = {
         18000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Open-pit mining dispatchers & autonomous haulage operators",
       "domain": "Industrial Robotics & Autonomous SCADA",
       "rarity_tier": "Elite"
@@ -2654,7 +2658,11 @@ export const CATALOG_DATA = {
       "admin_url": "https://autonomous-subsea-mining-crawler-telemetry-os.onrender.com/admin",
       "audit_score": 9.8,
       "tables": [
-        "IF"
+        "crawler_nodes",
+        "seabed_telemetry",
+        "hydraulic_pressures",
+        "nodule_collection_rates",
+        "bathymetry_surveys"
       ],
       "vertical": "subsea",
       "archetype_id": "A",
@@ -2666,7 +2674,7 @@ export const CATALOG_DATA = {
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/autonomous-subsea-mining-crawler-telemetry-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
-      "pricing_track": "Track 2 — Flagship Tier-1 ($14,500 Anchor)",
+      "pricing_track": "Track 2 \u2014 Flagship Tier-1 ($14,500 Anchor)",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
@@ -2675,7 +2683,7 @@ export const CATALOG_DATA = {
         18000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Deep-sea mining engineers & seabed crawler telemetry operators",
       "domain": "Industrial Robotics & Autonomous SCADA",
       "rarity_tier": "Elite"
@@ -2689,7 +2697,11 @@ export const CATALOG_DATA = {
       "admin_url": "https://aviation-fbo-dispatch-os.onrender.com/admin",
       "audit_score": 9.8,
       "tables": [
-        "IF"
+        "aircraft_arrivals",
+        "fuel_orders",
+        "hangar_bays",
+        "crew_concierge",
+        "ground_handling_logs"
       ],
       "vertical": "aerospace",
       "archetype_id": "C",
@@ -2701,7 +2713,7 @@ export const CATALOG_DATA = {
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/aviation-fbo-dispatch-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
-      "pricing_track": "Track 2 — Flagship Tier-1 ($14,500 Anchor)",
+      "pricing_track": "Track 2 \u2014 Flagship Tier-1 ($14,500 Anchor)",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
@@ -2710,9 +2722,9 @@ export const CATALOG_DATA = {
         18000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE \u2014 TECHNICAL PROTOTYPE ONLY \u2014 NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
       "best_for": "Best for: Airport FBO ground handlers & private aviation terminal managers",
-      "domain": "Lifestyle & Boutique Hospitality",
+      "domain": "Mobility & Fleet Logistics",
       "rarity_tier": "Elite"
     },
     {
@@ -2724,7 +2736,11 @@ export const CATALOG_DATA = {
       "admin_url": "https://boutique-winery-production-os.onrender.com/admin",
       "audit_score": 9.8,
       "tables": [
-        "IF"
+        "vineyard_blocks",
+        "fermentation_vats",
+        "barrel_cellars",
+        "vintage_allocations",
+        "lab_analyses"
       ],
       "vertical": "hospitality",
       "archetype_id": "B",
@@ -2736,7 +2752,7 @@ export const CATALOG_DATA = {
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/boutique-winery-production-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
-      "pricing_track": "Track 2 — Flagship Tier-1 ($14,500 Anchor)",
+      "pricing_track": "Track 2 \u2014 Flagship Tier-1 ($14,500 Anchor)",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
@@ -2745,7 +2761,7 @@ export const CATALOG_DATA = {
         18000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Estate winemakers & barrel cellar production managers",
       "domain": "Lifestyle & Boutique Hospitality",
       "rarity_tier": "Elite"
@@ -2759,7 +2775,11 @@ export const CATALOG_DATA = {
       "admin_url": "https://clinical-trial-operations-os.onrender.com/admin",
       "audit_score": 9.8,
       "tables": [
-        "IF"
+        "clinical_trials",
+        "patient_cohorts",
+        "edc_milestones",
+        "protocol_deviations",
+        "site_investigators"
       ],
       "vertical": "medical",
       "archetype_id": "C",
@@ -2771,7 +2791,7 @@ export const CATALOG_DATA = {
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/clinical-trial-operations-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
-      "pricing_track": "Track 2 — Flagship Tier-1 ($14,500 Anchor)",
+      "pricing_track": "Track 2 \u2014 Flagship Tier-1 ($14,500 Anchor)",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
@@ -2780,7 +2800,7 @@ export const CATALOG_DATA = {
         18000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE \u2014 TECHNICAL PROTOTYPE ONLY \u2014 NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
       "best_for": "Best for: Biopharma CROs & clinical trial site coordinators",
       "domain": "Clinical & Medical Operations",
       "rarity_tier": "Elite"
@@ -2794,7 +2814,11 @@ export const CATALOG_DATA = {
       "admin_url": "https://cold-storage-logistics-os.onrender.com/admin",
       "audit_score": 9.8,
       "tables": [
-        "IF"
+        "reefer_zones",
+        "temperature_telemetry",
+        "dock_schedules",
+        "pallet_manifests",
+        "compliance_alarms"
       ],
       "vertical": "heavy_fleet",
       "archetype_id": "C",
@@ -2806,7 +2830,7 @@ export const CATALOG_DATA = {
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/cold-storage-logistics-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
-      "pricing_track": "Track 2 — Flagship Tier-1 ($14,500 Anchor)",
+      "pricing_track": "Track 2 \u2014 Flagship Tier-1 ($14,500 Anchor)",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
@@ -2815,7 +2839,7 @@ export const CATALOG_DATA = {
         18000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Cold chain logistics managers & multi-zone freezer facilities",
       "domain": "Mobility & Fleet Logistics",
       "rarity_tier": "Elite"
@@ -2844,7 +2868,7 @@ export const CATALOG_DATA = {
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/commercial-supersonic-airliner-engine-inverted-aerospike-telemetry-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
-      "pricing_track": "Track 2 — Flagship Tier-1 ($14,500 Anchor)",
+      "pricing_track": "Track 2 \u2014 Flagship Tier-1 ($14,500 Anchor)",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
@@ -2853,7 +2877,7 @@ export const CATALOG_DATA = {
         18000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Supersonic propulsion engineers & test cell telemetry analysts",
       "domain": "Deep Tech SCADA",
       "rarity_tier": "Elite"
@@ -2884,7 +2908,7 @@ export const CATALOG_DATA = {
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/commercial-tokamak-fusion-plasma-scada-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
-      "pricing_track": "Track 2 — Flagship Tier-1 ($14,500 Anchor)",
+      "pricing_track": "Track 2 \u2014 Flagship Tier-1 ($14,500 Anchor)",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
@@ -2893,7 +2917,7 @@ export const CATALOG_DATA = {
         18000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Tokamak control engineers & magnetic confinement fusion labs",
       "domain": "Energy SCADA",
       "rarity_tier": "Elite"
@@ -2907,7 +2931,11 @@ export const CATALOG_DATA = {
       "admin_url": "https://deep-sea-rov-trenching-and-cable-burial-os.onrender.com/admin",
       "audit_score": 9.8,
       "tables": [
-        "IF"
+        "rov_vehicles",
+        "jet_trenchers",
+        "cable_tensions",
+        "depth_sensors",
+        "bathymetric_logs"
       ],
       "vertical": "subsea",
       "archetype_id": "C",
@@ -2919,7 +2947,7 @@ export const CATALOG_DATA = {
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/deep-sea-rov-trenching-and-cable-burial-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
-      "pricing_track": "Track 2 — Flagship Tier-1 ($14,500 Anchor)",
+      "pricing_track": "Track 2 \u2014 Flagship Tier-1 ($14,500 Anchor)",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
@@ -2928,7 +2956,7 @@ export const CATALOG_DATA = {
         18000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Offshore marine contractors & subsea cable trenching engineers",
       "domain": "Industrial Robotics & Autonomous SCADA",
       "rarity_tier": "Elite"
@@ -2942,7 +2970,11 @@ export const CATALOG_DATA = {
       "admin_url": "https://geothermal-supercritical-egs-wellhead-scada-os.onrender.com/admin",
       "audit_score": 9.8,
       "tables": [
-        "IF"
+        "wellhead_telemetry",
+        "enthalpy_monitors",
+        "reinjection_pumps",
+        "subsurface_seismic",
+        "steam_turbines"
       ],
       "vertical": "clean_energy",
       "archetype_id": "D",
@@ -2954,7 +2986,7 @@ export const CATALOG_DATA = {
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/geothermal-supercritical-egs-wellhead-scada-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
-      "pricing_track": "Track 2 — Flagship Tier-1 ($14,500 Anchor)",
+      "pricing_track": "Track 2 \u2014 Flagship Tier-1 ($14,500 Anchor)",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
@@ -2963,7 +2995,7 @@ export const CATALOG_DATA = {
         18000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Geothermal energy operators & enhanced geothermal wellhead engineers",
       "domain": "Energy SCADA",
       "rarity_tier": "Elite"
@@ -2992,7 +3024,7 @@ export const CATALOG_DATA = {
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/hft-colocation-and-microwave-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
-      "pricing_track": "Track 2 — Flagship Tier-1 ($14,500 Anchor)",
+      "pricing_track": "Track 2 \u2014 Flagship Tier-1 ($14,500 Anchor)",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
@@ -3001,7 +3033,7 @@ export const CATALOG_DATA = {
         18000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE \u2014 TECHNICAL PROTOTYPE ONLY \u2014 NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
       "best_for": "Best for: Low-latency prop trading firms & colocation infrastructure teams",
       "domain": "Institutional Capital & Wealth",
       "rarity_tier": "Elite"
@@ -3030,7 +3062,7 @@ export const CATALOG_DATA = {
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/hypersonic-wind-tunnel-aerodynamics-telemetry-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
-      "pricing_track": "Track 2 — Flagship Tier-1 ($14,500 Anchor)",
+      "pricing_track": "Track 2 \u2014 Flagship Tier-1 ($14,500 Anchor)",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
@@ -3039,7 +3071,7 @@ export const CATALOG_DATA = {
         18000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Aerodynamic test engineers & hypersonic wind tunnel researchers",
       "domain": "Deep Tech SCADA",
       "rarity_tier": "Elite"
@@ -3070,7 +3102,7 @@ export const CATALOG_DATA = {
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/luxury-auto-concierge-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
-      "pricing_track": "Track 2 — Flagship Tier-1 ($14,500 Anchor)",
+      "pricing_track": "Track 2 \u2014 Flagship Tier-1 ($14,500 Anchor)",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
@@ -3079,7 +3111,7 @@ export const CATALOG_DATA = {
         18000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: High-net-worth vehicle concierges & private car collector managers",
       "domain": "Mobility & Fleet Logistics",
       "rarity_tier": "Elite"
@@ -3093,7 +3125,11 @@ export const CATALOG_DATA = {
       "admin_url": "https://maritime-freight-brokerage-os.onrender.com/admin",
       "audit_score": 9.8,
       "tables": [
-        "IF"
+        "vessel_positions",
+        "charter_parties",
+        "cargo_manifests",
+        "bunker_indices",
+        "demurrage_ledgers"
       ],
       "vertical": "heavy_fleet",
       "archetype_id": "C",
@@ -3105,7 +3141,7 @@ export const CATALOG_DATA = {
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/maritime-freight-brokerage-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
-      "pricing_track": "Track 2 — Flagship Tier-1 ($14,500 Anchor)",
+      "pricing_track": "Track 2 \u2014 Flagship Tier-1 ($14,500 Anchor)",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
@@ -3114,7 +3150,7 @@ export const CATALOG_DATA = {
         18000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Dry bulk & container ship brokers & maritime cargo dispatchers",
       "domain": "Mobility & Fleet Logistics",
       "rarity_tier": "Elite"
@@ -3128,7 +3164,11 @@ export const CATALOG_DATA = {
       "admin_url": "https://orbital-satellite-laser-isl-optical-terminal-os.onrender.com/admin",
       "audit_score": 9.8,
       "tables": [
-        "IF"
+        "satellite_nodes",
+        "laser_transceivers",
+        "pointing_gimbals",
+        "optical_telemetry",
+        "isl_routes"
       ],
       "vertical": "aerospace",
       "archetype_id": "A",
@@ -3140,7 +3180,7 @@ export const CATALOG_DATA = {
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/orbital-satellite-laser-isl-optical-terminal-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
-      "pricing_track": "Track 2 — Flagship Tier-1 ($14,500 Anchor)",
+      "pricing_track": "Track 2 \u2014 Flagship Tier-1 ($14,500 Anchor)",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
@@ -3149,7 +3189,7 @@ export const CATALOG_DATA = {
         18000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Satellite constellation operators & optical inter-satellite link engineers",
       "domain": "Deep Tech SCADA",
       "rarity_tier": "Elite"
@@ -3178,7 +3218,7 @@ export const CATALOG_DATA = {
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/private-credit-syndication-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
-      "pricing_track": "Track 2 — Flagship Tier-1 ($14,500 Anchor)",
+      "pricing_track": "Track 2 \u2014 Flagship Tier-1 ($14,500 Anchor)",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
@@ -3187,7 +3227,7 @@ export const CATALOG_DATA = {
         18000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE \u2014 TECHNICAL PROTOTYPE ONLY \u2014 NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
       "best_for": "Best for: Direct lenders, credit funds & private loan syndication desks",
       "domain": "Institutional Capital & Wealth",
       "rarity_tier": "Elite"
@@ -3201,7 +3241,11 @@ export const CATALOG_DATA = {
       "admin_url": "https://renewable-energy-microgrid-dispatch-os.onrender.com/admin",
       "audit_score": 9.8,
       "tables": [
-        "IF"
+        "solar_arrays",
+        "bess_storage",
+        "microgrid_inverters",
+        "load_forecasts",
+        "dispatch_schedules"
       ],
       "vertical": "clean_energy",
       "archetype_id": "C",
@@ -3213,7 +3257,7 @@ export const CATALOG_DATA = {
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/renewable-energy-microgrid-dispatch-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
-      "pricing_track": "Track 2 — Flagship Tier-1 ($14,500 Anchor)",
+      "pricing_track": "Track 2 \u2014 Flagship Tier-1 ($14,500 Anchor)",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
@@ -3222,9 +3266,9 @@ export const CATALOG_DATA = {
         18000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Island microgrid operators & commercial battery BESS engineers",
-      "domain": "Lifestyle & Boutique Hospitality",
+      "domain": "Energy SCADA",
       "rarity_tier": "Elite"
     },
     {
@@ -3236,7 +3280,11 @@ export const CATALOG_DATA = {
       "admin_url": "https://semiconductor-fab-cleanroom-scada-os.onrender.com/admin",
       "audit_score": 9.8,
       "tables": [
-        "IF"
+        "cleanroom_chambers",
+        "particle_counters",
+        "hvac_plenums",
+        "foup_carriers",
+        "fab_alarms"
       ],
       "vertical": "deep_tech",
       "archetype_id": "D",
@@ -3248,7 +3296,7 @@ export const CATALOG_DATA = {
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/semiconductor-fab-cleanroom-scada-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
-      "pricing_track": "Track 2 — Flagship Tier-1 ($14,500 Anchor)",
+      "pricing_track": "Track 2 \u2014 Flagship Tier-1 ($14,500 Anchor)",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
@@ -3257,7 +3305,7 @@ export const CATALOG_DATA = {
         18000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Wafer fab contamination engineers & cleanroom facility managers",
       "domain": "Energy SCADA",
       "rarity_tier": "Elite"
@@ -3286,7 +3334,7 @@ export const CATALOG_DATA = {
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/space-launch-payload-manifest-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
-      "pricing_track": "Track 2 — Flagship Tier-1 ($14,500 Anchor)",
+      "pricing_track": "Track 2 \u2014 Flagship Tier-1 ($14,500 Anchor)",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
@@ -3295,9 +3343,9 @@ export const CATALOG_DATA = {
         18000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Commercial launch providers & satellite integration manifest managers",
-      "domain": "Lifestyle & Boutique Hospitality",
+      "domain": "Deep Tech SCADA",
       "rarity_tier": "Elite"
     },
     {
@@ -3309,7 +3357,11 @@ export const CATALOG_DATA = {
       "admin_url": "https://subsea-cable-restoration-os.onrender.com/admin",
       "audit_score": 9.8,
       "tables": [
-        "IF"
+        "fiber_spans",
+        "otdr_fault_traces",
+        "repair_vessels",
+        "joint_housings",
+        "restoration_logs"
       ],
       "vertical": "subsea",
       "archetype_id": "C",
@@ -3321,7 +3373,7 @@ export const CATALOG_DATA = {
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/subsea-cable-restoration-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
-      "pricing_track": "Track 2 — Flagship Tier-1 ($14,500 Anchor)",
+      "pricing_track": "Track 2 \u2014 Flagship Tier-1 ($14,500 Anchor)",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
@@ -3330,7 +3382,7 @@ export const CATALOG_DATA = {
         18000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Subsea fiber cable owners & maritime repair ship dispatchers",
       "domain": "Industrial Robotics & Autonomous SCADA",
       "rarity_tier": "Elite"
@@ -3344,7 +3396,11 @@ export const CATALOG_DATA = {
       "admin_url": "https://superconducting-quantum-processor-cryostat-os.onrender.com/admin",
       "audit_score": 9.8,
       "tables": [
-        "IF"
+        "dilution_refrigerators",
+        "milli_kelvin_sensors",
+        "qubit_channels",
+        "microwave_lines",
+        "pulse_sequences"
       ],
       "vertical": "deep_tech",
       "archetype_id": "D",
@@ -3356,7 +3412,7 @@ export const CATALOG_DATA = {
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/superconducting-quantum-processor-cryostat-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
-      "pricing_track": "Track 2 — Flagship Tier-1 ($14,500 Anchor)",
+      "pricing_track": "Track 2 \u2014 Flagship Tier-1 ($14,500 Anchor)",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
@@ -3365,7 +3421,7 @@ export const CATALOG_DATA = {
         18000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Quantum computing researchers & dilution refrigerator engineers",
       "domain": "Energy SCADA",
       "rarity_tier": "Elite"
@@ -3379,7 +3435,11 @@ export const CATALOG_DATA = {
       "admin_url": "https://yacht-charter-fleet-ecosystem.onrender.com/admin",
       "audit_score": 9.8,
       "tables": [
-        "IF"
+        "charter_yachts",
+        "itinerary_legs",
+        "client_escrows",
+        "crew_manifests",
+        "broker_contracts"
       ],
       "vertical": "heavy_fleet",
       "archetype_id": "B",
@@ -3391,7 +3451,7 @@ export const CATALOG_DATA = {
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/yacht-charter-fleet-ecosystem",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
-      "pricing_track": "Track 2 — Flagship Tier-1 ($14,500 Anchor)",
+      "pricing_track": "Track 2 \u2014 Flagship Tier-1 ($14,500 Anchor)",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
@@ -3400,7 +3460,7 @@ export const CATALOG_DATA = {
         18000
       ],
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE",
       "best_for": "Best for: Yacht fleet management companies & luxury maritime charter brokers",
       "domain": "Mobility & Fleet Logistics",
       "rarity_tier": "Elite"
@@ -3414,7 +3474,11 @@ export const CATALOG_DATA = {
       "admin_url": "https://orbital-habitat-closed-loop-os.onrender.com/admin",
       "audit_score": 9.8,
       "tables": [
-        "IF"
+        "eclss_telemetry",
+        "o2_regeneration_loops",
+        "water_recovery_systems",
+        "co2_scrubber_beds",
+        "atmospheric_sensors"
       ],
       "vertical": "aerospace",
       "archetype_id": "C",
@@ -3426,7 +3490,7 @@ export const CATALOG_DATA = {
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/orbital-habitat-closed-loop-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
-      "pricing_track": "Track 2 — Flagship Tier-1 ($14,500 Anchor)",
+      "pricing_track": "Track 2 \u2014 Flagship Tier-1 ($14,500 Anchor)",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "exclusive_buyout_anchor": 14500,
@@ -3434,8 +3498,8 @@ export const CATALOG_DATA = {
         10000,
         18000
       ],
-      "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE",
+      "truth_badge": "SIMULATED DATA PROTOTYPE",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE \u2014 TECHNICAL PROTOTYPE ONLY \u2014 NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
       "best_for": "Best for: Commercial space station operators & life support ECLSS flight controllers",
       "domain": "Deep Tech SCADA",
       "rarity_tier": "Elite"
@@ -3465,7 +3529,7 @@ export const CATALOG_DATA = {
       "commercial_checkout_url": "https://auraandgrid.gumroad.com/l/orbital-cryo-depot-scada-os",
       "demo_passcode_type": "DEMO PASSCODE (READ-ONLY SANDBOX)",
       "security_architecture": "Level 3: SCADA/Aerospace Blueprint (Frontend + Schema + Demo RLS Policies)",
-      "pricing_track": "Track 2 — Flagship Tier-1 ($14,500 Anchor)",
+      "pricing_track": "Track 2 \u2014 Flagship Tier-1 ($14,500 Anchor)",
       "flagship_qualified": true,
       "flagship_license_msrp": 1500,
       "flagship_license_range": [
@@ -3485,11 +3549,11 @@ export const CATALOG_DATA = {
         35000,
         75000
       ],
-      "truth_label": "Interactive Prototype (Simulated Data Only) — Awaiting Flagship Qualification Audit",
+      "truth_label": "Interactive Prototype (Simulated Data Only) \u2014 Awaiting Flagship Qualification Audit",
       "truth_badge": "Interactive Prototype // Simulated Data Only",
-      "disclaimer": "SIMULATED DATA PROTOTYPE — FOR CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE — TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
+      "disclaimer": "SIMULATED DATA PROTOTYPE \u2014 FOR CONCEPT DEMO ONLY \u2014 NOT PRODUCTION OR ADVICE \u2014 TECHNICAL PROTOTYPE ONLY \u2014 NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE.",
       "best_for": "Best for: In-space propellant depot engineers & cryogenic boiloff telemetry teams",
-      "domain": "Lifestyle & Boutique Hospitality",
+      "domain": "Deep Tech SCADA",
       "rarity_tier": "Elite"
     }
   ],
@@ -3667,3 +3731,5 @@ export const CATALOG_DATA = {
     ]
   }
 };
+
+export default CATALOG_DATA;

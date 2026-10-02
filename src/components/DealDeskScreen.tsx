@@ -112,7 +112,7 @@ export const DealDeskScreen: React.FC<DealDeskScreenProps> = ({
               PRIVATE DEAL ROOM
             </h1>
             <p className="text-xs sm:text-sm text-slate-300 max-w-lg mx-auto leading-relaxed">
-              Internal software valuation models, orderly fair-market ranges ($105k–$235k), target acceptance floors, and the 80% portfolio retention shield are isolated to authorized operators and accredited acquirers.
+              Internal software asset valuation models, acquisition framework schedules, and the 80% portfolio retention shield are isolated to authorized operators and accredited acquirers.
             </p>
           </div>
 
@@ -140,15 +140,6 @@ export const DealDeskScreen: React.FC<DealDeskScreenProps> = ({
             >
               <Unlock size={16} />
               <span>UNLOCK OPERATOR DEAL ROOM</span>
-            </button>
-
-            <button
-              type="button"
-              onClick={() => onAuthenticate?.()}
-              className="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-white/15 font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer"
-            >
-              <ShieldCheck size={14} className="text-emerald-400" />
-              <span>ONE-CLICK DEMO OPERATOR ACCESS</span>
             </button>
           </form>
 

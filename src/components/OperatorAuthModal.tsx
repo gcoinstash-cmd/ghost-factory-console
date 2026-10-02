@@ -28,10 +28,6 @@ export const OperatorAuthModal: React.FC<OperatorAuthModalProps> = ({
     }
   };
 
-  const handleInstantDemo = () => {
-    onAuthenticate();
-    onClose();
-  };
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 backdrop-blur-md p-4 font-mono">
@@ -88,15 +84,6 @@ export const OperatorAuthModal: React.FC<OperatorAuthModalProps> = ({
             >
               <Unlock size={16} />
               <span>AUTHENTICATE OPERATOR</span>
-            </button>
-
-            <button
-              type="button"
-              onClick={handleInstantDemo}
-              className="w-full flex items-center justify-center gap-2 py-2 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-white/15 font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer"
-            >
-              <ShieldCheck size={14} className="text-emerald-400" />
-              <span>ENTER GATED PROTOTYPE REVIEW MODE</span>
             </button>
           </div>
         </form>

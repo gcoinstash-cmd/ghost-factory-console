@@ -19,10 +19,6 @@ export const App: React.FC = () => {
   // Operator Authentication State (Private Deal Room Perimeter Isolation)
   const [isOperatorAuthenticated, setIsOperatorAuthenticated] = useState<boolean>(() => {
     try {
-      const urlParams = new URLSearchParams(window.location.search);
-      if (urlParams.get('operator') === 'true' || window.location.hash === '#deal-room') {
-        return true;
-      }
       return sessionStorage.getItem('gfcc_operator_auth') === 'true';
     } catch {
       return false;
