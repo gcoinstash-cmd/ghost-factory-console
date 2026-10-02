@@ -1,7 +1,14 @@
 import React from 'react';
 import { AlertTriangle } from 'lucide-react';
+import { REGULATED_SECTOR_DISCLAIMER } from '../constants/disclaimers';
 
-export const OperationalDisclaimer: React.FC = () => {
+interface OperationalDisclaimerProps {
+  text?: string;
+}
+
+export const OperationalDisclaimer: React.FC<OperationalDisclaimerProps> = ({
+  text = REGULATED_SECTOR_DISCLAIMER,
+}) => {
   return (
     <div className="w-full space-y-2 my-2">
       {/* MANDATORY TRUTH BADGE */}
@@ -15,14 +22,14 @@ export const OperationalDisclaimer: React.FC = () => {
       {/* OPERATIONAL DISCLAIMER CONTAINER */}
       <div
         className="p-2.5 rounded-lg bg-amber-950/50 border border-amber-500/50 text-amber-200 font-mono text-[11px] leading-relaxed"
-        title="NOT CERTIFIED FOR OPERATIONAL, REGULATORY, OR LIFE-CRITICAL USE"
+        title={text}
       >
         <div className="flex items-center gap-1.5 font-black text-amber-300 uppercase tracking-wider mb-1">
           <AlertTriangle size={13} className="text-amber-400 shrink-0" />
           <span>REGULATORY & TRUTH NOTICE:</span>
         </div>
         <p className="text-amber-200 font-semibold leading-normal">
-          SIMULATED DATA PROTOTYPE — NOT CERTIFIED FOR OPERATIONAL, REGULATORY, OR LIFE-CRITICAL USE
+          {text}
         </p>
       </div>
     </div>

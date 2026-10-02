@@ -2,8 +2,9 @@ import { createServer } from 'vite';
 import { renderToStaticMarkup } from 'react-dom/server';
 import React from 'react';
 import { CATALOG_DATA } from '../src/catalogData.ts';
+import { REGULATED_SECTOR_DISCLAIMER } from '../src/constants/disclaimers.ts';
 
-const REQUIRED_TEXT = "SIMULATED DATA PROTOTYPE — NOT CERTIFIED FOR OPERATIONAL, REGULATORY, OR LIFE-CRITICAL USE";
+const REQUIRED_TEXT = REGULATED_SECTOR_DISCLAIMER;
 
 console.log("🔍 [AUDIT] Running assert-disclaimer.mjs validation...");
 const products = CATALOG_DATA.products || [];

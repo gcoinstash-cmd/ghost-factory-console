@@ -136,7 +136,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
             title="Production Diligence Freeze Lock"
           >
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span>BUILD: <strong>v1.2.1-diligence-cleared</strong></span>
+            <span>BUILD: <strong>v1.2.1</strong></span>
           </div>
 
           <button

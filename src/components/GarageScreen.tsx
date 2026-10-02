@@ -119,7 +119,7 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
               </div>
               <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-emerald-500/20 border border-emerald-500/50 rounded-lg text-xs font-mono font-black text-emerald-300">
                 <Sparkles size={13} className="text-emerald-400" />
-                <span>v1.2.1-diligence-cleared</span>
+                <span>v1.2.1</span>
               </span>
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white flex flex-wrap items-center gap-3">

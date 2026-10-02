@@ -2,7 +2,10 @@ import React from 'react';
 import { Database, Activity, ExternalLink, ChevronDown, AlertTriangle } from 'lucide-react';
 import { ProductItem } from '../catalogData';
 import { OperationalDisclaimer } from './OperationalDisclaimer';
+import { REGULATED_SECTOR_DISCLAIMER } from '../constants/disclaimers';
 import { LICENSE_MATRIX, getBlueprintPricing } from '../data/licenseMatrix';
+
+export { REGULATED_SECTOR_DISCLAIMER };
 
 export type RarityTier = 'Elite' | 'Pro' | 'Core';
 
@@ -162,7 +165,7 @@ export const BlueprintCard: React.FC<BlueprintCardProps> = ({
           </h3>
           
           {/* UNCONDITIONAL MANDATORY OPERATIONAL DISCLAIMER & TRUTH BADGE */}
-          <OperationalDisclaimer />
+          <OperationalDisclaimer text={REGULATED_SECTOR_DISCLAIMER} />
 
           <p className="text-sm sm:text-base text-slate-200 font-bold mt-1 line-clamp-1">
             {product.category}
