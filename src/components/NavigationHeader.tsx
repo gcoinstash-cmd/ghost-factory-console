@@ -30,6 +30,9 @@ interface NavigationHeaderProps {
   onLockOperator: () => void;
 }
 
+const IS_OPERATOR_MODE = import.meta.env.VITE_OPERATOR_MODE === 'true';
+const DealDeskHud = IS_OPERATOR_MODE ? React.lazy(() => import('./DealDeskHud')) : null;
+
 export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
   currentView,
   onViewChange,
@@ -52,7 +55,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
   const devStr = '$715k – $2.02M';
   const buyoutAnchor = '$14,500 Anchor';
 
-  const showInternalDealDesk = isOperatorAuthenticated;
+  const showInternalDealDesk = IS_OPERATOR_MODE && isOperatorAuthenticated;
 
   return (
     <header className="sticky top-0 z-50 bg-[#0A0A0B]/95 backdrop-blur-xl border-b border-emerald-500/30 px-3 sm:px-6 py-2.5 sm:py-3 font-mono text-sm">
@@ -150,69 +153,18 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
       </div>
 
       {/* DESKTOP 5-PILLAR RIBBON (Visible on lg screens) */}
-      {showInternalDealDesk ? (
-        /* 1. OPERATOR AUTHENTICATED: INTERNAL M&A APPRAISAL TELEMETRY */
-        <div className="hidden lg:grid lg:grid-cols-5 gap-3 py-3 border-b border-white/10 text-xs sm:text-sm">
-          {/* 1. Fair Market Value */}
-          <div className="bg-black/75 border border-emerald-500/40 rounded-xl p-3 flex flex-col justify-between hover:border-emerald-400 transition-colors">
-            <div className="flex items-center justify-between text-slate-300 text-xs font-bold uppercase tracking-wider">
-              <span>Fair Market Value</span>
-              <span className="text-emerald-400 font-mono text-xs bg-emerald-950/80 px-1.5 py-0.5 rounded border border-emerald-500/40 font-black">APPRAISAL</span>
-            </div>
-            <div className="mt-1.5">
-              <span className="text-base sm:text-lg font-black text-emerald-400 block">{catalogAppraisalStr}</span>
-              <span className="text-xs text-slate-300 block font-semibold">Anchor: {catalogAnchor} ({totalAssets} Assets)</span>
-            </div>
-          </div>
-
-          {/* 2. Direct B2B Ask */}
-          <div className="bg-black/75 border border-cyan-500/40 rounded-xl p-3 flex flex-col justify-between hover:border-cyan-400 transition-colors">
-            <div className="flex items-center justify-between text-slate-300 text-xs font-bold uppercase tracking-wider">
-              <span>Direct B2B Ask</span>
-              <span className="text-cyan-400 font-mono text-xs bg-cyan-950/80 px-1.5 py-0.5 rounded border border-cyan-500/40 font-black">ASK</span>
-            </div>
-            <div className="mt-1.5">
-              <span className="text-base sm:text-lg font-black text-cyan-400 block">{askStr}</span>
-              <span className="text-xs text-slate-300 block font-semibold">Data Room Asking Target</span>
-            </div>
-          </div>
-
-          {/* 3. Realistic Accepted Offer */}
-          <div className="bg-black/75 border border-amber-500/40 rounded-xl p-3 flex flex-col justify-between hover:border-amber-400 transition-colors">
-            <div className="flex items-center justify-between text-slate-300 text-xs font-bold uppercase tracking-wider">
-              <span>Realistic Accepted Offer</span>
-              <span className="text-amber-400 font-mono text-xs bg-amber-950/80 px-1.5 py-0.5 rounded border border-amber-500/40 font-black">ACQUISITION</span>
-            </div>
-            <div className="mt-1.5">
-              <span className="text-base sm:text-lg font-black text-amber-400 block">{acquisitionStr}</span>
-              <span className="text-xs text-slate-300 block font-semibold">Institutional Wire Ready</span>
-            </div>
-          </div>
-
-          {/* 4. Replacement Development Cost */}
-          <div className="bg-black/75 border border-purple-500/40 rounded-xl p-3 flex flex-col justify-between hover:border-purple-400 transition-colors">
-            <div className="flex items-center justify-between text-slate-300 text-xs font-bold uppercase tracking-wider">
-              <span>Dev Replacement Cost</span>
-              <span className="text-purple-400 font-mono text-xs bg-purple-950/80 px-1.5 py-0.5 rounded border border-purple-500/40 font-black">DEV</span>
-            </div>
-            <div className="mt-1.5">
-              <span className="text-base sm:text-lg font-black text-purple-400 block">{devStr}</span>
-              <span className="text-xs text-slate-300 block font-semibold">Agency Duplicate ({totalAssets} Models)</span>
-            </div>
-          </div>
-
-          {/* 5. Exclusive Buyout */}
-          <div className="bg-black/75 border border-pink-500/40 rounded-xl p-3 flex flex-col justify-between hover:border-pink-400 transition-colors">
-            <div className="flex items-center justify-between text-slate-300 text-xs font-bold uppercase tracking-wider">
-              <span>Exclusive Buyout</span>
-              <span className="text-pink-400 font-mono text-xs bg-pink-950/80 px-1.5 py-0.5 rounded border border-pink-500/40 font-black">APA</span>
-            </div>
-            <div className="mt-1.5">
-              <span className="text-base sm:text-lg font-black text-pink-400 block">{buyoutAnchor}</span>
-              <span className="text-xs text-slate-300 block font-semibold">T2 Flagship ($10k–$18k) / T1 ($4.5k)</span>
-            </div>
-          </div>
-        </div>
+      {showInternalDealDesk && DealDeskHud ? (
+        <React.Suspense fallback={null}>
+          <DealDeskHud
+            catalogAppraisalStr={catalogAppraisalStr}
+            catalogAnchor={catalogAnchor}
+            askStr={askStr}
+            acquisitionStr={acquisitionStr}
+            devStr={devStr}
+            buyoutAnchor={buyoutAnchor}
+            totalAssets={totalAssets}
+          />
+        </React.Suspense>
       ) : (
         /* 2. PUBLIC STOREFRONT: RETAIL SHELF PRICING & CUSTOMER DELIVERABLES */
         <div className="hidden lg:grid lg:grid-cols-5 gap-3 py-3 border-b border-white/10 text-xs sm:text-sm">
@@ -302,13 +254,13 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
         </div>
 
         {isMobileHudCollapsed ? (
-          showInternalDealDesk ? (
+          showInternalDealDesk && DealDeskHud ? (
             <div 
               onClick={() => setIsMobileHudCollapsed(false)}
               className="flex items-center justify-between bg-black/80 border border-emerald-500/40 rounded-xl px-3 py-2 text-xs sm:text-sm text-slate-200 cursor-pointer hover:border-emerald-400 transition-colors"
             >
-              <span className="text-emerald-400 font-black">Appraisal: $105k–$235k</span>
-              <span className="text-cyan-400 font-black hidden xs:inline">Ask: $195k–$265k</span>
+              <span className="text-emerald-400 font-black">Deal Desk Active</span>
+              <span className="text-cyan-400 font-black hidden xs:inline">Ask: {askStr}</span>
               <span className="text-pink-400 font-black">APA: {buyoutAnchor}</span>
             </div>
           ) : (
@@ -328,130 +280,81 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
             </div>
           )
         ) : (
-          <div className="flex items-center gap-2.5 overflow-x-auto no-scrollbar snap-x snap-mandatory pt-1 pb-1.5 touch-pan-x">
-            {showInternalDealDesk ? (
-              /* Mobile Expanded Internal Deal Desk */
-              <>
-                <div className="min-w-[210px] shrink-0 snap-start bg-black/85 border-2 border-emerald-500/50 rounded-xl p-3 flex flex-col justify-between">
-                  <div className="flex items-center justify-between text-xs font-bold text-slate-300 uppercase tracking-wider">
-                    <span>Fair Market Value</span>
-                    <span className="text-emerald-400 font-mono text-xs bg-emerald-950/80 px-1.5 py-0.5 rounded border border-emerald-500/40 font-black">APPRAISAL</span>
-                  </div>
-                  <div className="mt-1.5">
-                    <span className="text-base sm:text-lg font-black text-emerald-400 block">{catalogAppraisalStr}</span>
-                    <span className="text-xs text-slate-300 block font-semibold">Anchor: {catalogAnchorShort} ({totalAssets})</span>
-                  </div>
+          showInternalDealDesk && DealDeskHud ? (
+            <React.Suspense fallback={null}>
+              <DealDeskHud
+                catalogAppraisalStr={catalogAppraisalStr}
+                catalogAnchor={catalogAnchor}
+                askStr={askStr}
+                acquisitionStr={acquisitionStr}
+                devStr={devStr}
+                buyoutAnchor={buyoutAnchor}
+                totalAssets={totalAssets}
+              />
+            </React.Suspense>
+          ) : (
+            <div className="flex items-center gap-2.5 overflow-x-auto no-scrollbar snap-x snap-mandatory pt-1 pb-1.5 touch-pan-x">
+              <div className="min-w-[210px] shrink-0 snap-start bg-black/85 border-2 border-emerald-500/50 rounded-xl p-3 flex flex-col justify-between">
+                <div className="flex items-center justify-between text-xs font-bold text-slate-300 uppercase tracking-wider">
+                  <span>Track 1 Retail MSRP</span>
+                  <span className="text-emerald-400 font-mono text-xs bg-emerald-950/80 px-1.5 py-0.5 rounded border border-emerald-500/40 font-black">MSRP</span>
                 </div>
+                <div className="mt-1.5">
+                  <span className="text-base sm:text-lg font-black text-emerald-400 block">$199 USD</span>
+                  <span className="text-xs text-slate-300 block font-semibold">Single-Client Blueprint</span>
+                </div>
+              </div>
 
-                <div className="min-w-[210px] shrink-0 snap-start bg-black/85 border-2 border-cyan-500/50 rounded-xl p-3 flex flex-col justify-between">
-                  <div className="flex items-center justify-between text-xs font-bold text-slate-300 uppercase tracking-wider">
-                    <span>Direct B2B Ask</span>
-                    <span className="text-cyan-400 font-mono text-xs bg-cyan-950/80 px-1.5 py-0.5 rounded border border-cyan-500/40 font-black">ASK</span>
-                  </div>
-                  <div className="mt-1.5">
-                    <span className="text-base sm:text-lg font-black text-cyan-400 block">{askStr}</span>
-                    <span className="text-xs text-slate-300 block font-semibold">Data Room Target</span>
-                  </div>
+              <div className="min-w-[210px] shrink-0 snap-start bg-black/85 border-2 border-cyan-500/50 rounded-xl p-3 flex flex-col justify-between">
+                <div className="flex items-center justify-between text-xs font-bold text-slate-300 uppercase tracking-wider">
+                  <span>Commercial Team Pass</span>
+                  <span className="text-cyan-400 font-mono text-xs bg-cyan-950/80 px-1.5 py-0.5 rounded border border-cyan-500/40 font-black">TEAM</span>
                 </div>
+                <div className="mt-1.5">
+                  <span className="text-base sm:text-lg font-black text-cyan-400 block">$599 USD</span>
+                  <span className="text-xs text-slate-300 block font-semibold">Agency Multi-Seat Pack</span>
+                </div>
+              </div>
 
-                <div className="min-w-[210px] shrink-0 snap-start bg-black/85 border-2 border-amber-500/50 rounded-xl p-3 flex flex-col justify-between">
-                  <div className="flex items-center justify-between text-xs font-bold text-slate-300 uppercase tracking-wider">
-                    <span>Realistic Accepted</span>
-                    <span className="text-amber-400 font-mono text-xs bg-amber-950/80 px-1.5 py-0.5 rounded border border-amber-500/40 font-black">ACQUISITION</span>
-                  </div>
-                  <div className="mt-1.5">
-                    <span className="text-base sm:text-lg font-black text-amber-400 block">{acquisitionStr}</span>
-                    <span className="text-xs text-slate-300 block font-semibold">Direct Commercial Wire</span>
-                  </div>
+              <div className="min-w-[210px] shrink-0 snap-start bg-black/85 border-2 border-purple-500/50 rounded-xl p-3 flex flex-col justify-between">
+                <div className="flex items-center justify-between text-xs font-bold text-slate-300 uppercase tracking-wider">
+                  <span>Flagship Commercial</span>
+                  <span className="text-purple-400 font-mono text-xs bg-purple-950/80 px-1.5 py-0.5 rounded border border-purple-500/40 font-black">TIER-1</span>
                 </div>
+                <div className="mt-1.5">
+                  <span className="text-base sm:text-lg font-black text-purple-400 block">$1,500 – $3,500</span>
+                  <span className="text-xs text-slate-300 block font-semibold">SCADA Physics Prototypes</span>
+                </div>
+              </div>
 
-                <div className="min-w-[210px] shrink-0 snap-start bg-black/85 border-2 border-purple-500/50 rounded-xl p-3 flex flex-col justify-between">
-                  <div className="flex items-center justify-between text-xs font-bold text-slate-300 uppercase tracking-wider">
-                    <span>Dev Replacement</span>
-                    <span className="text-purple-400 font-mono text-xs bg-purple-950/80 px-1.5 py-0.5 rounded border border-purple-500/40 font-black">DEV</span>
-                  </div>
-                  <div className="mt-1.5">
-                    <span className="text-base sm:text-lg font-black text-purple-400 block">{devStr}</span>
-                    <span className="text-xs text-slate-300 block font-semibold">Cost to Duplicate</span>
-                  </div>
+              <div className="min-w-[210px] shrink-0 snap-start bg-black/85 border-2 border-pink-500/50 rounded-xl p-3 flex flex-col justify-between">
+                <div className="flex items-center justify-between text-xs font-bold text-slate-300 uppercase tracking-wider">
+                  <span>Exclusive Buyout</span>
+                  <span className="text-pink-400 font-mono text-xs bg-pink-950/80 px-1.5 py-0.5 rounded border border-pink-500/40 font-black">APA</span>
                 </div>
+                <div className="mt-1.5">
+                  <span className="text-base sm:text-lg font-black text-pink-400 block">{buyoutAnchor}</span>
+                  <span className="text-xs text-slate-300 block font-semibold">Track 1 ($4.5k) / T2 ($10k+)</span>
+                </div>
+              </div>
 
-                <div className="min-w-[210px] shrink-0 snap-start bg-black/85 border-2 border-pink-500/50 rounded-xl p-3 flex flex-col justify-between">
-                  <div className="flex items-center justify-between text-xs font-bold text-slate-300 uppercase tracking-wider">
-                    <span>Exclusive Buyout</span>
-                    <span className="text-pink-400 font-mono text-xs bg-pink-950/80 px-1.5 py-0.5 rounded border border-pink-500/40 font-black">APA</span>
-                  </div>
-                  <div className="mt-1.5">
-                    <span className="text-base sm:text-lg font-black text-pink-400 block">{buyoutAnchor}</span>
-                    <span className="text-xs text-slate-300 block font-semibold">T2 ($10k–$18k) / T1</span>
-                  </div>
+              <div 
+                onClick={onOpenOperatorAuth}
+                className="min-w-[210px] shrink-0 snap-start bg-amber-950/30 border-2 border-amber-500/70 rounded-xl p-3 flex flex-col justify-between cursor-pointer"
+              >
+                <div className="flex items-center justify-between text-xs font-bold text-amber-300 uppercase tracking-wider">
+                  <span>Private Deal Room</span>
+                  <span className="text-amber-400 font-mono text-xs bg-amber-950 px-1.5 py-0.5 rounded border border-amber-500/40 font-black">AUTH</span>
                 </div>
-              </>
-            ) : (
-              /* Mobile Expanded Public Storefront */
-              <>
-                <div className="min-w-[210px] shrink-0 snap-start bg-black/85 border-2 border-emerald-500/50 rounded-xl p-3 flex flex-col justify-between">
-                  <div className="flex items-center justify-between text-xs font-bold text-slate-300 uppercase tracking-wider">
-                    <span>Catalog Fleet</span>
-                    <span className="text-emerald-400 font-mono text-xs bg-emerald-950/80 px-1.5 py-0.5 rounded border border-emerald-500/40 font-black">FLEET</span>
-                  </div>
-                  <div className="mt-1.5">
-                    <span className="text-base sm:text-lg font-black text-emerald-400 block">{totalAssets} Blueprints</span>
-                    <span className="text-xs text-slate-300 block font-semibold">85 Track 1 + 25 Flagship</span>
-                  </div>
+                <div className="mt-1.5">
+                  <span className="text-base sm:text-lg font-black text-amber-400 block flex items-center gap-1.5">
+                    <Lock size={15} /> RESTRICTED
+                  </span>
+                  <span className="text-xs text-amber-200 block font-semibold">Tap to Unlock M&A Telemetry</span>
                 </div>
-
-                <div className="min-w-[210px] shrink-0 snap-start bg-black/85 border-2 border-cyan-500/50 rounded-xl p-3 flex flex-col justify-between">
-                  <div className="flex items-center justify-between text-xs font-bold text-slate-300 uppercase tracking-wider">
-                    <span>Track 1 Retail MSRP</span>
-                    <span className="text-cyan-400 font-mono text-xs bg-cyan-950/80 px-1.5 py-0.5 rounded border border-cyan-500/40 font-black">$199</span>
-                  </div>
-                  <div className="mt-1.5">
-                    <span className="text-base sm:text-lg font-black text-cyan-400 block">$199 USD</span>
-                    <span className="text-xs text-slate-300 block font-semibold">Source Blueprint License</span>
-                  </div>
-                </div>
-
-                <div className="min-w-[210px] shrink-0 snap-start bg-black/85 border-2 border-amber-500/50 rounded-xl p-3 flex flex-col justify-between">
-                  <div className="flex items-center justify-between text-xs font-bold text-slate-300 uppercase tracking-wider">
-                    <span>Commercial Team</span>
-                    <span className="text-amber-400 font-mono text-xs bg-amber-950/80 px-1.5 py-0.5 rounded border border-amber-500/40 font-black">TEAM</span>
-                  </div>
-                  <div className="mt-1.5">
-                    <span className="text-base sm:text-lg font-black text-amber-400 block">$599 USD</span>
-                    <span className="text-xs text-slate-300 block font-semibold">Multi-Seat Agency Pack</span>
-                  </div>
-                </div>
-
-                <div className="min-w-[210px] shrink-0 snap-start bg-black/85 border-2 border-purple-500/50 rounded-xl p-3 flex flex-col justify-between">
-                  <div className="flex items-center justify-between text-xs font-bold text-slate-300 uppercase tracking-wider">
-                    <span>Flagship License</span>
-                    <span className="text-purple-400 font-mono text-xs bg-purple-950/80 px-1.5 py-0.5 rounded border border-purple-500/40 font-black">SCADA</span>
-                  </div>
-                  <div className="mt-1.5">
-                    <span className="text-base sm:text-lg font-black text-purple-400 block">$1,500 – $3,500</span>
-                    <span className="text-xs text-slate-300 block font-semibold">Tier-1 Operations Suite</span>
-                  </div>
-                </div>
-
-                <div 
-                  onClick={onOpenOperatorAuth}
-                  className="min-w-[210px] shrink-0 snap-start bg-amber-950/30 border-2 border-amber-500/70 rounded-xl p-3 flex flex-col justify-between cursor-pointer"
-                >
-                  <div className="flex items-center justify-between text-xs font-bold text-amber-300 uppercase tracking-wider">
-                    <span>Private Deal Room</span>
-                    <span className="text-amber-400 font-mono text-xs bg-amber-950 px-1.5 py-0.5 rounded border border-amber-500/40 font-black">AUTH</span>
-                  </div>
-                  <div className="mt-1.5">
-                    <span className="text-base sm:text-lg font-black text-amber-400 block flex items-center gap-1.5">
-                      <Lock size={15} /> RESTRICTED
-                    </span>
-                    <span className="text-xs text-amber-200 block font-semibold">Tap to Unlock M&A Telemetry</span>
-                  </div>
-                </div>
-              </>
-            )}
-          </div>
+              </div>
+            </div>
+          )
         )}
       </div>
 

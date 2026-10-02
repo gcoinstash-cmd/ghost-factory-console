@@ -12,6 +12,9 @@ import { ProductItem } from '../catalogData';
 import { NextBestActionBanner } from './NextBestActionBanner';
 import { BlueprintCard, getDomainClass, getRarityTier } from './BlueprintCard';
 
+const IS_OPERATOR_MODE = import.meta.env.VITE_OPERATOR_MODE === 'true';
+const DealDeskHud = IS_OPERATOR_MODE ? React.lazy(() => import('./DealDeskHud')) : null;
+
 interface GarageScreenProps {
   products: ProductItem[];
   totalAssets: number;
@@ -102,39 +105,6 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
     setCurrentPage(1);
   };
 
-  // Dynamic appraisal computation based on catalog composition (85 T1 + 25 T2)
-  const appraisal = useMemo(() => {
-    const t2Count = products.filter(p => p.flagship_qualified || p.pricing_track?.includes('Track 2') || p.id >= 86).length;
-    const t1Count = products.length - t2Count;
-
-    // Orderly Appraisal: T1 (~$500 - $1,150, anchor $765) + T2 (~$2,500 - $5,500, anchor $3,800)
-    const minAppraisal = (t1Count * 500) + (t2Count * 2500);
-    const maxAppraisal = (t1Count * 1150) + (t2Count * 5500);
-    const planAppraisal = planningValue || (t1Count * 765) + (t2Count * 3800);
-
-    // Direct B2B Ask (Data Room Target):
-    const minAsk = 195000;
-    const maxAsk = 265000;
-
-    // Realistic Accepted (Negotiated Wire Transfer):
-    const minAccepted = 135000;
-    const maxAccepted = 175000;
-
-    // Dev Replacement Labor: T1 ($4k - $12k) + T2 ($15k - $40k)
-    const minDev = (t1Count * 4000) + (t2Count * 15000);
-    const maxDev = (t1Count * 12000) + (t2Count * 40000);
-
-    return {
-      appraisalRangeStr: `$${(minAppraisal / 1000).toFixed(1)}k – $${(maxAppraisal / 1000).toFixed(1)}k`,
-      planAppraisalStr: `$${Math.round(planAppraisal).toLocaleString()}`,
-      b2bAskStr: `$${(minAsk / 1000).toFixed(1)}k – $${(maxAsk / 1000).toFixed(1)}k`,
-      acceptedStr: `$${(minAccepted / 1000).toFixed(1)}k – $${(maxAccepted / 1000).toFixed(1)}k`,
-      devCostStr: `$${(minDev / 1000).toFixed(0)}k – $${(maxDev / 1000000).toFixed(2)}M`,
-      t1Count,
-      t2Count
-    };
-  }, [products]);
-
   return (
     <div className="space-y-8 font-mono">
       {/* METRIC BANNER: Screen 1 Main Collection HUD (Rendered First as Requested) */}
@@ -160,34 +130,12 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
             </p>
           </div>
 
-          {/* 5 Core Appraisal / Public Deliverable Badges (Two-Faced Separation) */}
-          {isOperatorAuthenticated ? (
-            <div className="w-full lg:w-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 bg-black/80 p-4 sm:p-5 rounded-xl border border-emerald-500/40 text-sm">
-              <div className="p-1">
-                <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">Fair Market Value</span>
-                <span className="text-base sm:text-xl font-black text-emerald-400">{appraisal.appraisalRangeStr}</span>
-                <span className="text-xs sm:text-sm text-emerald-300 block font-bold">Anchor: ~{appraisal.planAppraisalStr}</span>
-              </div>
-              <div className="p-1 border-l border-white/15 pl-3">
-                <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">Direct B2B Ask</span>
-                <span className="text-base sm:text-xl font-black text-cyan-400">{appraisal.b2bAskStr}</span>
-                <span className="text-xs sm:text-sm text-cyan-300 block font-bold">Data Room Ask</span>
-              </div>
-              <div className="p-1 border-t sm:border-t-0 sm:border-l border-white/15 pt-2 sm:pt-1 sm:pl-3">
-                <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">Realistic Accepted</span>
-                <span className="text-base sm:text-xl font-black text-amber-400">{appraisal.acceptedStr}</span>
-                <span className="text-xs sm:text-sm text-amber-300 block font-bold">Negotiated Wire Transfer</span>
-              </div>
-              <div className="p-1 border-t sm:border-t-0 border-l border-white/15 pt-2 sm:pt-1 pl-3">
-                <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">Dev Replacement</span>
-                <span className="text-base sm:text-xl font-black text-purple-400">{appraisal.devCostStr}</span>
-                <span className="text-xs sm:text-sm text-purple-300 block font-bold">Cost to Duplicate</span>
-              </div>
-              <div className="p-1 border-t sm:border-t-0 sm:border-l border-white/15 pt-2 sm:pt-1 sm:pl-3 col-span-2 sm:col-span-1">
-                <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">Exclusive Buyout</span>
-                <span className="text-base sm:text-xl font-black text-pink-400">$14,500 Anchor</span>
-                <span className="text-xs sm:text-sm text-pink-300 block font-bold">T2 ($10k–$18k) / T1</span>
-              </div>
+          {/* 5 Core Deliverable Badges (Gated behind IS_OPERATOR_MODE for Operator Deal Desk) */}
+          {IS_OPERATOR_MODE && isOperatorAuthenticated && DealDeskHud ? (
+            <div className="w-full">
+              <React.Suspense fallback={null}>
+                <DealDeskHud totalAssets={totalAssets} />
+              </React.Suspense>
             </div>
           ) : (
             <div className="w-full lg:w-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 bg-black/80 p-4 sm:p-5 rounded-xl border border-white/15 text-sm">
