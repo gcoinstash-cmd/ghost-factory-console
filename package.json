@@ -1,11 +1,11 @@
 {
   "name": "ghost-factory-console",
   "private": true,
-  "version": "1.2.0-diligence-cleared",
+  "version": "1.2.1-diligence-cleared",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "node scripts/audit/assert_best_for.mjs && vite build",
     "lint": "tsc --noEmit",
     "preview": "vite preview"
   },

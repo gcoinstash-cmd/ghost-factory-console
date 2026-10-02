@@ -43,8 +43,8 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
 }) => {
   const [isMobileHudCollapsed, setIsMobileHudCollapsed] = useState(false);
 
-  // Dynamic Portfolio Valuation Metrics (Public Telemetry & Master Protocol Values)
-  const catalogValuationStr = '$105,000 – $235,250';
+  // Dynamic Portfolio Appraisal Metrics (Public Telemetry & Master Protocol Values)
+  const catalogAppraisalStr = '$105,000 – $235,250';
   const catalogAnchor = '~$160,000';
   const catalogAnchorShort = '~$160k';
   const askStr = '$195,000 – $265,000';
@@ -52,7 +52,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
   const devStr = '$715k – $2.02M';
   const buyoutAnchor = '$14,500 Anchor';
 
-  const showInternalValuation = isOperatorAuthenticated;
+  const showInternalDealDesk = isOperatorAuthenticated;
 
   return (
     <header className="sticky top-0 z-50 bg-[#0A0A0B]/95 backdrop-blur-xl border-b border-emerald-500/30 px-3 sm:px-6 py-2.5 sm:py-3 font-mono text-sm">
@@ -90,7 +90,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
             <button
               onClick={onLockOperator}
               className="flex items-center gap-1.5 px-2.5 py-1 rounded bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-white/20 font-bold transition-colors cursor-pointer text-xs"
-              title="Lock Private Deal Room (Hide internal valuation math)"
+              title="Lock Private Deal Room (Hide internal deal math)"
             >
               <Lock size={13} className="text-amber-400" />
               <span>LOCK</span>
@@ -134,7 +134,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
             title="Production Diligence Freeze Lock"
           >
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span>BUILD: <strong>v1.2.0-diligence-cleared</strong></span>
+            <span>BUILD: <strong>v1.2.1-diligence-cleared</strong></span>
           </div>
 
           <button
@@ -150,17 +150,17 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
       </div>
 
       {/* DESKTOP 5-PILLAR RIBBON (Visible on lg screens) */}
-      {showInternalValuation ? (
-        /* 1. OPERATOR AUTHENTICATED: INTERNAL M&A VALUATION TELEMETRY */
+      {showInternalDealDesk ? (
+        /* 1. OPERATOR AUTHENTICATED: INTERNAL M&A APPRAISAL TELEMETRY */
         <div className="hidden lg:grid lg:grid-cols-5 gap-3 py-3 border-b border-white/10 text-xs sm:text-sm">
           {/* 1. Fair Market Value */}
           <div className="bg-black/75 border border-emerald-500/40 rounded-xl p-3 flex flex-col justify-between hover:border-emerald-400 transition-colors">
             <div className="flex items-center justify-between text-slate-300 text-xs font-bold uppercase tracking-wider">
               <span>Fair Market Value</span>
-              <span className="text-emerald-400 font-mono text-xs bg-emerald-950/80 px-1.5 py-0.5 rounded border border-emerald-500/40 font-black">VALUATION</span>
+              <span className="text-emerald-400 font-mono text-xs bg-emerald-950/80 px-1.5 py-0.5 rounded border border-emerald-500/40 font-black">APPRAISAL</span>
             </div>
             <div className="mt-1.5">
-              <span className="text-base sm:text-lg font-black text-emerald-400 block">{catalogValuationStr}</span>
+              <span className="text-base sm:text-lg font-black text-emerald-400 block">{catalogAppraisalStr}</span>
               <span className="text-xs text-slate-300 block font-semibold">Anchor: {catalogAnchor} ({totalAssets} Assets)</span>
             </div>
           </div>
@@ -281,13 +281,13 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
         </div>
       )}
 
-      {/* MOBILE & TABLET 5-PILLAR VALUATION HUD RIBBON (< lg screens) */}
+      {/* MOBILE & TABLET 5-PILLAR DEAL DESK HUD RIBBON (< lg screens) */}
       <div className="lg:hidden border-b border-white/10 py-2 font-mono">
         <div className="flex items-center justify-between text-xs pb-1.5 px-1">
           <div className="flex items-center gap-1.5 text-slate-200 font-bold">
             <DollarSign size={15} className="text-emerald-400" />
             <span className="text-xs sm:text-sm font-black tracking-wide">
-              {showInternalValuation ? 'VALUATION HUD (OPERATOR)' : 'PUBLIC SHELF PRICING'}
+              {showInternalDealDesk ? 'DEAL DESK HUD (OPERATOR)' : 'PUBLIC SHELF PRICING'}
             </span>
             <span className="text-xs text-slate-400 font-normal">| Swipe ↔</span>
           </div>
@@ -302,12 +302,12 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
         </div>
 
         {isMobileHudCollapsed ? (
-          showInternalValuation ? (
+          showInternalDealDesk ? (
             <div 
               onClick={() => setIsMobileHudCollapsed(false)}
               className="flex items-center justify-between bg-black/80 border border-emerald-500/40 rounded-xl px-3 py-2 text-xs sm:text-sm text-slate-200 cursor-pointer hover:border-emerald-400 transition-colors"
             >
-              <span className="text-emerald-400 font-black">Valuation: $105k–$235k</span>
+              <span className="text-emerald-400 font-black">Appraisal: $105k–$235k</span>
               <span className="text-cyan-400 font-black hidden xs:inline">Ask: $195k–$265k</span>
               <span className="text-pink-400 font-black">APA: {buyoutAnchor}</span>
             </div>
@@ -329,16 +329,16 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
           )
         ) : (
           <div className="flex items-center gap-2.5 overflow-x-auto no-scrollbar snap-x snap-mandatory pt-1 pb-1.5 touch-pan-x">
-            {showInternalValuation ? (
-              /* Mobile Expanded Internal Valuation */
+            {showInternalDealDesk ? (
+              /* Mobile Expanded Internal Deal Desk */
               <>
                 <div className="min-w-[210px] shrink-0 snap-start bg-black/85 border-2 border-emerald-500/50 rounded-xl p-3 flex flex-col justify-between">
                   <div className="flex items-center justify-between text-xs font-bold text-slate-300 uppercase tracking-wider">
                     <span>Fair Market Value</span>
-                    <span className="text-emerald-400 font-mono text-xs bg-emerald-950/80 px-1.5 py-0.5 rounded border border-emerald-500/40 font-black">VALUATION</span>
+                    <span className="text-emerald-400 font-mono text-xs bg-emerald-950/80 px-1.5 py-0.5 rounded border border-emerald-500/40 font-black">APPRAISAL</span>
                   </div>
                   <div className="mt-1.5">
-                    <span className="text-base sm:text-lg font-black text-emerald-400 block">{catalogValuationStr}</span>
+                    <span className="text-base sm:text-lg font-black text-emerald-400 block">{catalogAppraisalStr}</span>
                     <span className="text-xs text-slate-300 block font-semibold">Anchor: {catalogAnchorShort} ({totalAssets})</span>
                   </div>
                 </div>

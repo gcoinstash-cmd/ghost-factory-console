@@ -1,7 +1,7 @@
 {
   "name": "GFCC Command Console",
   "short_name": "GFCC Command",
-  "description": "Ghost Factory 500-Asset Command Console & Portfolio Valuation HUD",
+  "description": "Ghost Factory 500-Asset Command Console & Portfolio Telemetry HUD",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0A0A0B",

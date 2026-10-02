@@ -168,6 +168,16 @@ export const BlueprintCard: React.FC<BlueprintCardProps> = ({
             </span>
           </div>
 
+          {/* UNIVERSAL REGULATED SECTOR WARNING BANNER (Card Face) */}
+          {isRegulated && (
+            <div className="my-2 p-2 rounded-lg bg-amber-950/60 border border-amber-500/60 text-amber-200 text-[10px] sm:text-[11px] font-mono leading-tight flex items-start gap-1.5 shadow-inner">
+              <AlertTriangle size={13} className="text-amber-400 shrink-0 mt-0.5" />
+              <span className="font-bold">
+                SIMULATED DATA PROTOTYPE — NOT CERTIFIED FOR OPERATIONAL, REGULATORY, OR LIFE-CRITICAL USE
+              </span>
+            </div>
+          )}
+
           <p className="text-sm sm:text-base text-slate-200 font-bold mt-1 line-clamp-1">
             {product.category}
           </p>
@@ -274,7 +284,7 @@ export const BlueprintCard: React.FC<BlueprintCardProps> = ({
             </div>
             <p className="text-amber-200 font-semibold leading-normal">
               {isRegulated 
-                ? "TECHNICAL PROTOTYPE ONLY — NOT CERTIFIED FOR CLINICAL/LEGAL/FINANCIAL USE. NOT PRODUCTION OR ADVICE."
+                ? "SIMULATED DATA PROTOTYPE — NOT CERTIFIED FOR OPERATIONAL, REGULATORY, OR LIFE-CRITICAL USE"
                 : "CONCEPT DEMO ONLY — NOT PRODUCTION OR ADVICE."}
             </p>
           </div>

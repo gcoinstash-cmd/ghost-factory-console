@@ -102,15 +102,15 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
     setCurrentPage(1);
   };
 
-  // Dynamic valuation computation based on live catalog composition (85 T1 + 25 T2)
-  const valuation = useMemo(() => {
+  // Dynamic appraisal computation based on live catalog composition (85 T1 + 25 T2)
+  const appraisal = useMemo(() => {
     const t2Count = products.filter(p => p.flagship_qualified || p.pricing_track?.includes('Track 2') || p.id >= 86).length;
     const t1Count = products.length - t2Count;
 
-    // Orderly Valuation: T1 (~$500 - $1,150, anchor $765) + T2 (~$2,500 - $5,500, anchor $3,800)
-    const minValuation = (t1Count * 500) + (t2Count * 2500);
-    const maxValuation = (t1Count * 1150) + (t2Count * 5500);
-    const planValuation = planningValue || (t1Count * 765) + (t2Count * 3800);
+    // Orderly Appraisal: T1 (~$500 - $1,150, anchor $765) + T2 (~$2,500 - $5,500, anchor $3,800)
+    const minAppraisal = (t1Count * 500) + (t2Count * 2500);
+    const maxAppraisal = (t1Count * 1150) + (t2Count * 5500);
+    const planAppraisal = planningValue || (t1Count * 765) + (t2Count * 3800);
 
     // Direct B2B Ask (Data Room Target):
     const minAsk = 195000;
@@ -125,8 +125,8 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
     const maxDev = (t1Count * 12000) + (t2Count * 40000);
 
     return {
-      valuationRangeStr: `$${(minValuation / 1000).toFixed(1)}k – $${(maxValuation / 1000).toFixed(1)}k`,
-      planValuationStr: `$${Math.round(planValuation).toLocaleString()}`,
+      appraisalRangeStr: `$${(minAppraisal / 1000).toFixed(1)}k – $${(maxAppraisal / 1000).toFixed(1)}k`,
+      planAppraisalStr: `$${Math.round(planAppraisal).toLocaleString()}`,
       b2bAskStr: `$${(minAsk / 1000).toFixed(1)}k – $${(maxAsk / 1000).toFixed(1)}k`,
       acceptedStr: `$${(minAccepted / 1000).toFixed(1)}k – $${(maxAccepted / 1000).toFixed(1)}k`,
       devCostStr: `$${(minDev / 1000).toFixed(0)}k – $${(maxDev / 1000000).toFixed(2)}M`,
@@ -149,7 +149,7 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
               </div>
               <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-emerald-500/20 border border-emerald-500/50 rounded-lg text-xs font-mono font-black text-emerald-300">
                 <Sparkles size={13} className="text-emerald-400" />
-                <span>v1.2.0-diligence-cleared</span>
+                <span>v1.2.1-diligence-cleared</span>
               </span>
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white flex flex-wrap items-center gap-3">
@@ -160,27 +160,27 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
             </p>
           </div>
 
-          {/* 5 Core Valuation / Public Deliverable Badges (Two-Faced Separation) */}
+          {/* 5 Core Appraisal / Public Deliverable Badges (Two-Faced Separation) */}
           {isOperatorAuthenticated ? (
             <div className="w-full lg:w-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 bg-black/80 p-4 sm:p-5 rounded-xl border border-emerald-500/40 text-sm">
               <div className="p-1">
                 <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">Fair Market Value</span>
-                <span className="text-base sm:text-xl font-black text-emerald-400">{valuation.valuationRangeStr}</span>
-                <span className="text-xs sm:text-sm text-emerald-300 block font-bold">Anchor: ~{valuation.planValuationStr}</span>
+                <span className="text-base sm:text-xl font-black text-emerald-400">{appraisal.appraisalRangeStr}</span>
+                <span className="text-xs sm:text-sm text-emerald-300 block font-bold">Anchor: ~{appraisal.planAppraisalStr}</span>
               </div>
               <div className="p-1 border-l border-white/15 pl-3">
                 <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">Direct B2B Ask</span>
-                <span className="text-base sm:text-xl font-black text-cyan-400">{valuation.b2bAskStr}</span>
+                <span className="text-base sm:text-xl font-black text-cyan-400">{appraisal.b2bAskStr}</span>
                 <span className="text-xs sm:text-sm text-cyan-300 block font-bold">Data Room Ask</span>
               </div>
               <div className="p-1 border-t sm:border-t-0 sm:border-l border-white/15 pt-2 sm:pt-1 sm:pl-3">
                 <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">Realistic Accepted</span>
-                <span className="text-base sm:text-xl font-black text-amber-400">{valuation.acceptedStr}</span>
+                <span className="text-base sm:text-xl font-black text-amber-400">{appraisal.acceptedStr}</span>
                 <span className="text-xs sm:text-sm text-amber-300 block font-bold">Negotiated Wire Transfer</span>
               </div>
               <div className="p-1 border-t sm:border-t-0 border-l border-white/15 pt-2 sm:pt-1 pl-3">
                 <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">Dev Replacement</span>
-                <span className="text-base sm:text-xl font-black text-purple-400">{valuation.devCostStr}</span>
+                <span className="text-base sm:text-xl font-black text-purple-400">{appraisal.devCostStr}</span>
                 <span className="text-xs sm:text-sm text-purple-300 block font-bold">Cost to Duplicate</span>
               </div>
               <div className="p-1 border-t sm:border-t-0 sm:border-l border-white/15 pt-2 sm:pt-1 sm:pl-3 col-span-2 sm:col-span-1">

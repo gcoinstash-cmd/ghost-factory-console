@@ -496,7 +496,7 @@ export const FactoryLineScreen: React.FC<FactoryLineScreenProps> = ({
                   </span>
                 </div>
 
-                {/* Track 2 Valuation Schedule (No Track 1 numbers) */}
+                {/* Track 2 Pricing Schedule (No Track 1 numbers) */}
                 <div className="bg-amber-950/20 border border-amber-500/30 rounded-xl p-3 grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs font-mono">
                   <div>
                     <span className="text-[10px] text-slate-400 block uppercase">Buyout Anchor</span>

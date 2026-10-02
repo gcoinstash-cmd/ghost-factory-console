@@ -112,7 +112,7 @@ export const DealDeskScreen: React.FC<DealDeskScreenProps> = ({
               PRIVATE DEAL ROOM
             </h1>
             <p className="text-xs sm:text-sm text-slate-300 max-w-lg mx-auto leading-relaxed">
-              Internal software asset valuation models, acquisition framework schedules, and the 80% portfolio retention shield are isolated to authorized operators and accredited acquirers.
+              Internal software asset appraisal models, acquisition framework schedules, and the 80% portfolio retention shield are isolated to authorized operators and accredited acquirers.
             </p>
           </div>
 
@@ -150,7 +150,7 @@ export const DealDeskScreen: React.FC<DealDeskScreenProps> = ({
             </div>
             <div className="bg-black/40 p-3 rounded-lg border border-white/5 space-y-1">
               <span className="text-emerald-400 font-bold block">Leverage Shield</span>
-              <span className="text-[11px] text-slate-400 leading-tight block">Prevents leaking valuation floors during prospective buyer diligence.</span>
+              <span className="text-[11px] text-slate-400 leading-tight block">Prevents leaking acquisition floors during prospective buyer diligence.</span>
             </div>
             <div className="bg-black/40 p-3 rounded-lg border border-white/5 space-y-1">
               <span className="text-cyan-400 font-bold block">80% Retention Floor</span>
@@ -172,7 +172,7 @@ export const DealDeskScreen: React.FC<DealDeskScreenProps> = ({
           <div>
             <div className="flex flex-wrap items-center gap-2 mb-2.5">
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-amber-500/10 border border-amber-500/30 rounded-lg text-xs font-mono font-bold text-amber-400 uppercase tracking-widest">
-                <DollarSign size={14} /> SCREEN 4 // DEAL DESK & VALUATION ENGINE
+                <DollarSign size={14} /> SCREEN 4 // DEAL DESK & APPRAISAL ENGINE
               </div>
               <span className="bg-emerald-500/20 text-emerald-300 text-xs px-2.5 py-0.5 rounded border border-emerald-500/40 font-bold flex items-center gap-1">
                 <Unlock size={11} className="text-emerald-400" /> OPERATOR UNLOCKED
@@ -188,7 +188,7 @@ export const DealDeskScreen: React.FC<DealDeskScreenProps> = ({
               )}
             </div>
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight text-white flex items-center gap-3">
-              DUAL-TRACK VALUATION & <span className="text-amber-400 font-mono">80% RETENTION SHIELD</span>
+              DUAL-TRACK PRICING & <span className="text-amber-400 font-mono">80% RETENTION SHIELD</span>
             </h1>
             <p className="text-slate-300 text-xs sm:text-sm mt-1 max-w-2xl leading-relaxed">
               Enforces strict dual-track separation and immutable portfolio retention floors. Exclusive buyouts are selective micro-APAs, never whole-factory liquidations.

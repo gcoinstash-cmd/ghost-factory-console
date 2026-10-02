@@ -23,7 +23,37 @@ export const isRegulatedSector = (product: ProductItem): boolean => {
   }
   if (product.id >= 86) return true;
 
+  const domain = product.domain || '';
+  // Explicitly cover all 5 required regulated sectors:
+  // 1. Clinical (Clinical & Medical Operations)
+  // 2. Legal / 3. Financial & Fintech (Institutional Capital & Wealth)
+  // 4. Aviation & Aerospace (Deep Tech SCADA)
+  // 5. Heavy-Industrial & SCADA (Industrial Robotics & Autonomous SCADA, Energy SCADA)
+  if ([
+    'Clinical & Medical Operations',
+    'Institutional Capital & Wealth',
+    'Deep Tech SCADA',
+    'Energy SCADA',
+    'Industrial Robotics & Autonomous SCADA'
+  ].includes(domain)) {
+    return true;
+  }
+
   const v = (product.vertical || '').toLowerCase();
+  const cat = (product.category || '').toLowerCase();
+  const name = (product.name || '').toLowerCase();
+
+  // Check specific legal or aviation assets
+  if (
+    cat.includes('law') || name.includes('law') ||
+    cat.includes('litigation') || name.includes('litigation') ||
+    cat.includes('aviation') || name.includes('aviation') ||
+    cat.includes('charter') || name.includes('fbo') ||
+    cat.includes('scada') || name.includes('scada')
+  ) {
+    return true;
+  }
+
   if (['hospitality', 'creative', 'fitness'].includes(v) && product.id < 86) {
     return false;
   }
@@ -112,4 +142,4 @@ export const isRegulatedSector = (product: ProductItem): boolean => {
 };
 
 export const VERTICAL_COMPLIANCE_DISCLAIMER = 
-  "SIMULATED DATA PROTOTYPE — NOT MEDICAL/LEGAL/FINANCIAL ADVICE — NO COMPLIANCE CERTIFICATION IMPLIED.";
+  "SIMULATED DATA PROTOTYPE — NOT CERTIFIED FOR OPERATIONAL, REGULATORY, OR LIFE-CRITICAL USE";
