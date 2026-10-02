@@ -40,7 +40,7 @@ export const TestDriveModal: React.FC<TestDriveModalProps> = ({
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1.5 text-black bg-emerald-500 hover:bg-emerald-400 font-black px-2.5 py-1 rounded transition-colors text-[11px]"
-              title="Open direct live demo in new tab"
+              title="Open direct demo in new tab"
             >
               <ExternalLink size={13} />
               <span>LAUNCH TAB</span>
@@ -60,7 +60,7 @@ export const TestDriveModal: React.FC<TestDriveModalProps> = ({
           <div className="flex items-center gap-2">
             <AlertTriangle size={13} className="text-amber-400 shrink-0" />
             <span>
-              <strong>MANDATORY PRODUCT TRUTH NOTICE:</strong> Interactive Prototype running on simulated sample data. Not a live production system.
+              <strong>MANDATORY PRODUCT TRUTH NOTICE:</strong> Interactive Prototype running on simulated sample data. Not a production deployment.
             </span>
           </div>
           <span className="text-[10px] bg-black/60 px-2 py-0.5 rounded border border-amber-500/40 text-amber-300">

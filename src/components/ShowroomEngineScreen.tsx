@@ -103,7 +103,7 @@ export const ShowroomEngineScreen: React.FC<ShowroomEngineScreenProps> = ({
             <strong className="text-zinc-200 block uppercase tracking-wider text-[11px] mb-0.5">
               Public Legal Disclosure & Product Truth Notice
             </strong>
-            All products displayed in Aura & Grid are hosted interactive concept prototypes and deployable source-code blueprints built with simulated sample data. Commercial purchase grants a non-exclusive license to use, adapt, and deploy the code; it does not transfer corporate ownership, patents, or copyright to GhostFactoryOS proprietary frameworks or shared UI component libraries. Customer-configured deployment required for live operations.
+            All products displayed in Aura & Grid are hosted interactive concept prototypes and deployable source-code blueprints built with simulated sample data. Commercial purchase grants a non-exclusive license to use, adapt, and deploy the code; it does not transfer corporate ownership, patents, or copyright to GhostFactoryOS proprietary frameworks or shared UI component libraries. Customer-configured deployment required for production use.
           </div>
         </div>
       </section>
@@ -291,7 +291,7 @@ export const ShowroomEngineScreen: React.FC<ShowroomEngineScreenProps> = ({
               </div>
               <div className="bg-zinc-900/60 p-3 rounded-xl border border-zinc-800">
                 <span className="text-[10px] text-zinc-500 uppercase block">Deployment</span>
-                <span className="text-emerald-400 font-bold text-xs mt-0.5 block">Render / Vercel 200 OK</span>
+                <span className="text-emerald-400 font-bold text-xs mt-0.5 block">Render / Vercel Demo Online</span>
               </div>
             </div>
           </div>

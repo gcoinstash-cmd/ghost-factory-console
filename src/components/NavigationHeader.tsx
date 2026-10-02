@@ -108,7 +108,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
 
           <div className="flex items-center gap-1.5 text-slate-200 font-bold">
             <Server size={14} className="text-emerald-400 shrink-0" />
-            <span>FLEET: <strong className="text-emerald-400">{totalAssets} LIVE</strong></span>
+            <span>FLEET: <strong className="text-emerald-400">{totalAssets} DEMO</strong></span>
           </div>
 
           <button
@@ -126,7 +126,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
             title="Inspect Institutional Build Ledger"
           >
             <Award size={14} />
-            <span>INTEGRITY: <strong>{totalAssets}/{totalAssets} VERIFIED</strong></span>
+            <span>CATALOG: <strong>{totalAssets}/{totalAssets} ACTIVE</strong></span>
           </button>
 
           <div
@@ -216,10 +216,10 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
       ) : (
         /* 2. PUBLIC STOREFRONT: RETAIL SHELF PRICING & CUSTOMER DELIVERABLES */
         <div className="hidden lg:grid lg:grid-cols-5 gap-3 py-3 border-b border-white/10 text-xs sm:text-sm">
-          {/* 1. Verified Inventory */}
+          {/* 1. Reference Design Inventory */}
           <div className="bg-black/75 border border-emerald-500/40 rounded-xl p-3 flex flex-col justify-between hover:border-emerald-400 transition-colors">
             <div className="flex items-center justify-between text-slate-300 text-xs font-bold uppercase tracking-wider">
-              <span>Verified Inventory</span>
+              <span>Catalog Inventory</span>
               <span className="text-emerald-400 font-mono text-xs bg-emerald-950/80 px-1.5 py-0.5 rounded border border-emerald-500/40 font-black">FLEET</span>
             </div>
             <div className="mt-1.5">

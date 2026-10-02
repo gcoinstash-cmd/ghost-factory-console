@@ -102,7 +102,7 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
     setCurrentPage(1);
   };
 
-  // Dynamic appraisal computation based on live catalog composition (85 T1 + 25 T2)
+  // Dynamic appraisal computation based on catalog composition (85 T1 + 25 T2)
   const appraisal = useMemo(() => {
     const t2Count = products.filter(p => p.flagship_qualified || p.pricing_track?.includes('Track 2') || p.id >= 86).length;
     const t1Count = products.length - t2Count;

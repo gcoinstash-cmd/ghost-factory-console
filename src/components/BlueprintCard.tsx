@@ -1,7 +1,6 @@
 import React from 'react';
 import { Database, Activity, ExternalLink, ChevronDown, AlertTriangle } from 'lucide-react';
 import { ProductItem } from '../catalogData';
-import { isRegulatedSector } from '../utils/compliance';
 import { OperationalDisclaimer } from './OperationalDisclaimer';
 
 export type RarityTier = 'Elite' | 'Pro' | 'Core';
@@ -129,7 +128,6 @@ export const BlueprintCard: React.FC<BlueprintCardProps> = ({
   const rarity = getRarityTier(product);
   const domain = getDomainClass(product);
   const isTrack2 = product.id >= 86 || Boolean(product.flagship_qualified) || Boolean(product.pricing_track?.includes('Track 2'));
-  const isRegulated = isRegulatedSector(product);
 
   const rarityStyles: Record<RarityTier, { border: string; bg: string; text: string; glow: string }> = {
     'Elite': { border: 'border-amber-400/90', bg: 'bg-amber-950/20', text: 'text-amber-300', glow: 'shadow-[0_0_20px_rgba(245,158,11,0.25)]' },
@@ -249,28 +247,14 @@ export const BlueprintCard: React.FC<BlueprintCardProps> = ({
         </span>
         <span className="flex items-center gap-1.5">
           <Activity size={13} className="text-emerald-400" />
-          <span className="text-emerald-400 font-black">200 OK Live</span>
+          <span className="text-emerald-400 font-black">Demo online</span>
         </span>
       </div>
 
-      {/* 
-        ========================================================================
-        AUDIT COMPLIANCE & REPRODUCIBILITY GUARANTEE
-        GhostFactoryOS Console v1.2.1 Diligence Cleared
-        Verified 110/110 Assets Operational Disclaimer Assertion
-        Domain Mapping: 10 Core Architectural Verticals
-        Catalog Blueprint Capacity: 110 Verified Active Nodes
-        Database Architecture: PostgreSQL with Row-Level Security
-        Frontend Architecture: React 19 + Tailwind CSS + Lucide Icons
-        Verification Protocol: Automated Static Markup & Bundle Scans
-        Universal Regulated Sector Warning Mounted Unconditionally
-        ========================================================================
-      */}
-
-      {/* COMPLIANCE & PRODUCT TRUTH DETAILS DRAWER */}
+      {/* DATA NOTES DETAILS DRAWER */}
       <details className="text-xs bg-black/60 rounded-xl border border-white/10 p-3 group">
         <summary className="font-bold text-slate-300 cursor-pointer flex items-center justify-between text-xs uppercase tracking-wider select-none">
-          <span className="flex items-center gap-1.5 text-amber-400"><AlertTriangle size={13} /><span>Truth & Compliance</span></span>
+          <span className="flex items-center gap-1.5 text-amber-400"><AlertTriangle size={13} /><span>Data notes</span></span>
           <ChevronDown size={14} className="group-open:rotate-180 transition-transform text-slate-400" />
         </summary>
         <div className="pt-2.5 mt-2.5 border-t border-white/10 space-y-2 text-slate-300">
@@ -284,7 +268,7 @@ export const BlueprintCard: React.FC<BlueprintCardProps> = ({
           </div>
           <div className="flex items-center justify-between text-[11px]">
             <span className="text-slate-400">Status:</span>
-            <span className="text-emerald-400 font-mono font-bold">200 OK Verified</span>
+            <span className="text-emerald-400 font-mono font-bold">Reference design</span>
           </div>
           {product.tables && product.tables.length > 0 && (
             <div className="text-[10px] text-slate-400 font-mono bg-black/80 p-2 rounded border border-white/5 overflow-x-auto">
@@ -304,7 +288,7 @@ export const BlueprintCard: React.FC<BlueprintCardProps> = ({
           className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-black text-sm uppercase tracking-wider transition-all cursor-pointer shadow-md shadow-emerald-500/25 active:scale-95"
         >
           <ExternalLink size={16} />
-          <span>[VIEW LIVE DEMO]</span>
+          <span>[VIEW DEMO]</span>
         </a>
       </div>
     </div>

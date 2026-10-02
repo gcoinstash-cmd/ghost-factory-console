@@ -39,7 +39,7 @@ export const AuditModal: React.FC<AuditModalProps> = ({
               <span>DILIGENCE GRADE: LEVEL 3 SUPABASE-READY</span>
             </h4>
             <p className="text-slate-300 leading-relaxed text-xs">
-              Every digital vehicle in the {totalAssets}-asset catalog is verified with clean React 19 frontend blueprints, documented PostgreSQL relational tables, and PostgreSQL Row Level Security (RLS) patterns configured for sandboxed demonstration access.
+              Every digital vehicle in the {totalAssets}-asset catalog is structured with clean React 19 frontend blueprints, documented PostgreSQL relational tables, and PostgreSQL Row Level Security (RLS) patterns configured for sandboxed demonstration access.
             </p>
           </div>
 
@@ -47,7 +47,7 @@ export const AuditModal: React.FC<AuditModalProps> = ({
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div className="p-3.5 bg-black/40 rounded-xl border border-emerald-500/30 space-y-1">
               <span className="text-emerald-400 font-bold block text-[11px]">HTTP PREVIEW INTEGRITY</span>
-              <p className="text-white font-bold text-sm">{totalAssets} / {totalAssets} Endpoints (200 OK)</p>
+              <p className="text-white font-bold text-sm">{totalAssets} / {totalAssets} Endpoints (Demo Online)</p>
               <p className="text-[10px] text-slate-400">All hosted previews active on Render / Vercel with zero 404s.</p>
             </div>
 
@@ -74,10 +74,10 @@ export const AuditModal: React.FC<AuditModalProps> = ({
           <div className="bg-amber-950/30 border border-amber-500/40 p-4 rounded-xl space-y-1.5 text-slate-300 text-xs">
             <div className="flex items-center gap-1.5 text-amber-300 font-bold text-[11px]">
               <AlertTriangle size={13} className="text-amber-400" />
-              <span>COMPLIANCE & PRODUCT TRUTH CERTIFICATION</span>
+              <span>DATA NOTES & PRODUCT TRUTH DISCLOSURE</span>
             </div>
             <p className="text-[11px] leading-relaxed text-slate-300">
-              GhostFactoryOS asserts that all assets are pre-revenue concept prototypes. All metrics, sensor loops, telemetry streams, and transaction logs represent simulated data feeds. No claim of live enterprise flight/medical compliance is asserted.
+              GhostFactoryOS asserts that all assets are pre-revenue concept prototypes. All metrics, sensor loops, telemetry streams, and transaction logs represent simulated data feeds. No claim of enterprise flight/medical regulatory approval is asserted.
             </p>
           </div>
         </div>

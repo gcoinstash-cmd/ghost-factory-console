@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/audit/assert_best_for.mjs && node scripts/assert-disclaimer.mjs && vite build",
+    "build": "node scripts/audit/assert_best_for.mjs && node scripts/assert-disclaimer.mjs && node scripts/assert-no-claims.mjs && vite build",
     "lint": "tsc --noEmit",
     "preview": "vite preview"
   },
