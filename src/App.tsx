@@ -6,6 +6,8 @@ import { FactoryLineScreen } from './components/FactoryLineScreen';
 import { ShowroomEngineScreen } from './components/ShowroomEngineScreen';
 import { DealDeskScreen } from './components/DealDeskScreen';
 import { MaintenanceBayScreen } from './components/MaintenanceBayScreen';
+import { Screen6Pricing } from './components/Screen6Pricing';
+import { Screen7ValuationHub } from './components/Screen7ValuationHub';
 import { MissionModal } from './components/MissionModal';
 import { TestDriveModal } from './components/TestDriveModal';
 import { AuditModal } from './components/AuditModal';
@@ -140,12 +142,24 @@ export const App: React.FC = () => {
             totalAssets={totalAssets}
           />
         )}
+
+        {/* Screen 6: Commercial Pricing Tiers */}
+        {currentView === 'pricing' && <Screen6Pricing />}
+
+        {/* Screen 7: Valuation & Diligence Hub */}
+        {currentView === 'valuationhub' && (
+          <Screen7ValuationHub
+            totalAssets={totalAssets}
+            retainedFloor={retainedFloor}
+            maxTransferable={availableApaSlots}
+          />
+        )}
       </main>
 
       {/* VISIBLE BUILD STAMP FOOTER */}
       <footer id="gfcc-footer" className="border-t border-white/10 bg-[#0A0A0B] py-6 px-4 text-center font-mono text-xs text-slate-400 mb-16 md:mb-0">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
-          <span>GFCC Build: v1.3.1</span>
+          <span>GFCC Build: v1.4.0</span>
           <span className="text-emerald-400 font-bold">110 / 110 Reference Digital Assets</span>
         </div>
       </footer>

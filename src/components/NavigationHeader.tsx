@@ -15,7 +15,9 @@ import {
   Lock,
   Unlock,
   ShieldCheck,
-  X
+  X,
+  Tag,
+  TrendingUp
 } from 'lucide-react';
 
 // ============================================================================
@@ -147,7 +149,7 @@ function Audit360Badge() {
   );
 }
 
-export type ScreenView = 'garage' | 'factory' | 'showroom' | 'dealdesk' | 'maintenance';
+export type ScreenView = 'garage' | 'factory' | 'showroom' | 'dealdesk' | 'maintenance' | 'pricing' | 'valuationhub';
 
 interface NavigationHeaderProps {
   currentView: ScreenView;
@@ -270,7 +272,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
             className="hidden xl:flex items-center gap-1.5 px-2.5 py-1.5 rounded bg-emerald-500/15 border border-emerald-500/40 text-emerald-300 font-mono text-xs font-bold"
             title="Production Diligence Freeze Lock"
           >
-            <span>Build: v1.3.1</span>
+            <span>Build: v1.4.0</span>
           </div>
 
           <button
@@ -299,80 +301,65 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
           />
         </React.Suspense>
       ) : (
-        /* 2. PUBLIC STOREFRONT: RETAIL SHELF PRICING & CUSTOMER DELIVERABLES */
-        <div className="hidden lg:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 py-3 border-b border-white/10 text-xs sm:text-sm w-full">
-          {/* 1. Reference Design Inventory */}
-          <div className="bg-black/75 border border-emerald-500/40 rounded-xl p-3.5 flex flex-col justify-between hover:border-emerald-400 transition-colors w-full">
+        /* SECTION 2 VALUATION HEADER (DESCENDING: STRATEGIC CEILING -> DEV REPLACEMENT -> STRATEGIC BUYOUT -> DISTRESS FLOOR) */
+        <div className="hidden lg:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 py-3 border-b border-white/10 text-xs sm:text-sm w-full">
+          {/* Card 1: Strategic Acquisition Ceiling */}
+          <div className="bg-black/75 border border-pink-500/40 rounded-xl p-3.5 flex flex-col justify-between hover:border-pink-400 transition-colors w-full">
             <div className="flex items-center justify-between text-slate-300 text-xs font-bold uppercase tracking-wider">
-              <span>Catalog Inventory</span>
-              <span className="text-emerald-400 font-mono text-xs bg-emerald-950/80 px-1.5 py-0.5 rounded border border-emerald-500/40 font-black">FLEET</span>
+              <span>Strategic Acquisition Ceiling</span>
+              <span className="text-pink-400 font-mono text-xs bg-pink-950/80 px-1.5 py-0.5 rounded border border-pink-500/40 font-black">MONOPOLY PREMIUM</span>
             </div>
             <div className="mt-2">
-              <span className="text-xl sm:text-2xl font-black text-emerald-400 block tracking-tight">{totalAssets} Blueprints</span>
-              <span className="text-sm text-slate-200 block font-semibold leading-relaxed mt-0.5">85 Track 1 + 25 Flagship SCADA</span>
+              <span className="text-xl sm:text-2xl font-black text-pink-400 block tracking-tight">$1.38M – $2.64M+</span>
+              <span className="text-sm text-slate-200 block font-semibold leading-relaxed mt-0.5">Deep-tech niche enterprise acquisition</span>
             </div>
           </div>
 
-          {/* 2. Track 1 Retail Shelf */}
+          {/* Card 2: Dev Agency Replacement Benchmark */}
           <div className="bg-black/75 border border-cyan-500/40 rounded-xl p-3.5 flex flex-col justify-between hover:border-cyan-400 transition-colors w-full">
             <div className="flex items-center justify-between text-slate-300 text-xs font-bold uppercase tracking-wider">
-              <span>Track 1 Retail MSRP</span>
-              <span className="text-cyan-400 font-mono text-xs bg-cyan-950/80 px-1.5 py-0.5 rounded border border-cyan-500/40 font-black">$199</span>
+              <span>Dev Agency Replacement</span>
+              <span className="text-cyan-400 font-mono text-xs bg-cyan-950/80 px-1.5 py-0.5 rounded border border-cyan-500/40 font-black">REPLACEMENT COST</span>
             </div>
             <div className="mt-2">
-              <span className="text-xl sm:text-2xl font-black text-cyan-400 block tracking-tight">$199 USD</span>
-              <span className="text-sm text-slate-200 block font-semibold leading-relaxed mt-0.5">Turn-Key Concept Console Source</span>
+              <span className="text-xl sm:text-2xl font-black text-cyan-400 block tracking-tight">$890.0k – $1.62M</span>
+              <span className="text-sm text-slate-200 block font-semibold leading-relaxed mt-0.5">4,000+ engineering hours @ $150–$250/hr</span>
             </div>
           </div>
 
-          {/* 3. Commercial Team Seat */}
+          {/* Card 3: Dual-Track Strategic Buyout Range */}
           <div className="bg-black/75 border border-amber-500/40 rounded-xl p-3.5 flex flex-col justify-between hover:border-amber-400 transition-colors w-full">
             <div className="flex items-center justify-between text-slate-300 text-xs font-bold uppercase tracking-wider">
-              <span>Commercial Team Seat</span>
-              <span className="text-amber-400 font-mono text-xs bg-amber-950/80 px-1.5 py-0.5 rounded border border-amber-500/40 font-black">TEAM</span>
+              <span>Strategic Buyout Range</span>
+              <span className="text-amber-400 font-mono text-xs bg-amber-950/80 px-1.5 py-0.5 rounded border border-amber-500/40 font-black">PORTFOLIO BUYOUT</span>
             </div>
             <div className="mt-2">
-              <span className="text-xl sm:text-2xl font-black text-amber-400 block tracking-tight">$599 USD</span>
-              <span className="text-sm text-slate-200 block font-semibold leading-relaxed mt-0.5">Agency Multi-Seat Commercial License</span>
+              <span className="text-xl sm:text-2xl font-black text-amber-400 block tracking-tight">$562.0k – $976.5k</span>
+              <span className="text-sm text-slate-200 block font-semibold leading-relaxed mt-0.5">Anchor: $673.0k (85 T1 @ $4.5k + 25 Flagship @ $14.5k)</span>
             </div>
           </div>
 
-          {/* 4. Track 2 Flagship License */}
-          <div className="bg-black/75 border border-purple-500/40 rounded-xl p-3.5 flex flex-col justify-between hover:border-purple-400 transition-colors w-full">
+          {/* Card 4: Distress / Quick-Sale Cash Floor */}
+          <div className="bg-black/75 border border-emerald-500/40 rounded-xl p-3.5 flex flex-col justify-between hover:border-emerald-400 transition-colors w-full">
             <div className="flex items-center justify-between text-slate-300 text-xs font-bold uppercase tracking-wider">
-              <span>Flagship Tier-1 License</span>
-              <span className="text-purple-400 font-mono text-xs bg-purple-950/80 px-1.5 py-0.5 rounded border border-purple-500/40 font-black">SCADA</span>
+              <span>Distress / Quick-Sale Floor</span>
+              <span className="text-emerald-400 font-mono text-xs bg-emerald-950/80 px-1.5 py-0.5 rounded border border-emerald-500/40 font-black">LIQUIDATION</span>
             </div>
             <div className="mt-2">
-              <span className="text-xl sm:text-2xl font-black text-purple-400 block tracking-tight">$1,500 – $3,500</span>
-              <span className="text-sm text-slate-200 block font-semibold leading-relaxed mt-0.5">Full Physics Solver & Operator Console</span>
-            </div>
-          </div>
-
-          {/* 5. Operator Deal Room Lock */}
-          <div 
-            onClick={onOpenOperatorAuth}
-            className="bg-amber-950/20 border-2 border-amber-500/50 rounded-xl p-3.5 flex flex-col justify-between hover:border-amber-400 transition-colors cursor-pointer group w-full"
-          >
-            <div className="flex items-center justify-between text-amber-300 text-xs font-bold uppercase tracking-wider">
-              <span className="flex items-center gap-1"><Lock size={12} /> Deal Room</span>
-              <span className="text-amber-400 font-mono text-xs bg-amber-950 px-1.5 py-0.5 rounded border border-amber-500/40 font-black">M&A</span>
-            </div>
-            <div className="mt-2">
-              <span className="text-xl sm:text-2xl font-black text-amber-400 group-hover:underline block tracking-tight">RESTRICTED</span>
-              <span className="text-sm text-amber-300/90 block font-semibold leading-relaxed mt-0.5">Click to Unlock M&A Telemetry</span>
+              <span className="text-xl sm:text-2xl font-black text-emerald-400 block tracking-tight">$118.5k – $228.0k</span>
+              <span className="text-sm text-slate-200 block font-semibold leading-relaxed mt-0.5">40–60% buyer discount quick realization</span>
             </div>
           </div>
         </div>
       )}
 
-      {/* MOBILE & TABLET 5-PILLAR DEAL DESK HUD RIBBON (< lg screens) */}
+      {/* MOBILE & TABLET DESCENDING VALUATION HUD RIBBON (< lg screens) */}
       <div className="lg:hidden border-b border-white/10 py-2 font-mono">
         <div className="flex items-center justify-between text-xs pb-1.5 px-1">
           <div className="flex items-center gap-1.5 text-slate-200 font-bold">
             <DollarSign size={15} className="text-emerald-400" />
             <span className="text-xs sm:text-sm font-black tracking-wide">
-              {showInternalDealDesk ? 'DEAL DESK HUD (OPERATOR)' : 'PUBLIC SHELF PRICING'}
+              {showInternalDealDesk ? 'DEAL DESK HUD (OPERATOR)' : 'VALUATION BENCHMARKS'}
             </span>
             <span className="text-xs text-slate-400 font-normal">| Swipe ↔</span>
           </div>
@@ -401,15 +388,9 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
               onClick={() => setIsMobileHudCollapsed(false)}
               className="flex items-center justify-between bg-black/80 border border-amber-500/40 rounded-xl px-3 py-2 text-xs sm:text-sm text-slate-200 cursor-pointer hover:border-amber-400 transition-colors"
             >
-              <span className="text-emerald-400 font-black">{totalAssets} Blueprints</span>
-              <span className="text-cyan-400 font-black">T1: $199</span>
-              <span className="text-purple-400 font-black hidden xs:inline">T2: $1,500</span>
-              <span 
-                onClick={(e) => { e.stopPropagation(); onOpenOperatorAuth(); }}
-                className="text-amber-400 font-black flex items-center gap-1 bg-amber-500/10 px-2 py-0.5 rounded border border-amber-500/30"
-              >
-                <Lock size={11} /> Deal Room
-              </span>
+              <span className="text-pink-400 font-black">Ceiling: $1.38M+</span>
+              <span className="text-amber-400 font-black">Buyout: $673.0k</span>
+              <span className="text-emerald-400 font-black">Floor: $118.5k</span>
             </div>
           )
         ) : (
@@ -427,63 +408,47 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
             </React.Suspense>
           ) : (
             <div className="flex items-center gap-2.5 overflow-x-auto no-scrollbar snap-x snap-mandatory pt-1 pb-1.5 touch-pan-x">
-              <div className="min-w-[210px] shrink-0 snap-start bg-black/85 border-2 border-emerald-500/50 rounded-xl p-3 flex flex-col justify-between">
+              <div className="min-w-[210px] shrink-0 snap-start bg-black/85 border-2 border-pink-500/50 rounded-xl p-3 flex flex-col justify-between">
                 <div className="flex items-center justify-between text-xs font-bold text-slate-300 uppercase tracking-wider">
-                  <span>Track 1 Retail MSRP</span>
-                  <span className="text-emerald-400 font-mono text-xs bg-emerald-950/80 px-1.5 py-0.5 rounded border border-emerald-500/40 font-black">MSRP</span>
+                  <span>Acquisition Ceiling</span>
+                  <span className="text-pink-400 font-mono text-xs bg-pink-950/80 px-1.5 py-0.5 rounded border border-pink-500/40 font-black">CEILING</span>
                 </div>
                 <div className="mt-1.5">
-                  <span className="text-base sm:text-lg font-black text-emerald-400 block">$199 USD</span>
-                  <span className="text-xs text-slate-300 block font-semibold">Unlimited End-Client Use</span>
+                  <span className="text-base sm:text-lg font-black text-pink-400 block">$1.38M – $2.64M+</span>
+                  <span className="text-xs text-slate-300 block font-semibold">Deep-Tech Monopoly</span>
                 </div>
               </div>
 
               <div className="min-w-[210px] shrink-0 snap-start bg-black/85 border-2 border-cyan-500/50 rounded-xl p-3 flex flex-col justify-between">
                 <div className="flex items-center justify-between text-xs font-bold text-slate-300 uppercase tracking-wider">
-                  <span>Commercial Team Pass</span>
-                  <span className="text-cyan-400 font-mono text-xs bg-cyan-950/80 px-1.5 py-0.5 rounded border border-cyan-500/40 font-black">TEAM</span>
+                  <span>Dev Replacement</span>
+                  <span className="text-cyan-400 font-mono text-xs bg-cyan-950/80 px-1.5 py-0.5 rounded border border-cyan-500/40 font-black">COST</span>
                 </div>
                 <div className="mt-1.5">
-                  <span className="text-base sm:text-lg font-black text-cyan-400 block">$599 USD</span>
-                  <span className="text-xs text-slate-300 block font-semibold">Agency Multi-Seat Pack</span>
+                  <span className="text-base sm:text-lg font-black text-cyan-400 block">$890.0k – $1.62M</span>
+                  <span className="text-xs text-slate-300 block font-semibold">4,000+ Eng Hours</span>
                 </div>
               </div>
 
-              <div className="min-w-[210px] shrink-0 snap-start bg-black/85 border-2 border-purple-500/50 rounded-xl p-3 flex flex-col justify-between">
+              <div className="min-w-[210px] shrink-0 snap-start bg-black/85 border-2 border-amber-500/50 rounded-xl p-3 flex flex-col justify-between">
                 <div className="flex items-center justify-between text-xs font-bold text-slate-300 uppercase tracking-wider">
-                  <span>Flagship Commercial</span>
-                  <span className="text-purple-400 font-mono text-xs bg-purple-950/80 px-1.5 py-0.5 rounded border border-purple-500/40 font-black">TIER-1</span>
+                  <span>Strategic Buyout</span>
+                  <span className="text-amber-400 font-mono text-xs bg-amber-950/80 px-1.5 py-0.5 rounded border border-amber-500/40 font-black">BUYOUT</span>
                 </div>
                 <div className="mt-1.5">
-                  <span className="text-base sm:text-lg font-black text-purple-400 block">$1,500 – $3,500</span>
-                  <span className="text-xs text-slate-300 block font-semibold">SCADA Physics Prototypes</span>
+                  <span className="text-base sm:text-lg font-black text-amber-400 block">$562.0k – $976.5k</span>
+                  <span className="text-xs text-slate-300 block font-semibold">Anchor: $673.0k</span>
                 </div>
               </div>
 
-              <div className="min-w-[210px] shrink-0 snap-start bg-black/85 border-2 border-pink-500/50 rounded-xl p-3 flex flex-col justify-between">
+              <div className="min-w-[210px] shrink-0 snap-start bg-black/85 border-2 border-emerald-500/50 rounded-xl p-3 flex flex-col justify-between">
                 <div className="flex items-center justify-between text-xs font-bold text-slate-300 uppercase tracking-wider">
-                  <span>Exclusive Buyout</span>
-                  <span className="text-pink-400 font-mono text-xs bg-pink-950/80 px-1.5 py-0.5 rounded border border-pink-500/40 font-black">APA</span>
+                  <span>Distress Cash Floor</span>
+                  <span className="text-emerald-400 font-mono text-xs bg-emerald-950/80 px-1.5 py-0.5 rounded border border-emerald-500/40 font-black">FLOOR</span>
                 </div>
                 <div className="mt-1.5">
-                  <span className="text-base sm:text-lg font-black text-pink-400 block">{buyoutAnchor}</span>
-                  <span className="text-xs text-slate-300 block font-semibold">Track 1 ($4.5k) / T2 ($10k+)</span>
-                </div>
-              </div>
-
-              <div 
-                onClick={onOpenOperatorAuth}
-                className="min-w-[210px] shrink-0 snap-start bg-amber-950/30 border-2 border-amber-500/70 rounded-xl p-3 flex flex-col justify-between cursor-pointer"
-              >
-                <div className="flex items-center justify-between text-xs font-bold text-amber-300 uppercase tracking-wider">
-                  <span>Private Deal Room</span>
-                  <span className="text-amber-400 font-mono text-xs bg-amber-950 px-1.5 py-0.5 rounded border border-amber-500/40 font-black">AUTH</span>
-                </div>
-                <div className="mt-1.5">
-                  <span className="text-base sm:text-lg font-black text-amber-400 block flex items-center gap-1.5">
-                    <Lock size={15} /> RESTRICTED
-                  </span>
-                  <span className="text-xs text-amber-200 block font-semibold">Tap to Unlock M&A Telemetry</span>
+                  <span className="text-base sm:text-lg font-black text-emerald-400 block">$118.5k – $228.0k</span>
+                  <span className="text-xs text-slate-300 block font-semibold">40–60% Realization</span>
                 </div>
               </div>
             </div>
@@ -492,28 +457,30 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
       </div>
 
       {/* Screen Navigation Tabs (Screens 1 to 5) */}
-      <nav className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 w-full pt-3">
+      {/* Screen Navigation Tabs (Screens 1 to 7) */}
+      <nav className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-2 w-full pt-3">
         {/* Screen 1: Garage */}
         <button
           onClick={() => onViewChange('garage')}
-          className={`flex items-center gap-2.5 p-2.5 rounded-xl border text-left transition-all cursor-pointer overflow-hidden ${
+          className={`flex items-center gap-2 p-2 sm:p-2.5 rounded-xl border text-left transition-all cursor-pointer overflow-hidden ${
             currentView === 'garage'
               ? 'bg-emerald-500 text-black border-emerald-400 shadow-lg shadow-emerald-500/25 font-black'
               : 'bg-[#111114] text-slate-200 hover:text-white hover:bg-white/5 border-white/10 hover:border-emerald-500/30'
           }`}
+          title={`Screen 1: Digital Vehicle Garage HUD (${totalAssets})`}
         >
-          <div className={`p-2 rounded-lg shrink-0 ${
+          <div className={`p-1.5 sm:p-2 rounded-lg shrink-0 ${
             currentView === 'garage' ? 'bg-black/20 text-black' : 'bg-emerald-950/80 text-emerald-400 border border-emerald-500/30'
           }`}>
-            <LayoutGrid size={17} />
+            <LayoutGrid size={16} />
           </div>
           <div className="flex flex-col min-w-0 leading-tight">
-            <span className={`text-xs font-black uppercase tracking-wider ${
+            <span className={`text-[10px] sm:text-xs font-black uppercase tracking-wider ${
               currentView === 'garage' ? 'text-black/80' : 'text-emerald-400'
             }`}>
               SCREEN 1
             </span>
-            <span className="text-xs sm:text-sm font-bold truncate">
+            <span className="text-xs sm:text-[13px] font-bold truncate">
               GARAGE ({totalAssets})
             </span>
           </div>
@@ -522,24 +489,25 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
         {/* Screen 2: Factory Intake */}
         <button
           onClick={() => onViewChange('factory')}
-          className={`flex items-center gap-2.5 p-2.5 rounded-xl border text-left transition-all cursor-pointer overflow-hidden ${
+          className={`flex items-center gap-2 p-2 sm:p-2.5 rounded-xl border text-left transition-all cursor-pointer overflow-hidden ${
             currentView === 'factory'
               ? 'bg-cyan-500 text-black border-cyan-400 shadow-lg shadow-cyan-500/25 font-black'
               : 'bg-[#111114] text-slate-200 hover:text-white hover:bg-white/5 border-white/10 hover:border-cyan-500/30'
           }`}
+          title="Screen 2: Factory Intake Bay"
         >
-          <div className={`p-2 rounded-lg shrink-0 ${
+          <div className={`p-1.5 sm:p-2 rounded-lg shrink-0 ${
             currentView === 'factory' ? 'bg-black/20 text-black' : 'bg-cyan-950/80 text-cyan-400 border border-cyan-500/30'
           }`}>
-            <Cpu size={17} />
+            <Cpu size={16} />
           </div>
           <div className="flex flex-col min-w-0 leading-tight">
-            <span className={`text-xs font-black uppercase tracking-wider ${
+            <span className={`text-[10px] sm:text-xs font-black uppercase tracking-wider ${
               currentView === 'factory' ? 'text-black/80' : 'text-cyan-400'
             }`}>
               SCREEN 2
             </span>
-            <span className="text-xs sm:text-sm font-bold truncate">
+            <span className="text-xs sm:text-[13px] font-bold truncate">
               FACTORY INTAKE
             </span>
           </div>
@@ -548,25 +516,26 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
         {/* Screen 3: Showroom */}
         <button
           onClick={() => onViewChange('showroom')}
-          className={`flex items-center gap-2.5 p-2.5 rounded-xl border text-left transition-all cursor-pointer overflow-hidden ${
+          className={`flex items-center gap-2 p-2 sm:p-2.5 rounded-xl border text-left transition-all cursor-pointer overflow-hidden ${
             currentView === 'showroom'
               ? 'bg-white text-black border-slate-200 shadow-lg shadow-white/25 font-black'
               : 'bg-[#111114] text-slate-200 hover:text-white hover:bg-white/5 border-white/10 hover:border-white/30'
           }`}
+          title="Screen 3: Public Showroom (Aura & Grid)"
         >
-          <div className={`p-2 rounded-lg shrink-0 ${
+          <div className={`p-1.5 sm:p-2 rounded-lg shrink-0 ${
             currentView === 'showroom' ? 'bg-black/20 text-black' : 'bg-slate-800 text-slate-200 border border-white/20'
           }`}>
-            <Compass size={17} />
+            <Compass size={16} />
           </div>
           <div className="flex flex-col min-w-0 leading-tight">
-            <span className={`text-xs font-black uppercase tracking-wider ${
+            <span className={`text-[10px] sm:text-xs font-black uppercase tracking-wider ${
               currentView === 'showroom' ? 'text-black/80' : 'text-slate-300'
             }`}>
               SCREEN 3
             </span>
-            <span className="text-xs sm:text-sm font-bold truncate">
-              SHOWROOM (AURA & GRID)
+            <span className="text-xs sm:text-[13px] font-bold truncate">
+              SHOWROOM
             </span>
           </div>
         </button>
@@ -574,25 +543,26 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
         {/* Screen 4: Deal Room */}
         <button
           onClick={() => onViewChange('dealdesk')}
-          className={`flex items-center gap-2.5 p-2.5 rounded-xl border text-left transition-all cursor-pointer overflow-hidden ${
+          className={`flex items-center gap-2 p-2 sm:p-2.5 rounded-xl border text-left transition-all cursor-pointer overflow-hidden ${
             currentView === 'dealdesk'
               ? 'bg-amber-500 text-black border-amber-400 shadow-lg shadow-amber-500/25 font-black'
               : 'bg-[#111114] text-slate-200 hover:text-white hover:bg-white/5 border-white/10 hover:border-amber-500/30'
           }`}
+          title="Screen 4: Private Deal Room (Auth Required)"
         >
-          <div className={`p-2 rounded-lg shrink-0 ${
+          <div className={`p-1.5 sm:p-2 rounded-lg shrink-0 ${
             currentView === 'dealdesk' ? 'bg-black/20 text-black' : 'bg-amber-950/80 text-amber-400 border border-amber-500/30'
           }`}>
-            {isOperatorAuthenticated ? <Unlock size={17} /> : <Lock size={17} />}
+            {isOperatorAuthenticated ? <Unlock size={16} /> : <Lock size={16} />}
           </div>
           <div className="flex flex-col min-w-0 leading-tight">
-            <span className={`text-xs font-black uppercase tracking-wider ${
+            <span className={`text-[10px] sm:text-xs font-black uppercase tracking-wider ${
               currentView === 'dealdesk' ? 'text-black/80' : 'text-amber-400'
             }`}>
               SCREEN 4
             </span>
-            <span className="text-xs sm:text-sm font-bold truncate">
-              DEAL ROOM ({isOperatorAuthenticated ? 'UNLOCKED' : 'AUTH REQ'})
+            <span className="text-xs sm:text-[13px] font-bold truncate">
+              DEAL ROOM ({isOperatorAuthenticated ? 'UNLOCKED' : 'AUTH'})
             </span>
           </div>
         </button>
@@ -600,25 +570,80 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
         {/* Screen 5: Diagnostics */}
         <button
           onClick={() => onViewChange('maintenance')}
-          className={`col-span-2 sm:col-span-1 flex items-center gap-2.5 p-2.5 rounded-xl border text-left transition-all cursor-pointer overflow-hidden ${
+          className={`flex items-center gap-2 p-2 sm:p-2.5 rounded-xl border text-left transition-all cursor-pointer overflow-hidden ${
             currentView === 'maintenance'
               ? 'bg-purple-500 text-white border-purple-400 shadow-lg shadow-purple-500/25 font-black'
               : 'bg-[#111114] text-slate-200 hover:text-white hover:bg-white/5 border-white/10 hover:border-purple-500/30'
           }`}
+          title="Screen 5: Fleet Diagnostics & Maintenance Bay"
         >
-          <div className={`p-2 rounded-lg shrink-0 ${
+          <div className={`p-1.5 sm:p-2 rounded-lg shrink-0 ${
             currentView === 'maintenance' ? 'bg-black/20 text-white' : 'bg-purple-950/80 text-purple-400 border border-purple-500/30'
           }`}>
-            <Wrench size={17} />
+            <Wrench size={16} />
           </div>
           <div className="flex flex-col min-w-0 leading-tight">
-            <span className={`text-xs font-black uppercase tracking-wider ${
+            <span className={`text-[10px] sm:text-xs font-black uppercase tracking-wider ${
               currentView === 'maintenance' ? 'text-white/80' : 'text-purple-400'
             }`}>
               SCREEN 5
             </span>
-            <span className="text-xs sm:text-sm font-bold truncate">
-              DIAGNOSTICS (PIT CREW)
+            <span className="text-xs sm:text-[13px] font-bold truncate">
+              DIAGNOSTICS
+            </span>
+          </div>
+        </button>
+
+        {/* Screen 6: Pricing Tiers */}
+        <button
+          onClick={() => onViewChange('pricing')}
+          className={`flex items-center gap-2 p-2 sm:p-2.5 rounded-xl border text-left transition-all cursor-pointer overflow-hidden ${
+            currentView === 'pricing'
+              ? 'bg-teal-500 text-black border-teal-400 shadow-lg shadow-teal-500/25 font-black'
+              : 'bg-[#111114] text-slate-200 hover:text-white hover:bg-white/5 border-white/10 hover:border-teal-500/30'
+          }`}
+          title="Screen 6: Commercial Pricing Tiers"
+        >
+          <div className={`p-1.5 sm:p-2 rounded-lg shrink-0 ${
+            currentView === 'pricing' ? 'bg-black/20 text-black' : 'bg-teal-950/80 text-teal-400 border border-teal-500/30'
+          }`}>
+            <Tag size={16} />
+          </div>
+          <div className="flex flex-col min-w-0 leading-tight">
+            <span className={`text-[10px] sm:text-xs font-black uppercase tracking-wider ${
+              currentView === 'pricing' ? 'text-black/80' : 'text-teal-400'
+            }`}>
+              SCREEN 6
+            </span>
+            <span className="text-xs sm:text-[13px] font-bold truncate">
+              PRICING TIERS
+            </span>
+          </div>
+        </button>
+
+        {/* Screen 7: Valuation Hub */}
+        <button
+          onClick={() => onViewChange('valuationhub')}
+          className={`col-span-2 sm:col-span-2 lg:col-span-1 flex items-center gap-2 p-2 sm:p-2.5 rounded-xl border text-left transition-all cursor-pointer overflow-hidden ${
+            currentView === 'valuationhub'
+              ? 'bg-rose-500 text-white border-rose-400 shadow-lg shadow-rose-500/25 font-black'
+              : 'bg-[#111114] text-slate-200 hover:text-white hover:bg-white/5 border-white/10 hover:border-rose-500/30'
+          }`}
+          title="Screen 7: Portfolio Valuation & Diligence Hub"
+        >
+          <div className={`p-1.5 sm:p-2 rounded-lg shrink-0 ${
+            currentView === 'valuationhub' ? 'bg-black/20 text-white' : 'bg-rose-950/80 text-rose-400 border border-rose-500/30'
+          }`}>
+            <TrendingUp size={16} />
+          </div>
+          <div className="flex flex-col min-w-0 leading-tight">
+            <span className={`text-[10px] sm:text-xs font-black uppercase tracking-wider ${
+              currentView === 'valuationhub' ? 'text-white/80' : 'text-rose-400'
+            }`}>
+              SCREEN 7
+            </span>
+            <span className="text-xs sm:text-[13px] font-bold truncate">
+              VALUATION HUB
             </span>
           </div>
         </button>

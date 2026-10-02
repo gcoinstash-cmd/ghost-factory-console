@@ -418,66 +418,66 @@ export const DealRoomCore: React.FC<DealRoomScreenProps> = ({
             </span>
           </div>
 
-          {/* Financial Bracket Comparison Cards */}
+          {/* Financial Bracket Comparison Cards (Descending Order: Biggest to Smallest) */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {/* Bracket 1: Distress / Quick-Sale Cash Floor */}
-            <div className="bg-black/60 border border-red-500/30 hover:border-red-400/70 transition-colors rounded-xl p-4 flex flex-col justify-between space-y-3">
+            {/* Bracket 1: Strategic Acquisition Ceiling */}
+            <div className="bg-black/60 border border-purple-500/30 hover:border-purple-400/70 transition-colors rounded-xl p-4 flex flex-col justify-between space-y-3">
               <div>
                 <div className="flex items-center justify-between text-xs mb-1">
-                  <span className="text-slate-400 uppercase font-bold tracking-wider text-[11px]">Distress Floor</span>
-                  <span className="text-red-400 font-bold bg-red-950/60 px-1.5 py-0.5 rounded border border-red-500/30 text-[10px]">LIQUIDATION</span>
+                  <span className="text-slate-300 uppercase font-bold tracking-wider text-xs">Strategic Ceiling</span>
+                  <span className="text-purple-400 font-bold bg-purple-950/60 px-2 py-0.5 rounded border border-purple-500/30 text-xs">MONOPOLY PREMIUM</span>
                 </div>
-                <h3 className="text-sm font-bold text-white leading-tight">Distress / Quick-Sale Cash Floor</h3>
+                <h3 className="text-sm font-bold text-white leading-tight">Strategic Acquisition Ceiling</h3>
               </div>
               <div>
-                <span className="text-xl sm:text-2xl font-black text-red-400 font-mono block">$118.5k – $228.0k</span>
-                <span className="text-[11px] text-slate-400 mt-1 block italic leading-snug">Note: 40–60% buyer discount liquidation scenario</span>
+                <span className="text-xl sm:text-2xl font-black text-purple-300 font-mono block">$1.38M – $2.64M+</span>
+                <span className="text-xs text-slate-300 mt-1 block leading-snug">Deep-tech niche monopoly premium</span>
               </div>
             </div>
 
-            {/* Bracket 2: Dual-Track Strategic Buyout Range */}
+            {/* Bracket 2: Dev Agency Replacement Benchmark */}
+            <div className="bg-black/60 border border-cyan-500/30 hover:border-cyan-400/70 transition-colors rounded-xl p-4 flex flex-col justify-between space-y-3">
+              <div>
+                <div className="flex items-center justify-between text-xs mb-1">
+                  <span className="text-slate-300 uppercase font-bold tracking-wider text-xs">Dev Benchmark</span>
+                  <span className="text-cyan-400 font-bold bg-cyan-950/60 px-2 py-0.5 rounded border border-cyan-500/30 text-xs">REPLACEMENT COST</span>
+                </div>
+                <h3 className="text-sm font-bold text-white leading-tight">Dev Agency Replacement Benchmark</h3>
+              </div>
+              <div>
+                <span className="text-xl sm:text-2xl font-black text-cyan-300 font-mono block">$890.0k – $1.62M</span>
+                <span className="text-xs text-slate-300 mt-1 block leading-snug">Benchmark: 4,000+ engineering hours @ $150–$250/hr</span>
+              </div>
+            </div>
+
+            {/* Bracket 3: Dual-Track Strategic Buyout Range */}
             <div className="bg-black/60 border border-amber-500/30 hover:border-amber-400/70 transition-colors rounded-xl p-4 flex flex-col justify-between space-y-3">
               <div>
                 <div className="flex items-center justify-between text-xs mb-1">
-                  <span className="text-slate-400 uppercase font-bold tracking-wider text-[11px]">Dual-Track Range</span>
-                  <span className="text-amber-400 font-bold bg-amber-950/60 px-1.5 py-0.5 rounded border border-amber-500/30 text-[10px]">PORTFOLIO BUYOUT</span>
+                  <span className="text-slate-300 uppercase font-bold tracking-wider text-xs">Dual-Track Range</span>
+                  <span className="text-amber-400 font-bold bg-amber-950/60 px-2 py-0.5 rounded border border-amber-500/30 text-xs">PORTFOLIO BUYOUT</span>
                 </div>
                 <h3 className="text-sm font-bold text-white leading-tight">Dual-Track Strategic Buyout Range</h3>
               </div>
               <div>
                 <span className="text-xl sm:text-2xl font-black text-amber-300 font-mono block">$562.0k – $976.5k</span>
                 <span className="text-xs text-amber-400 font-bold mt-1 block">Anchor: $673.0k</span>
-                <span className="text-[10px] text-slate-400 block mt-0.5">{track1Count} T1 ($4.5k) + {track2Count} Flagship ($14.5k) anchors</span>
+                <span className="text-xs text-slate-300 block mt-0.5">{track1Count} T1 ($4.5k) + {track2Count} Flagship ($14.5k) anchors</span>
               </div>
             </div>
 
-            {/* Bracket 3: Strategic Acquisition Ceiling */}
-            <div className="bg-black/60 border border-purple-500/30 hover:border-purple-400/70 transition-colors rounded-xl p-4 flex flex-col justify-between space-y-3">
+            {/* Bracket 4: Distress / Quick-Sale Cash Floor */}
+            <div className="bg-black/60 border border-red-500/30 hover:border-red-400/70 transition-colors rounded-xl p-4 flex flex-col justify-between space-y-3">
               <div>
                 <div className="flex items-center justify-between text-xs mb-1">
-                  <span className="text-slate-400 uppercase font-bold tracking-wider text-[11px]">Strategic Ceiling</span>
-                  <span className="text-purple-400 font-bold bg-purple-950/60 px-1.5 py-0.5 rounded border border-purple-500/30 text-[10px]">MONOPOLY PREMIUM</span>
+                  <span className="text-slate-300 uppercase font-bold tracking-wider text-xs">Distress Floor</span>
+                  <span className="text-red-400 font-bold bg-red-950/60 px-2 py-0.5 rounded border border-red-500/30 text-xs">LIQUIDATION</span>
                 </div>
-                <h3 className="text-sm font-bold text-white leading-tight">Strategic Acquisition Ceiling</h3>
+                <h3 className="text-sm font-bold text-white leading-tight">Distress / Quick-Sale Cash Floor</h3>
               </div>
               <div>
-                <span className="text-xl sm:text-2xl font-black text-purple-300 font-mono block">$1.38M – $2.64M+</span>
-                <span className="text-[11px] text-slate-300 mt-1 block leading-snug">Deep-tech niche monopoly premium</span>
-              </div>
-            </div>
-
-            {/* Bracket 4: Dev Agency Replacement Benchmark */}
-            <div className="bg-black/60 border border-cyan-500/30 hover:border-cyan-400/70 transition-colors rounded-xl p-4 flex flex-col justify-between space-y-3">
-              <div>
-                <div className="flex items-center justify-between text-xs mb-1">
-                  <span className="text-slate-400 uppercase font-bold tracking-wider text-[11px]">Dev Benchmark</span>
-                  <span className="text-cyan-400 font-bold bg-cyan-950/60 px-1.5 py-0.5 rounded border border-cyan-500/30 text-[10px]">REPLACEMENT COST</span>
-                </div>
-                <h3 className="text-sm font-bold text-white leading-tight">Dev Agency Replacement Benchmark</h3>
-              </div>
-              <div>
-                <span className="text-xl sm:text-2xl font-black text-cyan-300 font-mono block">$890.0k – $1.62M</span>
-                <span className="text-[11px] text-slate-300 mt-1 block leading-snug">Benchmark: 4,000+ engineering hours @ $150–$250/hr</span>
+                <span className="text-xl sm:text-2xl font-black text-red-400 font-mono block">$118.5k – $228.0k</span>
+                <span className="text-xs text-slate-300 mt-1 block italic leading-snug">Note: 40–60% buyer discount liquidation scenario</span>
               </div>
             </div>
           </div>
