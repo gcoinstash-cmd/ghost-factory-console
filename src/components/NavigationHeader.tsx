@@ -492,65 +492,135 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
       </div>
 
       {/* Screen Navigation Tabs (Screens 1 to 5) */}
-      <nav className="flex flex-wrap items-center gap-2 w-full pt-2.5">
+      <nav className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 w-full pt-3">
+        {/* Screen 1: Garage */}
         <button
           onClick={() => onViewChange('garage')}
-          className={`flex-1 min-w-[140px] flex items-center justify-center gap-2 text-center whitespace-nowrap px-3 py-2.5 rounded-xl text-xs sm:text-sm font-semibold tracking-wider transition-all cursor-pointer ${
+          className={`flex items-center gap-2.5 p-2.5 rounded-xl border text-left transition-all cursor-pointer overflow-hidden ${
             currentView === 'garage'
-              ? 'bg-emerald-500 text-black shadow-lg shadow-emerald-500/25 font-black'
-              : 'text-slate-300 hover:text-white hover:bg-white/5 border border-white/10'
+              ? 'bg-emerald-500 text-black border-emerald-400 shadow-lg shadow-emerald-500/25 font-black'
+              : 'bg-[#111114] text-slate-200 hover:text-white hover:bg-white/5 border-white/10 hover:border-emerald-500/30'
           }`}
         >
-          <LayoutGrid size={15} className="shrink-0" />
-          <span>SCREEN 1: GARAGE ({totalAssets})</span>
+          <div className={`p-2 rounded-lg shrink-0 ${
+            currentView === 'garage' ? 'bg-black/20 text-black' : 'bg-emerald-950/80 text-emerald-400 border border-emerald-500/30'
+          }`}>
+            <LayoutGrid size={17} />
+          </div>
+          <div className="flex flex-col min-w-0 leading-tight">
+            <span className={`text-xs font-black uppercase tracking-wider ${
+              currentView === 'garage' ? 'text-black/80' : 'text-emerald-400'
+            }`}>
+              SCREEN 1
+            </span>
+            <span className="text-xs sm:text-sm font-bold truncate">
+              GARAGE ({totalAssets})
+            </span>
+          </div>
         </button>
 
+        {/* Screen 2: Factory Intake */}
         <button
           onClick={() => onViewChange('factory')}
-          className={`flex-1 min-w-[140px] flex items-center justify-center gap-2 text-center whitespace-nowrap px-3 py-2.5 rounded-xl text-xs sm:text-sm font-semibold tracking-wider transition-all cursor-pointer ${
+          className={`flex items-center gap-2.5 p-2.5 rounded-xl border text-left transition-all cursor-pointer overflow-hidden ${
             currentView === 'factory'
-              ? 'bg-cyan-500 text-black shadow-lg shadow-cyan-500/25 font-black'
-              : 'text-slate-300 hover:text-white hover:bg-white/5 border border-white/10'
+              ? 'bg-cyan-500 text-black border-cyan-400 shadow-lg shadow-cyan-500/25 font-black'
+              : 'bg-[#111114] text-slate-200 hover:text-white hover:bg-white/5 border-white/10 hover:border-cyan-500/30'
           }`}
         >
-          <Cpu size={15} className="shrink-0" />
-          <span>SCREEN 2: FACTORY INTAKE</span>
+          <div className={`p-2 rounded-lg shrink-0 ${
+            currentView === 'factory' ? 'bg-black/20 text-black' : 'bg-cyan-950/80 text-cyan-400 border border-cyan-500/30'
+          }`}>
+            <Cpu size={17} />
+          </div>
+          <div className="flex flex-col min-w-0 leading-tight">
+            <span className={`text-xs font-black uppercase tracking-wider ${
+              currentView === 'factory' ? 'text-black/80' : 'text-cyan-400'
+            }`}>
+              SCREEN 2
+            </span>
+            <span className="text-xs sm:text-sm font-bold truncate">
+              FACTORY INTAKE
+            </span>
+          </div>
         </button>
 
+        {/* Screen 3: Showroom */}
         <button
           onClick={() => onViewChange('showroom')}
-          className={`flex-1 min-w-[140px] flex items-center justify-center gap-2 text-center whitespace-nowrap px-3 py-2.5 rounded-xl text-xs sm:text-sm font-semibold tracking-wider transition-all cursor-pointer ${
+          className={`flex items-center gap-2.5 p-2.5 rounded-xl border text-left transition-all cursor-pointer overflow-hidden ${
             currentView === 'showroom'
-              ? 'bg-white text-black shadow-lg shadow-white/25 font-black'
-              : 'text-slate-300 hover:text-white hover:bg-white/5 border border-white/10'
+              ? 'bg-white text-black border-slate-200 shadow-lg shadow-white/25 font-black'
+              : 'bg-[#111114] text-slate-200 hover:text-white hover:bg-white/5 border-white/10 hover:border-white/30'
           }`}
         >
-          <Compass size={15} className="shrink-0" />
-          <span>SCREEN 3: SHOWROOM (AURA & GRID)</span>
+          <div className={`p-2 rounded-lg shrink-0 ${
+            currentView === 'showroom' ? 'bg-black/20 text-black' : 'bg-slate-800 text-slate-200 border border-white/20'
+          }`}>
+            <Compass size={17} />
+          </div>
+          <div className="flex flex-col min-w-0 leading-tight">
+            <span className={`text-xs font-black uppercase tracking-wider ${
+              currentView === 'showroom' ? 'text-black/80' : 'text-slate-300'
+            }`}>
+              SCREEN 3
+            </span>
+            <span className="text-xs sm:text-sm font-bold truncate">
+              SHOWROOM (AURA & GRID)
+            </span>
+          </div>
         </button>
 
+        {/* Screen 4: Deal Room */}
         <button
           onClick={() => onViewChange('dealdesk')}
-          className={`flex-1 min-w-[140px] flex items-center justify-center gap-2 text-center whitespace-nowrap px-3 py-2.5 rounded-xl text-xs sm:text-sm font-semibold tracking-wider transition-all cursor-pointer ${
+          className={`flex items-center gap-2.5 p-2.5 rounded-xl border text-left transition-all cursor-pointer overflow-hidden ${
             currentView === 'dealdesk'
-              ? 'bg-amber-500 text-black shadow-lg shadow-amber-500/25 font-black'
-              : 'text-slate-300 hover:text-white hover:bg-white/5 border border-white/10'
+              ? 'bg-amber-500 text-black border-amber-400 shadow-lg shadow-amber-500/25 font-black'
+              : 'bg-[#111114] text-slate-200 hover:text-white hover:bg-white/5 border-white/10 hover:border-amber-500/30'
           }`}
         >
-          {isOperatorAuthenticated ? <Unlock size={15} className="shrink-0" /> : <Lock size={15} className="shrink-0" />}
-          <span>SCREEN 4: DEAL ROOM ({isOperatorAuthenticated ? 'UNLOCKED' : 'AUTH REQ'})</span>
+          <div className={`p-2 rounded-lg shrink-0 ${
+            currentView === 'dealdesk' ? 'bg-black/20 text-black' : 'bg-amber-950/80 text-amber-400 border border-amber-500/30'
+          }`}>
+            {isOperatorAuthenticated ? <Unlock size={17} /> : <Lock size={17} />}
+          </div>
+          <div className="flex flex-col min-w-0 leading-tight">
+            <span className={`text-xs font-black uppercase tracking-wider ${
+              currentView === 'dealdesk' ? 'text-black/80' : 'text-amber-400'
+            }`}>
+              SCREEN 4
+            </span>
+            <span className="text-xs sm:text-sm font-bold truncate">
+              DEAL ROOM ({isOperatorAuthenticated ? 'UNLOCKED' : 'AUTH REQ'})
+            </span>
+          </div>
         </button>
 
+        {/* Screen 5: Diagnostics */}
         <button
           onClick={() => onViewChange('maintenance')}
-          className={`flex-1 min-w-[140px] flex items-center justify-center gap-2 text-center whitespace-nowrap px-3 py-2.5 rounded-xl text-xs sm:text-sm font-semibold tracking-wider transition-all cursor-pointer ${
+          className={`col-span-2 sm:col-span-1 flex items-center gap-2.5 p-2.5 rounded-xl border text-left transition-all cursor-pointer overflow-hidden ${
             currentView === 'maintenance'
-              ? 'bg-purple-500 text-white shadow-lg shadow-purple-500/25 font-black'
-              : 'text-slate-300 hover:text-white hover:bg-white/5 border border-white/10'
+              ? 'bg-purple-500 text-white border-purple-400 shadow-lg shadow-purple-500/25 font-black'
+              : 'bg-[#111114] text-slate-200 hover:text-white hover:bg-white/5 border-white/10 hover:border-purple-500/30'
           }`}
         >
-          <Wrench size={15} className="shrink-0" />
-          <span>SCREEN 5: DIAGNOSTICS (PIT CREW)</span>
+          <div className={`p-2 rounded-lg shrink-0 ${
+            currentView === 'maintenance' ? 'bg-black/20 text-white' : 'bg-purple-950/80 text-purple-400 border border-purple-500/30'
+          }`}>
+            <Wrench size={17} />
+          </div>
+          <div className="flex flex-col min-w-0 leading-tight">
+            <span className={`text-xs font-black uppercase tracking-wider ${
+              currentView === 'maintenance' ? 'text-white/80' : 'text-purple-400'
+            }`}>
+              SCREEN 5
+            </span>
+            <span className="text-xs sm:text-sm font-bold truncate">
+              DIAGNOSTICS (PIT CREW)
+            </span>
+          </div>
         </button>
       </nav>
       </div>
