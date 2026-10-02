@@ -165,7 +165,9 @@ export const BlueprintCard: React.FC<BlueprintCardProps> = ({
           </h3>
           
           {/* UNCONDITIONAL MANDATORY OPERATIONAL DISCLAIMER & TRUTH BADGE */}
-          <OperationalDisclaimer text={REGULATED_SECTOR_DISCLAIMER} />
+          <OperationalDisclaimer text={REGULATED_SECTOR_DISCLAIMER}>
+            {REGULATED_SECTOR_DISCLAIMER}
+          </OperationalDisclaimer>
 
           <p className="text-sm sm:text-base text-slate-200 font-bold mt-1 line-clamp-1">
             {product.category}
