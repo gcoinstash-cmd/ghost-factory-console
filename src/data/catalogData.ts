@@ -6,11 +6,7 @@ export { CATALOG_DATA };
 // Canonical "Auto Repair Shop OS" asset definition
 export const autoRepairShopOS = {
   name: "Auto Repair Shop OS",
-  bestFor: [
-    "Independent Auto Repair Shops",
-    "Fleet Mechanics",
-    "Transmission & Brake Specialists"
-  ]
+  bestFor: "Independent auto repair shops & fleet maintenance operators"
 };
 
 export default CATALOG_DATA;
