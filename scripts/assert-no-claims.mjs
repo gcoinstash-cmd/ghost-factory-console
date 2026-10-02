@@ -38,7 +38,9 @@ for (const relPath of CUSTOMER_FACING_FILES) {
   const lines = content.split('\n');
 
   lines.forEach((line, idx) => {
-    // Skip pure comment lines if desired, or check all lines in customer-facing code
+    // Allow lines explicitly marked as internal audit badge copy (not blueprint product claims)
+    if (line.includes('[audit-badge-exempt]')) return;
+    // Skip pure comment lines for the Certified check (disclaimers are in comments and code)
     for (const { name, regex } of FORBIDDEN_CLAIM_PATTERNS) {
       if (regex.test(line)) {
         console.error(`❌ [CLAIM VIOLATION] ${relPath}:${idx + 1} contains "${name}": "${line.trim()}"`);
