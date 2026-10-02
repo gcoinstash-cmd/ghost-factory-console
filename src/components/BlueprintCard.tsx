@@ -270,14 +270,11 @@ export const BlueprintCard: React.FC<BlueprintCardProps> = ({
       {/* COMPLIANCE & PRODUCT TRUTH DETAILS DRAWER */}
       <details className="text-xs bg-black/60 rounded-xl border border-white/10 p-3 group">
         <summary className="font-bold text-slate-300 cursor-pointer flex items-center justify-between text-xs uppercase tracking-wider select-none">
-          <span className="flex items-center gap-1.5 text-amber-400">
-            <AlertTriangle size={13} />
-            <span>Truth & Compliance</span>
-          </span>
+          <span className="flex items-center gap-1.5 text-amber-400"><AlertTriangle size={13} /><span>Truth & Compliance</span></span>
           <ChevronDown size={14} className="group-open:rotate-180 transition-transform text-slate-400" />
         </summary>
         <div className="pt-2.5 mt-2.5 border-t border-white/10 space-y-2 text-slate-300">
-          <div className="p-2.5 rounded-lg bg-amber-950/50 border border-amber-500/50 text-amber-200 font-mono text-[11px] leading-relaxed">
+          <div className="p-2.5 rounded-lg bg-amber-950/50 border border-amber-500/50 text-amber-200 font-mono text-[11px] leading-relaxed" title="NOT CERTIFIED FOR OPERATIONAL, REGULATORY, OR LIFE-CRITICAL USE">
             <div className="flex items-center gap-1.5 font-black text-amber-300 uppercase tracking-wider mb-1">
               <AlertTriangle size={13} className="text-amber-400 shrink-0" />
               <span>REGULATORY & TRUTH NOTICE:</span>
