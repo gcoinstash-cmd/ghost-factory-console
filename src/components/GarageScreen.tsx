@@ -119,7 +119,7 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
               </div>
               <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-emerald-500/20 border border-emerald-500/50 rounded-lg text-xs font-mono font-black text-emerald-300">
                 <Sparkles size={13} className="text-emerald-400" />
-                <span>v1.4.1</span>
+                <span>v1.4.2</span>
               </span>
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white flex flex-wrap items-center gap-3">
@@ -140,34 +140,29 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
           ) : (
             <div className="w-full lg:w-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 bg-black/80 p-4 sm:p-5 rounded-xl border border-white/15 text-sm">
               <div className="p-1">
-                <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">Track 1 Retail MSRP</span>
-                <span className="text-xl sm:text-2xl font-black text-emerald-400 block tracking-tight mt-1">$199 USD</span>
-                <span className="text-sm text-slate-200 block font-semibold leading-relaxed mt-0.5">Unlimited End-Client Use</span>
+                <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">TRACK 1 FLEET</span>
+                <span className="text-xl sm:text-2xl font-black text-cyan-400 block tracking-tight mt-1">85 Models</span>
+                <span className="text-sm text-slate-200 block font-semibold leading-relaxed mt-0.5">Turnkey Consoles</span>
               </div>
               <div className="p-1 border-l border-white/15 pl-3">
-                <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">Commercial Team</span>
-                <span className="text-xl sm:text-2xl font-black text-cyan-400 block tracking-tight mt-1">$599 USD</span>
-                <span className="text-sm text-slate-200 block font-semibold leading-relaxed mt-0.5">Agency Multi-Seat Pack</span>
+                <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">TRACK 2 FLEET</span>
+                <span className="text-xl sm:text-2xl font-black text-amber-400 block tracking-tight mt-1">25 Models</span>
+                <span className="text-sm text-slate-200 block font-semibold leading-relaxed mt-0.5">Flagship SCADA</span>
               </div>
               <div className="p-1 border-t sm:border-t-0 sm:border-l border-white/15 pt-2 sm:pt-1 sm:pl-3">
-                <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">Flagship License</span>
-                <span className="text-xl sm:text-2xl font-black text-purple-400 block tracking-tight mt-1">$1,500 – $3,500</span>
-                <span className="text-sm text-slate-200 block font-semibold leading-relaxed mt-0.5">Tier-1 SCADA Physics</span>
+                <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">CAPITAL DENSITY</span>
+                <span className="text-xl sm:text-2xl font-black text-purple-400 block tracking-tight mt-1">$6,118 / Asset</span>
+                <span className="text-sm text-slate-200 block font-semibold leading-relaxed mt-0.5">$673k Anchor NAV</span>
               </div>
               <div className="p-1 border-t sm:border-t-0 border-l border-white/15 pt-2 sm:pt-1 pl-3">
-                <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">Core Deliverable</span>
-                <span className="text-xl sm:text-2xl font-black text-amber-400 block tracking-tight mt-1">React 19 + RLS</span>
-                <span className="text-sm text-slate-200 block font-semibold leading-relaxed mt-0.5">Postgres Schema & Seed</span>
+                <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">LIQUID TRANCHE</span>
+                <span className="text-xl sm:text-2xl font-black text-amber-300 block tracking-tight mt-1">22 Max Units</span>
+                <span className="text-sm text-slate-200 block font-semibold leading-relaxed mt-0.5">80% Retention Floor</span>
               </div>
-              <div 
-                onClick={onOpenOperatorAuth}
-                className="p-1 border-t sm:border-t-0 sm:border-l border-amber-500/50 pt-2 sm:pt-1 sm:pl-3 col-span-2 sm:col-span-1 bg-amber-950/20 rounded-lg cursor-pointer hover:bg-amber-950/40 transition-colors"
-              >
-                <span className="text-amber-300 block text-xs sm:text-sm uppercase font-black tracking-wider flex items-center gap-1">
-                  <Lock size={12} /> Deal Room
-                </span>
-                <span className="text-xl sm:text-2xl font-black text-amber-400 block tracking-tight mt-1">RESTRICTED</span>
-                <span className="text-sm text-amber-300/90 block font-semibold leading-relaxed mt-0.5 underline">Unlock M&A Telemetry</span>
+              <div className="p-1 border-t sm:border-t-0 sm:border-l border-white/15 pt-2 sm:pt-1 sm:pl-3 col-span-2 sm:col-span-1">
+                <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">VAULT CORE</span>
+                <span className="text-xl sm:text-2xl font-black text-emerald-400 block tracking-tight mt-1">88 Protected</span>
+                <span className="text-sm text-slate-200 block font-semibold leading-relaxed mt-0.5">Sovereign Reserve</span>
               </div>
             </div>
           )}

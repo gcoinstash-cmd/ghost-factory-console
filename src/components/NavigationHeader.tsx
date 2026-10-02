@@ -272,7 +272,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
             className="hidden xl:flex items-center gap-1.5 px-2.5 py-1.5 rounded bg-emerald-500/15 border border-emerald-500/40 text-emerald-300 font-mono text-xs font-bold"
             title="Production Diligence Freeze Lock"
           >
-            <span>Build: v1.4.1</span>
+            <span>Build: v1.4.2</span>
           </div>
 
           <button
@@ -456,59 +456,58 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
         )}
       </div>
 
-      {/* Screen Navigation Tabs (Screens 1 to 5) */}
       {/* Screen Navigation Tabs (Screens 1 to 7) */}
       <nav className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-2 w-full pt-3">
         {/* Screen 1: Garage */}
         <button
           onClick={() => onViewChange('garage')}
-          className={`flex items-center gap-2 p-2 sm:p-2.5 rounded-xl border text-left transition-all cursor-pointer overflow-hidden ${
+          className={`flex items-center gap-1.5 sm:gap-2 px-2 py-2 text-[11px] font-mono font-bold tracking-tight whitespace-nowrap rounded-xl border text-left transition-all cursor-pointer ${
             currentView === 'garage'
               ? 'bg-emerald-500 text-black border-emerald-400 shadow-lg shadow-emerald-500/25 font-black'
               : 'bg-[#111114] text-slate-200 hover:text-white hover:bg-white/5 border-white/10 hover:border-emerald-500/30'
           }`}
-          title={`Screen 1: Digital Vehicle Garage HUD (${totalAssets})`}
+          title="SCREEN 1: GARAGE (110)"
         >
-          <div className={`p-1.5 sm:p-2 rounded-lg shrink-0 ${
+          <div className={`p-1.5 rounded-lg shrink-0 ${
             currentView === 'garage' ? 'bg-black/20 text-black' : 'bg-emerald-950/80 text-emerald-400 border border-emerald-500/30'
           }`}>
-            <LayoutGrid size={16} />
+            <LayoutGrid size={15} />
           </div>
           <div className="flex flex-col min-w-0 leading-tight">
-            <span className={`text-[10px] sm:text-xs font-black uppercase tracking-wider ${
+            <span className={`text-[9px] sm:text-[10px] font-black uppercase tracking-wider ${
               currentView === 'garage' ? 'text-black/80' : 'text-emerald-400'
             }`}>
               SCREEN 1
             </span>
-            <span className="text-xs sm:text-[13px] font-bold truncate">
+            <span className="text-[11px] sm:text-xs font-bold whitespace-nowrap">
               GARAGE ({totalAssets})
             </span>
           </div>
         </button>
 
-        {/* Screen 2: Factory Intake */}
+        {/* Screen 2: Intake */}
         <button
           onClick={() => onViewChange('factory')}
-          className={`flex items-center gap-2 p-2 sm:p-2.5 rounded-xl border text-left transition-all cursor-pointer overflow-hidden ${
+          className={`flex items-center gap-1.5 sm:gap-2 px-2 py-2 text-[11px] font-mono font-bold tracking-tight whitespace-nowrap rounded-xl border text-left transition-all cursor-pointer ${
             currentView === 'factory'
               ? 'bg-cyan-500 text-black border-cyan-400 shadow-lg shadow-cyan-500/25 font-black'
               : 'bg-[#111114] text-slate-200 hover:text-white hover:bg-white/5 border-white/10 hover:border-cyan-500/30'
           }`}
-          title="Screen 2: Factory Intake Bay"
+          title="SCREEN 2: INTAKE"
         >
-          <div className={`p-1.5 sm:p-2 rounded-lg shrink-0 ${
+          <div className={`p-1.5 rounded-lg shrink-0 ${
             currentView === 'factory' ? 'bg-black/20 text-black' : 'bg-cyan-950/80 text-cyan-400 border border-cyan-500/30'
           }`}>
-            <Cpu size={16} />
+            <Cpu size={15} />
           </div>
           <div className="flex flex-col min-w-0 leading-tight">
-            <span className={`text-[10px] sm:text-xs font-black uppercase tracking-wider ${
+            <span className={`text-[9px] sm:text-[10px] font-black uppercase tracking-wider ${
               currentView === 'factory' ? 'text-black/80' : 'text-cyan-400'
             }`}>
               SCREEN 2
             </span>
-            <span className="text-xs sm:text-[13px] font-bold truncate">
-              FACTORY INTAKE
+            <span className="text-[11px] sm:text-xs font-bold whitespace-nowrap">
+              INTAKE
             </span>
           </div>
         </button>
@@ -516,25 +515,25 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
         {/* Screen 3: Showroom */}
         <button
           onClick={() => onViewChange('showroom')}
-          className={`flex items-center gap-2 p-2 sm:p-2.5 rounded-xl border text-left transition-all cursor-pointer overflow-hidden ${
+          className={`flex items-center gap-1.5 sm:gap-2 px-2 py-2 text-[11px] font-mono font-bold tracking-tight whitespace-nowrap rounded-xl border text-left transition-all cursor-pointer ${
             currentView === 'showroom'
               ? 'bg-white text-black border-slate-200 shadow-lg shadow-white/25 font-black'
               : 'bg-[#111114] text-slate-200 hover:text-white hover:bg-white/5 border-white/10 hover:border-white/30'
           }`}
-          title="Screen 3: Public Showroom (Aura & Grid)"
+          title="SCREEN 3: SHOWROOM"
         >
-          <div className={`p-1.5 sm:p-2 rounded-lg shrink-0 ${
+          <div className={`p-1.5 rounded-lg shrink-0 ${
             currentView === 'showroom' ? 'bg-black/20 text-black' : 'bg-slate-800 text-slate-200 border border-white/20'
           }`}>
-            <Compass size={16} />
+            <Compass size={15} />
           </div>
           <div className="flex flex-col min-w-0 leading-tight">
-            <span className={`text-[10px] sm:text-xs font-black uppercase tracking-wider ${
+            <span className={`text-[9px] sm:text-[10px] font-black uppercase tracking-wider ${
               currentView === 'showroom' ? 'text-black/80' : 'text-slate-300'
             }`}>
               SCREEN 3
             </span>
-            <span className="text-xs sm:text-[13px] font-bold truncate">
+            <span className="text-[11px] sm:text-xs font-bold whitespace-nowrap">
               SHOWROOM
             </span>
           </div>
@@ -543,26 +542,26 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
         {/* Screen 4: Deal Room */}
         <button
           onClick={() => onViewChange('dealdesk')}
-          className={`flex items-center gap-2 p-2 sm:p-2.5 rounded-xl border text-left transition-all cursor-pointer overflow-hidden ${
+          className={`flex items-center gap-1.5 sm:gap-2 px-2 py-2 text-[11px] font-mono font-bold tracking-tight whitespace-nowrap rounded-xl border text-left transition-all cursor-pointer ${
             currentView === 'dealdesk'
               ? 'bg-amber-500 text-black border-amber-400 shadow-lg shadow-amber-500/25 font-black'
               : 'bg-[#111114] text-slate-200 hover:text-white hover:bg-white/5 border-white/10 hover:border-amber-500/30'
           }`}
-          title="Screen 4: Private Deal Room (Auth Required)"
+          title="SCREEN 4: DEAL ROOM"
         >
-          <div className={`p-1.5 sm:p-2 rounded-lg shrink-0 ${
+          <div className={`p-1.5 rounded-lg shrink-0 ${
             currentView === 'dealdesk' ? 'bg-black/20 text-black' : 'bg-amber-950/80 text-amber-400 border border-amber-500/30'
           }`}>
-            {isOperatorAuthenticated ? <Unlock size={16} /> : <Lock size={16} />}
+            {isOperatorAuthenticated ? <Unlock size={15} /> : <Lock size={15} />}
           </div>
           <div className="flex flex-col min-w-0 leading-tight">
-            <span className={`text-[10px] sm:text-xs font-black uppercase tracking-wider ${
+            <span className={`text-[9px] sm:text-[10px] font-black uppercase tracking-wider ${
               currentView === 'dealdesk' ? 'text-black/80' : 'text-amber-400'
             }`}>
               SCREEN 4
             </span>
-            <span className="text-xs sm:text-[13px] font-bold truncate">
-              DEAL ROOM ({isOperatorAuthenticated ? 'UNLOCKED' : 'AUTH'})
+            <span className="text-[11px] sm:text-xs font-bold whitespace-nowrap">
+              DEAL ROOM
             </span>
           </div>
         </button>
@@ -570,53 +569,53 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
         {/* Screen 5: Diagnostics */}
         <button
           onClick={() => onViewChange('maintenance')}
-          className={`flex items-center gap-2 p-2 sm:p-2.5 rounded-xl border text-left transition-all cursor-pointer overflow-hidden ${
+          className={`flex items-center gap-1.5 sm:gap-2 px-2 py-2 text-[11px] font-mono font-bold tracking-tight whitespace-nowrap rounded-xl border text-left transition-all cursor-pointer ${
             currentView === 'maintenance'
               ? 'bg-purple-500 text-white border-purple-400 shadow-lg shadow-purple-500/25 font-black'
               : 'bg-[#111114] text-slate-200 hover:text-white hover:bg-white/5 border-white/10 hover:border-purple-500/30'
           }`}
-          title="Screen 5: Fleet Diagnostics & Maintenance Bay"
+          title="SCREEN 5: DIAGNOSTICS"
         >
-          <div className={`p-1.5 sm:p-2 rounded-lg shrink-0 ${
+          <div className={`p-1.5 rounded-lg shrink-0 ${
             currentView === 'maintenance' ? 'bg-black/20 text-white' : 'bg-purple-950/80 text-purple-400 border border-purple-500/30'
           }`}>
-            <Wrench size={16} />
+            <Wrench size={15} />
           </div>
           <div className="flex flex-col min-w-0 leading-tight">
-            <span className={`text-[10px] sm:text-xs font-black uppercase tracking-wider ${
+            <span className={`text-[9px] sm:text-[10px] font-black uppercase tracking-wider ${
               currentView === 'maintenance' ? 'text-white/80' : 'text-purple-400'
             }`}>
               SCREEN 5
             </span>
-            <span className="text-xs sm:text-[13px] font-bold truncate">
+            <span className="text-[11px] sm:text-xs font-bold whitespace-nowrap">
               DIAGNOSTICS
             </span>
           </div>
         </button>
 
-        {/* Screen 6: Pricing Tiers */}
+        {/* Screen 6: Pricing */}
         <button
           onClick={() => onViewChange('pricing')}
-          className={`flex items-center gap-2 p-2 sm:p-2.5 rounded-xl border text-left transition-all cursor-pointer overflow-hidden ${
+          className={`flex items-center gap-1.5 sm:gap-2 px-2 py-2 text-[11px] font-mono font-bold tracking-tight whitespace-nowrap rounded-xl border text-left transition-all cursor-pointer ${
             currentView === 'pricing'
               ? 'bg-teal-500 text-black border-teal-400 shadow-lg shadow-teal-500/25 font-black'
               : 'bg-[#111114] text-slate-200 hover:text-white hover:bg-white/5 border-white/10 hover:border-teal-500/30'
           }`}
-          title="Screen 6: Commercial Pricing Tiers"
+          title="SCREEN 6: PRICING"
         >
-          <div className={`p-1.5 sm:p-2 rounded-lg shrink-0 ${
+          <div className={`p-1.5 rounded-lg shrink-0 ${
             currentView === 'pricing' ? 'bg-black/20 text-black' : 'bg-teal-950/80 text-teal-400 border border-teal-500/30'
           }`}>
-            <Tag size={16} />
+            <Tag size={15} />
           </div>
           <div className="flex flex-col min-w-0 leading-tight">
-            <span className={`text-[10px] sm:text-xs font-black uppercase tracking-wider ${
+            <span className={`text-[9px] sm:text-[10px] font-black uppercase tracking-wider ${
               currentView === 'pricing' ? 'text-black/80' : 'text-teal-400'
             }`}>
               SCREEN 6
             </span>
-            <span className="text-xs sm:text-[13px] font-bold truncate">
-              PRICING TIERS
+            <span className="text-[11px] sm:text-xs font-bold whitespace-nowrap">
+              PRICING
             </span>
           </div>
         </button>
@@ -624,25 +623,25 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
         {/* Screen 7: Valuation Hub */}
         <button
           onClick={() => onViewChange('valuationhub')}
-          className={`col-span-2 sm:col-span-2 lg:col-span-1 flex items-center gap-2 p-2 sm:p-2.5 rounded-xl border text-left transition-all cursor-pointer overflow-hidden ${
+          className={`col-span-2 sm:col-span-2 lg:col-span-1 flex items-center gap-1.5 sm:gap-2 px-2 py-2 text-[11px] font-mono font-bold tracking-tight whitespace-nowrap rounded-xl border text-left transition-all cursor-pointer ${
             currentView === 'valuationhub'
               ? 'bg-rose-500 text-white border-rose-400 shadow-lg shadow-rose-500/25 font-black'
               : 'bg-[#111114] text-slate-200 hover:text-white hover:bg-white/5 border-white/10 hover:border-rose-500/30'
           }`}
-          title="Screen 7: Portfolio Valuation & Diligence Hub"
+          title="SCREEN 7: VALUATION HUB"
         >
-          <div className={`p-1.5 sm:p-2 rounded-lg shrink-0 ${
+          <div className={`p-1.5 rounded-lg shrink-0 ${
             currentView === 'valuationhub' ? 'bg-black/20 text-white' : 'bg-rose-950/80 text-rose-400 border border-rose-500/30'
           }`}>
-            <TrendingUp size={16} />
+            <TrendingUp size={15} />
           </div>
           <div className="flex flex-col min-w-0 leading-tight">
-            <span className={`text-[10px] sm:text-xs font-black uppercase tracking-wider ${
+            <span className={`text-[9px] sm:text-[10px] font-black uppercase tracking-wider ${
               currentView === 'valuationhub' ? 'text-white/80' : 'text-rose-400'
             }`}>
               SCREEN 7
             </span>
-            <span className="text-xs sm:text-[13px] font-bold truncate">
+            <span className="text-[11px] sm:text-xs font-bold whitespace-nowrap">
               VALUATION HUB
             </span>
           </div>
