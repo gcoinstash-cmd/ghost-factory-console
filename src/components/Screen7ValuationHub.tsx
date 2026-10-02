@@ -63,7 +63,7 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
   const scenarioLabel = getScenarioLabel(sliderVal);
 
   return (
-    <div className="space-y-8 font-mono pb-12">
+    <div className="min-h-screen space-y-8 font-mono pb-24 overflow-y-auto">
       {/* Header Banner */}
       <div className="border border-white/10 bg-black/60 rounded-2xl p-6 sm:p-8 backdrop-blur-xl relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20" />
@@ -692,7 +692,7 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
       {/* ========================================================================= */}
       {/* POSITION 5: FLEET EXPANSION & PORTFOLIO TARGET SIMULATOR (114 -> 500 ASSETS) */}
       {/* ========================================================================= */}
-      <div className="space-y-4">
+      <div className="space-y-4 pb-16 mb-8">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
           <div>
             <h2 className="text-xl font-black text-white tracking-tight flex items-center gap-2">
@@ -801,7 +801,7 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
           {/* Descending Output Cards (Largest Left -> Smallest Right) */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-2">
             {/* Card 1: SIMULATED STRATEGIC CEILING */}
-            <div className="bg-black/70 border border-purple-500/40 rounded-xl p-4 flex flex-col justify-between space-y-3 hover:border-purple-400 transition-colors shadow-md">
+            <div className="min-h-[140px] flex flex-col justify-between p-4 bg-black/70 border border-purple-500/40 rounded-xl hover:border-purple-400 transition-colors shadow-md">
               <div>
                 <div className="flex items-center justify-between text-xs mb-1">
                   <span className="text-purple-400 uppercase font-bold tracking-wider text-[11px]">Card 1 // Monopoly</span>
@@ -813,7 +813,7 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
                 <span className="text-xs text-purple-300/80 block mt-0.5 font-sans font-normal">Monopoly Premium</span>
               </div>
               <div className="pt-2 border-t border-white/10">
-                <span className="text-xl sm:text-2xl font-black text-purple-300 font-mono block">
+                <span className="text-xl sm:text-2xl font-black font-mono tracking-tight text-purple-300 mt-2 break-words leading-snug block">
                   {simStrategicCeiling}
                 </span>
                 <span className="text-[11px] text-slate-400 mt-1 block">
@@ -823,7 +823,7 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
             </div>
 
             {/* Card 2: SIMULATED DEV REPLACEMENT */}
-            <div className="bg-black/70 border border-cyan-500/40 rounded-xl p-4 flex flex-col justify-between space-y-3 hover:border-cyan-400 transition-colors shadow-md">
+            <div className="min-h-[140px] flex flex-col justify-between p-4 bg-black/70 border border-cyan-500/40 rounded-xl hover:border-cyan-400 transition-colors shadow-md">
               <div>
                 <div className="flex items-center justify-between text-xs mb-1">
                   <span className="text-cyan-400 uppercase font-bold tracking-wider text-[11px]">Card 2 // Dev Agency</span>
@@ -835,7 +835,7 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
                 <span className="text-xs text-cyan-300/80 block mt-0.5 font-sans font-normal">Agency Benchmarks</span>
               </div>
               <div className="pt-2 border-t border-white/10">
-                <span className="text-xl sm:text-2xl font-black text-cyan-300 font-mono block">
+                <span className="text-xl sm:text-2xl font-black font-mono tracking-tight text-cyan-300 mt-2 break-words leading-snug block">
                   {simDevReplacement}
                 </span>
                 <span className="text-[11px] text-slate-400 mt-1 block">
@@ -845,7 +845,7 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
             </div>
 
             {/* Card 3: SIMULATED STRATEGIC BUYOUT */}
-            <div className="bg-black/70 border border-amber-500/40 rounded-xl p-4 flex flex-col justify-between space-y-3 hover:border-amber-400 transition-colors shadow-md">
+            <div className="min-h-[140px] flex flex-col justify-between p-4 bg-black/70 border border-amber-500/40 rounded-xl hover:border-amber-400 transition-colors shadow-md">
               <div>
                 <div className="flex items-center justify-between text-xs mb-1">
                   <span className="text-amber-400 uppercase font-bold tracking-wider text-[11px]">Card 3 // Portfolio Buyout</span>
@@ -857,7 +857,7 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
                 <span className="text-xs text-amber-300/80 block mt-0.5 font-sans font-normal">NAV Anchor</span>
               </div>
               <div className="pt-2 border-t border-white/10">
-                <span className="text-xl sm:text-2xl font-black text-amber-300 font-mono block">
+                <span className="text-xl sm:text-2xl font-black font-mono tracking-tight text-amber-300 mt-2 break-words leading-snug block">
                   {simStrategicBuyoutAnchor}
                 </span>
                 <span className="text-[11px] text-slate-400 mt-1 block">
@@ -867,7 +867,7 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
             </div>
 
             {/* Card 4: SIMULATED DISTRESS CASH FLOOR */}
-            <div className="bg-black/70 border border-red-500/40 rounded-xl p-4 flex flex-col justify-between space-y-3 hover:border-red-400 transition-colors shadow-md">
+            <div className="min-h-[140px] flex flex-col justify-between p-4 bg-black/70 border border-red-500/40 rounded-xl hover:border-red-400 transition-colors shadow-md">
               <div>
                 <div className="flex items-center justify-between text-xs mb-1">
                   <span className="text-red-400 uppercase font-bold tracking-wider text-[11px]">Card 4 // Liquidation</span>
@@ -879,7 +879,7 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
                 <span className="text-xs text-red-300/80 block mt-0.5 font-sans font-normal">Liquidation Reserve</span>
               </div>
               <div className="pt-2 border-t border-white/10">
-                <span className="text-xl sm:text-2xl font-black text-red-400 font-mono block">
+                <span className="text-xl sm:text-2xl font-black font-mono tracking-tight text-red-400 mt-2 break-words leading-snug block">
                   {simDistressCashFloor}
                 </span>
                 <span className="text-[11px] text-slate-400 mt-1 block">
