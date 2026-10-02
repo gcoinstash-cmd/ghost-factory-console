@@ -303,118 +303,108 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
         </React.Suspense>
       ) : (
         /* SECTION 2 VALUATION HEADER (DESCENDING: STRATEGIC CEILING -> DEV REPLACEMENT -> STRATEGIC BUYOUT -> DISTRESS FLOOR) */
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-3.5 py-3 border-b border-white/10 text-xs sm:text-sm w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 py-3 border-b border-white/10 text-xs sm:text-sm w-full">
           {/* Card 1: Strategic Acquisition Ceiling */}
-          <div className="bg-black/75 border border-pink-500/40 hover:border-pink-400 transition-colors w-full flex flex-col justify-between p-4 rounded-xl min-h-[190px] shadow-lg">
-            <div>
-              <div className="flex items-center justify-between gap-2 mb-2">
-                <span className="text-[11px] font-bold tracking-wider uppercase text-zinc-300 truncate" title="Strategic Ceiling">
-                  Strategic Ceiling
-                </span>
-                <span className="text-[9px] font-mono px-2 py-0.5 rounded shrink-0 whitespace-nowrap text-pink-400 bg-pink-950/80 border border-pink-500/40 font-black">
-                  MONOPOLY PREMIUM
-                </span>
-              </div>
-              <span className="text-xl sm:text-2xl xl:text-[26px] font-black font-mono tracking-tight text-pink-400 block my-2">
+          <div className="bg-black/75 border border-pink-500/40 hover:border-pink-400 transition-colors w-full flex flex-col justify-between p-4 rounded-xl min-h-[220px] shadow-lg">
+            <div className="flex flex-col">
+              <span className="inline-flex text-[11px] font-mono px-2.5 py-0.5 rounded uppercase font-semibold mb-1.5 self-start text-pink-400 bg-pink-950/80 border border-pink-500/40">
+                MONOPOLY PREMIUM
+              </span>
+              <h4 className="text-sm font-black tracking-wider uppercase text-zinc-100 whitespace-normal leading-snug">
+                STRATEGIC ACQUISITION CEILING
+              </h4>
+              <span className="text-2xl sm:text-3xl font-mono font-black tracking-tight my-2 text-pink-400 block">
                 $1.49M – $2.85M+
               </span>
-              <span className="text-xs text-zinc-400 leading-relaxed line-clamp-2 block">
+              <p className="text-xs sm:text-[13px] text-zinc-300 font-medium leading-relaxed">
                 Deep-tech niche enterprise acquisition
-              </span>
+              </p>
             </div>
-            <span className="text-[10px] text-zinc-500 font-mono mt-auto pt-2 border-t border-zinc-800/60 block">
+            <span className="text-xs font-mono text-zinc-400 mt-auto pt-2 border-t border-zinc-800/80 block">
               Full catalog monopoly buyout
             </span>
           </div>
 
           {/* Card 2: Dev Agency Replacement Benchmark */}
-          <div className="bg-black/75 border border-cyan-500/40 hover:border-cyan-400 transition-colors w-full flex flex-col justify-between p-4 rounded-xl min-h-[190px] shadow-lg">
-            <div>
-              <div className="flex items-center justify-between gap-2 mb-2">
-                <span className="text-[11px] font-bold tracking-wider uppercase text-zinc-300 truncate" title="Dev Agency">
-                  Dev Agency
-                </span>
-                <span className="text-[9px] font-mono px-2 py-0.5 rounded shrink-0 whitespace-nowrap text-cyan-400 bg-cyan-950/80 border border-cyan-500/40 font-black">
-                  REPLACEMENT COST
-                </span>
-              </div>
-              <span className="text-xl sm:text-2xl xl:text-[26px] font-black font-mono tracking-tight text-cyan-400 block my-2">
+          <div className="bg-black/75 border border-cyan-500/40 hover:border-cyan-400 transition-colors w-full flex flex-col justify-between p-4 rounded-xl min-h-[220px] shadow-lg">
+            <div className="flex flex-col">
+              <span className="inline-flex text-[11px] font-mono px-2.5 py-0.5 rounded uppercase font-semibold mb-1.5 self-start text-cyan-400 bg-cyan-950/80 border border-cyan-500/40">
+                REPLACEMENT COST
+              </span>
+              <h4 className="text-sm font-black tracking-wider uppercase text-zinc-100 whitespace-normal leading-snug">
+                DEV AGENCY REPLACEMENT
+              </h4>
+              <span className="text-2xl sm:text-3xl font-mono font-black tracking-tight my-2 text-cyan-400 block">
                 $965.0k – $1.76M
               </span>
-              <span className="text-xs text-zinc-400 leading-relaxed line-clamp-2 block">
+              <p className="text-xs sm:text-[13px] text-zinc-300 font-medium leading-relaxed">
                 4,250+ engineering hours @ $150–$250/hr
-              </span>
+              </p>
             </div>
-            <span className="text-[10px] text-zinc-500 font-mono mt-auto pt-2 border-t border-zinc-800/60 block">
+            <span className="text-xs font-mono text-zinc-400 mt-auto pt-2 border-t border-zinc-800/80 block">
               Benchmark recreation valuation
             </span>
           </div>
 
           {/* Card 3: Dual-Track Strategic Buyout Range */}
-          <div className="bg-black/75 border border-amber-500/40 hover:border-amber-400 transition-colors w-full flex flex-col justify-between p-4 rounded-xl min-h-[190px] shadow-lg">
-            <div>
-              <div className="flex items-center justify-between gap-2 mb-2">
-                <span className="text-[11px] font-bold tracking-wider uppercase text-zinc-300 truncate" title="Strategic Buyout">
-                  Strategic Buyout
-                </span>
-                <span className="text-[9px] font-mono px-2 py-0.5 rounded shrink-0 whitespace-nowrap text-amber-400 bg-amber-950/80 border border-amber-500/40 font-black">
-                  PORTFOLIO BUYOUT
-                </span>
-              </div>
-              <span className="text-xl sm:text-2xl xl:text-[26px] font-black font-mono tracking-tight text-amber-400 block my-2">
+          <div className="bg-black/75 border border-amber-500/40 hover:border-amber-400 transition-colors w-full flex flex-col justify-between p-4 rounded-xl min-h-[220px] shadow-lg">
+            <div className="flex flex-col">
+              <span className="inline-flex text-[11px] font-mono px-2.5 py-0.5 rounded uppercase font-semibold mb-1.5 self-start text-amber-400 bg-amber-950/80 border border-amber-500/40">
+                PORTFOLIO BUYOUT
+              </span>
+              <h4 className="text-sm font-black tracking-wider uppercase text-zinc-100 whitespace-normal leading-snug">
+                STRATEGIC BUYOUT RANGE
+              </h4>
+              <span className="text-2xl sm:text-3xl font-mono font-black tracking-tight my-2 text-amber-400 block">
                 $608.0k – $1.04M
               </span>
-              <span className="text-xs text-zinc-400 leading-relaxed line-clamp-2 block">
+              <p className="text-xs sm:text-[13px] text-zinc-300 font-medium leading-relaxed">
                 Anchor: $721.0k (86 T1 @ $4.5k + 28 Flagship @ $14.5k)
-              </span>
+              </p>
             </div>
-            <span className="text-[10px] text-zinc-500 font-mono mt-auto pt-2 border-t border-zinc-800/60 block">
+            <span className="text-xs font-mono text-zinc-400 mt-auto pt-2 border-t border-zinc-800/80 block">
               Asset-by-asset baseline anchor
             </span>
           </div>
 
           {/* Card 4: Distress / Quick-Sale Cash Floor */}
-          <div className="bg-black/75 border border-emerald-500/40 hover:border-emerald-400 transition-colors w-full flex flex-col justify-between p-4 rounded-xl min-h-[190px] shadow-lg">
-            <div>
-              <div className="flex items-center justify-between gap-2 mb-2">
-                <span className="text-[11px] font-bold tracking-wider uppercase text-zinc-300 truncate" title="Distress Floor">
-                  Distress Floor
-                </span>
-                <span className="text-[9px] font-mono px-2 py-0.5 rounded shrink-0 whitespace-nowrap text-emerald-400 bg-emerald-950/80 border border-emerald-500/40 font-black">
-                  LIQUIDATION
-                </span>
-              </div>
-              <span className="text-xl sm:text-2xl xl:text-[26px] font-black font-mono tracking-tight text-emerald-400 block my-2">
+          <div className="bg-black/75 border border-emerald-500/40 hover:border-emerald-400 transition-colors w-full flex flex-col justify-between p-4 rounded-xl min-h-[220px] shadow-lg">
+            <div className="flex flex-col">
+              <span className="inline-flex text-[11px] font-mono px-2.5 py-0.5 rounded uppercase font-semibold mb-1.5 self-start text-emerald-400 bg-emerald-950/80 border border-emerald-500/40">
+                LIQUIDATION
+              </span>
+              <h4 className="text-sm font-black tracking-wider uppercase text-zinc-100 whitespace-normal leading-snug">
+                DISTRESS / QUICK-SALE FLOOR
+              </h4>
+              <span className="text-2xl sm:text-3xl font-mono font-black tracking-tight my-2 text-emerald-400 block">
                 $128.0k – $246.0k
               </span>
-              <span className="text-xs text-zinc-400 leading-relaxed line-clamp-2 block">
+              <p className="text-xs sm:text-[13px] text-zinc-300 font-medium leading-relaxed">
                 40–60% buyer discount quick realization
-              </span>
+              </p>
             </div>
-            <span className="text-[10px] text-zinc-500 font-mono mt-auto pt-2 border-t border-zinc-800/60 block">
+            <span className="text-xs font-mono text-zinc-400 mt-auto pt-2 border-t border-zinc-800/80 block">
               Immediate liquidation cash floor
             </span>
           </div>
 
           {/* Card 5: Exclusive Vault Buyout */}
-          <div className="bg-black/75 border border-purple-500/40 hover:border-purple-400 transition-colors w-full flex flex-col justify-between p-4 rounded-xl min-h-[190px] shadow-lg">
-            <div>
-              <div className="flex items-center justify-between gap-2 mb-2">
-                <span className="text-[11px] font-bold tracking-wider uppercase text-zinc-300 truncate" title="Vault Buyout">
-                  Vault Buyout
-                </span>
-                <span className="text-[9px] font-mono px-2 py-0.5 rounded shrink-0 whitespace-nowrap text-purple-400 bg-purple-950/80 border border-purple-500/40 font-black">
-                  MONOPOLY PREMIUM
-                </span>
-              </div>
-              <span className="text-xl sm:text-2xl xl:text-[26px] font-black font-mono tracking-tight text-purple-400 block my-2">
+          <div className="bg-black/75 border border-purple-500/40 hover:border-purple-400 transition-colors w-full flex flex-col justify-between p-4 rounded-xl min-h-[220px] shadow-lg">
+            <div className="flex flex-col">
+              <span className="inline-flex text-[11px] font-mono px-2.5 py-0.5 rounded uppercase font-semibold mb-1.5 self-start text-purple-400 bg-purple-950/80 border border-purple-500/40">
+                MONOPOLY PREMIUM
+              </span>
+              <h4 className="text-sm font-black tracking-wider uppercase text-zinc-100 whitespace-normal leading-snug">
+                EXCLUSIVE VAULT BUYOUT
+              </h4>
+              <span className="text-2xl sm:text-3xl font-mono font-black tracking-tight my-2 text-purple-400 block">
                 $13.1k – $25.0k+
               </span>
-              <span className="text-xs text-zinc-400 leading-relaxed line-clamp-2 block">
+              <p className="text-xs sm:text-[13px] text-zinc-300 font-medium leading-relaxed">
                 Average Exclusive Buyout / Vault (T1 + T2 Fleet Weighted)
-              </span>
+              </p>
             </div>
-            <span className="text-[10px] text-zinc-500 font-mono mt-auto pt-2 border-t border-zinc-800/60 block">
+            <span className="text-xs font-mono text-zinc-400 mt-auto pt-2 border-t border-zinc-800/80 block">
               Includes IP Transfer + Sovereign Lockout
             </span>
           </div>
