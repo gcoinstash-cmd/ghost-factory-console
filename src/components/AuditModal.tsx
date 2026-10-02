@@ -16,7 +16,7 @@ export const AuditModal: React.FC<AuditModalProps> = ({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 backdrop-blur-md p-4 font-mono">
-      <div className="w-full max-w-3xl rounded-2xl border-2 border-cyan-500/70 bg-[#0F0F12] text-slate-100 shadow-[0_0_40px_rgba(6,182,212,0.3)] overflow-hidden flex flex-col max-h-[88vh]">
+      <div className="w-full max-w-3xl rounded-2xl border-2 border-cyan-500/70 bg-[#0F0F12] text-slate-100 shadow-[0_0_40px_rgba(6,182,212,0.3)] overflow-hidden flex flex-col max-h-[85vh]">
         {/* Header */}
         <div className="flex items-center justify-between border-b border-cyan-500/30 bg-black/70 px-5 py-3.5">
           <div className="flex items-center gap-2">
@@ -31,7 +31,7 @@ export const AuditModal: React.FC<AuditModalProps> = ({
         </div>
 
         {/* Content */}
-        <div className="p-6 space-y-6 overflow-y-auto text-xs">
+        <div className="p-4 sm:p-6 space-y-6 overflow-y-auto text-xs">
           {/* Executive Summary */}
           <div className="bg-black/60 p-4 rounded-xl border border-white/10 space-y-2">
             <h4 className="font-bold text-white uppercase text-sm flex items-center gap-2">

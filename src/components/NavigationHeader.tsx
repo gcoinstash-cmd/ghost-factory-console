@@ -90,7 +90,7 @@ function Audit360Badge() {
             onClick={() => setOpen(false)}
           />
           {/* Modal */}
-          <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[101] w-[min(92vw,520px)] bg-[#0D0D10] border-2 border-emerald-500/60 rounded-2xl shadow-2xl shadow-emerald-500/20 font-mono overflow-hidden">
+          <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[101] w-[min(92vw,520px)] bg-[#0D0D10] border-2 border-emerald-500/60 rounded-2xl shadow-2xl shadow-emerald-500/20 font-mono overflow-hidden flex flex-col max-h-[85vh]">
             {/* Header */}
             <div className="flex items-center justify-between px-5 py-4 border-b border-emerald-500/30 bg-emerald-950/40">
               <div className="flex items-center gap-2.5">
@@ -109,7 +109,7 @@ function Audit360Badge() {
             </div>
 
             {/* Verification Seal */}
-            <div className="px-5 pt-4 pb-2">
+            <div className="px-5 pt-4 pb-2 overflow-y-auto flex-1">
               <div className="flex items-center gap-3 bg-emerald-950/60 border border-emerald-500/40 rounded-xl px-4 py-3 mb-4">
                 <ShieldCheck size={24} className="text-emerald-400 shrink-0" />
                 <div>
@@ -302,7 +302,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
         </React.Suspense>
       ) : (
         /* SECTION 2 VALUATION HEADER (DESCENDING: STRATEGIC CEILING -> DEV REPLACEMENT -> STRATEGIC BUYOUT -> DISTRESS FLOOR) */
-        <div className="hidden lg:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 py-3 border-b border-white/10 text-xs sm:text-sm w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 py-3 border-b border-white/10 text-xs sm:text-sm w-full">
           {/* Card 1: Strategic Acquisition Ceiling */}
           <div className="bg-black/75 border border-pink-500/40 rounded-xl p-3.5 flex flex-col justify-between hover:border-pink-400 transition-colors w-full">
             <div className="flex items-center justify-between text-slate-300 text-xs font-bold uppercase tracking-wider">
@@ -354,7 +354,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
       )}
 
       {/* MOBILE & TABLET DESCENDING VALUATION HUD RIBBON (< lg screens) */}
-      <div className="lg:hidden border-b border-white/10 py-2 font-mono">
+      <div className="xl:hidden border-b border-white/10 py-2 font-mono">
         <div className="flex items-center justify-between text-xs pb-1.5 px-1">
           <div className="flex items-center gap-1.5 text-slate-200 font-bold">
             <DollarSign size={15} className="text-emerald-400" />

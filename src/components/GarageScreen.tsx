@@ -122,8 +122,8 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
                 <span>v1.5.2</span>
               </span>
             </div>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white flex flex-wrap items-center gap-3">
-              COLLECTION: <span className="text-emerald-400 font-mono">{totalAssets} / 500 DIGITAL VEHICLES</span>
+            <h1 className="text-2xl sm:text-4xl md:text-5xl font-black tracking-tight text-white flex flex-wrap items-center gap-3 break-words">
+              COLLECTION: <span className="text-emerald-400 font-mono break-words">{totalAssets} / 500 DIGITAL VEHICLES</span>
             </h1>
             <p className="text-sm sm:text-base text-slate-200 mt-2 max-w-3xl leading-relaxed font-semibold">
               Internal portfolio telemetry monitor. 100% pre-revenue interactive concept demos and SCADA prototypes running on simulated telemetry feeds.
