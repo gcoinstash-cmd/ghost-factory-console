@@ -83,16 +83,17 @@ function Audit360Badge() {
       </button>
 
       {open && (
-        <>
-          {/* Backdrop */}
-          <div
-            className="fixed inset-0 z-[100] bg-black/60 backdrop-blur-sm"
-            onClick={() => setOpen(false)}
-          />
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-8 bg-black/80 backdrop-blur-sm"
+          onClick={() => setOpen(false)}
+        >
           {/* Modal */}
-          <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[101] w-[min(92vw,520px)] bg-[#0D0D10] border-2 border-emerald-500/60 rounded-2xl shadow-2xl shadow-emerald-500/20 font-mono overflow-hidden flex flex-col max-h-[85vh]">
+          <div
+            className="w-full max-w-2xl max-h-[80vh] my-auto overflow-y-auto rounded-2xl border border-emerald-500/40 bg-zinc-950 p-6 shadow-2xl font-mono relative mt-4 sm:mt-6"
+            onClick={(e) => e.stopPropagation()}
+          >
             {/* Header */}
-            <div className="flex items-center justify-between px-5 py-4 border-b border-emerald-500/30 bg-emerald-950/40">
+            <div className="flex items-center justify-between pb-4 border-b border-emerald-500/30">
               <div className="flex items-center gap-2.5">
                 <ShieldCheck size={20} className="text-emerald-400" />
                 <div>
@@ -109,8 +110,8 @@ function Audit360Badge() {
             </div>
 
             {/* Verification Seal */}
-            <div className="px-5 pt-4 pb-2 overflow-y-auto flex-1">
-              <div className="flex items-center gap-3 bg-emerald-950/60 border border-emerald-500/40 rounded-xl px-4 py-3 mb-4">
+            <div className="pt-4 space-y-4">
+              <div className="flex items-center gap-3 bg-emerald-950/60 border border-emerald-500/40 rounded-xl px-4 py-3">
                 <ShieldCheck size={24} className="text-emerald-400 shrink-0" />
                 <div>
                   <div className="text-emerald-300 font-black text-xs uppercase tracking-wider">Full Desktop & Mobile Functional Audit</div>
@@ -123,7 +124,7 @@ function Audit360Badge() {
               </div>
 
               {/* Parameter Grid */}
-              <div className="space-y-2.5 pb-4">
+              <div className="space-y-2.5">
                 {AUDIT_PARAMETERS.map(({ label, value, detail, color, border, bg }) => (
                   <div key={label} className={`rounded-xl border ${border} ${bg} px-4 py-3`}>
                     <div className="flex items-start justify-between gap-2">
@@ -136,14 +137,14 @@ function Audit360Badge() {
               </div>
 
               {/* Footer disclaimer */}
-              <div className="border-t border-white/10 pt-3 pb-4">
+              <div className="border-t border-white/10 pt-3">
                 <p className="text-xs text-slate-400 leading-relaxed text-center">
                   INTERNAL SCENARIO MODELING ONLY — PRE-REVENUE ASSET PORTFOLIO — VALUES ARE ESTIMATES FOR MANAGEMENT STRATEGY AND NOT GUARANTEED MARKET APPRAISALS.
                 </p>
               </div>
             </div>
           </div>
-        </>
+        </div>
       )}
     </div>
   );
