@@ -905,63 +905,63 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
           <div className="col-span-1 md:col-span-2 bg-[#111114] border-2 border-emerald-500/50 rounded-2xl p-6 hover:border-emerald-400 transition-all shadow-2xl relative overflow-hidden space-y-6">
             <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-4 border-b border-white/10">
               <div>
-                <div className="flex flex-wrap items-center gap-2 mb-1.5">
-                  <span className="text-xs font-black uppercase tracking-wider text-emerald-400 flex items-center gap-1.5">
-                    <Sliders size={14} /> MODULE 5 // DYNAMIC STRESS-TESTER
+                <div className="flex flex-wrap items-center gap-2.5 mb-2">
+                  <span className="text-xs sm:text-sm font-black uppercase tracking-widest text-emerald-400 flex items-center gap-1.5">
+                    <Sliders size={16} /> MODULE 5 // DYNAMIC STRESS-TESTER
                   </span>
-                  <span className={`text-[11px] font-bold px-2.5 py-0.5 rounded-full border ${scenarioTheme.color} flex items-center gap-1.5 shadow-sm`}>
-                    <span className="w-1.5 h-1.5 rounded-full bg-current animate-pulse" />
+                  <span className={`text-xs sm:text-sm font-black px-3 py-1 rounded-full border ${scenarioTheme.color} flex items-center gap-2 shadow-sm`}>
+                    <span className="w-2 h-2 rounded-full bg-current animate-pulse" />
                     {scenarioTheme.label}
                   </span>
                 </div>
-                <h3 className="text-lg font-black text-white">Interactive Scenario Stress-Tester</h3>
-                <p className="text-xs text-slate-300 mt-0.5">
+                <h3 className="text-xl sm:text-2xl font-black text-white tracking-tight">Interactive Scenario Stress-Tester</h3>
+                <p className="text-xs sm:text-sm text-slate-300 mt-1 font-medium leading-relaxed">
                   Real-time dynamic sensitivity engine across liquidation floor ($128.0k) to strategic monopoly ceiling ($2.85M+).
                 </p>
               </div>
 
               {/* Dynamic Readout Cockpit */}
-              <div className="bg-black/90 border-2 border-emerald-500/50 rounded-2xl p-4 text-right shrink-0 shadow-lg shadow-emerald-500/10 min-w-[240px]">
-                <div className="flex items-center justify-between text-[11px] text-slate-400 uppercase font-mono pb-1 border-b border-white/10 mb-1.5">
-                  <span className="flex items-center gap-1">
-                    <Activity size={12} className={scenarioTheme.textColor} /> Stress Level
+              <div className="bg-black/90 border-2 border-emerald-500/50 rounded-2xl p-5 text-right shrink-0 shadow-xl shadow-emerald-500/10 min-w-[260px]">
+                <div className="flex items-center justify-between text-xs text-slate-300 uppercase font-mono pb-1.5 border-b border-white/10 mb-1.5 font-bold">
+                  <span className="flex items-center gap-1.5">
+                    <Activity size={14} className={scenarioTheme.textColor} /> Stress Level
                   </span>
-                  <span className={`font-bold font-mono ${scenarioTheme.textColor}`}>{sliderVal}% Index</span>
+                  <span className={`font-black font-mono text-sm ${scenarioTheme.textColor}`}>{sliderVal}% Index</span>
                 </div>
-                <span className={`text-2xl sm:text-3xl font-black font-mono tracking-tight block ${scenarioTheme.textColor}`}>
+                <span className={`text-3xl sm:text-4xl font-black font-mono tracking-tight block ${scenarioTheme.textColor}`}>
                   {formatCurrency(projectedVal)}
                 </span>
-                <div className="flex items-center justify-between text-[10px] text-slate-400 font-mono pt-1">
+                <div className="flex items-center justify-between text-xs text-slate-300 font-mono pt-1.5 font-bold">
                   <span>{(projectedVal / floorVal).toFixed(2)}x Floor Multiple</span>
-                  <span className="text-emerald-400 font-bold">+${Math.round((projectedVal - floorVal) / 1000)}k Lift</span>
+                  <span className="text-emerald-400 font-black">+${Math.round((projectedVal - floorVal) / 1000)}k Lift</span>
                 </div>
               </div>
             </div>
 
             {/* Quick-Jump Milestone Preset Soundboard */}
-            <div className="space-y-2">
-              <div className="flex items-center justify-between text-xs text-slate-400 font-mono">
-                <span className="uppercase tracking-wider flex items-center gap-1.5 text-[11px] font-bold text-slate-300">
-                  <Zap size={13} className="text-amber-400" /> Milestone Quick-Presets:
+            <div className="space-y-2.5">
+              <div className="flex items-center justify-between text-xs sm:text-sm font-mono">
+                <span className="uppercase tracking-wider flex items-center gap-2 text-xs sm:text-sm font-black text-slate-200">
+                  <Zap size={15} className="text-amber-400" /> Milestone Quick-Presets:
                 </span>
-                <span className="text-[11px] text-slate-400 hidden sm:inline">Click any preset to snap slider</span>
+                <span className="text-xs text-slate-400 hidden sm:inline font-semibold">Click any preset to snap regulator</span>
               </div>
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2">
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5">
                 {STRESS_PRESETS.map((preset) => {
                   const isSelected = Math.abs(sliderVal - preset.pct) <= 4;
                   return (
                     <button
                       key={preset.label}
                       onClick={() => setSliderVal(preset.pct)}
-                      className={`px-3 py-2 rounded-xl text-xs font-mono transition-all cursor-pointer border flex flex-col items-center justify-center gap-0.5 active:scale-95 ${
+                      className={`p-3 rounded-xl font-mono transition-all cursor-pointer border flex flex-col items-center justify-center gap-1 active:scale-95 min-h-[64px] ${
                         isSelected ? preset.activeClass : preset.idleClass
                       }`}
                     >
                       <div className="flex items-center gap-1.5">
-                        <span className="text-[10px] font-bold opacity-80">[{preset.tag}]</span>
-                        <span className="font-black text-[11px] tracking-wide">{preset.val}</span>
+                        <span className="text-xs font-black opacity-85">[{preset.tag}]</span>
+                        <span className="font-black text-sm sm:text-base tracking-tight">{preset.val}</span>
                       </div>
-                      <span className="text-[9px] uppercase tracking-wider opacity-90 truncate max-w-full">
+                      <span className="text-xs font-black uppercase tracking-wider opacity-90 truncate max-w-full">
                         {preset.label}
                       </span>
                     </button>
@@ -971,27 +971,27 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
             </div>
 
             {/* Glowing Range Slider Cockpit Control */}
-            <div className="bg-[#0c0d12] border border-white/15 rounded-2xl p-4 sm:p-5 shadow-2xl space-y-4">
-              <div className="flex items-center justify-between text-xs font-mono">
-                <div className="flex items-center gap-2">
-                  <span className="text-xs font-bold text-slate-300 uppercase tracking-wider flex items-center gap-1.5">
-                    <Gauge size={14} className="text-cyan-400" /> Realization Regulator
+            <div className="bg-[#0c0d12] border border-white/15 rounded-2xl p-5 sm:p-6 shadow-2xl space-y-5">
+              <div className="flex items-center justify-between font-mono">
+                <div className="flex items-center gap-2.5">
+                  <span className="text-xs sm:text-sm font-black text-white uppercase tracking-wider flex items-center gap-2">
+                    <Gauge size={16} className="text-cyan-400" /> Realization Regulator
                   </span>
-                  <span className="px-2 py-0.5 rounded bg-white/10 text-white font-mono text-[11px] font-bold">
+                  <span className="px-3 py-0.5 rounded-md bg-white/15 text-white font-mono text-xs sm:text-sm font-black">
                     {sliderVal}%
                   </span>
                 </div>
-                <div className="flex items-center gap-1.5">
+                <div className="flex items-center gap-2">
                   <button
                     onClick={() => setSliderVal((prev) => Math.max(0, prev - 5))}
-                    className="px-2.5 py-1 rounded bg-black/60 hover:bg-white/15 text-slate-300 hover:text-white border border-white/10 text-[10px] font-mono font-bold transition-all cursor-pointer active:scale-95"
+                    className="px-3 py-1.5 rounded-lg bg-black/70 hover:bg-white/15 text-slate-200 hover:text-white border border-white/15 text-xs font-mono font-black transition-all cursor-pointer active:scale-95"
                     title="Step backward 5%"
                   >
                     -5%
                   </button>
                   <button
                     onClick={() => setSliderVal((prev) => Math.min(100, prev + 5))}
-                    className="px-2.5 py-1 rounded bg-black/60 hover:bg-white/15 text-slate-300 hover:text-white border border-white/10 text-[10px] font-mono font-bold transition-all cursor-pointer active:scale-95"
+                    className="px-3 py-1.5 rounded-lg bg-black/70 hover:bg-white/15 text-slate-200 hover:text-white border border-white/15 text-xs font-mono font-black transition-all cursor-pointer active:scale-95"
                     title="Step forward 5%"
                   >
                     +5%
@@ -1000,25 +1000,25 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
               </div>
 
               {/* Slider Track with Fine-Tuning Step Controls */}
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3.5">
                 <button
                   onClick={() => setSliderVal((prev) => Math.max(0, prev - 1))}
-                  className="w-8 h-8 rounded-lg bg-black/70 hover:bg-emerald-500/20 text-slate-300 hover:text-emerald-400 border border-white/15 flex items-center justify-center transition-all cursor-pointer shrink-0 active:scale-95 shadow"
+                  className="w-10 h-10 rounded-xl bg-black/70 hover:bg-emerald-500/20 text-slate-200 hover:text-emerald-400 border border-white/20 flex items-center justify-center transition-all cursor-pointer shrink-0 active:scale-95 shadow-md"
                   title="Fine-tune -1%"
                 >
-                  <Minus size={14} />
+                  <Minus size={18} />
                 </button>
 
                 <div className="relative flex-1 py-3 flex items-center">
                   {/* Glowing Underlay Fill Track */}
-                  <div className="absolute inset-x-0 h-4 bg-slate-950 rounded-full border border-slate-700/60 overflow-hidden shadow-inner">
+                  <div className="absolute inset-x-0 h-4 sm:h-5 bg-slate-950 rounded-full border border-slate-700/70 overflow-hidden shadow-inner">
                     {/* Active Gradient Fill Bar */}
                     <div
                       className="h-full rounded-full transition-all duration-75 relative"
                       style={{
                         width: `${sliderVal}%`,
                         background: 'linear-gradient(90deg, #ef4444 0%, #f59e0b 22%, #06b6d4 45%, #a855f7 75%, #ec4899 100%)',
-                        boxShadow: `0 0 16px ${scenarioTheme.shadowColor}`
+                        boxShadow: `0 0 18px ${scenarioTheme.shadowColor}`
                       }}
                     >
                       {/* High-Tech Shimmer highlight on fill */}
@@ -1027,12 +1027,12 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
                   </div>
 
                   {/* Tick Marks on track at 0%, 22%, 45%, 75%, 100% */}
-                  <div className="absolute inset-x-0 h-4 pointer-events-none flex justify-between items-center px-1">
-                    <span className="w-0.5 h-2.5 bg-white/40 rounded-full" />
-                    <span className="w-0.5 h-2.5 bg-white/40 rounded-full" style={{ left: '22%', position: 'absolute' }} />
-                    <span className="w-0.5 h-2.5 bg-white/40 rounded-full" style={{ left: '45%', position: 'absolute' }} />
-                    <span className="w-0.5 h-2.5 bg-white/40 rounded-full" style={{ left: '75%', position: 'absolute' }} />
-                    <span className="w-0.5 h-2.5 bg-white/40 rounded-full" />
+                  <div className="absolute inset-x-0 h-4 sm:h-5 pointer-events-none flex justify-between items-center px-1">
+                    <span className="w-0.5 h-3 bg-white/50 rounded-full" />
+                    <span className="w-0.5 h-3 bg-white/50 rounded-full" style={{ left: '22%', position: 'absolute' }} />
+                    <span className="w-0.5 h-3 bg-white/50 rounded-full" style={{ left: '45%', position: 'absolute' }} />
+                    <span className="w-0.5 h-3 bg-white/50 rounded-full" style={{ left: '75%', position: 'absolute' }} />
+                    <span className="w-0.5 h-3 bg-white/50 rounded-full" />
                   </div>
 
                   {/* HTML Range Slider (overlayed with transparent track and prominent styled thumb) */}
@@ -1043,42 +1043,42 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
                     step="1"
                     value={sliderVal}
                     onChange={(e) => setSliderVal(Number(e.target.value))}
-                    className="relative z-10 w-full h-8 bg-transparent appearance-none cursor-grab active:cursor-grabbing focus:outline-none
+                    className="relative z-10 w-full h-9 bg-transparent appearance-none cursor-grab active:cursor-grabbing focus:outline-none
                       [&::-webkit-slider-runnable-track]:bg-transparent
                       [&::-webkit-slider-thumb]:appearance-none 
-                      [&::-webkit-slider-thumb]:w-7 
-                      [&::-webkit-slider-thumb]:h-7 
+                      [&::-webkit-slider-thumb]:w-8 
+                      [&::-webkit-slider-thumb]:h-8 
                       [&::-webkit-slider-thumb]:rounded-full 
                       [&::-webkit-slider-thumb]:bg-white 
                       [&::-webkit-slider-thumb]:border-4 
                       [&::-webkit-slider-thumb]:border-emerald-400
-                      [&::-webkit-slider-thumb]:shadow-[0_0_18px_rgba(16,185,129,0.9)]
+                      [&::-webkit-slider-thumb]:shadow-[0_0_20px_rgba(16,185,129,0.9)]
                       [&::-webkit-slider-thumb]:hover:scale-115 
                       [&::-webkit-slider-thumb]:active:scale-95 
                       [&::-webkit-slider-thumb]:transition-transform
                       [&::-moz-range-track]:bg-transparent
-                      [&::-moz-range-thumb]:w-7 
-                      [&::-moz-range-thumb]:h-7 
+                      [&::-moz-range-thumb]:w-8 
+                      [&::-moz-range-thumb]:h-8 
                       [&::-moz-range-thumb]:rounded-full 
                       [&::-moz-range-thumb]:bg-white 
                       [&::-moz-range-thumb]:border-4 
                       [&::-moz-range-thumb]:border-emerald-400
-                      [&::-moz-range-thumb]:shadow-[0_0_18px_rgba(16,185,129,0.9)]"
+                      [&::-moz-range-thumb]:shadow-[0_0_20px_rgba(16,185,129,0.9)]"
                     title="Interactive Portfolio Stress-Tester Slider"
                   />
                 </div>
 
                 <button
                   onClick={() => setSliderVal((prev) => Math.min(100, prev + 1))}
-                  className="w-8 h-8 rounded-lg bg-black/70 hover:bg-emerald-500/20 text-slate-300 hover:text-emerald-400 border border-white/15 flex items-center justify-center transition-all cursor-pointer shrink-0 active:scale-95 shadow"
+                  className="w-10 h-10 rounded-xl bg-black/70 hover:bg-emerald-500/20 text-slate-200 hover:text-emerald-400 border border-white/20 flex items-center justify-center transition-all cursor-pointer shrink-0 active:scale-95 shadow-md"
                   title="Fine-tune +1%"
                 >
-                  <Plus size={14} />
+                  <Plus size={18} />
                 </button>
               </div>
 
               {/* Interactive Milestone Zone Cards */}
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 pt-2">
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 pt-2">
                 {STRESS_PRESETS.map((preset) => {
                   const isPassed = sliderVal >= preset.pct;
                   const isTarget = Math.abs(sliderVal - preset.pct) <= 4;
@@ -1086,17 +1086,17 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
                     <div
                       key={preset.label}
                       onClick={() => setSliderVal(preset.pct)}
-                      className={`p-2.5 rounded-xl border text-center transition-all cursor-pointer ${
+                      className={`p-3 rounded-xl border text-center transition-all cursor-pointer min-h-[72px] flex flex-col justify-center ${
                         isTarget 
                           ? `${preset.activeClass} scale-[1.02]`
                           : isPassed 
-                            ? 'bg-black/60 border-white/25 text-slate-200 hover:border-white/40' 
-                            : 'bg-black/40 border-white/5 text-slate-500 opacity-60 hover:opacity-100'
+                            ? 'bg-black/70 border-white/30 text-white hover:border-white/50 shadow-sm' 
+                            : 'bg-black/40 border-white/10 text-slate-400 opacity-60 hover:opacity-100'
                       }`}
                     >
-                      <span className="text-[10px] font-bold block">{preset.tag} Milestone</span>
-                      <span className="text-xs font-black block font-mono mt-0.5">{preset.val}</span>
-                      <span className="text-[9px] uppercase tracking-wider block opacity-80 truncate mt-0.5">
+                      <span className="text-xs font-bold block">{preset.tag} Milestone</span>
+                      <span className="text-sm sm:text-base font-black block font-mono mt-0.5">{preset.val}</span>
+                      <span className="text-xs font-bold uppercase tracking-wider block opacity-90 truncate mt-0.5">
                         {preset.label}
                       </span>
                     </div>
@@ -1105,13 +1105,13 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
               </div>
 
               {/* Dynamic Bottom Readout Bar */}
-              <div className="flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 font-mono gap-1 pt-3 border-t border-white/10">
-                <span className="text-red-400 font-bold">$128,000 (Liquidation Floor)</span>
-                <span className="text-slate-100 font-black text-center flex items-center gap-1.5">
-                  <Sparkles size={13} className={scenarioTheme.textColor} />
-                  Live Dynamic Readout: <span className={scenarioTheme.textColor}>{formatCurrency(projectedVal)}</span> @ {sliderVal}%
+              <div className="flex flex-col sm:flex-row items-center justify-between text-xs sm:text-sm font-mono gap-1.5 pt-3.5 border-t border-white/10">
+                <span className="text-red-400 font-black">$128,000 (Liquidation Floor)</span>
+                <span className="text-slate-100 font-black text-center flex items-center gap-2">
+                  <Sparkles size={15} className={scenarioTheme.textColor} />
+                  Live Readout: <span className={`text-sm sm:text-base ${scenarioTheme.textColor}`}>{formatCurrency(projectedVal)}</span> @ {sliderVal}%
                 </span>
-                <span className="text-pink-400 font-bold">$2,850,000+ (Monopoly Ceiling)</span>
+                <span className="text-pink-400 font-black">$2,850,000+ (Monopoly Ceiling)</span>
               </div>
             </div>
           </div>
