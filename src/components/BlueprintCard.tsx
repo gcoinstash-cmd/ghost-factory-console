@@ -182,6 +182,12 @@ export const BlueprintCard: React.FC<BlueprintCardProps> = ({
           <span className="text-xs sm:text-sm font-bold text-slate-300 bg-slate-900 px-2.5 py-1 rounded border border-white/15 font-mono">
             Arch {product.archetype_id || 'A'}
           </span>
+          {product.complianceStandard && (
+            <span className="text-xs sm:text-sm font-bold text-emerald-300 bg-emerald-950/60 border border-emerald-500/40 px-2.5 py-1 rounded font-mono flex items-center gap-1.5" title="NIST SP 800-218 SSDF v1.1 Supply Chain Security Standard">
+              <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-400" />
+              {product.complianceStandard}
+            </span>
+          )}
           {product.id === 109 && (
             <span className="text-xs sm:text-sm font-bold text-amber-300 bg-amber-950/60 border border-amber-500/40 px-2.5 py-1 rounded font-mono flex items-center gap-1">
               <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />

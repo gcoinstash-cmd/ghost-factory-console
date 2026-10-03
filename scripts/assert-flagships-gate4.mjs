@@ -82,6 +82,12 @@ for (const product of flagships) {
     }
   }
 
+  // Check NIST SP 800-218 Compliance Standard Tag
+  if (product.complianceStandard !== 'NIST-SP-800-218') {
+    console.error(`❌ [NIST SSDF GATE FAILURE] Flagship #${product.id} (${product.name}) lacks complianceStandard: 'NIST-SP-800-218'!`);
+    process.exit(1);
+  }
+
   gate4Passed++;
 }
 

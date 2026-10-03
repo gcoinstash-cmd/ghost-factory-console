@@ -1,5 +1,6 @@
 // Auto-generated from CATALOG_MANIFEST.json — Ghost Factory™ Registry
 export interface ProductItem {
+  complianceStandard?: string;
   id: number;
   name: string;
   category: string;
@@ -2799,7 +2800,9 @@ export const CATALOG_DATA: CatalogData = {
       "domain": "Deep Tech SCADA",
       "rarity_tier": "Elite",
       "permanent": true,
-      "buyoutEligible": false
+      "buyoutEligible": false,
+      "complianceStandard": "NIST-SP-800-218",
+      "gate_criterion_7": "NIST SP 800-218 SSDF v1.1 Alignment Passed"
     },
     {
       "id": 87,
@@ -2835,7 +2838,9 @@ export const CATALOG_DATA: CatalogData = {
       "domain": "Industrial Robotics & Autonomous SCADA",
       "rarity_tier": "Elite",
       "permanent": true,
-      "buyoutEligible": false
+      "buyoutEligible": false,
+      "complianceStandard": "NIST-SP-800-218",
+      "gate_criterion_7": "NIST SP 800-218 SSDF v1.1 Alignment Passed"
     },
     {
       "id": 88,
@@ -2871,7 +2876,9 @@ export const CATALOG_DATA: CatalogData = {
       "domain": "Industrial Robotics & Autonomous SCADA",
       "rarity_tier": "Elite",
       "permanent": true,
-      "buyoutEligible": false
+      "buyoutEligible": false,
+      "complianceStandard": "NIST-SP-800-218",
+      "gate_criterion_7": "NIST SP 800-218 SSDF v1.1 Alignment Passed"
     },
     {
       "id": 89,
@@ -2912,7 +2919,9 @@ export const CATALOG_DATA: CatalogData = {
       "domain": "Mobility & Fleet Logistics",
       "rarity_tier": "Elite",
       "permanent": false,
-      "buyoutEligible": true
+      "buyoutEligible": true,
+      "complianceStandard": "NIST-SP-800-218",
+      "gate_criterion_7": "NIST SP 800-218 SSDF v1.1 Alignment Passed"
     },
     {
       "id": 90,
@@ -2953,7 +2962,9 @@ export const CATALOG_DATA: CatalogData = {
       "domain": "Lifestyle & Boutique Hospitality",
       "rarity_tier": "Elite",
       "permanent": false,
-      "buyoutEligible": true
+      "buyoutEligible": true,
+      "complianceStandard": "NIST-SP-800-218",
+      "gate_criterion_7": "NIST SP 800-218 SSDF v1.1 Alignment Passed"
     },
     {
       "id": 91,
@@ -2994,7 +3005,9 @@ export const CATALOG_DATA: CatalogData = {
       "domain": "Clinical & Medical Operations",
       "rarity_tier": "Elite",
       "permanent": false,
-      "buyoutEligible": true
+      "buyoutEligible": true,
+      "complianceStandard": "NIST-SP-800-218",
+      "gate_criterion_7": "NIST SP 800-218 SSDF v1.1 Alignment Passed"
     },
     {
       "id": 92,
@@ -3035,7 +3048,9 @@ export const CATALOG_DATA: CatalogData = {
       "domain": "Mobility & Fleet Logistics",
       "rarity_tier": "Elite",
       "permanent": false,
-      "buyoutEligible": true
+      "buyoutEligible": true,
+      "complianceStandard": "NIST-SP-800-218",
+      "gate_criterion_7": "NIST SP 800-218 SSDF v1.1 Alignment Passed"
     },
     {
       "id": 93,
@@ -3075,7 +3090,9 @@ export const CATALOG_DATA: CatalogData = {
       "domain": "Deep Tech SCADA",
       "rarity_tier": "Elite",
       "permanent": false,
-      "buyoutEligible": true
+      "buyoutEligible": true,
+      "complianceStandard": "NIST-SP-800-218",
+      "gate_criterion_7": "NIST SP 800-218 SSDF v1.1 Alignment Passed"
     },
     {
       "id": 94,
@@ -3117,7 +3134,9 @@ export const CATALOG_DATA: CatalogData = {
       "domain": "Energy SCADA",
       "rarity_tier": "Elite",
       "permanent": false,
-      "buyoutEligible": true
+      "buyoutEligible": true,
+      "complianceStandard": "NIST-SP-800-218",
+      "gate_criterion_7": "NIST SP 800-218 SSDF v1.1 Alignment Passed"
     },
     {
       "id": 95,
@@ -3158,7 +3177,9 @@ export const CATALOG_DATA: CatalogData = {
       "domain": "Industrial Robotics & Autonomous SCADA",
       "rarity_tier": "Elite",
       "permanent": false,
-      "buyoutEligible": true
+      "buyoutEligible": true,
+      "complianceStandard": "NIST-SP-800-218",
+      "gate_criterion_7": "NIST SP 800-218 SSDF v1.1 Alignment Passed"
     },
     {
       "id": 96,
@@ -3199,7 +3220,9 @@ export const CATALOG_DATA: CatalogData = {
       "domain": "Energy SCADA",
       "rarity_tier": "Elite",
       "permanent": false,
-      "buyoutEligible": true
+      "buyoutEligible": true,
+      "complianceStandard": "NIST-SP-800-218",
+      "gate_criterion_7": "NIST SP 800-218 SSDF v1.1 Alignment Passed"
     },
     {
       "id": 97,
@@ -3239,7 +3262,9 @@ export const CATALOG_DATA: CatalogData = {
       "domain": "Institutional Capital & Wealth",
       "rarity_tier": "Elite",
       "permanent": false,
-      "buyoutEligible": true
+      "buyoutEligible": true,
+      "complianceStandard": "NIST-SP-800-218",
+      "gate_criterion_7": "NIST SP 800-218 SSDF v1.1 Alignment Passed"
     },
     {
       "id": 98,
@@ -3279,7 +3304,9 @@ export const CATALOG_DATA: CatalogData = {
       "domain": "Deep Tech SCADA",
       "rarity_tier": "Elite",
       "permanent": false,
-      "buyoutEligible": true
+      "buyoutEligible": true,
+      "complianceStandard": "NIST-SP-800-218",
+      "gate_criterion_7": "NIST SP 800-218 SSDF v1.1 Alignment Passed"
     },
     {
       "id": 99,
@@ -3321,7 +3348,9 @@ export const CATALOG_DATA: CatalogData = {
       "domain": "Mobility & Fleet Logistics",
       "rarity_tier": "Elite",
       "permanent": false,
-      "buyoutEligible": true
+      "buyoutEligible": true,
+      "complianceStandard": "NIST-SP-800-218",
+      "gate_criterion_7": "NIST SP 800-218 SSDF v1.1 Alignment Passed"
     },
     {
       "id": 100,
@@ -3362,7 +3391,9 @@ export const CATALOG_DATA: CatalogData = {
       "domain": "Mobility & Fleet Logistics",
       "rarity_tier": "Elite",
       "permanent": false,
-      "buyoutEligible": true
+      "buyoutEligible": true,
+      "complianceStandard": "NIST-SP-800-218",
+      "gate_criterion_7": "NIST SP 800-218 SSDF v1.1 Alignment Passed"
     },
     {
       "id": 101,
@@ -3403,7 +3434,9 @@ export const CATALOG_DATA: CatalogData = {
       "domain": "Deep Tech SCADA",
       "rarity_tier": "Elite",
       "permanent": false,
-      "buyoutEligible": true
+      "buyoutEligible": true,
+      "complianceStandard": "NIST-SP-800-218",
+      "gate_criterion_7": "NIST SP 800-218 SSDF v1.1 Alignment Passed"
     },
     {
       "id": 102,
@@ -3443,7 +3476,9 @@ export const CATALOG_DATA: CatalogData = {
       "domain": "Institutional Capital & Wealth",
       "rarity_tier": "Elite",
       "permanent": false,
-      "buyoutEligible": true
+      "buyoutEligible": true,
+      "complianceStandard": "NIST-SP-800-218",
+      "gate_criterion_7": "NIST SP 800-218 SSDF v1.1 Alignment Passed"
     },
     {
       "id": 103,
@@ -3484,7 +3519,9 @@ export const CATALOG_DATA: CatalogData = {
       "domain": "Energy SCADA",
       "rarity_tier": "Elite",
       "permanent": false,
-      "buyoutEligible": true
+      "buyoutEligible": true,
+      "complianceStandard": "NIST-SP-800-218",
+      "gate_criterion_7": "NIST SP 800-218 SSDF v1.1 Alignment Passed"
     },
     {
       "id": 104,
@@ -3525,7 +3562,9 @@ export const CATALOG_DATA: CatalogData = {
       "domain": "Energy SCADA",
       "rarity_tier": "Elite",
       "permanent": false,
-      "buyoutEligible": true
+      "buyoutEligible": true,
+      "complianceStandard": "NIST-SP-800-218",
+      "gate_criterion_7": "NIST SP 800-218 SSDF v1.1 Alignment Passed"
     },
     {
       "id": 105,
@@ -3565,7 +3604,9 @@ export const CATALOG_DATA: CatalogData = {
       "domain": "Deep Tech SCADA",
       "rarity_tier": "Elite",
       "permanent": false,
-      "buyoutEligible": true
+      "buyoutEligible": true,
+      "complianceStandard": "NIST-SP-800-218",
+      "gate_criterion_7": "NIST SP 800-218 SSDF v1.1 Alignment Passed"
     },
     {
       "id": 106,
@@ -3606,7 +3647,9 @@ export const CATALOG_DATA: CatalogData = {
       "domain": "Industrial Robotics & Autonomous SCADA",
       "rarity_tier": "Elite",
       "permanent": false,
-      "buyoutEligible": true
+      "buyoutEligible": true,
+      "complianceStandard": "NIST-SP-800-218",
+      "gate_criterion_7": "NIST SP 800-218 SSDF v1.1 Alignment Passed"
     },
     {
       "id": 107,
@@ -3647,7 +3690,9 @@ export const CATALOG_DATA: CatalogData = {
       "domain": "Energy SCADA",
       "rarity_tier": "Elite",
       "permanent": false,
-      "buyoutEligible": true
+      "buyoutEligible": true,
+      "complianceStandard": "NIST-SP-800-218",
+      "gate_criterion_7": "NIST SP 800-218 SSDF v1.1 Alignment Passed"
     },
     {
       "id": 108,
@@ -3688,7 +3733,9 @@ export const CATALOG_DATA: CatalogData = {
       "domain": "Mobility & Fleet Logistics",
       "rarity_tier": "Elite",
       "permanent": false,
-      "buyoutEligible": true
+      "buyoutEligible": true,
+      "complianceStandard": "NIST-SP-800-218",
+      "gate_criterion_7": "NIST SP 800-218 SSDF v1.1 Alignment Passed"
     },
     {
       "id": 109,
@@ -3732,7 +3779,9 @@ export const CATALOG_DATA: CatalogData = {
       "domain": "Deep Tech SCADA",
       "rarity_tier": "Elite",
       "permanent": false,
-      "buyoutEligible": true
+      "buyoutEligible": true,
+      "complianceStandard": "NIST-SP-800-218",
+      "gate_criterion_7": "NIST SP 800-218 SSDF v1.1 Alignment Passed"
     },
     {
       "id": 110,
@@ -3786,7 +3835,9 @@ export const CATALOG_DATA: CatalogData = {
       "domain": "Deep Tech SCADA",
       "rarity_tier": "Elite",
       "permanent": false,
-      "buyoutEligible": true
+      "buyoutEligible": true,
+      "complianceStandard": "NIST-SP-800-218",
+      "gate_criterion_7": "NIST SP 800-218 SSDF v1.1 Alignment Passed"
     },
     {
       "id": 111,
@@ -3827,7 +3878,9 @@ export const CATALOG_DATA: CatalogData = {
       "domain": "Energy SCADA",
       "rarity_tier": "Elite",
       "permanent": true,
-      "buyoutEligible": false
+      "buyoutEligible": false,
+      "complianceStandard": "NIST-SP-800-218",
+      "gate_criterion_7": "NIST SP 800-218 SSDF v1.1 Alignment Passed"
     },
     {
       "id": 112,
@@ -3904,7 +3957,9 @@ export const CATALOG_DATA: CatalogData = {
       "domain": "Energy SCADA",
       "rarity_tier": "Elite",
       "permanent": true,
-      "buyoutEligible": false
+      "buyoutEligible": false,
+      "complianceStandard": "NIST-SP-800-218",
+      "gate_criterion_7": "NIST SP 800-218 SSDF v1.1 Alignment Passed"
     },
     {
       "id": 114,
@@ -3959,7 +4014,9 @@ export const CATALOG_DATA: CatalogData = {
       "domain": "Deep Tech SCADA",
       "rarity_tier": "Elite",
       "permanent": false,
-      "buyoutEligible": true
+      "buyoutEligible": true,
+      "complianceStandard": "NIST-SP-800-218",
+      "gate_criterion_7": "NIST SP 800-218 SSDF v1.1 Alignment Passed"
     }
   ],
   "vertical_slices": {
@@ -4136,5 +4193,4 @@ export const CATALOG_DATA: CatalogData = {
     ]
   }
 };
-
 export default CATALOG_DATA;
