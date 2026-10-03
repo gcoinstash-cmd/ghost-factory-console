@@ -939,12 +939,12 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
             </div>
 
             {/* Quick-Jump Milestone Preset Soundboard */}
-            <div className="space-y-2.5">
-              <div className="flex items-center justify-between text-xs sm:text-sm font-mono">
-                <span className="uppercase tracking-wider flex items-center gap-2 text-xs sm:text-sm font-black text-slate-200">
-                  <Zap size={15} className="text-amber-400" /> Milestone Quick-Presets:
+            <div className="space-y-3">
+              <div className="flex items-center justify-between text-sm sm:text-base font-mono">
+                <span className="uppercase tracking-wider flex items-center gap-2 font-black text-amber-400 text-sm sm:text-base">
+                  <Zap size={18} className="text-amber-400" /> Milestone Quick-Presets:
                 </span>
-                <span className="text-xs text-slate-400 hidden sm:inline font-semibold">Click any preset to snap regulator</span>
+                <span className="text-xs sm:text-sm text-slate-300 hidden sm:inline font-bold">Click any preset to snap regulator</span>
               </div>
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5">
                 {STRESS_PRESETS.map((preset) => {
@@ -953,15 +953,15 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
                     <button
                       key={preset.label}
                       onClick={() => setSliderVal(preset.pct)}
-                      className={`p-3 rounded-xl font-mono transition-all cursor-pointer border flex flex-col items-center justify-center gap-1 active:scale-95 min-h-[64px] ${
+                      className={`p-3.5 sm:p-4 rounded-2xl font-mono transition-all cursor-pointer border flex flex-col items-center justify-center gap-1 active:scale-95 min-h-[78px] ${
                         isSelected ? preset.activeClass : preset.idleClass
                       }`}
                     >
-                      <div className="flex items-center gap-1.5">
-                        <span className="text-xs font-black opacity-85">[{preset.tag}]</span>
-                        <span className="font-black text-sm sm:text-base tracking-tight">{preset.val}</span>
+                      <div className="flex items-center gap-2">
+                        <span className="text-xs sm:text-sm font-black opacity-85">[{preset.tag}]</span>
+                        <span className="font-black text-base sm:text-lg tracking-tight">{preset.val}</span>
                       </div>
-                      <span className="text-xs font-black uppercase tracking-wider opacity-90 truncate max-w-full">
+                      <span className="text-xs sm:text-sm font-black uppercase tracking-wider opacity-90 truncate max-w-full">
                         {preset.label}
                       </span>
                     </button>
@@ -974,24 +974,24 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
             <div className="bg-[#0c0d12] border border-white/15 rounded-2xl p-5 sm:p-6 shadow-2xl space-y-5">
               <div className="flex items-center justify-between font-mono">
                 <div className="flex items-center gap-2.5">
-                  <span className="text-xs sm:text-sm font-black text-white uppercase tracking-wider flex items-center gap-2">
-                    <Gauge size={16} className="text-cyan-400" /> Realization Regulator
+                  <span className="text-sm sm:text-base font-black text-white uppercase tracking-wider flex items-center gap-2">
+                    <Gauge size={18} className="text-cyan-400" /> Realization Regulator
                   </span>
-                  <span className="px-3 py-0.5 rounded-md bg-white/15 text-white font-mono text-xs sm:text-sm font-black">
+                  <span className="px-3.5 py-1 rounded-lg bg-white/20 text-white font-mono text-sm sm:text-base font-black">
                     {sliderVal}%
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
                   <button
                     onClick={() => setSliderVal((prev) => Math.max(0, prev - 5))}
-                    className="px-3 py-1.5 rounded-lg bg-black/70 hover:bg-white/15 text-slate-200 hover:text-white border border-white/15 text-xs font-mono font-black transition-all cursor-pointer active:scale-95"
+                    className="px-3.5 py-1.5 rounded-lg bg-black/70 hover:bg-white/15 text-slate-200 hover:text-white border border-white/20 text-xs sm:text-sm font-mono font-black transition-all cursor-pointer active:scale-95"
                     title="Step backward 5%"
                   >
                     -5%
                   </button>
                   <button
                     onClick={() => setSliderVal((prev) => Math.min(100, prev + 5))}
-                    className="px-3 py-1.5 rounded-lg bg-black/70 hover:bg-white/15 text-slate-200 hover:text-white border border-white/15 text-xs font-mono font-black transition-all cursor-pointer active:scale-95"
+                    className="px-3.5 py-1.5 rounded-lg bg-black/70 hover:bg-white/15 text-slate-200 hover:text-white border border-white/20 text-xs sm:text-sm font-mono font-black transition-all cursor-pointer active:scale-95"
                     title="Step forward 5%"
                   >
                     +5%
@@ -1003,22 +1003,22 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
               <div className="flex items-center gap-3.5">
                 <button
                   onClick={() => setSliderVal((prev) => Math.max(0, prev - 1))}
-                  className="w-10 h-10 rounded-xl bg-black/70 hover:bg-emerald-500/20 text-slate-200 hover:text-emerald-400 border border-white/20 flex items-center justify-center transition-all cursor-pointer shrink-0 active:scale-95 shadow-md"
+                  className="w-11 h-11 rounded-xl bg-black/70 hover:bg-emerald-500/20 text-slate-200 hover:text-emerald-400 border border-white/20 flex items-center justify-center transition-all cursor-pointer shrink-0 active:scale-95 shadow-md"
                   title="Fine-tune -1%"
                 >
-                  <Minus size={18} />
+                  <Minus size={20} />
                 </button>
 
                 <div className="relative flex-1 py-3 flex items-center">
                   {/* Glowing Underlay Fill Track */}
-                  <div className="absolute inset-x-0 h-4 sm:h-5 bg-slate-950 rounded-full border border-slate-700/70 overflow-hidden shadow-inner">
+                  <div className="absolute inset-x-0 h-5 bg-slate-950 rounded-full border border-slate-700/70 overflow-hidden shadow-inner">
                     {/* Active Gradient Fill Bar */}
                     <div
                       className="h-full rounded-full transition-all duration-75 relative"
                       style={{
                         width: `${sliderVal}%`,
                         background: 'linear-gradient(90deg, #ef4444 0%, #f59e0b 22%, #06b6d4 45%, #a855f7 75%, #ec4899 100%)',
-                        boxShadow: `0 0 18px ${scenarioTheme.shadowColor}`
+                        boxShadow: `0 0 20px ${scenarioTheme.shadowColor}`
                       }}
                     >
                       {/* High-Tech Shimmer highlight on fill */}
@@ -1027,12 +1027,12 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
                   </div>
 
                   {/* Tick Marks on track at 0%, 22%, 45%, 75%, 100% */}
-                  <div className="absolute inset-x-0 h-4 sm:h-5 pointer-events-none flex justify-between items-center px-1">
-                    <span className="w-0.5 h-3 bg-white/50 rounded-full" />
-                    <span className="w-0.5 h-3 bg-white/50 rounded-full" style={{ left: '22%', position: 'absolute' }} />
-                    <span className="w-0.5 h-3 bg-white/50 rounded-full" style={{ left: '45%', position: 'absolute' }} />
-                    <span className="w-0.5 h-3 bg-white/50 rounded-full" style={{ left: '75%', position: 'absolute' }} />
-                    <span className="w-0.5 h-3 bg-white/50 rounded-full" />
+                  <div className="absolute inset-x-0 h-5 pointer-events-none flex justify-between items-center px-1.5">
+                    <span className="w-0.5 h-3 bg-white/60 rounded-full" />
+                    <span className="w-0.5 h-3 bg-white/60 rounded-full" style={{ left: '22%', position: 'absolute' }} />
+                    <span className="w-0.5 h-3 bg-white/60 rounded-full" style={{ left: '45%', position: 'absolute' }} />
+                    <span className="w-0.5 h-3 bg-white/60 rounded-full" style={{ left: '75%', position: 'absolute' }} />
+                    <span className="w-0.5 h-3 bg-white/60 rounded-full" />
                   </div>
 
                   {/* HTML Range Slider (overlayed with transparent track and prominent styled thumb) */}
@@ -1070,10 +1070,10 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
 
                 <button
                   onClick={() => setSliderVal((prev) => Math.min(100, prev + 1))}
-                  className="w-10 h-10 rounded-xl bg-black/70 hover:bg-emerald-500/20 text-slate-200 hover:text-emerald-400 border border-white/20 flex items-center justify-center transition-all cursor-pointer shrink-0 active:scale-95 shadow-md"
+                  className="w-11 h-11 rounded-xl bg-black/70 hover:bg-emerald-500/20 text-slate-200 hover:text-emerald-400 border border-white/20 flex items-center justify-center transition-all cursor-pointer shrink-0 active:scale-95 shadow-md"
                   title="Fine-tune +1%"
                 >
-                  <Plus size={18} />
+                  <Plus size={20} />
                 </button>
               </div>
 
@@ -1086,7 +1086,7 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
                     <div
                       key={preset.label}
                       onClick={() => setSliderVal(preset.pct)}
-                      className={`p-3 rounded-xl border text-center transition-all cursor-pointer min-h-[72px] flex flex-col justify-center ${
+                      className={`p-3.5 rounded-xl border text-center transition-all cursor-pointer min-h-[78px] flex flex-col justify-center ${
                         isTarget 
                           ? `${preset.activeClass} scale-[1.02]`
                           : isPassed 
@@ -1094,9 +1094,9 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
                             : 'bg-black/40 border-white/10 text-slate-400 opacity-60 hover:opacity-100'
                       }`}
                     >
-                      <span className="text-xs font-bold block">{preset.tag} Milestone</span>
-                      <span className="text-sm sm:text-base font-black block font-mono mt-0.5">{preset.val}</span>
-                      <span className="text-xs font-bold uppercase tracking-wider block opacity-90 truncate mt-0.5">
+                      <span className="text-xs sm:text-sm font-bold block">{preset.tag} Milestone</span>
+                      <span className="text-base sm:text-lg font-black block font-mono mt-0.5">{preset.val}</span>
+                      <span className="text-xs sm:text-sm font-black uppercase tracking-wider block opacity-90 truncate mt-0.5">
                         {preset.label}
                       </span>
                     </div>
@@ -1108,7 +1108,7 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
               <div className="flex flex-col sm:flex-row items-center justify-between text-xs sm:text-sm font-mono gap-1.5 pt-3.5 border-t border-white/10">
                 <span className="text-red-400 font-black">$128,000 (Liquidation Floor)</span>
                 <span className="text-slate-100 font-black text-center flex items-center gap-2">
-                  <Sparkles size={15} className={scenarioTheme.textColor} />
+                  <Sparkles size={16} className={scenarioTheme.textColor} />
                   Live Readout: <span className={`text-sm sm:text-base ${scenarioTheme.textColor}`}>{formatCurrency(projectedVal)}</span> @ {sliderVal}%
                 </span>
                 <span className="text-pink-400 font-black">$2,850,000+ (Monopoly Ceiling)</span>

@@ -159,7 +159,7 @@ export const App: React.FC = () => {
       {/* VISIBLE BUILD STAMP FOOTER */}
       <footer id="gfcc-footer" className="border-t border-white/10 bg-[#0A0A0B] py-6 px-4 text-center font-mono text-xs text-slate-400 mb-16 md:mb-0">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
-          <span>GFCC Build: v1.5.6</span>
+          <span>GFCC Build: v1.5.7</span>
           <span className="text-emerald-400 font-bold">114 / 114 Reference Digital Assets</span>
         </div>
       </footer>

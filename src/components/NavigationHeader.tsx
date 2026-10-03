@@ -112,7 +112,7 @@ function Audit360Badge() {
                   <div className="text-slate-300 text-xs mt-0.5">
                     Commit: <span className="text-cyan-400 font-bold">HEAD (main)</span> &nbsp;|&nbsp;
                     Build: <span className="text-cyan-400 font-bold">vite-bundle</span> &nbsp;|&nbsp;
-                    v<span className="text-emerald-400 font-bold">1.5.6</span>
+                    v<span className="text-emerald-400 font-bold">1.5.7</span>
                   </div>
                 </div>
               </div>
@@ -267,7 +267,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
             className="hidden xl:flex items-center gap-1.5 px-2.5 py-1.5 rounded bg-emerald-500/15 border border-emerald-500/40 text-emerald-300 font-mono text-xs font-bold"
             title="Production Diligence Freeze Lock"
           >
-            <span>Build: v1.5.6</span>
+            <span>Build: v1.5.7</span>
           </div>
 
           <button
