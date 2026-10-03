@@ -422,18 +422,18 @@ export const DealRoomCore: React.FC<DealRoomScreenProps> = ({
 
           {/* Financial Bracket Comparison Cards (Descending Order: Biggest to Smallest) */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {/* Bracket 1: Strategic Acquisition Ceiling */}
+            {/* Bracket 1: Enterprise Market Valuation */}
             <div className="bg-black/60 border border-purple-500/30 hover:border-purple-400/70 transition-colors rounded-xl p-4 flex flex-col justify-between space-y-3">
               <div>
                 <div className="flex items-center justify-between text-xs mb-1">
                   <span className="text-slate-300 uppercase font-bold tracking-wider text-xs">Strategic Ceiling</span>
                   <span className="text-purple-400 font-bold bg-purple-950/60 px-2 py-0.5 rounded border border-purple-500/30 text-xs">MONOPOLY PREMIUM</span>
                 </div>
-                <h3 className="text-sm font-bold text-white leading-tight">Strategic Acquisition Ceiling</h3>
+                <h3 className="text-sm font-bold text-white leading-tight">Enterprise Market Valuation</h3>
               </div>
               <div>
                 <span className="text-xl sm:text-2xl font-black text-purple-300 font-mono block">$1.49M – $2.85M+</span>
-                <span className="text-xs text-slate-300 mt-1 block leading-snug">Deep-tech niche monopoly premium</span>
+                <span className="text-xs text-slate-300 mt-1 block leading-snug">Strategic Acquisition Ceiling (Monopoly Premium)</span>
               </div>
             </div>
 

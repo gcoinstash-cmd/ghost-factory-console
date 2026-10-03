@@ -83,11 +83,11 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
             </p>
           </div>
 
-          {/* Top Metric: Strategic Acquisition Ceiling */}
+          {/* Top Metric: Enterprise Market Valuation */}
           <div className="bg-[#111114] border-2 border-purple-500/60 rounded-2xl p-5 shrink-0 text-center shadow-xl shadow-purple-500/10">
             <div className="flex flex-wrap items-center justify-center gap-2 mb-1">
               <span className="text-xs uppercase font-black tracking-widest text-purple-400 block">
-                STRATEGIC ACQUISITION CEILING
+                ENTERPRISE MARKET VALUATION
               </span>
               <span className="text-[10px] font-mono font-black text-pink-400 bg-pink-950/80 px-1.5 py-0.5 rounded border border-pink-500/40">
                 MONOPOLY PREMIUM
@@ -97,7 +97,7 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
               $1.49M – $2.85M+
             </div>
             <span className="text-xs text-purple-300 block mt-1 font-semibold">
-              Deep-Tech Enterprise APA Ceiling (114 Catalog Models)
+              Strategic Acquisition Ceiling (Monopoly Premium)
             </span>
           </div>
         </div>
@@ -123,14 +123,14 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {/* Card 1: STRATEGIC ACQUISITION CEILING */}
+          {/* Card 1: ENTERPRISE MARKET VALUATION */}
           <div className="bg-[#111114] border border-purple-500/40 rounded-2xl p-5 flex flex-col justify-between hover:border-purple-400 transition-colors shadow-lg">
             <div>
               <div className="flex items-center justify-between text-xs mb-2">
                 <span className="text-slate-300 uppercase font-bold tracking-wider text-xs">Strategic Ceiling</span>
                 <span className="text-purple-400 font-bold bg-purple-950/80 px-2 py-0.5 rounded border border-purple-500/40 text-xs">MONOPOLY PREMIUM</span>
               </div>
-              <h3 className="text-sm font-bold text-white">Strategic Acquisition Ceiling</h3>
+              <h3 className="text-sm font-bold text-white">Enterprise Market Valuation</h3>
               <p className="text-xs text-slate-300 mt-1">Deep-tech niche enterprise acquisition for total catalog monopoly.</p>
             </div>
             <div className="mt-4 pt-4 border-t border-white/10">
@@ -138,7 +138,7 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
                 $1.49M – $2.85M+
               </span>
               <span className="text-xs text-slate-400 block mt-1 font-semibold">
-                Strategic Niche Monopoly Premium
+                Strategic Acquisition Ceiling (Monopoly Premium)
               </span>
             </div>
           </div>

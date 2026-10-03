@@ -110,9 +110,9 @@ function Audit360Badge() {
                 <div>
                   <div className="text-emerald-300 font-black text-xs uppercase tracking-wider">Full Desktop & Mobile Functional Audit</div>
                   <div className="text-slate-300 text-xs mt-0.5">
-                    Commit: <span className="text-cyan-400 font-bold">7e43696</span> &nbsp;|&nbsp;
-                    Build: <span className="text-cyan-400 font-bold">index-DncAsvPE.js</span> &nbsp;|&nbsp;
-                    v<span className="text-emerald-400 font-bold">1.5.5</span>
+                    Commit: <span className="text-cyan-400 font-bold">HEAD (main)</span> &nbsp;|&nbsp;
+                    Build: <span className="text-cyan-400 font-bold">vite-bundle</span> &nbsp;|&nbsp;
+                    v<span className="text-emerald-400 font-bold">1.5.6</span>
                   </div>
                 </div>
               </div>
@@ -267,7 +267,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
             className="hidden xl:flex items-center gap-1.5 px-2.5 py-1.5 rounded bg-emerald-500/15 border border-emerald-500/40 text-emerald-300 font-mono text-xs font-bold"
             title="Production Diligence Freeze Lock"
           >
-            <span>Build: v1.5.5</span>
+            <span>Build: v1.5.6</span>
           </div>
 
           <button
@@ -298,24 +298,24 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
       ) : (
         /* SECTION 2 VALUATION HEADER (DESCENDING: STRATEGIC CEILING -> DEV REPLACEMENT -> STRATEGIC BUYOUT -> DISTRESS FLOOR) */
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-3.5 py-3 border-b border-white/10 text-xs sm:text-sm w-full">
-          {/* Card 1: Strategic Acquisition Ceiling */}
+          {/* Card 1: Enterprise Market Valuation */}
           <div className="flex flex-col items-center justify-between p-4 rounded-xl border border-pink-500/40 hover:border-pink-400 transition-colors min-h-[230px] bg-zinc-950/70 shadow-lg w-full">
             <div className="flex flex-col items-center w-full">
               <span className="inline-flex items-center justify-center px-3 py-1 rounded-md text-[10px] font-mono font-bold tracking-wider uppercase mx-auto mb-2 text-pink-400 bg-pink-950/80 border border-pink-500/40">
                 MONOPOLY PREMIUM
               </span>
               <h4 className="text-xs font-black tracking-widest uppercase text-zinc-300 text-center mb-1.5 whitespace-normal leading-snug">
-                STRATEGIC ACQUISITION CEILING
+                ENTERPRISE MARKET VALUATION
               </h4>
               <span className="text-2xl xl:text-3xl font-mono font-black tracking-tight text-center my-2 text-pink-400 block">
                 $1.49M – $2.85M+
               </span>
               <p className="text-xs text-zinc-400 text-center leading-relaxed px-1">
-                Deep-tech niche enterprise acquisition
+                Strategic Acquisition Ceiling (Monopoly Premium)
               </p>
             </div>
             <span className="text-[11px] font-mono text-zinc-500 text-center mt-auto pt-2 border-t border-zinc-800/80 block w-full">
-              Full catalog monopoly buyout
+              Deep-tech enterprise APA buyout ceiling (114 models)
             </span>
           </div>
 
