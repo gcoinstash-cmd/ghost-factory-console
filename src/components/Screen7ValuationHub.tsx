@@ -124,7 +124,7 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
   ];
 
   return (
-    <div className="space-y-8 font-mono pb-16">
+    <div className="w-full min-h-screen overflow-y-visible space-y-8 font-mono pb-24">
       {/* Header Banner */}
       <div className="border border-white/10 bg-black/60 rounded-2xl p-6 sm:p-8 pb-8 backdrop-blur-xl relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20" />
@@ -372,7 +372,7 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
           </div>
         </div>
 
-        <div className="bg-[#111114] border-2 border-purple-500/40 rounded-2xl p-6 hover:border-purple-400/80 transition-colors shadow-2xl relative overflow-visible space-y-6">
+        <div className="bg-[#111114] border-2 border-purple-500/40 rounded-2xl p-6 pb-12 mb-16 hover:border-purple-400/80 transition-colors shadow-2xl relative overflow-visible space-y-6">
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-4 border-b border-white/10">
             <div>
               <div className="flex items-center gap-2 mb-1">
@@ -463,7 +463,7 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
           {/* Descending Output Cards (Largest Left -> Smallest Right) */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-2">
             {/* Card 1: SIMULATED ENTERPRISE MARKET VALUATION */}
-            <div className="flex flex-col justify-between p-5 pb-6 min-h-[260px] rounded-xl border border-purple-500/40 bg-black/70 hover:border-purple-400 transition-colors shadow-md overflow-visible">
+            <div className="flex flex-col justify-between p-5 pb-6 min-h-[280px] rounded-xl border border-purple-500/40 bg-black/70 hover:border-purple-400 transition-colors shadow-md overflow-visible">
               <div>
                 <div className="flex items-center justify-between text-xs mb-1.5">
                   <span className="text-purple-400 uppercase font-bold tracking-wider text-[11px]">Card 1 // Monopoly</span>
@@ -471,7 +471,7 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
                     MONOPOLY PREMIUM
                   </span>
                 </div>
-                <h4 className="text-xs font-bold text-white uppercase tracking-wider">SIMULATED ENTERPRISE MARKET VALUATION</h4>
+                <h4 className="text-xs font-black tracking-wider uppercase text-zinc-100 leading-snug">SIMULATED ENTERPRISE MARKET VALUATION</h4>
                 <span className="text-xs text-purple-300/80 block mt-0.5 font-sans font-normal">Strategic Ceiling (Monopoly Premium)</span>
               </div>
               <div className="pt-3 border-t border-white/10 mt-auto">
@@ -485,7 +485,7 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
             </div>
 
             {/* Card 2: SIMULATED DEV REPLACEMENT */}
-            <div className="flex flex-col justify-between p-5 pb-6 min-h-[260px] rounded-xl border border-cyan-500/40 bg-black/70 hover:border-cyan-400 transition-colors shadow-md overflow-visible">
+            <div className="flex flex-col justify-between p-5 pb-6 min-h-[280px] rounded-xl border border-cyan-500/40 bg-black/70 hover:border-cyan-400 transition-colors shadow-md overflow-visible">
               <div>
                 <div className="flex items-center justify-between text-xs mb-1.5">
                   <span className="text-cyan-400 uppercase font-bold tracking-wider text-[11px]">Card 2 // Dev Agency</span>
@@ -493,7 +493,7 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
                     REPLACEMENT
                   </span>
                 </div>
-                <h4 className="text-xs font-bold text-white uppercase tracking-wider">SIMULATED DEV REPLACEMENT</h4>
+                <h4 className="text-xs font-black tracking-wider uppercase text-zinc-100 leading-snug">SIMULATED DEV REPLACEMENT</h4>
                 <span className="text-xs text-cyan-300/80 block mt-0.5 font-sans font-normal">Agency Benchmarks</span>
               </div>
               <div className="pt-3 border-t border-white/10 mt-auto">
@@ -507,7 +507,7 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
             </div>
 
             {/* Card 3: SIMULATED STRATEGIC BUYOUT */}
-            <div className="flex flex-col justify-between p-5 pb-6 min-h-[260px] rounded-xl border border-amber-500/40 bg-black/70 hover:border-amber-400 transition-colors shadow-md overflow-visible">
+            <div className="flex flex-col justify-between p-5 pb-6 min-h-[280px] rounded-xl border border-amber-500/40 bg-black/70 hover:border-amber-400 transition-colors shadow-md overflow-visible">
               <div>
                 <div className="flex items-center justify-between text-xs mb-1.5">
                   <span className="text-amber-400 uppercase font-bold tracking-wider text-[11px]">Card 3 // Portfolio Buyout</span>
@@ -515,7 +515,7 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
                     NAV ANCHOR
                   </span>
                 </div>
-                <h4 className="text-xs font-bold text-white uppercase tracking-wider">SIMULATED STRATEGIC BUYOUT</h4>
+                <h4 className="text-xs font-black tracking-wider uppercase text-zinc-100 leading-snug">SIMULATED STRATEGIC BUYOUT</h4>
                 <span className="text-xs text-amber-300/80 block mt-0.5 font-sans font-normal">NAV Anchor</span>
               </div>
               <div className="pt-3 border-t border-white/10 mt-auto">
@@ -529,7 +529,7 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
             </div>
 
             {/* Card 4: SIMULATED DISTRESS CASH FLOOR */}
-            <div className="flex flex-col justify-between p-5 pb-6 min-h-[260px] rounded-xl border border-red-500/40 bg-black/70 hover:border-red-400 transition-colors shadow-md overflow-visible">
+            <div className="flex flex-col justify-between p-5 pb-6 min-h-[280px] rounded-xl border border-red-500/40 bg-black/70 hover:border-red-400 transition-colors shadow-md overflow-visible">
               <div>
                 <div className="flex items-center justify-between text-xs mb-1.5">
                   <span className="text-red-400 uppercase font-bold tracking-wider text-[11px]">Card 4 // Liquidation</span>
@@ -537,7 +537,7 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
                     FLOOR
                   </span>
                 </div>
-                <h4 className="text-xs font-bold text-white uppercase tracking-wider">SIMULATED DISTRESS CASH FLOOR</h4>
+                <h4 className="text-xs font-black tracking-wider uppercase text-zinc-100 leading-snug">SIMULATED DISTRESS CASH FLOOR</h4>
                 <span className="text-xs text-red-300/80 block mt-0.5 font-sans font-normal">Liquidation Reserve</span>
               </div>
               <div className="pt-3 border-t border-white/10 mt-auto">
