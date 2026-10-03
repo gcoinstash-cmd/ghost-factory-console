@@ -104,14 +104,14 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
       </div>
 
       {/* ========================================================================= */}
-      {/* POSITION 1: SECTION 2 — EXCLUSIVE BUYOUT & DEV REPLACEMENT HUB (VERY TOP) */}
+      {/* EXCLUSIVE BUYOUT & DEV REPLACEMENT HUB (VERY TOP)                         */}
       {/* ========================================================================= */}
       <div className="space-y-4">
         <div className="flex items-center justify-between">
           <div>
             <h2 className="text-xl font-black text-white tracking-tight flex items-center gap-2">
               <BarChart3 size={18} className="text-purple-400" />
-              Section 2: Exclusive Buyout & Dev Replacement Hub
+              Exclusive Buyout & Dev Replacement Hub
             </h2>
             <p className="text-xs text-slate-300 mt-0.5">
               Capital benchmark brackets arranged strictly from highest strategic valuation to liquidation floor.
@@ -209,14 +209,14 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
       </div>
 
       {/* ========================================================================= */}
-      {/* POSITION 2: SECTION 1 — RECURRING COMMERCIAL LICENSING & LEASE HUB        */}
+      {/* RECURRING COMMERCIAL LICENSING & LEASE HUB                                */}
       {/* ========================================================================= */}
       <div className="space-y-4">
         <div className="flex items-center justify-between">
           <div>
             <h2 className="text-xl font-black text-white tracking-tight flex items-center gap-2">
               <TrendingUp size={18} className="text-emerald-400" />
-              Section 1: Recurring Commercial Licensing & Lease Hub
+              Recurring Commercial Licensing & Lease Hub
             </h2>
             <p className="text-xs text-slate-300 mt-0.5">
               Annualized non-exclusive licensing cash flow projections arranged from highest enterprise ask to FMV baseline.
@@ -291,7 +291,217 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
       </div>
 
       {/* ========================================================================= */}
-      {/* POSITION 3: PORTFOLIO VAULT TRANCHES & PER-ASSET BENCHMARKS               */}
+      {/* FLEET EXPANSION & PORTFOLIO TARGET SIMULATOR (114 -> 500 ASSETS)          */}
+      {/* ========================================================================= */}
+      <div className="space-y-4">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div>
+            <h2 className="text-xl font-black text-white tracking-tight flex items-center gap-2">
+              <Rocket size={20} className="text-purple-400" />
+              FLEET EXPANSION & PORTFOLIO TARGET SIMULATOR (114 ➔ 500 ASSETS)
+            </h2>
+            <p className="text-xs text-slate-300 mt-0.5">
+              Interactive scale forecasting engine modeling NAV, Dev Replacement, Monopoly Ceilings, and 80/20 retention at scale.
+            </p>
+          </div>
+          <div className="flex items-center gap-2 self-start sm:self-auto">
+            <span className="px-3 py-1 rounded-full bg-purple-500/15 border border-purple-500/40 text-purple-300 text-xs font-bold uppercase tracking-wider font-mono">
+              80/20 Vault Tranche: {simVaultTranche}
+            </span>
+          </div>
+        </div>
+
+        <div className="bg-[#111114] border-2 border-purple-500/40 rounded-2xl p-6 hover:border-purple-400/80 transition-colors shadow-2xl relative overflow-hidden space-y-6">
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-4 border-b border-white/10">
+            <div>
+              <div className="flex items-center gap-2 mb-1">
+                <span className="text-xs font-black uppercase tracking-wider text-purple-400 flex items-center gap-1.5">
+                  <Sliders size={14} /> SCALE CONTROL // FLEET VOLUME
+                </span>
+                <span className="text-[11px] font-bold px-2 py-0.5 rounded bg-purple-950/80 text-purple-300 border border-purple-500/30 font-mono">
+                  {simTrack1Count} Track 1 (75%) + {simTrack2Count} Track 2 (25%)
+                </span>
+              </div>
+              <h3 className="text-lg font-black text-white">Dynamic Fleet Scale Slider</h3>
+              <p className="text-xs text-slate-300 mt-0.5">
+                Adjust virtual factory production capacity from the current 114 baseline to the 500-unit ultimate vault target.
+              </p>
+            </div>
+
+            {/* Quick-Jump Buttons & Readout */}
+            <div className="flex flex-wrap items-center gap-2.5">
+              <span className="text-xs text-slate-400 font-mono uppercase mr-1 hidden sm:inline">Presets:</span>
+              <button
+                onClick={() => setFleetCount(114)}
+                className={`px-3 py-1.5 rounded-lg text-xs font-bold font-mono transition-all cursor-pointer border ${
+                  fleetCount === 114
+                    ? 'bg-emerald-500 text-black border-emerald-400 shadow-md shadow-emerald-500/30'
+                    : 'bg-black/60 text-emerald-400 border-emerald-500/40 hover:bg-emerald-500/20'
+                }`}
+              >
+                [LIVE: 114]
+              </button>
+              <button
+                onClick={() => setFleetCount(250)}
+                className={`px-3 py-1.5 rounded-lg text-xs font-bold font-mono transition-all cursor-pointer border ${
+                  fleetCount === 250
+                    ? 'bg-cyan-500 text-black border-cyan-400 shadow-md shadow-cyan-500/30'
+                    : 'bg-black/60 text-cyan-400 border-cyan-500/40 hover:bg-cyan-500/20'
+                }`}
+              >
+                [TARGET: 250]
+              </button>
+              <button
+                onClick={() => setFleetCount(500)}
+                className={`px-3 py-1.5 rounded-lg text-xs font-bold font-mono transition-all cursor-pointer border ${
+                  fleetCount === 500
+                    ? 'bg-purple-500 text-black border-purple-400 shadow-md shadow-purple-500/30'
+                    : 'bg-black/60 text-purple-400 border-purple-500/40 hover:bg-purple-500/20'
+                }`}
+              >
+                [MAX VAULT: 500]
+              </button>
+
+              <div className="bg-black/90 border border-purple-500/50 rounded-xl px-4 py-2 text-right shrink-0 ml-auto sm:ml-2">
+                <span className="text-[10px] text-slate-400 uppercase font-mono block">Simulated Fleet Size</span>
+                <span className="text-xl sm:text-2xl font-black text-purple-300 font-mono tracking-tight block">
+                  {fleetCount} Units
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Slider Control */}
+          <div className="space-y-3">
+            <div className="flex items-center justify-between text-xs font-mono">
+              <span className="text-emerald-400 font-bold">Min: 114 Units (Live)</span>
+              <span className="text-cyan-400 font-bold hidden sm:inline">Midpoint: 250 Units (Target)</span>
+              <span className="text-purple-400 font-bold">Max: 500 Units (Full Vault)</span>
+            </div>
+
+            <input
+              type="range"
+              min="114"
+              max="500"
+              step="1"
+              value={fleetCount}
+              onChange={(e) => setFleetCount(Number(e.target.value))}
+              className="w-full h-3.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-purple-400 hover:accent-purple-300 transition-all"
+              title="Interactive Fleet Expansion Slider (114 - 500 Units)"
+            />
+
+            <div className="flex items-center justify-between text-xs text-slate-400 font-mono">
+              <span>114 Blueprints</span>
+              <span className="text-purple-200 font-bold">
+                Active Simulation: {fleetCount} Units ({simTrack1Count} Track 1 Lean + {simTrack2Count} Track 2 Flagships)
+              </span>
+              <span>500 Blueprints</span>
+            </div>
+          </div>
+
+          {/* Descending Output Cards (Largest Left -> Smallest Right) */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-2">
+            {/* Card 1: SIMULATED STRATEGIC CEILING */}
+            <div className="min-h-[140px] flex flex-col justify-between p-4 bg-black/70 border border-purple-500/40 rounded-xl hover:border-purple-400 transition-colors shadow-md">
+              <div>
+                <div className="flex items-center justify-between text-xs mb-1">
+                  <span className="text-purple-400 uppercase font-bold tracking-wider text-[11px]">Card 1 // Monopoly</span>
+                  <span className="text-purple-300 font-bold bg-purple-950/80 px-2 py-0.5 rounded border border-purple-500/30 text-[10px]">
+                    CEILING
+                  </span>
+                </div>
+                <h4 className="text-xs font-bold text-white uppercase tracking-wider">SIMULATED STRATEGIC CEILING</h4>
+                <span className="text-xs text-purple-300/80 block mt-0.5 font-sans font-normal">Monopoly Premium</span>
+              </div>
+              <div className="pt-2 border-t border-white/10">
+                <span className="text-xl sm:text-2xl font-black font-mono tracking-tight text-purple-300 mt-2 break-words leading-snug block">
+                  {simStrategicCeiling}
+                </span>
+                <span className="text-[11px] text-slate-400 mt-1 block">
+                  Deep-tech monopoly premium at {fleetCount} scale
+                </span>
+              </div>
+            </div>
+
+            {/* Card 2: SIMULATED DEV REPLACEMENT */}
+            <div className="min-h-[140px] flex flex-col justify-between p-4 bg-black/70 border border-cyan-500/40 rounded-xl hover:border-cyan-400 transition-colors shadow-md">
+              <div>
+                <div className="flex items-center justify-between text-xs mb-1">
+                  <span className="text-cyan-400 uppercase font-bold tracking-wider text-[11px]">Card 2 // Dev Agency</span>
+                  <span className="text-cyan-300 font-bold bg-cyan-950/80 px-2 py-0.5 rounded border border-cyan-500/30 text-[10px]">
+                    REPLACEMENT
+                  </span>
+                </div>
+                <h4 className="text-xs font-bold text-white uppercase tracking-wider">SIMULATED DEV REPLACEMENT</h4>
+                <span className="text-xs text-cyan-300/80 block mt-0.5 font-sans font-normal">Agency Benchmarks</span>
+              </div>
+              <div className="pt-2 border-t border-white/10">
+                <span className="text-xl sm:text-2xl font-black font-mono tracking-tight text-cyan-300 mt-2 break-words leading-snug block">
+                  {simDevReplacement}
+                </span>
+                <span className="text-[11px] text-slate-400 mt-1 block">
+                  Agency rebuild benchmark ({Math.round(fleetCount * 38).toLocaleString()}+ hrs @ $150–$250/hr)
+                </span>
+              </div>
+            </div>
+
+            {/* Card 3: SIMULATED STRATEGIC BUYOUT */}
+            <div className="min-h-[140px] flex flex-col justify-between p-4 bg-black/70 border border-amber-500/40 rounded-xl hover:border-amber-400 transition-colors shadow-md">
+              <div>
+                <div className="flex items-center justify-between text-xs mb-1">
+                  <span className="text-amber-400 uppercase font-bold tracking-wider text-[11px]">Card 3 // Portfolio Buyout</span>
+                  <span className="text-amber-300 font-bold bg-amber-950/80 px-2 py-0.5 rounded border border-amber-500/30 text-[10px]">
+                    NAV ANCHOR
+                  </span>
+                </div>
+                <h4 className="text-xs font-bold text-white uppercase tracking-wider">SIMULATED STRATEGIC BUYOUT</h4>
+                <span className="text-xs text-amber-300/80 block mt-0.5 font-sans font-normal">NAV Anchor</span>
+              </div>
+              <div className="pt-2 border-t border-white/10">
+                <span className="text-xl sm:text-2xl font-black font-mono tracking-tight text-amber-300 mt-2 break-words leading-snug block">
+                  {simStrategicBuyoutAnchor}
+                </span>
+                <span className="text-[11px] text-slate-400 mt-1 block">
+                  Dual-track buyout anchor ({simTrack1Count} T1 @ $4.5k + {simTrack2Count} T2 @ $14.5k)
+                </span>
+              </div>
+            </div>
+
+            {/* Card 4: SIMULATED DISTRESS CASH FLOOR */}
+            <div className="min-h-[140px] flex flex-col justify-between p-4 bg-black/70 border border-red-500/40 rounded-xl hover:border-red-400 transition-colors shadow-md">
+              <div>
+                <div className="flex items-center justify-between text-xs mb-1">
+                  <span className="text-red-400 uppercase font-bold tracking-wider text-[11px]">Card 4 // Liquidation</span>
+                  <span className="text-red-300 font-bold bg-red-950/80 px-2 py-0.5 rounded border border-red-500/30 text-[10px]">
+                    FLOOR
+                  </span>
+                </div>
+                <h4 className="text-xs font-bold text-white uppercase tracking-wider">SIMULATED DISTRESS CASH FLOOR</h4>
+                <span className="text-xs text-red-300/80 block mt-0.5 font-sans font-normal">Liquidation Reserve</span>
+              </div>
+              <div className="pt-2 border-t border-white/10">
+                <span className="text-xl sm:text-2xl font-black font-mono tracking-tight text-red-400 mt-2 break-words leading-snug block">
+                  {simDistressCashFloor}
+                </span>
+                <span className="text-[11px] text-slate-400 mt-1 block">
+                  40–60% buyer discount liquidation scenario
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Legal Disclaimer */}
+          <div className="pt-3 border-t border-white/10 flex items-start gap-2.5 text-xs text-slate-400">
+            <AlertTriangle size={15} className="text-amber-400 shrink-0 mt-0.5" />
+            <p className="font-mono text-[11px] leading-relaxed text-amber-200/90">
+              HYPOTHETICAL TARGET PROJECTION ONLY — DEMONSTRATES POTENTIAL PORTFOLIO VALUATION AT SCALE — NOT AN APPRAISAL OR REVENUE GUARANTEE.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* ========================================================================= */}
+      {/* PORTFOLIO VAULT TRANCHES & PER-ASSET BENCHMARKS                           */}
       {/* ========================================================================= */}
       <div className="space-y-8">
         {/* SUBSECTION A: PORTFOLIO VAULT SEGREGATION (VAULT TRANCHE BUYOUT) */}
@@ -616,17 +826,17 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
               <h3 className="text-sm font-bold text-white">Valuation Spread & Asymmetry</h3>
               <div className="mt-3 space-y-1.5">
                 <div className="flex justify-between items-center text-xs p-2 rounded-lg bg-black/60 border border-white/10">
-                  <span className="text-slate-300">Floor Realization:</span>
-                  <span className="text-red-400 font-bold font-mono">$128.0k Distress Realization</span>
+                  <span className="text-slate-300">Enterprise Valuation:</span>
+                  <span className="text-purple-400 font-bold font-mono">$2.85M+ Strategic Deep-Tech Monopoly</span>
                 </div>
                 <div className="flex justify-between items-center text-xs p-2 rounded-lg bg-black/60 border border-white/10">
-                  <span className="text-slate-300">Ceiling Premium:</span>
-                  <span className="text-purple-400 font-bold font-mono">$2.85M+ Strategic Deep-Tech Monopoly</span>
+                  <span className="text-slate-300">Liquidation Cell:</span>
+                  <span className="text-red-400 font-bold font-mono">$128.0k Distress Realization</span>
                 </div>
               </div>
             </div>
             <div className="mt-4 pt-3 border-t border-white/10 text-xs text-slate-300 leading-relaxed font-semibold">
-              Delta: 22.3x Upside Asymmetry Window between distress floor and monopoly ceiling.
+              Delta: 22.3x Upside Asymmetry Window between enterprise valuation and liquidation cell.
             </div>
           </div>
 
@@ -692,224 +902,16 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
       </div>
 
       {/* ========================================================================= */}
-      {/* POSITION 5: FLEET EXPANSION & PORTFOLIO TARGET SIMULATOR (114 -> 500 ASSETS) */}
+      {/* COMPLIANCE & LEGAL SAFETY LOCK                                            */}
       {/* ========================================================================= */}
-      <div className="space-y-4 pb-16 mb-8">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-          <div>
-            <h2 className="text-xl font-black text-white tracking-tight flex items-center gap-2">
-              <Rocket size={20} className="text-purple-400" />
-              FLEET EXPANSION & PORTFOLIO TARGET SIMULATOR (114 ➔ 500 ASSETS)
-            </h2>
-            <p className="text-xs text-slate-300 mt-0.5">
-              Interactive scale forecasting engine modeling NAV, Dev Replacement, Monopoly Ceilings, and 80/20 retention at scale.
-            </p>
-          </div>
-          <div className="flex items-center gap-2 self-start sm:self-auto">
-            <span className="px-3 py-1 rounded-full bg-purple-500/15 border border-purple-500/40 text-purple-300 text-xs font-bold uppercase tracking-wider font-mono">
-              80/20 Vault Tranche: {simVaultTranche}
-            </span>
-          </div>
-        </div>
-
-        <div className="bg-[#111114] border-2 border-purple-500/40 rounded-2xl p-6 hover:border-purple-400/80 transition-colors shadow-2xl relative overflow-hidden space-y-6">
-          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-4 border-b border-white/10">
-            <div>
-              <div className="flex items-center gap-2 mb-1">
-                <span className="text-xs font-black uppercase tracking-wider text-purple-400 flex items-center gap-1.5">
-                  <Sliders size={14} /> SCALE CONTROL // FLEET VOLUME
-                </span>
-                <span className="text-[11px] font-bold px-2 py-0.5 rounded bg-purple-950/80 text-purple-300 border border-purple-500/30 font-mono">
-                  {simTrack1Count} Track 1 (75%) + {simTrack2Count} Track 2 (25%)
-                </span>
-              </div>
-              <h3 className="text-lg font-black text-white">Dynamic Fleet Scale Slider</h3>
-              <p className="text-xs text-slate-300 mt-0.5">
-                Adjust virtual factory production capacity from the current 114 baseline to the 500-unit ultimate vault target.
-              </p>
-            </div>
-
-            {/* Quick-Jump Buttons & Readout */}
-            <div className="flex flex-wrap items-center gap-2.5">
-              <span className="text-xs text-slate-400 font-mono uppercase mr-1 hidden sm:inline">Presets:</span>
-              <button
-                onClick={() => setFleetCount(114)}
-                className={`px-3 py-1.5 rounded-lg text-xs font-bold font-mono transition-all cursor-pointer border ${
-                  fleetCount === 114
-                    ? 'bg-emerald-500 text-black border-emerald-400 shadow-md shadow-emerald-500/30'
-                    : 'bg-black/60 text-emerald-400 border-emerald-500/40 hover:bg-emerald-500/20'
-                }`}
-              >
-                [LIVE: 114]
-              </button>
-              <button
-                onClick={() => setFleetCount(250)}
-                className={`px-3 py-1.5 rounded-lg text-xs font-bold font-mono transition-all cursor-pointer border ${
-                  fleetCount === 250
-                    ? 'bg-cyan-500 text-black border-cyan-400 shadow-md shadow-cyan-500/30'
-                    : 'bg-black/60 text-cyan-400 border-cyan-500/40 hover:bg-cyan-500/20'
-                }`}
-              >
-                [TARGET: 250]
-              </button>
-              <button
-                onClick={() => setFleetCount(500)}
-                className={`px-3 py-1.5 rounded-lg text-xs font-bold font-mono transition-all cursor-pointer border ${
-                  fleetCount === 500
-                    ? 'bg-purple-500 text-black border-purple-400 shadow-md shadow-purple-500/30'
-                    : 'bg-black/60 text-purple-400 border-purple-500/40 hover:bg-purple-500/20'
-                }`}
-              >
-                [MAX VAULT: 500]
-              </button>
-
-              <div className="bg-black/90 border border-purple-500/50 rounded-xl px-4 py-2 text-right shrink-0 ml-auto sm:ml-2">
-                <span className="text-[10px] text-slate-400 uppercase font-mono block">Simulated Fleet Size</span>
-                <span className="text-xl sm:text-2xl font-black text-purple-300 font-mono tracking-tight block">
-                  {fleetCount} Units
-                </span>
-              </div>
-            </div>
-          </div>
-
-          {/* Slider Control */}
-          <div className="space-y-3">
-            <div className="flex items-center justify-between text-xs font-mono">
-              <span className="text-emerald-400 font-bold">Min: 114 Units (Live)</span>
-              <span className="text-cyan-400 font-bold hidden sm:inline">Midpoint: 250 Units (Target)</span>
-              <span className="text-purple-400 font-bold">Max: 500 Units (Full Vault)</span>
-            </div>
-
-            <input
-              type="range"
-              min="114"
-              max="500"
-              step="1"
-              value={fleetCount}
-              onChange={(e) => setFleetCount(Number(e.target.value))}
-              className="w-full h-3.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-purple-400 hover:accent-purple-300 transition-all"
-              title="Interactive Fleet Expansion Slider (114 - 500 Units)"
-            />
-
-            <div className="flex items-center justify-between text-xs text-slate-400 font-mono">
-              <span>114 Blueprints</span>
-              <span className="text-purple-200 font-bold">
-                Active Simulation: {fleetCount} Units ({simTrack1Count} Track 1 Lean + {simTrack2Count} Track 2 Flagships)
-              </span>
-              <span>500 Blueprints</span>
-            </div>
-          </div>
-
-          {/* Descending Output Cards (Largest Left -> Smallest Right) */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-2">
-            {/* Card 1: SIMULATED STRATEGIC CEILING */}
-            <div className="min-h-[140px] flex flex-col justify-between p-4 bg-black/70 border border-purple-500/40 rounded-xl hover:border-purple-400 transition-colors shadow-md">
-              <div>
-                <div className="flex items-center justify-between text-xs mb-1">
-                  <span className="text-purple-400 uppercase font-bold tracking-wider text-[11px]">Card 1 // Monopoly</span>
-                  <span className="text-purple-300 font-bold bg-purple-950/80 px-2 py-0.5 rounded border border-purple-500/30 text-[10px]">
-                    CEILING
-                  </span>
-                </div>
-                <h4 className="text-xs font-bold text-white uppercase tracking-wider">SIMULATED STRATEGIC CEILING</h4>
-                <span className="text-xs text-purple-300/80 block mt-0.5 font-sans font-normal">Monopoly Premium</span>
-              </div>
-              <div className="pt-2 border-t border-white/10">
-                <span className="text-xl sm:text-2xl font-black font-mono tracking-tight text-purple-300 mt-2 break-words leading-snug block">
-                  {simStrategicCeiling}
-                </span>
-                <span className="text-[11px] text-slate-400 mt-1 block">
-                  Deep-tech monopoly premium at {fleetCount} scale
-                </span>
-              </div>
-            </div>
-
-            {/* Card 2: SIMULATED DEV REPLACEMENT */}
-            <div className="min-h-[140px] flex flex-col justify-between p-4 bg-black/70 border border-cyan-500/40 rounded-xl hover:border-cyan-400 transition-colors shadow-md">
-              <div>
-                <div className="flex items-center justify-between text-xs mb-1">
-                  <span className="text-cyan-400 uppercase font-bold tracking-wider text-[11px]">Card 2 // Dev Agency</span>
-                  <span className="text-cyan-300 font-bold bg-cyan-950/80 px-2 py-0.5 rounded border border-cyan-500/30 text-[10px]">
-                    REPLACEMENT
-                  </span>
-                </div>
-                <h4 className="text-xs font-bold text-white uppercase tracking-wider">SIMULATED DEV REPLACEMENT</h4>
-                <span className="text-xs text-cyan-300/80 block mt-0.5 font-sans font-normal">Agency Benchmarks</span>
-              </div>
-              <div className="pt-2 border-t border-white/10">
-                <span className="text-xl sm:text-2xl font-black font-mono tracking-tight text-cyan-300 mt-2 break-words leading-snug block">
-                  {simDevReplacement}
-                </span>
-                <span className="text-[11px] text-slate-400 mt-1 block">
-                  Agency rebuild benchmark ({Math.round(fleetCount * 38).toLocaleString()}+ hrs @ $150–$250/hr)
-                </span>
-              </div>
-            </div>
-
-            {/* Card 3: SIMULATED STRATEGIC BUYOUT */}
-            <div className="min-h-[140px] flex flex-col justify-between p-4 bg-black/70 border border-amber-500/40 rounded-xl hover:border-amber-400 transition-colors shadow-md">
-              <div>
-                <div className="flex items-center justify-between text-xs mb-1">
-                  <span className="text-amber-400 uppercase font-bold tracking-wider text-[11px]">Card 3 // Portfolio Buyout</span>
-                  <span className="text-amber-300 font-bold bg-amber-950/80 px-2 py-0.5 rounded border border-amber-500/30 text-[10px]">
-                    NAV ANCHOR
-                  </span>
-                </div>
-                <h4 className="text-xs font-bold text-white uppercase tracking-wider">SIMULATED STRATEGIC BUYOUT</h4>
-                <span className="text-xs text-amber-300/80 block mt-0.5 font-sans font-normal">NAV Anchor</span>
-              </div>
-              <div className="pt-2 border-t border-white/10">
-                <span className="text-xl sm:text-2xl font-black font-mono tracking-tight text-amber-300 mt-2 break-words leading-snug block">
-                  {simStrategicBuyoutAnchor}
-                </span>
-                <span className="text-[11px] text-slate-400 mt-1 block">
-                  Dual-track buyout anchor ({simTrack1Count} T1 @ $4.5k + {simTrack2Count} T2 @ $14.5k)
-                </span>
-              </div>
-            </div>
-
-            {/* Card 4: SIMULATED DISTRESS CASH FLOOR */}
-            <div className="min-h-[140px] flex flex-col justify-between p-4 bg-black/70 border border-red-500/40 rounded-xl hover:border-red-400 transition-colors shadow-md">
-              <div>
-                <div className="flex items-center justify-between text-xs mb-1">
-                  <span className="text-red-400 uppercase font-bold tracking-wider text-[11px]">Card 4 // Liquidation</span>
-                  <span className="text-red-300 font-bold bg-red-950/80 px-2 py-0.5 rounded border border-red-500/30 text-[10px]">
-                    FLOOR
-                  </span>
-                </div>
-                <h4 className="text-xs font-bold text-white uppercase tracking-wider">SIMULATED DISTRESS CASH FLOOR</h4>
-                <span className="text-xs text-red-300/80 block mt-0.5 font-sans font-normal">Liquidation Reserve</span>
-              </div>
-              <div className="pt-2 border-t border-white/10">
-                <span className="text-xl sm:text-2xl font-black font-mono tracking-tight text-red-400 mt-2 break-words leading-snug block">
-                  {simDistressCashFloor}
-                </span>
-                <span className="text-[11px] text-slate-400 mt-1 block">
-                  40–60% buyer discount liquidation scenario
-                </span>
-              </div>
-            </div>
-          </div>
-
-          {/* Legal Disclaimer */}
-          <div className="pt-3 border-t border-white/10 flex items-start gap-2.5 text-xs text-slate-400">
-            <AlertTriangle size={15} className="text-amber-400 shrink-0 mt-0.5" />
-            <p className="font-mono text-[11px] leading-relaxed text-amber-200/90">
-              HYPOTHETICAL TARGET PROJECTION ONLY — DEMONSTRATES POTENTIAL PORTFOLIO VALUATION AT SCALE — NOT AN APPRAISAL OR REVENUE GUARANTEE.
-            </p>
-          </div>
-        </div>
+      <div className="border border-white/10 bg-black/60 rounded-2xl p-5 flex items-start gap-3.5 text-xs text-slate-400 mb-16">
+        <AlertTriangle size={18} className="text-amber-400 shrink-0 mt-0.5" />
+        <p className="leading-relaxed">
+          <strong className="text-slate-300">INTERNAL SCENARIO MODELING ONLY — PRE-REVENUE ASSET PORTFOLIO — VALUES ARE ESTIMATES FOR MANAGEMENT STRATEGY AND NOT GUARANTEED MARKET APPRAISALS.</strong>{' '}
+          All digital vehicles are pre-revenue interactive concept demos and source-code blueprints using simulated data. These benchmarks represent replacement cost estimates, orderly non-exclusive licensing models, and strategic exclusive buyout ceilings.
+        </p>
       </div>
-
-        {/* COMPLIANCE & LEGAL SAFETY LOCK */}
-        <div className="border border-white/10 bg-black/60 rounded-2xl p-5 flex items-start gap-3.5 text-xs text-slate-400">
-          <AlertTriangle size={18} className="text-amber-400 shrink-0 mt-0.5" />
-          <p className="leading-relaxed">
-            <strong className="text-slate-300">INTERNAL SCENARIO MODELING ONLY — PRE-REVENUE ASSET PORTFOLIO — VALUES ARE ESTIMATES FOR MANAGEMENT STRATEGY AND NOT GUARANTEED MARKET APPRAISALS.</strong>{' '}
-            All digital vehicles are pre-revenue interactive concept demos and source-code blueprints using simulated data. These benchmarks represent replacement cost estimates, orderly non-exclusive licensing models, and strategic exclusive buyout ceilings.
-          </p>
-        </div>
-      </div>
+    </div>
   );
 };
 
