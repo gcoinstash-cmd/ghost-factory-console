@@ -11,7 +11,12 @@ import {
   ArrowUpRight,
   Maximize2,
   Activity,
-  Rocket
+  Rocket,
+  Minus,
+  Plus,
+  Gauge,
+  Sparkles,
+  Zap
 } from 'lucide-react';
 
 interface Screen7ValuationHubProps {
@@ -52,15 +57,71 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
     }).format(val);
   };
 
-  const getScenarioLabel = (pct: number) => {
-    if (pct <= 10) return { label: 'Distress Liquidation Realization ($128.0k)', color: 'text-red-400 bg-red-950/80 border-red-500/40' };
-    if (pct <= 35) return { label: 'Dual-Track Buyout Anchor Target ($721.0k)', color: 'text-amber-400 bg-amber-950/80 border-amber-500/40' };
-    if (pct <= 65) return { label: 'Dev Agency Replacement Benchmark ($1.36M mid)', color: 'text-cyan-400 bg-cyan-950/80 border-cyan-500/40' };
-    if (pct <= 85) return { label: 'Strategic Acquisition Entry ($1.49M+)', color: 'text-purple-400 bg-purple-950/80 border-purple-500/40' };
-    return { label: 'Strategic Deep-Tech Monopoly Ceiling ($2.85M+)', color: 'text-pink-400 bg-pink-950/80 border-pink-500/40' };
+  const getScenarioTheme = (pct: number) => {
+    if (pct <= 10) {
+      return { 
+        label: 'Distress Liquidation Realization ($128.0k)', 
+        color: 'text-red-400 bg-red-950/80 border-red-500/40',
+        textColor: 'text-red-400',
+        borderColor: 'border-red-500/50',
+        glow: 'rgba(239, 68, 68, 0.4)',
+        thumbBorder: '#ef4444',
+        shadowColor: 'rgba(239, 68, 68, 0.8)',
+      };
+    }
+    if (pct <= 35) {
+      return { 
+        label: 'Dual-Track Buyout Anchor Target ($721.0k)', 
+        color: 'text-amber-400 bg-amber-950/80 border-amber-500/40',
+        textColor: 'text-amber-400',
+        borderColor: 'border-amber-500/50',
+        glow: 'rgba(245, 158, 11, 0.4)',
+        thumbBorder: '#f59e0b',
+        shadowColor: 'rgba(245, 158, 11, 0.8)',
+      };
+    }
+    if (pct <= 65) {
+      return { 
+        label: 'Dev Agency Replacement Benchmark ($1.36M mid)', 
+        color: 'text-cyan-400 bg-cyan-950/80 border-cyan-500/40',
+        textColor: 'text-cyan-400',
+        borderColor: 'border-cyan-500/50',
+        glow: 'rgba(6, 182, 212, 0.4)',
+        thumbBorder: '#06b6d4',
+        shadowColor: 'rgba(6, 182, 212, 0.8)',
+      };
+    }
+    if (pct <= 85) {
+      return { 
+        label: 'Strategic Acquisition Entry ($1.49M+)', 
+        color: 'text-purple-400 bg-purple-950/80 border-purple-500/40',
+        textColor: 'text-purple-400',
+        borderColor: 'border-purple-500/50',
+        glow: 'rgba(168, 85, 247, 0.4)',
+        thumbBorder: '#a855f7',
+        shadowColor: 'rgba(168, 85, 247, 0.8)',
+      };
+    }
+    return { 
+      label: 'Strategic Deep-Tech Monopoly Ceiling ($2.85M+)', 
+      color: 'text-pink-400 bg-pink-950/80 border-pink-500/40',
+      textColor: 'text-pink-400',
+      borderColor: 'border-pink-500/50',
+      glow: 'rgba(236, 72, 153, 0.4)',
+      thumbBorder: '#ec4899',
+      shadowColor: 'rgba(236, 72, 153, 0.8)',
+    };
   };
 
-  const scenarioLabel = getScenarioLabel(sliderVal);
+  const scenarioTheme = getScenarioTheme(sliderVal);
+
+  const STRESS_PRESETS = [
+    { label: 'DISTRESS FLOOR', pct: 0, val: '$128.0k', tag: '0%', activeClass: 'bg-red-500 text-black border-red-400 shadow-lg shadow-red-500/30 font-black', idleClass: 'bg-black/60 text-red-400 border-red-500/40 hover:bg-red-500/20' },
+    { label: 'BUYOUT ANCHOR', pct: 22, val: '$721.0k', tag: '22%', activeClass: 'bg-amber-500 text-black border-amber-400 shadow-lg shadow-amber-500/30 font-black', idleClass: 'bg-black/60 text-amber-400 border-amber-500/40 hover:bg-amber-500/20' },
+    { label: 'DEV REBUILD', pct: 45, val: '$1.36M', tag: '45%', activeClass: 'bg-cyan-500 text-black border-cyan-400 shadow-lg shadow-cyan-500/30 font-black', idleClass: 'bg-black/60 text-cyan-400 border-cyan-500/40 hover:bg-cyan-500/20' },
+    { label: 'STRATEGIC ASK', pct: 75, val: '$2.17M', tag: '75%', activeClass: 'bg-purple-500 text-black border-purple-400 shadow-lg shadow-purple-500/30 font-black', idleClass: 'bg-black/60 text-purple-400 border-purple-500/40 hover:bg-purple-500/20' },
+    { label: 'MONOPOLY CEILING', pct: 100, val: '$2.85M+', tag: '100%', activeClass: 'bg-pink-500 text-black border-pink-400 shadow-lg shadow-pink-500/30 font-black', idleClass: 'bg-black/60 text-pink-400 border-pink-500/40 hover:bg-pink-500/20' },
+  ];
 
   return (
     <div className="space-y-8 font-mono pb-16">
@@ -841,15 +902,16 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
           </div>
 
           {/* Module 5: Interactive Scenario Stress-Tester */}
-          <div className="col-span-1 md:col-span-2 bg-[#111114] border-2 border-emerald-500/50 rounded-2xl p-6 hover:border-emerald-400 transition-colors shadow-xl relative overflow-hidden">
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-white/10">
+          <div className="col-span-1 md:col-span-2 bg-[#111114] border-2 border-emerald-500/50 rounded-2xl p-6 hover:border-emerald-400 transition-all shadow-2xl relative overflow-hidden space-y-6">
+            <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-4 border-b border-white/10">
               <div>
-                <div className="flex items-center gap-2 mb-1">
+                <div className="flex flex-wrap items-center gap-2 mb-1.5">
                   <span className="text-xs font-black uppercase tracking-wider text-emerald-400 flex items-center gap-1.5">
                     <Sliders size={14} /> MODULE 5 // DYNAMIC STRESS-TESTER
                   </span>
-                  <span className={`text-[11px] font-bold px-2 py-0.5 rounded border ${scenarioLabel.color}`}>
-                    {scenarioLabel.label}
+                  <span className={`text-[11px] font-bold px-2.5 py-0.5 rounded-full border ${scenarioTheme.color} flex items-center gap-1.5 shadow-sm`}>
+                    <span className="w-1.5 h-1.5 rounded-full bg-current animate-pulse" />
+                    {scenarioTheme.label}
                   </span>
                 </div>
                 <h3 className="text-lg font-black text-white">Interactive Scenario Stress-Tester</h3>
@@ -858,43 +920,198 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
                 </p>
               </div>
 
-              <div className="bg-black/80 border border-emerald-500/50 rounded-xl px-5 py-3 text-right shrink-0">
-                <span className="text-xs text-slate-400 uppercase font-mono block">Projected Portfolio Realization</span>
-                <span className="text-2xl sm:text-3xl font-black text-emerald-400 font-mono tracking-tight block">
+              {/* Dynamic Readout Cockpit */}
+              <div className="bg-black/90 border-2 border-emerald-500/50 rounded-2xl p-4 text-right shrink-0 shadow-lg shadow-emerald-500/10 min-w-[240px]">
+                <div className="flex items-center justify-between text-[11px] text-slate-400 uppercase font-mono pb-1 border-b border-white/10 mb-1.5">
+                  <span className="flex items-center gap-1">
+                    <Activity size={12} className={scenarioTheme.textColor} /> Stress Level
+                  </span>
+                  <span className={`font-bold font-mono ${scenarioTheme.textColor}`}>{sliderVal}% Index</span>
+                </div>
+                <span className={`text-2xl sm:text-3xl font-black font-mono tracking-tight block ${scenarioTheme.textColor}`}>
                   {formatCurrency(projectedVal)}
                 </span>
-                <span className="text-[11px] text-slate-400 font-mono">
-                  Stress Position: {sliderVal}% Realization Index
-                </span>
+                <div className="flex items-center justify-between text-[10px] text-slate-400 font-mono pt-1">
+                  <span>{(projectedVal / floorVal).toFixed(2)}x Floor Multiple</span>
+                  <span className="text-emerald-400 font-bold">+${Math.round((projectedVal - floorVal) / 1000)}k Lift</span>
+                </div>
               </div>
             </div>
 
-            {/* Range Slider Control */}
-            <div className="mt-6 space-y-3">
+            {/* Quick-Jump Milestone Preset Soundboard */}
+            <div className="space-y-2">
+              <div className="flex items-center justify-between text-xs text-slate-400 font-mono">
+                <span className="uppercase tracking-wider flex items-center gap-1.5 text-[11px] font-bold text-slate-300">
+                  <Zap size={13} className="text-amber-400" /> Milestone Quick-Presets:
+                </span>
+                <span className="text-[11px] text-slate-400 hidden sm:inline">Click any preset to snap slider</span>
+              </div>
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2">
+                {STRESS_PRESETS.map((preset) => {
+                  const isSelected = Math.abs(sliderVal - preset.pct) <= 4;
+                  return (
+                    <button
+                      key={preset.label}
+                      onClick={() => setSliderVal(preset.pct)}
+                      className={`px-3 py-2 rounded-xl text-xs font-mono transition-all cursor-pointer border flex flex-col items-center justify-center gap-0.5 active:scale-95 ${
+                        isSelected ? preset.activeClass : preset.idleClass
+                      }`}
+                    >
+                      <div className="flex items-center gap-1.5">
+                        <span className="text-[10px] font-bold opacity-80">[{preset.tag}]</span>
+                        <span className="font-black text-[11px] tracking-wide">{preset.val}</span>
+                      </div>
+                      <span className="text-[9px] uppercase tracking-wider opacity-90 truncate max-w-full">
+                        {preset.label}
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Glowing Range Slider Cockpit Control */}
+            <div className="bg-[#0c0d12] border border-white/15 rounded-2xl p-4 sm:p-5 shadow-2xl space-y-4">
               <div className="flex items-center justify-between text-xs font-mono">
-                <span className="text-red-400 font-bold">0% (Distress Floor $128.0k)</span>
-                <span className="text-amber-400 font-bold hidden sm:inline">22% Anchor ($721.0k)</span>
-                <span className="text-cyan-400 font-bold hidden md:inline">45% Dev Rebuild ($1.36M)</span>
-                <span className="text-purple-400 font-bold">100% (Strategic Monopoly $2.85M+)</span>
+                <div className="flex items-center gap-2">
+                  <span className="text-xs font-bold text-slate-300 uppercase tracking-wider flex items-center gap-1.5">
+                    <Gauge size={14} className="text-cyan-400" /> Realization Regulator
+                  </span>
+                  <span className="px-2 py-0.5 rounded bg-white/10 text-white font-mono text-[11px] font-bold">
+                    {sliderVal}%
+                  </span>
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <button
+                    onClick={() => setSliderVal((prev) => Math.max(0, prev - 5))}
+                    className="px-2.5 py-1 rounded bg-black/60 hover:bg-white/15 text-slate-300 hover:text-white border border-white/10 text-[10px] font-mono font-bold transition-all cursor-pointer active:scale-95"
+                    title="Step backward 5%"
+                  >
+                    -5%
+                  </button>
+                  <button
+                    onClick={() => setSliderVal((prev) => Math.min(100, prev + 5))}
+                    className="px-2.5 py-1 rounded bg-black/60 hover:bg-white/15 text-slate-300 hover:text-white border border-white/10 text-[10px] font-mono font-bold transition-all cursor-pointer active:scale-95"
+                    title="Step forward 5%"
+                  >
+                    +5%
+                  </button>
+                </div>
               </div>
 
-              <input
-                type="range"
-                min="0"
-                max="100"
-                step="1"
-                value={sliderVal}
-                onChange={(e) => setSliderVal(Number(e.target.value))}
-                className="w-full h-3 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-emerald-400 hover:accent-emerald-300 transition-all"
-                title="Interactive Portfolio Stress-Tester Slider"
-              />
+              {/* Slider Track with Fine-Tuning Step Controls */}
+              <div className="flex items-center gap-3">
+                <button
+                  onClick={() => setSliderVal((prev) => Math.max(0, prev - 1))}
+                  className="w-8 h-8 rounded-lg bg-black/70 hover:bg-emerald-500/20 text-slate-300 hover:text-emerald-400 border border-white/15 flex items-center justify-center transition-all cursor-pointer shrink-0 active:scale-95 shadow"
+                  title="Fine-tune -1%"
+                >
+                  <Minus size={14} />
+                </button>
 
-              <div className="flex items-center justify-between text-xs text-slate-400 font-mono">
-                <span>$128,000</span>
-                <span className="text-slate-200 font-semibold text-center">
-                  Live Dynamic Readout: {formatCurrency(projectedVal)} @ {sliderVal}%
+                <div className="relative flex-1 py-3 flex items-center">
+                  {/* Glowing Underlay Fill Track */}
+                  <div className="absolute inset-x-0 h-4 bg-slate-950 rounded-full border border-slate-700/60 overflow-hidden shadow-inner">
+                    {/* Active Gradient Fill Bar */}
+                    <div
+                      className="h-full rounded-full transition-all duration-75 relative"
+                      style={{
+                        width: `${sliderVal}%`,
+                        background: 'linear-gradient(90deg, #ef4444 0%, #f59e0b 22%, #06b6d4 45%, #a855f7 75%, #ec4899 100%)',
+                        boxShadow: `0 0 16px ${scenarioTheme.shadowColor}`
+                      }}
+                    >
+                      {/* High-Tech Shimmer highlight on fill */}
+                      <div className="absolute inset-0 bg-white/20 animate-pulse" />
+                    </div>
+                  </div>
+
+                  {/* Tick Marks on track at 0%, 22%, 45%, 75%, 100% */}
+                  <div className="absolute inset-x-0 h-4 pointer-events-none flex justify-between items-center px-1">
+                    <span className="w-0.5 h-2.5 bg-white/40 rounded-full" />
+                    <span className="w-0.5 h-2.5 bg-white/40 rounded-full" style={{ left: '22%', position: 'absolute' }} />
+                    <span className="w-0.5 h-2.5 bg-white/40 rounded-full" style={{ left: '45%', position: 'absolute' }} />
+                    <span className="w-0.5 h-2.5 bg-white/40 rounded-full" style={{ left: '75%', position: 'absolute' }} />
+                    <span className="w-0.5 h-2.5 bg-white/40 rounded-full" />
+                  </div>
+
+                  {/* HTML Range Slider (overlayed with transparent track and prominent styled thumb) */}
+                  <input
+                    type="range"
+                    min="0"
+                    max="100"
+                    step="1"
+                    value={sliderVal}
+                    onChange={(e) => setSliderVal(Number(e.target.value))}
+                    className="relative z-10 w-full h-8 bg-transparent appearance-none cursor-grab active:cursor-grabbing focus:outline-none
+                      [&::-webkit-slider-runnable-track]:bg-transparent
+                      [&::-webkit-slider-thumb]:appearance-none 
+                      [&::-webkit-slider-thumb]:w-7 
+                      [&::-webkit-slider-thumb]:h-7 
+                      [&::-webkit-slider-thumb]:rounded-full 
+                      [&::-webkit-slider-thumb]:bg-white 
+                      [&::-webkit-slider-thumb]:border-4 
+                      [&::-webkit-slider-thumb]:border-emerald-400
+                      [&::-webkit-slider-thumb]:shadow-[0_0_18px_rgba(16,185,129,0.9)]
+                      [&::-webkit-slider-thumb]:hover:scale-115 
+                      [&::-webkit-slider-thumb]:active:scale-95 
+                      [&::-webkit-slider-thumb]:transition-transform
+                      [&::-moz-range-track]:bg-transparent
+                      [&::-moz-range-thumb]:w-7 
+                      [&::-moz-range-thumb]:h-7 
+                      [&::-moz-range-thumb]:rounded-full 
+                      [&::-moz-range-thumb]:bg-white 
+                      [&::-moz-range-thumb]:border-4 
+                      [&::-moz-range-thumb]:border-emerald-400
+                      [&::-moz-range-thumb]:shadow-[0_0_18px_rgba(16,185,129,0.9)]"
+                    title="Interactive Portfolio Stress-Tester Slider"
+                  />
+                </div>
+
+                <button
+                  onClick={() => setSliderVal((prev) => Math.min(100, prev + 1))}
+                  className="w-8 h-8 rounded-lg bg-black/70 hover:bg-emerald-500/20 text-slate-300 hover:text-emerald-400 border border-white/15 flex items-center justify-center transition-all cursor-pointer shrink-0 active:scale-95 shadow"
+                  title="Fine-tune +1%"
+                >
+                  <Plus size={14} />
+                </button>
+              </div>
+
+              {/* Interactive Milestone Zone Cards */}
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 pt-2">
+                {STRESS_PRESETS.map((preset) => {
+                  const isPassed = sliderVal >= preset.pct;
+                  const isTarget = Math.abs(sliderVal - preset.pct) <= 4;
+                  return (
+                    <div
+                      key={preset.label}
+                      onClick={() => setSliderVal(preset.pct)}
+                      className={`p-2.5 rounded-xl border text-center transition-all cursor-pointer ${
+                        isTarget 
+                          ? `${preset.activeClass} scale-[1.02]`
+                          : isPassed 
+                            ? 'bg-black/60 border-white/25 text-slate-200 hover:border-white/40' 
+                            : 'bg-black/40 border-white/5 text-slate-500 opacity-60 hover:opacity-100'
+                      }`}
+                    >
+                      <span className="text-[10px] font-bold block">{preset.tag} Milestone</span>
+                      <span className="text-xs font-black block font-mono mt-0.5">{preset.val}</span>
+                      <span className="text-[9px] uppercase tracking-wider block opacity-80 truncate mt-0.5">
+                        {preset.label}
+                      </span>
+                    </div>
+                  );
+                })}
+              </div>
+
+              {/* Dynamic Bottom Readout Bar */}
+              <div className="flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 font-mono gap-1 pt-3 border-t border-white/10">
+                <span className="text-red-400 font-bold">$128,000 (Liquidation Floor)</span>
+                <span className="text-slate-100 font-black text-center flex items-center gap-1.5">
+                  <Sparkles size={13} className={scenarioTheme.textColor} />
+                  Live Dynamic Readout: <span className={scenarioTheme.textColor}>{formatCurrency(projectedVal)}</span> @ {sliderVal}%
                 </span>
-                <span>$2,850,000</span>
+                <span className="text-pink-400 font-bold">$2,850,000+ (Monopoly Ceiling)</span>
               </div>
             </div>
           </div>
