@@ -372,7 +372,7 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
           </div>
         </div>
 
-        <div className="bg-[#111114] border-2 border-purple-500/40 rounded-2xl p-6 hover:border-purple-400/80 transition-colors shadow-2xl relative overflow-hidden space-y-6">
+        <div className="bg-[#111114] border-2 border-purple-500/40 rounded-2xl p-6 hover:border-purple-400/80 transition-colors shadow-2xl relative overflow-visible space-y-6">
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-4 border-b border-white/10">
             <div>
               <div className="flex items-center gap-2 mb-1">
@@ -462,89 +462,89 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
 
           {/* Descending Output Cards (Largest Left -> Smallest Right) */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-2">
-            {/* Card 1: SIMULATED STRATEGIC CEILING */}
-            <div className="min-h-[140px] flex flex-col justify-between p-4 bg-black/70 border border-purple-500/40 rounded-xl hover:border-purple-400 transition-colors shadow-md">
+            {/* Card 1: SIMULATED ENTERPRISE MARKET VALUATION */}
+            <div className="flex flex-col justify-between p-5 pb-6 min-h-[260px] rounded-xl border border-purple-500/40 bg-black/70 hover:border-purple-400 transition-colors shadow-md overflow-visible">
               <div>
-                <div className="flex items-center justify-between text-xs mb-1">
+                <div className="flex items-center justify-between text-xs mb-1.5">
                   <span className="text-purple-400 uppercase font-bold tracking-wider text-[11px]">Card 1 // Monopoly</span>
-                  <span className="text-purple-300 font-bold bg-purple-950/80 px-2 py-0.5 rounded border border-purple-500/30 text-[10px]">
-                    CEILING
+                  <span className="text-purple-300 font-bold bg-purple-950/80 px-2 py-0.5 rounded border border-purple-500/30 text-[10px] font-mono tracking-wider uppercase">
+                    MONOPOLY PREMIUM
                   </span>
                 </div>
-                <h4 className="text-xs font-bold text-white uppercase tracking-wider">SIMULATED STRATEGIC CEILING</h4>
-                <span className="text-xs text-purple-300/80 block mt-0.5 font-sans font-normal">Monopoly Premium</span>
+                <h4 className="text-xs font-bold text-white uppercase tracking-wider">SIMULATED ENTERPRISE MARKET VALUATION</h4>
+                <span className="text-xs text-purple-300/80 block mt-0.5 font-sans font-normal">Strategic Ceiling (Monopoly Premium)</span>
               </div>
-              <div className="pt-2 border-t border-white/10">
-                <span className="text-xl sm:text-2xl font-black font-mono tracking-tight text-purple-300 mt-2 break-words leading-snug block">
+              <div className="pt-3 border-t border-white/10 mt-auto">
+                <span className="text-xl sm:text-2xl font-black font-mono tracking-tight text-purple-300 break-words leading-normal block">
                   {simStrategicCeiling}
                 </span>
-                <span className="text-[11px] text-slate-400 mt-1 block">
+                <span className="text-xs text-slate-400 mt-2 block leading-relaxed">
                   Deep-tech monopoly premium at {fleetCount} scale
                 </span>
               </div>
             </div>
 
             {/* Card 2: SIMULATED DEV REPLACEMENT */}
-            <div className="min-h-[140px] flex flex-col justify-between p-4 bg-black/70 border border-cyan-500/40 rounded-xl hover:border-cyan-400 transition-colors shadow-md">
+            <div className="flex flex-col justify-between p-5 pb-6 min-h-[260px] rounded-xl border border-cyan-500/40 bg-black/70 hover:border-cyan-400 transition-colors shadow-md overflow-visible">
               <div>
-                <div className="flex items-center justify-between text-xs mb-1">
+                <div className="flex items-center justify-between text-xs mb-1.5">
                   <span className="text-cyan-400 uppercase font-bold tracking-wider text-[11px]">Card 2 // Dev Agency</span>
-                  <span className="text-cyan-300 font-bold bg-cyan-950/80 px-2 py-0.5 rounded border border-cyan-500/30 text-[10px]">
+                  <span className="text-cyan-300 font-bold bg-cyan-950/80 px-2 py-0.5 rounded border border-cyan-500/30 text-[10px] font-mono tracking-wider uppercase">
                     REPLACEMENT
                   </span>
                 </div>
                 <h4 className="text-xs font-bold text-white uppercase tracking-wider">SIMULATED DEV REPLACEMENT</h4>
                 <span className="text-xs text-cyan-300/80 block mt-0.5 font-sans font-normal">Agency Benchmarks</span>
               </div>
-              <div className="pt-2 border-t border-white/10">
-                <span className="text-xl sm:text-2xl font-black font-mono tracking-tight text-cyan-300 mt-2 break-words leading-snug block">
+              <div className="pt-3 border-t border-white/10 mt-auto">
+                <span className="text-xl sm:text-2xl font-black font-mono tracking-tight text-cyan-300 break-words leading-normal block">
                   {simDevReplacement}
                 </span>
-                <span className="text-[11px] text-slate-400 mt-1 block">
+                <span className="text-xs text-slate-400 mt-2 block leading-relaxed">
                   Agency rebuild benchmark ({Math.round(fleetCount * 38).toLocaleString()}+ hrs @ $150–$250/hr)
                 </span>
               </div>
             </div>
 
             {/* Card 3: SIMULATED STRATEGIC BUYOUT */}
-            <div className="min-h-[140px] flex flex-col justify-between p-4 bg-black/70 border border-amber-500/40 rounded-xl hover:border-amber-400 transition-colors shadow-md">
+            <div className="flex flex-col justify-between p-5 pb-6 min-h-[260px] rounded-xl border border-amber-500/40 bg-black/70 hover:border-amber-400 transition-colors shadow-md overflow-visible">
               <div>
-                <div className="flex items-center justify-between text-xs mb-1">
+                <div className="flex items-center justify-between text-xs mb-1.5">
                   <span className="text-amber-400 uppercase font-bold tracking-wider text-[11px]">Card 3 // Portfolio Buyout</span>
-                  <span className="text-amber-300 font-bold bg-amber-950/80 px-2 py-0.5 rounded border border-amber-500/30 text-[10px]">
+                  <span className="text-amber-300 font-bold bg-amber-950/80 px-2 py-0.5 rounded border border-amber-500/30 text-[10px] font-mono tracking-wider uppercase">
                     NAV ANCHOR
                   </span>
                 </div>
                 <h4 className="text-xs font-bold text-white uppercase tracking-wider">SIMULATED STRATEGIC BUYOUT</h4>
                 <span className="text-xs text-amber-300/80 block mt-0.5 font-sans font-normal">NAV Anchor</span>
               </div>
-              <div className="pt-2 border-t border-white/10">
-                <span className="text-xl sm:text-2xl font-black font-mono tracking-tight text-amber-300 mt-2 break-words leading-snug block">
+              <div className="pt-3 border-t border-white/10 mt-auto">
+                <span className="text-xl sm:text-2xl font-black font-mono tracking-tight text-amber-300 break-words leading-normal block">
                   {simStrategicBuyoutAnchor}
                 </span>
-                <span className="text-[11px] text-slate-400 mt-1 block">
+                <span className="text-xs text-slate-400 mt-2 block leading-relaxed">
                   Dual-track buyout anchor ({simTrack1Count} T1 @ $4.5k + {simTrack2Count} T2 @ $14.5k)
                 </span>
               </div>
             </div>
 
             {/* Card 4: SIMULATED DISTRESS CASH FLOOR */}
-            <div className="min-h-[140px] flex flex-col justify-between p-4 bg-black/70 border border-red-500/40 rounded-xl hover:border-red-400 transition-colors shadow-md">
+            <div className="flex flex-col justify-between p-5 pb-6 min-h-[260px] rounded-xl border border-red-500/40 bg-black/70 hover:border-red-400 transition-colors shadow-md overflow-visible">
               <div>
-                <div className="flex items-center justify-between text-xs mb-1">
+                <div className="flex items-center justify-between text-xs mb-1.5">
                   <span className="text-red-400 uppercase font-bold tracking-wider text-[11px]">Card 4 // Liquidation</span>
-                  <span className="text-red-300 font-bold bg-red-950/80 px-2 py-0.5 rounded border border-red-500/30 text-[10px]">
+                  <span className="text-red-300 font-bold bg-red-950/80 px-2 py-0.5 rounded border border-red-500/30 text-[10px] font-mono tracking-wider uppercase">
                     FLOOR
                   </span>
                 </div>
                 <h4 className="text-xs font-bold text-white uppercase tracking-wider">SIMULATED DISTRESS CASH FLOOR</h4>
                 <span className="text-xs text-red-300/80 block mt-0.5 font-sans font-normal">Liquidation Reserve</span>
               </div>
-              <div className="pt-2 border-t border-white/10">
-                <span className="text-xl sm:text-2xl font-black font-mono tracking-tight text-red-400 mt-2 break-words leading-snug block">
+              <div className="pt-3 border-t border-white/10 mt-auto">
+                <span className="text-xl sm:text-2xl font-black font-mono tracking-tight text-red-400 break-words leading-normal block">
                   {simDistressCashFloor}
                 </span>
-                <span className="text-[11px] text-slate-400 mt-1 block">
+                <span className="text-xs text-slate-400 mt-2 block leading-relaxed">
                   40–60% buyer discount liquidation scenario
                 </span>
               </div>
