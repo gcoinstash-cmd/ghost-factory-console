@@ -5,19 +5,13 @@ import {
   Server, 
   Database, 
   Award, 
-  Compass, 
-  Cpu, 
   DollarSign, 
-  Wrench, 
-  LayoutGrid,
   ChevronDown,
   ChevronUp,
   Lock,
   Unlock,
   ShieldCheck,
-  X,
-  Tag,
-  TrendingUp
+  X
 } from 'lucide-react';
 
 // ============================================================================
@@ -118,7 +112,7 @@ function Audit360Badge() {
                   <div className="text-slate-300 text-xs mt-0.5">
                     Commit: <span className="text-cyan-400 font-bold">7e43696</span> &nbsp;|&nbsp;
                     Build: <span className="text-cyan-400 font-bold">index-DncAsvPE.js</span> &nbsp;|&nbsp;
-                    v<span className="text-emerald-400 font-bold">1.5.4</span>
+                    v<span className="text-emerald-400 font-bold">1.5.5</span>
                   </div>
                 </div>
               </div>
@@ -273,7 +267,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
             className="hidden xl:flex items-center gap-1.5 px-2.5 py-1.5 rounded bg-emerald-500/15 border border-emerald-500/40 text-emerald-300 font-mono text-xs font-bold"
             title="Production Diligence Freeze Lock"
           >
-            <span>Build: v1.5.4</span>
+            <span>Build: v1.5.5</span>
           </div>
 
           <button
@@ -303,108 +297,108 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
         </React.Suspense>
       ) : (
         /* SECTION 2 VALUATION HEADER (DESCENDING: STRATEGIC CEILING -> DEV REPLACEMENT -> STRATEGIC BUYOUT -> DISTRESS FLOOR) */
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 py-3 border-b border-white/10 text-xs sm:text-sm w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-3.5 py-3 border-b border-white/10 text-xs sm:text-sm w-full">
           {/* Card 1: Strategic Acquisition Ceiling */}
-          <div className="bg-black/75 border border-pink-500/40 hover:border-pink-400 transition-colors w-full p-5 flex flex-col justify-between min-h-[230px] rounded-xl shadow-lg">
-            <div className="flex flex-col">
-              <span className="self-start px-2.5 py-1 rounded text-[10px] font-mono font-bold tracking-wider text-pink-400 bg-pink-950/80 border border-pink-500/40 inline-flex items-center justify-center leading-none shrink-0">
+          <div className="flex flex-col items-center justify-between p-4 rounded-xl border border-pink-500/40 hover:border-pink-400 transition-colors min-h-[230px] bg-zinc-950/70 shadow-lg w-full">
+            <div className="flex flex-col items-center w-full">
+              <span className="inline-flex items-center justify-center px-3 py-1 rounded-md text-[10px] font-mono font-bold tracking-wider uppercase mx-auto mb-2 text-pink-400 bg-pink-950/80 border border-pink-500/40">
                 MONOPOLY PREMIUM
               </span>
-              <h4 className="text-xs font-black tracking-wider uppercase text-zinc-200 mt-2 whitespace-normal leading-snug">
+              <h4 className="text-xs font-black tracking-widest uppercase text-zinc-300 text-center mb-1.5 whitespace-normal leading-snug">
                 STRATEGIC ACQUISITION CEILING
               </h4>
-              <span className="text-2xl sm:text-3xl font-mono font-black tracking-tight my-2 text-pink-400 block">
+              <span className="text-2xl xl:text-3xl font-mono font-black tracking-tight text-center my-2 text-pink-400 block">
                 $1.49M – $2.85M+
               </span>
-              <p className="text-xs sm:text-[13px] text-zinc-300 font-medium leading-relaxed">
+              <p className="text-xs text-zinc-400 text-center leading-relaxed px-1">
                 Deep-tech niche enterprise acquisition
               </p>
             </div>
-            <span className="text-xs font-mono text-zinc-400 mt-auto pt-2 border-t border-zinc-800/80 block">
+            <span className="text-[11px] font-mono text-zinc-500 text-center mt-auto pt-2 border-t border-zinc-800/80 block w-full">
               Full catalog monopoly buyout
             </span>
           </div>
 
           {/* Card 2: Dev Agency Replacement Benchmark */}
-          <div className="bg-black/75 border border-cyan-500/40 hover:border-cyan-400 transition-colors w-full p-5 flex flex-col justify-between min-h-[230px] rounded-xl shadow-lg">
-            <div className="flex flex-col">
-              <span className="self-start px-2.5 py-1 rounded text-[10px] font-mono font-bold tracking-wider text-cyan-400 bg-cyan-950/80 border border-cyan-500/40 inline-flex items-center justify-center leading-none shrink-0">
+          <div className="flex flex-col items-center justify-between p-4 rounded-xl border border-cyan-500/40 hover:border-cyan-400 transition-colors min-h-[230px] bg-zinc-950/70 shadow-lg w-full">
+            <div className="flex flex-col items-center w-full">
+              <span className="inline-flex items-center justify-center px-3 py-1 rounded-md text-[10px] font-mono font-bold tracking-wider uppercase mx-auto mb-2 text-cyan-400 bg-cyan-950/80 border border-cyan-500/40">
                 REPLACEMENT COST
               </span>
-              <h4 className="text-xs font-black tracking-wider uppercase text-zinc-200 mt-2 whitespace-normal leading-snug">
+              <h4 className="text-xs font-black tracking-widest uppercase text-zinc-300 text-center mb-1.5 whitespace-normal leading-snug">
                 DEV AGENCY REPLACEMENT
               </h4>
-              <span className="text-2xl sm:text-3xl font-mono font-black tracking-tight my-2 text-cyan-400 block">
+              <span className="text-2xl xl:text-3xl font-mono font-black tracking-tight text-center my-2 text-cyan-400 block">
                 $965.0k – $1.76M
               </span>
-              <p className="text-xs sm:text-[13px] text-zinc-300 font-medium leading-relaxed">
+              <p className="text-xs text-zinc-400 text-center leading-relaxed px-1">
                 4,250+ engineering hours @ $150–$250/hr
               </p>
             </div>
-            <span className="text-xs font-mono text-zinc-400 mt-auto pt-2 border-t border-zinc-800/80 block">
+            <span className="text-[11px] font-mono text-zinc-500 text-center mt-auto pt-2 border-t border-zinc-800/80 block w-full">
               Benchmark recreation valuation
             </span>
           </div>
 
           {/* Card 3: Dual-Track Strategic Buyout Range */}
-          <div className="bg-black/75 border border-amber-500/40 hover:border-amber-400 transition-colors w-full p-5 flex flex-col justify-between min-h-[230px] rounded-xl shadow-lg">
-            <div className="flex flex-col">
-              <span className="self-start px-2.5 py-1 rounded text-[10px] font-mono font-bold tracking-wider text-amber-400 bg-amber-950/80 border border-amber-500/40 inline-flex items-center justify-center leading-none shrink-0">
+          <div className="flex flex-col items-center justify-between p-4 rounded-xl border border-amber-500/40 hover:border-amber-400 transition-colors min-h-[230px] bg-zinc-950/70 shadow-lg w-full">
+            <div className="flex flex-col items-center w-full">
+              <span className="inline-flex items-center justify-center px-3 py-1 rounded-md text-[10px] font-mono font-bold tracking-wider uppercase mx-auto mb-2 text-amber-400 bg-amber-950/80 border border-amber-500/40">
                 PORTFOLIO BUYOUT
               </span>
-              <h4 className="text-xs font-black tracking-wider uppercase text-zinc-200 mt-2 whitespace-normal leading-snug">
+              <h4 className="text-xs font-black tracking-widest uppercase text-zinc-300 text-center mb-1.5 whitespace-normal leading-snug">
                 STRATEGIC BUYOUT RANGE
               </h4>
-              <span className="text-2xl sm:text-3xl font-mono font-black tracking-tight my-2 text-amber-400 block">
+              <span className="text-2xl xl:text-3xl font-mono font-black tracking-tight text-center my-2 text-amber-400 block">
                 $608.0k – $1.04M
               </span>
-              <p className="text-xs sm:text-[13px] text-zinc-300 font-medium leading-relaxed">
+              <p className="text-xs text-zinc-400 text-center leading-relaxed px-1">
                 Anchor: $721.0k (86 T1 @ $4.5k + 28 Flagship @ $14.5k)
               </p>
             </div>
-            <span className="text-xs font-mono text-zinc-400 mt-auto pt-2 border-t border-zinc-800/80 block">
+            <span className="text-[11px] font-mono text-zinc-500 text-center mt-auto pt-2 border-t border-zinc-800/80 block w-full">
               Asset-by-asset baseline anchor
             </span>
           </div>
 
           {/* Card 4: Distress / Quick-Sale Cash Floor */}
-          <div className="bg-black/75 border border-emerald-500/40 hover:border-emerald-400 transition-colors w-full p-5 flex flex-col justify-between min-h-[230px] rounded-xl shadow-lg">
-            <div className="flex flex-col">
-              <span className="self-start px-2.5 py-1 rounded text-[10px] font-mono font-bold tracking-wider text-emerald-400 bg-emerald-950/80 border border-emerald-500/40 inline-flex items-center justify-center leading-none shrink-0">
+          <div className="flex flex-col items-center justify-between p-4 rounded-xl border border-emerald-500/40 hover:border-emerald-400 transition-colors min-h-[230px] bg-zinc-950/70 shadow-lg w-full">
+            <div className="flex flex-col items-center w-full">
+              <span className="inline-flex items-center justify-center px-3 py-1 rounded-md text-[10px] font-mono font-bold tracking-wider uppercase mx-auto mb-2 text-emerald-400 bg-emerald-950/80 border border-emerald-500/40">
                 LIQUIDATION
               </span>
-              <h4 className="text-xs font-black tracking-wider uppercase text-zinc-200 mt-2 whitespace-normal leading-snug">
+              <h4 className="text-xs font-black tracking-widest uppercase text-zinc-300 text-center mb-1.5 whitespace-normal leading-snug">
                 DISTRESS / QUICK-SALE FLOOR
               </h4>
-              <span className="text-2xl sm:text-3xl font-mono font-black tracking-tight my-2 text-emerald-400 block">
+              <span className="text-2xl xl:text-3xl font-mono font-black tracking-tight text-center my-2 text-emerald-400 block">
                 $128.0k – $246.0k
               </span>
-              <p className="text-xs sm:text-[13px] text-zinc-300 font-medium leading-relaxed">
+              <p className="text-xs text-zinc-400 text-center leading-relaxed px-1">
                 40–60% buyer discount quick realization
               </p>
             </div>
-            <span className="text-xs font-mono text-zinc-400 mt-auto pt-2 border-t border-zinc-800/80 block">
+            <span className="text-[11px] font-mono text-zinc-500 text-center mt-auto pt-2 border-t border-zinc-800/80 block w-full">
               Immediate liquidation cash floor
             </span>
           </div>
 
           {/* Card 5: Exclusive Vault Buyout */}
-          <div className="bg-black/75 border border-purple-500/40 hover:border-purple-400 transition-colors w-full p-5 flex flex-col justify-between min-h-[230px] rounded-xl shadow-lg">
-            <div className="flex flex-col">
-              <span className="self-start px-2.5 py-1 rounded text-[10px] font-mono font-bold tracking-wider text-purple-400 bg-purple-950/80 border border-purple-500/40 inline-flex items-center justify-center leading-none shrink-0">
+          <div className="flex flex-col items-center justify-between p-4 rounded-xl border border-purple-500/40 hover:border-purple-400 transition-colors min-h-[230px] bg-zinc-950/70 shadow-lg w-full">
+            <div className="flex flex-col items-center w-full">
+              <span className="inline-flex items-center justify-center px-3 py-1 rounded-md text-[10px] font-mono font-bold tracking-wider uppercase mx-auto mb-2 text-purple-400 bg-purple-950/80 border border-purple-500/40">
                 MONOPOLY PREMIUM
               </span>
-              <h4 className="text-xs font-black tracking-wider uppercase text-zinc-200 mt-2 whitespace-normal leading-snug">
+              <h4 className="text-xs font-black tracking-widest uppercase text-zinc-300 text-center mb-1.5 whitespace-normal leading-snug">
                 EXCLUSIVE VAULT BUYOUT
               </h4>
-              <span className="text-2xl sm:text-3xl font-mono font-black tracking-tight my-2 text-purple-400 block">
+              <span className="text-2xl xl:text-3xl font-mono font-black tracking-tight text-center my-2 text-purple-400 block">
                 $13.1k – $25.0k+
               </span>
-              <p className="text-xs sm:text-[13px] text-zinc-300 font-medium leading-relaxed">
+              <p className="text-xs text-zinc-400 text-center leading-relaxed px-1">
                 Average Exclusive Buyout / Vault (T1 + T2 Fleet Weighted)
               </p>
             </div>
-            <span className="text-xs font-mono text-zinc-400 mt-auto pt-2 border-t border-zinc-800/80 block">
+            <span className="text-[11px] font-mono text-zinc-500 text-center mt-auto pt-2 border-t border-zinc-800/80 block w-full">
               Includes IP Transfer + Sovereign Lockout
             </span>
           </div>
@@ -530,204 +524,155 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
         {/* Screen 1: Garage */}
         <button
           onClick={() => onViewChange('garage')}
-          className={`flex items-center justify-center gap-2.5 px-3 py-2.5 min-h-[56px] rounded-xl border transition-all text-center w-full cursor-pointer ${
+          className={`flex flex-col items-center justify-center text-center p-2.5 min-h-[58px] rounded-xl border transition-all cursor-pointer w-full ${
             currentView === 'garage'
               ? 'bg-emerald-500 text-black border-emerald-400 shadow-lg shadow-emerald-500/25'
               : 'bg-[#111114] text-slate-200 hover:text-white hover:bg-white/5 border-white/10 hover:border-emerald-500/30'
           }`}
           title="SCREEN 1: GARAGE (114)"
         >
-          <div className={`p-1.5 rounded-lg shrink-0 ${
-            currentView === 'garage' ? 'bg-black/20 text-black' : 'bg-emerald-950/80 text-emerald-400 border border-emerald-500/30'
+          <span className={`text-[10px] font-mono font-bold tracking-widest uppercase ${
+            currentView === 'garage' ? 'text-black/80' : 'text-zinc-400'
           }`}>
-            <LayoutGrid className="w-5 h-5 shrink-0" />
-          </div>
-          <div className="flex flex-col items-center justify-center text-center leading-tight min-w-0">
-            <span className={`text-[11px] font-mono font-bold tracking-wider uppercase ${
-              currentView === 'garage' ? 'text-black/80' : 'text-zinc-400'
-            }`}>
-              SCREEN 1
-            </span>
-            <span className={`text-xs sm:text-sm font-black tracking-wide uppercase whitespace-nowrap ${
-              currentView === 'garage' ? 'text-black' : 'text-zinc-100'
-            }`}>
-              GARAGE ({totalAssets})
-            </span>
-          </div>
+            SCREEN 1
+          </span>
+          <span className={`text-xs sm:text-[13px] font-black tracking-wide uppercase mt-0.5 whitespace-nowrap ${
+            currentView === 'garage' ? 'text-black' : 'text-zinc-100'
+          }`}>
+            GARAGE ({totalAssets})
+          </span>
         </button>
 
         {/* Screen 2: Intake */}
         <button
           onClick={() => onViewChange('factory')}
-          className={`flex items-center justify-center gap-2.5 px-3 py-2.5 min-h-[56px] rounded-xl border transition-all text-center w-full cursor-pointer ${
+          className={`flex flex-col items-center justify-center text-center p-2.5 min-h-[58px] rounded-xl border transition-all cursor-pointer w-full ${
             currentView === 'factory'
               ? 'bg-cyan-500 text-black border-cyan-400 shadow-lg shadow-cyan-500/25'
               : 'bg-[#111114] text-slate-200 hover:text-white hover:bg-white/5 border-white/10 hover:border-cyan-500/30'
           }`}
           title="SCREEN 2: INTAKE"
         >
-          <div className={`p-1.5 rounded-lg shrink-0 ${
-            currentView === 'factory' ? 'bg-black/20 text-black' : 'bg-cyan-950/80 text-cyan-400 border border-cyan-500/30'
+          <span className={`text-[10px] font-mono font-bold tracking-widest uppercase ${
+            currentView === 'factory' ? 'text-black/80' : 'text-zinc-400'
           }`}>
-            <Cpu className="w-5 h-5 shrink-0" />
-          </div>
-          <div className="flex flex-col items-center justify-center text-center leading-tight min-w-0">
-            <span className={`text-[11px] font-mono font-bold tracking-wider uppercase ${
-              currentView === 'factory' ? 'text-black/80' : 'text-zinc-400'
-            }`}>
-              SCREEN 2
-            </span>
-            <span className={`text-xs sm:text-sm font-black tracking-wide uppercase whitespace-nowrap ${
-              currentView === 'factory' ? 'text-black' : 'text-zinc-100'
-            }`}>
-              INTAKE
-            </span>
-          </div>
+            SCREEN 2
+          </span>
+          <span className={`text-xs sm:text-[13px] font-black tracking-wide uppercase mt-0.5 whitespace-nowrap ${
+            currentView === 'factory' ? 'text-black' : 'text-zinc-100'
+          }`}>
+            INTAKE
+          </span>
         </button>
 
         {/* Screen 3: Showroom */}
         <button
           onClick={() => onViewChange('showroom')}
-          className={`flex items-center justify-center gap-2.5 px-3 py-2.5 min-h-[56px] rounded-xl border transition-all text-center w-full cursor-pointer ${
+          className={`flex flex-col items-center justify-center text-center p-2.5 min-h-[58px] rounded-xl border transition-all cursor-pointer w-full ${
             currentView === 'showroom'
               ? 'bg-white text-black border-slate-200 shadow-lg shadow-white/25'
               : 'bg-[#111114] text-slate-200 hover:text-white hover:bg-white/5 border-white/10 hover:border-white/30'
           }`}
           title="SCREEN 3: SHOWROOM"
         >
-          <div className={`p-1.5 rounded-lg shrink-0 ${
-            currentView === 'showroom' ? 'bg-black/20 text-black' : 'bg-slate-800 text-slate-200 border border-white/20'
+          <span className={`text-[10px] font-mono font-bold tracking-widest uppercase ${
+            currentView === 'showroom' ? 'text-black/80' : 'text-zinc-400'
           }`}>
-            <Compass className="w-5 h-5 shrink-0" />
-          </div>
-          <div className="flex flex-col items-center justify-center text-center leading-tight min-w-0">
-            <span className={`text-[11px] font-mono font-bold tracking-wider uppercase ${
-              currentView === 'showroom' ? 'text-black/80' : 'text-zinc-400'
-            }`}>
-              SCREEN 3
-            </span>
-            <span className={`text-xs sm:text-sm font-black tracking-wide uppercase whitespace-nowrap ${
-              currentView === 'showroom' ? 'text-black' : 'text-zinc-100'
-            }`}>
-              SHOWROOM
-            </span>
-          </div>
+            SCREEN 3
+          </span>
+          <span className={`text-xs sm:text-[13px] font-black tracking-wide uppercase mt-0.5 whitespace-nowrap ${
+            currentView === 'showroom' ? 'text-black' : 'text-zinc-100'
+          }`}>
+            SHOWROOM
+          </span>
         </button>
 
         {/* Screen 4: Deal Room */}
         <button
           onClick={() => onViewChange('dealdesk')}
-          className={`flex items-center justify-center gap-2.5 px-3 py-2.5 min-h-[56px] rounded-xl border transition-all text-center w-full cursor-pointer ${
+          className={`flex flex-col items-center justify-center text-center p-2.5 min-h-[58px] rounded-xl border transition-all cursor-pointer w-full ${
             currentView === 'dealdesk'
               ? 'bg-amber-500 text-black border-amber-400 shadow-lg shadow-amber-500/25'
               : 'bg-[#111114] text-slate-200 hover:text-white hover:bg-white/5 border-white/10 hover:border-amber-500/30'
           }`}
           title="SCREEN 4: DEAL ROOM"
         >
-          <div className={`p-1.5 rounded-lg shrink-0 ${
-            currentView === 'dealdesk' ? 'bg-black/20 text-black' : 'bg-amber-950/80 text-amber-400 border border-amber-500/30'
+          <span className={`text-[10px] font-mono font-bold tracking-widest uppercase ${
+            currentView === 'dealdesk' ? 'text-black/80' : 'text-zinc-400'
           }`}>
-            {isOperatorAuthenticated ? <Unlock className="w-5 h-5 shrink-0" /> : <Lock className="w-5 h-5 shrink-0" />}
-          </div>
-          <div className="flex flex-col items-center justify-center text-center leading-tight min-w-0">
-            <span className={`text-[11px] font-mono font-bold tracking-wider uppercase ${
-              currentView === 'dealdesk' ? 'text-black/80' : 'text-zinc-400'
-            }`}>
-              SCREEN 4
-            </span>
-            <span className={`text-xs sm:text-sm font-black tracking-wide uppercase whitespace-nowrap ${
-              currentView === 'dealdesk' ? 'text-black' : 'text-zinc-100'
-            }`}>
-              DEAL ROOM
-            </span>
-          </div>
+            SCREEN 4
+          </span>
+          <span className={`text-xs sm:text-[13px] font-black tracking-wide uppercase mt-0.5 whitespace-nowrap ${
+            currentView === 'dealdesk' ? 'text-black' : 'text-zinc-100'
+          }`}>
+            DEAL ROOM
+          </span>
         </button>
 
         {/* Screen 5: Diagnostics */}
         <button
           onClick={() => onViewChange('maintenance')}
-          className={`flex items-center justify-center gap-2.5 px-3 py-2.5 min-h-[56px] rounded-xl border transition-all text-center w-full cursor-pointer ${
+          className={`flex flex-col items-center justify-center text-center p-2.5 min-h-[58px] rounded-xl border transition-all cursor-pointer w-full ${
             currentView === 'maintenance'
               ? 'bg-purple-500 text-white border-purple-400 shadow-lg shadow-purple-500/25'
               : 'bg-[#111114] text-slate-200 hover:text-white hover:bg-white/5 border-white/10 hover:border-purple-500/30'
           }`}
           title="SCREEN 5: DIAGNOSTICS"
         >
-          <div className={`p-1.5 rounded-lg shrink-0 ${
-            currentView === 'maintenance' ? 'bg-black/20 text-white' : 'bg-purple-950/80 text-purple-400 border border-purple-500/30'
+          <span className={`text-[10px] font-mono font-bold tracking-widest uppercase ${
+            currentView === 'maintenance' ? 'text-white/80' : 'text-zinc-400'
           }`}>
-            <Wrench className="w-5 h-5 shrink-0" />
-          </div>
-          <div className="flex flex-col items-center justify-center text-center leading-tight min-w-0">
-            <span className={`text-[11px] font-mono font-bold tracking-wider uppercase ${
-              currentView === 'maintenance' ? 'text-white/80' : 'text-zinc-400'
-            }`}>
-              SCREEN 5
-            </span>
-            <span className={`text-xs sm:text-sm font-black tracking-wide uppercase whitespace-nowrap ${
-              currentView === 'maintenance' ? 'text-white' : 'text-zinc-100'
-            }`}>
-              DIAGNOSTICS
-            </span>
-          </div>
+            SCREEN 5
+          </span>
+          <span className={`text-xs sm:text-[13px] font-black tracking-wide uppercase mt-0.5 whitespace-nowrap ${
+            currentView === 'maintenance' ? 'text-white' : 'text-zinc-100'
+          }`}>
+            DIAGNOSTICS
+          </span>
         </button>
 
         {/* Screen 6: Pricing */}
         <button
           onClick={() => onViewChange('pricing')}
-          className={`flex items-center justify-center gap-2.5 px-3 py-2.5 min-h-[56px] rounded-xl border transition-all text-center w-full cursor-pointer ${
+          className={`flex flex-col items-center justify-center text-center p-2.5 min-h-[58px] rounded-xl border transition-all cursor-pointer w-full ${
             currentView === 'pricing'
               ? 'bg-teal-500 text-black border-teal-400 shadow-lg shadow-teal-500/25'
               : 'bg-[#111114] text-slate-200 hover:text-white hover:bg-white/5 border-white/10 hover:border-teal-500/30'
           }`}
           title="SCREEN 6: PRICING"
         >
-          <div className={`p-1.5 rounded-lg shrink-0 ${
-            currentView === 'pricing' ? 'bg-black/20 text-black' : 'bg-teal-950/80 text-teal-400 border border-teal-500/30'
+          <span className={`text-[10px] font-mono font-bold tracking-widest uppercase ${
+            currentView === 'pricing' ? 'text-black/80' : 'text-zinc-400'
           }`}>
-            <Tag className="w-5 h-5 shrink-0" />
-          </div>
-          <div className="flex flex-col items-center justify-center text-center leading-tight min-w-0">
-            <span className={`text-[11px] font-mono font-bold tracking-wider uppercase ${
-              currentView === 'pricing' ? 'text-black/80' : 'text-zinc-400'
-            }`}>
-              SCREEN 6
-            </span>
-            <span className={`text-xs sm:text-sm font-black tracking-wide uppercase whitespace-nowrap ${
-              currentView === 'pricing' ? 'text-black' : 'text-zinc-100'
-            }`}>
-              PRICING
-            </span>
-          </div>
+            SCREEN 6
+          </span>
+          <span className={`text-xs sm:text-[13px] font-black tracking-wide uppercase mt-0.5 whitespace-nowrap ${
+            currentView === 'pricing' ? 'text-black' : 'text-zinc-100'
+          }`}>
+            PRICING
+          </span>
         </button>
 
         {/* Screen 7: Valuation Hub */}
         <button
           onClick={() => onViewChange('valuationhub')}
-          className={`col-span-2 sm:col-span-2 lg:col-span-1 flex items-center justify-center gap-2.5 px-3 py-2.5 min-h-[56px] rounded-xl border transition-all text-center w-full cursor-pointer ${
+          className={`col-span-2 sm:col-span-2 lg:col-span-1 flex flex-col items-center justify-center text-center p-2.5 min-h-[58px] rounded-xl border transition-all cursor-pointer w-full ${
             currentView === 'valuationhub'
               ? 'bg-rose-500 text-white border-rose-400 shadow-lg shadow-rose-500/25'
               : 'bg-[#111114] text-slate-200 hover:text-white hover:bg-white/5 border-white/10 hover:border-rose-500/30'
           }`}
           title="SCREEN 7: VALUATION HUB"
         >
-          <div className={`p-1.5 rounded-lg shrink-0 ${
-            currentView === 'valuationhub' ? 'bg-black/20 text-white' : 'bg-rose-950/80 text-rose-400 border border-rose-500/30'
+          <span className={`text-[10px] font-mono font-bold tracking-widest uppercase ${
+            currentView === 'valuationhub' ? 'text-white/80' : 'text-zinc-400'
           }`}>
-            <TrendingUp className="w-5 h-5 shrink-0" />
-          </div>
-          <div className="flex flex-col items-center justify-center text-center leading-tight min-w-0">
-            <span className={`text-[11px] font-mono font-bold tracking-wider uppercase ${
-              currentView === 'valuationhub' ? 'text-white/80' : 'text-zinc-400'
-            }`}>
-              SCREEN 7
-            </span>
-            <span className={`text-xs sm:text-sm font-black tracking-wide uppercase whitespace-nowrap ${
-              currentView === 'valuationhub' ? 'text-white' : 'text-zinc-100'
-            }`}>
-              VALUATION HUB
-            </span>
-          </div>
+            SCREEN 7
+          </span>
+          <span className={`text-xs sm:text-[13px] font-black tracking-wide uppercase mt-0.5 whitespace-nowrap ${
+            currentView === 'valuationhub' ? 'text-white' : 'text-zinc-100'
+          }`}>
+            VALUATION HUB
+          </span>
         </button>
       </nav>
       </div>

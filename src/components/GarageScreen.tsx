@@ -105,9 +105,9 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
   };
 
   return (
-    <div className="space-y-8 font-mono min-h-min w-full overflow-visible">
+    <div className="space-y-8 font-mono h-auto min-h-max pb-10 w-full overflow-visible">
       {/* METRIC BANNER: Screen 1 Main Collection HUD (Rendered First as Requested) */}
-      <section className="bg-gradient-to-br from-[#121215] to-[#0A0A0B] border border-emerald-500/40 rounded-2xl p-6 sm:p-8 pb-12 relative min-h-min w-full overflow-visible glow-emerald">
+      <section className="bg-gradient-to-br from-[#121215] to-[#0A0A0B] border border-emerald-500/40 rounded-2xl p-6 sm:p-8 pb-10 relative h-auto min-h-max w-full overflow-visible glow-emerald">
         <div className="absolute top-0 right-0 w-80 h-80 bg-emerald-500/5 rounded-full filter blur-3xl pointer-events-none" />
 
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 mb-6 relative z-10">
@@ -118,11 +118,11 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
               </div>
               <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-emerald-500/20 border border-emerald-500/50 rounded-lg text-xs font-mono font-black text-emerald-300">
                 <Sparkles size={13} className="text-emerald-400" />
-                <span>v1.5.4</span>
+                <span>v1.5.5</span>
               </span>
             </div>
-            <h1 className="text-2xl sm:text-4xl md:text-5xl font-black tracking-tight text-white flex flex-wrap items-center gap-3 break-words pb-2 leading-normal">
-              COLLECTION: <span className="text-emerald-400 font-mono break-words inline-block pb-1">{totalAssets} / 500 DIGITAL VEHICLES</span>
+            <h1 className="text-2xl sm:text-4xl md:text-5xl font-black tracking-tight text-white flex flex-wrap items-center gap-3 break-words pb-3 leading-normal">
+              COLLECTION: <span className="text-emerald-400 font-mono break-words inline-block pb-1.5">{totalAssets} / 500 DIGITAL VEHICLES</span>
             </h1>
             <p className="text-sm sm:text-base text-slate-200 mt-3 max-w-3xl leading-relaxed font-semibold">
               Internal portfolio telemetry monitor. 100% pre-revenue interactive concept demos and SCADA prototypes running on simulated telemetry feeds.
