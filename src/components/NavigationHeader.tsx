@@ -112,7 +112,7 @@ function Audit360Badge() {
                   <div className="text-slate-300 text-xs mt-0.5">
                     Commit: <span className="text-cyan-400 font-bold">HEAD (main)</span> &nbsp;|&nbsp;
                     Build: <span className="text-cyan-400 font-bold">vite-bundle</span> &nbsp;|&nbsp;
-                    v<span className="text-emerald-400 font-bold">1.5.9</span>
+                    v<span className="text-emerald-400 font-bold">1.6.0</span>
                   </div>
                 </div>
               </div>
