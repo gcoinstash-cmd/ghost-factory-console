@@ -478,8 +478,8 @@ export const DealRoomCore: React.FC<DealRoomScreenProps> = ({
                 <h3 className="text-sm font-bold text-white leading-tight">Distress / Quick-Sale Cash Floor</h3>
               </div>
               <div>
-                <span className="text-xl sm:text-2xl font-black text-red-400 font-mono block">$128.0k – $246.0k</span>
-                <span className="text-xs text-slate-300 mt-1 block italic leading-snug">Note: 40–60% buyer discount liquidation scenario</span>
+                <span className="text-xl sm:text-2xl font-black text-red-400 font-mono block">$75.0k – $115.0k</span>
+                <span className="text-xs text-slate-300 mt-1 block italic leading-snug">Note: 50–70% buyer liquidation cash floor (below negotiated targets)</span>
               </div>
             </div>
           </div>

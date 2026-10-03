@@ -267,7 +267,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
             className="hidden xl:flex items-center gap-1.5 px-2.5 py-1.5 rounded bg-emerald-500/15 border border-emerald-500/40 text-emerald-300 font-mono text-xs font-bold"
             title="Production Diligence Freeze Lock"
           >
-            <span>Build: v1.5.9</span>
+            <span>Build: v1.6.0</span>
           </div>
 
           <button
@@ -371,10 +371,10 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
                 DISTRESS / QUICK-SALE FLOOR
               </h4>
               <span className="text-2xl xl:text-3xl font-mono font-black tracking-tight text-center my-2 text-emerald-400 block">
-                $128.0k – $246.0k
+                $75.0k – $115.0k
               </span>
               <p className="text-xs text-zinc-400 text-center leading-relaxed px-1">
-                40–60% buyer discount quick realization
+                50–70% buyer liquidation cash floor (below negotiated targets)
               </p>
             </div>
             <span className="text-[11px] font-mono text-zinc-500 text-center mt-auto pt-2 border-t border-zinc-800/80 block w-full">
@@ -442,7 +442,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
             >
               <span className="text-pink-400 font-black">Ceiling: $1.49M+</span>
               <span className="text-amber-400 font-black">Buyout: $721.0k</span>
-              <span className="text-emerald-400 font-black">Floor: $128.0k</span>
+              <span className="text-emerald-400 font-black">Floor: $75.0k</span>
             </div>
           )
         ) : (
@@ -499,8 +499,8 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
                   <span className="text-emerald-400 font-mono text-xs bg-emerald-950/80 px-1.5 py-0.5 rounded border border-emerald-500/40 font-black">FLOOR</span>
                 </div>
                 <div className="mt-1.5">
-                  <span className="text-base sm:text-lg font-black text-emerald-400 block">$128.0k – $246.0k</span>
-                  <span className="text-xs text-slate-300 block font-semibold">40–60% Realization</span>
+                  <span className="text-base sm:text-lg font-black text-emerald-400 block">$75.0k – $115.0k</span>
+                  <span className="text-xs text-slate-300 block font-semibold">50–70% Realization</span>
                 </div>
               </div>
 

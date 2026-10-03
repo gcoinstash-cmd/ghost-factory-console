@@ -34,7 +34,7 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
   const track2Count = 28;
 
   const [sliderVal, setSliderVal] = useState<number>(22);
-  const floorVal = 128000;
+  const floorVal = 75000;
   const ceilingVal = 2850000;
   const projectedVal = Math.round(floorVal + (ceilingVal - floorVal) * (sliderVal / 100));
 
@@ -46,7 +46,7 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
   const simStrategicCeiling = `$${(fleetCount * 0.0135).toFixed(2)}M – $${(fleetCount * 0.025).toFixed(2)}M+`;
   const simDevReplacement = `$${(fleetCount * 0.0085).toFixed(2)}M – $${(fleetCount * 0.0155).toFixed(2)}M`;
   const simStrategicBuyoutAnchor = `$${(((simTrack1Count * 4500) + (simTrack2Count * 14500)) / 1000000).toFixed(2)}M`;
-  const simDistressCashFloor = `$${(fleetCount * 1150).toLocaleString()} – $${(fleetCount * 2200).toLocaleString()}`;
+  const simDistressCashFloor = `$${((fleetCount * 75) / 114).toFixed(1)}k – $${((fleetCount * 115) / 114).toFixed(1)}k`;
   const simVaultTranche = `${Math.round(fleetCount * 0.8)} Vaulted / ${Math.round(fleetCount * 0.2)} Liquid Slots`;
 
   const formatCurrency = (val: number) => {
@@ -60,7 +60,7 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
   const getScenarioTheme = (pct: number) => {
     if (pct <= 10) {
       return { 
-        label: 'Distress Liquidation Realization ($128.0k)', 
+        label: 'Distress Liquidation Realization ($75.0k)', 
         color: 'text-red-400 bg-red-950/80 border-red-500/40',
         textColor: 'text-red-400',
         borderColor: 'border-red-500/50',
@@ -116,7 +116,7 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
   const scenarioTheme = getScenarioTheme(sliderVal);
 
   const STRESS_PRESETS = [
-    { label: 'DISTRESS FLOOR', pct: 0, val: '$128.0k', tag: '0%', activeClass: 'bg-red-500 text-black border-red-400 shadow-lg shadow-red-500/30 font-black', idleClass: 'bg-black/60 text-red-400 border-red-500/40 hover:bg-red-500/20' },
+    { label: 'DISTRESS FLOOR', pct: 0, val: '$75.0k', tag: '0%', activeClass: 'bg-red-500 text-black border-red-400 shadow-lg shadow-red-500/30 font-black', idleClass: 'bg-black/60 text-red-400 border-red-500/40 hover:bg-red-500/20' },
     { label: 'BUYOUT ANCHOR', pct: 22, val: '$721.0k', tag: '22%', activeClass: 'bg-amber-500 text-black border-amber-400 shadow-lg shadow-amber-500/30 font-black', idleClass: 'bg-black/60 text-amber-400 border-amber-500/40 hover:bg-amber-500/20' },
     { label: 'DEV REBUILD', pct: 45, val: '$1.36M', tag: '45%', activeClass: 'bg-cyan-500 text-black border-cyan-400 shadow-lg shadow-cyan-500/30 font-black', idleClass: 'bg-black/60 text-cyan-400 border-cyan-500/40 hover:bg-cyan-500/20' },
     { label: 'STRATEGIC ASK', pct: 75, val: '$2.17M', tag: '75%', activeClass: 'bg-purple-500 text-black border-purple-400 shadow-lg shadow-purple-500/30 font-black', idleClass: 'bg-black/60 text-purple-400 border-purple-500/40 hover:bg-purple-500/20' },
@@ -259,10 +259,10 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
             </div>
             <div className="mt-4 pt-4 border-t border-white/10">
               <span className="text-2xl sm:text-3xl font-black text-red-400 font-mono tracking-tight block">
-                $128.0k – $246.0k
+                $75.0k – $115.0k
               </span>
               <span className="text-xs text-slate-400 block mt-1 font-semibold">
-                40–60% buyer discount quick realization
+                50–70% buyer liquidation cash floor (below negotiated targets)
               </span>
             </div>
           </div>
@@ -545,7 +545,7 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
                   {simDistressCashFloor}
                 </span>
                 <span className="text-xs text-slate-400 mt-2 block leading-relaxed">
-                  40–60% buyer discount liquidation scenario
+                  50–70% buyer liquidation cash floor (below negotiated targets)
                 </span>
               </div>
             </div>
@@ -881,7 +881,7 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
                   <Maximize2 size={13} className="text-purple-400" /> Module 4: Spread & Asymmetry
                 </span>
                 <span className="text-purple-400 font-bold bg-purple-950/80 px-2 py-0.5 rounded border border-purple-500/40 text-xs">
-                  22.3x ASYMMETRY
+                  38.0x ASYMMETRY
                 </span>
               </div>
               <h3 className="text-sm font-bold text-white">Valuation Spread & Asymmetry</h3>
@@ -892,12 +892,12 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
                 </div>
                 <div className="flex justify-between items-center text-xs p-2 rounded-lg bg-black/60 border border-white/10">
                   <span className="text-slate-300">Liquidation Cell:</span>
-                  <span className="text-red-400 font-bold font-mono">$128.0k Distress Realization</span>
+                  <span className="text-red-400 font-bold font-mono">$75.0k Distress Realization</span>
                 </div>
               </div>
             </div>
             <div className="mt-4 pt-3 border-t border-white/10 text-xs text-slate-300 leading-relaxed font-semibold">
-              Delta: 22.3x Upside Asymmetry Window between enterprise valuation and liquidation cell.
+              Delta: 38.0x Upside Asymmetry Window between enterprise valuation and liquidation cell.
             </div>
           </div>
 
@@ -916,7 +916,7 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
                 </div>
                 <h3 className="text-xl sm:text-2xl font-black text-white tracking-tight">Interactive Scenario Stress-Tester</h3>
                 <p className="text-xs sm:text-sm text-slate-300 mt-1 font-medium leading-relaxed">
-                  Real-time dynamic sensitivity engine across liquidation floor ($128.0k) to strategic monopoly ceiling ($2.85M+).
+                  Real-time dynamic sensitivity engine across liquidation floor ($75.0k) to strategic monopoly ceiling ($2.85M+).
                 </p>
               </div>
 
@@ -1106,7 +1106,7 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
 
               {/* Dynamic Bottom Readout Bar */}
               <div className="flex flex-col sm:flex-row items-center justify-between text-xs sm:text-sm font-mono gap-1.5 pt-3.5 border-t border-white/10">
-                <span className="text-red-400 font-black">$128,000 (Liquidation Floor)</span>
+                <span className="text-red-400 font-black">$75,000 (Liquidation Floor)</span>
                 <span className="text-slate-100 font-black text-center flex items-center gap-2">
                   <Sparkles size={16} className={scenarioTheme.textColor} />
                   Live Readout: <span className={`text-sm sm:text-base ${scenarioTheme.textColor}`}>{formatCurrency(projectedVal)}</span> @ {sliderVal}%
