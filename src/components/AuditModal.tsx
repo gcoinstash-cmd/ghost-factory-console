@@ -59,8 +59,8 @@ export const AuditModal: React.FC<AuditModalProps> = ({
 
             <div className="p-3.5 bg-black/40 rounded-xl border border-amber-500/30 space-y-1">
               <span className="text-amber-400 font-bold block text-[11px]">80% PORTFOLIO RETENTION FLOOR</span>
-              <p className="text-white font-bold text-sm">87 Assets Vaulted (80% Locked)</p>
-              <p className="text-[10px] text-slate-400">Max APA transfer capacity is capped at 22 non-core assets.</p>
+              <p className="text-white font-bold text-sm">109 Assets Vaulted (80% Locked)</p>
+              <p className="text-[10px] text-slate-400">Max APA transfer capacity is capped at 27 non-core assets.</p>
             </div>
 
             <div className="p-3.5 bg-black/40 rounded-xl border border-purple-500/30 space-y-1">

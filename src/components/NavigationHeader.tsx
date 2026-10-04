@@ -112,7 +112,7 @@ function Audit360Badge() {
                   <div className="text-slate-300 text-xs mt-0.5">
                     Commit: <span className="text-cyan-400 font-bold">HEAD (main)</span> &nbsp;|&nbsp;
                     Build: <span className="text-cyan-400 font-bold">vite-bundle</span> &nbsp;|&nbsp;
-                    v<span className="text-emerald-400 font-bold">1.7.0</span>
+                    v<span className="text-emerald-400 font-bold">1.8.0</span>
                   </div>
                 </div>
               </div>
@@ -179,7 +179,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
   const catalogAnchor = '~$160,000';
   const askStr = '$195,000 – $265,000';
   const acquisitionStr = '$135,000 – $175,000';
-  const devStr = '$715k – $2.02M';
+  const devStr = '$1.32M – $2.40M';
   const buyoutAnchor = '$14,500 Anchor';
 
   const showInternalDealDesk = IS_OPERATOR_MODE && isOperatorAuthenticated;

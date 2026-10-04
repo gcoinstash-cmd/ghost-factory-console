@@ -118,7 +118,7 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
               </div>
               <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-emerald-500/20 border border-emerald-500/50 rounded-lg text-xs font-mono font-black text-emerald-300">
                 <Sparkles size={13} className="text-emerald-400" />
-                <span>Build: v1.7.0</span>
+                <span>Build: v1.8.0</span>
               </span>
             </div>
             <h1 className="text-2xl sm:text-4xl md:text-5xl font-black tracking-tight text-white flex flex-wrap items-center gap-3 break-words pb-3 leading-normal">
@@ -145,22 +145,22 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
               </div>
               <div className="p-1 border-l border-white/15 pl-3">
                 <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">TRACK 2 FLEET</span>
-                <span className="text-xl sm:text-2xl font-black text-amber-400 block tracking-tight mt-1">28 Models</span>
+                <span className="text-xl sm:text-2xl font-black text-amber-400 block tracking-tight mt-1">50 Models</span>
                 <span className="text-sm text-slate-200 block font-semibold leading-relaxed mt-0.5">Flagship SCADA</span>
               </div>
               <div className="p-1 border-t sm:border-t-0 sm:border-l border-white/15 pt-2 sm:pt-1 sm:pl-3">
                 <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">CAPITAL DENSITY</span>
-                <span className="text-xl sm:text-2xl font-black text-purple-400 block tracking-tight mt-1">$6,324 / Asset</span>
-                <span className="text-sm text-slate-200 block font-semibold leading-relaxed mt-0.5">$721k Anchor NAV</span>
+                <span className="text-xl sm:text-2xl font-black text-purple-400 block tracking-tight mt-1">$8,176 / Asset</span>
+                <span className="text-sm text-slate-200 block font-semibold leading-relaxed mt-0.5">$1.11M Anchor NAV</span>
               </div>
               <div className="p-1 border-t sm:border-t-0 border-l border-white/15 pt-2 sm:pt-1 pl-3">
                 <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">LIQUID TRANCHE</span>
-                <span className="text-xl sm:text-2xl font-black text-amber-300 block tracking-tight mt-1">23 Max Units</span>
+                <span className="text-xl sm:text-2xl font-black text-amber-300 block tracking-tight mt-1">27 Max Units</span>
                 <span className="text-sm text-slate-200 block font-semibold leading-relaxed mt-0.5">80% Retention Floor</span>
               </div>
               <div className="p-1 border-t sm:border-t-0 sm:border-l border-white/15 pt-2 sm:pt-1 sm:pl-3 col-span-2 sm:col-span-1">
                 <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">VAULT CORE</span>
-                <span className="text-xl sm:text-2xl font-black text-emerald-400 block tracking-tight mt-1">91 Protected</span>
+                <span className="text-xl sm:text-2xl font-black text-emerald-400 block tracking-tight mt-1">109 Protected</span>
                 <span className="text-sm text-slate-200 block font-semibold leading-relaxed mt-0.5">Sovereign Reserve</span>
               </div>
             </div>

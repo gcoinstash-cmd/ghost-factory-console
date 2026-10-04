@@ -192,9 +192,9 @@ export const MaintenanceBayScreen: React.FC<MaintenanceBayScreenProps> = ({
       <section className="bg-[#121215] border border-white/10 rounded-2xl p-6 space-y-4">
         <div className="flex items-center justify-between border-b border-white/10 pb-3">
           <h3 className="text-base font-bold text-white">
-            VEHICLE DIAGNOSTIC MATRIX (SAMPLING 15 OF 85)
+            VEHICLE DIAGNOSTIC MATRIX (SAMPLING 15 OF {totalAssets})
           </h3>
-          <span className="text-xs text-slate-400">All 85 Passed Build Integrity</span>
+          <span className="text-xs text-slate-400">All {totalAssets} Passed Build Integrity</span>
         </div>
 
         <div className="overflow-x-auto touch-pan-x overscroll-contain">
