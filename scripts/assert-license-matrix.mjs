@@ -20,8 +20,8 @@ const data = JSON.parse(jsonStr);
 const products = data.products || [];
 const total = products.length;
 
-if (total !== 114) {
-  console.error(`❌ [AUDIT FAILED] Expected 114 blueprints, found ${total}`);
+if (total !== 122) {
+  console.error(`❌ [AUDIT FAILED] Expected 122 blueprints, found ${total}`);
   process.exit(1);
 }
 

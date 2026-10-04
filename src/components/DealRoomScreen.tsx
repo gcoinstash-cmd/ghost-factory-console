@@ -554,11 +554,11 @@ export const DealRoomCore: React.FC<DealRoomScreenProps> = ({
                   </div>
                 </div>
                 <span className="text-[11px] text-slate-400 block pt-1 border-t border-white/10">
-                  80% retention limit strictly bounds micro-APA liquidations to 23 units.
+                  80% retention limit strictly bounds micro-APA liquidations to 24 units.
                 </span>
               </div>
 
-              {/* Complete Fleet (114 Units) */}
+              {/* Complete Fleet (122 Units) */}
               <div className="bg-black/60 border-2 border-purple-500/40 rounded-xl p-4 flex flex-col justify-between space-y-3 hover:border-purple-400/70 transition-colors">
                 <div>
                   <div className="flex items-center justify-between text-xs mb-1">
@@ -568,11 +568,11 @@ export const DealRoomCore: React.FC<DealRoomScreenProps> = ({
                     </span>
                   </div>
                   <h5 className="text-sm font-black text-white">Complete Fleet ({safeTotalAssets} Units)</h5>
-                  <p className="text-xs text-purple-300 font-mono font-semibold mt-0.5">86 Track 1 + 28 Flagships</p>
+                  <p className="text-xs text-purple-300 font-mono font-semibold mt-0.5">86 Track 1 + 36 Flagships</p>
                   <div className="mt-3 space-y-2">
                     <div className="bg-black/80 p-2 rounded-lg border border-white/10">
                       <span className="text-slate-400 text-[10px] uppercase block font-mono">Total Buyout Anchor</span>
-                      <span className="text-xl font-black text-purple-300 font-mono block">$721,000</span>
+                      <span className="text-xl font-black text-purple-300 font-mono block">$837,000</span>
                       <span className="text-[11px] text-slate-300 font-mono">Range: $608.0k – $1.04M</span>
                     </div>
                     <div className="bg-black/80 p-2 rounded-lg border border-white/10">

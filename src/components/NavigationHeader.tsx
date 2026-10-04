@@ -46,7 +46,7 @@ const AUDIT_PARAMETERS = [
   {
     label: 'Security',
     value: '80% Retention Floor Hard-Locked',
-    detail: '91 of 114 units permanently vaulted. Max 23 micro-APA transferable. APA basket enforces ceiling at runtime.',
+    detail: '98 of 122 units permanently vaulted. Max 24 micro-APA transferable. APA basket enforces ceiling at runtime.',
     color: 'text-amber-400',
     border: 'border-amber-500/40',
     bg: 'bg-amber-950/40',
@@ -54,7 +54,7 @@ const AUDIT_PARAMETERS = [
   {
     label: 'Product Truth',
     value: 'Simulated Data Prototypes Only',
-    detail: 'All 114 assets carry REGULATED_SECTOR_DISCLAIMER. No live compliance certification, production-readiness, or safety approval implied.', // [audit-badge-exempt]
+    detail: 'All 122 assets carry REGULATED_SECTOR_DISCLAIMER. No live compliance certification, production-readiness, or safety approval implied.', // [audit-badge-exempt]
     color: 'text-pink-400',
     border: 'border-pink-500/40',
     bg: 'bg-pink-950/40',
@@ -267,7 +267,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
             className="hidden xl:flex items-center gap-1.5 px-2.5 py-1.5 rounded bg-emerald-500/15 border border-emerald-500/40 text-emerald-300 font-mono text-xs font-bold"
             title="Production Diligence Freeze Lock"
           >
-            <span>Build: v1.6.0</span>
+            <span>Build: v1.7.0</span>
           </div>
 
           <button
@@ -315,7 +315,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
               </p>
             </div>
             <span className="text-[11px] font-mono text-zinc-500 text-center mt-auto pt-2 border-t border-zinc-800/80 block w-full">
-              Deep-tech enterprise APA buyout ceiling (114 models)
+              Deep-tech enterprise APA buyout ceiling (122 models)
             </span>
           </div>
 
@@ -529,7 +529,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
               ? 'bg-emerald-500 text-black border-emerald-400 shadow-lg shadow-emerald-500/25'
               : 'bg-[#111114] text-slate-200 hover:text-white hover:bg-white/5 border-white/10 hover:border-emerald-500/30'
           }`}
-          title="SCREEN 1: GARAGE (114)"
+          title="SCREEN 1: GARAGE (122)"
         >
           <span className={`text-[10px] font-mono font-bold tracking-widest uppercase ${
             currentView === 'garage' ? 'text-black/80' : 'text-zinc-400'

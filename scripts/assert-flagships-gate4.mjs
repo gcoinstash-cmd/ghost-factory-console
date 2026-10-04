@@ -50,10 +50,10 @@ const jsonStr = content.slice(braceStart, braceEnd + 1);
 const data = JSON.parse(jsonStr);
 
 const products = data.products || [];
-const flagships = products.filter(p => (p.id >= 86 && p.id <= 114 && p.id !== 112));
+const flagships = products.filter(p => (p.id >= 86 && p.id <= 122 && p.id !== 112));
 
-if (flagships.length !== 28) {
-  console.error(`❌ [AUDIT FAILED] Expected exactly 28 flagships (#86–#114 excluding #112), found ${flagships.length}`);
+if (flagships.length !== 36) {
+  console.error(`❌ [AUDIT FAILED] Expected exactly 36 flagships (#86–#122 excluding #112), found ${flagships.length}`);
   process.exit(1);
 }
 
@@ -91,10 +91,10 @@ for (const product of flagships) {
   gate4Passed++;
 }
 
-if (gate4Passed === 28) {
-  console.log(`✅ [FLAGSHIP GATE AUDIT] 28/28 flagships meet Gate #4`);
+if (gate4Passed === 36) {
+  console.log(`✅ [FLAGSHIP GATE AUDIT] 36/36 flagships meet Gate #4`);
   process.exit(0);
 } else {
-  console.error(`❌ [AUDIT FAILED] Only ${gate4Passed}/28 flagships meet Gate #4.`);
+  console.error(`❌ [AUDIT FAILED] Only ${gate4Passed}/36 flagships meet Gate #4.`);
   process.exit(1);
 }
