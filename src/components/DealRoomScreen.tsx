@@ -479,7 +479,7 @@ export const DealRoomCore: React.FC<DealRoomScreenProps> = ({
               </div>
               <div>
                 <span className="text-xl sm:text-2xl font-black text-red-400 font-mono block">$95.0k – $145.0k</span>
-                <span className="text-xs text-slate-300 mt-1 block italic leading-snug">Note: 50–70% buyer liquidation cash floor (122 assets)</span>
+                <span className="text-xs text-slate-300 mt-1 block italic leading-snug">Note: 50–70% buyer liquidation cash floor (136 assets)</span>
               </div>
             </div>
           </div>
@@ -558,7 +558,7 @@ export const DealRoomCore: React.FC<DealRoomScreenProps> = ({
                 </span>
               </div>
 
-              {/* Complete Fleet (122 Units) */}
+              {/* Complete Fleet (136 Units) */}
               <div className="bg-black/60 border-2 border-purple-500/40 rounded-xl p-4 flex flex-col justify-between space-y-3 hover:border-purple-400/70 transition-colors">
                 <div>
                   <div className="flex items-center justify-between text-xs mb-1">

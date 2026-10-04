@@ -417,7 +417,7 @@ export const FactoryLineScreen: React.FC<FactoryLineScreenProps> = ({
               TRACK 2 CANDIDATE FLEET // <span className="text-amber-400 font-mono">{flagshipCandidates.length} ELITE MODELS</span>
             </h2>
             <p className="text-xs sm:text-sm text-slate-300 mt-1 max-w-2xl leading-relaxed">
-              Every candidate digital vehicle from Slot #086 to Slot #122 is classified under Track 2 ($14,500 Anchor). Review the attached 8-point Flagship Qualification Gate checklist on each unit before final commercial release.
+              Every candidate digital vehicle from Slot #086 to Slot #136 is classified under Track 2 ($14,500 Anchor). Review the attached 8-point Flagship Qualification Gate checklist on each unit before final commercial release.
             </p>
           </div>
 

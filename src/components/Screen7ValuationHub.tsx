@@ -26,25 +26,25 @@ interface Screen7ValuationHubProps {
 }
 
 export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
-  totalAssets = 122,
-  retainedFloor = 98,
-  maxTransferable = 24,
+  totalAssets = 136,
+  retainedFloor = 109,
+  maxTransferable = 27,
 }) => {
-  // Master Portfolio Anchors (122 Fleet Baseline)
-  const activeFleet = 122;
+  // Master Portfolio Anchors (136 Fleet Baseline)
+  const activeFleet = 136;
   const track1Count = 86;
-  const track2Count = 36;
-  const strategicBuyoutAnchor = 837000;
-  const catalogShelfMsrp = 71114; // (86 @ $199 + 36 @ $1,500)
-  const engineeringHoursBase = 4950;
+  const track2Count = 50;
+  const strategicBuyoutAnchor = 1112000;
+  const catalogShelfMsrp = 92114; // (86 @ $199 + 50 @ $1,500)
+  const engineeringHoursBase = 5600;
 
   const [sliderVal, setSliderVal] = useState<number>(23);
   const floorVal = 95000;
-  const ceilingVal = 3250000;
+  const ceilingVal = 3850000;
   const projectedVal = Math.round(floorVal + (ceilingVal - floorVal) * (sliderVal / 100));
 
-  // Fleet Scale Simulator State (122 -> 500 assets)
-  const [fleetCount, setFleetCount] = useState<number>(122);
+  // Fleet Scale Simulator State (136 -> 500 assets)
+  const [fleetCount, setFleetCount] = useState<number>(136);
 
   const simTrack1Count = Math.round(fleetCount * (track1Count / activeFleet));
   const simTrack2Count = fleetCount - simTrack1Count;
@@ -201,7 +201,7 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
             </div>
             <div className="mt-4 pt-4 border-t border-white/10">
               <span className="text-2xl sm:text-3xl font-black text-purple-400 font-mono tracking-tight block">
-                $1.85M – $3.25M+
+                $2.15M – $3.85M+
               </span>
               <span className="text-xs text-slate-400 block mt-1 font-semibold">
                 Strategic Acquisition Ceiling (Monopoly Premium)
@@ -217,14 +217,14 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
                 <span className="text-cyan-400 font-bold bg-cyan-950/80 px-2 py-0.5 rounded border border-cyan-500/40 text-xs">REPLACEMENT COST</span>
               </div>
               <h3 className="text-sm font-bold text-white">Dev Agency Replacement</h3>
-              <p className="text-xs text-slate-300 mt-1">Engineering hours required to recreate 122 specialized prototypes.</p>
+              <p className="text-xs text-slate-300 mt-1">Engineering hours required to recreate 136 specialized prototypes.</p>
             </div>
             <div className="mt-4 pt-4 border-t border-white/10">
               <span className="text-2xl sm:text-3xl font-black text-cyan-400 font-mono tracking-tight block">
-                $1.15M – $2.05M
+                $1.32M – $2.40M
               </span>
               <span className="text-xs text-slate-400 block mt-1 font-semibold">
-                4,950+ engineering hours @ $150–$250/hr
+                5,600+ engineering hours @ $150–$250/hr
               </span>
             </div>
           </div>
@@ -237,14 +237,14 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
                 <span className="text-amber-400 font-bold bg-amber-950/80 px-2 py-0.5 rounded border border-amber-500/40 text-xs">PORTFOLIO BUYOUT</span>
               </div>
               <h3 className="text-sm font-bold text-white">Dual-Track Strategic Buyout</h3>
-              <p className="text-xs text-slate-300 mt-1">Asset-by-asset baseline: 86 Track 1 anchors + 36 Flagship anchors.</p>
+              <p className="text-xs text-slate-300 mt-1">Asset-by-asset baseline: 86 Track 1 anchors + 50 Flagship anchors.</p>
             </div>
             <div className="mt-4 pt-4 border-t border-white/10">
               <span className="text-2xl sm:text-3xl font-black text-amber-400 font-mono tracking-tight block">
-                $705.0k – $1.20M
+                $935.0k – $1.60M
               </span>
               <span className="text-xs text-amber-300 font-bold block mt-1">
-                Anchor: $837.0k
+                Anchor: $1.11M
               </span>
               <span className="text-xs text-slate-400 block mt-0.5">
                 {track1Count} T1 ($4.5k) + {track2Count} Flagship ($14.5k)
@@ -267,7 +267,7 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
                 $95.0k – $145.0k
               </span>
               <span className="text-xs text-slate-400 block mt-1 font-semibold">
-                50–70% buyer liquidation cash floor (122 assets)
+                50–70% buyer liquidation cash floor (136 assets)
               </span>
             </div>
           </div>
@@ -342,7 +342,7 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
                 <span className="text-emerald-400 font-bold bg-emerald-950/80 px-2 py-0.5 rounded border border-emerald-500/40 text-xs">FMV BASELINE</span>
               </div>
               <h3 className="text-sm font-bold text-white">Annual Fair Market Value</h3>
-              <p className="text-xs text-slate-300 mt-1">Realistic recurring licensing cash flow for all 122 assets.</p>
+              <p className="text-xs text-slate-300 mt-1">Realistic recurring licensing cash flow for all 136 assets.</p>
             </div>
             <div className="mt-4 pt-4 border-t border-white/10">
               <span className="text-2xl sm:text-3xl font-black text-emerald-400 font-mono tracking-tight block">
@@ -364,7 +364,7 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
           <div>
             <h2 className="text-xl font-black text-white tracking-tight flex items-center gap-2">
               <Rocket size={20} className="text-purple-400" />
-              FLEET EXPANSION & PORTFOLIO TARGET SIMULATOR (122 ➔ 500 ASSETS)
+              FLEET EXPANSION & PORTFOLIO TARGET SIMULATOR (136 ➔ 500 ASSETS)
             </h2>
             <p className="text-xs text-slate-300 mt-0.5">
               Interactive scale forecasting engine modeling NAV, Dev Replacement, Monopoly Ceilings, and 80/20 retention at scale.
@@ -390,7 +390,7 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
               </div>
               <h3 className="text-lg font-black text-white">Dynamic Fleet Scale Slider</h3>
               <p className="text-xs text-slate-300 mt-0.5">
-                Adjust virtual factory production capacity from the current 122 baseline to the 500-unit ultimate vault target.
+                Adjust virtual factory production capacity from the current 136 baseline to the 500-unit ultimate vault target.
               </p>
             </div>
 
@@ -398,14 +398,14 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
             <div className="flex flex-wrap items-center gap-2.5">
               <span className="text-xs text-slate-400 font-mono uppercase mr-1 hidden sm:inline">Presets:</span>
               <button
-                onClick={() => setFleetCount(122)}
+                onClick={() => setFleetCount(136)}
                 className={`px-3 py-1.5 rounded-lg text-xs font-bold font-mono transition-all cursor-pointer border ${
-                  fleetCount === 122
+                  fleetCount === 136
                     ? 'bg-emerald-500 text-black border-emerald-400 shadow-md shadow-emerald-500/30'
                     : 'bg-black/60 text-emerald-400 border-emerald-500/40 hover:bg-emerald-500/20'
                 }`}
               >
-                [LIVE: 122]
+                [LIVE: 136]
               </button>
               <button
                 onClick={() => setFleetCount(250)}
@@ -440,24 +440,24 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
           {/* Slider Control */}
           <div className="space-y-3">
             <div className="flex items-center justify-between text-xs font-mono">
-              <span className="text-emerald-400 font-bold">Min: 122 Units (Live)</span>
+              <span className="text-emerald-400 font-bold">Min: 136 Units (Live)</span>
               <span className="text-cyan-400 font-bold hidden sm:inline">Midpoint: 250 Units (Target)</span>
               <span className="text-purple-400 font-bold">Max: 500 Units (Full Vault)</span>
             </div>
 
             <input
               type="range"
-              min="122"
+              min="136"
               max="500"
               step="1"
               value={fleetCount}
               onChange={(e) => setFleetCount(Number(e.target.value))}
               className="w-full h-3.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-purple-400 hover:accent-purple-300 transition-all"
-              title="Interactive Fleet Expansion Slider (122 - 500 Units)"
+              title="Interactive Fleet Expansion Slider (136 - 500 Units)"
             />
 
             <div className="flex items-center justify-between text-xs text-slate-400 font-mono">
-              <span>122 Blueprints</span>
+              <span>136 Blueprints</span>
               <span className="text-purple-200 font-bold">
                 Active Simulation: {fleetCount} Units ({simTrack1Count} Track 1 Lean + {simTrack2Count} Track 2 Flagships)
               </span>

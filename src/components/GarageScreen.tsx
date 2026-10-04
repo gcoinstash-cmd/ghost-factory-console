@@ -204,10 +204,10 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
               <ShieldCheck size={14} /> GHOSTFACTORY™ MASTER BLUEPRINT REPOSITORY
             </div>
             <h2 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
-              Browse 122 Commercial Software Blueprints
+              Browse 136 Commercial Software Blueprints
             </h2>
             <p className="text-slate-300 text-xs sm:text-sm max-w-2xl leading-relaxed">
-              86 Lean Rapid-Sale prototypes ($199 MSRP) + 36 Tier-1 Flagship SCADA operational consoles ($1,500–$3,500).
+              86 Lean Rapid-Sale prototypes ($199 MSRP) + 50 Tier-1 Flagship SCADA operational consoles ($1,500–$3,500).
               Each asset includes complete React 19 source, PostgreSQL schema, seed data, and perpetual commercial deployment rights (Standard & Pro unlimited end-client use).
             </p>
           </div>
@@ -217,7 +217,7 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
               href="#catalog-grid"
               className="px-5 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-black uppercase tracking-wider transition-all shadow-lg shadow-emerald-500/20 active:scale-95"
             >
-              Browse 122 Blueprints ↓
+              Browse 136 Blueprints ↓
             </a>
             <a
               href="https://auraandgrid.gumroad.com"
@@ -347,9 +347,9 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
             onChange={(e) => handleTrackChange(e.target.value)}
             className="bg-black/70 border border-white/20 rounded-lg px-3.5 py-3 text-slate-200 focus:outline-none focus:border-emerald-500 text-sm sm:text-base font-mono font-bold cursor-pointer"
           >
-            <option value="ALL">All Pricing Tracks (122)</option>
+            <option value="ALL">All Pricing Tracks (136)</option>
             <option value="TRACK_1">Track 1 — Lean Rapid-Sale (86)</option>
-            <option value="TRACK_2">Track 2 — Flagship Tier-1 (36)</option>
+            <option value="TRACK_2">Track 2 — Flagship Tier-1 (50)</option>
           </select>
 
           {/* Rarity Filter */}
