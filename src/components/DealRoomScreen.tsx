@@ -432,7 +432,7 @@ export const DealRoomCore: React.FC<DealRoomScreenProps> = ({
                 <h3 className="text-sm font-bold text-white leading-tight">Enterprise Market Valuation</h3>
               </div>
               <div>
-                <span className="text-xl sm:text-2xl font-black text-purple-300 font-mono block">$1.49M – $2.85M+</span>
+                <span className="text-xl sm:text-2xl font-black text-purple-300 font-mono block">$1.85M – $3.25M+</span>
                 <span className="text-xs text-slate-300 mt-1 block leading-snug">Strategic Acquisition Ceiling (Monopoly Premium)</span>
               </div>
             </div>
@@ -447,8 +447,8 @@ export const DealRoomCore: React.FC<DealRoomScreenProps> = ({
                 <h3 className="text-sm font-bold text-white leading-tight">Dev Agency Replacement Benchmark</h3>
               </div>
               <div>
-                <span className="text-xl sm:text-2xl font-black text-cyan-300 font-mono block">$965.0k – $1.76M</span>
-                <span className="text-xs text-slate-300 mt-1 block leading-snug">Benchmark: 4,250+ engineering hours @ $150–$250/hr</span>
+                <span className="text-xl sm:text-2xl font-black text-cyan-300 font-mono block">$1.15M – $2.05M</span>
+                <span className="text-xs text-slate-300 mt-1 block leading-snug">Benchmark: 4,950+ engineering hours @ $150–$250/hr</span>
               </div>
             </div>
 
@@ -462,8 +462,8 @@ export const DealRoomCore: React.FC<DealRoomScreenProps> = ({
                 <h3 className="text-sm font-bold text-white leading-tight">Dual-Track Strategic Buyout Range</h3>
               </div>
               <div>
-                <span className="text-xl sm:text-2xl font-black text-amber-300 font-mono block">$608.0k – $1.04M</span>
-                <span className="text-xs text-amber-400 font-bold mt-1 block">Anchor: $721.0k</span>
+                <span className="text-xl sm:text-2xl font-black text-amber-300 font-mono block">$705.0k – $1.20M</span>
+                <span className="text-xs text-amber-400 font-bold mt-1 block">Anchor: $837.0k</span>
                 <span className="text-xs text-slate-300 block mt-0.5">{track1Count} T1 ($4.5k) + {track2Count} Flagship ($14.5k) anchors</span>
               </div>
             </div>
@@ -478,8 +478,8 @@ export const DealRoomCore: React.FC<DealRoomScreenProps> = ({
                 <h3 className="text-sm font-bold text-white leading-tight">Distress / Quick-Sale Cash Floor</h3>
               </div>
               <div>
-                <span className="text-xl sm:text-2xl font-black text-red-400 font-mono block">$75.0k – $115.0k</span>
-                <span className="text-xs text-slate-300 mt-1 block italic leading-snug">Note: 50–70% buyer liquidation cash floor (below negotiated targets)</span>
+                <span className="text-xl sm:text-2xl font-black text-red-400 font-mono block">$95.0k – $145.0k</span>
+                <span className="text-xs text-slate-300 mt-1 block italic leading-snug">Note: 50–70% buyer liquidation cash floor (122 assets)</span>
               </div>
             </div>
           </div>
@@ -573,17 +573,17 @@ export const DealRoomCore: React.FC<DealRoomScreenProps> = ({
                     <div className="bg-black/80 p-2 rounded-lg border border-white/10">
                       <span className="text-slate-400 text-[10px] uppercase block font-mono">Total Buyout Anchor</span>
                       <span className="text-xl font-black text-purple-300 font-mono block">$837,000</span>
-                      <span className="text-[11px] text-slate-300 font-mono">Range: $608.0k – $1.04M</span>
+                      <span className="text-[11px] text-slate-300 font-mono">Range: $705.0k – $1.20M</span>
                     </div>
                     <div className="bg-black/80 p-2 rounded-lg border border-white/10">
                       <span className="text-slate-400 text-[10px] uppercase block font-mono">Strategic Monopoly Ceiling</span>
-                      <span className="text-base font-bold text-pink-400 font-mono block">$1.49M – $2.85M+</span>
+                      <span className="text-base font-bold text-pink-400 font-mono block">$1.85M – $3.25M+</span>
                     </div>
                   </div>
                 </div>
                 <div className="text-[11px] text-slate-400 flex justify-between items-center font-mono pt-1 border-t border-white/10">
-                  <span>Density: $6,324/unit</span>
-                  <span>Multiple: 1.89x ROIC</span>
+                  <span>Density: $6,861/unit</span>
+                  <span>Multiple: 1.91x ROIC</span>
                 </div>
               </div>
             </div>
