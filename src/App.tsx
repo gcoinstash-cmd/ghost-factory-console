@@ -85,7 +85,7 @@ export const App: React.FC = () => {
   };
 
   return (
-    <div className="h-screen w-screen overflow-hidden flex flex-col bg-[#0A0A0B] text-slate-100 font-mono selection:bg-emerald-500 selection:text-black">
+    <div className="h-screen flex flex-col overflow-hidden bg-[#0A0A0B] text-slate-100 font-mono selection:bg-emerald-500 selection:text-black">
       {/* 1. PERSISTENT TOP HEADER & EXECUTIVE NAVIGATION BAR */}
       <NavigationHeader
         activeTab={activeTab}
@@ -102,7 +102,7 @@ export const App: React.FC = () => {
       />
 
       {/* 2. BOUNDED VIEWPORT MAIN CONTENT CONTAINER (NO ENDLESS PAGE SCROLL) */}
-      <main className="flex-1 overflow-y-auto overflow-x-hidden relative w-full bg-[#0A0A0B]/80 px-3 sm:px-6 py-4">
+      <main className="flex-1 overflow-y-auto min-h-0 pr-2 relative w-full bg-[#0A0A0B]/80 px-3 sm:px-6 py-4">
         <div className="max-w-7xl mx-auto w-full">
           
           {/* PRIMARY EXECUTIVE COCKPIT VIEWS */}

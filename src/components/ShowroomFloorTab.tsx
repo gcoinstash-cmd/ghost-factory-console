@@ -213,7 +213,7 @@ export const ShowroomFloorTab: React.FC<ShowroomFloorTabProps> = ({
             <div
               key={product.id}
               onClick={() => onInspect(product)}
-              className="bg-[#111115] border border-white/10 hover:border-emerald-400/80 rounded-2xl p-4 flex flex-col justify-between space-y-3 shadow-lg hover:shadow-emerald-500/10 transition-all cursor-pointer group relative overflow-hidden"
+              className="bg-[#111115] border border-white/10 hover:border-emerald-400/80 rounded-2xl p-4 flex flex-col justify-between min-h-[220px] space-y-2.5 shadow-lg hover:shadow-emerald-500/10 transition-all cursor-pointer group relative overflow-hidden"
             >
               {/* Top Slot Pill & Badges */}
               <div className="flex items-center justify-between gap-2">

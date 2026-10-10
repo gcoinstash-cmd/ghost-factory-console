@@ -260,11 +260,11 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
             {/* Toggle Valuation Ribbon Visibility */}
             <button
               onClick={() => setIsRibbonCollapsed(!isRibbonCollapsed)}
-              className="flex items-center gap-1 px-2 py-1 rounded bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-white/15 text-[11px] font-bold cursor-pointer"
-              title="Toggle 4-Card Valuation Ribbon"
+              className="flex items-center gap-1 px-2.5 py-1 rounded bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-white/15 text-[11px] font-bold cursor-pointer transition-colors"
+              title="Toggle Valuation HUD collapse state"
             >
               <DollarSign size={12} className="text-emerald-400" />
-              <span className="hidden sm:inline">{isRibbonCollapsed ? 'Show HUD' : 'Hide HUD'}</span>
+              <span>{isRibbonCollapsed ? '$ Show HUD v' : '$ Hide HUD ^'}</span>
               {isRibbonCollapsed ? <ChevronDown size={12} /> : <ChevronUp size={12} />}
             </button>
 
@@ -281,13 +281,13 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
           </div>
         </div>
 
-        {/* ROW 2: 4-CARD EXECUTIVE VALUATION RIBBON ($3.63M -> $2.28M -> $1.75M -> $1.05M) */}
-        {!isRibbonCollapsed && (
+        {/* ROW 2: 4-CARD EXECUTIVE VALUATION RIBBON OR COLLAPSED SLIM STATUS BAR */}
+        {!isRibbonCollapsed ? (
           <div className="pt-0.5 pb-1 border-b border-white/10 w-full animate-fadeIn">
-            <CockpitMetrics isCompact={true} />
+            <CockpitMetrics isCompact={true} showDescriptions={false} />
 
             {/* Category Badges & 80% Retention Floor Readout */}
-            <div className="flex flex-wrap items-center justify-between gap-2 pt-2 px-0.5 text-[11px]">
+            <div className="flex flex-wrap items-center justify-between gap-2 pt-1.5 px-0.5 text-[11px]">
               <div className="flex flex-wrap items-center gap-1.5">
                 <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-zinc-400 mr-0.5">
                   CATEGORY BADGES:
@@ -313,6 +313,44 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
               <div className="text-[11px] font-mono text-zinc-400 hidden lg:block">
                 80% Portfolio Retention Floor: <strong className="text-emerald-400">128 Vaulted</strong> / <strong className="text-amber-400">32 Liquid APA Slots</strong>
               </div>
+            </div>
+          </div>
+        ) : (
+          /* SLIM COLLAPSED STATUS BAR (100% Screen granted to Showroom Floor) */
+          <div 
+            onClick={() => setIsRibbonCollapsed(false)}
+            className="py-1 px-3 sm:px-4 rounded-xl bg-black/80 border border-white/10 hover:border-emerald-500/40 transition-colors flex items-center justify-between text-xs font-mono cursor-pointer shadow-sm group w-full"
+            title="Click to expand 4-Card Valuation HUD"
+          >
+            <div className="flex flex-wrap items-center gap-2.5 sm:gap-5">
+              <div className="flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-purple-400" />
+                <span className="text-purple-300 font-bold">$3.63M</span>
+                <span className="text-slate-400 text-[10px] sm:text-[11px]">MSRP</span>
+              </div>
+              <span className="text-slate-600 hidden xs:inline">|</span>
+              <div className="flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />
+                <span className="text-amber-300 font-bold">$2.28M</span>
+                <span className="text-slate-400 text-[10px] sm:text-[11px]">Agency</span>
+              </div>
+              <span className="text-slate-600 hidden xs:inline">|</span>
+              <div className="flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                <span className="text-emerald-300 font-bold">$1.75M</span>
+                <span className="text-slate-400 text-[10px] sm:text-[11px]">Base Floor</span>
+              </div>
+              <span className="text-slate-600 hidden xs:inline">|</span>
+              <div className="flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-rose-400" />
+                <span className="text-rose-300 font-bold">$1.05M</span>
+                <span className="text-slate-400 text-[10px] sm:text-[11px]">Panic Floor</span>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-1 text-[11px] text-slate-400 group-hover:text-emerald-300 transition-colors">
+              <span className="hidden sm:inline">Expand HUD</span>
+              <ChevronDown size={13} />
             </div>
           </div>
         )}
