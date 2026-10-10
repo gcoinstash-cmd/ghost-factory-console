@@ -29,7 +29,7 @@ export const FactoryLineScreen: React.FC<FactoryLineScreenProps> = ({
     { id: 2, name: '2. Working Prototype', count: 20, desc: 'Tailwind UI, React components & mock sensor states' },
     { id: 3, name: '3. Hosted Demo Sandbox', count: 65, desc: 'Render deployment, Supabase schema & demo passcodes' },
     { id: 4, name: '4. Track 1 Lean Rapid-Sale', count: 86, desc: 'Passed 8-point Intake Gate ($199 MSRP / $4.5k Buyout Anchor)' },
-    { id: 5, name: '5. Track 2 Flagship Tier-1', count: 50, desc: 'Passed 8-point Flagship Gate ($1,500 MSRP / $14.5k Anchor)' }
+    { id: 5, name: '5. Track 2 Flagship Tier-1', count: 51, desc: 'Passed 8-point Flagship Gate ($1,500 MSRP / $14.5k Anchor)' }
   ];
 
   // Interactive Intake Gate Checklist State (for a prospective asset, e.g. Asset #137)
@@ -417,7 +417,7 @@ export const FactoryLineScreen: React.FC<FactoryLineScreenProps> = ({
               TRACK 2 CANDIDATE FLEET // <span className="text-amber-400 font-mono">{flagshipCandidates.length} ELITE MODELS</span>
             </h2>
             <p className="text-xs sm:text-sm text-slate-300 mt-1 max-w-2xl leading-relaxed">
-              Every candidate digital vehicle from Slot #086 to Slot #136 is classified under Track 2 ($14,500 Anchor). Review the attached 8-point Flagship Qualification Gate checklist on each unit before final commercial release.
+              Every candidate digital vehicle from Slot #086 to Slot #136 is classified under Track 2 ($14,500 Anchor), accompanied by Slots #138–#150 as Track 3 Working Service Engines. Review the attached 8-point Flagship Qualification Gate checklist on each unit before final commercial release.
             </p>
           </div>
 
@@ -432,7 +432,7 @@ export const FactoryLineScreen: React.FC<FactoryLineScreenProps> = ({
             </div>
             <div className="flex justify-between items-center gap-4">
               <span className="text-slate-400">Commercial License:</span>
-              <strong className="text-emerald-400 font-bold">$1,500 – $3,500 USD</strong>
+              <strong className="text-emerald-400 font-bold">$2,500 USD Avg</strong>
             </div>
           </div>
         </div>
@@ -504,15 +504,15 @@ export const FactoryLineScreen: React.FC<FactoryLineScreenProps> = ({
                   </div>
                   <div>
                     <span className="text-[10px] text-slate-400 block uppercase">Flagship License</span>
-                    <strong className="text-white font-bold text-sm">$1,500–$3,500</strong>
+                    <strong className="text-white font-bold text-sm">$2,500 Avg</strong>
                   </div>
                   <div>
-                    <span className="text-[10px] text-slate-400 block uppercase">Buyout Range</span>
-                    <strong className="text-slate-200 font-bold text-sm">$10k–$18k</strong>
+                    <span className="text-[10px] text-slate-400 block uppercase">Buyout Avg</span>
+                    <strong className="text-slate-200 font-bold text-sm">$14.0k</strong>
                   </div>
                   <div>
-                    <span className="text-[10px] text-slate-400 block uppercase">Strategic APA</span>
-                    <strong className="text-purple-300 font-bold text-sm">$35k–$75k+</strong>
+                    <span className="text-[10px] text-slate-400 block uppercase">Strategic APA Avg</span>
+                    <strong className="text-purple-300 font-bold text-sm">$55.0k</strong>
                   </div>
                 </div>
 

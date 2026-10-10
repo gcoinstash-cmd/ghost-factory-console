@@ -55,10 +55,74 @@ export interface CatalogData {
 }
 
 export const CATALOG_DATA: CatalogData = {
-  "catalog_version": "1.3.1",
+  "catalog_version": "2.0.0",
   "store": "Aura & Grid",
   "store_url": "https://auraandgrid.gumroad.com",
-  "total_flagships": 136,
+  "total_flagships": 151,
+  "total_assets": 151,
+  "track3_total": 14,
+  "track_counts": {
+    "track1": 86,
+    "track2": 50,
+    "track3": 14
+  },
+  "track3_engines": [
+    {
+      "id": "T3-NEXUS-01",
+      "name": "NEXUS-ORDERBOOK",
+      "category": "High-Frequency Limit Order Book Matching Engine",
+      "pricing_track": "Track 3 — F1 Skunkworks Engine",
+      "vertical": "fintech_quant",
+      "vault": "Vertical B — Algorithmic Liquidity & Institutional FinTech Risk Engines",
+      "release_version": "1.0.0",
+      "source_repo": "T3-NEXUS-ORDERBOOK/ (workspace subdirectory)",
+      "data_room": "T3-NEXUS-ORDERBOOK/ACQUIRE_DATA_ROOM.md",
+      "license": "MIT",
+      "truth_label": "Deployable Source Template",
+      "truth_badge": "Deployable Source Template // Track 3 Candidate // Simulated Data Only",
+      "disclaimer": "SAMPLE OR SIMULATED ORDERS ONLY — IN-MEMORY STATE — NOT A PRODUCTION SERVICE — NOT CERTIFIED FOR OPERATIONAL, REGULATORY, OR FINANCIAL USE",
+      "apa_buyout_floor": 35000,
+      "vault_buyout_planning_value": 125000,
+      "enterprise_seat_license_monthly": 1500,
+      "buyoutEligible": true,
+      "permanent": false,
+      "internal_only": true,
+      "checkout_active": false,
+      "demo_url": null,
+      "test_evidence": {
+        "run_date": "2026-10-04",
+        "python": "3.11.15",
+        "tests_passed": 73,
+        "tests_failed": 0,
+        "coverage_pct": 99,
+        "note": "Local run only. tests/test_engine.py + tests/test_engine_extended.py alone cover 60% (API tests live in tests/test_api.py)."
+      },
+      "vault_requirements": {
+        "1_proprietary_algorithmic_logic": "partial",
+        "2_clean_room_ip": "partial",
+        "3_enterprise_hardening": "open",
+        "4_niche_domain_specialization": "met",
+        "5_turnkey_15_minute_deploy": "open"
+      },
+      "intake_gate": {
+        "unique_id_and_name": "done",
+        "status_classification": "done",
+        "source_repo_and_release_version": "done (local; git commit pending)",
+        "build_or_deployment_record": "open (container never built, Cloud Run never deployed)",
+        "demo_url_or_internal_only": "done (internal-only)",
+        "readme_and_setup": "done",
+        "dependency_and_license_record": "done (see data room section 7; MPL-2.0 certifi is dev-only)",
+        "screenshots_or_cover_image": "open",
+        "license_sku": "open",
+        "sector_vault_family": "done",
+        "eligibility_classification": "done (micro-APA eligible)",
+        "disclosures": "done",
+        "maintenance_owner_and_last_review": "done (ZoMae Media LLC, 2026-10-04)",
+        "intake_complete": false,
+        "counted_in_total_by": "Principal directive 2026-10-04 (intake gate not fully closed)"
+      }
+    }
+  ],
   "standards": "Ghost Factory™ 9.0+ Verified Production Grade (Permanent 5-Archetype Rotation & Curated Design Intelligence)",
   "database_engine": "Supabase PostgreSQL (RLS Enabled)",
   "frontend_stack": "React 19 + Tailwind CSS + Lucide Icons + Vite",

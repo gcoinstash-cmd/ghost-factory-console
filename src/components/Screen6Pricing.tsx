@@ -125,7 +125,7 @@ export const Screen6Pricing: React.FC = () => {
             <h2 className="text-lg font-black text-white">Flagship Tier-1 License</h2>
             <p className="text-xs text-slate-300 mt-1 leading-relaxed">SCADA-grade operations console with physics solvers.</p>
             <div className="mt-4 pt-4 border-t border-white/10">
-              <span className="text-2xl sm:text-3xl font-black text-purple-400 font-mono tracking-tight">$1,500 – $3,500</span>
+              <span className="text-2xl sm:text-3xl font-black text-purple-400 font-mono tracking-tight">$2,500 Avg</span>
               <span className="text-xs text-slate-400 block mt-1">Domain Physics & Operator Journeys</span>
             </div>
           </div>
@@ -198,7 +198,7 @@ export const Screen6Pricing: React.FC = () => {
             </p>
           </div>
           <span className="px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-bold uppercase tracking-wider hidden sm:inline">
-            136/136 AUDITED
+            151/151 AUDITED
           </span>
         </div>
 
@@ -242,15 +242,15 @@ export const Screen6Pricing: React.FC = () => {
                   Retail MSRP License
                 </td>
                 <td className="py-3 px-4 font-black text-cyan-400 font-mono">$199 USD</td>
-                <td className="py-3 px-4 font-black text-purple-400 font-mono">$1,500 – $3,500 USD</td>
+                <td className="py-3 px-4 font-black text-purple-400 font-mono">$2,500 USD Avg</td>
               </tr>
               <tr className="hover:bg-white/5 transition-colors">
                 <td className="py-3 px-4 font-bold text-slate-300 flex items-center gap-2">
                   <Sparkles size={14} className="text-yellow-400 shrink-0" />
                   Exclusive Buyout Anchor
                 </td>
-                <td className="py-3 px-4 font-black text-cyan-400 font-mono">$4,500 ($3,800–$6,500 range)</td>
-                <td className="py-3 px-4 font-black text-purple-400 font-mono">$14,500 ($10,000–$18,000 range)</td>
+                <td className="py-3 px-4 font-black text-cyan-400 font-mono">$4,500 ($5,150 Buyout Avg)</td>
+                <td className="py-3 px-4 font-black text-purple-400 font-mono">$14,500 ($14,000 Buyout Avg)</td>
               </tr>
               <tr className="hover:bg-white/5 transition-colors">
                 <td className="py-3 px-4 font-bold text-slate-300 flex items-center gap-2">

@@ -87,7 +87,7 @@ export function getBlueprintPricing(product: {
 }): BlueprintPricing {
   const isTrack2 = product.pricing_track?.includes('Track 1') ? false : (Boolean(product.flagship_qualified) || (product.pricing_track?.includes('Track 2') ?? false) || (product.id >= 86 && product.id !== 112));
 
-  const standardPrice = isTrack2 ? '$1,500 – $3,500 USD' : '$199 USD';
+  const standardPrice = isTrack2 ? '$2,500 USD Avg' : '$199 USD';
   const proPrice = isTrack2 ? '$3,500 USD' : '$599 USD';
 
   const isBuyoutEligible = Boolean(product.buyoutEligible && !product.permanent);
@@ -105,7 +105,7 @@ export function getBlueprintPricing(product: {
 
   if (isTrack2) {
     const anchor = product.exclusive_buyout_anchor ? `$${product.exclusive_buyout_anchor.toLocaleString()} USD` : '$14,500 USD';
-    const range = product.exclusive_buyout_range ? `$${product.exclusive_buyout_range[0].toLocaleString()} – $${product.exclusive_buyout_range[1].toLocaleString()} USD` : '$10,000 – $18,000 USD';
+    const range = product.exclusive_buyout_range ? `$${Math.round((product.exclusive_buyout_range[0] + product.exclusive_buyout_range[1]) / 2).toLocaleString()} Buyout Avg` : '$14,000 Buyout Avg';
     return {
       standardPrice,
       proPrice,
@@ -121,7 +121,7 @@ export function getBlueprintPricing(product: {
     proPrice,
     buyoutPrice: '$4,500 Anchor',
     buyoutAnchor: '$4,500 Anchor',
-    buyoutRange: '$3,800 – $6,500 USD',
+    buyoutRange: '$5,150 Buyout Avg',
     isBuyoutEligible: true,
   };
 }

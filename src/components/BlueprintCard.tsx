@@ -16,7 +16,7 @@ interface BlueprintCardProps {
 
 export const getRarityTier = (product: ProductItem): RarityTier => {
   if (product.pricing_track?.includes('Track 1')) return 'Core';
-  if ((product.id >= 86 && product.id !== 112) || Boolean(product.flagship_qualified) || Boolean(product.pricing_track?.includes('Track 2'))) {
+  if ((product.id >= 86 && product.id !== 112) || Boolean(product.flagship_qualified) || Boolean(product.pricing_track?.includes('Track 2')) || Boolean(product.pricing_track?.includes('Track 3'))) {
     return 'Elite';
   }
   if (['A', 'C', 'E'].includes(product.archetype_id || '')) {
@@ -131,8 +131,26 @@ export const BlueprintCard: React.FC<BlueprintCardProps> = ({
 }) => {
   const rarity = getRarityTier(product);
   const domain = getDomainClass(product);
-  const isTrack2 = product.pricing_track?.includes('Track 1') ? false : ((product.id >= 86 && product.id !== 112) || Boolean(product.flagship_qualified) || Boolean(product.pricing_track?.includes('Track 2')));
+  const isTrack3 = Boolean(product.pricing_track?.includes('Track 3'));
+  const isTrack2 = !isTrack3 && (product.pricing_track?.includes('Track 1') ? false : ((product.id >= 86 && product.id !== 112) || Boolean(product.flagship_qualified) || Boolean(product.pricing_track?.includes('Track 2'))));
   const pricing = getBlueprintPricing(product);
+
+  const getCategoryBadgeClass = (p: ProductItem): { label: string; badgeClass: string } => {
+    const name = (p?.name || '').toLowerCase();
+    const cat = (p?.category || '').toLowerCase();
+    const vert = (p?.vertical || '').toLowerCase();
+
+    if (vert.includes('zero-trust') || cat.includes('cryptograph') || cat.includes('zero-trust') || name.includes('sovereign')) {
+      return { label: 'Zero-Trust', badgeClass: 'text-pink-300 bg-pink-950/70 border-pink-500/50' };
+    }
+    if (cat.includes('swarm') || cat.includes('flocking') || cat.includes('consensus') || name.includes('swarm') || name.includes('voronoi')) {
+      return { label: 'Edge AI', badgeClass: 'text-purple-300 bg-purple-950/70 border-purple-500/50' };
+    }
+    if (vert.includes('fintech') || vert.includes('quant') || vert.includes('wealth') || name.includes('risk') || name.includes('arbitrage') || name.includes('limit') || name.includes('order')) {
+      return { label: 'FinTech', badgeClass: 'text-emerald-300 bg-emerald-950/70 border-emerald-500/50' };
+    }
+    return { label: 'Telemetry', badgeClass: 'text-cyan-300 bg-cyan-950/70 border-cyan-500/50' };
+  };
 
   const rarityStyles: Record<RarityTier, { border: string; bg: string; text: string; glow: string }> = {
     'Elite': { border: 'border-amber-400/90', bg: 'bg-amber-950/20', text: 'text-amber-300', glow: 'shadow-[0_0_20px_rgba(245,158,11,0.25)]' },
@@ -176,6 +194,9 @@ export const BlueprintCard: React.FC<BlueprintCardProps> = ({
 
         {/* Domain & Archetype pills */}
         <div className="flex flex-wrap items-center gap-2 pt-1">
+          <span className={`text-xs sm:text-sm font-black uppercase tracking-wider px-2.5 py-1 rounded border font-mono ${getCategoryBadgeClass(product).badgeClass}`}>
+            {getCategoryBadgeClass(product).label}
+          </span>
           <span className="text-xs sm:text-sm font-bold text-cyan-300 bg-cyan-950/60 border border-cyan-500/40 px-2.5 py-1 rounded font-mono">
             {domain}
           </span>
@@ -205,44 +226,48 @@ export const BlueprintCard: React.FC<BlueprintCardProps> = ({
         </div>
       )}
 
-      {/* DUAL-TRACK DEALERSHIP WINDOW STICKER */}
+      {/* MULTI-TRACK DEALERSHIP WINDOW STICKER */}
       <div className={`p-3.5 rounded-xl border text-xs font-mono space-y-2.5 transition-colors ${
-        isTrack2 
+        isTrack3
+          ? 'bg-purple-950/30 border-purple-500/50 text-purple-200'
+          : isTrack2 
           ? 'bg-amber-950/30 border-amber-500/50 text-amber-200' 
           : 'bg-emerald-950/20 border-emerald-500/40 text-emerald-200'
       }`}>
         <div className="flex items-center justify-between gap-2">
           <span className={`px-2.5 py-1 rounded font-black text-[10px] sm:text-xs uppercase tracking-wider border shrink-0 ${
-            isTrack2 
+            isTrack3
+              ? 'bg-purple-500/20 border-purple-500/60 text-purple-300 shadow-sm shadow-purple-500/20'
+              : isTrack2 
               ? 'bg-amber-500/20 border-amber-500/60 text-amber-300 shadow-sm shadow-amber-500/20' 
               : 'bg-emerald-500/20 border-emerald-500/50 text-emerald-300'
           }`}>
-            {isTrack2 ? 'TRACK 2 // FLAGSHIP TIER-1' : 'TRACK 1 // LEAN RAPID-SALE'}
+            {isTrack3 ? 'TRACK 3 // F1 SERVICE ENGINE' : isTrack2 ? 'TRACK 2 // FLAGSHIP TIER-1' : 'TRACK 1 // LEAN RAPID-SALE'}
           </span>
           <span className="text-[10px] text-slate-400 uppercase font-bold tracking-wider truncate">
-            {isTrack2 ? 'SCADA / Deep Tech' : 'Turnkey Template'}
+            {isTrack3 ? 'Production Reference Engine' : isTrack2 ? 'SCADA / Deep Tech' : 'Turnkey Template'}
           </span>
         </div>
 
         {/* Canonical 3-Tier License Matrix Section */}
-        <div className={`space-y-1.5 pt-1.5 border-t text-xs ${isTrack2 ? 'border-amber-500/20' : 'border-emerald-500/20'}`}>
+        <div className={`space-y-1.5 pt-1.5 border-t text-xs ${isTrack3 ? 'border-purple-500/20' : isTrack2 ? 'border-amber-500/20' : 'border-emerald-500/20'}`}>
           {/* 1. Standard License (Non-Exclusive, Perpetual, Unlimited End-Client Use) */}
           <div className="flex items-center justify-between gap-2">
             <span className="text-slate-400 text-[11px]" title={LICENSE_MATRIX.standard.description}>
-              {LICENSE_MATRIX.standard.name} ({LICENSE_MATRIX.standard.exclusivity}):
+              {isTrack3 ? 'Enterprise Seat License:' : `${LICENSE_MATRIX.standard.name} (${LICENSE_MATRIX.standard.exclusivity}):`}
             </span>
-            <span className={`${isTrack2 ? 'text-amber-300' : 'text-emerald-300'} font-bold font-mono`}>
-              {pricing.standardPrice}
+            <span className={`${isTrack3 ? 'text-purple-300' : isTrack2 ? 'text-amber-300' : 'text-emerald-300'} font-bold font-mono`}>
+              {isTrack3 ? '$1,500/mo' : pricing.standardPrice}
             </span>
           </div>
 
           {/* 2. Pro License (Non-Exclusive, Includes Updates) */}
           <div className="flex items-center justify-between gap-2">
             <span className="text-slate-400 text-[11px]" title={LICENSE_MATRIX.pro.description}>
-              {LICENSE_MATRIX.pro.name} ({LICENSE_MATRIX.pro.exclusivity}):
+              {isTrack3 ? 'VPC Cluster Lease:' : `${LICENSE_MATRIX.pro.name} (${LICENSE_MATRIX.pro.exclusivity}):`}
             </span>
             <span className="text-cyan-300 font-bold font-mono">
-              {pricing.proPrice}
+              {isTrack3 ? 'Managed Fleet' : pricing.proPrice}
             </span>
           </div>
 
@@ -259,7 +284,7 @@ export const BlueprintCard: React.FC<BlueprintCardProps> = ({
               </div>
               {pricing.buyoutRange && (
                 <div className="flex items-center justify-between gap-2 text-[10px] text-slate-400">
-                  <span>Buyout Range:</span>
+                  <span>Buyout Avg:</span>
                   <span className="font-mono">{pricing.buyoutRange}</span>
                 </div>
               )}

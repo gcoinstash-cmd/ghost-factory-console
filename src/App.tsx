@@ -49,11 +49,11 @@ export const App: React.FC = () => {
   const [testDriveProduct, setTestDriveProduct] = useState<ProductItem | null>(null);
   const [isRefreshing, setIsRefreshing] = useState(false);
 
-  // Core metrics derived from v2 specifications (Inline Public Telemetry Constants)
-  const totalAssets = CATALOG_DATA.total_flagships || 136;
-  const retainedFloor = 109; // 80% immutable retention floor
-  const availableApaSlots = 27; // 20% max APA capacity
-  const planningValue = 160000; // Curated Public Telemetry Reference
+  // Core metrics derived from v2 specifications (160 Active Units: 137 Base + 23 T3)
+  const totalAssets = 160;
+  const retainedFloor = 128; // 80% immutable retention floor (128 of 160 vaulted)
+  const availableApaSlots = 32; // 20% max APA capacity (32 transferable slots)
+  const planningValue = 195000; // Curated Public Telemetry Reference
 
   // Hard Refresh Handler to clear cache and refresh view
   const handleHardRefresh = () => {
@@ -159,8 +159,8 @@ export const App: React.FC = () => {
       {/* VISIBLE BUILD STAMP FOOTER */}
       <footer id="gfcc-footer" className="border-t border-white/10 bg-[#0A0A0B] py-6 px-4 text-center font-mono text-xs text-slate-400 mb-16 md:mb-0">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
-          <span>GFCC Build: v1.8.0</span>
-          <span className="text-emerald-400 font-bold">136 / 136 Reference Digital Assets</span>
+          <span>GFCC Build: v2.0.0-PROD</span>
+          <span className="text-emerald-400 font-bold">151 / 151 Reference Digital Assets</span>
         </div>
       </footer>
 

@@ -11,22 +11,22 @@ interface DealDeskHudProps {
 }
 
 export const DealDeskHud: React.FC<DealDeskHudProps> = ({
-  catalogAppraisalStr = '$105,000 – $235,250',
-  catalogAnchor = '$160,000 Anchor',
-  askStr = '$195,000 – $265,000',
-  acquisitionStr = '$135,000 – $175,000',
-  devStr = '$1.32M – $2.40M',
-  buyoutAnchor = '$14,500 Anchor',
-  totalAssets = 136,
+  catalogAppraisalStr = '$2.28M',
+  catalogAnchor = '$1.75M',
+  askStr = '$3.63M',
+  acquisitionStr = '$1.05M Distressed Floor',
+  devStr = '$1.75M Baseline',
+  buyoutAnchor = '$85.0k+',
+  totalAssets = 160,
 }) => {
   return (
     <div className="py-3 border-b border-white/10 text-xs sm:text-sm font-mono space-y-2">
       {/* 5-PILLAR OPERATOR INTERNAL ASK & VALUATION HUD */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 w-full">
-        {/* 1. Internal Ask Range (unaudited) */}
+        {/* 1. Internal Ask Average (unaudited) */}
         <div className="bg-black/75 border border-emerald-500/40 rounded-xl p-3.5 flex flex-col justify-between hover:border-emerald-400 transition-colors w-full">
           <div className="flex items-center justify-between text-slate-300 text-xs font-bold uppercase tracking-wider">
-            <span>Internal Ask Range (unaudited)</span>
+            <span>Internal Ask Average (unaudited)</span>
             <span className="text-emerald-400 font-mono text-xs bg-emerald-950/80 px-1.5 py-0.5 rounded border border-emerald-500/40 font-black">INTERNAL</span>
           </div>
           <div className="mt-2">
@@ -79,7 +79,7 @@ export const DealDeskHud: React.FC<DealDeskHudProps> = ({
           </div>
           <div className="mt-2">
             <span className="text-xl sm:text-2xl font-black text-pink-400 block tracking-tight">{buyoutAnchor}</span>
-            <span className="text-sm text-slate-200 block font-semibold leading-relaxed mt-0.5">T2 Flagship ($10k–$18k) / T1 ($4.5k)</span>
+            <span className="text-sm text-slate-200 block font-semibold leading-relaxed mt-0.5">Standalone Track 3 Turnkey Engines & Track 2 Flagships</span>
           </div>
         </div>
       </div>

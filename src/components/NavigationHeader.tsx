@@ -13,6 +13,7 @@ import {
   ShieldCheck,
   X
 } from 'lucide-react';
+import { CockpitMetrics } from './CockpitMetrics';
 
 // ============================================================================
 // AUDIT 360 VERIFIED BADGE — 9.7/10 INSTITUTIONAL PASS [audit-badge-exempt]
@@ -46,7 +47,7 @@ const AUDIT_PARAMETERS = [
   {
     label: 'Security',
     value: '80% Retention Floor Hard-Locked',
-    detail: '109 of 136 units permanently vaulted. Max 27 micro-APA transferable. APA basket enforces ceiling at runtime.',
+    detail: '128 of 160 units permanently vaulted. Max 32 micro-APA transferable. APA basket enforces ceiling at runtime.',
     color: 'text-amber-400',
     border: 'border-amber-500/40',
     bg: 'bg-amber-950/40',
@@ -54,7 +55,7 @@ const AUDIT_PARAMETERS = [
   {
     label: 'Product Truth',
     value: 'Simulated Data Prototypes Only',
-    detail: 'All 136 assets carry REGULATED_SECTOR_DISCLAIMER. No live compliance certification, production-readiness, or safety approval implied.', // [audit-badge-exempt]
+    detail: 'All 160 assets carry REGULATED_SECTOR_DISCLAIMER. No live compliance certification, production-readiness, or safety approval implied.', // [audit-badge-exempt]
     color: 'text-pink-400',
     border: 'border-pink-500/40',
     bg: 'bg-pink-950/40',
@@ -112,7 +113,7 @@ function Audit360Badge() {
                   <div className="text-slate-300 text-xs mt-0.5">
                     Commit: <span className="text-cyan-400 font-bold">HEAD (main)</span> &nbsp;|&nbsp;
                     Build: <span className="text-cyan-400 font-bold">vite-bundle</span> &nbsp;|&nbsp;
-                    v<span className="text-emerald-400 font-bold">1.8.0</span>
+                    v<span className="text-emerald-400 font-bold">2.0.0-PROD</span>
                   </div>
                 </div>
               </div>
@@ -174,13 +175,14 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
 }) => {
   const [isMobileHudCollapsed, setIsMobileHudCollapsed] = useState(false);
 
-  // Dynamic Portfolio Appraisal Metrics (Public Telemetry & Master Protocol Values)
-  const catalogAppraisalStr = '$105,000 – $235,250';
-  const catalogAnchor = '~$160,000';
-  const askStr = '$195,000 – $265,000';
-  const acquisitionStr = '$135,000 – $175,000';
-  const devStr = '$1.32M – $2.40M';
-  const buyoutAnchor = '$14,500 Anchor';
+  // Dynamic Portfolio Appraisal Metrics (160 Units: 137 Base + 23 T3 Engines)
+  const catalogAppraisalStr = '$2.28M';
+  const catalogAnchor = '$1.75M';
+  const askStr = '$3.63M';
+  const acquisitionStr = '$1.75M Hard Floor';
+  const devStr = '$2.28M';
+  const buyoutAnchor = '$35.0k–$85.0k+';
+  const distressStr = '$1.05M';
 
   const showInternalDealDesk = IS_OPERATOR_MODE && isOperatorAuthenticated;
 
@@ -242,7 +244,12 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
 
           <div className="flex items-center gap-1.5 text-slate-200 font-bold">
             <Server size={14} className="text-emerald-400 shrink-0" />
-            <span>FLEET: <strong className="text-emerald-400">{totalAssets} DEMO</strong></span>
+            <span>FLEET: <strong className="text-emerald-400">160 ACTIVE</strong></span>
+          </div>
+
+          <div className="hidden md:flex items-center gap-1.5 text-zinc-300 font-bold bg-slate-900/90 px-3 py-1.5 rounded border border-white/10 text-xs">
+            <span className="text-emerald-400 font-black">160 TOTAL ACTIVE ASSETS</span>
+            <span className="text-zinc-400 font-semibold">(86 Track 1 + 51 Track 2 + 23 Track 3 Engines)</span>
           </div>
 
           <button
@@ -260,14 +267,14 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
             title="Inspect Institutional Build Ledger"
           >
             <Award size={14} />
-            <span>CATALOG: <strong>{totalAssets}/{totalAssets} ACTIVE</strong></span>
+            <span>CATALOG: <strong>160/160 ACTIVE</strong></span>
           </button>
 
           <div
             className="hidden xl:flex items-center gap-1.5 px-2.5 py-1.5 rounded bg-emerald-500/15 border border-emerald-500/40 text-emerald-300 font-mono text-xs font-bold"
             title="Production Diligence Freeze Lock"
           >
-            <span>Build: v1.8.0</span>
+            <span>Build: v2.0.0-PROD</span>
           </div>
 
           <button
@@ -296,111 +303,36 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
           />
         </React.Suspense>
       ) : (
-        /* SECTION 2 VALUATION HEADER (DESCENDING: STRATEGIC CEILING -> DEV REPLACEMENT -> STRATEGIC BUYOUT -> DISTRESS FLOOR) */
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-3.5 py-3 border-b border-white/10 text-xs sm:text-sm w-full">
-          {/* Card 1: Enterprise Market Valuation */}
-          <div className="flex flex-col items-center justify-between p-4 rounded-xl border border-pink-500/40 hover:border-pink-400 transition-colors min-h-[230px] bg-zinc-950/70 shadow-lg w-full">
-            <div className="flex flex-col items-center w-full">
-              <span className="inline-flex items-center justify-center px-3 py-1 rounded-md text-[10px] font-mono font-bold tracking-wider uppercase mx-auto mb-2 text-pink-400 bg-pink-950/80 border border-pink-500/40">
-                MONOPOLY PREMIUM
-              </span>
-              <h4 className="text-xs font-black tracking-widest uppercase text-zinc-300 text-center mb-1.5 whitespace-normal leading-snug">
-                ENTERPRISE MARKET VALUATION
-              </h4>
-              <span className="text-2xl xl:text-3xl font-mono font-black tracking-tight text-center my-2 text-pink-400 block">
-                $2.15M – $3.85M+
-              </span>
-              <p className="text-xs text-zinc-400 text-center leading-relaxed px-1">
-                Strategic Acquisition Ceiling (Monopoly Premium)
-              </p>
-            </div>
-            <span className="text-[11px] font-mono text-zinc-500 text-center mt-auto pt-2 border-t border-zinc-800/80 block w-full">
-              Deep-tech enterprise APA buyout ceiling (136 models)
-            </span>
-          </div>
+        /* SECTION 2 VALUATION HEADER (4-CARD EXECUTIVE FLEET HUD WITH LEXUS-GRADE TERMINOLOGY - DESCENDING ORDER) */
+        <div className="space-y-3 py-3 border-b border-white/10 w-full">
+          <CockpitMetrics />
 
-          {/* Card 2: Dev Agency Replacement Benchmark */}
-          <div className="flex flex-col items-center justify-between p-4 rounded-xl border border-cyan-500/40 hover:border-cyan-400 transition-colors min-h-[230px] bg-zinc-950/70 shadow-lg w-full">
-            <div className="flex flex-col items-center w-full">
-              <span className="inline-flex items-center justify-center px-3 py-1 rounded-md text-[10px] font-mono font-bold tracking-wider uppercase mx-auto mb-2 text-cyan-400 bg-cyan-950/80 border border-cyan-500/40">
-                REPLACEMENT COST
+          {/* LEXUS-GRADE SHOWROOM CATEGORY BADGES BAR */}
+          <div className="flex flex-wrap items-center justify-between gap-2.5 pt-2 px-1 text-xs">
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-zinc-400 mr-1">
+                CATEGORY BADGES:
               </span>
-              <h4 className="text-xs font-black tracking-widest uppercase text-zinc-300 text-center mb-1.5 whitespace-normal leading-snug">
-                DEV AGENCY REPLACEMENT
-              </h4>
-              <span className="text-2xl xl:text-3xl font-mono font-black tracking-tight text-center my-2 text-cyan-400 block">
-                $1.32M – $2.40M
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-emerald-950/70 border border-emerald-500/50 text-emerald-300 font-mono font-black text-xs shadow-sm shadow-emerald-500/10">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                FinTech <span className="text-emerald-400/80 text-[10px] font-semibold">(27 Units)</span>
               </span>
-              <p className="text-xs text-zinc-400 text-center leading-relaxed px-1">
-                5,600+ engineering hours @ $150–$250/hr
-              </p>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-cyan-950/70 border border-cyan-500/50 text-cyan-300 font-mono font-black text-xs shadow-sm shadow-cyan-500/10">
+                <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
+                Telemetry <span className="text-cyan-400/80 text-[10px] font-semibold">(60 Units)</span>
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-purple-950/70 border border-purple-500/50 text-purple-300 font-mono font-black text-xs shadow-sm shadow-purple-500/10">
+                <span className="w-1.5 h-1.5 rounded-full bg-purple-400 animate-pulse" />
+                Edge AI <span className="text-purple-400/80 text-[10px] font-semibold">(5 Units)</span>
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-pink-950/70 border border-pink-500/50 text-pink-300 font-mono font-black text-xs shadow-sm shadow-pink-500/10">
+                <span className="w-1.5 h-1.5 rounded-full bg-pink-400 animate-pulse" />
+                Zero-Trust <span className="text-pink-400/80 text-[10px] font-semibold">(3 Units)</span>
+              </span>
             </div>
-            <span className="text-[11px] font-mono text-zinc-500 text-center mt-auto pt-2 border-t border-zinc-800/80 block w-full">
-              5,600+ engineering hours @ $150–$250/hr
-            </span>
-          </div>
-
-          {/* Card 3: Dual-Track Strategic Buyout Range */}
-          <div className="flex flex-col items-center justify-between p-4 rounded-xl border border-amber-500/40 hover:border-amber-400 transition-colors min-h-[230px] bg-zinc-950/70 shadow-lg w-full">
-            <div className="flex flex-col items-center w-full">
-              <span className="inline-flex items-center justify-center px-3 py-1 rounded-md text-[10px] font-mono font-bold tracking-wider uppercase mx-auto mb-2 text-amber-400 bg-amber-950/80 border border-amber-500/40">
-                PORTFOLIO BUYOUT
-              </span>
-              <h4 className="text-xs font-black tracking-widest uppercase text-zinc-300 text-center mb-1.5 whitespace-normal leading-snug">
-                STRATEGIC BUYOUT RANGE
-              </h4>
-              <span className="text-2xl xl:text-3xl font-mono font-black tracking-tight text-center my-2 text-amber-400 block">
-                $935.0k – $1.60M
-              </span>
-              <p className="text-xs text-zinc-400 text-center leading-relaxed px-1">
-                Anchor: $1.11M (86 T1 @ $4.5k + 50 Flagship @ $14.5k)
-              </p>
+            <div className="text-[11px] font-mono text-zinc-400 hidden lg:block">
+              80% Portfolio Retention Floor: <strong className="text-emerald-400">128 Vaulted</strong> / <strong className="text-amber-400">32 Liquid APA Slots</strong>
             </div>
-            <span className="text-[11px] font-mono text-zinc-500 text-center mt-auto pt-2 border-t border-zinc-800/80 block w-full">
-              Anchor: $1.11M (86 T1 @ $4.5k + 50 Flagship @ $14.5k)
-            </span>
-          </div>
-
-          {/* Card 4: Distress / Quick-Sale Cash Floor */}
-          <div className="flex flex-col items-center justify-between p-4 rounded-xl border border-emerald-500/40 hover:border-emerald-400 transition-colors min-h-[230px] bg-zinc-950/70 shadow-lg w-full">
-            <div className="flex flex-col items-center w-full">
-              <span className="inline-flex items-center justify-center px-3 py-1 rounded-md text-[10px] font-mono font-bold tracking-wider uppercase mx-auto mb-2 text-emerald-400 bg-emerald-950/80 border border-emerald-500/40">
-                LIQUIDATION
-              </span>
-              <h4 className="text-xs font-black tracking-widest uppercase text-zinc-300 text-center mb-1.5 whitespace-normal leading-snug">
-                DISTRESS / QUICK-SALE FLOOR
-              </h4>
-              <span className="text-2xl xl:text-3xl font-mono font-black tracking-tight text-center my-2 text-emerald-400 block">
-                $95.0k – $145.0k
-              </span>
-              <p className="text-xs text-zinc-400 text-center leading-relaxed px-1">
-                50-70% buyer liquidation cash floor (136 assets)
-              </p>
-            </div>
-            <span className="text-[11px] font-mono text-zinc-500 text-center mt-auto pt-2 border-t border-zinc-800/80 block w-full">
-              50-70% buyer liquidation cash floor (136 assets)
-            </span>
-          </div>
-
-          {/* Card 5: Exclusive Vault Buyout */}
-          <div className="flex flex-col items-center justify-between p-4 rounded-xl border border-purple-500/40 hover:border-purple-400 transition-colors min-h-[230px] bg-zinc-950/70 shadow-lg w-full">
-            <div className="flex flex-col items-center w-full">
-              <span className="inline-flex items-center justify-center px-3 py-1 rounded-md text-[10px] font-mono font-bold tracking-wider uppercase mx-auto mb-2 text-purple-400 bg-purple-950/80 border border-purple-500/40">
-                MONOPOLY PREMIUM
-              </span>
-              <h4 className="text-xs font-black tracking-widest uppercase text-zinc-300 text-center mb-1.5 whitespace-normal leading-snug">
-                EXCLUSIVE VAULT BUYOUT
-              </h4>
-              <span className="text-2xl xl:text-3xl font-mono font-black tracking-tight text-center my-2 text-purple-400 block">
-                $14.2k – $26.5k+
-              </span>
-              <p className="text-xs text-zinc-400 text-center leading-relaxed px-1">
-                Average Exclusive Buyout / Vault (T1 + T2 Fleet Weighted)
-              </p>
-            </div>
-            <span className="text-[11px] font-mono text-zinc-500 text-center mt-auto pt-2 border-t border-zinc-800/80 block w-full">
-              Average Exclusive Buyout / Vault (T1 + T2 Fleet Weighted)
-            </span>
           </div>
         </div>
       )}
@@ -438,11 +370,11 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
           ) : (
             <div 
               onClick={() => setIsMobileHudCollapsed(false)}
-              className="flex items-center justify-between bg-black/80 border border-amber-500/40 rounded-xl px-3 py-2 text-xs sm:text-sm text-slate-200 cursor-pointer hover:border-amber-400 transition-colors"
+              className="flex items-center justify-between bg-black/80 border border-purple-500/40 rounded-xl px-3 py-2 text-xs sm:text-sm text-slate-200 cursor-pointer hover:border-purple-400 transition-colors"
             >
-              <span className="text-pink-400 font-black">Ceiling: $2.15M+</span>
-              <span className="text-amber-400 font-black">Buyout: $1.11M</span>
-              <span className="text-emerald-400 font-black">Floor: $95.0k</span>
+              <span className="text-purple-400 font-black">MSRP: $3.63M</span>
+              <span className="text-amber-400 font-black">Agency: $2.28M</span>
+              <span className="text-cyan-400 font-black">ASC: $1.75M</span>
             </div>
           )
         ) : (
@@ -460,58 +392,62 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
             </React.Suspense>
           ) : (
             <div className="flex items-center gap-2.5 overflow-x-auto no-scrollbar snap-x snap-mandatory pt-1 pb-1.5 touch-pan-x">
-              <div className="min-w-[210px] shrink-0 snap-start bg-black/85 border-2 border-pink-500/50 rounded-xl p-3 flex flex-col justify-between">
+              {/* CARD 1 (FIRST / HIGHEST VALUE — $3.63M) */}
+              <div className="min-w-[260px] shrink-0 snap-start bg-zinc-950/90 border border-purple-500/50 rounded-2xl p-3.5 flex flex-col justify-between">
                 <div className="flex items-center justify-between text-xs font-bold text-slate-300 uppercase tracking-wider">
-                  <span>Acquisition Ceiling</span>
-                  <span className="text-pink-400 font-mono text-xs bg-pink-950/80 px-1.5 py-0.5 rounded border border-pink-500/40 font-black">CEILING</span>
+                  <span>CARD 1 // HIGHEST</span>
+                  <span className="text-purple-300 font-mono text-[10px] bg-purple-950/90 px-2 py-0.5 rounded-full border border-purple-500/50 font-black">TOTAL RETAIL PRICE</span>
                 </div>
-                <div className="mt-1.5">
-                  <span className="text-base sm:text-lg font-black text-pink-400 block">$2.15M – $3.85M+</span>
-                  <span className="text-xs text-slate-300 block font-semibold">Deep-Tech Monopoly</span>
+                <div className="mt-2">
+                  <h4 className="text-xs font-black uppercase text-zinc-300 tracking-wider">TOTAL MSRP STICKER PRICE</h4>
+                  <span className="text-3xl font-black bg-gradient-to-r from-cyan-400 via-purple-300 to-purple-400 bg-clip-text text-transparent block my-1">$3.63M</span>
+                  <p className="text-[11px] text-zinc-300 leading-snug">Portfolio Monopoly Asking Price &amp; Strategic Transfer Ceiling</p>
+                  <span className="text-[10px] text-zinc-500 block mt-2 pt-1.5 border-t border-zinc-800">160 Active Units combined retail anchor value</span>
                 </div>
               </div>
 
-              <div className="min-w-[210px] shrink-0 snap-start bg-black/85 border-2 border-cyan-500/50 rounded-xl p-3 flex flex-col justify-between">
+              {/* CARD 2 (SECOND / COMMERCIAL APPRAISAL — $2.28M) */}
+              <div className="min-w-[260px] shrink-0 snap-start bg-zinc-950/90 border border-amber-500/50 rounded-2xl p-3.5 flex flex-col justify-between">
                 <div className="flex items-center justify-between text-xs font-bold text-slate-300 uppercase tracking-wider">
-                  <span>Dev Replacement</span>
-                  <span className="text-cyan-400 font-mono text-xs bg-cyan-950/80 px-1.5 py-0.5 rounded border border-cyan-500/40 font-black">COST</span>
+                  <span>CARD 2 // SECOND</span>
+                  <span className="text-amber-300 font-mono text-[10px] bg-amber-950/90 px-2 py-0.5 rounded-full border border-amber-500/50 font-black">WHOLESALE BASELINE PRICE</span>
                 </div>
-                <div className="mt-1.5">
-                  <span className="text-base sm:text-lg font-black text-cyan-400 block">$1.32M – $2.40M</span>
-                  <span className="text-xs text-slate-300 block font-semibold">5,600+ Eng Hours</span>
+                <div className="mt-2">
+                  <h4 className="text-xs font-black uppercase text-zinc-300 tracking-wider">COMMERCIAL AGENCY REPLACEMENT APPRAISAL</h4>
+                  <span className="text-3xl font-black text-amber-400 block my-1">$2.28M</span>
+                  <p className="text-[11px] text-zinc-300 leading-snug">$2.28M Tier 2/3 Enterprise Dev Replacement Benchmark</p>
+                  <span className="text-[10px] text-zinc-500 block mt-2 pt-1.5 border-t border-zinc-800">160 Units × $14,250 average institutional custom dev replacement</span>
                 </div>
               </div>
 
-              <div className="min-w-[210px] shrink-0 snap-start bg-black/85 border-2 border-amber-500/50 rounded-xl p-3 flex flex-col justify-between">
+              {/* CARD 3 (THIRD / HARD CAPITALIZED FLOOR — $1.75M) */}
+              <div className="min-w-[260px] shrink-0 snap-start bg-zinc-950/90 border border-emerald-500/50 rounded-2xl p-3.5 flex flex-col justify-between">
                 <div className="flex items-center justify-between text-xs font-bold text-slate-300 uppercase tracking-wider">
-                  <span>Strategic Buyout</span>
-                  <span className="text-amber-400 font-mono text-xs bg-amber-950/80 px-1.5 py-0.5 rounded border border-amber-500/40 font-black">BUYOUT</span>
+                  <span>CARD 3 // THIRD</span>
+                  <span className="text-emerald-300 font-mono text-[10px] bg-emerald-950/90 px-2 py-0.5 rounded-full border border-emerald-500/50 font-black">ASC 350-40 AUDITED REPLACEMENT BASELINE</span>
                 </div>
-                <div className="mt-1.5">
-                  <span className="text-base sm:text-lg font-black text-amber-400 block">$935.0k – $1.60M</span>
-                  <span className="text-xs text-slate-300 block font-semibold">Anchor: $1.11M</span>
+                <div className="mt-2">
+                  <h4 className="text-xs font-black uppercase text-zinc-300 tracking-wider">AS-IS BARE MINIMUM (THE HARD WALK-AWAY FLOOR)</h4>
+                  <span className="text-3xl font-black text-emerald-400 block my-1">$1.75M</span>
+                  <p className="text-[11px] text-zinc-300 leading-snug">$1,751,840 Audited Capitalized Development Floor</p>
+                  <div className="text-[10px] text-amber-300 font-bold leading-tight px-1.5 py-1 bg-amber-950/40 border border-amber-500/40 rounded mt-1.5">
+                    Dealership Rule: The Hard Walk-Away Price. We do not negotiate or sell below this baseline (160 units × 100 hrs @ $109.49/hr Senior Architect standard).
+                  </div>
+                  <span className="text-[10px] text-zinc-500 block mt-1.5 pt-1.5 border-t border-zinc-800">16,000 Engineering Hours (@ $109.49/hr Senior Architect Floor)</span>
                 </div>
               </div>
 
-              <div className="min-w-[210px] shrink-0 snap-start bg-black/85 border-2 border-emerald-500/50 rounded-xl p-3 flex flex-col justify-between">
+              {/* CARD 4 (FOURTH / LOWEST DOWNSIDE FLOOR — $1.05M) */}
+              <div className="min-w-[260px] shrink-0 snap-start bg-zinc-950/90 border border-rose-500/50 rounded-2xl p-3.5 flex flex-col justify-between">
                 <div className="flex items-center justify-between text-xs font-bold text-slate-300 uppercase tracking-wider">
-                  <span>Distress Cash Floor</span>
-                  <span className="text-emerald-400 font-mono text-xs bg-emerald-950/80 px-1.5 py-0.5 rounded border border-emerald-500/40 font-black">FLOOR</span>
+                  <span>CARD 4 // FOURTH</span>
+                  <span className="text-rose-300 font-mono text-[10px] bg-rose-950/90 px-2 py-0.5 rounded-full border border-rose-500/50 font-black">EMERGENCY LIQUIDATION RESERVE</span>
                 </div>
-                <div className="mt-1.5">
-                  <span className="text-base sm:text-lg font-black text-emerald-400 block">$95.0k – $145.0k</span>
-                  <span className="text-xs text-slate-300 block font-semibold">50–70% Realization (136 Assets)</span>
-                </div>
-              </div>
-
-              <div className="min-w-[210px] shrink-0 snap-start bg-black/85 border-2 border-purple-500/50 rounded-xl p-3 flex flex-col justify-between">
-                <div className="flex items-center justify-between text-xs font-bold text-slate-300 uppercase tracking-wider">
-                  <span>Vault Buyout</span>
-                  <span className="text-purple-400 font-mono text-xs bg-purple-950/80 px-1.5 py-0.5 rounded border border-purple-500/40 font-black">MONOPOLY</span>
-                </div>
-                <div className="mt-1.5">
-                  <span className="text-base sm:text-lg font-black text-purple-400 block">$14.2k – $26.5k+</span>
-                  <span className="text-xs text-slate-300 block font-semibold">T1 + T2 Weighted</span>
+                <div className="mt-2">
+                  <h4 className="text-xs font-black uppercase text-zinc-300 tracking-wider">THE PANIC FLOOR PRICE</h4>
+                  <span className="text-3xl font-black text-rose-500 block my-1">$1.05M</span>
+                  <p className="text-[11px] text-zinc-300 leading-snug">Distressed Acquisition &amp; Immediate Cash Downside Floor</p>
+                  <span className="text-[10px] text-zinc-500 block mt-2 pt-1.5 border-t border-zinc-800">Worst-case distress liquidation floor strictly maintained &gt;$1.0M</span>
                 </div>
               </div>
             </div>
@@ -529,7 +465,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
               ? 'bg-emerald-500 text-black border-emerald-400 shadow-lg shadow-emerald-500/25'
               : 'bg-[#111114] text-slate-200 hover:text-white hover:bg-white/5 border-white/10 hover:border-emerald-500/30'
           }`}
-          title="SCREEN 1: GARAGE (136)"
+          title="SCREEN 1: GARAGE (160)"
         >
           <span className={`text-[10px] font-mono font-bold tracking-widest uppercase ${
             currentView === 'garage' ? 'text-black/80' : 'text-zinc-400'
@@ -539,7 +475,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
           <span className={`text-xs sm:text-[13px] font-black tracking-wide uppercase mt-0.5 whitespace-nowrap ${
             currentView === 'garage' ? 'text-black' : 'text-zinc-100'
           }`}>
-            GARAGE ({totalAssets})
+            GARAGE (160)
           </span>
         </button>
 

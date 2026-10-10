@@ -10,6 +10,7 @@ import {
   RefreshCw
 } from 'lucide-react';
 import { ProductItem } from '../catalogData';
+import { Track2Harness } from './Track2Harness';
 
 interface MaintenanceBayScreenProps {
   products: ProductItem[];
@@ -223,6 +224,11 @@ export const MaintenanceBayScreen: React.FC<MaintenanceBayScreenProps> = ({
             </tbody>
           </table>
         </div>
+      </section>
+
+      {/* Track 3 Production Reference Engines: Universal Track 2 Telemetry Cockpit */}
+      <section className="pt-4">
+        <Track2Harness />
       </section>
     </div>
   );

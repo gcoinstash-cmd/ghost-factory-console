@@ -344,7 +344,7 @@ export const DealRoomCore: React.FC<DealRoomScreenProps> = ({
                 <span className="text-cyan-400 font-bold bg-cyan-950/60 px-1.5 py-0.5 rounded border border-cyan-500/30 text-[10px]">ENTERPRISE ASK</span>
               </div>
               <div>
-                <span className="text-2xl sm:text-3xl font-black text-cyan-400 font-mono block">$88.0k – $155.0k / yr</span>
+                <span className="text-2xl sm:text-3xl font-black text-cyan-400 font-mono block">$121.5k / yr</span>
                 <span className="text-xs text-slate-300 mt-1 block">Full data-room enterprise asking rate</span>
               </div>
             </div>
@@ -356,7 +356,7 @@ export const DealRoomCore: React.FC<DealRoomScreenProps> = ({
                 <span className="text-amber-400 font-bold bg-amber-950/60 px-1.5 py-0.5 rounded border border-amber-500/30 text-[10px]">TARGET CLOSE</span>
               </div>
               <div>
-                <span className="text-2xl sm:text-3xl font-black text-amber-400 font-mono block">$62.0k – $104.8k / yr</span>
+                <span className="text-2xl sm:text-3xl font-black text-amber-400 font-mono block">$83.4k / yr</span>
                 <span className="text-xs text-slate-300 mt-1 block">Wire-ready acceptable institutional run-rate</span>
               </div>
             </div>
@@ -365,10 +365,10 @@ export const DealRoomCore: React.FC<DealRoomScreenProps> = ({
             <div className="bg-black/60 border border-emerald-500/30 hover:border-emerald-400/70 transition-colors rounded-xl p-4 flex flex-col justify-between space-y-2">
               <div className="flex items-center justify-between text-xs">
                 <span className="text-slate-400 uppercase font-bold tracking-wider">Annualized Fair Market Value (FMV)</span>
-                <span className="text-emerald-400 font-bold bg-emerald-950/60 px-1.5 py-0.5 rounded border border-emerald-500/30 text-[10px]">FMV</span>
+                <span className="text-emerald-400 font-bold bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-500/30 text-[10px]">FMV</span>
               </div>
               <div>
-                <span className="text-2xl sm:text-3xl font-black text-emerald-400 font-mono block">$54.4k – $121.3k / yr</span>
+                <span className="text-2xl sm:text-3xl font-black text-emerald-400 font-mono block">$87.9k / yr</span>
                 <span className="text-xs text-slate-300 mt-1 block">Annualized portfolio baseline deployment yield</span>
               </div>
             </div>
@@ -385,7 +385,7 @@ export const DealRoomCore: React.FC<DealRoomScreenProps> = ({
             <div className="px-3.5 py-2 rounded-xl bg-black/80 border border-amber-500/30 text-xs flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-amber-400"></span>
               <span className="text-slate-300 font-bold">Track 2 ({track2Count} Units):</span>
-              <span className="text-amber-300 font-mono font-bold">$1,500 – $3,500 flagship license basis</span>
+              <span className="text-amber-300 font-mono font-bold">$2,500 flagship license average basis</span>
             </div>
           </div>
 
@@ -432,7 +432,7 @@ export const DealRoomCore: React.FC<DealRoomScreenProps> = ({
                 <h3 className="text-sm font-bold text-white leading-tight">Enterprise Market Valuation</h3>
               </div>
               <div>
-                <span className="text-xl sm:text-2xl font-black text-purple-300 font-mono block">$2.15M – $3.85M+</span>
+                <span className="text-xl sm:text-2xl font-black text-purple-300 font-mono block">$3.68M</span>
                 <span className="text-xs text-slate-300 mt-1 block leading-snug">Strategic Acquisition Ceiling (Monopoly Premium)</span>
               </div>
             </div>
@@ -444,11 +444,11 @@ export const DealRoomCore: React.FC<DealRoomScreenProps> = ({
                   <span className="text-slate-300 uppercase font-bold tracking-wider text-xs">Dev Benchmark</span>
                   <span className="text-cyan-400 font-bold bg-cyan-950/60 px-2 py-0.5 rounded border border-cyan-500/30 text-xs">REPLACEMENT COST</span>
                 </div>
-                <h3 className="text-sm font-bold text-white leading-tight">Dev Agency Replacement Benchmark</h3>
+                <h3 className="text-sm font-bold text-white leading-tight">Dev Agency Replacement Cost</h3>
               </div>
               <div>
-                <span className="text-xl sm:text-2xl font-black text-cyan-300 font-mono block">$1.32M – $2.40M</span>
-                <span className="text-xs text-slate-300 mt-1 block leading-snug">Benchmark: 5,600+ engineering hours @ $150–$250/hr</span>
+                <span className="text-xl sm:text-2xl font-black text-cyan-300 font-mono block">$2.30M</span>
+                <span className="text-xs text-slate-300 mt-1 block leading-snug">Benchmark: 15,100+ engineering hours @ $142/hr avg</span>
               </div>
             </div>
 
@@ -456,14 +456,14 @@ export const DealRoomCore: React.FC<DealRoomScreenProps> = ({
             <div className="bg-black/60 border border-amber-500/30 hover:border-amber-400/70 transition-colors rounded-xl p-4 flex flex-col justify-between space-y-3">
               <div>
                 <div className="flex items-center justify-between text-xs mb-1">
-                  <span className="text-slate-300 uppercase font-bold tracking-wider text-xs">Dual-Track Range</span>
+                  <span className="text-slate-300 uppercase font-bold tracking-wider text-xs">Dual-Track Value</span>
                   <span className="text-amber-400 font-bold bg-amber-950/60 px-2 py-0.5 rounded border border-amber-500/30 text-xs">PORTFOLIO BUYOUT</span>
                 </div>
-                <h3 className="text-sm font-bold text-white leading-tight">Dual-Track Strategic Buyout Range</h3>
+                <h3 className="text-sm font-bold text-white leading-tight">Strategic Buyout Value</h3>
               </div>
               <div>
-                <span className="text-xl sm:text-2xl font-black text-amber-300 font-mono block">$935.0k – $1.60M</span>
-                <span className="text-xs text-amber-400 font-bold mt-1 block">Anchor: $1.11M</span>
+                <span className="text-xl sm:text-2xl font-black text-amber-300 font-mono block">$1.88M</span>
+                <span className="text-xs text-amber-400 font-bold mt-1 block">Anchor: $1.88M</span>
                 <span className="text-xs text-slate-300 block mt-0.5">{track1Count} T1 ($4.5k) + {track2Count} Flagship ($14.5k) anchors</span>
               </div>
             </div>
@@ -478,8 +478,8 @@ export const DealRoomCore: React.FC<DealRoomScreenProps> = ({
                 <h3 className="text-sm font-bold text-white leading-tight">Distress / Quick-Sale Cash Floor</h3>
               </div>
               <div>
-                <span className="text-xl sm:text-2xl font-black text-red-400 font-mono block">$95.0k – $145.0k</span>
-                <span className="text-xs text-slate-300 mt-1 block italic leading-snug">Note: 50–70% buyer liquidation cash floor (136 assets)</span>
+                <span className="text-xl sm:text-2xl font-black text-red-400 font-mono block">$1.05M</span>
+                <span className="text-xs text-slate-300 mt-1 block italic leading-snug">Note: Distressed secondary market floor across 160 assets (137 Base + 23 T3)</span>
               </div>
             </div>
           </div>
@@ -512,16 +512,17 @@ export const DealRoomCore: React.FC<DealRoomScreenProps> = ({
                     </span>
                   </div>
                   <h5 className="text-sm font-black text-white">Core Sovereign Reserve ({safeRetainedFloor} Units)</h5>
-                  <p className="text-xs text-emerald-300 font-mono font-semibold mt-0.5">69 Track 1 Units + 40 Track 2 Flagships</p>
+                  <p className="text-xs text-emerald-300 font-mono font-semibold mt-0.5">69 Track 1 Units + 40 Track 2 + 11 Track 3 Engines</p>
                   <div className="mt-3 space-y-2">
                     <div className="bg-black/80 p-2 rounded-lg border border-white/10">
                       <span className="text-slate-400 text-[10px] uppercase block font-mono">Protected Equity Base</span>
-                      <span className="text-xl font-black text-emerald-400 font-mono block">$890,500 Anchor</span>
-                      <span className="text-[11px] text-slate-300 font-mono">Range: $750.0k – $1.28M</span>
+                      <span className="text-xl font-black text-emerald-400 font-mono block">$1.02M Anchor</span>
+                      <span className="text-[11px] text-slate-300 font-mono">Protected Equity Average (Anchor)</span>
                     </div>
                     <div className="bg-black/80 p-2 rounded-lg border border-white/10">
                       <span className="text-slate-400 text-[10px] uppercase block font-mono">Dev Replacement Benchmark</span>
-                      <span className="text-base font-bold text-cyan-400 font-mono block">$1.05M – $1.92M</span>
+                      <span className="text-base font-bold text-cyan-400 font-mono block">$1.49M</span>
+                      <span className="text-[11px] text-slate-300 font-mono">Rebuild Benchmark Average</span>
                     </div>
                   </div>
                 </div>
@@ -540,25 +541,26 @@ export const DealRoomCore: React.FC<DealRoomScreenProps> = ({
                     </span>
                   </div>
                   <h5 className="text-sm font-black text-white">Active Liquidity Tranche ({safeMaxTransferable} Units Max)</h5>
-                  <p className="text-xs text-amber-300 font-mono font-semibold mt-0.5">17 Track 1 Units + 10 Track 2 Flagships</p>
+                  <p className="text-xs text-amber-300 font-mono font-semibold mt-0.5">17 Track 1 Units + 10 Track 2 + 3 Track 3 Engines</p>
                   <div className="mt-3 space-y-2">
                     <div className="bg-black/80 p-2 rounded-lg border border-white/10">
                       <span className="text-slate-400 text-[10px] uppercase block font-mono">Planning Anchor</span>
-                      <span className="text-xl font-black text-amber-400 font-mono block">$221,500</span>
-                      <span className="text-[11px] text-slate-300 font-mono">Range: $185.0k – $320.0k</span>
+                      <span className="text-xl font-black text-amber-400 font-mono block">$252,500</span>
+                      <span className="text-[11px] text-slate-300 font-mono">Liquidity Planning Average</span>
                     </div>
                     <div className="bg-black/80 p-2 rounded-lg border border-white/10">
                       <span className="text-slate-400 text-[10px] uppercase block font-mono">Distress Cash Floor</span>
-                      <span className="text-base font-bold text-red-400 font-mono block">$19.0k – $35.0k</span>
+                      <span className="text-base font-bold text-red-400 font-mono block">$178.8k</span>
+                      <span className="text-[11px] text-slate-300 font-mono">Liquidation Cash Average</span>
                     </div>
                   </div>
                 </div>
                 <span className="text-[11px] text-slate-400 block pt-1 border-t border-white/10">
-                  80% retention limit strictly bounds micro-APA liquidations to 27 units.
+                  80% retention limit strictly bounds micro-APA liquidations to 32 units.
                 </span>
               </div>
 
-              {/* Complete Fleet (136 Units) */}
+              {/* Complete Fleet (160 Units) */}
               <div className="bg-black/60 border-2 border-purple-500/40 rounded-xl p-4 flex flex-col justify-between space-y-3 hover:border-purple-400/70 transition-colors">
                 <div>
                   <div className="flex items-center justify-between text-xs mb-1">
@@ -568,22 +570,22 @@ export const DealRoomCore: React.FC<DealRoomScreenProps> = ({
                     </span>
                   </div>
                   <h5 className="text-sm font-black text-white">Complete Fleet ({safeTotalAssets} Units)</h5>
-                  <p className="text-xs text-purple-300 font-mono font-semibold mt-0.5">86 Track 1 + 50 Flagships</p>
+                  <p className="text-xs text-purple-300 font-mono font-semibold mt-0.5">86 Track 1 + 51 Flagships + 23 T3 Engines</p>
                   <div className="mt-3 space-y-2">
                     <div className="bg-black/80 p-2 rounded-lg border border-white/10">
                       <span className="text-slate-400 text-[10px] uppercase block font-mono">Total Buyout Anchor</span>
-                      <span className="text-xl font-black text-purple-300 font-mono block">$1,112,000</span>
-                      <span className="text-[11px] text-slate-300 font-mono">Range: $935.0k – $1.60M</span>
+                      <span className="text-xl font-black text-purple-300 font-mono block">$1,880,000</span>
+                      <span className="text-[11px] text-slate-300 font-mono">Anchor: $1.88M</span>
                     </div>
                     <div className="bg-black/80 p-2 rounded-lg border border-white/10">
                       <span className="text-slate-400 text-[10px] uppercase block font-mono">Strategic Monopoly Ceiling</span>
-                      <span className="text-base font-bold text-pink-400 font-mono block">$2.15M – $3.85M+</span>
+                      <span className="text-base font-bold text-pink-400 font-mono block">$3.68M</span>
                     </div>
                   </div>
                 </div>
                 <div className="text-[11px] text-slate-400 flex justify-between items-center font-mono pt-1 border-t border-white/10">
-                  <span>Density: $8,176/unit</span>
-                  <span>Multiple: 1.68x ROIC</span>
+                  <span>Density: $12,450/unit</span>
+                  <span>Multiple: 1.22x ROIC</span>
                 </div>
               </div>
             </div>
@@ -607,7 +609,7 @@ export const DealRoomCore: React.FC<DealRoomScreenProps> = ({
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {/* Track 2 Flagship Unit (25 Units) — Leftmost (Largest) */}
+              {/* Track 2 Flagship Unit (50 Units) — Leftmost (Largest) */}
               <div className="bg-black/60 border border-amber-500/30 rounded-xl p-4 hover:border-amber-400/70 transition-colors space-y-3">
                 <div className="flex items-center justify-between border-b border-white/10 pb-2">
                   <div>
@@ -623,17 +625,17 @@ export const DealRoomCore: React.FC<DealRoomScreenProps> = ({
                   <div className="bg-black/80 p-2.5 rounded-lg border border-white/10">
                     <span className="text-slate-400 text-[10px] uppercase font-mono block">Buyout Anchor</span>
                     <span className="text-lg font-black text-amber-400 font-mono block">$14,500</span>
-                    <span className="text-[10px] text-slate-400 font-mono block">$9,580 – $16,960 (Full: $18k–$35k)</span>
+                    <span className="text-[10px] text-slate-400 font-mono block">Full Buyout Avg: $26,500</span>
                   </div>
                   <div className="bg-black/80 p-2.5 rounded-lg border border-white/10">
                     <span className="text-slate-400 text-[10px] uppercase font-mono block">Distress Floor</span>
-                    <span className="text-lg font-black text-red-400 font-mono block">$2,020 – $4,020</span>
-                    <span className="text-[10px] text-slate-400 font-mono block">Liquidation floor</span>
+                    <span className="text-lg font-black text-red-400 font-mono block">$3,020</span>
+                    <span className="text-[10px] text-slate-400 font-mono block">Liquidation Average</span>
                   </div>
                   <div className="bg-black/80 p-2.5 rounded-lg border border-white/10">
                     <span className="text-slate-400 text-[10px] uppercase font-mono block">Dev Replacement</span>
-                    <span className="text-lg font-black text-emerald-400 font-mono block">$18,600 – $37,800</span>
-                    <span className="text-[10px] text-slate-400 font-mono block">80+ hrs SCADA physics</span>
+                    <span className="text-lg font-black text-emerald-400 font-mono block">$28,200</span>
+                    <span className="text-[10px] text-slate-400 font-mono block">80+ hrs SCADA Rebuild</span>
                   </div>
                 </div>
 
@@ -642,7 +644,7 @@ export const DealRoomCore: React.FC<DealRoomScreenProps> = ({
                 </p>
               </div>
 
-              {/* Track 1 Single Unit (85 Units) — Right (Smallest) */}
+              {/* Track 1 Single Unit (86 Units) — Right (Smallest) */}
               <div className="bg-black/60 border border-cyan-500/30 rounded-xl p-4 hover:border-cyan-400/70 transition-colors space-y-3">
                 <div className="flex items-center justify-between border-b border-white/10 pb-2">
                   <div>
@@ -658,17 +660,17 @@ export const DealRoomCore: React.FC<DealRoomScreenProps> = ({
                   <div className="bg-black/80 p-2.5 rounded-lg border border-white/10">
                     <span className="text-slate-400 text-[10px] uppercase font-mono block">Buyout Anchor</span>
                     <span className="text-lg font-black text-cyan-400 font-mono block">$4,500</span>
-                    <span className="text-[10px] text-slate-400 font-mono block">$3,800 – $6,500</span>
+                    <span className="text-[10px] text-slate-400 font-mono block">Full Buyout Avg: $5,150</span>
                   </div>
                   <div className="bg-black/80 p-2.5 rounded-lg border border-white/10">
                     <span className="text-slate-400 text-[10px] uppercase font-mono block">Distress Floor</span>
-                    <span className="text-lg font-black text-red-400 font-mono block">$800 – $1,500</span>
-                    <span className="text-[10px] text-slate-400 font-mono block">Liquidation floor</span>
+                    <span className="text-lg font-black text-red-400 font-mono block">$1,150</span>
+                    <span className="text-[10px] text-slate-400 font-mono block">Liquidation Average</span>
                   </div>
                   <div className="bg-black/80 p-2.5 rounded-lg border border-white/10">
                     <span className="text-slate-400 text-[10px] uppercase font-mono block">Dev Replacement</span>
-                    <span className="text-lg font-black text-emerald-400 font-mono block">$5,000 – $8,000</span>
-                    <span className="text-[10px] text-slate-400 font-mono block">30–40 hrs agency</span>
+                    <span className="text-lg font-black text-emerald-400 font-mono block">$6,500</span>
+                    <span className="text-[10px] text-slate-400 font-mono block">35 hrs Agency Rebuild</span>
                   </div>
                 </div>
 
@@ -728,7 +730,7 @@ export const DealRoomCore: React.FC<DealRoomScreenProps> = ({
                 <span className="text-slate-400 text-[10px] uppercase block">Exclusive Buyout Anchor</span>
                 <div className="flex items-baseline gap-2">
                   <span className="text-xl font-black text-emerald-400">$4,500</span>
-                  <span className="text-xs text-slate-400">($3,800 – $6,500 floor range)</span>
+                  <span className="text-xs text-slate-400">(Floor Avg: $5,150)</span>
                 </div>
               </div>
             </div>
@@ -761,7 +763,7 @@ export const DealRoomCore: React.FC<DealRoomScreenProps> = ({
             <div className="grid grid-cols-2 gap-3 text-xs bg-black/60 p-4 rounded-xl border border-white/5">
               <div>
                 <span className="text-slate-400 text-[10px] uppercase block">Flagship License</span>
-                <span className="text-base font-black text-white">$1,500 – $3,500</span>
+                <span className="text-base font-black text-white">$2,500 Avg</span>
               </div>
               <div>
                 <span className="text-slate-400 text-[10px] uppercase block">Entry Buyout Anchor</span>
@@ -770,8 +772,8 @@ export const DealRoomCore: React.FC<DealRoomScreenProps> = ({
               <div className="pt-2 border-t border-white/10 col-span-2">
                 <span className="text-slate-400 text-[10px] uppercase block">Full Buyout / Strategic</span>
                 <div className="flex items-baseline gap-2">
-                  <span className="text-xl font-black text-amber-400">$18,000 – $35,000</span>
-                  <span className="text-xs text-slate-400">(Strategic: $35k–$75k+)</span>
+                  <span className="text-xl font-black text-amber-400">$26,500 Avg</span>
+                  <span className="text-xs text-slate-400">(Strategic Avg: $55.0k)</span>
                 </div>
               </div>
             </div>
@@ -960,7 +962,7 @@ export const DealRoomCore: React.FC<DealRoomScreenProps> = ({
                       </div>
                       {isT2 ? (
                         <p className="text-[10px] text-amber-300/80 font-mono">
-                          License: $1,500–$3,500 | Buyout: $10k–$18k
+                          License: $2,500 Avg | Buyout Avg: $14.0k
                         </p>
                       ) : (
                         <p className="text-[10px] text-slate-400 font-mono">

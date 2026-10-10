@@ -58,7 +58,9 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
     return products.filter(p => {
       const rarity = getRarityTier(p);
       const domain = getDomainClass(p);
-      const isTrack2 = p.pricing_track?.includes('Track 1') ? false : (Boolean(p.flagship_qualified) || (p.pricing_track?.includes('Track 2') ?? false) || (p.id >= 86 && p.id !== 112));
+      const isTrack3 = (p.pricing_track?.includes('Track 3') ?? false) || (p.id >= 138) || (p.tag?.startsWith('GF-T3') ?? false) || (p.tag === 'T3-NEXUS-01');
+      const isTrack2 = !isTrack3 && (p.pricing_track?.includes('Track 1') ? false : (Boolean(p.flagship_qualified) || (p.pricing_track?.includes('Track 2') ?? false) || (p.id >= 86 && p.id !== 112)));
+      const isTrack1 = !isTrack3 && !isTrack2;
 
       const matchesSearch = 
         p.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -71,8 +73,9 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
       const matchesRarity = selectedRarity === 'ALL' || rarity === selectedRarity;
       const matchesTrack = 
         selectedTrack === 'ALL' ||
-        (selectedTrack === 'TRACK_1' && !isTrack2) ||
-        (selectedTrack === 'TRACK_2' && isTrack2);
+        (selectedTrack === 'TRACK_1' && isTrack1) ||
+        (selectedTrack === 'TRACK_2' && isTrack2) ||
+        (selectedTrack === 'TRACK_3' && isTrack3);
 
       return matchesSearch && matchesDomain && matchesRarity && matchesTrack;
     });
@@ -118,7 +121,7 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
               </div>
               <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-emerald-500/20 border border-emerald-500/50 rounded-lg text-xs font-mono font-black text-emerald-300">
                 <Sparkles size={13} className="text-emerald-400" />
-                <span>Build: v1.8.0</span>
+                <span>Build: v2.0.0-PROD</span>
               </span>
             </div>
             <h1 className="text-2xl sm:text-4xl md:text-5xl font-black tracking-tight text-white flex flex-wrap items-center gap-3 break-words pb-3 leading-normal">
@@ -145,22 +148,22 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
               </div>
               <div className="p-1 border-l border-white/15 pl-3">
                 <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">TRACK 2 FLEET</span>
-                <span className="text-xl sm:text-2xl font-black text-amber-400 block tracking-tight mt-1">50 Models</span>
+                <span className="text-xl sm:text-2xl font-black text-amber-400 block tracking-tight mt-1">51 Models</span>
                 <span className="text-sm text-slate-200 block font-semibold leading-relaxed mt-0.5">Flagship SCADA</span>
               </div>
               <div className="p-1 border-t sm:border-t-0 sm:border-l border-white/15 pt-2 sm:pt-1 sm:pl-3">
-                <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">CAPITAL DENSITY</span>
-                <span className="text-xl sm:text-2xl font-black text-purple-400 block tracking-tight mt-1">$8,176 / Asset</span>
-                <span className="text-sm text-slate-200 block font-semibold leading-relaxed mt-0.5">$1.11M Anchor NAV</span>
+                <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">TRACK 3 FLEET</span>
+                <span className="text-xl sm:text-2xl font-black text-purple-400 block tracking-tight mt-1">23 Engines</span>
+                <span className="text-sm text-slate-200 block font-semibold leading-relaxed mt-0.5">F1 Skunkworks</span>
               </div>
               <div className="p-1 border-t sm:border-t-0 border-l border-white/15 pt-2 sm:pt-1 pl-3">
                 <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">LIQUID TRANCHE</span>
-                <span className="text-xl sm:text-2xl font-black text-amber-300 block tracking-tight mt-1">27 Max Units</span>
+                <span className="text-xl sm:text-2xl font-black text-amber-300 block tracking-tight mt-1">{availableApaSlots} Max Units</span>
                 <span className="text-sm text-slate-200 block font-semibold leading-relaxed mt-0.5">80% Retention Floor</span>
               </div>
               <div className="p-1 border-t sm:border-t-0 sm:border-l border-white/15 pt-2 sm:pt-1 sm:pl-3 col-span-2 sm:col-span-1">
                 <span className="text-slate-300 block text-xs sm:text-sm uppercase font-black tracking-wider">VAULT CORE</span>
-                <span className="text-xl sm:text-2xl font-black text-emerald-400 block tracking-tight mt-1">109 Protected</span>
+                <span className="text-xl sm:text-2xl font-black text-emerald-400 block tracking-tight mt-1">{retainedFloor} Protected</span>
                 <span className="text-sm text-slate-200 block font-semibold leading-relaxed mt-0.5">Sovereign Reserve</span>
               </div>
             </div>
@@ -204,11 +207,11 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
               <ShieldCheck size={14} /> GHOSTFACTORY™ MASTER BLUEPRINT REPOSITORY
             </div>
             <h2 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
-              Browse 136 Commercial Software Blueprints
+              Browse 160 Commercial Software Blueprints
             </h2>
             <p className="text-slate-300 text-xs sm:text-sm max-w-2xl leading-relaxed">
-              86 Lean Rapid-Sale prototypes ($199 MSRP) + 50 Tier-1 Flagship SCADA operational consoles ($1,500–$3,500).
-              Each asset includes complete React 19 source, PostgreSQL schema, seed data, and perpetual commercial deployment rights (Standard & Pro unlimited end-client use).
+              86 Lean Rapid-Sale prototypes ($199 MSRP) + 51 Tier-1 Flagship SCADA operational consoles ($2,500 MSRP Avg) + 23 Track 3 Working Service Engines.
+              Each asset includes complete React source, PostgreSQL schema, seed data, and perpetual commercial deployment rights (Standard & Pro unlimited end-client use).
             </p>
           </div>
 
@@ -217,7 +220,7 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
               href="#catalog-grid"
               className="px-5 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-black uppercase tracking-wider transition-all shadow-lg shadow-emerald-500/20 active:scale-95"
             >
-              Browse 136 Blueprints ↓
+              Browse 160 Blueprints ↓
             </a>
             <a
               href="https://auraandgrid.gumroad.com"
@@ -280,7 +283,7 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
                 <p className="text-slate-300">Single-view interactive telemetry prototypes, PostgreSQL schema.sql and seed data. Built for rapid agency client adaptation and fast deployment.</p>
               </div>
               <div className="bg-amber-950/20 border border-amber-500/30 p-2.5 rounded-lg space-y-1">
-                <strong className="text-amber-400 block font-bold">Track 2 — Flagship Tier-1 SCADA ($1,500–$3,500 MSRP / $14,500 Anchor)</strong>
+                <strong className="text-amber-400 block font-bold">Track 2 — Flagship Tier-1 SCADA ($2,500 MSRP Avg / $14,500 Anchor)</strong>
                 <p className="text-slate-300">8–15 interactive sub-panels, domain physics solvers (cryo, tokamak, EGS, aerodynamics), comprehensive operator journeys, and concept briefs.</p>
               </div>
             </div>
@@ -314,59 +317,75 @@ export const GarageScreen: React.FC<GarageScreenProps> = ({
       </section>
 
       {/* FILTER & SEARCH CONTROL CONSOLE */}
-      <section className="bg-[#121215] border border-white/15 rounded-xl p-4 sm:p-6 flex flex-col md:flex-row gap-4 items-center justify-between text-sm">
-        <div className="relative w-full md:w-80">
-          <Search size={18} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-300" />
-          <input
-            type="text"
-            placeholder="Search blueprint, industry, or target..."
-            value={searchTerm}
-            onChange={(e) => handleSearchChange(e.target.value)}
-            className="w-full bg-black/70 border border-white/20 rounded-lg pl-11 pr-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:border-emerald-500 text-sm sm:text-base font-mono font-bold"
-          />
+      <section className="bg-[#121215] border border-white/15 rounded-xl p-4 sm:p-6 space-y-4 text-sm">
+        {/* LIVE 160-ASSET SHOWROOM MATRIX HEADER [audit-badge-exempt] */}
+        <div className="flex flex-wrap items-center justify-between gap-3 pb-3 border-b border-white/10 w-full">
+          <div className="flex items-center gap-2">
+            <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
+            <h3 className="text-base sm:text-lg font-mono font-black uppercase tracking-wider text-emerald-400">
+              LIVE 160-ASSET SHOWROOM MATRIX {/* [audit-badge-exempt] */}
+            </h3>
+          </div>
+          <div className="text-xs sm:text-sm font-mono font-bold text-slate-200 bg-black/60 px-3 py-1.5 rounded-lg border border-white/10">
+            DISPLAYING: <span className="text-emerald-400">{filteredProducts.length}</span> / <span className="text-white">{totalAssets}</span> ASSETS
+          </div>
         </div>
 
-        <div className="flex flex-wrap items-center gap-3 w-full md:w-auto">
-          {/* Domain / Category Filter */}
-          <div className="flex items-center gap-2">
-            <Filter size={16} className="text-slate-300" />
-            <select
-              value={selectedDomain}
-              onChange={(e) => handleDomainChange(e.target.value)}
-              className="bg-black/70 border border-white/20 rounded-lg px-3.5 py-3 text-slate-200 focus:outline-none focus:border-emerald-500 text-sm sm:text-base font-mono font-bold cursor-pointer"
-            >
-              {domainOptions.map(d => (
-                <option key={d} value={d}>{d === 'ALL' ? 'All Domain Classes' : d}</option>
-              ))}
-            </select>
+        <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
+          <div className="relative w-full md:w-80">
+            <Search size={18} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-300" />
+            <input
+              type="text"
+              placeholder="Search blueprint, industry, or target..."
+              value={searchTerm}
+              onChange={(e) => handleSearchChange(e.target.value)}
+              className="w-full bg-black/70 border border-white/20 rounded-lg pl-11 pr-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:border-emerald-500 text-sm sm:text-base font-mono font-bold"
+            />
           </div>
 
-          {/* Pricing Track Filter (Track 1 / Flagship) */}
-          <select
-            value={selectedTrack}
-            onChange={(e) => handleTrackChange(e.target.value)}
-            className="bg-black/70 border border-white/20 rounded-lg px-3.5 py-3 text-slate-200 focus:outline-none focus:border-emerald-500 text-sm sm:text-base font-mono font-bold cursor-pointer"
-          >
-            <option value="ALL">All Pricing Tracks (136)</option>
-            <option value="TRACK_1">Track 1 — Lean Rapid-Sale (86)</option>
-            <option value="TRACK_2">Track 2 — Flagship Tier-1 (50)</option>
-          </select>
+          <div className="flex flex-wrap items-center gap-3 w-full md:w-auto">
+            {/* Domain / Category Filter */}
+            <div className="flex items-center gap-2">
+              <Filter size={16} className="text-slate-300" />
+              <select
+                value={selectedDomain}
+                onChange={(e) => handleDomainChange(e.target.value)}
+                className="bg-black/70 border border-white/20 rounded-lg px-3.5 py-3 text-slate-200 focus:outline-none focus:border-emerald-500 text-sm sm:text-base font-mono font-bold cursor-pointer"
+              >
+                {domainOptions.map(d => (
+                  <option key={d} value={d}>{d === 'ALL' ? 'All Domain Classes' : d}</option>
+                ))}
+              </select>
+            </div>
 
-          {/* Rarity Filter */}
-          <select
-            value={selectedRarity}
-            onChange={(e) => handleRarityChange(e.target.value)}
-            className="bg-black/70 border border-white/20 rounded-lg px-3.5 py-3 text-slate-200 focus:outline-none focus:border-emerald-500 text-sm sm:text-base font-mono font-bold cursor-pointer"
-          >
-            <option value="ALL">All Rarity Tiers</option>
-            <option value="Elite">Elite (25 Flagship)</option>
-            <option value="Pro">Pro (46 Advanced)</option>
-            <option value="Core">Core (39 Turnkey)</option>
-          </select>
+            {/* Pricing Track Filter (Track 1 / Track 2 / Track 3) */}
+            <select
+              value={selectedTrack}
+              onChange={(e) => handleTrackChange(e.target.value)}
+              className="bg-black/70 border border-white/20 rounded-lg px-3.5 py-3 text-slate-200 focus:outline-none focus:border-emerald-500 text-sm sm:text-base font-mono font-bold cursor-pointer"
+            >
+              <option value="ALL">All Fleet (160)</option>
+              <option value="TRACK_1">Track 1 — Lean Rapid-Sale (86)</option>
+              <option value="TRACK_2">Track 2 — Flagship Tier-1 (51)</option>
+              <option value="TRACK_3">Track 3 — F1 Skunkworks (23)</option>
+            </select>
 
-          <span className="text-slate-200 ml-auto md:ml-0 text-sm sm:text-base font-bold">
-            Showing <strong className="text-emerald-400">{filteredProducts.length}</strong> of {totalAssets} Vehicles
-          </span>
+            {/* Rarity Filter */}
+            <select
+              value={selectedRarity}
+              onChange={(e) => handleRarityChange(e.target.value)}
+              className="bg-black/70 border border-white/20 rounded-lg px-3.5 py-3 text-slate-200 focus:outline-none focus:border-emerald-500 text-sm sm:text-base font-mono font-bold cursor-pointer"
+            >
+              <option value="ALL">All Rarity Tiers</option>
+              <option value="Elite">Elite (25 Flagship)</option>
+              <option value="Pro">Pro (46 Advanced)</option>
+              <option value="Core">Core (39 Turnkey)</option>
+            </select>
+
+            <span className="text-slate-200 ml-auto md:ml-0 text-sm sm:text-base font-bold">
+              Showing <strong className="text-emerald-400">{filteredProducts.length}</strong> of {totalAssets} Vehicles
+            </span>
+          </div>
         </div>
       </section>
 
