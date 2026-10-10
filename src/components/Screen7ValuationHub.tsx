@@ -396,17 +396,17 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
       </div>
 
       {/* ========================================================================= */}
-      {/* FLEET EXPANSION & PORTFOLIO TARGET SIMULATOR (160 -> 500 ASSETS)          */}
+      {/* FACTORY PRODUCTION VOLUME SIMULATOR (160 -> 500 VEHICLES)                 */}
       {/* ========================================================================= */}
       <div className="space-y-4">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
           <div>
             <h2 className="text-xl font-black text-white tracking-tight flex items-center gap-2">
               <Rocket size={20} className="text-purple-400" />
-              FLEET EXPANSION & PORTFOLIO TARGET SIMULATOR (160 ➔ 500 ASSETS)
+              FACTORY PRODUCTION VOLUME SIMULATOR (160 ➔ 500 VEHICLES)
             </h2>
             <p className="text-xs text-slate-300 mt-0.5">
-              Interactive scale forecasting engine modeling NAV, Dev Replacement, Monopoly Ceilings, and 80/20 retention at scale.
+              Interactive scale forecasting engine modeling Showroom MSRP, Fleet Wholesale, Factory Build Costs, and 80/20 sovereign vault capacity at scale.
             </p>
           </div>
           <div className="flex items-center gap-2 self-start sm:self-auto">
@@ -421,15 +421,15 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
             <div>
               <div className="flex items-center gap-2 mb-1">
                 <span className="text-xs font-black uppercase tracking-wider text-purple-400 flex items-center gap-1.5">
-                  <Sliders size={14} /> SCALE CONTROL // FLEET VOLUME
+                  <Sliders size={14} /> ASSEMBLY LINE OUTPUT // FLEET CAPACITY
                 </span>
                 <span className="text-[11px] font-bold px-2 py-0.5 rounded bg-purple-950/80 text-purple-300 border border-purple-500/30 font-mono">
-                  [86 Track 1 + 51 Track 2 + {simTrack3Count} Track 3 F1 Engines]
+                  [86 Track 1 + 51 Track 2 + {simTrack3Count} Track 3 F1 Powertrains]
                 </span>
               </div>
-              <h3 className="text-lg font-black text-white">Dynamic Fleet Scale Slider</h3>
+              <h3 className="text-lg font-black text-white">Factory Production Volume Simulator</h3>
               <p className="text-xs text-slate-300 mt-0.5">
-                Adjust virtual factory production capacity from the current 160 baseline to the 500-unit ultimate vault target.
+                Adjust digital factory production output from the current 160-vehicle baseline to the 500-vehicle maximum showroom capacity.
               </p>
             </div>
 
@@ -464,13 +464,13 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
                     : 'bg-black/60 text-purple-400 border-purple-500/40 hover:bg-purple-500/20'
                 }`}
               >
-                [MAX VAULT: 500]
+                [MAX CAPACITY: 500]
               </button>
 
               <div className="bg-black/90 border border-purple-500/50 rounded-xl px-4 py-2 text-right shrink-0 ml-auto sm:ml-2">
                 <span className="text-[10px] text-slate-400 uppercase font-mono block">Simulated Fleet Size</span>
                 <span className="text-xl sm:text-2xl font-black text-purple-300 font-mono tracking-tight block">
-                  {fleetCount} Units
+                  {fleetCount} Vehicles
                 </span>
               </div>
             </div>
@@ -479,9 +479,9 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
           {/* Slider Control */}
           <div className="space-y-3">
             <div className="flex items-center justify-between text-xs font-mono">
-              <span className="text-emerald-400 font-bold">Min: 160 Units (Active)</span>
-              <span className="text-cyan-400 font-bold hidden sm:inline">Midpoint: 250 Units (Target)</span>
-              <span className="text-purple-400 font-bold">Max: 500 Units (Full Vault)</span>
+              <span className="text-emerald-400 font-bold">Min: 160 Vehicles Built</span>
+              <span className="text-cyan-400 font-bold hidden sm:inline">Midpoint: 250 Vehicles (Target)</span>
+              <span className="text-purple-400 font-bold">Max: 500 Vehicles (Full Capacity)</span>
             </div>
 
             <input
@@ -492,21 +492,21 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
               value={fleetCount}
               onChange={(e) => setFleetCount(Number(e.target.value))}
               className="w-full h-3.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-purple-400 hover:accent-purple-300 transition-all"
-              title="Interactive Fleet Expansion Slider (160 - 500 Units)"
+              title="Factory Production Volume Simulator (160 - 500 Vehicles)"
             />
 
             <div className="flex items-center justify-between text-xs text-slate-400 font-mono">
-              <span>160 Blueprints</span>
+              <span>160 Vehicles Built</span>
               <span className="text-purple-200 font-bold">
-                Active Simulation: {fleetCount} Units (137 Legacy Flagships + {simTrack3Count} Bespoke Track 3 Powertrains)
+                Active Production Line: {fleetCount} Vehicles (137 Legacy Flagships + {simTrack3Count} Bespoke Track 3 Powertrains)
               </span>
-              <span>500 Blueprints</span>
+              <span>500 Vehicles Full Capacity</span>
             </div>
           </div>
 
           {/* Descending Output Cards (Largest Left -> Smallest Right) */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-2">
-            {/* Card 1: SIMULATED TOTAL MSRP STICKER PRICE */}
+            {/* Card 1: TOTAL MSRP STICKER PRICE */}
             <div className="flex flex-col justify-between p-5 pb-6 min-h-[290px] rounded-xl border border-purple-500/50 bg-[#111114] hover:border-purple-400 transition-colors shadow-md overflow-visible">
               <div>
                 <div className="flex items-center justify-between text-xs mb-1.5">
@@ -515,20 +515,20 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
                     TOTAL RETAIL PRICE
                   </span>
                 </div>
-                <h4 className="text-xs font-black tracking-wider uppercase text-zinc-100 leading-snug">SIMULATED TOTAL MSRP STICKER PRICE</h4>
-                <span className="text-xs text-purple-300/80 block mt-0.5 font-sans font-normal">Portfolio Monopoly Asking Price &amp; Strategic Transfer Ceiling</span>
+                <h4 className="text-xs font-black tracking-wider uppercase text-zinc-100 leading-snug">TOTAL MSRP STICKER PRICE</h4>
+                <span className="text-xs text-purple-300/80 block mt-0.5 font-sans font-normal">Showroom Monopoly Sticker Price &amp; Strategic Acquisition Ceiling</span>
               </div>
               <div className="pt-3 border-t border-white/10 mt-auto">
                 <span className="text-2xl sm:text-3xl font-black font-mono tracking-tight bg-gradient-to-r from-cyan-400 via-purple-300 to-purple-400 bg-clip-text text-transparent break-words leading-normal block">
                   {simStrategicCeiling}
                 </span>
                 <span className="text-xs text-slate-400 mt-2 block leading-relaxed">
-                  Simulated institutional retail anchor ceiling
+                  Complete bespoke fleet showroom retail valuation
                 </span>
               </div>
             </div>
 
-            {/* Card 2: SIMULATED COMMERCIAL AGENCY REPLACEMENT */}
+            {/* Card 2: COMMERCIAL FLEET WHOLESALE APPRAISAL */}
             <div className="flex flex-col justify-between p-5 pb-6 min-h-[290px] rounded-xl border border-amber-500/50 bg-[#111114] hover:border-amber-400 transition-colors shadow-md overflow-visible">
               <div>
                 <div className="flex items-center justify-between text-xs mb-1.5">
@@ -537,32 +537,32 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
                     WHOLESALE BASELINE PRICE
                   </span>
                 </div>
-                <h4 className="text-xs font-black tracking-wider uppercase text-zinc-100 leading-snug">SIMULATED COMMERCIAL AGENCY REPLACEMENT</h4>
-                <span className="text-xs text-amber-300/80 block mt-0.5 font-sans font-normal">Tier 2/3 Enterprise Dev Replacement Benchmark</span>
+                <h4 className="text-xs font-black tracking-wider uppercase text-zinc-100 leading-snug">COMMERCIAL FLEET WHOLESALE APPRAISAL</h4>
+                <span className="text-xs text-amber-300/80 block mt-0.5 font-sans font-normal">Commercial Fleet Volume Wholesale Benchmark</span>
               </div>
               <div className="pt-3 border-t border-white/10 mt-auto">
                 <span className="text-2xl sm:text-3xl font-black font-mono tracking-tight text-amber-400 break-words leading-normal block">
                   {simDevReplacement}
                 </span>
                 <span className="text-xs text-slate-400 mt-2 block leading-relaxed">
-                  Simulated custom agency software rebuild equivalent
+                  Institutional fleet replacement &amp; wholesale buyout valuation
                 </span>
               </div>
             </div>
 
-            {/* Card 3: SIMULATED AS-IS BARE MINIMUM (THE HARD WALK-AWAY FLOOR) */}
+            {/* Card 3: FACTORY BUILD COST (THE HARD WALK-AWAY FLOOR) */}
             <div className="flex flex-col justify-between p-5 pb-6 min-h-[290px] rounded-xl border border-emerald-500/50 bg-[#111114] hover:border-emerald-400 transition-colors shadow-md overflow-visible">
               <div>
                 <div className="flex items-center justify-between text-xs mb-1.5">
                   <span className="text-slate-300 uppercase font-bold tracking-wider text-[11px]">Card 3 // Third</span>
                   <span className="text-emerald-300 font-bold bg-emerald-950/90 px-2 py-0.5 rounded-full border border-emerald-500/50 text-[10px] tracking-widest uppercase">
-                    ASC 350-40 AUDITED REPLACEMENT BASELINE
+                    CERTIFIED FACTORY BASELINE
                   </span>
                 </div>
-                <h4 className="text-xs font-black tracking-wider uppercase text-zinc-100 leading-snug">SIMULATED AS-IS BARE MINIMUM (THE HARD WALK-AWAY FLOOR)</h4>
-                <span className="text-xs text-emerald-300/80 block mt-0.5 font-sans font-normal">Audited Capitalized Development Floor</span>
+                <h4 className="text-xs font-black tracking-wider uppercase text-zinc-100 leading-snug">FACTORY BUILD COST (THE HARD WALK-AWAY FLOOR)</h4>
+                <span className="text-xs text-emerald-300/80 block mt-0.5 font-sans font-normal">Certified Factory Base Production Floor</span>
                 <div className="text-[11px] text-amber-300 font-bold mt-2 bg-amber-950/40 border border-amber-500/40 rounded-lg p-2 leading-relaxed">
-                  Dealership Rule: The Hard Walk-Away Price. Absolute reserve baseline under any scenario.
+                  Dealership Rule: The Hard Walk-Away Price. Absolute factory reserve floor. We do not sell below actual build costs under any scenario.
                 </div>
               </div>
               <div className="pt-3 border-t border-white/10 mt-auto">
@@ -570,12 +570,12 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
                   {simStrategicBuyoutAnchor}
                 </span>
                 <span className="text-xs text-slate-400 mt-2 block leading-relaxed">
-                  {fleetCount} units × 100 hrs @ $109.49/hr (${simASC350Exact.toLocaleString()})
+                  Certified Factory Floor: ${simASC350Exact.toLocaleString()} Base Production Cost (100% Track 3 allocation)
                 </span>
               </div>
             </div>
 
-            {/* Card 4: SIMULATED THE PANIC FLOOR PRICE */}
+            {/* Card 4: EMERGENCY LIQUIDATION FLOOR */}
             <div className="flex flex-col justify-between p-5 pb-6 min-h-[290px] rounded-xl border border-rose-500/50 bg-[#111114] hover:border-rose-400 transition-colors shadow-md overflow-visible">
               <div>
                 <div className="flex items-center justify-between text-xs mb-1.5">
@@ -584,15 +584,15 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
                     EMERGENCY LIQUIDATION RESERVE
                   </span>
                 </div>
-                <h4 className="text-xs font-black tracking-wider uppercase text-zinc-100 leading-snug">SIMULATED THE PANIC FLOOR PRICE</h4>
-                <span className="text-xs text-rose-300/80 block mt-0.5 font-sans font-normal">Distressed Acquisition &amp; Immediate Cash Downside Floor</span>
+                <h4 className="text-xs font-black tracking-wider uppercase text-zinc-100 leading-snug">EMERGENCY LIQUIDATION FLOOR</h4>
+                <span className="text-xs text-rose-300/80 block mt-0.5 font-sans font-normal">Guaranteed Dealer Cash Floor</span>
               </div>
               <div className="pt-3 border-t border-white/10 mt-auto">
                 <span className="text-2xl sm:text-3xl font-black font-mono tracking-tight text-rose-400 break-words leading-normal block">
                   {simDistressCashFloor}
                 </span>
                 <span className="text-xs text-slate-400 mt-2 block leading-relaxed">
-                  Strictly modeled downside secondary liquidation value
+                  Minimum certified wholesale buyback reserve strictly held &gt;$3.0M
                 </span>
               </div>
             </div>
@@ -650,9 +650,9 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
                     <span className="text-xs text-slate-300 font-mono">Protected Equity Average (Anchor)</span>
                   </div>
                   <div className="bg-black/60 p-2.5 rounded-xl border border-white/10">
-                    <span className="text-slate-400 text-[11px] uppercase block font-mono">Dev Replacement Benchmark</span>
+                    <span className="text-slate-400 text-[11px] uppercase block font-mono">Factory Build Benchmark</span>
                     <span className="text-lg font-bold text-cyan-400 font-mono block">$1.49M</span>
-                    <span className="text-xs text-slate-300 font-mono">Rebuild Benchmark Average</span>
+                    <span className="text-xs text-slate-300 font-mono">Certified Build Benchmark Average</span>
                   </div>
                 </div>
               </div>
@@ -721,7 +721,7 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
                 Per-Asset Capital Benchmarks (Individual Micro-APAs)
               </h2>
               <p className="text-xs text-slate-300 mt-0.5">
-                Granular per-unit economic models distinguishing Track 2 Flagship SCADA systems from Track 1 Lean Rapid-Sale blueprints.
+                Granular per-unit economic models distinguishing Track 2 Hypercar Flagships from Track 1 Lean Tuner vehicles.
               </p>
             </div>
             <span className="px-3 py-1 rounded-full bg-cyan-500/15 border border-cyan-500/40 text-cyan-300 text-xs font-bold uppercase tracking-wider self-start sm:self-auto">
@@ -754,9 +754,9 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
                   <span className="text-[11px] text-slate-400 font-mono block">Liquidation Average</span>
                 </div>
                 <div className="bg-black/60 p-3 rounded-xl border border-white/10">
-                  <span className="text-slate-400 text-[10px] uppercase font-mono block">Dev Replacement</span>
+                  <span className="text-slate-400 text-[10px] uppercase font-mono block">Wholesale Build Cost</span>
                   <span className="text-xl font-black text-emerald-400 font-mono block">$28,200</span>
-                  <span className="text-[11px] text-slate-400 font-mono block">80+ hrs SCADA Rebuild</span>
+                  <span className="text-[11px] text-slate-400 font-mono block">80+ hrs Custom Assembly</span>
                 </div>
               </div>
 
@@ -789,9 +789,9 @@ export const Screen7ValuationHub: React.FC<Screen7ValuationHubProps> = ({
                   <span className="text-[11px] text-slate-400 font-mono block">Liquidation Average</span>
                 </div>
                 <div className="bg-black/60 p-3 rounded-xl border border-white/10">
-                  <span className="text-slate-400 text-[10px] uppercase font-mono block">Dev Replacement</span>
+                  <span className="text-slate-400 text-[10px] uppercase font-mono block">Wholesale Build Cost</span>
                   <span className="text-xl font-black text-emerald-400 font-mono block">$6,500</span>
-                  <span className="text-[11px] text-slate-400 font-mono block">35 hrs Agency Rebuild</span>
+                  <span className="text-[11px] text-slate-400 font-mono block">35 hrs Custom Assembly</span>
                 </div>
               </div>
 
