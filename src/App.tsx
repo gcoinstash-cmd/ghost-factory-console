@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import { CATALOG_DATA, ProductItem } from './catalogData';
-import { NavigationHeader, ScreenView } from './components/NavigationHeader';
-import { GarageScreen } from './components/GarageScreen';
+import { NavigationHeader, ExecutiveTab, ScreenView } from './components/NavigationHeader';
+import { ShowroomFloorTab } from './components/ShowroomFloorTab';
+import { ProductionSimulatorTab } from './components/ProductionSimulatorTab';
+import { ExecutiveTermSheetTab } from './components/ExecutiveTermSheetTab';
+import { InspectionDrawer } from './components/InspectionDrawer';
 import { FactoryLineScreen } from './components/FactoryLineScreen';
 import { ShowroomEngineScreen } from './components/ShowroomEngineScreen';
 import { DealDeskScreen } from './components/DealDeskScreen';
@@ -12,11 +15,14 @@ import { MissionModal } from './components/MissionModal';
 import { TestDriveModal } from './components/TestDriveModal';
 import { AuditModal } from './components/AuditModal';
 import { OperatorAuthModal } from './components/OperatorAuthModal';
-import { LayoutGrid, Compass, DollarSign, Wrench, Lock } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 
 export const App: React.FC = () => {
-  // Navigation View State (Screens 1 to 5)
-  const [currentView, setCurrentView] = useState<ScreenView>('garage');
+  // Executive Cockpit Tab State (Default: Showroom Floor)
+  const [activeTab, setActiveTab] = useState<ExecutiveTab>('showroom');
+
+  // Screen View State for Full Console Compatibility (Default: 'garage' maps to cockpit)
+  const [currentView, setCurrentView] = useState<ScreenView | 'cockpit'>('cockpit');
 
   // Operator Authentication State (Private Deal Room Perimeter Isolation)
   const [isOperatorAuthenticated, setIsOperatorAuthenticated] = useState<boolean>(() => {
@@ -42,18 +48,18 @@ export const App: React.FC = () => {
     } catch {}
   };
 
-  // Modal states
+  // Modals & Slide-Over Drawer States
+  const [inspectedProduct, setInspectedProduct] = useState<ProductItem | null>(null);
+  const [testDriveProduct, setTestDriveProduct] = useState<ProductItem | null>(null);
   const [isMissionModalOpen, setIsMissionModalOpen] = useState(false);
   const [missionCompleted, setMissionCompleted] = useState(true);
   const [showAuditModal, setShowAuditModal] = useState(false);
-  const [testDriveProduct, setTestDriveProduct] = useState<ProductItem | null>(null);
   const [isRefreshing, setIsRefreshing] = useState(false);
 
   // Core metrics derived from v2 specifications (160 Active Units: 137 Base + 23 T3)
   const totalAssets = 160;
   const retainedFloor = 128; // 80% immutable retention floor (128 of 160 vaulted)
   const availableApaSlots = 32; // 20% max APA capacity (32 transferable slots)
-  const planningValue = 195000; // Curated Public Telemetry Reference
 
   // Hard Refresh Handler to clear cache and refresh view
   const handleHardRefresh = () => {
@@ -73,12 +79,19 @@ export const App: React.FC = () => {
     }, 400);
   };
 
+  const handleTabChange = (tab: ExecutiveTab) => {
+    setActiveTab(tab);
+    setCurrentView('cockpit');
+  };
+
   return (
-    <div className="min-h-screen bg-[#0A0A0B] text-slate-100 hud-grid pb-28 md:pb-24 selection:bg-emerald-500 selection:text-black overflow-x-hidden w-full">
-      {/* Top Header & Screen Navigation */}
+    <div className="h-screen w-screen overflow-hidden flex flex-col bg-[#0A0A0B] text-slate-100 font-mono selection:bg-emerald-500 selection:text-black">
+      {/* 1. PERSISTENT TOP HEADER & EXECUTIVE NAVIGATION BAR */}
       <NavigationHeader
-        currentView={currentView}
-        onViewChange={setCurrentView}
+        activeTab={activeTab}
+        onTabChange={handleTabChange}
+        currentView={currentView === 'cockpit' ? 'garage' : currentView}
+        onViewChange={(view) => setCurrentView(view)}
         isRefreshing={isRefreshing}
         onHardRefresh={handleHardRefresh}
         onOpenAudit={() => setShowAuditModal(true)}
@@ -88,152 +101,131 @@ export const App: React.FC = () => {
         onLockOperator={handleLockOperator}
       />
 
-      {/* Main Screen Views */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 sm:pt-8 w-full">
-        {/* Screen 1: Garage HUD */}
-        {currentView === 'garage' && (
-          <GarageScreen
-            products={CATALOG_DATA.products}
-            totalAssets={totalAssets}
-            retainedFloor={retainedFloor}
-            availableApaSlots={availableApaSlots}
-            planningValue={planningValue}
-            onEngageMission={() => setIsMissionModalOpen(true)}
-            missionCompleted={missionCompleted}
-            onOpenTestDrive={(product) => setTestDriveProduct(product)}
-            isOperatorAuthenticated={isOperatorAuthenticated}
-            onOpenOperatorAuth={() => setIsOperatorModalOpen(true)}
-          />
-        )}
+      {/* 2. BOUNDED VIEWPORT MAIN CONTENT CONTAINER (NO ENDLESS PAGE SCROLL) */}
+      <main className="flex-1 overflow-y-auto overflow-x-hidden relative w-full bg-[#0A0A0B]/80 px-3 sm:px-6 py-4">
+        <div className="max-w-7xl mx-auto w-full">
+          
+          {/* PRIMARY EXECUTIVE COCKPIT VIEWS */}
+          {currentView === 'cockpit' && (
+            <>
+              {/* TAB 1: SHOWROOM FLOOR (Paginated 3x3 Card Matrix & Slide-over Drawer) */}
+              {activeTab === 'showroom' && (
+                <ShowroomFloorTab
+                  products={CATALOG_DATA.products}
+                  totalAssets={totalAssets}
+                  onInspect={(p) => setInspectedProduct(p)}
+                  onTestDrive={(p) => setTestDriveProduct(p)}
+                />
+              )}
 
-        {/* Screen 2: Factory Line & Intake Gate */}
-        {currentView === 'factory' && (
-          <FactoryLineScreen
-            products={CATALOG_DATA.products}
-            totalAssets={totalAssets}
-          />
-        )}
+              {/* TAB 2: PRODUCTION SIMULATOR (160 -> 500 Capacity Slider & 4 Projection Cards) */}
+              {activeTab === 'simulator' && (
+                <ProductionSimulatorTab
+                  initialFleetCount={totalAssets}
+                />
+              )}
 
-        {/* Screen 3: Showroom Engine (Aura & Grid Bridge - Two-Faced Clean Separation) */}
-        {currentView === 'showroom' && (
-          <ShowroomEngineScreen
-            products={CATALOG_DATA.products}
-            onOpenTestDrive={(product) => setTestDriveProduct(product)}
-          />
-        )}
+              {/* TAB 3: EXECUTIVE TERM SHEET (Institutional Buyout Protocol, 80% Retention Floor) */}
+              {activeTab === 'terms' && (
+                <ExecutiveTermSheetTab
+                  products={CATALOG_DATA.products}
+                  totalAssets={totalAssets}
+                  retainedFloor={retainedFloor}
+                  maxTransferable={availableApaSlots}
+                />
+              )}
+            </>
+          )}
 
-        {/* Screen 4: Deal Desk & 80% Retention Floor Shield (Private Deal Room) */}
-        {currentView === 'dealdesk' && (
-          <DealDeskScreen
-            products={CATALOG_DATA.products}
-            totalAssets={totalAssets}
-            retainedFloor={retainedFloor}
-            maxTransferable={availableApaSlots}
-            isOperatorAuthenticated={isOperatorAuthenticated}
-            onAuthenticate={handleAuthenticateOperator}
-            onLockOperator={handleLockOperator}
-          />
-        )}
+          {/* SECONDARY SCREEN VIEWS (PRESERVES DIRECT OPERATOR ACCESS TO SCREENS 2-7) */}
+          {currentView !== 'cockpit' && (
+            <div className="space-y-4">
+              <div className="flex items-center justify-between pb-3 border-b border-white/10">
+                <button
+                  onClick={() => setCurrentView('cockpit')}
+                  className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 hover:bg-emerald-500/30 font-bold transition-all cursor-pointer text-xs"
+                >
+                  <ArrowLeft size={14} />
+                  <span>RETURN TO EXECUTIVE COCKPIT</span>
+                </button>
+                <span className="text-xs text-slate-400 font-bold uppercase">
+                  ACTIVE SUB-CONSOLE: {currentView.toUpperCase()}
+                </span>
+              </div>
 
-        {/* Screen 5: Maintenance Bay & Fleet Diagnostics */}
-        {currentView === 'maintenance' && (
-          <MaintenanceBayScreen
-            products={CATALOG_DATA.products}
-            totalAssets={totalAssets}
-          />
-        )}
+              {currentView === 'factory' && (
+                <FactoryLineScreen
+                  products={CATALOG_DATA.products}
+                  totalAssets={totalAssets}
+                />
+              )}
 
-        {/* Screen 6: Commercial Pricing Tiers */}
-        {currentView === 'pricing' && <Screen6Pricing />}
+              {currentView === 'showroom' && (
+                <ShowroomEngineScreen
+                  products={CATALOG_DATA.products}
+                  onOpenTestDrive={(product) => setTestDriveProduct(product)}
+                />
+              )}
 
-        {/* Screen 7: Valuation & Diligence Hub */}
-        {currentView === 'valuationhub' && (
-          <Screen7ValuationHub
-            totalAssets={totalAssets}
-            retainedFloor={retainedFloor}
-            maxTransferable={availableApaSlots}
-          />
-        )}
+              {currentView === 'dealdesk' && (
+                <DealDeskScreen
+                  products={CATALOG_DATA.products}
+                  totalAssets={totalAssets}
+                  retainedFloor={retainedFloor}
+                  maxTransferable={availableApaSlots}
+                  isOperatorAuthenticated={isOperatorAuthenticated}
+                  onAuthenticate={handleAuthenticateOperator}
+                  onLockOperator={handleLockOperator}
+                />
+              )}
+
+              {currentView === 'maintenance' && (
+                <MaintenanceBayScreen
+                  products={CATALOG_DATA.products}
+                  totalAssets={totalAssets}
+                />
+              )}
+
+              {currentView === 'pricing' && <Screen6Pricing />}
+
+              {currentView === 'valuationhub' && (
+                <Screen7ValuationHub
+                  totalAssets={totalAssets}
+                  retainedFloor={retainedFloor}
+                  maxTransferable={availableApaSlots}
+                />
+              )}
+            </div>
+          )}
+        </div>
       </main>
 
-      {/* VISIBLE BUILD STAMP FOOTER */}
-      <footer id="gfcc-footer" className="border-t border-white/10 bg-[#0A0A0B] py-6 px-4 text-center font-mono text-xs text-slate-400 mb-16 md:mb-0">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
-          <span>GFCC Build: v2.0.0-PROD</span>
-          <span className="text-emerald-400 font-bold">151 / 151 Reference Digital Assets</span>
+      {/* 3. PERSISTENT COCKPIT FOOTER & BUILD STAMP */}
+      <footer id="gfcc-footer" className="shrink-0 border-t border-white/10 bg-[#08080A] py-2 px-4 text-xs text-slate-400 z-20">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-1">
+          <div className="flex items-center gap-2">
+            <span>GFCC Build: v2.0.0-PROD</span>
+            <span className="text-slate-600">|</span>
+            <span className="text-emerald-400 font-bold">160 Active Digital Vehicles</span>
+          </div>
+          <span className="text-slate-500 hidden sm:inline">
+            Lexus Luxury Manufacturing Standards // Fixed Cockpit v2.0
+          </span>
         </div>
       </footer>
 
-      {/* STICKY MOBILE BOTTOM HUD BAR (Fixed on viewport < md for Mobile Ergonomics) */}
-      <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#0A0A0B]/95 backdrop-blur-xl border-t border-emerald-500/30 px-2 py-2 flex items-center justify-around shadow-2xl font-mono text-xs">
-        <button
-          onClick={() => setCurrentView('garage')}
-          className={`flex flex-col items-center gap-1 py-2 px-3 rounded-xl min-h-[44px] justify-center transition-all cursor-pointer ${
-            currentView === 'garage'
-              ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/50 font-black'
-              : 'text-slate-300 hover:text-white'
-          }`}
-        >
-          <LayoutGrid size={17} />
-          <span className="text-xs uppercase font-bold tracking-wide">Garage</span>
-        </button>
-
-        <button
-          onClick={() => setCurrentView('showroom')}
-          className={`flex flex-col items-center gap-1 py-2 px-3 rounded-xl min-h-[44px] justify-center transition-all cursor-pointer ${
-            currentView === 'showroom'
-              ? 'bg-white/20 text-white border border-white/40 font-black'
-              : 'text-slate-300 hover:text-white'
-          }`}
-        >
-          <Compass size={17} />
-          <span className="text-xs uppercase font-bold tracking-wide">Catalog</span>
-        </button>
-
-        <button
-          onClick={() => {
-            if (!isOperatorAuthenticated) {
-              setIsOperatorModalOpen(true);
-            }
-            setCurrentView('dealdesk');
-          }}
-          className={`flex flex-col items-center gap-1 py-2 px-3 rounded-xl min-h-[44px] justify-center transition-all cursor-pointer ${
-            currentView === 'dealdesk'
-              ? 'bg-amber-500/20 text-amber-400 border border-amber-500/50 font-black'
-              : 'text-slate-300 hover:text-white'
-          }`}
-        >
-          <DollarSign size={17} />
-          <span className="text-xs uppercase font-bold tracking-wide flex items-center gap-1">
-            Deal Room
-            {!isOperatorAuthenticated && <Lock size={10} className="text-amber-400 inline" />}
-          </span>
-        </button>
-
-        <button
-          onClick={() => setCurrentView('maintenance')}
-          className={`flex flex-col items-center gap-1 py-2 px-3 rounded-xl min-h-[44px] justify-center transition-all cursor-pointer ${
-            currentView === 'maintenance'
-              ? 'bg-purple-500/20 text-purple-400 border border-purple-500/50 font-black'
-              : 'text-slate-300 hover:text-white'
-          }`}
-        >
-          <Wrench size={17} />
-          <span className="text-xs uppercase font-bold tracking-wide">Diagnostics</span>
-        </button>
-      </div>
-
-      {/* Modals */}
-      <MissionModal
-        isOpen={isMissionModalOpen}
-        onClose={() => setIsMissionModalOpen(false)}
-        onComplete={() => setMissionCompleted(true)}
-        isCompleted={missionCompleted}
+      {/* 4. SLIDE-OVER INSPECTION DRAWER */}
+      <InspectionDrawer
+        product={inspectedProduct}
+        isOpen={Boolean(inspectedProduct)}
+        onClose={() => setInspectedProduct(null)}
+        onOpenTestDrive={(product) => setTestDriveProduct(product)}
       />
 
+      {/* 5. MODALS */}
       <TestDriveModal
         product={testDriveProduct}
-        isOpen={!!testDriveProduct}
+        isOpen={Boolean(testDriveProduct)}
         onClose={() => setTestDriveProduct(null)}
       />
 
@@ -248,9 +240,15 @@ export const App: React.FC = () => {
         onClose={() => setIsOperatorModalOpen(false)}
         onAuthenticate={handleAuthenticateOperator}
       />
+
+      <MissionModal
+        isOpen={isMissionModalOpen}
+        onClose={() => setIsMissionModalOpen(false)}
+        onComplete={() => setMissionCompleted(true)}
+        isCompleted={missionCompleted}
+      />
     </div>
   );
 };
 
 export default App;
-

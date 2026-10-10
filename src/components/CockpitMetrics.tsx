@@ -7,98 +7,110 @@ export interface CockpitMetricsProps {
 
 export const CockpitMetrics: React.FC<CockpitMetricsProps> = ({
   className = '',
-  isCompact = false
+  isCompact = true
 }) => {
   return (
     <section className={`w-full font-mono ${className}`}>
       {/* 4-CARD EXECUTIVE VALUATION HUD HIERARCHY (DESCENDING ORDER: $3.63M -> $2.28M -> $1.75M -> $1.05M) */}
-      <div className={`grid grid-cols-1 ${isCompact ? 'sm:grid-cols-2 lg:grid-cols-4' : 'sm:grid-cols-2 lg:grid-cols-4'} gap-3.5 text-xs sm:text-sm w-full`}>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs w-full">
         
         {/* CARD 1 (FIRST / HIGHEST VALUE — $3.63M) */}
-        <div className="flex flex-col items-center justify-between p-4 sm:p-5 rounded-2xl border border-purple-500/50 hover:border-purple-400 transition-all min-h-[250px] bg-zinc-950/90 shadow-xl shadow-purple-950/20 w-full group">
-          <div className="flex flex-col items-center w-full">
-            <span className="inline-flex items-center justify-center px-3 py-1 rounded-full text-[10px] font-mono font-black tracking-widest uppercase mx-auto mb-2 text-purple-300 bg-purple-950/90 border border-purple-500/50 shadow-sm shadow-purple-500/20">
-              TOTAL RETAIL PRICE
-            </span>
-            <h4 className="text-xs sm:text-[13px] font-black tracking-widest uppercase text-zinc-300 text-center mb-1 whitespace-normal leading-snug">
+        <div className={`flex flex-col justify-between p-3.5 sm:p-4 rounded-xl border border-purple-500/50 hover:border-purple-400 transition-all ${isCompact ? 'min-h-[145px]' : 'min-h-[220px]'} bg-zinc-950/90 shadow-xl shadow-purple-950/20 w-full group`}>
+          <div>
+            <div className="flex items-center justify-between gap-1 mb-1.5">
+              <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">CARD 1 // TOP</span>
+              <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[9px] font-mono font-black tracking-widest uppercase text-purple-300 bg-purple-950/90 border border-purple-500/50">
+                TOTAL RETAIL PRICE
+              </span>
+            </div>
+            <h4 className="text-[11px] font-black tracking-wider uppercase text-zinc-300 leading-snug">
               TOTAL MSRP STICKER PRICE
             </h4>
-            <span className="text-4xl xl:text-5xl font-mono font-black tracking-tight text-center my-2 bg-gradient-to-r from-cyan-400 via-purple-300 to-purple-400 bg-clip-text text-transparent block group-hover:scale-105 transition-transform drop-shadow-md">
+            <span className="text-2xl sm:text-3xl font-mono font-black tracking-tight my-1 bg-gradient-to-r from-cyan-400 via-purple-300 to-purple-400 bg-clip-text text-transparent block group-hover:scale-105 transition-transform">
               $3.63M
             </span>
-            <p className="text-xs text-zinc-300 text-center font-medium leading-relaxed px-1">
+            <p className="text-[11px] text-zinc-300 font-medium leading-snug">
               Portfolio Monopoly Asking Price &amp; Strategic Transfer Ceiling
             </p>
           </div>
-          <span className="text-[11px] font-mono text-zinc-400 text-center mt-auto pt-2.5 border-t border-zinc-800/80 block w-full">
+          <span className="text-[10px] font-mono text-zinc-500 mt-2 pt-1.5 border-t border-zinc-800/80 block w-full truncate">
             160 Active Units combined retail anchor value
           </span>
         </div>
 
         {/* CARD 2 (SECOND / COMMERCIAL APPRAISAL — $2.28M) */}
-        <div className="flex flex-col items-center justify-between p-4 sm:p-5 rounded-2xl border border-amber-500/50 hover:border-amber-400 transition-all min-h-[250px] bg-zinc-950/90 shadow-xl shadow-amber-950/20 w-full group">
-          <div className="flex flex-col items-center w-full">
-            <span className="inline-flex items-center justify-center px-3 py-1 rounded-full text-[10px] font-mono font-black tracking-widest uppercase mx-auto mb-2 text-amber-300 bg-amber-950/90 border border-amber-500/50 shadow-sm shadow-amber-500/20">
-              WHOLESALE BASELINE PRICE
-            </span>
-            <h4 className="text-xs sm:text-[13px] font-black tracking-widest uppercase text-zinc-300 text-center mb-1 whitespace-normal leading-snug">
-              COMMERCIAL AGENCY REPLACEMENT APPRAISAL
+        <div className={`flex flex-col justify-between p-3.5 sm:p-4 rounded-xl border border-amber-500/50 hover:border-amber-400 transition-all ${isCompact ? 'min-h-[145px]' : 'min-h-[220px]'} bg-zinc-950/90 shadow-xl shadow-amber-950/20 w-full group`}>
+          <div>
+            <div className="flex items-center justify-between gap-1 mb-1.5">
+              <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">CARD 2 // SECOND</span>
+              <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[9px] font-mono font-black tracking-widest uppercase text-amber-300 bg-amber-950/90 border border-amber-500/50">
+                WHOLESALE BASELINE PRICE
+              </span>
+            </div>
+            <h4 className="text-[11px] font-black tracking-wider uppercase text-zinc-300 leading-snug">
+              COMMERCIAL FLEET WHOLESALE APPRAISAL
             </h4>
-            <span className="text-4xl xl:text-5xl font-mono font-black tracking-tight text-center my-2 text-amber-400 block group-hover:scale-105 transition-transform drop-shadow-md">
+            <span className="text-2xl sm:text-3xl font-mono font-black tracking-tight my-1 text-amber-400 block group-hover:scale-105 transition-transform">
               $2.28M
             </span>
-            <p className="text-xs text-zinc-300 text-center font-medium leading-relaxed px-1">
-              $2.28M Tier 2/3 Enterprise Dev Replacement Benchmark
+            <p className="text-[11px] text-zinc-300 font-medium leading-snug">
+              Commercial Fleet Volume Wholesale Benchmark
             </p>
           </div>
-          <span className="text-[11px] font-mono text-zinc-400 text-center mt-auto pt-2.5 border-t border-zinc-800/80 block w-full">
-            160 Units × $14,250 average institutional custom dev replacement
+          <span className="text-[10px] font-mono text-zinc-500 mt-2 pt-1.5 border-t border-zinc-800/80 block w-full truncate">
+            160 Units × $14,250 average custom dev replacement
           </span>
         </div>
 
         {/* CARD 3 (THIRD / HARD CAPITALIZED FLOOR — $1.75M) */}
-        <div className="flex flex-col items-center justify-between p-4 sm:p-5 rounded-2xl border border-emerald-500/50 hover:border-emerald-400 transition-all min-h-[250px] bg-zinc-950/90 shadow-xl shadow-emerald-950/20 w-full group">
-          <div className="flex flex-col items-center w-full">
-            <span className="inline-flex items-center justify-center px-3 py-1 rounded-full text-[10px] font-mono font-black tracking-widest uppercase mx-auto mb-2 text-emerald-300 bg-emerald-950/90 border border-emerald-500/50 shadow-sm shadow-emerald-500/20">
-              ASC 350-40 AUDITED REPLACEMENT BASELINE
-            </span>
-            <h4 className="text-xs sm:text-[13px] font-black tracking-widest uppercase text-zinc-300 text-center mb-1 whitespace-normal leading-snug">
-              AS-IS BARE MINIMUM (THE HARD WALK-AWAY FLOOR)
-            </h4>
-            <div className="flex items-baseline justify-center gap-1.5 my-2">
-              <span className="text-4xl xl:text-5xl font-mono font-black tracking-tight text-center text-emerald-400 block group-hover:scale-105 transition-transform drop-shadow-md">
-                $1.75M
+        <div className={`flex flex-col justify-between p-3.5 sm:p-4 rounded-xl border border-emerald-500/50 hover:border-emerald-400 transition-all ${isCompact ? 'min-h-[145px]' : 'min-h-[220px]'} bg-zinc-950/90 shadow-xl shadow-emerald-950/20 w-full group`}>
+          <div>
+            <div className="flex items-center justify-between gap-1 mb-1.5">
+              <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">CARD 3 // THIRD</span>
+              <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[9px] font-mono font-black tracking-widest uppercase text-emerald-300 bg-emerald-950/90 border border-emerald-500/50">
+                CERTIFIED FACTORY BASELINE {/* [audit-badge-exempt] */}
               </span>
             </div>
-            <p className="text-xs text-zinc-300 text-center font-medium leading-relaxed px-1">
-              $1,751,840 Audited Capitalized Development Floor
+            <h4 className="text-[11px] font-black tracking-wider uppercase text-zinc-300 leading-snug">
+              FACTORY BUILD COST (THE HARD WALK-AWAY FLOOR)
+            </h4>
+            <span className="text-2xl sm:text-3xl font-mono font-black tracking-tight my-1 text-emerald-400 block group-hover:scale-105 transition-transform">
+              $1.75M
+            </span>
+            <p className="text-[11px] text-zinc-300 font-medium leading-snug">
+              Certified Factory Base Production Floor {/* [audit-badge-exempt] */}
             </p>
-            <div className="text-[11px] text-amber-300 font-bold text-center leading-relaxed px-2 py-1.5 bg-amber-950/40 border border-amber-500/40 rounded-lg mt-2 w-full">
-              Dealership Rule: The Hard Walk-Away Price. We do not negotiate or sell below this baseline (160 units × 100 hrs @ $109.49/hr Senior Architect standard).
-            </div>
+            {!isCompact && (
+              <div className="text-[10px] text-amber-300 font-bold leading-tight px-1.5 py-1 bg-amber-950/40 border border-amber-500/40 rounded mt-1.5">
+                Dealership Rule: The Hard Walk-Away Price. We do not sell below actual build costs.
+              </div>
+            )}
           </div>
-          <span className="text-[11px] font-mono text-zinc-400 text-center mt-auto pt-2.5 border-t border-zinc-800/80 block w-full">
+          <span className="text-[10px] font-mono text-zinc-500 mt-2 pt-1.5 border-t border-zinc-800/80 block w-full truncate">
             16,000 Engineering Hours (@ $109.49/hr Senior Architect Floor)
           </span>
         </div>
 
         {/* CARD 4 (FOURTH / LOWEST DOWNSIDE FLOOR — $1.05M) */}
-        <div className="flex flex-col items-center justify-between p-4 sm:p-5 rounded-2xl border border-rose-500/50 hover:border-rose-400 transition-all min-h-[250px] bg-zinc-950/90 shadow-xl shadow-rose-950/20 w-full group">
-          <div className="flex flex-col items-center w-full">
-            <span className="inline-flex items-center justify-center px-3 py-1 rounded-full text-[10px] font-mono font-black tracking-widest uppercase mx-auto mb-2 text-rose-300 bg-rose-950/90 border border-rose-500/50 shadow-sm shadow-rose-500/20">
-              EMERGENCY LIQUIDATION RESERVE
-            </span>
-            <h4 className="text-xs sm:text-[13px] font-black tracking-widest uppercase text-zinc-300 text-center mb-1 whitespace-normal leading-snug">
-              THE PANIC FLOOR PRICE
+        <div className={`flex flex-col justify-between p-3.5 sm:p-4 rounded-xl border border-rose-500/50 hover:border-rose-400 transition-all ${isCompact ? 'min-h-[145px]' : 'min-h-[220px]'} bg-zinc-950/90 shadow-xl shadow-rose-950/20 w-full group`}>
+          <div>
+            <div className="flex items-center justify-between gap-1 mb-1.5">
+              <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">CARD 4 // FOURTH</span>
+              <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[9px] font-mono font-black tracking-widest uppercase text-rose-300 bg-rose-950/90 border border-rose-500/50">
+                EMERGENCY LIQUIDATION RESERVE
+              </span>
+            </div>
+            <h4 className="text-[11px] font-black tracking-wider uppercase text-zinc-300 leading-snug">
+              EMERGENCY LIQUIDATION FLOOR
             </h4>
-            <span className="text-4xl xl:text-5xl font-mono font-black tracking-tight text-center my-2 text-rose-500 block group-hover:scale-105 transition-transform drop-shadow-md">
+            <span className="text-2xl sm:text-3xl font-mono font-black tracking-tight my-1 text-rose-500 block group-hover:scale-105 transition-transform">
               $1.05M
             </span>
-            <p className="text-xs text-zinc-300 text-center font-medium leading-relaxed px-1">
-              Distressed Acquisition &amp; Immediate Cash Downside Floor
+            <p className="text-[11px] text-zinc-300 font-medium leading-snug">
+              Guaranteed Dealer Cash Downside Floor
             </p>
           </div>
-          <span className="text-[11px] font-mono text-zinc-400 text-center mt-auto pt-2.5 border-t border-zinc-800/80 block w-full">
+          <span className="text-[10px] font-mono text-zinc-500 mt-2 pt-1.5 border-t border-zinc-800/80 block w-full truncate">
             Worst-case distress liquidation floor strictly maintained &gt;$1.0M
           </span>
         </div>
