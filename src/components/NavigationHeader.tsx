@@ -177,19 +177,19 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
   const [showSecondaryMenu, setShowSecondaryMenu] = useState(false);
 
   return (
-    <header className="shrink-0 bg-[#0A0A0B]/95 backdrop-blur-xl border-b border-emerald-500/30 px-3 sm:px-6 py-2 sm:py-2.5 font-mono text-xs w-full z-30">
-      <div className="max-w-7xl mx-auto w-full space-y-2.5">
+    <header className="shrink-0 bg-[#0A0A0B]/95 backdrop-blur-xl border-b border-emerald-500/30 px-3 sm:px-6 py-1.5 sm:py-2 font-mono text-xs w-full z-30">
+      <div className="max-w-7xl mx-auto w-full space-y-1.5">
         
         {/* ROW 1: TOP TELEMETRY TICKER */}
-        <div className="flex flex-wrap items-center justify-between gap-2 pb-2 border-b border-white/10 w-full">
+        <div className="flex flex-wrap items-center justify-between gap-1.5 pb-1 border-b border-white/10 w-full">
           {/* Left Brand & System Status */}
-          <div className="flex flex-wrap items-center gap-2 sm:gap-3">
-            <div className="relative flex h-2.5 w-2.5 shrink-0">
+          <div className="flex flex-wrap items-center gap-2 sm:gap-2.5">
+            <div className="relative flex h-2 w-2 shrink-0">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
             </div>
-            <span className="font-black tracking-wider text-emerald-400 flex items-center gap-1.5 text-xs sm:text-sm whitespace-nowrap">
-              <Terminal size={15} className="shrink-0" /> GFCC // GHOST FACTORY™
+            <span className="font-black tracking-wider text-emerald-400 flex items-center gap-1.5 text-xs whitespace-nowrap">
+              <Terminal size={14} className="shrink-0" /> GFCC // GHOST FACTORY™
             </span>
             <span className="text-slate-500 hidden sm:inline">|</span>
             <span className="text-slate-300 hidden md:inline text-xs font-bold">
@@ -213,36 +213,39 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
           </div>
 
           {/* Right Fleet Status & Controls */}
-          <div className="flex flex-wrap items-center gap-2 text-xs">
+          <div className="flex flex-wrap items-center gap-1.5 text-xs">
             {/* Operator Lock / Unlock */}
             {isOperatorAuthenticated ? (
               <button
                 onClick={onLockOperator}
-                className="flex items-center gap-1 px-2 py-1 rounded bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-white/20 font-bold transition-colors cursor-pointer text-[11px]"
+                className="flex items-center gap-1 px-2 py-0.5 rounded bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-white/20 font-bold transition-colors cursor-pointer text-[10px]"
                 title="Lock Private Deal Room"
               >
-                <Lock size={12} className="text-amber-400" />
+                <Lock size={11} className="text-amber-400" />
                 <span>LOCK</span>
               </button>
             ) : (
               <button
                 onClick={onOpenOperatorAuth}
-                className="flex items-center gap-1 px-2.5 py-1 rounded bg-amber-500/15 hover:bg-amber-500/25 text-amber-300 border border-amber-500/40 font-black transition-all cursor-pointer text-[11px]"
+                className="flex items-center gap-1 px-2 py-0.5 rounded bg-amber-500/15 hover:bg-amber-500/25 text-amber-300 border border-amber-500/40 font-black transition-all cursor-pointer text-[10px]"
                 title="Unlock Private Deal Room with Operator Key"
               >
-                <Lock size={12} className="text-amber-400" />
+                <Lock size={11} className="text-amber-400" />
                 <span className="hidden xs:inline">OPERATOR</span> ACCESS
               </button>
             )}
 
             {/* Fleet Status Pill */}
-            <div className="flex items-center gap-1.5 text-slate-200 font-bold bg-black/60 px-2.5 py-1 rounded border border-white/10 text-[11px]">
-              <Server size={13} className="text-emerald-400 shrink-0" />
+            <div 
+              className="flex items-center gap-1 text-slate-200 font-bold bg-black/60 px-2 py-0.5 rounded border border-white/10 text-[10px]"
+              title="80% Retention Floor: 128 Retained / 32 Liquid APA Slots"
+            >
+              <Server size={12} className="text-emerald-400 shrink-0" />
               <span>FLEET: <strong className="text-emerald-400">160 ACTIVE</strong></span>
             </div>
 
             {/* Catalog Breakdown Badge */}
-            <div className="hidden lg:flex items-center gap-1.5 text-zinc-300 font-bold bg-slate-900/90 px-2.5 py-1 rounded border border-white/10 text-[10px]">
+            <div className="hidden lg:flex items-center gap-1 text-zinc-300 font-bold bg-slate-900/90 px-2 py-0.5 rounded border border-white/10 text-[10px]">
               <span className="text-emerald-400 font-black">160 UNITS</span>
               <span className="text-zinc-400">(86 T1 + 51 T2 + 23 T3)</span>
             </div>
@@ -250,32 +253,32 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
             {/* Postgres Schema Indicator */}
             <button
               onClick={onOpenAudit}
-              className="hidden md:flex items-center gap-1 text-slate-200 hover:text-cyan-400 transition-colors cursor-pointer bg-slate-900/80 px-2.5 py-1 rounded border border-slate-700 text-[11px] font-bold"
+              className="hidden md:flex items-center gap-1 text-slate-200 hover:text-cyan-400 transition-colors cursor-pointer bg-slate-900/80 px-2 py-0.5 rounded border border-slate-700 text-[10px] font-bold"
               title="Inspect Postgres Schema architecture"
             >
-              <Database size={12} className="text-cyan-400" />
+              <Database size={11} className="text-cyan-400" />
               <span>RLS Pattern</span>
             </button>
 
             {/* Toggle Valuation Ribbon Visibility */}
             <button
               onClick={() => setIsRibbonCollapsed(!isRibbonCollapsed)}
-              className="flex items-center gap-1 px-2.5 py-1 rounded bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-white/15 text-[11px] font-bold cursor-pointer transition-colors"
+              className="flex items-center gap-1 px-2 py-0.5 rounded bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-white/15 text-[10px] font-bold cursor-pointer transition-colors"
               title="Toggle Valuation HUD collapse state"
             >
-              <DollarSign size={12} className="text-emerald-400" />
+              <DollarSign size={11} className="text-emerald-400" />
               <span>{isRibbonCollapsed ? '$ Show HUD v' : '$ Hide HUD ^'}</span>
-              {isRibbonCollapsed ? <ChevronDown size={12} /> : <ChevronUp size={12} />}
+              {isRibbonCollapsed ? <ChevronDown size={11} /> : <ChevronUp size={11} />}
             </button>
 
             {/* Force Sync Button */}
             <button
               onClick={onHardRefresh}
               disabled={isRefreshing}
-              className="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 border border-emerald-500/50 transition-all font-mono cursor-pointer text-[11px] font-black shrink-0"
+              className="flex items-center gap-1 px-2 py-0.5 rounded-lg bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 border border-emerald-500/50 transition-all font-mono cursor-pointer text-[10px] font-black shrink-0"
               title="Force sync console telemetry state"
             >
-              <RotateCw size={12} className={isRefreshing ? 'animate-spin text-emerald-300' : ''} />
+              <RotateCw size={11} className={isRefreshing ? 'animate-spin text-emerald-300' : ''} />
               <span>{isRefreshing ? 'SYNCING...' : 'SYNC'}</span>
             </button>
           </div>
@@ -283,37 +286,8 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
 
         {/* ROW 2: 4-CARD EXECUTIVE VALUATION RIBBON OR COLLAPSED SLIM STATUS BAR */}
         {!isRibbonCollapsed ? (
-          <div className="pt-0.5 pb-1 border-b border-white/10 w-full animate-fadeIn">
-            <CockpitMetrics isCompact={true} showDescriptions={false} />
-
-            {/* Category Badges & 80% Retention Floor Readout */}
-            <div className="flex flex-wrap items-center justify-between gap-2 pt-1.5 px-0.5 text-[11px]">
-              <div className="flex flex-wrap items-center gap-1.5">
-                <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-zinc-400 mr-0.5">
-                  CATEGORY BADGES:
-                </span>
-                <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-lg bg-emerald-950/70 border border-emerald-500/50 text-emerald-300 font-mono font-black text-[10px]">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                  FinTech <span className="text-emerald-400/80">(27 Units)</span>
-                </span>
-                <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-lg bg-cyan-950/70 border border-cyan-500/50 text-cyan-300 font-mono font-black text-[10px]">
-                  <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
-                  Telemetry <span className="text-cyan-400/80">(60 Units)</span>
-                </span>
-                <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-lg bg-purple-950/70 border border-purple-500/50 text-purple-300 font-mono font-black text-[10px]">
-                  <span className="w-1.5 h-1.5 rounded-full bg-purple-400 animate-pulse" />
-                  Edge AI <span className="text-purple-400/80">(5 Units)</span>
-                </span>
-                <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-lg bg-pink-950/70 border border-pink-500/50 text-pink-300 font-mono font-black text-[10px]">
-                  <span className="w-1.5 h-1.5 rounded-full bg-pink-400 animate-pulse" />
-                  Zero-Trust <span className="text-pink-400/80">(3 Units)</span>
-                </span>
-              </div>
-
-              <div className="text-[11px] font-mono text-zinc-400 hidden lg:block">
-                80% Portfolio Retention Floor: <strong className="text-emerald-400">128 Vaulted</strong> / <strong className="text-amber-400">32 Liquid APA Slots</strong>
-              </div>
-            </div>
+          <div className="w-full animate-fadeIn">
+            <CockpitMetrics isCompact={true} />
           </div>
         ) : (
           /* SLIM COLLAPSED STATUS BAR (100% Screen granted to Showroom Floor) */
@@ -332,13 +306,13 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
               <div className="flex items-center gap-1.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />
                 <span className="text-amber-300 font-bold">$2.28M</span>
-                <span className="text-slate-400 text-[10px] sm:text-[11px]">Agency</span>
+                <span className="text-slate-400 text-[10px] sm:text-[11px]">Wholesale</span>
               </div>
               <span className="text-slate-600 hidden xs:inline">|</span>
               <div className="flex items-center gap-1.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
                 <span className="text-emerald-300 font-bold">$1.75M</span>
-                <span className="text-slate-400 text-[10px] sm:text-[11px]">Base Floor</span>
+                <span className="text-slate-400 text-[10px] sm:text-[11px]">Hard Floor</span>
               </div>
               <span className="text-slate-600 hidden xs:inline">|</span>
               <div className="flex items-center gap-1.5">
@@ -356,27 +330,27 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
         )}
 
         {/* ROW 3: EXECUTIVE MODE NAVIGATION BAR WITH HIGH-CONTRAST TAB BUTTONS */}
-        <nav className="flex flex-wrap items-center justify-between gap-2.5 pt-1 w-full">
-          <div className="grid grid-cols-3 gap-2 sm:gap-3 flex-1">
+        <nav className="flex items-center justify-between gap-2 pt-0.5 w-full">
+          <div className="grid grid-cols-3 gap-1.5 sm:gap-2.5 flex-1">
             
             {/* TAB 1: SHOWROOM FLOOR */}
             <button
               onClick={() => onTabChange('showroom')}
-              className={`flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl border transition-all cursor-pointer ${
+              className={`flex items-center justify-center gap-1.5 sm:gap-2 py-1.5 sm:py-2 px-2.5 rounded-xl border transition-all cursor-pointer ${
                 activeTab === 'showroom'
-                  ? 'bg-emerald-500 text-black border-emerald-400 shadow-lg shadow-emerald-500/25 font-black scale-[1.01]'
+                  ? 'bg-emerald-500 text-black border-emerald-400 shadow-md shadow-emerald-500/25 font-black scale-[1.01]'
                   : 'bg-[#121216] text-slate-200 hover:text-white hover:bg-white/5 border-white/15 hover:border-emerald-500/40'
               }`}
               title="TAB 1: SHOWROOM FLOOR (Paginated vehicle inventory, filters, and inspection modal)"
             >
-              <span className="text-base sm:text-lg shrink-0">🏎️</span>
+              <span className="text-sm sm:text-base shrink-0">🏎️</span>
               <div className="flex flex-col text-left">
                 <span className={`text-[10px] sm:text-xs font-black tracking-wider uppercase leading-tight ${
                   activeTab === 'showroom' ? 'text-black' : 'text-white'
                 }`}>
                   SHOWROOM FLOOR
                 </span>
-                <span className={`text-[9px] font-mono font-bold leading-none hidden sm:inline ${
+                <span className={`text-[9px] font-mono font-bold leading-none hidden md:inline ${
                   activeTab === 'showroom' ? 'text-black/80' : 'text-emerald-400'
                 }`}>
                   160 ACTIVE VEHICLES
@@ -387,21 +361,21 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
             {/* TAB 2: PRODUCTION SIMULATOR */}
             <button
               onClick={() => onTabChange('simulator')}
-              className={`flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl border transition-all cursor-pointer ${
+              className={`flex items-center justify-center gap-1.5 sm:gap-2 py-1.5 sm:py-2 px-2.5 rounded-xl border transition-all cursor-pointer ${
                 activeTab === 'simulator'
-                  ? 'bg-purple-500 text-black border-purple-400 shadow-lg shadow-purple-500/25 font-black scale-[1.01]'
+                  ? 'bg-purple-500 text-black border-purple-400 shadow-md shadow-purple-500/25 font-black scale-[1.01]'
                   : 'bg-[#121216] text-slate-200 hover:text-white hover:bg-white/5 border-white/15 hover:border-purple-500/40'
               }`}
               title="TAB 2: PRODUCTION SIMULATOR (Factory Volume Slider, 160 -> 500 cap, and dynamic projections)"
             >
-              <span className="text-base sm:text-lg shrink-0">⚙️</span>
+              <span className="text-sm sm:text-base shrink-0">⚙️</span>
               <div className="flex flex-col text-left">
                 <span className={`text-[10px] sm:text-xs font-black tracking-wider uppercase leading-tight ${
                   activeTab === 'simulator' ? 'text-black' : 'text-white'
                 }`}>
                   PRODUCTION SIMULATOR
                 </span>
-                <span className={`text-[9px] font-mono font-bold leading-none hidden sm:inline ${
+                <span className={`text-[9px] font-mono font-bold leading-none hidden md:inline ${
                   activeTab === 'simulator' ? 'text-black/80' : 'text-purple-300'
                 }`}>
                   160 ➔ 500 SCALE CAP
@@ -412,21 +386,21 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
             {/* TAB 3: EXECUTIVE TERM SHEET */}
             <button
               onClick={() => onTabChange('terms')}
-              className={`flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl border transition-all cursor-pointer ${
+              className={`flex items-center justify-center gap-1.5 sm:gap-2 py-1.5 sm:py-2 px-2.5 rounded-xl border transition-all cursor-pointer ${
                 activeTab === 'terms'
-                  ? 'bg-amber-500 text-black border-amber-400 shadow-lg shadow-amber-500/25 font-black scale-[1.01]'
+                  ? 'bg-amber-500 text-black border-amber-400 shadow-md shadow-amber-500/25 font-black scale-[1.01]'
                   : 'bg-[#121216] text-slate-200 hover:text-white hover:bg-white/5 border-white/15 hover:border-amber-500/40'
               }`}
               title="TAB 3: EXECUTIVE TERM SHEET (Institutional buyout rules, APA terms, clean-room diligence)"
             >
-              <span className="text-base sm:text-lg shrink-0">📋</span>
+              <span className="text-sm sm:text-base shrink-0">📋</span>
               <div className="flex flex-col text-left">
                 <span className={`text-[10px] sm:text-xs font-black tracking-wider uppercase leading-tight ${
                   activeTab === 'terms' ? 'text-black' : 'text-white'
                 }`}>
                   EXECUTIVE TERM SHEET
                 </span>
-                <span className={`text-[9px] font-mono font-bold leading-none hidden sm:inline ${
+                <span className={`text-[9px] font-mono font-bold leading-none hidden md:inline ${
                   activeTab === 'terms' ? 'text-black/80' : 'text-amber-300'
                 }`}>
                   M&amp;A DILIGENCE // 80% FLOOR
@@ -435,17 +409,17 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
             </button>
           </div>
 
-          {/* SECONDARY CONSOLES TOGGLE (PRESERVES DIRECT OPERATOR ACCESS TO SCREENS 2-6) */}
+          {/* SECONDARY CONSOLES TOGGLE */}
           {onViewChange && (
             <div className="relative">
               <button
                 onClick={() => setShowSecondaryMenu(!showSecondaryMenu)}
-                className="flex items-center gap-1.5 py-2.5 px-3 rounded-xl bg-black/60 border border-white/15 text-slate-300 hover:text-white hover:border-white/30 text-xs font-bold transition-all cursor-pointer"
+                className="flex items-center gap-1 py-1.5 sm:py-2 px-2.5 rounded-xl bg-black/60 border border-white/15 text-slate-300 hover:text-white hover:border-white/30 text-xs font-bold transition-all cursor-pointer"
                 title="Open additional factory and maintenance consoles"
               >
-                <MoreHorizontal size={15} />
-                <span className="hidden md:inline">OTHER CONSOLES</span>
-                <ChevronDown size={13} className={showSecondaryMenu ? 'rotate-180 transition-transform' : ''} />
+                <MoreHorizontal size={14} />
+                <span className="hidden lg:inline">MORE</span>
+                <ChevronDown size={12} className={showSecondaryMenu ? 'rotate-180 transition-transform' : ''} />
               </button>
 
               {showSecondaryMenu && (

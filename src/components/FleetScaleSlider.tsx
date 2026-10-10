@@ -34,7 +34,7 @@ export const FleetScaleSlider: React.FC<FleetScaleSliderProps> = ({
   const simDistressCashFloor = `$${simPanicNum.toFixed(2)}M`;
 
   return (
-    <div className={`bg-[#111114] border-2 border-purple-500/40 rounded-2xl p-5 sm:p-6 shadow-2xl relative overflow-visible space-y-6 ${className}`}>
+    <div className={`bg-[#111114] border-2 border-purple-500/40 rounded-2xl p-6 sm:p-8 shadow-2xl relative overflow-visible space-y-7 ${className}`}>
       {/* Header and Presets */}
       <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-4 border-b border-white/10">
         <div>

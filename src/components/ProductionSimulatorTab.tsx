@@ -16,7 +16,7 @@ export const ProductionSimulatorTab: React.FC<ProductionSimulatorTabProps> = ({
   const simVaultTranche = `${Math.round(fleetCount * 0.8)} Vaulted / ${Math.round(fleetCount * 0.2)} Liquid Slots`;
 
   return (
-    <div className="space-y-6 font-mono w-full pb-8">
+    <div className="max-w-6xl mx-auto space-y-6 font-mono w-full pb-8">
       {/* Top Simulator Banner */}
       <div className="border border-white/10 bg-black/60 rounded-2xl p-5 sm:p-6 backdrop-blur-xl relative overflow-hidden">
         <div className="absolute top-0 right-0 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl pointer-events-none -mr-16 -mt-16" />

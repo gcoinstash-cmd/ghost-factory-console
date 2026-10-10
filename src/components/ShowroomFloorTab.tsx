@@ -198,6 +198,57 @@ export const ShowroomFloorTab: React.FC<ShowroomFloorTabProps> = ({
             <option value="Core">Core Tier (Turnkey)</option>
           </select>
         </div>
+
+        {/* Category Quick Filter Pills */}
+        <div className="flex flex-wrap items-center gap-1.5 pt-2 border-t border-white/5 text-[11px]">
+          <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-zinc-400 mr-1">
+            QUICK FILTERS:
+          </span>
+          <button
+            onClick={() => handleSearchChange(searchTerm === 'FinTech' ? '' : 'FinTech')}
+            className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-lg border font-mono font-bold text-[10px] transition-colors cursor-pointer ${
+              searchTerm === 'FinTech' 
+                ? 'bg-emerald-500 text-black border-emerald-400 shadow-sm shadow-emerald-500/20' 
+                : 'bg-emerald-950/40 border-emerald-500/40 text-emerald-300 hover:bg-emerald-950/70'
+            }`}
+          >
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+            FinTech (27 Units)
+          </button>
+          <button
+            onClick={() => handleSearchChange(searchTerm === 'Telemetry' ? '' : 'Telemetry')}
+            className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-lg border font-mono font-bold text-[10px] transition-colors cursor-pointer ${
+              searchTerm === 'Telemetry' 
+                ? 'bg-cyan-500 text-black border-cyan-400 shadow-sm shadow-cyan-500/20' 
+                : 'bg-cyan-950/40 border-cyan-500/40 text-cyan-300 hover:bg-cyan-950/70'
+            }`}
+          >
+            <span className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
+            Telemetry (60 Units)
+          </button>
+          <button
+            onClick={() => handleSearchChange(searchTerm === 'Edge AI' ? '' : 'Edge AI')}
+            className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-lg border font-mono font-bold text-[10px] transition-colors cursor-pointer ${
+              searchTerm === 'Edge AI' 
+                ? 'bg-purple-500 text-black border-purple-400 shadow-sm shadow-purple-500/20' 
+                : 'bg-purple-950/40 border-purple-500/40 text-purple-300 hover:bg-purple-950/70'
+            }`}
+          >
+            <span className="w-1.5 h-1.5 rounded-full bg-purple-400" />
+            Edge AI (5 Units)
+          </button>
+          <button
+            onClick={() => handleSearchChange(searchTerm === 'Zero-Trust' ? '' : 'Zero-Trust')}
+            className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-lg border font-mono font-bold text-[10px] transition-colors cursor-pointer ${
+              searchTerm === 'Zero-Trust' 
+                ? 'bg-pink-500 text-black border-pink-400 shadow-sm shadow-pink-500/20' 
+                : 'bg-pink-950/40 border-pink-500/40 text-pink-300 hover:bg-pink-950/70'
+            }`}
+          >
+            <span className="w-1.5 h-1.5 rounded-full bg-pink-400" />
+            Zero-Trust (3 Units)
+          </button>
+        </div>
       </div>
 
       {/* 3×3 RESPONSIVE CARD MATRIX */}
@@ -213,11 +264,11 @@ export const ShowroomFloorTab: React.FC<ShowroomFloorTabProps> = ({
             <div
               key={product.id}
               onClick={() => onInspect(product)}
-              className="bg-[#111115] border border-white/10 hover:border-emerald-400/80 rounded-2xl p-4 flex flex-col justify-between min-h-[220px] space-y-2.5 shadow-lg hover:shadow-emerald-500/10 transition-all cursor-pointer group relative overflow-hidden"
+              className="bg-[#111115] border border-white/10 hover:border-emerald-400/80 rounded-2xl p-5 flex flex-col justify-between min-h-[240px] space-y-3 shadow-lg hover:shadow-emerald-500/10 transition-all cursor-pointer group relative overflow-hidden"
             >
               {/* Top Slot Pill & Badges */}
               <div className="flex items-center justify-between gap-2">
-                <span className="text-[11px] font-mono font-bold text-slate-300 bg-black/80 px-2 py-0.5 rounded border border-white/15">
+                <span className="text-[11px] font-mono font-bold text-slate-300 bg-black/80 px-2.5 py-0.5 rounded border border-white/15">
                   SLOT #{product.id.toString().padStart(3, '0')}
                 </span>
 
@@ -242,7 +293,7 @@ export const ShowroomFloorTab: React.FC<ShowroomFloorTabProps> = ({
 
               {/* Title & Category */}
               <div>
-                <h3 className="text-base sm:text-lg font-black text-white group-hover:text-emerald-300 transition-colors leading-tight">
+                <h3 className="text-base sm:text-lg font-black text-white group-hover:text-emerald-300 transition-colors leading-tight line-clamp-1">
                   {product.name}
                 </h3>
                 <p className="text-xs text-slate-400 font-semibold mt-1 line-clamp-1">
@@ -284,16 +335,17 @@ export const ShowroomFloorTab: React.FC<ShowroomFloorTabProps> = ({
               <div className="flex items-center gap-2 pt-1" onClick={(e) => e.stopPropagation()}>
                 <button
                   onClick={() => onInspect(product)}
-                  className="flex-1 py-2 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-emerald-300 border border-emerald-500/40 hover:border-emerald-400 font-black text-xs uppercase tracking-wider transition-all cursor-pointer text-center"
+                  className="flex-1 py-2.5 px-3 rounded-xl bg-slate-900 hover:bg-emerald-950/60 text-emerald-300 hover:text-emerald-200 border border-emerald-500/50 hover:border-emerald-400 font-black text-xs uppercase tracking-wider transition-all cursor-pointer text-center flex items-center justify-center gap-1.5 shadow-sm"
                 >
-                  Inspect Specs
+                  <Maximize2 size={13} className="text-emerald-400" />
+                  <span>Inspect Specs</span>
                 </button>
 
                 <a
                   href={product.preview_url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="py-2 px-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-black text-xs uppercase tracking-wider transition-all cursor-pointer flex items-center gap-1 shrink-0"
+                  className="py-2.5 px-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-black text-xs uppercase tracking-wider transition-all cursor-pointer flex items-center gap-1.5 shrink-0 shadow-sm"
                   title="Launch direct demo"
                 >
                   <ExternalLink size={13} />
